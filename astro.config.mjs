@@ -29,6 +29,9 @@ export default defineConfig({
 						{ label: 'Introdução', slug: 'biblia/introducao' },
 						{ label: 'Gênesis (Bereshit)', slug: 'biblia/genesis' },
 						{ label: 'Êxodo (Shemot)', slug: 'biblia/exodo' },
+						{ label: 'Levítico (Vayikra)', slug: 'biblia/levitico' },
+						{ label: 'Números (Bemidbar)', slug: 'biblia/numeros' },
+						{ label: 'Deuteronômio (Devarim)', slug: 'biblia/deuteronomio' },
 					],
 				},
 				{

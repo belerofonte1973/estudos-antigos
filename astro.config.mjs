@@ -32,6 +32,7 @@ export default defineConfig({
 						{ label: 'Levítico (Vayikra)', slug: 'biblia/levitico' },
 						{ label: 'Números (Bemidbar)', slug: 'biblia/numeros' },
 						{ label: 'Deuteronômio (Devarim)', slug: 'biblia/deuteronomio' },
+						{ label: 'Suméria', slug: 'biblia/sumeria' },
 					],
 				},
 				{

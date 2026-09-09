@@ -1,0 +1,63 @@
+:root {
+  --sl-color-accent: #6b4423;
+  --sl-color-accent-low: #f5ebe0;
+  --sl-color-accent-high: #4a2f15;
+  --sl-color-text-accent: #6b4423;
+}
+
+[data-theme='dark'] {
+  --sl-color-accent: #d4a574;
+  --sl-color-accent-low: #2d1f10;
+  --sl-color-accent-high: #e8c9a0;
+  --sl-color-text-accent: #d4a574;
+}
+
+/* Hebrew text */
+.he {
+  font-family: 'Segoe UI', 'David', serif;
+  font-size: 1.05em;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* Greek text */
+.grc {
+  font-family: 'Segoe UI', 'Palatino Linotype', Georgia, serif;
+}
+
+/* Better table styling */
+table {
+  font-size: 0.9rem;
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Aside styling */
+aside {
+  border-radius: 0.5rem;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--sl-color-accent);
+}
+
+/* Sidebar active item */
+.sidebar-content a[aria-current='page'] {
+  font-weight: 600;
+  color: var(--sl-color-accent);
+}

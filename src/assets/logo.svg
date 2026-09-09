@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="45" stroke="#6b4423" stroke-width="3" fill="#faf8f5"/>
+  <text x="50" y="35" font-family="Georgia, serif" font-size="14" fill="#6b4423" text-anchor="middle" font-weight="bold">ESTUDOS</text>
+  <text x="50" y="55" font-family="Georgia, serif" font-size="14" fill="#6b4423" text-anchor="middle" font-weight="bold">ANTIGOS</text>
+  <text x="50" y="75" font-family="Georgia, serif" font-size="10" fill="#6b4423" text-anchor="middle">Bíblica • Clássica • Medieval</text>
+</svg>

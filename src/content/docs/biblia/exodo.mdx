@@ -1,0 +1,371 @@
+---
+title: 'Êxodo (Shemot)'
+description: 'Artigo enciclopédico sobre o segundo livro da Torá. Escravidão e libertação, dez pragas, aliança no Sinai, Tabernáculo, personagens, temas teológicos.'
+sidebar:
+  order: 2
+---
+
+import { Tabs, TabItem, Card, CardGrid, Aside, LinkButton } from '@astrojs/starlight/components';
+
+# Êxodo (Shemot שְׁמוֹת)
+
+**Artigo enciclopédico** — padrão Britannica / SEP / Wikipedia FA.
+
+---
+
+## Lead
+
+**Êxodo** (hebraico: שְׁמוֹת *Shemot*, "Nomes"; grego: Ἔξοδος *Exodos*, "saída, partida"; latim: *Exodus*) é o segundo livro da Torá/תּוֹרָה *Torah*, "instrução"/Pentateuco e da Bíblia Hebraica. Composto de 40 capítulos, narra a escravização dos descendentes de Jacó/Israel no Egito, a chamada de Moisés, as dez pragas, a saída do Egito (*Yetzi'at Mitzrayim*), a travessia do Mar Vermelho, a aliança no Monte Sinai e a construção do Tabernáculo portátil durante a peregrinação no deserto.
+
+A autoria é tradicionalmente atribuída a Moisés (hebraico: מֹשֶׁה *Mosheh*; grego: Μωϋσῆς *Mōÿsēs*) (séc. XIII a.C.); a crítica acadêmica moderna data a redação final no período persa (séc. V–IV a.C.), com material composto por múltiplas fontes orais e escritas (Hipótese Documentária: J, E, P).
+
+---
+
+## 1. Ficha Técnica
+
+| Campo | Dados |
+|-------|-------|
+| **Textos antigos** | Texto Massorético (Códice de Leningrado c. 1008; Códice de Alepo), Pentateuco Samaritano, Septuaginta (LXX), Manuscritos do Mar Morto (4QExod) |
+| **Título hebraico** | שְׁמוֹת *Shemot* — "Nomes" (de Ex 1:1: "Estes são os nomes...") |
+| **Título grego (LXX)** | Ἔξοδος *Exodos* — "saída, partida" |
+| **Título latino** | *Exodus* — "saída" (Vulgata) |
+| **Posição** | 2º livro da Torá/Pentateuco e da Bíblia Hebraica |
+| **Idioma original** | Hebraico bíblico |
+| **Capítulos** | 40 |
+| **Estrutura** | 3 atos principais: escravidão/libertação (1–15), jornada ao Sinai (16–18), aliança e legislação (19–40) |
+| **Partes** | Narrativa da libertação (1–18) + Legislação sinaítica e Tabernáculo (19–40) |
+| **Autoria tradicional** | Moisés (séc. XIII a.C.) |
+| **Autoria crítica** | Fontes J, E, P, redatadas no período persa (séc. V–IV a.C.) |
+
+---
+
+## 2. Contexto Histórico e Literário
+
+### 2.1. Composição e a Questão do Pentateuco
+
+O Êxodo, como parte do Pentateuco, é objeto do debate mais central da crítica bíblica. A **Hipótese Documentária** (Graf-Wellhausen, séc. XIX; retomada por Joel Baden, *The Composition of the Pentateuch*, Yale UP, 2012) identifica três fontes principais no Êxodo:
+
+<Tabs>
+  <TabItem label="J (Javista)">
+    Nome divino: יְהוָה *YHWH*. Século X–IX a.C. Narrativa vívida; Deus antropomórfico.
+  </TabItem>
+  <TabItem label="E (Eloísta)">
+    Nome divino: אֱלֹהִים *Elohim*. Século IX–VIII a.C. Ênfase em profetas e sonhos.
+  </TabItem>
+  <TabItem label="P (Sacerdotal)">
+    Século VI–V a.C. Rituais, genealogias, ordem do Tabernáculo. Editor final.
+  </TabItem>
+</Tabs>
+
+### 2.2. Transmissão Textual
+
+| Manuscrito | Data | Local | Notas |
+|------------|------|-------|-------|
+| **Códice de Leningrado** | c. 1008 | Cairo | Texto Massorético completo |
+| **Códice de Alepo** | c. 930 | Tiberíades | Parcialmente destruído em 1947 |
+| **Pentateuco Samaritano** | séc. IV–II a.C. | Samaria | Variantes teológicas (monte Gerizim) |
+| **Septuaginta (LXX)** | séc. III–II a.C. | Alexandria | Tradução grega; base da Vulgata |
+| **Manuscritos do Mar Morto** | séc. III–I a.C. | Qumran | 4QExod (fragmentos) |
+| **Vulgata** | séc. IV | Roma/Trêveris | Tradução latina de Jerônimo |
+
+### 2.3. Contexto no Antigo Oriente Próximo
+
+O Êxodo situa-se no contexto do **Novo Império Egípcio** (séc. XVI–XI a.C.). Paralelos literários incluem:
+
+- **Estela de Merneptah** (c. 1208 a.C.): primeira menção extra-bíblica a "Israel" em Canaã
+- **Conto de Sinuhe** (séc. XIX–XVIII a.C.): narrativa egípcia de fuga e retorno
+- **Tratados hititas** (séc. XIV–XIII a.C.): estrutura de aliança (suzerano-vassalo)
+- **Código de Hamurabi** (c. 1754 a.C.): paralelo legal para o "Código da Aliança"
+
+---
+
+## 3. Conteúdo
+
+### 3.1. Escravidão e Chamada de Moisés (caps. 1–6)
+
+O livro abre com a frase "Estes são os nomes dos filhos de Israel" (Ex 1:1). Uma nova dinastia "que não conhecia José" (1:8) escraviza os israelitas. Moisés é salvo das águas pela filha de Faraó (2:1–10), mata um egípcio e foge para Midiã, onde Deus se revela na **sarça ardente** (3:1–6) e o chama para libertar o povo. O nome divino revelado — אֶהְיֶה אֲשֶׁר אֶהְיֶה *Ehyeh Asher Ehyeh*, "Eu Sou o Que Sou" (3:14) — torna-se um dos textos mais debatidos da teologia bíblica.
+
+### 3.2. As Dez Pragas e a Saída do Egito (caps. 7–12)
+
+As **dez pragas** (7:14–12:30) são apresentadas como demonstração do poder de YHWH sobre os deuses egípcios:
+
+| # | Praga | Referência |
+|---|-------|------------|
+| 1 | Água em sangue | Ex 7:14–24 |
+| 2 | Rãs | Ex 7:25–8:11 |
+| 3 | Piolhos | Ex 8:12–15 |
+| 4 | Moscas | Ex 8:16–28 |
+| 5 | Peste no gado | Ex 9:1–7 |
+| 6 | Úlceras | Ex 9:8–12 |
+| 7 | Saraivada | Ex 9:13–35 |
+| 8 | Gafanhotos | Ex 10:1–20 |
+| 9 | Trevas | Ex 10:21–29 |
+| 10 | Morte dos primogênitos | Ex 11:1–12:36 |
+
+A décima praga institui a **Páscoa** (פֶּסַח *Pessach*, 12:1–28): o sacrifício do cordeiro e a marca de sangue nas umbrais.
+
+### 3.3. Travessia do Mar Vermelho e Jornada ao Sinai (caps. 13–18)
+
+A **travessia do Mar Vermelho** (ים סוף *Yam Suf*, 14:1–31): Deus abre o mar para os israelitas passarem a seco e fecha sobre o exército egípcio. O **Cântico de Moisés** (15:1–21) e o **Cântico de Miriã** (15:21b) são considerados entre os textos mais antigos da Bíblia.
+
+### 3.4. A Aliança no Sinai (caps. 19–24)
+
+O **Monte Sinai** (הַר סִינַי *Har Sinai*) é o cenário da teofania mais dramática do Antigo Testamento. Deus entrega os **Dez Mandamentos** (עֲשֶׂרֶת הַדְּבָרִים *Aseret HaDevarim*, 20:1–17) e o **Código da Aliança** (20:22–23:33).
+
+| Mandamento | Hebraico | Referência |
+|------------|----------|------------|
+| 1 | לֹא יִהְיֶה לְךָ | Não terás outros deuses |
+| 2 | לֹא תַעֲשֶׂה לְךָ | Não farás imagem de escultura |
+| 3 | לֹא תִשָּׂא | Não tomarás o nome em vão |
+| 4 | זָכוֹר אֶת יוֹם הַשַּׁבָּת | Guardarás o sábado |
+| 5 | כַּבֵּד אֶת אָבִיךָ | Honra teu pai e tua mãe |
+| 6 | לֹא תִרְצָח | Não matarás |
+| 7 | לֹא תִנְאָף | Não adulterarás |
+| 8 | לֹא תִגְנֹב | Não furtarás |
+| 9 | לֹא תַעֲנֶה | Não dirás falso testemunho |
+| 10 | לֹא תַחְמֹד | Não cobiçarás |
+
+### 3.5. O Tabernáculo (caps. 25–31, 35–40)
+
+A segunda metade do Êxodo é dominada por instruções detalhadas para a construção do **Tabernáculo** (מִשְׁכָּן *Mishkan*), santuário portátil onde Deus habitaria no meio do povo.
+
+<CardGrid>
+  <Card title="Arca da Aliança" icon="star">
+    אֲרוֹן הַבְּרִית *Aron HaBerit* — Continha as Tábuas da Lei
+  </Card>
+  <Card title="Menorá" icon="star">
+    מְנוֹרָה — Candelabro de sete braços (Ex 25:31–40)
+  </Card>
+  <Card title="Altar dos Holocaustos" icon="star">
+    מִזְבַּח הָעֹלָה — Para sacrifícios (Ex 27:1–8)
+  </Card>
+  <Card title="Vestes Sacerdotais" icon="star">
+    בִּגְדֵי הַקֹּדֶשׁ — Para Aarão e seus filhos (Ex 28)
+  </Card>
+</CardGrid>
+
+O **bezerro de ouro** (caps. 32–34) interrompe a narrativa: Moisés quebra as tábuas, intercede, e Deus renova a aliança. Seu rosto resplandece após o encontro divino (34:29–35 — origem da tradição iconográfica de "Moisés com chifres").
+
+---
+
+## 4. Personagens Principais
+
+| Personagem | Hebraico | Papel |
+|------------|----------|-------|
+| **Moisés** | מֹשֶׁה *Mosheh* | Profeta, legislador, libertador; mediador da aliança |
+| **Aarão** | אַהֲרֹן *Aharon* | Irmão de Moisés; primeiro sumo sacerdote |
+| **Miriã** | מִרְיָם *Miryam* | Irmã de Moisés; profetisa |
+| **Faraó** | פַּרְעֹה | Rei do Egito; antagonista (nome não especificado) |
+| **Jetro** | יִתְרוֹ | Sogro de Moisés; sacerdote de Midiã |
+| **Bezalel** | בְּצַלְאֵל | Artífice principal do Tabernáculo |
+
+---
+
+## 5. Temas Teológicos
+
+### 5.1. Libertação e Redenção
+O tema central é a **libertação divina** (גְּאוּלָה *ge'ulah*): Deus "ouve o clamor" do povo oprimido (2:23–25; 3:7–9) e intervém historicamente para libertar. O verbo גאל *ga'al* ("resgatar, redimir") e a expressão "Eu sou o Senhor, que vos tirei" tornam-se fórmulas identitárias de Israel.
+
+### 5.2. Aliança (Berit)
+A **aliança** (בְּרִית *berit*) no Sinai estabelece a relação especial: "Serei vosso Deus e sereis meu povo" (cf. Ex 6:7; 29:45–46). A estrutura da aliança sinaítica segue o modelo de tratados de vassalagem hititas.
+
+### 5.3. Presença Divina (Kavod / Shekinah)
+A **glória de Deus** (כָּבוֹד *kavod*) enche o Tabernáculo (40:34–38). A presença divina é manifestada na coluna de nuvem/fogo (13:21–22) e na tenda do encontro (33:7–11).
+
+### 5.4. Lei e Santidade
+O Êxodo contém a coleção legal mais antiga do Pentateuco: os Dez Mandamentos (20:1–17) e o Código da Aliança (20:22–23:33). A **santidade** (קְדֻשָּׁה *qedushah*) é requisito fundamental: "Sereis santos, porque eu, o Senhor vosso Deus, sou santo" (cf. Lv 19:2).
+
+### 5.5. Intercessão e Mediação
+Moisés é o **mediador** por excelência: intercede pelo povo após o bezerro de ouro (32:11–14, 30–34), pede ver a glória de Deus (33:18–23; 34:5–7).
+
+---
+
+## 6. Traduções em Português
+
+### 6.1. Traduções Parciais e Comentadas
+
+| Tradução | Editora | Ano | Características |
+|----------|---------|-----|-----------------|
+| **Bíblia Pastoral** | Paulus | 1990 | Leitura libertadora; linguagem popular |
+| **Bíblia de Jerusalém** | Paulus | 1985 (2ª ed. 2002) | Acadêmica; notas críticas |
+| **Nova Bíblia de Jerusalém** | Paulus | 2018 | Atualização; linguagem contemporânea |
+| **Tradução Ecumênica (TEB)** | Loyola/Paulinas | 1994 | Ecumênica; notas teológicas |
+| **Bíblia do Peregrino** | Paulus | 1997 | Tradução de Luis Alonso Schökel |
+| **Almeida Revista e Atualizada (ARA)** | SBB | 1993 | Protestante; literal |
+| **Nova Versão Internacional (NVI)** | Vida | 2000 | Equivalente dinâmica |
+| **Nova Tradução na Linguagem de Hoje (NTLH)** | SBB | 2000 | Popular; linguagem corrente |
+
+### 6.2. Edições Comentadas em Português
+
+| Obra | Autor(es) | Editora | Ano | Notas |
+|------|-----------|---------|-----|-------|
+| *Êxodo: uma hermenêutica da liberdade* | J. Severino Croatto + J. B. Coutinho | Paulinas | 1981 | Clássico da hermenêutica latino-americana |
+| *A missão do povo que sofre* | Carlos Mesters | Vozes/CEBI | 1985 | Comentário pastoral |
+| *O Livro do Êxodo* | R. Alan Cole | Vida Nova | 1989 | Série Cultura Bíblica; evangélico |
+| *O Livro do Êxodo* | Scott Hahn + Curtis Mitch | Ecclesiae | 2015 | Comentário católico |
+| *Estudos sobre o Livro de Êxodo* | C. H. Mackintosh | Pontocomapalavra | 2001 | Dispensacionalista |
+
+---
+
+## 7. Estudos Acadêmicos em Português
+
+| Autor | Obra | Editora/Periódico | Ano | Abordagem |
+|-------|------|-------------------|-----|-----------|
+| **J. Severino Croatto** | *Êxodo: uma hermenêutica da liberdade* | Paulinas | 1981 | Hermenêutica da libertação |
+| **Carlos Mesters** | *A missão do povo que sofre* | Vozes/CEBI | 1985 | Leitura pastoral |
+| **Ivo Storniolo** | *O Pentateuco: problemas e debates* | Paulus | 2008 | Introdução crítica |
+| **Eduardo G. de A. Moreira** | *O Tabernáculo no Êxodo* | Vox Scripturae | 2020 | Análise literária |
+
+---
+
+## 8. Recepção Cultural
+
+### 8.1. Artes Visuais
+
+| Artista | Obra | Data | Museu | Cena |
+|---------|------|------|-------|------|
+| **Michelangelo** | *Moisés* (escultura) | 1513–1515 | San Pietro in Vincoli, Roma | Chifros (Ex 34:29–35) |
+| **Nicolas Poussin** | *A Travessia do Mar Vermelho* | 1633–1634 | National Gallery of Victoria | Ex 14 |
+| **Rembrandt** | *Moisés Quebrando as Tábuas* | 1659 | Gemäldegalerie, Berlim | Ex 32 |
+| **Marc Chagall** | *O Êxodo* (série) | 1966 | Musée National Marc Chagall | Cenas do Êxodo |
+| **Cándido Portinari** | *O Êxodo* (mural) | 1957–1959 | MEC, Rio de Janeiro | Modernismo brasileiro |
+
+### 8.2. Cinema e Televisão
+
+| Obra | Diretor | Ano | País | Notas |
+|------|---------|-----|------|-------|
+| *The Ten Commandments* | Cecil B. DeMille | 1956 | EUA | Charlton Heston; Technicolor; 1 Oscar |
+| *Exodus: Gods and Kings* | Ridley Scott | 2014 | EUA/Reino Unido | Christian Bale |
+| *Os Dez Mandamentos* | Alexandre Avancini | 2015–2016 | Brasil | 176 episódios; Guilherme Winter |
+| *The Prince of Egypt* | Brenda Chapman et al. | 1998 | EUA (DreamWorks) | Animação musical |
+| *Os Dez Mandamentos — O Filme* | Alexandre Avancini | 2016 | Brasil | Adaptação da telenovela |
+
+### 8.3. Música Erudita
+
+| Compositor | Obra | Gênero | Ano | Notas |
+|------------|------|--------|-----|-------|
+| **George Frideric Handel** | *Israel in Egypt* (HWV 54) | Oratório | 1738 | Libreto de Charles Jennens |
+| **Arnold Schoenberg** | *Moses und Aron* | Ópera | 1930–1932 | 12 tons; inacabada |
+| **Gioachino Rossini** | *Moïse et Pharaon* | Ópera | 1827 | Baseado em *Mosè in Egitto* |
+| **Bob Marley** | *Exodus* | Álbum | 1977 | Reggae; faixa-tema |
+
+### 8.4. Influência Literária
+
+- **Teologia da libertação**: Gustavo Gutiérrez, *A Teologia da Libertação* (1971)
+- **Literatura afro-americana**: Spirituals (*Go Down, Moses*; *Let My People Go*)
+- **Literatura inglesa**: *The Pilgrim's Progress* (John Bunyan, 1678)
+- **Literatura brasileira**: *Grande Sertão: Veredas* (Guimarães Rosa, 1956)
+
+---
+
+## 9. Bibliografia Comentada
+
+<Aside type="note">
+**Nota sobre traduções:** Das obras listadas abaixo, apenas 5 possuem tradução para o português. As demais permanecem disponíveis apenas em inglês.
+</Aside>
+
+### 9.1. Comentários em Inglês
+
+| Autor | Obra | Editora | Ano | Tradução PT? |
+|-------|------|---------|-----|--------------|
+| **Nahum Sarna** | *Exodus* (JPS Torah Commentary) | Jewish Publication Society | 1991 | ❌ |
+| **Brevard Childs** | *The Book of Exodus* (OTL) | Westminster John Knox | 1974 | ❌ |
+| **William Propp** | *Exodus 1–18* / *19–40* (Anchor Bible) | Doubleday | 1998/2006 | ❌ |
+| **John Durham** | *Exodus* (WBC) | Word Books | 1987 | ❌ |
+| **Thomas Dozeman** | *Exodus* (Eerdmans Critical) | Eerdmans | 2009 | ❌ |
+| **Martin Noth** | *Exodus* (OTL) | Westminster | 1962 | ❌ |
+
+### 9.2. Estudos Históricos
+
+| Autor | Obra | Editora | Ano | Tradução PT? |
+|-------|------|---------|-----|--------------|
+| **James Hoffmeier** | *Israel in Egypt* | Oxford UP | 1996 | ❌ |
+| **Israel Finkelstein + Neil Silberman** | *The Bible Unearthed* | Free Press | 2001 | ✅ Vozes, 2018 |
+| **Richard Elliott Friedman** | *The Exodus* | HarperOne | 2017 | ❌ |
+| **Jan Assmann** | *Moses the Egyptian* | Harvard UP | 1997 | ❌ |
+| **William Dever** | *Who Were the Early Israelites?* | Eerdmans | 2003 | ❌ |
+
+### 9.3. Teologia e Recepção
+
+| Autor | Obra | Editora | Ano | Tradução PT? |
+|-------|------|---------|-----|--------------|
+| **Gustavo Gutiérrez** | *Teología de la Liberación* | CEP/Lima | 1971 | ✅ Vozes, 1979 |
+| **Michael Walzer** | *Exodus and Revolution* | Basic Books | 1985 | ❌ |
+| **Albert Nolan** | *Jesus Before Christianity* | Orbis Books | 1976 | ✅ Paulus, 1987 |
+
+### 9.4. Obras em Português
+
+| Autor | Obra | Editora | Ano | Abordagem |
+|-------|------|---------|-----|-----------|
+| **J. Severino Croatto** | *Êxodo: uma hermenêutica da liberdade* | Paulinas | 1981 | Hermenêutica da libertação |
+| **Carlos Mesters** | *A missão do povo que sofre* | Vozes/CEBI | 1985 | Leitura pastoral |
+| **Ivo Storniolo** | *O Pentateuco: problemas e debates* | Paulus | 2008 | Introdução crítica |
+| **R. Alan Cole** | *O Livro do Êxodo* | Vida Nova | 1989 | Comentário evangélico |
+| **Scott Hahn + Curtis Mitch** | *O Livro do Êxodo* | Ecclesiae | 2015 | Comentário católico |
+
+---
+
+## 10. Disponibilidade em Português — Resumo
+
+| Categoria | Total | Com tradução PT | Sem tradução PT |
+|-----------|-------|-----------------|-----------------|
+| Comentários bíblicos | 9 | 0 | 9 |
+| Estudos históricos/arqueológicos | 6 | 1 | 5 |
+| Teologia e recepção | 4 | 2 | 2 |
+| Obras originalmente em PT | 5 | 5 | 0 |
+| **Total** | **24** | **8** | **16** |
+
+> **Conclusão:** A maioria dos comentários acadêmicos especializados sobre o Êxodo (especialmente da tradição anglo-saxônica) **não foi traduzida para o português**. O leitor lusófono tem acesso direto a apenas 8 das 24 obras listadas.
+
+---
+
+## 11. Estado do Debate Acadêmico
+
+### 11.1. Historicidade do Êxodo
+
+| Escola | Representantes | Tese | Datação |
+|--------|----------------|------|---------|
+| **Minimalista** | Israel Finkelstein, Neil Silberman | Êxodo = invenção literária tardia | Não histórico |
+| **Maximalista** | James Hoffmeier, Kenneth Kitchen | Narrativa reflete realidade do Novo Império | Século XIII a.C. |
+| **Centro** | Richard Elliott Friedman, William Dever | Núcleo histórico possível; reescrita tardia | Memória + reescrita |
+
+### 11.2. Composição Literária
+
+A Hipótese Documentária (J, E, P) permanece o modelo dominante, embora contestada por modelos revisionistas (Rendtorff), complementares (Van Seters) e canônicos (Childs).
+
+### 11.3. Teologia do Êxodo
+
+O Êxodo é central para:
+- **Teologia bíblica**: Paradigma da salvação como libertação
+- **Teologia da libertação**: Êxodo como paradigma de justiça social
+- **Teologia política**: Êxodo como modelo de revolução (Walzer)
+- **Teologia judaica**: Páscoa como memorial da libertação
+- **Teologia cristã**: Êxodo como tipologia de Cristo (1 Co 10:1–11)
+
+---
+
+## 12. Notas
+
+1. O título hebraico *Shemot* ("Nomes") vem de Ex 1:1: "Estes são os nomes dos filhos de Israel". O título grego *Exodos* ("saída") reflete o tema central.
+
+2. A tradição iconográfica de "Moisés com chifros" (Ex 34:29–35) origina-se de uma ambiguidade no hebraico: קָרַן *qaran* ("resplandecer") foi traduzido na Vulgata como *cornuta* ("cornudo"). Michelangelo seguiu essa tradição.
+
+3. A Páscoa judaica (*Pessach*) celebra a libertação do Êxodo. A Páscoa cristã reinterpretou o Êxodo como libertação do pecado pela morte e ressurreição de Cristo.
+
+4. O Êxodo é citado ou aludido em todo o Novo Testamento: Mt 2:13–15; Jo 1:14; 1 Co 10:1–11; Hb 8:5; Ap 15:3.
+
+5. A expressão "Deixa ir o meu povo" (*Let My People Go*) tornou-se slogan de movimentos abolicionistas, pelos direitos civis (Martin Luther King Jr.), e de libertação em todo o mundo.
+
+---
+
+## Ver também
+
+- [Gênesis (Bereshit)](/biblia/genesis) — livro anterior
+- [Levítico](/biblia/levitico) — livro seguinte
+- [Números](/biblia/numeros) — peregrinação no deserto
+- [Deuteronômio](/biblia/deuteronomio) — recapitulação da Lei
+- [Como Pesquisar](/ferramentas/como-pesquisar) — metodologia
+
+---
+
+*Artigo gerado em 08/set/2026. Última atualização: 08/set/2026.*

@@ -42,6 +42,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Pré-História',
+					items: [
+						{ label: 'Dossiê Consolidado', slug: 'pre-historia/prehistoria-humana' },
+					],
+				},
+				{
 					label: 'Idade Média',
 					items: [
 						{ label: 'Introdução', slug: 'idade-media/introducao' },

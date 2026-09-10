@@ -1,8 +1,33 @@
+/* ============================================================
+   Estudos Antigos — Design System "Notion Warm Minimalism"
+   Adaptado do template popular-web-designs/notion.md
+   ============================================================ */
+
+/* Fontes — Inter como substituto do NotionInter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
+  /* Cores Notion */
+  --notion-ink: rgba(0, 0, 0, 0.95);
+  --notion-ink-2: #615d59;
+  --notion-ink-3: #a39e98;
+  --notion-warm-white: #f6f5f4;
+  --notion-warm-dark: #31302e;
+  --notion-blue: #0075de;
+  --notion-blue-hover: #005bab;
+  --notion-link-light: #62aef0;
+  --notion-border: rgba(0, 0, 0, 0.1);
+  --notion-card-shadow: rgba(0, 0, 0, 0.04) 0px 4px 18px, rgba(0, 0, 0, 0.027) 0px 2.025px 7.84688px, rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px, rgba(0, 0, 0, 0.01) 0px 0.175px 1.04062px;
+  
+  /* Sobrescrever Starlight com identidade histórica quente + sofisticação */
   --sl-color-accent: #6b4423;
   --sl-color-accent-low: #f5ebe0;
   --sl-color-accent-high: #4a2f15;
   --sl-color-text-accent: #6b4423;
+  --sl-color-bg-nav: var(--notion-warm-white);
+  --sl-color-bg-sidebar: var(--notion-warm-white);
+  --sl-color-hairline: rgba(0, 0, 0, 0.08);
+  --sl-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 [data-theme='dark'] {
@@ -10,54 +35,163 @@
   --sl-color-accent-low: #2d1f10;
   --sl-color-accent-high: #e8c9a0;
   --sl-color-text-accent: #d4a574;
+  --sl-color-bg-nav: #101010;
+  --sl-color-bg-sidebar: #101010;
+  --sl-color-hairline: #262626;
+  --notion-ink: #ffffff;
+  --notion-ink-2: #b9b9b9;
+  --notion-ink-3: #797979;
+  --notion-border: #262626;
 }
 
-/* Hebrew text */
+/* ============ Tipografia ============ */
+body {
+  font-family: var(--sl-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings com letter-spacing negativo (Notion) */
+.main-frame h1, .hero h1, article h1 {
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.main-frame h2, article h2 {
+  letter-spacing: -0.625px;
+  line-height: 1.23;
+  font-weight: 700;
+}
+.main-frame h3, article h3 {
+  letter-spacing: -0.3px;
+  font-weight: 600;
+}
+
+/* ============ Hebrew / Greek ============ */
 .he {
   font-family: 'Segoe UI', 'David', serif;
   font-size: 1.05em;
   direction: rtl;
   unicode-bidi: embed;
 }
-
-/* Greek text */
 .grc {
   font-family: 'Segoe UI', 'Palatino Linotype', Georgia, serif;
 }
 
-/* Better table styling */
+/* ============ Tabelas ============ */
 table {
   font-size: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--notion-border);
+  overflow: hidden;
+}
+th {
+  background: var(--notion-warm-white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+[data-theme='dark'] th {
+  background: #141414;
 }
 
-/* Card hover effect */
+/* ============ Cards com shadow em camadas (Notion) ============ */
 .card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--notion-border);
+  border-radius: 12px;
+  box-shadow: var(--notion-card-shadow);
 }
-
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Aside styling */
+/* ============ Aside / blockquote ============ */
 aside {
   border-radius: 0.5rem;
+  border-left: 3px solid var(--notion-blue);
+}
+blockquote {
+  border-left-width: 3px;
+  color: var(--notion-ink-2);
+  background: var(--notion-warm-white);
+  border-radius: 0 8px 8px 0;
+}
+[data-theme='dark'] blockquote {
+  background: #141414;
 }
 
-/* Link styling */
+/* ============ Links ============ */
 a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
-
 a:hover {
   border-bottom-color: var(--sl-color-accent);
 }
 
-/* Sidebar active item */
+/* ============ Sidebar ============ */
 .sidebar-content a[aria-current='page'] {
   font-weight: 600;
   color: var(--sl-color-accent);
+}
+
+/* ============ Badges de verificação [V]/[W]/[—] ============ */
+.badge, .status-v, .status-w, .status-gap {
+  display: inline-block;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.66rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 9999px;
+  letter-spacing: 0.2px;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+.status-v {
+  background: rgba(26, 174, 57, 0.12);
+  color: #1aae39;
+  border: 1px solid rgba(26, 174, 57, 0.25);
+}
+.status-w {
+  background: rgba(221, 91, 0, 0.12);
+  color: #dd5b00;
+  border: 1px solid rgba(221, 91, 0, 0.25);
+}
+.status-gap {
+  background: rgba(198, 40, 40, 0.1);
+  color: #c62828;
+  border: 1px solid rgba(198, 40, 40, 0.25);
+}
+[data-theme='dark'] .status-v { color: #3fb950; }
+[data-theme='dark'] .status-w { color: #f0883e; }
+[data-theme='dark'] .status-gap { color: #f85149; }
+
+/* ============ Scrollbar refinada ============ */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--notion-ink-3);
+  border-radius: 10px;
+  border: 2px solid var(--notion-warm-white);
+}
+
+/* ============ Hero refinado ============ */
+.hero {
+  border-bottom: 1px solid var(--notion-border);
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+/* ============ Seleção ============ */
+::selection {
+  background: rgba(0, 117, 222, 0.15);
+}
+
+/* ============ Foco acessível ============ */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--notion-blue);
+  outline-offset: 2px;
 }

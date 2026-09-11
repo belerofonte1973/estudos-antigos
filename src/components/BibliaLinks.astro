@@ -1,0 +1,136 @@
+---
+/**
+ * Links para o texto bíblico em português.
+ *
+ * Por que duas traduções de tradições diferentes, e não uma: comparar uma
+ * protestante (ARA/NVI) com uma católica (Ave-Maria) ensina mais sobre o texto
+ * do que qualquer comentário — mostra onde o hebraico é ambíguo e onde o
+ * tradutor teve de decidir. É o primeiro exercício do degrau 1.
+ *
+ * Todos os padrões de URL foram conferidos por HTTP 200 em 11-set-2026. Se um
+ * endereço morrer, corrigir aqui e reconferir — a rota é a mesma para os onze
+ * livros, então um erro aqui é um erro em tudo.
+ */
+import { BIBLIAS, LIVROS } from '../taxonomia';
+
+interface Props {
+	/** Slug do livro, conforme LIVROS (ex.: 'genesis'). */
+	livro: keyof typeof LIVROS;
+	/** Capítulo ou intervalo, como aparece na citação (ex.: '6-9'). */
+	capitulo: string;
+	/** Como exibir (ex.: 'Gênesis 6–9'). */
+	referencia: string;
+	titulo?: string;
+	compacto?: boolean;
+}
+
+const { livro, capitulo, referencia, titulo = 'Ler a passagem', compacto = false } =
+	Astro.props;
+
+const meta = LIVROS[livro];
+if (!meta) throw new Error(`BibliaLinks: livro desconhecido '${livro}'`);
+
+const opcoes = BIBLIAS.map((b) => ({
+	id: b.id,
+	nome: b.nome,
+	sigla: b.sigla,
+	tradicao: b.tradicao,
+	href: b.url(meta, capitulo),
+}));
+---
+
+<aside class:list={['ea-biblia', { 'ea-biblia--compacto': compacto }]}>
+	<p class="ea-biblia__titulo">
+		{titulo} — <span class="ea-biblia__ref">{referencia}</span>
+	</p>
+	<p class="ea-biblia__nota">
+		Compare duas traduções de tradições diferentes. Onde elas divergem, o
+		original é ambíguo — e é aí que o estudo começa.
+	</p>
+	<ul class="ea-biblia__lista">
+		{
+			opcoes.map((o) => (
+				<li>
+					<a href={o.href} target="_blank" rel="noopener">
+						<span class="ea-biblia__sigla">{o.sigla}</span>
+						<span class="ea-biblia__nome">{o.nome}</span>
+						<span class="ea-biblia__trad">{o.tradicao}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</aside>
+
+<style>
+	.ea-biblia {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-warm);
+		padding: 1.2rem 1.3rem;
+		margin: 1.6rem 0;
+	}
+	.ea-biblia__titulo {
+		margin: 0 0 0.4rem;
+		font-weight: 650;
+		font-size: 0.95rem;
+	}
+	.ea-biblia__ref {
+		color: var(--accent);
+	}
+	.ea-biblia__nota {
+		margin: 0 0 0.9rem;
+		font-size: 0.85rem;
+		line-height: 1.55;
+		color: var(--ink-2);
+		max-width: 68ch;
+	}
+	.ea-biblia__lista {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+		gap: 0.5rem;
+	}
+	.ea-biblia__lista a {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.4rem;
+		padding: 0.5rem 0.7rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: var(--bg-raised);
+		transition: border-color 0.15s ease, transform 0.15s ease;
+	}
+	.ea-biblia__lista a:hover {
+		border-color: var(--accent);
+		transform: translateY(-1px);
+	}
+	.ea-biblia__sigla {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 700;
+		color: var(--accent);
+		background: var(--accent-soft);
+		padding: 1px 7px;
+		border-radius: var(--radius-pill);
+	}
+	.ea-biblia__nome {
+		font-size: 0.84rem;
+		color: var(--ink-2);
+	}
+	.ea-biblia__trad {
+		font-size: 0.7rem;
+		color: var(--ink-3);
+		flex-basis: 100%;
+	}
+	.ea-biblia--compacto {
+		margin: 1rem 0;
+		padding: 1rem 1.1rem;
+	}
+	.ea-biblia--compacto .ea-biblia__nota {
+		display: none;
+	}
+</style>

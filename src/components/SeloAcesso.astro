@@ -1,0 +1,113 @@
+---
+/**
+ * SELO DE ACESSO — o que o leitor precisa para obter uma obra.
+ *
+ * A bibliografia de um site didático não é a de uma tese: cita o que importa
+ * E o leitor consegue alcançar. Quando não consegue, o selo diz isso, em vez
+ * de deixar a referência como um troféu inalcançável.
+ *
+ * Uso em MDX (lembrar: import depois do `---`, nunca dentro do frontmatter):
+ *
+ *   import SeloAcesso from '../../../components/SeloAcesso.astro';
+ *
+ *   Noth, *Überlieferungsgeschichtliche Studien* (1943) <SeloAcesso tipo="biblioteca" />
+ *
+ * Ou com o substituto acessível, que é o caso em que o selo mais serve:
+ *
+ *   <SeloAcesso tipo="esgotado" substituto="Römer, *Introdução ao AT* (2008)" />
+ */
+import { SELOS } from '../taxonomia';
+
+interface Props {
+	tipo: keyof typeof SELOS;
+	/** Obra acessível que cumpre a função desta, quando a original não é alcançável. */
+	substituto?: string;
+}
+
+const { tipo, substituto } = Astro.props;
+const selo = SELOS[tipo];
+if (!selo) throw new Error(`SeloAcesso: tipo desconhecido '${tipo}'`);
+---
+
+<span class:list={['ea-selo', `ea-selo--${tipo}`]} title={selo.descricao}>
+	{selo.rotulo}
+	{
+		substituto && (
+			<span class="ea-selo__sub">
+				→ no lugar dela: <span set:html={substituto} />
+			</span>
+		)
+	}
+</span>
+
+<style>
+	.ea-selo {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.35rem;
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		font-weight: 600;
+		letter-spacing: 0.3px;
+		padding: 1px 8px;
+		border-radius: var(--radius-pill);
+		border: 1px solid;
+		vertical-align: baseline;
+		white-space: nowrap;
+	}
+	.ea-selo--livre {
+		color: #2f6b3f;
+		border-color: #2f6b3f55;
+		background: #2f6b3f14;
+	}
+	.ea-selo--emprestimo {
+		color: #2a5d8f;
+		border-color: #2a5d8f55;
+		background: #2a5d8f14;
+	}
+	.ea-selo--compra {
+		color: #8a5a1f;
+		border-color: #8a5a1f55;
+		background: #8a5a1f14;
+	}
+	.ea-selo--biblioteca {
+		color: #5b4a8f;
+		border-color: #5b4a8f55;
+		background: #5b4a8f14;
+	}
+	.ea-selo--esgotado {
+		color: var(--ink-3);
+		border-color: var(--border);
+		background: transparent;
+	}
+	.ea-selo__sub {
+		font-family: var(--font-body, inherit);
+		font-weight: 400;
+		letter-spacing: 0;
+		text-transform: none;
+		color: var(--ink-2);
+		white-space: normal;
+	}
+
+	/* No tema escuro as cores precisam clarear para manter contraste */
+	:global([data-theme='dark']) .ea-selo--livre {
+		color: #7fc48f;
+		border-color: #7fc48f55;
+		background: #7fc48f18;
+	}
+	:global([data-theme='dark']) .ea-selo--emprestimo {
+		color: #7fb0e0;
+		border-color: #7fb0e055;
+		background: #7fb0e018;
+	}
+	:global([data-theme='dark']) .ea-selo--compra {
+		color: #d8a86a;
+		border-color: #d8a86a55;
+		background: #d8a86a18;
+	}
+	:global([data-theme='dark']) .ea-selo--biblioteca {
+		color: #b0a0e0;
+		border-color: #b0a0e055;
+		background: #b0a0e018;
+	}
+</style>

@@ -2,8 +2,9 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import EscadaEstudo from '../components/EscadaEstudo.astro';
 import Icon from '../components/Icon.astro';
-import {AREAS} from '../taxonomia';
+import { AREAS, LIVROS, PRE_REQUISITOS } from '../taxonomia';
 
 interface NavItem {
 	href: string;
@@ -22,6 +23,17 @@ interface Props {
 	atualizado?: Date;
 	/** Link para o artigo de entrada (versão curta) deste dossiê. */
 	entrada?: { href: string; titulo: string };
+	/** Livro bíblico, quando o dossiê for sobre um — habilita a escada de estudo. */
+	livro?: keyof typeof LIVROS;
+	/** Capítulo por onde começar a ler o texto (padrão: 1). */
+	capitulo?: string;
+	/**
+	 * Chave para os pré-requisitos. NÃO é o mesmo que `livro`: Samuel e Reis são
+	 * uma unidade canônica (`livro` = 'samuel-1' para montar o link da Bíblia),
+	 * mas os pré-requisitos são do dossiê ('samuel'). Confundir os dois deixa a
+	 * caixa de pré-requisitos vazia em silêncio.
+	 */
+	chave?: string;
 }
 
 const {
@@ -33,7 +45,14 @@ const {
 	currentId,
 	atualizado,
 	entrada,
+	livro,
+	capitulo = '1',
+	chave,
 } = Astro.props;
+
+const livroMeta = livro ? LIVROS[livro] : undefined;
+const referencia = livroMeta?.nome;
+const preRequisitos = chave ? (PRE_REQUISITOS[chave] ?? []) : [];
 
 const areaLabel = (AREAS as Record<string, string>)[area] ?? area;
 
@@ -150,6 +169,15 @@ const jsonLd = [
 					</a>
 				)
 			}
+
+			<EscadaEstudo
+				headings={headings}
+				artigo={entrada}
+				livro={livro}
+				capitulo={capitulo}
+				referencia={referencia}
+				preRequisitos={preRequisitos}
+			/>
 
 			<div class="ea-lib__grid">
 				<div class="ea-lib__body prose">

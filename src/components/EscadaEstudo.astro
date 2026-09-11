@@ -1,0 +1,342 @@
+---
+/**
+ * ESCADA DE ESTUDO — o caminho, não o índice.
+ *
+ * O dossiê numerado é um mapa. Quem chega sozinho, sem professor, não sabe por
+ * onde começar, quanto tempo leva nem o que precisa saber antes. Este bloco
+ * resolve isso e vai no topo de todo dossiê.
+ *
+ * A ordem dos passos NÃO é a ordem das seções do dossiê, e isso é o ponto:
+ * ler o texto vem antes de qualquer comentário. Quem lê o texto cru primeiro
+ * reconhece o problema quando o comentário o aponta; quem lê o comentário
+ * primeiro só vê a solução.
+ *
+ * Os passos cujas seções não existem naquele dossiê são omitidos, para a
+ * escada nunca prometer o que a página não tem.
+ */
+import { ESCADA_ESTUDO, LIVROS } from '../taxonomia';
+import BibliaLinks from './BibliaLinks.astro';
+
+interface Props {
+	/** Headings do render() do MDX, para ancorar cada passo na seção real. */
+	headings: Array<{ depth: number; slug: string; text: string }>;
+	/** Link do artigo-porta, quando o dossiê tiver um. */
+	artigo?: { href: string; titulo: string };
+	/** Livro e capítulo, para o degrau de ler o texto. */
+	livro?: keyof typeof LIVROS;
+	capitulo?: string;
+	referencia?: string;
+	/** O que o leitor precisa saber antes — termos que o dossiê supõe. */
+	preRequisitos?: Array<{ termo: string; href: string }>;
+}
+
+const {
+	headings,
+	artigo,
+	livro,
+	capitulo,
+	referencia,
+	preRequisitos = [],
+} = Astro.props;
+
+// mapa número da seção -> âncora real, lido dos headings do documento
+const ancoraPorNumero: Record<string, string> = {};
+for (const h of headings) {
+	if (h.depth !== 2) continue;
+	const m = h.text.match(/^(\d{1,2})\./);
+	if (m) ancoraPorNumero[m[1]] = h.slug;
+}
+
+const passos = ESCADA_ESTUDO.map((p) => {
+	if (p.origem === 'artigo') {
+		return { ...p, disp: !!artigo, ancoras: [], href: artigo?.href };
+	}
+	if (p.origem === 'biblia') {
+		return { ...p, disp: !!(livro && capitulo), ancoras: [], href: undefined };
+	}
+	if (p.origem === 'integral') {
+		return { ...p, disp: true, ancoras: [], href: undefined };
+	}
+	const secoes = (p.secoes ?? []).filter((n) => ancoraPorNumero[n]);
+	return {
+		...p,
+		disp: secoes.length > 0,
+		ancoras: secoes.map((n) => ({ n, slug: ancoraPorNumero[n] })),
+		href: undefined,
+	};
+}).filter((p) => p.disp);
+
+const passosComSecao = ESCADA_ESTUDO.filter((p) => p.secoes).length;
+---
+
+<section class="ea-escada" aria-labelledby="escada-titulo">
+	<header class="ea-escada__cabeca">
+		<p class="eyebrow">Comece por aqui</p>
+		<h2 id="escada-titulo">Por onde estudar esta página</h2>
+		<p class="ea-escada__sub">
+			Você não precisa ler tudo. Escolha um degrau — cada um é um estado
+			final satisfatório, não um fragmento de curso. A ordem abaixo não é a
+			ordem das seções: o texto vem antes do comentário, de propósito.
+		</p>
+	</header>
+
+	{
+		preRequisitos.length > 0 && (
+			<p class="ea-escada__pre">
+				<strong>Você vai precisar saber antes:</strong>{' '}
+				{preRequisitos.map((p, i) => (
+					<>
+						{i > 0 && ' · '}
+						<a href={p.href}>{p.termo}</a>
+					</>
+				))}
+			</p>
+		)
+	}
+
+	<ol class="ea-escada__lista">
+		{
+			passos.map((p) => (
+				<li class="ea-passo">
+					<span class="ea-passo__num">{String(p.passo).padStart(2, '0')}</span>
+					<div class="ea-passo__corpo">
+						<p class="ea-passo__topo">
+							<strong class="ea-passo__nome">
+								{p.href ? (
+									<a href={p.href}>{p.nome}</a>
+								) : (
+									p.nome
+								)}
+							</strong>
+							<span class="ea-passo__tempo">{p.tempo}</span>
+						</p>
+						<p class="ea-passo__desc">{p.descricao}</p>
+						{p.ancoras.length > 0 && (
+							<p class="ea-passo__ancoras">
+								{/* eslint-disable-next-line */}
+								{p.ancoras.map((a, i) => (
+									<>
+										{i > 0 && ' '}
+										<a href={`#${a.slug}`}>§{a.n}</a>
+									</>
+								))}
+							</p>
+						)}
+						{p.origem === 'biblia' && livro && capitulo && referencia && (
+							<div class="ea-passo__biblia">
+								<BibliaLinks
+									livro={livro}
+									capitulo={capitulo}
+									referencia={referencia}
+									titulo="Ler a passagem"
+									compacto
+								/>
+							</div>
+						)}
+					</div>
+				</li>
+			))
+		}
+	</ol>
+
+	<details class="ea-escada__portas">
+		<summary>Outras portas de entrada</summary>
+		<ul>
+			<li>
+				<strong>Quero só a resposta.</strong> Pare no degrau 0 — ele é
+				completo em si.
+			</li>
+			<li>
+				<strong>Quero conferir se é verdade.</strong> Vá ao degrau 3 (o
+				debate) e olhe as fontes de cada afirmação, com o selo de acesso.
+			</li>
+			<li>
+				<strong>Quero ler o texto com calma.</strong> Degrau 1, com o
+				glossário ao lado.
+			</li>
+			<li>
+				<strong>Vim da fé e quero entender.</strong> Comece pelo degrau 4
+				(a recepção) — reconhecer a tradição primeiro ajuda a receber a
+				crítica sem se sentir emboscado.
+			</li>
+			<li>
+				<strong>Vim do ceticismo.</strong> Comece pelo degrau 2 (contexto
+				e arqueologia), pelo motivo simétrico: começa pelo verificável.
+			</li>
+		</ul>
+	</details>
+
+	<details class="ea-escada__verifica">
+		<summary>Como saber se você entendeu</summary>
+		<p>Ao fim de cada degrau, tente responder às três. Se as três não saem, o degrau seguinte vai confundir — volte um.</p>
+		<ol>
+			<li>
+				<strong>Compreensão.</strong> Consigo dizer o que o texto diz, com
+				minhas palavras?
+			</li>
+			<li>
+				<strong>Análise.</strong> Consigo dizer qual problema este texto
+				levanta, e por quê?
+			</li>
+			<li>
+				<strong>Debate.</strong> Consigo dizer quem discorda de quem, e
+				sobre o quê?
+			</li>
+		</ol>
+	</details>
+</section>
+
+<style>
+	.ea-escada {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-warm);
+		padding: 1.8rem 1.8rem 1.4rem;
+		margin: 2.2rem 0 0;
+	}
+	.ea-escada__cabeca h2 {
+		margin: 0.2rem 0 0.5rem;
+		font-size: var(--step-2);
+		letter-spacing: -0.6px;
+	}
+	.ea-escada__sub {
+		margin: 0 0 1.2rem;
+		font-size: 0.92rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		max-width: 72ch;
+	}
+	.ea-escada__pre {
+		margin: 0 0 1.3rem;
+		font-size: 0.88rem;
+		color: var(--ink-2);
+		padding: 0.7rem 0.9rem;
+		border-left: 3px solid var(--accent);
+		background: var(--bg-raised);
+		border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+	}
+	.ea-escada__pre a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+
+	.ea-escada__lista {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+	.ea-passo {
+		display: flex;
+		gap: 0.95rem;
+		padding: 0.85rem 0;
+		border-top: 1px solid var(--border);
+	}
+	.ea-passo:first-child {
+		border-top: none;
+	}
+	.ea-passo__num {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--accent);
+		padding-top: 0.2rem;
+		flex-shrink: 0;
+	}
+	.ea-passo__corpo {
+		flex: 1;
+		min-width: 0;
+	}
+	.ea-passo__topo {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 0.8rem;
+		margin: 0 0 0.25rem;
+		flex-wrap: wrap;
+	}
+	.ea-passo__nome {
+		font-size: 1rem;
+		letter-spacing: -0.2px;
+	}
+	.ea-passo__nome a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+	.ea-passo__tempo {
+		font-family: var(--font-mono);
+		font-size: 0.7rem;
+		color: var(--ink-3);
+		white-space: nowrap;
+	}
+	.ea-passo__desc {
+		margin: 0;
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		max-width: 76ch;
+	}
+	.ea-passo__ancoras {
+		margin: 0.4rem 0 0;
+		display: flex;
+		gap: 0.4rem;
+		flex-wrap: wrap;
+	}
+	.ea-passo__ancoras a {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--accent);
+		background: var(--accent-soft);
+		padding: 1px 8px;
+		border-radius: var(--radius-pill);
+	}
+	.ea-passo__biblia {
+		margin-top: 0.6rem;
+	}
+
+	.ea-escada__portas,
+	.ea-escada__verifica {
+		margin-top: 1.2rem;
+		border-top: 1px solid var(--border);
+		padding-top: 0.9rem;
+	}
+	.ea-escada__portas summary,
+	.ea-escada__verifica summary {
+		cursor: pointer;
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+	.ea-escada__portas ul,
+	.ea-escada__verifica ol {
+		margin: 0.8rem 0 0.4rem;
+		padding-left: 1.2rem;
+		font-size: 0.88rem;
+		line-height: 1.65;
+		color: var(--ink-2);
+	}
+	.ea-escada__portas li,
+	.ea-escada__verifica li {
+		margin-bottom: 0.45rem;
+	}
+	.ea-escada__verifica p {
+		margin: 0.8rem 0 0;
+		font-size: 0.88rem;
+		color: var(--ink-2);
+	}
+	.ea-escada__portas strong,
+	.ea-escada__verifica strong {
+		color: var(--ink);
+	}
+
+	@media (max-width: 640px) {
+		.ea-escada {
+			padding: 1.3rem 1.1rem 1rem;
+		}
+		.ea-passo {
+			gap: 0.6rem;
+		}
+	}
+</style>

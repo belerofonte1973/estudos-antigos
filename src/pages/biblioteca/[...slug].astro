@@ -34,6 +34,14 @@ export async function getStaticPaths() {
 
 const { dossie, nav, entrada } = Astro.props;
 const { Content, headings } = await render(dossie);
+
+// Livro bíblico do dossiê: `livro` para os de um livro só; Samuel e Reis são
+// uma unidade canônica cada, e o primeiro slug serve de âncora para leitura.
+const livro = dossie.data.livro ?? dossie.data.livros[0];
+// Chave dos pré-requisitos: o último segmento do id ('biblia/samuel' -> 'samuel').
+// Samuel e Reis são uma unidade canônica — o dossiê é 'samuel', mas o livro
+// para montar o link da Bíblia é 'samuel-1'. São coisas diferentes.
+const chave = dossie.id.split('/').pop();
 ---
 
 <BibliotecaLayout
@@ -45,6 +53,8 @@ const { Content, headings } = await render(dossie);
 	currentId={dossie.id}
 	atualizado={dossie.data.atualizado}
 	entrada={entrada}
+	livro={livro}
+	chave={chave}
 >
 	<Content />
 </BibliotecaLayout>

@@ -15,3 +15,5 @@ _backup_docs_starlight/
 
 # Vídeos gerados (arte fatos de build, não versionar)
 video/saida/
+__pycache__/
+*.pyc

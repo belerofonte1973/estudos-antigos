@@ -97,10 +97,17 @@ CORROMPIDOS = [
     (r"\btambién\b", "espanhol: también (PT: também)"),
     (r"\bademás\b", "espanhol: además (PT: além disso)"),
     (r"\bmientras\b", "espanhol: mientras (PT: enquanto)"),
-    (r"\bAntiguo\b", "espanhol: Antiguo (PT: Antigo)"),
+    (r"\bAntiguo\b(?!\s+Oriente)", "espanhol: Antiguo (PT: Antigo)"),
     (r"\bsiglos\b", "espanhol: siglos (PT: séculos)"),
     (r"Siglo(?!\s+XXI)", "espanhol: Siglo fora de 'Siglo XXI'"),
 ]
+
+# Exceções documentadas — publicações legítimas em espanhol, não vazamento de
+# idioma. Mesma classe de armadilha do 'Siglo XXI':
+#   - 'Antiguo Oriente' — periódico do Centro de Estudios de Historia del
+#     Antiguo Oriente (UCA, Argentina), citado no dossiê de Reis.
+# A checagem é regex com exceção, nunca substring crua: senão o portão reprova
+# bibliografia correta e perde-se a confiança nele.
 
 achados = []
 for html_file in DIST.rglob("*.html"):

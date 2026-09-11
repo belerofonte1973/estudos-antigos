@@ -13,6 +13,8 @@ fontes:
   - texto: 'Friedman, Richard Elliott. Who Wrote the Bible? 1. ed. 1987; reimp. 1997. ISBN 9780060630355.'
   - texto: 'Baden, Joel S. The Composition of the Pentateuch: Renewing the Documentary Hypothesis. Yale University Press, 2012. ISBN 9780300152647.'
   - texto: 'Kugel, James L. How to Read the Bible: A History of Scripture and Its Interpretation. Free Press, 2007.'
+eixo: nucleo
+livro: genesis
 ---
 
 É a teoria mais influente — e mais mal compreendida — sobre a formação da Bíblia hebraica. Vale entender o que ela de fato afirma, porque boa parte das críticas que circulam ataca uma versão que ninguém defende.

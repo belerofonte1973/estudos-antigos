@@ -1,0 +1,464 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Aside from '../components/Aside.astro';
+import Icon from '../components/Icon.astro';
+import {LIVROS, EIXOS} from '../taxonomia';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	passagem: CollectionEntry<'passagens'>;
+	headings: { depth: number; slug: string; text: string }[];
+	irmaos?: CollectionEntry<'passagens'>[];
+	artigos?: CollectionEntry<'artigos'>[];
+	dossieTitulo?: string;
+}
+
+const { passagem, headings, irmaos = [], artigos = [], dossieTitulo } = Astro.props;
+const d = passagem.data;
+const livro = LIVROS[d.livro as keyof typeof LIVROS];
+const livroNome = livro?.nome ?? d.livro;
+const livroSlug = d.livro;
+
+/**
+ * Os três eixos são seções obrigatórias da passagem. O rótulo de âncora é
+ * resolvido a partir dos títulos realmente renderizados — não de um slug
+ * adivinhado —, então se uma seção faltar, o atalho simplesmente não aparece
+ * (e a verificação pós-build acusa).
+ */
+const EIXOS_ESPERADOS = [
+	{ chave: 'texto', rotulos: ['texto'], eixo: EIXOS.nucleo },
+	{ chave: 'contexto', rotulos: ['contexto'], eixo: EIXOS.contexto },
+	{ chave: 'recepcao', rotulos: ['recepção', 'recepcao'], eixo: EIXOS.recepcao },
+];
+
+const atalhos = EIXOS_ESPERADOS.map((e) => {
+	const h = headings.find(
+		(h) => h.depth === 2 && e.rotulos.includes(h.text.trim().toLowerCase())
+	);
+	return { ...e, slug: h?.slug };
+}).filter((e) => e.slug);
+
+const presentes = atalhos.map((a) => a.chave);
+const ausentes = EIXOS_ESPERADOS.map((e) => e.chave).filter(
+	(c) => !presentes.includes(c)
+);
+
+const dataFmt = new Intl.DateTimeFormat('pt-BR', {
+	day: '2-digit',
+	month: 'long',
+	year: 'numeric',
+}).format(d.data);
+
+const atualizadoFmt = d.atualizado
+	? new Intl.DateTimeFormat('pt-BR', {
+			day: '2-digit',
+			month: 'long',
+			year: 'numeric',
+		}).format(d.atualizado)
+	: undefined;
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const url = new URL(Astro.url.pathname, site).href;
+const [cap, versiculo] = d.referencia.split(' ');
+
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: `${d.titulo} (${d.referencia})`,
+		description: d.descricao,
+		inLanguage: 'pt-BR',
+		datePublished: d.data.toISOString(),
+		dateModified: (d.atualizado ?? d.data).toISOString(),
+		mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+		author: { '@type': 'Organization', name: 'Estudos Antigos' },
+		publisher: { '@type': 'Organization', name: 'Estudos Antigos' },
+		isPartOf: {
+			'@type': 'Book',
+			name: livroNome,
+			url: new URL(`/biblia/${livroSlug}/`, site).href,
+		},
+		keywords: d.temas.join(', '),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: d.pergunta,
+				acceptedAnswer: { '@type': 'Answer', text: d.respostaRapida },
+			},
+		],
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', site).href },
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Bíblia',
+				item: new URL('/biblia/', site).href,
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: livroNome,
+				item: new URL(`/biblia/${livroSlug}/`, site).href,
+			},
+			{ '@type': 'ListItem', position: 4, name: d.referencia, item: url },
+		],
+	},
+];
+---
+
+<BaseLayout
+	title={`${d.titulo} — ${d.referencia}`}
+	description={d.descricao}
+	type="article"
+	publishedTime={d.data.toISOString()}
+	modifiedTime={(d.atualizado ?? d.data).toISOString()}
+	jsonLd={jsonLd}
+	area={EIXOS.nucleo.nome}
+	tags={d.temas}
+>
+	<article class="ea-pass">
+		<header class="ea-pass__head">
+			<Breadcrumbs
+				items={[
+					{ href: '/', label: 'Início' },
+					{ href: '/biblia/', label: 'Bíblia' },
+					{ href: `/biblia/${livroSlug}/`, label: livroNome },
+					{ label: d.referencia },
+				]}
+			/>
+
+			<p class="eyebrow">{d.referencia} · núcleo bíblico</p>
+			<h1>{d.titulo}</h1>
+			<p class="ea-pass__lede">{d.descricao}</p>
+
+			<div class="ea-pass__meta">
+				<time datetime={d.data.toISOString()}>{dataFmt}</time>
+				{atualizadoFmt && <span>· revisado em {atualizadoFmt}</span>}
+			</div>
+		</header>
+
+		<section class="ea-pass__resp" aria-labelledby="resposta-rapida">
+			<div class="ea-pass__resp-head">
+				<Icon name="check" size={16} />
+				<h2 id="resposta-rapida">Resposta rápida</h2>
+			</div>
+			<p class="ea-pass__resp-pergunta">{d.pergunta}</p>
+			<p class="ea-pass__resp-texto">{d.respostaRapida}</p>
+		</section>
+
+		<!--
+			Os três eixos como atalhos: é a espinha do modelo, visível na página.
+			Cada passagem mostra texto, contexto e recepção; quem chega por um
+			deles encontra os outros dois no mesmo endereço.
+		-->
+		{
+			atalhos.length > 0 && (
+				<nav class="ea-eixos" aria-label="Eixos desta passagem">
+					{atalhos.map((a) => (
+						<a class="ea-eixos__item" href={`#${a.slug}`}>
+							<span class="ea-eixos__nome">{a.eixo.nome}</span>
+							<span class="ea-eixos__desc">{a.eixo.rotulo}</span>
+						</a>
+					))}
+				</nav>
+			)
+		}
+
+		{
+			ausentes.length > 0 && (
+				<Aside type="caution" title="Seções em falta">
+					Esta passagem ainda não tem todas as seções: falta{' '}
+					{ausentes.join(', ')}.
+				</Aside>
+			)
+		}
+
+		<div class="ea-pass__grid">
+			<div class="ea-pass__body prose">
+				<slot />
+
+				{
+					d.fontes.length > 0 && (
+						<section class="ea-pass__fontes" aria-labelledby="fontes">
+							<h2 id="fontes">Fontes</h2>
+							<ol>
+								{d.fontes.map((f) => (
+									<li>
+										{f.url ? (
+											<a href={f.url} rel="noopener noreferrer" target="_blank">
+												{f.texto}
+											</a>
+										) : (
+											f.texto
+										)}
+									</li>
+								))}
+							</ol>
+						</section>
+					)
+				}
+			</div>
+
+			<aside class="ea-pass__side">
+				<TableOfContents headings={headings} />
+
+				{
+					d.dossie && (
+						<div class="ea-side-box">
+							<p class="ea-side-box__title">Dossiê completo</p>
+							<p class="ea-side-box__text">
+								O aparato acadêmico inteiro sobre {livroNome}.
+							</p>
+							<a class="ea-side-box__link" href={`/biblioteca/${d.dossie}/`}>
+								{dossieTitulo ?? 'Abrir dossiê'} <Icon name="arrow" size={14} />
+							</a>
+						</div>
+					)
+				}
+
+				{
+					irmaos.length > 0 && (
+						<div class="ea-side-box">
+							<p class="ea-side-box__title">Outras passagens</p>
+							<ul class="ea-side-list">
+								{irmaos.map((i) => (
+									<li>
+										<a href={`/biblia/${i.data.livro}/${i.id.split('/').pop()}/`}>
+											{i.data.referencia}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					)
+				}
+			</aside>
+		</div>
+
+		{
+			artigos.length > 0 && (
+				<section class="ea-related" aria-labelledby="perguntas">
+					<h2 id="perguntas">Perguntas sobre esta passagem</h2>
+					<div class="ea-related__grid">
+						{artigos.map((a) => (
+							<ArticleCard
+								href={`/artigos/${a.id}/`}
+								titulo={a.data.titulo}
+								descricao={a.data.descricao}
+								area={a.data.area}
+								data={a.data.data}
+								variante="linha"
+							/>
+						))}
+					</div>
+				</section>
+			)
+		}
+	</article>
+</BaseLayout>
+
+<style>
+	.ea-pass {
+		padding-top: 2.2rem;
+	}
+	.ea-pass__head {
+		max-width: 72ch;
+	}
+	.ea-pass__head h1 {
+		margin-bottom: 0.6rem;
+	}
+	.ea-pass__lede {
+		font-size: var(--step-1);
+		line-height: 1.55;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.ea-pass__meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+		font-size: 0.8rem;
+		color: var(--ink-3);
+		margin-bottom: 1.9rem;
+	}
+
+	/* --- Resposta rápida --- */
+	.ea-pass__resp {
+		background: var(--accent-soft);
+		border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+		border-radius: var(--radius);
+		padding: 1.2rem 1.4rem 1.3rem;
+		margin-bottom: 1.8rem;
+		max-width: 72ch;
+	}
+	.ea-pass__resp-head {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--accent);
+		margin-bottom: 0.6rem;
+	}
+	.ea-pass__resp-head h2 {
+		font-size: 0.76rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	.ea-pass__resp-pergunta {
+		font-family: var(--font-ui);
+		font-weight: 600;
+		margin: 0 0 0.5rem;
+		line-height: 1.5;
+	}
+	.ea-pass__resp-texto {
+		font-family: var(--font-read);
+		font-size: 1.02rem;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	/* --- Atalhos dos três eixos --- */
+	.ea-eixos {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+		gap: 0.75rem;
+		margin-bottom: 2.6rem;
+		max-width: 72ch;
+	}
+	.ea-eixos__item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		padding: 0.8rem 1rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: var(--bg-warm);
+		transition: border-color 0.18s ease, transform 0.18s ease;
+	}
+	.ea-eixos__item:hover {
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	.ea-eixos__nome {
+		font-weight: 650;
+		font-size: 0.94rem;
+		color: var(--accent);
+		letter-spacing: -0.1px;
+	}
+	.ea-eixos__desc {
+		font-size: 0.78rem;
+		color: var(--ink-3);
+	}
+
+	/* --- Grade corpo + lateral --- */
+	.ea-pass__grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 250px;
+		gap: 3.2rem;
+		align-items: start;
+	}
+	.ea-pass__side {
+		position: sticky;
+		top: calc(var(--header-h) + 1.5rem);
+		display: flex;
+		flex-direction: column;
+		gap: 1.4rem;
+	}
+	.ea-side-box {
+		font-size: 0.84rem;
+		line-height: 1.55;
+		padding: 1rem 1.1rem;
+		background: var(--bg-warm);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+	}
+	.ea-side-box__title {
+		font-size: 0.7rem;
+		font-weight: 650;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin: 0 0 0.5rem;
+	}
+	.ea-side-box__text {
+		color: var(--ink-2);
+		margin: 0 0 0.7rem;
+	}
+	.ea-side-box__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+	.ea-side-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+	.ea-side-list a {
+		color: var(--ink-2);
+	}
+	.ea-side-list a:hover {
+		color: var(--accent);
+	}
+
+	/* --- Fontes --- */
+	.ea-pass__fontes {
+		margin-top: 3rem;
+		padding-top: 1.6rem;
+		border-top: 1px solid var(--border);
+	}
+	.ea-pass__fontes h2 {
+		font-size: var(--step-1);
+		font-family: var(--font-ui);
+	}
+	.ea-pass__fontes ol {
+		padding-left: 1.3em;
+		font-size: 0.92rem;
+	}
+	.ea-pass__fontes li {
+		margin-bottom: 0.5em;
+	}
+
+	/* --- Relacionados --- */
+	.ea-related {
+		margin-top: 3.2rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--border);
+	}
+	.ea-related h2 {
+		font-size: var(--step-2);
+		margin-bottom: 0.5rem;
+	}
+	.ea-related__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+		gap: 0.25rem 1.5rem;
+	}
+
+	@media (max-width: 980px) {
+		.ea-pass__grid {
+			grid-template-columns: 1fr;
+			gap: 2.2rem;
+		}
+		.ea-pass__side {
+			position: static;
+		}
+	}
+</style>

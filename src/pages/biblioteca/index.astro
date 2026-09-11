@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Card from '../../components/Card.astro';
 import Icon from '../../components/Icon.astro';
-import { AREAS } from '../../content.config';
+import {AREAS} from '../../taxonomia';
 
 const dossies = (await getCollection('biblioteca')).sort(
 	(a, b) => a.data.ordem - b.data.ordem

@@ -3,7 +3,7 @@ titulo: 'Quem foram os sumérios?'
 pergunta: 'Quem foram os sumérios?'
 descricao: 'A primeira civilização urbana conhecida: Eridu e Uruk, a invenção da escrita cuneiforme e uma língua sem parentesco com nenhuma outra.'
 respostaRapida: 'Os sumérios foram a primeira civilização urbana conhecida, estabelecida no sul da Mesopotâmia — a planície aluvial entre o Tigre e o Eufrates, no atual sul do Iraque. Organizaram-se em cidades-estado como Eridu (a mais antiga, c. 5400 a.C.), Uruk, Ur e Nippur. Desenvolveram a escrita cuneiforme a partir de c. 3300 a.C. e falavam uma língua isolada, sem parentesco com nenhuma outra conhecida.'
-area: biblia
+area: oriente
 tags: [Sumerios, Mesopotamia, cuneiforme, Eridu, Uruk, escrita]
 data: 2026-09-08
 destaque: 4
@@ -15,6 +15,7 @@ fontes:
   - texto: 'Postgate, J. N. Early Mesopotamia: Society and Economy at the Dawn of History. Routledge, 1994.'
   - texto: 'Leick, Gwendolyn. Mesopotamia: The Invention of the City. Penguin, 2003.'
   - texto: 'Adams, Robert McC. Heartland of Cities. University of Chicago Press, 1981.'
+eixo: contexto
 ---
 
 Antes do Egito faraônico, antes de qualquer império, houve uma rede de cidades no sul da Mesopotâmia que inventou coisas que usamos até hoje — inclusive a própria ideia de escrever.

@@ -1,0 +1,342 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Icon from '../../components/Icon.astro';
+import {LIVROS, EIXOS} from '../../taxonomia';
+
+const dossies = (await getCollection('biblioteca')).filter(
+	(d) => d.data.eixo === 'nucleo'
+);
+const artigos = (await getCollection('artigos')).filter(
+	(a) => a.data.eixo === 'nucleo'
+);
+const passagens = await getCollection('passagens');
+
+// Cada livro mostra o que já existe dele: passagens, dossiê, perguntas.
+const livros = Object.entries(LIVROS)
+	.map(([slug, meta]) => ({
+		slug,
+		...meta,
+		passagens: passagens.filter((p) => p.data.livro === slug),
+		dossie: dossies.find((d) => d.id === `biblia/${slug}`),
+		artigos: artigos.filter((a) => a.data.livro === slug),
+	}))
+	.sort((a, b) => a.ordem - b.ordem);
+
+const outrosDossies = dossies.filter((d) => !d.data.livro);
+const artigosGerais = artigos.filter((a) => !a.data.livro);
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: 'Bíblia — núcleo',
+	description: EIXOS.nucleo.descricao,
+	inLanguage: 'pt-BR',
+	url: new URL('/biblia/', site).href,
+	hasPart: livros.map((l) => ({
+		'@type': 'Book',
+		name: l.nome,
+		url: new URL(`/biblia/${l.slug}/`, site).href,
+	})),
+};
+---
+
+<BaseLayout
+	title="Bíblia"
+	description="O núcleo: os livros bíblicos estudados como documentos históricos e literários — crítica textual, línguas originais, passagens, formação do cânon."
+	jsonLd={jsonLd}
+>
+	<header class="cabeca">
+		<Breadcrumbs items={[{ href: '/', label: 'Início' }, { label: 'Bíblia' }]} />
+		<p class="eyebrow">{EIXOS.nucleo.rotulo}</p>
+		<h1>Bíblia</h1>
+		<p class="lede">
+			O centro do portal. Os livros bíblicos estudados como documentos
+			históricos e literários — sem apologia e sem hostilidade: crítica textual,
+			línguas originais, formação do cânon, e o exame honesto do que a evidência
+			sustenta e do que não sustenta.
+		</p>
+		<p class="contagem">
+			<Icon name="book" size={14} />
+			{livros.filter((l) => l.passagens.length || l.dossie).length} livros ·
+			{passagens.length} {passagens.length === 1 ? 'passagem' : 'passagens'} ·
+			{dossies.length} dossiês
+		</p>
+	</header>
+
+	<!--
+		O livro como unidade de navegação, não a área. É por aqui que o núcleo
+		cresce: cada passagem nova entra no livro correspondente sem mexer em
+		mais nada.
+	-->
+	<section class="livros" aria-labelledby="livros">
+		<h2 id="livros">Livros</h2>
+		<div class="livros__grid">
+			{
+				livros.map((l) => {
+					const vazio = !l.passagens.length && !l.dossie && !l.artigos.length;
+					return (
+						<a
+							class:list={['livro', { 'livro--vazio': vazio }]}
+							href={vazio ? undefined : `/biblia/${l.slug}/`}
+						>
+							<span class="livro__num">{String(l.ordem).padStart(2, '0')}</span>
+							<span class="livro__nome">{l.nome}</span>
+							<span class="livro__he" dir="rtl" lang="he">{l.hebraico}</span>
+							<span class="livro__translit">{l.translit}</span>
+							<span class="livro__cont">
+								{vazio ? (
+									<span class="muted">em preparação</span>
+								) : (
+									<>
+										{l.passagens.length > 0 && (
+											<span>{l.passagens.length} passagens</span>
+										)}
+										{l.dossie && <span>dossiê</span>}
+										{l.artigos.length > 0 && (
+											<span>{l.artigos.length} perguntas</span>
+										)}
+									</>
+								)}
+							</span>
+						</a>
+					);
+				})
+			}
+		</div>
+	</section>
+
+	{
+		artigosGerais.length > 0 && (
+			<section class="grupo" aria-labelledby="perguntas">
+				<div class="grupo__head">
+					<h2 id="perguntas">Perguntas sobre o conjunto</h2>
+					<a href="/artigos/" class="grupo__link">
+						Todas as perguntas <Icon name="arrow" size={14} />
+					</a>
+				</div>
+				<div class="lista">
+					{artigosGerais.map((a) => (
+						<ArticleCard
+							href={`/artigos/${a.id}/`}
+							titulo={a.data.titulo}
+							descricao={a.data.descricao}
+							data={a.data.data}
+						/>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	<section class="pontes" aria-labelledby="eixos">
+		<h2 id="eixos">Onde este núcleo se apoia</h2>
+		<div class="pontes__grid">
+			<a class="ponte" href="/contexto/">
+				<span class="ponte__nome">{EIXOS.contexto.nome}</span>
+				<span class="ponte__rot">{EIXOS.contexto.rotulo}</span>
+				<span class="ponte__desc">{EIXOS.contexto.descricao}</span>
+				<span class="ponte__mais">Explorar <Icon name="arrow" size={14} /></span>
+			</a>
+			<a class="ponte" href="/recepcao/">
+				<span class="ponte__nome">{EIXOS.recepcao.nome}</span>
+				<span class="ponte__rot">{EIXOS.recepcao.rotulo}</span>
+				<span class="ponte__desc">{EIXOS.recepcao.descricao}</span>
+				<span class="ponte__mais">Explorar <Icon name="arrow" size={14} /></span>
+			</a>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 70ch;
+	}
+	.cabeca h1 {
+		margin-bottom: 0.7rem;
+	}
+	.contagem {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+		margin: 0;
+	}
+
+	.livros {
+		padding-top: var(--section);
+	}
+	.livros h2 {
+		font-size: var(--step-2);
+		margin-bottom: 1.4rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.livros__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+		gap: 1rem;
+	}
+	.livro {
+		display: flex;
+		flex-direction: column;
+		padding: 1.2rem 1.3rem 1.3rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-raised);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease,
+			border-color 0.18s ease;
+	}
+	.livro:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--border-strong);
+	}
+	.livro--vazio {
+		background: transparent;
+		box-shadow: none;
+		border-style: dashed;
+		cursor: default;
+	}
+	.livro--vazio:hover {
+		transform: none;
+		box-shadow: none;
+		border-color: var(--border);
+	}
+	.livro__num {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--ink-3);
+		margin-bottom: 0.5rem;
+	}
+	.livro__nome {
+		font-size: 1.15rem;
+		font-weight: 650;
+		letter-spacing: -0.3px;
+		line-height: 1.2;
+	}
+	.livro__he {
+		font-size: 1.3rem;
+		color: var(--accent);
+		line-height: 1.5;
+		margin-top: 0.2rem;
+	}
+	.livro__translit {
+		font-size: 0.78rem;
+		font-style: italic;
+		color: var(--ink-3);
+		margin-bottom: 0.8rem;
+	}
+	.livro__cont {
+		margin-top: auto;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		font-size: 0.74rem;
+		color: var(--ink-2);
+	}
+	.livro__cont span {
+		background: var(--accent-soft);
+		color: var(--accent);
+		padding: 2px 8px;
+		border-radius: var(--radius-pill);
+		font-weight: 550;
+	}
+	.livro--vazio .livro__cont span {
+		background: none;
+		padding: 0;
+		font-weight: 400;
+	}
+
+	.grupo {
+		padding-top: var(--section);
+	}
+	.grupo__head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 1.4rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.grupo__head h2 {
+		margin: 0;
+		font-size: var(--step-2);
+	}
+	.grupo__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.84rem;
+		color: var(--ink-2);
+	}
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1rem;
+		align-items: stretch;
+	}
+
+	.pontes {
+		padding-top: var(--section);
+	}
+	.pontes h2 {
+		font-size: var(--step-2);
+		margin-bottom: 1.4rem;
+	}
+	.pontes__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+		gap: 1rem;
+	}
+	.ponte {
+		display: flex;
+		flex-direction: column;
+		padding: 1.3rem 1.4rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-warm);
+		transition: border-color 0.18s ease, transform 0.18s ease;
+	}
+	.ponte:hover {
+		border-color: var(--accent);
+		transform: translateY(-3px);
+	}
+	.ponte__nome {
+		font-size: 1.1rem;
+		font-weight: 650;
+		color: var(--accent);
+	}
+	.ponte__rot {
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin-bottom: 0.6rem;
+	}
+	.ponte__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.ponte__mais {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+</style>

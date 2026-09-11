@@ -12,6 +12,8 @@ fontes:
   - texto: 'Finkelstein, Israel; Silberman, Neil Asher. The Bible Unearthed: Archaeology''s New Vision of Ancient Israel and the Origin of Its Sacred Texts. Free Press/Touchstone, 2001. ISBN 9780743223386.'
   - texto: 'Kitchen, Kenneth A. On the Reliability of the Old Testament. Eerdmans, 2003. ISBN 9780802803962.'
   - texto: 'Sarna, Nahum M. Exploring Exodus. Schocken, 1986. ISBN 9780805210637.'
+eixo: nucleo
+livro: exodo
 ---
 
 A pergunta parece simples e não é. Ela junta três coisas diferentes que costumam ser tratadas como uma só: a narrativa bíblica, a evidência egípcia e a evidência arqueológica em Canaã. Elas não dizem a mesma coisa.

@@ -1,21 +1,27 @@
 ---
 import Icon from './Icon.astro';
+import {EIXOS, LIVROS} from '../taxonomia';
 
 const ANO = new Date().getFullYear();
 
-const SECOES = [
+const PROJETO = [
 	{ href: '/artigos/', label: 'Revista' },
 	{ href: '/biblioteca/', label: 'Biblioteca' },
+	{ href: '/como-pesquisar/', label: 'Como pesquisar' },
 	{ href: '/sobre/', label: 'Sobre o projeto' },
 	{ href: '/sobre/contribua/', label: 'Como contribuir' },
 ];
 
-const AREAS = [
-	{ href: '/biblioteca/biblia/', label: 'Antiguidade Bíblica' },
-	{ href: '/biblioteca/classica/', label: 'Antiguidade Clássica' },
-	{ href: '/biblioteca/idade-media/', label: 'Idade Média' },
-	{ href: '/biblioteca/pre-historia/', label: 'Pré-História' },
+const EIXOS_NAV = [
+	{ href: '/biblia/', label: `${EIXOS.nucleo.nome} — ${EIXOS.nucleo.rotulo}` },
+	{ href: '/contexto/', label: `${EIXOS.contexto.nome} — ${EIXOS.contexto.rotulo}` },
+	{ href: '/recepcao/', label: `${EIXOS.recepcao.nome} — ${EIXOS.recepcao.rotulo}` },
 ];
+
+const LIVROS_NAV = Object.entries(LIVROS).map(([slug, m]) => ({
+	href: `/biblia/${slug}/`,
+	label: m.nome,
+}));
 ---
 
 <footer class="ea-footer">
@@ -35,11 +41,11 @@ const AREAS = [
 				</p>
 			</div>
 
-			<nav class="ea-footer__col" aria-label="Seções">
-				<h2 class="ea-footer__title">Seções</h2>
+			<nav class="ea-footer__col" aria-label="Eixos">
+				<h2 class="ea-footer__title">Eixos</h2>
 				<ul>
 					{
-						SECOES.map((i) => (
+						EIXOS_NAV.map((i) => (
 							<li>
 								<a href={i.href}>{i.label}</a>
 							</li>
@@ -48,11 +54,24 @@ const AREAS = [
 				</ul>
 			</nav>
 
-			<nav class="ea-footer__col" aria-label="Áreas de estudo">
-				<h2 class="ea-footer__title">Áreas</h2>
+			<nav class="ea-footer__col" aria-label="Livros bíblicos">
+				<h2 class="ea-footer__title">Livros</h2>
 				<ul>
 					{
-						AREAS.map((i) => (
+						LIVROS_NAV.map((i) => (
+							<li>
+								<a href={i.href}>{i.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<nav class="ea-footer__col" aria-label="Projeto">
+				<h2 class="ea-footer__title">Projeto</h2>
+				<ul>
+					{
+						PROJETO.map((i) => (
 							<li>
 								<a href={i.href}>{i.label}</a>
 							</li>
@@ -105,7 +124,7 @@ const AREAS = [
 
 	.ea-footer__grid {
 		display: grid;
-		grid-template-columns: 2fr 1fr 1fr 1fr;
+		grid-template-columns: 1.6fr repeat(4, 1fr);
 		gap: 2rem;
 	}
 
@@ -169,15 +188,20 @@ const AREAS = [
 		max-width: 46ch;
 	}
 
-	@media (max-width: 860px) {
+	@media (max-width: 1000px) {
 		.ea-footer__grid {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.ea-footer__brand {
 			grid-column: 1 / -1;
 		}
 	}
-	@media (max-width: 520px) {
+	@media (max-width: 620px) {
+		.ea-footer__grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media (max-width: 420px) {
 		.ea-footer__grid {
 			grid-template-columns: 1fr;
 		}

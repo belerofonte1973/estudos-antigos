@@ -14,6 +14,8 @@ fontes:
   - texto: 'Friedman, Richard Elliott. Who Wrote the Bible? 1. ed. 1987; reimp. 1997. ISBN 9780060630355.'
   - texto: 'Baden, Joel S. The Composition of the Pentateuch: Renewing the Documentary Hypothesis. Yale University Press, 2012. ISBN 9780300152647.'
   - texto: 'Blenkinsopp, Joseph. The Pentateuch: An Introduction to the First Five Books of the Bible. 1992.'
+eixo: nucleo
+livro: genesis
 ---
 
 Nenhum livro da Bíblia tem autor único. Essa é a resposta honesta, e ela custou três séculos de disputa para ser formulada.

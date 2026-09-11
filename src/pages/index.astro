@@ -3,27 +3,38 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import Card from '../components/Card.astro';
-import CardGrid from '../components/CardGrid.astro';
 import LinkButton from '../components/LinkButton.astro';
 import Icon from '../components/Icon.astro';
-import { AREAS } from '../content.config';
+import {AREAS, EIXOS, LIVROS} from '../taxonomia';
 
+const dossies = await getCollection('biblioteca');
 const artigos = (await getCollection('artigos')).sort(
 	(a, b) => a.data.destaque - b.data.destaque
 );
-
-const dossies = (await getCollection('biblioteca')).sort(
-	(a, b) => a.data.ordem - b.data.ordem
-);
+const passagens = await getCollection('passagens');
 
 const destaques = artigos.slice(0, 3);
 const restantes = artigos.slice(3, 9);
 
-// Contagem de dossiês por área, para mostrar densidade onde ela existe.
-const porArea = dossies.reduce<Record<string, number>>((acc, d) => {
-	acc[d.data.area] = (acc[d.data.area] ?? 0) + 1;
-	return acc;
-}, {});
+const livros = Object.entries(LIVROS)
+	.map(([slug, meta]) => ({
+		slug,
+		...meta,
+		passagens: passagens.filter((p) => p.data.livro === slug).length,
+		dossie: dossies.some((d) => d.id === `biblia/${slug}`),
+	}))
+	.sort((a, b) => a.ordem - b.ordem);
+
+const porEixo = (e: string) => ({
+	dossies: dossies.filter((d) => d.data.eixo === e).length,
+	artigos: artigos.filter((a) => a.data.eixo === e).length,
+});
+
+const ROTAS_EIXO: Record<string, string> = {
+	nucleo: '/biblia/',
+	contexto: '/contexto/',
+	recepcao: '/recepcao/',
+};
 
 const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
 
@@ -31,10 +42,10 @@ const jsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'WebSite',
 	name: 'Estudos Antigos',
-	alternateName: 'Estudos Antigos — Bíblicos, Clássicos e Medievais',
+	alternateName: 'Estudos Antigos — Bíblia, Antiguidade e Idade Média',
 	url: site.href,
 	description:
-		'Portal independente de pesquisa e divulgação sobre Antiguidade Bíblica, Clássica e Idade Média, com citação rastreável em cada afirmação factual.',
+		'Estudos bíblicos com o aparato acadêmico à vista: cada afirmação com citação rastreável, do texto ao contexto antigo e à sua recepção medieval.',
 	inLanguage: 'pt-BR',
 	publisher: { '@type': 'Organization', name: 'Estudos Antigos' },
 };
@@ -42,7 +53,7 @@ const jsonLd = {
 
 <BaseLayout
 	title="Estudos Antigos"
-	description="Perguntas antigas, respostas rastreáveis. Pesquisa independente sobre Antiguidade Bíblica, Clássica e Idade Média — cada afirmação com citação de fonte."
+	description="Estudos bíblicos com o aparato à vista: o texto, o mundo antigo em que surgiu e o que se fez dele depois. Cada afirmação com citação rastreável a fonte primária."
 	jsonLd={jsonLd}
 >
 	<!-- ================= HERO ================= -->
@@ -50,18 +61,19 @@ const jsonLd = {
 		<div class="hero__inner reveal">
 			<p class="eyebrow">Pesquisa independente · acesso livre</p>
 			<h1>
-				Perguntas antigas,<br />
-				<span class="hero__accent">respostas rastreáveis.</span>
+				A Bíblia como documento,<br />
+				<span class="hero__accent">o resto como contexto.</span>
 			</h1>
 			<p class="lede">
-				Quem escreveu o Gênesis? O dilúvio vem de Gilgamesh? Moisés existiu? Aqui
-				cada resposta traz a citação da fonte por trás dela — e diz, com todas as
-				letras, o que ainda está em disputa.
+				O centro deste portal são os textos bíblicos — lidos com o aparato
+				crítico à vista, sem apologia e sem hostilidade. Em volta deles, o
+				mundo antigo em que surgiram e os dois mil anos de leitura que
+				provocaram.
 			</p>
 			<div class="hero__cta">
-				<LinkButton href="/artigos/" icon="book">Começar pelas perguntas</LinkButton>
-				<LinkButton href="/biblioteca/" variant="secondary" icon="document">
-					Explorar a biblioteca
+				<LinkButton href="/biblia/" icon="book">Começar pela Bíblia</LinkButton>
+				<LinkButton href="/artigos/" variant="secondary" icon="search">
+					Ver as perguntas
 				</LinkButton>
 			</div>
 			<p class="hero__note">
@@ -71,12 +83,56 @@ const jsonLd = {
 		</div>
 	</section>
 
+	<!-- ================= OS TRÊS EIXOS ================= -->
+	<section class="section" aria-labelledby="modelo">
+		<div class="section__head">
+			<div>
+				<h2 id="modelo">Três camadas, um só objeto</h2>
+				<p class="section__sub">
+					É a divisão real da disciplina: o texto, o mundo em que ele surgiu, e
+					o que se fez dele. Não é um menu — é a estrutura do assunto.
+				</p>
+			</div>
+		</div>
+
+		<div class="eixos">
+			{
+				Object.entries(EIXOS).map(([chave, m], i) => {
+					const c = porEixo(chave);
+					return (
+						<a class="eixo" href={ROTAS_EIXO[chave]}>
+							<span class="eixo__num">{String(i + 1).padStart(2, '0')}</span>
+							<span class="eixo__nome">{m.nome}</span>
+							<span class="eixo__rot">{m.rotulo}</span>
+							<span class="eixo__desc">{m.descricao}</span>
+							<span class="eixo__cont">
+								{c.dossies > 0 && (
+									<span>
+										{c.dossies} {c.dossies === 1 ? 'dossiê' : 'dossiês'}
+									</span>
+								)}
+								{c.artigos > 0 && (
+									<span>
+										{c.artigos} {c.artigos === 1 ? 'pergunta' : 'perguntas'}
+									</span>
+								)}
+								{c.dossies === 0 && c.artigos === 0 && (
+									<span class="muted">em preparação</span>
+								)}
+							</span>
+						</a>
+					);
+				})
+			}
+		</div>
+	</section>
+
 	<!-- ================= DESTAQUES ================= -->
 	{
 		destaques.length > 0 && (
-			<section class="section" aria-labelledby="destaques">
+			<section class="section" aria-labelledby="comece">
 				<div class="section__head">
-					<h2 id="destaques">Comece por aqui</h2>
+					<h2 id="comece">Comece por aqui</h2>
 					<a href="/artigos/" class="section__more">
 						Todas as perguntas <Icon name="arrow" size={15} />
 					</a>
@@ -97,15 +153,55 @@ const jsonLd = {
 		)
 	}
 
-	<!-- ================= O QUE NOS DISTINGUE ================= -->
+	<!-- ================= LIVROS ================= -->
+	<section class="section" aria-labelledby="livros">
+		<div class="section__head">
+			<h2 id="livros">Os livros</h2>
+			<a href="/biblia/" class="section__more">
+				Ver o núcleo <Icon name="arrow" size={15} />
+			</a>
+		</div>
+		<div class="livros">
+			{
+				livros.map((l) => {
+					const vazio = !l.passagens && !l.dossie;
+					return (
+						<a
+							class:list={['livro', { 'livro--vazio': vazio }]}
+							href={vazio ? undefined : `/biblia/${l.slug}/`}
+							aria-disabled={vazio ? 'true' : undefined}
+						>
+							<span class="livro__nome">{l.nome}</span>
+							<span class="livro__he" dir="rtl" lang="he">
+								{l.hebraico}
+							</span>
+							<span class="livro__cont">
+								{vazio
+									? 'em preparação'
+									: [
+											l.passagens ? `${l.passagens} passagens` : null,
+											l.dossie ? 'dossiê' : null,
+										]
+											.filter(Boolean)
+											.join(' · ')}
+							</span>
+						</a>
+					);
+				})
+			}
+		</div>
+	</section>
+
+	<!-- ================= A PROMESSA ================= -->
 	<section class="section promise" aria-labelledby="promessa">
 		<div class="promise__grid">
 			<div>
 				<h2 id="promessa">Toda afirmação tem uma fonte.<br />E um grau de certeza.</h2>
 				<p>
-					Num tempo em que texto sobre a Antiguidade é gerado em segundos, o que
-					escasseia não é informação — é saber <em>de onde ela vem</em>. Aqui cada
-					afirmação factual é marcada conforme o estado da verificação.
+					Num tempo em que texto sobre a Bíblia e a Antiguidade é gerado em
+					segundos, o que escasseia não é informação — é saber{' '}
+					<em>de onde ela vem</em>. Aqui cada afirmação factual é marcada
+					conforme o estado da verificação.
 				</p>
 				<ul class="promise__list">
 					<li>
@@ -125,26 +221,28 @@ const jsonLd = {
 					</li>
 				</ul>
 				<p class="small muted">
-					Nenhuma página ou número de página é citado sem ter sido visto. Quando não
-					foi, está escrito que não foi.
+					Nenhuma página ou número de página é citado sem ter sido visto. Quando
+					não foi, está escrito que não foi.
 				</p>
 			</div>
 			<div class="promise__areas">
-				<p class="eyebrow">Onde já há material</p>
-				<CardGrid columns={2}>
-					{Object.entries(AREAS).map(([slug, label]) =>
-						porArea[slug] ? (
-							<Card title={label} href={`/biblioteca/${slug}/`}>
-								{porArea[slug]} {porArea[slug] === 1 ? 'dossiê' : 'dossiês'} na
-								biblioteca
-							</Card>
-						) : (
-							<Card title={label}>
-								<span class="muted">Em preparação</span>
-							</Card>
-						)
-					)}
-				</CardGrid>
+				<p class="eyebrow">Recortes disciplinares</p>
+				<div class="areas">
+					{
+						Object.entries(AREAS).map(([slug, label]) => {
+							const n = dossies.filter((d) => d.data.area === slug).length;
+							return (
+								<span class:list={['area-tag', { 'area-tag--vazio': !n }]}>
+									{label}
+								</span>
+							);
+						})
+					}
+				</div>
+				<p class="small muted areas__nota">
+					O recorte diz de que disciplina o material trata; o eixo diz onde ele
+					se posiciona. São coisas diferentes de propósito.
+				</p>
 			</div>
 		</div>
 	</section>
@@ -172,16 +270,16 @@ const jsonLd = {
 		)
 	}
 
-	<!-- ================= BIBLIOTECA ================= -->
+	<!-- ================= CTA ================= -->
 	<section class="section cta" aria-labelledby="biblioteca">
 		<div class="cta__box">
 			<div>
 				<p class="eyebrow">Biblioteca</p>
 				<h2 id="biblioteca">O aparato completo, para quem quer conferir</h2>
 				<p>
-					Os dossiês longos trazem o debate acadêmico inteiro: as hipóteses em
-					disputa, quem as defende, onde a evidência falha. É o material por trás
-					de cada resposta curta.
+					Dossiês longos com o debate inteiro: as hipóteses em disputa, quem as
+					defende, onde a evidência falha. É o material por trás de cada
+					resposta curta.
 				</p>
 			</div>
 			<div class="cta__action">
@@ -201,12 +299,12 @@ const jsonLd = {
 		border-bottom: 1px solid var(--border);
 	}
 	.hero__inner {
-		max-width: 62ch;
+		max-width: 64ch;
 	}
 	.hero h1 {
 		font-size: var(--step-5);
 		letter-spacing: -2px;
-		line-height: 1.03;
+		line-height: 1.05;
 		margin-bottom: 1.1rem;
 	}
 	.hero__accent {
@@ -240,7 +338,13 @@ const jsonLd = {
 		margin-bottom: 1.8rem;
 	}
 	.section__head h2 {
+		margin: 0 0 0.4rem;
+	}
+	.section__sub {
 		margin: 0;
+		color: var(--ink-2);
+		max-width: 62ch;
+		font-size: 0.95rem;
 	}
 	.section__more {
 		display: inline-flex;
@@ -256,6 +360,116 @@ const jsonLd = {
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 		gap: 1.2rem;
 		align-items: stretch;
+	}
+
+	/* ---------- Eixos ---------- */
+	.eixos {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+		gap: 1.2rem;
+	}
+	.eixo {
+		display: flex;
+		flex-direction: column;
+		padding: 1.6rem 1.6rem 1.5rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-raised);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease,
+			border-color 0.18s ease;
+	}
+	.eixo:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent);
+	}
+	.eixo__num {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--ink-3);
+		margin-bottom: 0.9rem;
+	}
+	.eixo__nome {
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: -0.7px;
+		color: var(--accent);
+		line-height: 1.15;
+	}
+	.eixo__rot {
+		font-size: 0.7rem;
+		font-weight: 650;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin-bottom: 0.9rem;
+	}
+	.eixo__desc {
+		font-size: 0.92rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 1.2rem;
+	}
+	.eixo__cont {
+		margin-top: auto;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.eixo__cont span {
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--accent);
+		background: var(--accent-soft);
+		padding: 2px 9px;
+		border-radius: var(--radius-pill);
+	}
+
+	/* ---------- Livros ---------- */
+	.livros {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+		gap: 0.9rem;
+	}
+	.livro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 1.3rem 1rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: var(--bg-warm);
+		transition: border-color 0.18s ease, transform 0.18s ease;
+	}
+	.livro:hover {
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	.livro--vazio {
+		border-style: dashed;
+		background: transparent;
+		cursor: default;
+	}
+	.livro--vazio:hover {
+		border-color: var(--border);
+		transform: none;
+	}
+	.livro__nome {
+		font-weight: 650;
+		font-size: 1rem;
+		letter-spacing: -0.2px;
+	}
+	.livro__he {
+		font-size: 1.15rem;
+		color: var(--accent);
+		line-height: 1.6;
+	}
+	.livro__cont {
+		font-size: 0.7rem;
+		color: var(--ink-3);
+		margin-top: 0.3rem;
 	}
 
 	/* ---------- Promessa ---------- */
@@ -289,16 +503,33 @@ const jsonLd = {
 		font-size: 0.92rem;
 		line-height: 1.6;
 		color: var(--ink-2);
-		padding-left: 0.1rem;
 	}
 	.promise__list strong {
 		color: var(--ink);
 	}
-	.promise__areas :global(.ea-card-grid) {
+	.areas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	.area-tag {
+		font-size: 0.82rem;
+		padding: 0.35rem 0.8rem;
+		border-radius: var(--radius-pill);
+		background: var(--bg-raised);
+		border: 1px solid var(--border);
+		color: var(--ink-2);
+	}
+	.area-tag--vazio {
+		opacity: 0.62;
+		border-style: dashed;
+	}
+	.areas__nota {
 		margin: 0;
 	}
 
-	/* ---------- CTA final ---------- */
+	/* ---------- CTA ---------- */
 	.cta__box {
 		display: flex;
 		align-items: center;

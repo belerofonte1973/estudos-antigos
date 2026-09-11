@@ -1,0 +1,57 @@
+---
+import { getCollection, render } from 'astro:content';
+import PassagemLayout from '../../../layouts/PassagemLayout.astro';
+
+export async function getStaticPaths() {
+	const passagens = await getCollection('passagens');
+	const artigos = await getCollection('artigos');
+	const dossies = await getCollection('biblioteca');
+
+	const tituloDossie = new Map(dossies.map((d) => [d.id, d.data.title]));
+
+	return passagens.map((passagem) => {
+		const sufixo = passagem.id.split('/').pop()!;
+
+		// outras passagens do mesmo livro, para a navegação lateral
+		const irmaos = passagens
+			.filter((p) => p.data.livro === passagem.data.livro && p.id !== passagem.id)
+			.sort((a, b) => a.data.ordem - b.data.ordem);
+
+		// artigos ligados a esta passagem: mesmo livro e tema em comum
+		const relacionados = artigos
+			.filter(
+				(a) =>
+					a.data.livro === passagem.data.livro &&
+					a.data.temas?.some?.((t: string) =>
+						passagem.data.temas.includes(t)
+					)
+			)
+			.slice(0, 3);
+
+		return {
+			params: { livro: passagem.data.livro, passagem: sufixo },
+			props: {
+				passagem,
+				irmaos,
+				artigos: relacionados,
+				dossieTitulo: passagem.data.dossie
+					? tituloDossie.get(passagem.data.dossie)
+					: undefined,
+			},
+		};
+	});
+}
+
+const { passagem, irmaos, artigos, dossieTitulo } = Astro.props;
+const { Content, headings } = await render(passagem);
+---
+
+<PassagemLayout
+	passagem={passagem}
+	headings={headings}
+	irmaos={irmaos}
+	artigos={artigos}
+	dossieTitulo={dossieTitulo}
+>
+	<Content />
+</PassagemLayout>

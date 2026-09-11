@@ -1,10 +1,17 @@
 ---
 import Icon from './Icon.astro';
+import {EIXOS} from '../taxonomia';
 
+/**
+ * A navegação principal é o modelo, não um menu de formatos: os três eixos
+ * primeiro (o que o site estuda), depois a revista (como entra em contato).
+ * Biblioteca e Sobre ficam no rodapé — são destinos, não portas.
+ */
 const NAV = [
-	{ href: '/artigos/', label: 'Revista' },
-	{ href: '/biblioteca/', label: 'Biblioteca' },
-	{ href: '/sobre/', label: 'Sobre' },
+	{ href: '/biblia/', label: EIXOS.nucleo.nome, titulo: EIXOS.nucleo.rotulo },
+	{ href: '/contexto/', label: EIXOS.contexto.nome, titulo: EIXOS.contexto.rotulo },
+	{ href: '/recepcao/', label: EIXOS.recepcao.nome, titulo: EIXOS.recepcao.rotulo },
+	{ href: '/artigos/', label: 'Revista', titulo: 'Perguntas curtas' },
 ];
 
 const path = Astro.url.pathname;
@@ -46,6 +53,7 @@ const isActive = (href: string) =>
 					<a
 						href={item.href}
 						class="ea-nav__link"
+						title={item.titulo}
 						aria-current={isActive(item.href) ? 'page' : undefined}
 					>
 						{item.label}
@@ -202,13 +210,28 @@ const isActive = (href: string) =>
 		display: block;
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 720px) {
 		.ea-brand__text small {
 			display: none;
 		}
+		.ea-nav {
+			gap: 0;
+		}
 		.ea-nav__link {
-			padding: 0.4rem 0.5rem;
-			font-size: 0.85rem;
+			padding: 0.4rem 0.42rem;
+			font-size: 0.8rem;
+		}
+		.ea-nav__icon {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	@media (max-width: 460px) {
+		.ea-nav__link {
+			font-size: 0.74rem;
+			padding: 0.35rem 0.3rem;
+			letter-spacing: -0.2px;
 		}
 	}
 </style>

@@ -13,6 +13,8 @@ fontes:
   - texto: 'Gressmann, Hugo. Mose und seine Zeit. 1913. ISBN 9780790514079.'
   - texto: 'Humphreys, Colin J. The Miracles of Exodus. Harper, 2003. ISBN 9780060514044.'
   - texto: 'Finkelstein, Israel; Silberman, Neil Asher. The Bible Unearthed. 2001. ISBN 9780743223386.'
+eixo: nucleo
+livro: exodo
 ---
 
 É a pergunta que mais rende debates acalorados e menos evidência nova. Vale separar o que se sabe do que se deduz.

@@ -1,0 +1,288 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import ArticleCard from './ArticleCard.astro';
+import Icon from './Icon.astro';
+import {AREAS, EIXOS} from '../taxonomia';
+
+interface Props {
+	eixo: keyof typeof EIXOS;
+	/** Explica o que este eixo é e por que existe. */
+	intro: string;
+	/** Onde este eixo aparece dentro do núcleo. */
+	nota?: string;
+}
+
+const { eixo, intro, nota } = Astro.props;
+const meta = EIXOS[eixo];
+
+const dossies = (await getCollection('biblioteca'))
+	.filter((d) => d.data.eixo === eixo)
+	.sort((a, b) => a.data.ordem - b.data.ordem);
+
+const artigos = (await getCollection('artigos'))
+	.filter((a) => a.data.eixo === eixo)
+	.sort((a, b) => b.data.data.getTime() - a.data.data.getTime());
+
+// agrupa dossiês por recorte disciplinar, preservando a ordem de AREAS
+const grupos = Object.entries(AREAS)
+	.map(([slug, label]) => ({
+		slug,
+		label,
+		itens: dossies.filter((d) => d.data.area === slug),
+	}))
+	.filter((g) => g.itens.length > 0);
+
+const outros = Object.entries(EIXOS).filter(([k]) => k !== eixo);
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: `${meta.nome} — ${meta.rotulo}`,
+	description: meta.descricao,
+	inLanguage: 'pt-BR',
+	url: new URL(`/${eixo === 'nucleo' ? 'biblia' : eixo}/`, site).href,
+};
+---
+
+<BaseLayout
+	title={`${meta.nome} — ${meta.rotulo}`}
+	description={intro.slice(0, 155)}
+	jsonLd={jsonLd}
+>
+	<header class="cabeca">
+		<Breadcrumbs items={[{ href: '/', label: 'Início' }, { label: meta.nome }]} />
+		<p class="eyebrow">{meta.rotulo}</p>
+		<h1>{meta.nome}</h1>
+		<p class="lede">{intro}</p>
+		{nota && <p class="nota">{nota}</p>}
+		<p class="contagem">
+			<Icon name="book" size={14} />
+			{dossies.length} {dossies.length === 1 ? 'dossiê' : 'dossiês'} ·
+			{artigos.length} {artigos.length === 1 ? 'pergunta' : 'perguntas'}
+		</p>
+	</header>
+
+	{
+		grupos.map((g) => (
+			<section class="grupo" aria-labelledby={`area-${g.slug}`}>
+				<div class="grupo__head">
+					<h2 id={`area-${g.slug}`}>{g.label}</h2>
+				</div>
+				<div class="lista">
+					{g.itens.map((d) => (
+						<a class="item" href={`/biblioteca/${d.id}/`}>
+							<span class="item__titulo">{d.data.title}</span>
+							<span class="item__desc">{d.data.description}</span>
+							<span class="item__mais">
+								Abrir dossiê <Icon name="arrow" size={14} />
+							</span>
+						</a>
+					))}
+				</div>
+			</section>
+		))
+	}
+
+	{
+		artigos.length > 0 && (
+			<section class="grupo" aria-labelledby="perguntas">
+				<div class="grupo__head">
+					<h2 id="perguntas">Perguntas</h2>
+					<a href="/artigos/" class="grupo__link">
+						Todas as perguntas <Icon name="arrow" size={14} />
+					</a>
+				</div>
+				<div class="lista">
+					{artigos.map((a) => (
+						<ArticleCard
+							href={`/artigos/${a.id}/`}
+							titulo={a.data.titulo}
+							descricao={a.data.descricao}
+							data={a.data.data}
+						/>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	<!--
+		A ponte entre eixos. Sem isto, cada eixo é uma ilha: o leitor que
+		chega em Contexto não descobre que existe um núcleo bíblico, e
+		vice-versa. É o que dá sentido ao modelo.
+	-->
+	<section class="pontes" aria-labelledby="ver-tambem">
+		<h2 id="ver-tambem">Os outros eixos</h2>
+		<div class="pontes__grid">
+			{
+				outros.map(([chave, m]) => (
+					<a class="ponte" href={`/${chave === 'nucleo' ? 'biblia' : chave}/`}>
+						<span class="ponte__nome">{m.nome}</span>
+						<span class="ponte__rot">{m.rotulo}</span>
+						<span class="ponte__desc">{m.descricao}</span>
+						<span class="ponte__mais">
+							Explorar <Icon name="arrow" size={14} />
+						</span>
+					</a>
+				))
+			}
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 70ch;
+	}
+	.cabeca h1 {
+		margin-bottom: 0.7rem;
+	}
+	.cabeca .lede {
+		margin-bottom: 0.8rem;
+	}
+	.nota {
+		font-size: 0.92rem;
+		color: var(--ink-2);
+		border-left: 3px solid var(--accent);
+		padding-left: 0.9rem;
+		margin: 0 0 1rem;
+	}
+	.contagem {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+		margin: 0;
+	}
+
+	.grupo {
+		padding-top: var(--section);
+	}
+	.grupo__head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 1.4rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.grupo__head h2 {
+		margin: 0;
+		font-size: var(--step-2);
+	}
+	.grupo__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.84rem;
+		color: var(--ink-2);
+	}
+	.grupo__link:hover {
+		color: var(--accent);
+	}
+
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1rem;
+		align-items: stretch;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		padding: 1.2rem 1.3rem;
+		background: var(--bg-raised);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease;
+	}
+	.item:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+	}
+	.item__titulo {
+		font-weight: 650;
+		margin-bottom: 0.45rem;
+		line-height: 1.35;
+	}
+	.item__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.item__mais {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+
+	.pontes {
+		padding-top: var(--section);
+	}
+	.pontes h2 {
+		font-size: var(--step-2);
+		margin-bottom: 1.4rem;
+	}
+	.pontes__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+		gap: 1rem;
+	}
+	.ponte {
+		display: flex;
+		flex-direction: column;
+		padding: 1.3rem 1.4rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-warm);
+		transition: border-color 0.18s ease, transform 0.18s ease;
+	}
+	.ponte:hover {
+		border-color: var(--accent);
+		transform: translateY(-3px);
+	}
+	.ponte__nome {
+		font-size: 1.1rem;
+		font-weight: 650;
+		color: var(--accent);
+		letter-spacing: -0.2px;
+	}
+	.ponte__rot {
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin-bottom: 0.6rem;
+	}
+	.ponte__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.ponte__mais {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+</style>

@@ -13,6 +13,8 @@ fontes:
   - texto: 'George, Andrew (trad.). The Epic of Gilgamesh. Penguin, 1999. ISBN 9780140449198.'
   - texto: 'Westermann, Claus. Genesis 1–11: A Commentary. Continental Commentary, 1984 (original alemão, 1974).'
   - texto: 'Friedman, Richard Elliott. Who Wrote the Bible? 1997. ISBN 9780060630355.'
+eixo: nucleo
+livro: genesis
 ---
 
 A pergunta costuma vir carregada de intenção — "então a Bíblia copiou?" —, mas a resposta honesta é mais interessante que o escândalo. Existe relação. Ela não tem direção estabelecida.

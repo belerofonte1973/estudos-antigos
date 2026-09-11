@@ -1,0 +1,300 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Icon from '../../components/Icon.astro';
+import {LIVROS, EIXOS} from '../../taxonomia';
+
+export async function getStaticPaths() {
+	const dossies = await getCollection('biblioteca');
+	const artigos = await getCollection('artigos');
+	const passagens = await getCollection('passagens');
+
+	return Object.entries(LIVROS).map(([slug, meta]) => ({
+		params: { livro: slug },
+		props: {
+			slug,
+			meta,
+			passagens: passagens
+				.filter((p) => p.data.livro === slug)
+				.sort((a, b) => a.data.ordem - b.data.ordem),
+			dossie: dossies.find((d) => d.id === `biblia/${slug}`),
+			artigos: artigos
+				.filter((a) => a.data.livro === slug)
+				.sort((a, b) => b.data.data.getTime() - a.data.data.getTime()),
+		},
+	}));
+}
+
+const { slug, meta, passagens, dossie, artigos } = Astro.props;
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const url = new URL(`/biblia/${slug}/`, site).href;
+
+const descricao = dossie
+	? dossie.data.description
+	: `${meta.nome} (${meta.translit}) — passagens estudadas, com texto, contexto histórico e recepção.`;
+
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Book',
+		name: meta.nome,
+		alternateName: meta.translit,
+		inLanguage: 'he',
+		url,
+		isPartOf: { '@type': 'Book', name: 'Bíblia', url: new URL('/biblia/', site).href },
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', site).href },
+			{ '@type': 'ListItem', position: 2, name: 'Bíblia', item: new URL('/biblia/', site).href },
+			{ '@type': 'ListItem', position: 3, name: meta.nome, item: url },
+		],
+	},
+];
+---
+
+<BaseLayout title={meta.nome} description={descricao} jsonLd={jsonLd}>
+	<header class="cabeca">
+		<Breadcrumbs
+			items={[
+				{ href: '/', label: 'Início' },
+				{ href: '/biblia/', label: 'Bíblia' },
+				{ label: meta.nome },
+			]}
+		/>
+		<p class="eyebrow">Núcleo bíblico · livro {String(meta.ordem).padStart(2, '0')}</p>
+		<h1>
+			{meta.nome}
+			<span class="hebraico" dir="rtl" lang="he">{meta.hebraico}</span>
+		</h1>
+		<p class="translit">{meta.translit}</p>
+		{descricao && <p class="lede">{descricao}</p>}
+	</header>
+
+	<!--
+		Passagens são a unidade do núcleo. Cada uma traz as três seções —
+		Texto, Contexto, Recepção —, então este índice é ao mesmo tempo o
+		sumário do livro e o mapa do que já foi estudado nele.
+	-->
+	<section class="bloco" aria-labelledby="passagens">
+		<h2 id="passagens">Passagens</h2>
+		{
+			passagens.length === 0 ? (
+				<p class="vazio">
+					Nenhuma passagem publicada ainda. As que existirem aparecem aqui,
+					ordenadas pelo texto bíblico.
+				</p>
+			) : (
+				<div class="passagens">
+					{passagens.map((p) => (
+						<a class="passagem" href={`/biblia/${slug}/${p.id.split('/').pop()}/`}>
+							<span class="passagem__ref">{p.data.referencia}</span>
+							<span class="passagem__titulo">{p.data.titulo}</span>
+							<span class="passagem__desc">{p.data.descricao}</span>
+							<span class="passagem__eixos">
+								<span>Texto</span>
+								<span>Contexto</span>
+								<span>Recepção</span>
+							</span>
+						</a>
+					))}
+				</div>
+			)
+		}
+	</section>
+
+	{
+		dossie && (
+			<section class="bloco" aria-labelledby="dossie">
+				<h2 id="dossie">Dossiê</h2>
+				<a class="dossie" href={`/biblioteca/${dossie.id}/`}>
+					<span class="dossie__titulo">{dossie.data.title}</span>
+					<span class="dossie__desc">{dossie.data.description}</span>
+					<span class="dossie__mais">
+						Abrir dossiê <Icon name="arrow" size={14} />
+					</span>
+				</a>
+			</section>
+		)
+	}
+
+	{
+		artigos.length > 0 && (
+			<section class="bloco" aria-labelledby="perguntas">
+				<h2 id="perguntas">Perguntas sobre {meta.nome}</h2>
+				<div class="lista">
+					{artigos.map((a) => (
+						<ArticleCard
+							href={`/artigos/${a.id}/`}
+							titulo={a.data.titulo}
+							descricao={a.data.descricao}
+							data={a.data.data}
+						/>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	<aside class="rodape-nota">
+		<p>
+			{EIXOS.contexto.nome} histórico deste livro —
+			Antigo Oriente Próximo, arqueologia, paralelos literários —
+			fica em <a href="/contexto/">Contexto</a>. A leitura posterior,
+			em <a href="/recepcao/">Recepção</a>.
+		</p>
+	</aside>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 70ch;
+	}
+	.cabeca h1 {
+		display: flex;
+		align-items: baseline;
+		gap: 0.9rem;
+		flex-wrap: wrap;
+		margin-bottom: 0.3rem;
+	}
+	.hebraico {
+		font-size: 0.6em;
+		color: var(--accent);
+		font-weight: 400;
+	}
+	.translit {
+		font-style: italic;
+		color: var(--ink-3);
+		margin: 0 0 1rem;
+	}
+
+	.bloco {
+		padding-top: var(--section);
+	}
+	.bloco h2 {
+		font-size: var(--step-2);
+		margin-bottom: 1.4rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.vazio {
+		color: var(--ink-2);
+		max-width: 60ch;
+	}
+
+	.passagens {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1rem;
+	}
+	.passagem {
+		display: flex;
+		flex-direction: column;
+		padding: 1.3rem 1.4rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-raised);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease;
+	}
+	.passagem:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+	}
+	.passagem__ref {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--accent);
+		font-weight: 600;
+		margin-bottom: 0.4rem;
+	}
+	.passagem__titulo {
+		font-size: 1.15rem;
+		font-weight: 650;
+		letter-spacing: -0.3px;
+		margin-bottom: 0.45rem;
+	}
+	.passagem__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 1rem;
+	}
+	.passagem__eixos {
+		margin-top: auto;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+	}
+	.passagem__eixos span {
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		color: var(--accent);
+		background: var(--accent-soft);
+		padding: 2px 9px;
+		border-radius: var(--radius-pill);
+	}
+
+	.dossie {
+		display: flex;
+		flex-direction: column;
+		padding: 1.3rem 1.4rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-warm);
+		transition: border-color 0.18s ease, transform 0.18s ease;
+		max-width: 70ch;
+	}
+	.dossie:hover {
+		border-color: var(--accent);
+		transform: translateY(-3px);
+	}
+	.dossie__titulo {
+		font-weight: 650;
+		margin-bottom: 0.45rem;
+	}
+	.dossie__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.dossie__mais {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1rem;
+	}
+
+	.rodape-nota {
+		margin-top: var(--section);
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--border);
+		max-width: 70ch;
+	}
+	.rodape-nota p {
+		font-size: 0.9rem;
+		color: var(--ink-2);
+	}
+	.rodape-nota a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+</style>

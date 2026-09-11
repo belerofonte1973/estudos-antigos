@@ -12,3 +12,6 @@ dist/
 
 # Backup da migração Starlight (o conteúdo está no histórico do git)
 _backup_docs_starlight/
+
+# Vídeos gerados (arte fatos de build, não versionar)
+video/saida/

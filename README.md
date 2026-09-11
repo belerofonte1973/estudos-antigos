@@ -125,6 +125,57 @@ Serif 4** para corpo de leitura longa. Acento siena `#6b4423` (claro) / `#d4a574
 (escuro). Tokens em `src/styles/global.css` — nenhum valor de cor solto nos
 componentes.
 
+## Vídeo curto vertical
+
+O vídeo é o degrau de descoberta: 1080×1920, ~50 s, narração pt-BR e legenda
+sincronizada palavra a palavra. Ele **não tem redação nova** — o roteiro sai
+do artigo (pergunta + resposta rápida + abertura de seção do corpo). Isso é
+deliberado: elimina por construção o risco de o vídeo afirmar algo que o
+artigo não sustenta.
+
+```bash
+python video/gerar.py --listar                          # artigos disponíveis
+python video/gerar.py quem-escreveu-o-genesis            # gera um
+python video/gerar.py --todos                            # gera todos
+python video/gerar.py quem-escreveu-o-genesis \
+    --voz pt-BR-FranciscaNeural --taxa -5% --orcamento 170
+```
+
+Saída em `video/saida/<slug>/`: o MP4 mais `fundo.png`, `legendas.ass`,
+`narracao.mp3`, `roteiro.txt` e `verificacao.json`.
+
+| Módulo | Papel |
+|---|---|
+| `video/roteiro.py` | extrai pergunta + resposta + virada do artigo |
+| `video/narrar.py` | edge-tts com fronteiras de palavra (sincronia) |
+| `video/estilo.py` | tokens, moldura de fundo e arquivo ASS |
+| `video/gerar.py` | pipeline e CLI |
+| `video/verificar_video.py` | confere se a legenda chegou à imagem |
+
+### Armadilhas do pipeline de vídeo
+
+- **`boundary='WordBoundary'` é obrigatório no edge-tts 7.x.** O padrão é
+  `SentenceBoundary`, que emite uma fronteira por frase — sem granularidade de
+  palavra, o mapeamento cai para o plano proporcional e a legenda atrasa. O
+  código avisa, mas o sintoma silencioso é uma legenda "quase certa".
+- **Os tokens do edge-tts vêm SEM pontuação.** "vocabulários distintos — o
+  modelo" chega como `distintos o modelo`. Por isso o texto exibido vem do
+  artigo e os tempos vêm do TTS: usar os tokens do TTS para exibir produz
+  legenda sem vírgula, difícil de ler.
+- **Abreviações partem frases em dois lugares diferentes.** "séc." nunca fecha
+  frase (proteja o ponto); "a.C." fecha (preserve o ponto e só divida se
+  vier maiúscula depois). Tratar as duas igual perde a fronteira depois de
+  "a.C." ou parte "séc. V" ao meio.
+- **Sozinho, o arquivo `.ass` não prova nada.** O filtro `ass` do ffmpeg falha
+  em silêncio (fonte não encontrada, caminho relativo errado) e o vídeo sai
+  bonito, com áudio e sem uma palavra na tela. `verificar_video.py` extrai
+  quadros e compara a densidade de pixels escuros na faixa da legenda contra o
+  fundo puro — se for igual, nada foi desenhado.
+- **Caminhos com `:` quebram a sintaxe de filtro do ffmpeg.** O pipeline roda
+  o ffmpeg com `cwd` na pasta de trabalho e passa só nomes de arquivo.
+  `fontsdir` é dispensável: o fontconfig do Windows já resolve Arial e Georgia
+  por nome.
+
 ## SEO
 
 Centralizado em `src/components/Seo.astro`. Cada artigo emite três blocos

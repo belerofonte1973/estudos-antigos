@@ -1,0 +1,99 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	type?: 'note' | 'tip' | 'caution' | 'danger';
+	title?: string;
+	class?: string;
+}
+
+const { type = 'note', title, class: cls = '' } = Astro.props;
+
+const ICONS = {
+	note: 'info',
+	tip: 'tip',
+	caution: 'caution',
+	danger: 'danger',
+} as const;
+
+const LABELS = {
+	note: 'Nota',
+	tip: 'Dica',
+	caution: 'Atenção',
+	danger: 'Importante',
+} as const;
+
+const classes = ['ea-aside', `ea-aside--${type}`, cls].filter(Boolean).join(' ');
+---
+
+<aside class={classes} role={type === 'danger' ? 'alert' : undefined}>
+	<div class="ea-aside__head">
+		<Icon name={ICONS[type]} size={17} />
+		<span>{title ?? LABELS[type]}</span>
+	</div>
+	<div class="ea-aside__body"><slot /></div>
+</aside>
+
+<style>
+	.ea-aside {
+		margin: 1.7rem 0;
+		padding: 1rem 1.2rem 1.05rem;
+		border-radius: var(--radius-sm);
+		border-left: 3px solid var(--accent);
+		background: var(--bg-warm);
+		font-family: var(--font-ui);
+		font-size: 0.93rem;
+		line-height: 1.65;
+	}
+
+	.ea-aside__head {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-weight: 600;
+		font-size: 0.82rem;
+		text-transform: uppercase;
+		letter-spacing: 0.6px;
+		margin-bottom: 0.5rem;
+		color: var(--accent);
+	}
+
+	.ea-aside__body :global(p:last-child) {
+		margin-bottom: 0;
+	}
+	.ea-aside__body :global(p) {
+		margin-bottom: 0.6em;
+	}
+	.ea-aside__body :global(a) {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+
+	.ea-aside--note {
+		border-left-color: var(--link);
+	}
+	.ea-aside--note .ea-aside__head {
+		color: var(--link);
+	}
+
+	.ea-aside--tip {
+		border-left-color: var(--ok);
+	}
+	.ea-aside--tip .ea-aside__head {
+		color: var(--ok);
+	}
+
+	.ea-aside--caution {
+		border-left-color: var(--warn);
+	}
+	.ea-aside--caution .ea-aside__head {
+		color: var(--warn);
+	}
+
+	.ea-aside--danger {
+		border-left-color: var(--danger);
+	}
+	.ea-aside--danger .ea-aside__head {
+		color: var(--danger);
+	}
+</style>

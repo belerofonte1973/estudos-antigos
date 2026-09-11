@@ -1,0 +1,33 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	eyebrow?: string;
+	crumbs?: { href?: string; label: string }[];
+}
+
+const { title, description, eyebrow = 'Institucional', crumbs } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} width="narrow">
+	<article class="ea-pagina">
+		<Breadcrumbs items={crumbs ?? [{ href: '/', label: 'Início' }, { label: title }]} />
+		<p class="eyebrow">{eyebrow}</p>
+		<h1>{title}</h1>
+		<div class="prose">
+			<slot />
+		</div>
+	</article>
+</BaseLayout>
+
+<style>
+	.ea-pagina {
+		padding-top: 2.6rem;
+	}
+	.ea-pagina h1 {
+		margin-bottom: 1.4rem;
+	}
+</style>

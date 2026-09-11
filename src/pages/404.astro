@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LinkButton from '../components/LinkButton.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+---
+
+<BaseLayout
+	title="Página não encontrada"
+	description="O endereço procurado não existe neste site."
+	noindex={true}
+>
+	<div class="erro">
+		<p class="eyebrow">Erro 404</p>
+		<h1>Este endereço não existe.</h1>
+		<p class="lede">
+			O texto pode ter sido movido, renomeado ou nunca ter estado aqui. Os
+			caminhos abaixo levam ao que existe de fato.
+		</p>
+
+		<div class="erro__cta">
+			<LinkButton href="/" icon="arrow">Voltar ao início</LinkButton>
+			<LinkButton href="/artigos/" variant="secondary">Ver a revista</LinkButton>
+		</div>
+
+		<div class="erro__grid">
+			<CardGrid columns={2}>
+				<Card title="Revista" icon="book" href="/artigos/">
+					Perguntas curtas, uma por endereço, com resposta direta.
+				</Card>
+				<Card title="Biblioteca" icon="document" href="/biblioteca/">
+					Dossiês longos com o aparato acadêmico completo.
+				</Card>
+				<Card title="Como pesquisar" icon="search" href="/como-pesquisar/">
+					Metodologia e fontes primárias por área.
+				</Card>
+				<Card title="Sobre o projeto" icon="info" href="/sobre/">
+					O que é este portal e por que ele existe.
+				</Card>
+			</CardGrid>
+		</div>
+	</div>
+</BaseLayout>
+
+<style>
+	.erro {
+		padding: calc(var(--section) * 0.8) 0;
+		max-width: 70ch;
+	}
+	.erro h1 {
+		margin-bottom: 0.7rem;
+	}
+	.erro__cta {
+		display: flex;
+		gap: 0.65rem;
+		flex-wrap: wrap;
+		margin: 1.8rem 0;
+	}
+	.erro__grid {
+		margin-top: 2.5rem;
+	}
+</style>

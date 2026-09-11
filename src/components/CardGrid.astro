@@ -1,0 +1,47 @@
+---
+interface Props {
+	/** Escalona os cards em sequência ao entrarem na tela. */
+	stagger?: boolean;
+	columns?: 2 | 3;
+	class?: string;
+}
+
+const { stagger = false, columns = 3, class: cls = '' } = Astro.props;
+const classes = ['ea-card-grid', `cols-${columns}`, cls].filter(Boolean).join(' ');
+---
+
+<div class={classes} data-stagger={stagger ? 'true' : undefined}>
+	<slot />
+</div>
+
+<style>
+	.ea-card-grid {
+		display: grid;
+		gap: 1.1rem;
+		margin: 1.8rem 0;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+	}
+
+	.ea-card-grid.cols-2 {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+	}
+
+	.ea-card-grid.cols-3 {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+	}
+</style>
+
+{
+	stagger && (
+		<script>
+			const grids = document.querySelectorAll('[data-stagger="true"]');
+			grids.forEach((grid) => {
+				const cards = Array.from(grid.children);
+				cards.forEach((card, i) => {
+					(card as HTMLElement).style.transitionDelay = `${i * 60}ms`;
+					card.classList.add('reveal');
+				});
+			});
+		</script>
+	)
+}

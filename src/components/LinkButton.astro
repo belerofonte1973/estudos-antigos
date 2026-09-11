@@ -1,0 +1,82 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	href: string;
+	variant?: 'primary' | 'secondary' | 'ghost';
+	icon?: string;
+	external?: boolean;
+	class?: string;
+}
+
+const {
+	href,
+	variant = 'primary',
+	icon,
+	external = false,
+	class: cls = '',
+} = Astro.props;
+
+const classes = ['ea-btn', `ea-btn--${variant}`, cls].filter(Boolean).join(' ');
+const isExternal = external || /^https?:\/\//.test(href);
+---
+
+<a
+	href={href}
+	class={classes}
+	target={isExternal ? '_blank' : undefined}
+	rel={isExternal ? 'noopener noreferrer' : undefined}
+>
+	{icon && <Icon name={icon} size={16} />}
+	<slot />
+</a>
+
+<style>
+	.ea-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.6rem 1.15rem;
+		border-radius: var(--radius-pill);
+		font-family: var(--font-ui);
+		font-size: 0.9rem;
+		font-weight: 550;
+		line-height: 1.2;
+		border: 1px solid transparent;
+		transition: background 0.18s ease, border-color 0.18s ease,
+			transform 0.18s ease, color 0.18s ease;
+		cursor: pointer;
+	}
+
+	.ea-btn:hover {
+		transform: translateY(-1px);
+		border-bottom-color: transparent;
+	}
+
+	.ea-btn--primary {
+		background: var(--accent);
+		color: var(--accent-ink);
+	}
+	.ea-btn--primary:hover {
+		background: var(--accent-strong);
+	}
+
+	.ea-btn--secondary {
+		background: var(--bg-raised);
+		color: var(--ink);
+		border-color: var(--border-strong);
+	}
+	.ea-btn--secondary:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+
+	.ea-btn--ghost {
+		background: transparent;
+		color: var(--accent);
+		padding-inline: 0.5rem;
+	}
+	.ea-btn--ghost:hover {
+		background: var(--accent-soft);
+	}
+</style>

@@ -1,0 +1,204 @@
+---
+import Icon from './Icon.astro';
+import { AREAS } from '../content.config';
+
+interface Props {
+	href: string;
+	titulo: string;
+	pergunta?: string;
+	descricao: string;
+	area?: string;
+	data?: Date;
+	leitura?: number;
+	destaque?: boolean;
+	/** 'hero' para o destaque da capa, 'linha' para listas compactas. */
+	variante?: 'card' | 'hero' | 'linha';
+	class?: string;
+}
+
+const {
+	href,
+	titulo,
+	pergunta,
+	descricao,
+	area,
+	data,
+	leitura,
+	destaque = false,
+	variante = 'card',
+	class: cls = '',
+} = Astro.props;
+
+const areaLabel = area ? (AREAS as Record<string, string>)[area] ?? area : undefined;
+
+const dataFmt = data
+	? new Intl.DateTimeFormat('pt-BR', {
+			day: '2-digit',
+			month: 'long',
+			year: 'numeric',
+		}).format(data)
+	: undefined;
+
+const classes = ['ea-article-card', `variant-${variante}`, cls]
+	.filter(Boolean)
+	.join(' ');
+---
+
+<article class={classes}>
+	<a href={href} class="ea-article-card__link">
+		<div class="ea-article-card__meta">
+			{areaLabel && <span class="area">{areaLabel}</span>}
+			{dataFmt && <time datetime={data?.toISOString()}>{dataFmt}</time>}
+			{
+				leitura && (
+					<span class="leitura">
+						<Icon name="clock" size={12} /> {leitura} min
+					</span>
+				)
+			}
+		</div>
+
+		<h3 class="ea-article-card__title">{titulo}</h3>
+
+		{pergunta && variante !== 'linha' && (
+			<p class="ea-article-card__pergunta">{pergunta}</p>
+		)}
+
+		<p class="ea-article-card__desc">{descricao}</p>
+
+		<span class="ea-article-card__more">
+			Ler <Icon name="arrow" size={14} />
+		</span>
+	</a>
+</article>
+
+<style>
+	.ea-article-card {
+		background: var(--bg-raised);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease,
+			border-color 0.18s ease;
+		height: 100%;
+	}
+	.ea-article-card:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--border-strong);
+	}
+
+	.ea-article-card__link {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 1.4rem 1.45rem;
+		color: inherit;
+		border-bottom: 0;
+	}
+
+	.ea-article-card__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.7rem;
+		font-size: 0.72rem;
+		color: var(--ink-3);
+		margin-bottom: 0.7rem;
+	}
+	.ea-article-card__meta .area {
+		color: var(--accent);
+		font-weight: 650;
+		letter-spacing: 0.6px;
+		text-transform: uppercase;
+	}
+	.ea-article-card__meta .leitura {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.ea-article-card__title {
+		font-size: 1.16rem;
+		font-weight: 650;
+		letter-spacing: -0.3px;
+		line-height: 1.3;
+		margin: 0 0 0.55rem;
+		text-wrap: balance;
+	}
+
+	.ea-article-card__pergunta {
+		font-size: 0.88rem;
+		font-style: italic;
+		color: var(--accent);
+		margin: 0 0 0.6rem;
+		line-height: 1.45;
+	}
+
+	.ea-article-card__desc {
+		font-size: 0.9rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin: 0 0 1rem;
+	}
+
+	.ea-article-card__more {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+	.ea-article-card__more :global(svg) {
+		transition: transform 0.18s ease;
+	}
+	.ea-article-card:hover .ea-article-card__more :global(svg) {
+		transform: translateX(3px);
+	}
+
+	/* --- Variante hero (destaque da capa) --- */
+	.ea-article-card.variant-hero .ea-article-card__link {
+		padding: 2rem 2rem 2.1rem;
+	}
+	.ea-article-card.variant-hero .ea-article-card__title {
+		font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem);
+		letter-spacing: -0.8px;
+	}
+	.ea-article-card.variant-hero .ea-article-card__desc {
+		font-size: 1rem;
+		max-width: 58ch;
+	}
+
+	/* --- Variante linha (listas densas) --- */
+	.ea-article-card.variant-linha {
+		box-shadow: none;
+		border: 0;
+		border-bottom: 1px solid var(--border);
+		border-radius: 0;
+		background: transparent;
+	}
+	.ea-article-card.variant-linha:hover {
+		transform: none;
+		box-shadow: none;
+		background: var(--bg-sunken);
+	}
+	.ea-article-card.variant-linha .ea-article-card__link {
+		padding: 1rem 1rem 1rem 0.75rem;
+	}
+	.ea-article-card.variant-linha .ea-article-card__title {
+		font-size: 1rem;
+		margin-bottom: 0.35rem;
+	}
+	.ea-article-card.variant-linha .ea-article-card__desc {
+		font-size: 0.85rem;
+		margin-bottom: 0;
+	}
+	.ea-article-card.variant-linha .ea-article-card__more {
+		display: none;
+	}
+	.ea-article-card.variant-linha .ea-article-card__meta {
+		margin-bottom: 0.45rem;
+	}
+</style>

@@ -1,0 +1,214 @@
+---
+import Icon from './Icon.astro';
+
+const NAV = [
+	{ href: '/artigos/', label: 'Revista' },
+	{ href: '/biblioteca/', label: 'Biblioteca' },
+	{ href: '/sobre/', label: 'Sobre' },
+];
+
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+	href === '/' ? path === '/' : path.startsWith(href.replace(/\/$/, ''));
+---
+
+<header class="ea-header">
+	<div class="ea-header__inner wrap">
+		<a href="/" class="ea-brand" aria-label="Estudos Antigos — página inicial">
+			<svg
+				class="ea-brand__mark"
+				viewBox="0 0 32 32"
+				width="30"
+				height="30"
+				aria-hidden="true"
+			>
+				<path
+					d="M16 5.5c-3-2.2-7-2.9-11-2.6v21c4-.3 8 .4 11 2.6 3-2.2 7-2.9 11-2.6v-21c-4-.3-8 .4-11 2.6Z"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.7"
+					stroke-linejoin="round"></path>
+				<path
+					d="M16 5.5v21"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.7"></path>
+			</svg>
+			<span class="ea-brand__text">
+				<strong>Estudos Antigos</strong>
+				<small>Bíblicos · Clássicos · Medievais</small>
+			</span>
+		</a>
+
+		<nav class="ea-nav" aria-label="Navegação principal">
+			{
+				NAV.map((item) => (
+					<a
+						href={item.href}
+						class="ea-nav__link"
+						aria-current={isActive(item.href) ? 'page' : undefined}
+					>
+						{item.label}
+					</a>
+				))
+			}
+			<a
+				href="/rss.xml"
+				class="ea-nav__icon"
+				title="Assinar o feed RSS"
+				aria-label="Assinar o feed RSS"
+			>
+				<Icon name="rss" size={17} />
+			</a>
+			<button
+				type="button"
+				class="ea-nav__icon ea-theme-toggle"
+				aria-label="Alternar tema claro e escuro"
+				title="Alternar tema"
+			>
+				<svg
+					class="icon-sun"
+					viewBox="0 0 24 24"
+					width="17"
+					height="17"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.7"
+					stroke-linecap="round"
+					aria-hidden="true"
+				>
+					<circle cx="12" cy="12" r="4"></circle>
+					<path
+						d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+					></path>
+				</svg>
+				<svg
+					class="icon-moon"
+					viewBox="0 0 24 24"
+					width="17"
+					height="17"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.7"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					aria-hidden="true"
+				>
+					<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path>
+				</svg>
+			</button>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.ea-header {
+		position: sticky;
+		top: 0;
+		z-index: 50;
+		background: color-mix(in srgb, var(--bg-warm) 88%, transparent);
+		backdrop-filter: saturate(180%) blur(12px);
+		-webkit-backdrop-filter: saturate(180%) blur(12px);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.ea-header__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		min-height: var(--header-h);
+	}
+
+	.ea-brand {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		color: var(--ink);
+		border-bottom: 0;
+		flex-shrink: 0;
+	}
+	.ea-brand__mark {
+		color: var(--accent);
+		flex-shrink: 0;
+	}
+	.ea-brand__text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.15;
+	}
+	.ea-brand__text strong {
+		font-size: 0.98rem;
+		font-weight: 650;
+		letter-spacing: -0.3px;
+	}
+	.ea-brand__text small {
+		font-size: 0.66rem;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+	}
+
+	.ea-nav {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.ea-nav__link {
+		padding: 0.45rem 0.7rem;
+		border-radius: var(--radius-sm);
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--ink-2);
+		border-bottom: 0;
+		white-space: nowrap;
+	}
+	.ea-nav__link:hover {
+		background: var(--accent-soft);
+		color: var(--accent);
+	}
+	.ea-nav__link[aria-current='page'] {
+		color: var(--accent);
+		font-weight: 650;
+	}
+
+	.ea-nav__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: var(--radius-sm);
+		color: var(--ink-2);
+		background: none;
+		border: 0;
+		cursor: pointer;
+		transition: background 0.18s ease, color 0.18s ease;
+	}
+	.ea-nav__icon:hover {
+		background: var(--accent-soft);
+		color: var(--accent);
+	}
+
+	/* Alternância de ícone do tema */
+	.ea-theme-toggle .icon-moon {
+		display: none;
+	}
+	:global([data-theme='dark']) .ea-theme-toggle .icon-sun {
+		display: none;
+	}
+	:global([data-theme='dark']) .ea-theme-toggle .icon-moon {
+		display: block;
+	}
+
+	@media (max-width: 640px) {
+		.ea-brand__text small {
+			display: none;
+		}
+		.ea-nav__link {
+			padding: 0.4rem 0.5rem;
+			font-size: 0.85rem;
+		}
+	}
+</style>

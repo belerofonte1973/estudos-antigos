@@ -1,0 +1,200 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Icon from '../../components/Icon.astro';
+import { AREAS } from '../../content.config';
+
+const artigos = (await getCollection('artigos')).sort(
+	(a, b) => b.data.data.getTime() - a.data.data.getTime()
+);
+
+// Agrupa por área preservando a ordem de AREAS
+const grupos = Object.entries(AREAS)
+	.map(([slug, label]) => ({
+		slug,
+		label,
+		itens: artigos.filter((a) => a.data.area === slug),
+	}))
+	.filter((g) => g.itens.length > 0);
+
+const minutos = (corpo: string | undefined) =>
+	Math.max(1, Math.round((corpo ?? '').split(/\s+/).length / 210));
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: 'Revista — perguntas sobre a Antiguidade',
+	description:
+		'Perguntas sobre Antiguidade Bíblica, Clássica e Medieval, cada uma respondida com citação de fonte rastreável.',
+	inLanguage: 'pt-BR',
+	url: new URL('/artigos/', site).href,
+	hasPart: artigos.map((a) => ({
+		'@type': 'Article',
+		headline: a.data.titulo,
+		url: new URL(`/artigos/${a.id}/`, site).href,
+		datePublished: a.data.data.toISOString(),
+	})),
+};
+---
+
+<BaseLayout
+	title="Revista"
+	description="Perguntas sobre Antiguidade Bíblica, Clássica e Medieval — cada uma respondida com citação de fonte rastreável e com o que ainda está em disputa."
+	jsonLd={jsonLd}
+>
+	<header class="cabeca">
+		<Breadcrumbs
+			items={[{ href: '/', label: 'Início' }, { label: 'Revista' }]}
+		/>
+		<p class="eyebrow">Revista</p>
+		<h1>Perguntas sobre a Antiguidade</h1>
+		<p class="lede">
+			Cada artigo responde uma única pergunta — e diz de onde vem a resposta.
+			As versões longas, com o aparato acadêmico completo, estão na{' '}
+			<a href="/biblioteca/">biblioteca</a>.
+		</p>
+		<p class="contagem">
+			<Icon name="document" size={14} />
+			{artigos.length}
+			{artigos.length === 1 ? ' pergunta publicada' : ' perguntas publicadas'}
+		</p>
+	</header>
+
+	{
+		artigos.length === 0 ? (
+			<div class="vazio">
+				<p>Nenhum artigo publicado ainda.</p>
+			</div>
+		) : (
+			grupos.map((g) => (
+				<section class="grupo" aria-labelledby={`area-${g.slug}`}>
+					<div class="grupo__head">
+						<h2 id={`area-${g.slug}`}>{g.label}</h2>
+						<a href={`/biblioteca/${g.slug}/`} class="grupo__link">
+							Dossiês desta área <Icon name="arrow" size={14} />
+						</a>
+					</div>
+					<div class="lista">
+						{g.itens.map((a) => (
+							<ArticleCard
+								href={`/artigos/${a.id}/`}
+								titulo={a.data.titulo}
+								pergunta={a.data.pergunta}
+								descricao={a.data.descricao}
+								area={a.data.area}
+								data={a.data.data}
+								leitura={minutos(a.body)}
+							/>
+						))}
+					</div>
+				</section>
+			))
+		)
+	}
+
+	<aside class="nota">
+		<div class="nota__icon"><Icon name="rss" size={18} /></div>
+		<div>
+			<strong>Acompanhe por RSS</strong>
+			<p>
+				Sem algoritmo no meio. Assine o <a href="/rss.xml">feed</a> e receba
+				as novas perguntas conforme saem.
+			</p>
+		</div>
+	</aside>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 66ch;
+	}
+	.cabeca h1 {
+		margin-bottom: 0.7rem;
+	}
+	.cabeca .lede {
+		margin-bottom: 1rem;
+	}
+	.cabeca .lede a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+	.contagem {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+		margin: 0;
+	}
+
+	.grupo {
+		padding-top: var(--section);
+	}
+	.grupo__head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 1.6rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.grupo__head h2 {
+		margin: 0;
+		font-size: var(--step-2);
+	}
+	.grupo__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.84rem;
+		color: var(--ink-2);
+	}
+	.grupo__link:hover {
+		color: var(--accent);
+	}
+
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1.2rem;
+		align-items: stretch;
+	}
+
+	.vazio {
+		padding: var(--section) 0;
+		color: var(--ink-2);
+	}
+
+	.nota {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+		margin-top: var(--section);
+		padding: 1.4rem 1.6rem;
+		background: var(--bg-warm);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		max-width: 62ch;
+	}
+	.nota__icon {
+		color: var(--accent);
+		flex-shrink: 0;
+		margin-top: 2px;
+	}
+	.nota p {
+		margin: 0.25rem 0 0;
+		font-size: 0.9rem;
+		color: var(--ink-2);
+	}
+	.nota a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+</style>

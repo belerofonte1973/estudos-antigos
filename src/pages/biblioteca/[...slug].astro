@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content';
+import BibliotecaLayout from '../../layouts/BibliotecaLayout.astro';
+
+export async function getStaticPaths() {
+	const dossies = await getCollection('biblioteca');
+	const artigos = await getCollection('artigos');
+
+	const entradaDoDossie = new Map(
+		artigos.filter((a) => a.data.dossie).map((a) => [a.data.dossie!, a])
+	);
+
+	const nav = dossies.map((d) => ({
+		href: `/biblioteca/${d.id}/`,
+		label: d.data.title.replace(/\s+—\s+Artigo Enciclopédico$/, ''),
+		area: d.data.area,
+		ordem: d.data.ordem,
+	}));
+
+	return dossies.map((dossie) => {
+		const entrada = entradaDoDossie.get(dossie.id);
+		return {
+			params: { slug: dossie.id },
+			props: {
+				dossie,
+				nav,
+				entrada: entrada
+					? { href: `/artigos/${entrada.id}/`, titulo: entrada.data.titulo }
+					: undefined,
+			},
+		};
+	});
+}
+
+const { dossie, nav, entrada } = Astro.props;
+const { Content, headings } = await render(dossie);
+---
+
+<BibliotecaLayout
+	title={dossie.data.title}
+	description={dossie.data.description}
+	area={dossie.data.area}
+	headings={headings}
+	nav={nav}
+	currentId={dossie.id}
+	atualizado={dossie.data.atualizado}
+	entrada={entrada}
+>
+	<Content />
+</BibliotecaLayout>

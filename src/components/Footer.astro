@@ -1,0 +1,185 @@
+---
+import Icon from './Icon.astro';
+
+const ANO = new Date().getFullYear();
+
+const SECOES = [
+	{ href: '/artigos/', label: 'Revista' },
+	{ href: '/biblioteca/', label: 'Biblioteca' },
+	{ href: '/sobre/', label: 'Sobre o projeto' },
+	{ href: '/sobre/contribua/', label: 'Como contribuir' },
+];
+
+const AREAS = [
+	{ href: '/biblioteca/biblia/', label: 'Antiguidade Bíblica' },
+	{ href: '/biblioteca/classica/', label: 'Antiguidade Clássica' },
+	{ href: '/biblioteca/idade-media/', label: 'Idade Média' },
+	{ href: '/biblioteca/pre-historia/', label: 'Pré-História' },
+];
+---
+
+<footer class="ea-footer">
+	<div class="wrap">
+		<div class="ea-footer__grid">
+			<div class="ea-footer__brand">
+				<strong>Estudos Antigos</strong>
+				<p>
+					Portal independente de pesquisa e divulgação sobre Antiguidade Bíblica,
+					Clássica e Idade Média. Cada afirmação factual traz citação
+					rastreável a fonte primária.
+				</p>
+				<p class="ea-footer__legend">
+					<span class="status-v">[V]</span> verificado ·
+					<span class="status-w">[W]</span> provável ·
+					<span class="status-gap">[—]</span> lacuna
+				</p>
+			</div>
+
+			<nav class="ea-footer__col" aria-label="Seções">
+				<h2 class="ea-footer__title">Seções</h2>
+				<ul>
+					{
+						SECOES.map((i) => (
+							<li>
+								<a href={i.href}>{i.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<nav class="ea-footer__col" aria-label="Áreas de estudo">
+				<h2 class="ea-footer__title">Áreas</h2>
+				<ul>
+					{
+						AREAS.map((i) => (
+							<li>
+								<a href={i.href}>{i.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<nav class="ea-footer__col" aria-label="Acompanhar">
+				<h2 class="ea-footer__title">Acompanhar</h2>
+				<ul>
+					<li>
+						<a href="/rss.xml"><Icon name="rss" size={14} /> Feed RSS</a>
+					</li>
+					<li>
+						<a href="/sitemap-index.xml"><Icon name="globe" size={14} /> Mapa do site</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/belerofonte1973/estudos-antigos"
+							rel="noopener noreferrer"
+							target="_blank"
+							><Icon name="link" size={14} /> Código-fonte</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="ea-footer__base">
+			<p>
+				© {ANO} Estudos Antigos · Conteúdo de acesso livre, sem fins comerciais.
+			</p>
+			<p class="ea-footer__note">
+				Material didático. Para citação acadêmica, confira sempre a fonte
+				primária indicada.
+			</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.ea-footer {
+		margin-top: var(--section);
+		padding: 3rem 0 2rem;
+		background: var(--bg-warm);
+		border-top: 1px solid var(--border);
+		font-size: 0.88rem;
+	}
+
+	.ea-footer__grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		gap: 2rem;
+	}
+
+	.ea-footer__brand strong {
+		font-size: 1rem;
+		letter-spacing: -0.3px;
+	}
+	.ea-footer__brand p {
+		color: var(--ink-2);
+		margin: 0.6rem 0 0;
+		max-width: 42ch;
+		line-height: 1.6;
+	}
+	.ea-footer__legend {
+		font-size: 0.78rem;
+		color: var(--ink-3);
+	}
+
+	.ea-footer__title {
+		font-size: 0.72rem;
+		font-weight: 650;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin: 0 0 0.8rem;
+	}
+
+	.ea-footer__col ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.ea-footer__col a {
+		color: var(--ink-2);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+	.ea-footer__col a:hover {
+		color: var(--accent);
+	}
+
+	.ea-footer__base {
+		margin-top: 2.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--border);
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		color: var(--ink-3);
+		font-size: 0.8rem;
+	}
+	.ea-footer__base p {
+		margin: 0;
+	}
+	.ea-footer__note {
+		max-width: 46ch;
+	}
+
+	@media (max-width: 860px) {
+		.ea-footer__grid {
+			grid-template-columns: 1fr 1fr;
+		}
+		.ea-footer__brand {
+			grid-column: 1 / -1;
+		}
+	}
+	@media (max-width: 520px) {
+		.ea-footer__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

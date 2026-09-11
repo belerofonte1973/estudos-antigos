@@ -1,0 +1,355 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+import LinkButton from '../components/LinkButton.astro';
+import Icon from '../components/Icon.astro';
+import { AREAS } from '../content.config';
+
+const artigos = (await getCollection('artigos')).sort(
+	(a, b) => a.data.destaque - b.data.destaque
+);
+
+const dossies = (await getCollection('biblioteca')).sort(
+	(a, b) => a.data.ordem - b.data.ordem
+);
+
+const destaques = artigos.slice(0, 3);
+const restantes = artigos.slice(3, 9);
+
+// Contagem de dossiês por área, para mostrar densidade onde ela existe.
+const porArea = dossies.reduce<Record<string, number>>((acc, d) => {
+	acc[d.data.area] = (acc[d.data.area] ?? 0) + 1;
+	return acc;
+}, {});
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: 'Estudos Antigos',
+	alternateName: 'Estudos Antigos — Bíblicos, Clássicos e Medievais',
+	url: site.href,
+	description:
+		'Portal independente de pesquisa e divulgação sobre Antiguidade Bíblica, Clássica e Idade Média, com citação rastreável em cada afirmação factual.',
+	inLanguage: 'pt-BR',
+	publisher: { '@type': 'Organization', name: 'Estudos Antigos' },
+};
+---
+
+<BaseLayout
+	title="Estudos Antigos"
+	description="Perguntas antigas, respostas rastreáveis. Pesquisa independente sobre Antiguidade Bíblica, Clássica e Idade Média — cada afirmação com citação de fonte."
+	jsonLd={jsonLd}
+>
+	<!-- ================= HERO ================= -->
+	<section class="hero">
+		<div class="hero__inner reveal">
+			<p class="eyebrow">Pesquisa independente · acesso livre</p>
+			<h1>
+				Perguntas antigas,<br />
+				<span class="hero__accent">respostas rastreáveis.</span>
+			</h1>
+			<p class="lede">
+				Quem escreveu o Gênesis? O dilúvio vem de Gilgamesh? Moisés existiu? Aqui
+				cada resposta traz a citação da fonte por trás dela — e diz, com todas as
+				letras, o que ainda está em disputa.
+			</p>
+			<div class="hero__cta">
+				<LinkButton href="/artigos/" icon="book">Começar pelas perguntas</LinkButton>
+				<LinkButton href="/biblioteca/" variant="secondary" icon="document">
+					Explorar a biblioteca
+				</LinkButton>
+			</div>
+			<p class="hero__note">
+				<Icon name="check" size={14} />
+				Sem cadastro, sem anúncio, sem versão resumida por assinatura.
+			</p>
+		</div>
+	</section>
+
+	<!-- ================= DESTAQUES ================= -->
+	{
+		destaques.length > 0 && (
+			<section class="section" aria-labelledby="destaques">
+				<div class="section__head">
+					<h2 id="destaques">Comece por aqui</h2>
+					<a href="/artigos/" class="section__more">
+						Todas as perguntas <Icon name="arrow" size={15} />
+					</a>
+				</div>
+				<div class="grid-3">
+					{destaques.map((a) => (
+						<ArticleCard
+							href={`/artigos/${a.id}/`}
+							titulo={a.data.titulo}
+							pergunta={a.data.pergunta}
+							descricao={a.data.descricao}
+							area={a.data.area}
+							data={a.data.data}
+						/>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	<!-- ================= O QUE NOS DISTINGUE ================= -->
+	<section class="section promise" aria-labelledby="promessa">
+		<div class="promise__grid">
+			<div>
+				<h2 id="promessa">Toda afirmação tem uma fonte.<br />E um grau de certeza.</h2>
+				<p>
+					Num tempo em que texto sobre a Antiguidade é gerado em segundos, o que
+					escasseia não é informação — é saber <em>de onde ela vem</em>. Aqui cada
+					afirmação factual é marcada conforme o estado da verificação.
+				</p>
+				<ul class="promise__list">
+					<li>
+						<span class="status-v">[V]</span>
+						<strong>Verificado</strong> — a fonte foi conferida (Open Library,
+						Crossref, OpenAlex, editora oficial).
+					</li>
+					<li>
+						<span class="status-w">[W]</span>
+						<strong>Provável</strong> — obra canônica conhecida, sem conferência
+						direta.
+					</li>
+					<li>
+						<span class="status-gap">[—]</span>
+						<strong>Lacuna</strong> — não localizado. Dizer isso também é
+						resultado.
+					</li>
+				</ul>
+				<p class="small muted">
+					Nenhuma página ou número de página é citado sem ter sido visto. Quando não
+					foi, está escrito que não foi.
+				</p>
+			</div>
+			<div class="promise__areas">
+				<p class="eyebrow">Onde já há material</p>
+				<CardGrid columns={2}>
+					{Object.entries(AREAS).map(([slug, label]) =>
+						porArea[slug] ? (
+							<Card title={label} href={`/biblioteca/${slug}/`}>
+								{porArea[slug]} {porArea[slug] === 1 ? 'dossiê' : 'dossiês'} na
+								biblioteca
+							</Card>
+						) : (
+							<Card title={label}>
+								<span class="muted">Em preparação</span>
+							</Card>
+						)
+					)}
+				</CardGrid>
+			</div>
+		</div>
+	</section>
+
+	<!-- ================= MAIS PERGUNTAS ================= -->
+	{
+		restantes.length > 0 && (
+			<section class="section" aria-labelledby="mais">
+				<div class="section__head">
+					<h2 id="mais">Mais perguntas</h2>
+				</div>
+				<div class="grid-3">
+					{restantes.map((a) => (
+						<ArticleCard
+							href={`/artigos/${a.id}/`}
+							titulo={a.data.titulo}
+							descricao={a.data.descricao}
+							area={a.data.area}
+							data={a.data.data}
+							variante="linha"
+						/>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	<!-- ================= BIBLIOTECA ================= -->
+	<section class="section cta" aria-labelledby="biblioteca">
+		<div class="cta__box">
+			<div>
+				<p class="eyebrow">Biblioteca</p>
+				<h2 id="biblioteca">O aparato completo, para quem quer conferir</h2>
+				<p>
+					Os dossiês longos trazem o debate acadêmico inteiro: as hipóteses em
+					disputa, quem as defende, onde a evidência falha. É o material por trás
+					de cada resposta curta.
+				</p>
+			</div>
+			<div class="cta__action">
+				<LinkButton href="/biblioteca/">Entrar na biblioteca</LinkButton>
+				<LinkButton href="/rss.xml" variant="ghost" icon="rss">
+					Assinar por RSS
+				</LinkButton>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	/* ---------- Hero ---------- */
+	.hero {
+		padding: calc(var(--section) * 0.9) 0 var(--section);
+		border-bottom: 1px solid var(--border);
+	}
+	.hero__inner {
+		max-width: 62ch;
+	}
+	.hero h1 {
+		font-size: var(--step-5);
+		letter-spacing: -2px;
+		line-height: 1.03;
+		margin-bottom: 1.1rem;
+	}
+	.hero__accent {
+		color: var(--accent);
+	}
+	.hero__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		margin-top: 1.9rem;
+	}
+	.hero__note {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin-top: 1.3rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+	}
+
+	/* ---------- Seções ---------- */
+	.section {
+		padding-top: var(--section);
+	}
+	.section__head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 1.8rem;
+	}
+	.section__head h2 {
+		margin: 0;
+	}
+	.section__more {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+
+	.grid-3 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+		gap: 1.2rem;
+		align-items: stretch;
+	}
+
+	/* ---------- Promessa ---------- */
+	.promise__grid {
+		display: grid;
+		grid-template-columns: 1.15fr 1fr;
+		gap: 3rem;
+		align-items: start;
+		padding: 2.6rem 2.4rem;
+		background: var(--bg-warm);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+	}
+	.promise h2 {
+		font-size: var(--step-3);
+		letter-spacing: -0.9px;
+	}
+	.promise p {
+		color: var(--ink-2);
+		max-width: 52ch;
+	}
+	.promise__list {
+		list-style: none;
+		padding: 0;
+		margin: 1.6rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+	.promise__list li {
+		font-size: 0.92rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		padding-left: 0.1rem;
+	}
+	.promise__list strong {
+		color: var(--ink);
+	}
+	.promise__areas :global(.ea-card-grid) {
+		margin: 0;
+	}
+
+	/* ---------- CTA final ---------- */
+	.cta__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2.5rem;
+		flex-wrap: wrap;
+		padding: 2.4rem 2.4rem;
+		border-radius: var(--radius);
+		background: var(--accent);
+		color: var(--accent-ink);
+	}
+	.cta__box h2 {
+		color: var(--accent-ink);
+		font-size: var(--step-2);
+		letter-spacing: -0.6px;
+		margin-bottom: 0.55rem;
+	}
+	.cta__box p {
+		margin: 0;
+		max-width: 56ch;
+		opacity: 0.92;
+	}
+	.cta__box :global(.eyebrow) {
+		color: var(--accent-ink);
+		opacity: 0.72;
+	}
+	.cta__action {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: flex-start;
+	}
+	.cta__box :global(.ea-btn--primary) {
+		background: var(--accent-ink);
+		color: var(--accent);
+	}
+	.cta__box :global(.ea-btn--ghost) {
+		color: var(--accent-ink);
+	}
+	.cta__box :global(.ea-btn--ghost:hover) {
+		background: color-mix(in srgb, var(--accent-ink) 15%, transparent);
+	}
+
+	@media (max-width: 900px) {
+		.promise__grid {
+			grid-template-columns: 1fr;
+			gap: 1.8rem;
+			padding: 1.8rem 1.5rem;
+		}
+		.hero h1 {
+			letter-spacing: -1.2px;
+		}
+	}
+</style>

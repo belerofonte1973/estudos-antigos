@@ -1,73 +1,37 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import remarkLinguasAntigas from './src/plugins/remark-linguas-antigas.mjs';
 
-// https://astro.build/config
+// ---------------------------------------------------------------------------
+// Estudos Antigos — revista + biblioteca
+//
+// Duas superfícies no mesmo build:
+//   /            revista  -> artigos curtos, uma pergunta por endereço (alcance)
+//   /biblioteca  biblioteca -> dossiês profundos com sidebar (profundidade)
+//
+// O Starlight foi removido de propósito: ele serve documentação para quem já
+// sabe o que procura. A face pública precisa de <head> livre para SEO,
+// schema.org e imagem social por artigo.
+// ---------------------------------------------------------------------------
+
+// Trocar por domínio próprio quando existir, ex.: 'https://estudosantigos.com.br'
+export const SITE = 'https://estudos-antigos.netlify.app';
+
 export default defineConfig({
-	site: 'https://estudos-antigos.netlify.app',
+	site: SITE,
+	trailingSlash: 'ignore',
 	integrations: [
-		starlight({
-			title: 'Estudos Antigos — Bíblicos, Clássicos e Medievais',
-			description: 'Portal de pesquisa e divulgação sobre Antiguidade Bíblica, Clássica (Grécia e Roma) e Idade Média. Artigos enciclopédicos, bibliografias comentadas e ferramentas de estudo.',
-			logo: {
-				src: './src/assets/logo.svg',
-				alt: 'Estudos Antigos',
-			},
-			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/estudos-antigos' },
-				{ icon: 'twitter', label: 'Twitter', href: 'https://twitter.com/estudos_antigos' },
-			],
-			customCss: ['./src/styles/custom.css'],
-			sidebar: [
-				{
-					label: 'Início',
-					slug: 'index',
-				},
-				{
-					label: 'Antiguidade Bíblica',
-					items: [
-						{ label: 'Introdução', slug: 'biblia/introducao' },
-						{ label: 'Gênesis (Bereshit)', slug: 'biblia/genesis' },
-						{ label: 'Êxodo (Shemot)', slug: 'biblia/exodo' },
-						{ label: 'Levítico (Vayikra)', slug: 'biblia/levitico' },
-						{ label: 'Números (Bemidbar)', slug: 'biblia/numeros' },
-						{ label: 'Deuteronômio (Devarim)', slug: 'biblia/deuteronomio' },
-						{ label: 'Suméria', slug: 'biblia/sumeria' },
-					],
-				},
-				{
-					label: 'Antiguidade Clássica',
-					items: [
-						{ label: 'Introdução', slug: 'classica/introducao' },
-					],
-				},
-				{
-					label: 'Pré-História',
-					items: [
-						{ label: 'Dossiê Consolidado', slug: 'pre-historia/prehistoria-humana' },
-					],
-				},
-				{
-					label: 'Idade Média',
-					items: [
-						{ label: 'Introdução', slug: 'idade-media/introducao' },
-					],
-				},
-				{
-					label: 'Ferramentas de Estudo',
-					items: [
-						{ label: 'Como Pesquisar', slug: 'ferramentas/como-pesquisar' },
-					],
-				},
-				{
-					label: 'Sobre',
-					items: [
-						{ label: 'O Projeto', slug: 'sobre' },
-						{ label: 'Contribua', slug: 'sobre/contribua' },
-						{ label: 'Contato', slug: 'sobre/contato' },
-					],
-				},
-			],
+		mdx(),
+		sitemap({
+			filter: (page) => !page.includes('/404'),
 		}),
 	],
+	markdown: {
+		shikiConfig: { theme: 'github-light', wrap: true },
+		// Aplica isolamento bidi e atributo lang a hebraico e grego antigo
+		// escritos em texto simples no conteúdo.
+		remarkPlugins: [remarkLinguasAntigas],
+	},
 });

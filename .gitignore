@@ -9,3 +9,6 @@ dist/
 
 # Astro build cache
 .astro/
+
+# Backup da migração Starlight (o conteúdo está no histórico do git)
+_backup_docs_starlight/

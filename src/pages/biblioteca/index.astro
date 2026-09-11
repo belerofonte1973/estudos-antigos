@@ -1,0 +1,190 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Card from '../../components/Card.astro';
+import Icon from '../../components/Icon.astro';
+import { AREAS } from '../../content.config';
+
+const dossies = (await getCollection('biblioteca')).sort(
+	(a, b) => a.data.ordem - b.data.ordem
+);
+
+const grupos = Object.entries(AREAS)
+	.map(([slug, label]) => ({
+		slug,
+		label,
+		itens: dossies.filter((d) => d.data.area === slug),
+	}))
+	.filter((g) => g.itens.length > 0);
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: 'Biblioteca',
+	description:
+		'Dossiês longos com o aparato acadêmico completo: hipóteses em disputa, bibliografia e marcadores de verificação.',
+	inLanguage: 'pt-BR',
+	url: new URL('/biblioteca/', site).href,
+};
+---
+
+<BaseLayout
+	title="Biblioteca"
+	description="Dossiês longos sobre Antiguidade Bíblica, Clássica, Medieval e Pré-História: o debate acadêmico completo, com bibliografia e marcadores de verificação."
+	jsonLd={jsonLd}
+>
+	<header class="cabeca">
+		<Breadcrumbs items={[{ href: '/', label: 'Início' }, { label: 'Biblioteca' }]} />
+		<p class="eyebrow">Biblioteca</p>
+		<h1>O aparato completo, para quem quer conferir</h1>
+		<p class="lede">
+			Cada dossiê reúne o estado da questão: as hipóteses em disputa, quem as
+			defende, onde a evidência falha. É o material por trás de cada resposta
+			curta da <a href="/artigos/">revista</a>.
+		</p>
+		<p class="contagem">
+			<Icon name="book" size={14} /> {dossies.length} dossiês
+		</p>
+	</header>
+
+	{
+		grupos.map((g) => (
+			<section class="grupo" aria-labelledby={`area-${g.slug}`}>
+				<div class="grupo__head">
+					<h2 id={`area-${g.slug}`}>{g.label}</h2>
+					<a href={`/biblioteca/${g.slug}/`} class="grupo__link">
+						Ver só esta área <Icon name="arrow" size={14} />
+					</a>
+				</div>
+				<div class="lista">
+					{g.itens.map((d) => (
+						<a class="item" href={`/biblioteca/${d.id}/`}>
+							<span class="item__titulo">{d.data.title}</span>
+							<span class="item__desc">{d.data.description}</span>
+							<span class="item__mais">
+								Abrir dossiê <Icon name="arrow" size={14} />
+							</span>
+						</a>
+					))}
+				</div>
+			</section>
+		))
+	}
+
+	<aside class="legenda">
+		<Card title="Como ler os marcadores" icon="info">
+			<p>
+				<span class="status-v">[V]</span> fonte conferida ·
+				<span class="status-w">[W]</span> obra canônica, sem conferência direta ·
+				<span class="status-gap">[—]</span> lacuna assumida.
+			</p>
+			<p>
+				Nenhum número de página é citado sem que a página tenha sido vista.
+				Quando não foi, o dossiê diz que não foi.
+			</p>
+		</Card>
+	</aside>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 66ch;
+	}
+	.cabeca h1 {
+		margin-bottom: 0.7rem;
+	}
+	.cabeca .lede a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+	.contagem {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+		margin: 0;
+	}
+
+	.grupo {
+		padding-top: var(--section);
+	}
+	.grupo__head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 1.4rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.grupo__head h2 {
+		margin: 0;
+		font-size: var(--step-2);
+	}
+	.grupo__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.84rem;
+		color: var(--ink-2);
+	}
+	.grupo__link:hover {
+		color: var(--accent);
+	}
+
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1rem;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		padding: 1.2rem 1.3rem;
+		background: var(--bg-raised);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease,
+			border-color 0.18s ease;
+	}
+	.item:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--border-strong);
+	}
+	.item__titulo {
+		font-weight: 650;
+		font-size: 1.02rem;
+		letter-spacing: -0.2px;
+		line-height: 1.35;
+		margin-bottom: 0.45rem;
+	}
+	.item__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.item__mais {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+
+	.legenda {
+		margin-top: var(--section);
+		max-width: 60ch;
+	}
+</style>

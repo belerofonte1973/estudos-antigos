@@ -1,0 +1,89 @@
+---
+import PaginaLayout from '../../layouts/PaginaLayout.astro';
+import Aside from '../../components/Aside.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+---
+
+<PaginaLayout
+	title="Como contribuir"
+	description="Formas concretas de contribuir com o Estudos Antigos: corrigir erros, indicar fontes, traduzir e divulgar."
+	eyebrow="Institucional"
+	crumbs={[{ href: '/', label: 'Início' }, { label: 'Contribuir' }]}
+>
+	<p class="abertura">
+		Este é um projeto independente e sem fins comerciais. As contribuições mais
+		úteis não são doações — são <strong>correções e fontes</strong>.
+	</p>
+
+	<h2>O que mais ajuda</h2>
+
+	<CardGrid columns={2}>
+		<Card title="Corrigir um erro" icon="caution">
+			<p>
+				Achou uma atribuição errada, uma data equivocada, uma citação mal
+				formada? Indique a página e o trecho.
+			</p>
+			<p>
+				Se possível, aponte a fonte que sustenta a correção.
+			</p>
+		</Card>
+		<Card title="Indicar uma fonte" icon="book">
+			<p>
+				Conhece uma edição crítica, tradução em português ou obra de referência
+				que deveria estar aqui?
+			</p>
+			<p>Referências com DOI ou ISBN são as mais fáceis de integrar.</p>
+		</Card>
+		<Card title="Apontar uma lacuna" icon="search">
+			<p>
+				Encontrou um ponto onde o texto afirma mais do que a evidência permite, ou
+				omite um debate relevante?
+			</p>
+			<p>Isso é tão valioso quanto apontar um erro factual.</p>
+		</Card>
+		<Card title="Traduzir e divulgar" icon="globe">
+			<p>
+				A pesquisa séria sobre a Antiguidade está majoritariamente fora do
+				português. Ajudar a trazê-la é contribuição de peso.
+			</p>
+		</Card>
+	</CardGrid>
+
+	<h2>Como enviar</h2>
+	<p>
+		Contribuições podem ser enviadas pela <a href="/sobre/contato/">página de
+		contato</a> ou abertas diretamente no
+		<a href="https://github.com/belerofonte1973/estudos-antigos" rel="noopener noreferrer" target="_blank">repositório do projeto</a>
+		no GitHub.
+	</p>
+
+	<Aside type="tip" title="Formato de uma boa correção">
+		<p>Quatro informações bastam:</p>
+		<ol>
+			<li>O endereço da página e o trecho exato.</li>
+			<li>O que está errado.</li>
+			<li>A correção proposta.</li>
+			<li>A fonte que a sustenta (com DOI, ISBN ou URL).</li>
+		</ol>
+	</Aside>
+
+	<h2>Critério de aceitação</h2>
+	<p>
+		Toda contribuição passa pelo mesmo crivo do resto do site: precisa de fonte
+		rastreável. O que não puder ser verificado entra como <span class="status-w">[W]</span>
+		ou <span class="status-gap">[—]</span> — nunca como afirmação firme.
+	</p>
+	<p>
+		Divergências legítimas entre escolas acadêmicas não são resolvidas por votação
+		aqui: são apresentadas como debate, com as posições e seus defensores.
+	</p>
+</PaginaLayout>
+
+<style>
+	.abertura {
+		font-size: var(--step-1);
+		line-height: 1.6;
+		color: var(--ink-2);
+	}
+</style>

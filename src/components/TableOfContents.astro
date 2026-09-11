@@ -1,0 +1,79 @@
+---
+interface Heading {
+	depth: number;
+	slug: string;
+	text: string;
+}
+
+interface Props {
+	headings: Heading[];
+	/** Só mostra itens até esta profundidade. */
+	maxDepth?: number;
+	title?: string;
+}
+
+const { headings, maxDepth = 3, title = 'Nesta página' } = Astro.props;
+const items = headings.filter((h) => h.depth >= 2 && h.depth <= maxDepth);
+---
+
+{
+	items.length > 2 && (
+		<nav class="ea-toc" aria-label="Índice da página">
+			<p class="ea-toc__title">{title}</p>
+			<ul>
+				{items.map((h) => (
+					<li class={`d${h.depth}`}>
+						<a href={`#${h.slug}`}>{h.text}</a>
+					</li>
+				))}
+			</ul>
+		</nav>
+	)
+}
+
+<style>
+	.ea-toc {
+		font-size: 0.84rem;
+		line-height: 1.45;
+	}
+	.ea-toc__title {
+		font-size: 0.7rem;
+		font-weight: 650;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin: 0 0 0.75rem;
+	}
+	.ea-toc ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-left: 1px solid var(--border);
+	}
+	.ea-toc li {
+		margin: 0;
+	}
+	.ea-toc li.d3 {
+		padding-left: 0.85rem;
+	}
+	.ea-toc a {
+		display: block;
+		padding: 0.28rem 0 0.28rem 0.85rem;
+		margin-left: -1px;
+		border-left: 2px solid transparent;
+		color: var(--ink-2);
+		border-bottom: 0;
+		transition: color 0.15s ease, border-color 0.15s ease;
+	}
+	.ea-toc a:hover {
+		color: var(--accent);
+	}
+	.ea-toc a.is-active {
+		color: var(--accent);
+		border-left-color: var(--accent);
+		font-weight: 550;
+	}
+	.ea-toc a:focus-visible {
+		outline-offset: -2px;
+	}
+</style>

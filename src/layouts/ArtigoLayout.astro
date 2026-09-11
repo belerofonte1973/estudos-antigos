@@ -1,0 +1,391 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Icon from '../components/Icon.astro';
+import { AREAS } from '../content.config';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	artigo: CollectionEntry<'artigos'>;
+	headings: { depth: number; slug: string; text: string }[];
+	relacionados?: CollectionEntry<'artigos'>[];
+	dossieTitulo?: string;
+}
+
+const { artigo, headings, relacionados = [], dossieTitulo } = Astro.props;
+const d = artigo.data;
+
+const areaLabel = (AREAS as Record<string, string>)[d.area] ?? d.area;
+
+const dataFmt = new Intl.DateTimeFormat('pt-BR', {
+	day: '2-digit',
+	month: 'long',
+	year: 'numeric',
+}).format(d.data);
+
+const atualizadoFmt = d.atualizado
+	? new Intl.DateTimeFormat('pt-BR', {
+			day: '2-digit',
+			month: 'long',
+			year: 'numeric',
+		}).format(d.atualizado)
+	: undefined;
+
+const palavras = (artigo.body ?? '').split(/\s+/).length;
+const minutos = Math.max(1, Math.round(palavras / 210));
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const url = new URL(Astro.url.pathname, site).href;
+
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: d.titulo,
+		description: d.descricao,
+		inLanguage: 'pt-BR',
+		datePublished: d.data.toISOString(),
+		dateModified: (d.atualizado ?? d.data).toISOString(),
+		mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+		author: { '@type': 'Organization', name: 'Estudos Antigos' },
+		publisher: { '@type': 'Organization', name: 'Estudos Antigos' },
+		about: areaLabel,
+		keywords: d.tags.join(', '),
+		...(d.fontes.length
+			? { citation: d.fontes.map((f) => (f.url ? f.url : f.texto)) }
+			: {}),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: [
+			{
+				'@type': 'Question',
+				name: d.pergunta,
+				acceptedAnswer: { '@type': 'Answer', text: d.respostaRapida },
+			},
+		],
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				name: 'Início',
+				item: new URL('/', site).href,
+			},
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Revista',
+				item: new URL('/artigos/', site).href,
+			},
+			{
+				'@type': 'ListItem',
+				position: 3,
+				name: d.titulo,
+				item: url,
+			},
+		],
+	},
+];
+---
+
+<BaseLayout
+	title={d.titulo}
+	description={d.descricao}
+	type="article"
+	publishedTime={d.data.toISOString()}
+	modifiedTime={(d.atualizado ?? d.data).toISOString()}
+	jsonLd={jsonLd}
+	area={areaLabel}
+	tags={d.tags}
+>
+	<article class="ea-article">
+		<header class="ea-article__head">
+			<Breadcrumbs
+				items={[
+					{ href: '/', label: 'Início' },
+					{ href: '/artigos/', label: 'Revista' },
+					{ label: d.titulo },
+				]}
+			/>
+
+			<p class="eyebrow">{areaLabel}</p>
+			<h1>{d.titulo}</h1>
+
+			<p class="ea-article__lede">{d.descricao}</p>
+
+			<div class="ea-article__meta">
+				<time datetime={d.data.toISOString()}>{dataFmt}</time>
+				{atualizadoFmt && <span>· atualizado em {atualizadoFmt}</span>}
+				<span>· <Icon name="clock" size={13} /> {minutos} min de leitura</span>
+			</div>
+		</header>
+
+		<!--
+			Bloco de resposta direta. É o que disputa trecho em destaque no Google
+			e citação em respostas de IA. Vem antes do corpo de propósito.
+		-->
+		<section class="ea-resposta" aria-labelledby="resposta-rapida">
+			<div class="ea-resposta__head">
+				<Icon name="check" size={16} />
+				<h2 id="resposta-rapida">Resposta rápida</h2>
+			</div>
+			<p class="ea-resposta__pergunta">{d.pergunta}</p>
+			<p class="ea-resposta__texto">{d.respostaRapida}</p>
+		</section>
+
+		<div class="ea-article__grid">
+			<div class="ea-article__body prose">
+				<slot />
+
+				{
+					d.fontes.length > 0 && (
+						<section class="ea-fontes" aria-labelledby="fontes">
+							<h2 id="fontes">Fontes</h2>
+							<ol>
+								{d.fontes.map((f) => (
+									<li>
+										{f.url ? (
+											<a href={f.url} rel="noopener noreferrer" target="_blank">
+												{f.texto}
+											</a>
+										) : (
+											f.texto
+										)}
+									</li>
+								))}
+							</ol>
+						</section>
+					)
+				}
+			</div>
+
+			<aside class="ea-article__side">
+				<TableOfContents headings={headings} />
+
+				{
+					d.dossie && (
+						<div class="ea-side-box">
+							<p class="ea-side-box__title">Aprofundar</p>
+							<p class="ea-side-box__text">
+								Versão longa, com o aparato acadêmico completo e os marcadores
+								de verificação.
+							</p>
+							<a class="ea-side-box__link" href={`/biblioteca/${d.dossie}/`}>
+								{dossieTitulo ?? 'Ler o dossiê'} <Icon name="arrow" size={14} />
+							</a>
+						</div>
+					)
+				}
+
+				<div class="ea-side-box">
+					<p class="ea-side-box__title">Como citar</p>
+					<p class="ea-side-box__cite">
+						ESTUDOS ANTIGOS. <em>{d.titulo}</em>. {dataFmt}. Disponível em:{' '}
+						<span class="ea-side-box__url">{url}</span>
+					</p>
+				</div>
+			</aside>
+		</div>
+
+		{
+			relacionados.length > 0 && (
+				<section class="ea-related" aria-labelledby="relacionados">
+					<h2 id="relacionados">Continue lendo</h2>
+					<div class="ea-related__grid">
+						{relacionados.map((r) => (
+							<ArticleCard
+								href={`/artigos/${r.id}/`}
+								titulo={r.data.titulo}
+								descricao={r.data.descricao}
+								area={r.data.area}
+								data={r.data.data}
+								variante="linha"
+							/>
+						))}
+					</div>
+				</section>
+			)
+		}
+	</article>
+</BaseLayout>
+
+<style>
+	.ea-article {
+		padding-top: 2.2rem;
+	}
+
+	.ea-article__head {
+		max-width: 72ch;
+	}
+	.ea-article__head h1 {
+		margin-bottom: 0.6rem;
+	}
+	.ea-article__lede {
+		font-size: var(--step-1);
+		line-height: 1.55;
+		color: var(--ink-2);
+		margin-bottom: 1rem;
+	}
+	.ea-article__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 0.8rem;
+		color: var(--ink-3);
+		margin-bottom: 2rem;
+	}
+	.ea-article__meta :global(svg) {
+		display: inline-block;
+		vertical-align: -2px;
+	}
+
+	/* --- Resposta rápida --- */
+	.ea-resposta {
+		background: var(--accent-soft);
+		border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+		border-radius: var(--radius);
+		padding: 1.2rem 1.4rem 1.3rem;
+		margin-bottom: 2.4rem;
+		max-width: 72ch;
+	}
+	.ea-resposta__head {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--accent);
+		margin-bottom: 0.6rem;
+	}
+	.ea-resposta__head h2 {
+		font-size: 0.76rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	.ea-resposta__pergunta {
+		font-family: var(--font-ui);
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0 0 0.5rem;
+		color: var(--ink);
+	}
+	.ea-resposta__texto {
+		font-family: var(--font-read);
+		font-size: 1.02rem;
+		line-height: 1.7;
+		margin: 0;
+		color: var(--ink);
+	}
+
+	/* --- Grade corpo + lateral --- */
+	.ea-article__grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 260px;
+		gap: 3.5rem;
+		align-items: start;
+	}
+	.ea-article__side {
+		position: sticky;
+		top: calc(var(--header-h) + 1.5rem);
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.ea-side-box {
+		font-size: 0.84rem;
+		line-height: 1.55;
+		padding: 1rem 1.1rem;
+		background: var(--bg-warm);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+	}
+	.ea-side-box__title {
+		font-size: 0.7rem;
+		font-weight: 650;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin: 0 0 0.5rem;
+	}
+	.ea-side-box__text {
+		color: var(--ink-2);
+		margin: 0 0 0.7rem;
+	}
+	.ea-side-box__link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+	.ea-side-box__cite {
+		margin: 0;
+		color: var(--ink-2);
+		font-size: 0.78rem;
+		word-break: break-word;
+	}
+	.ea-side-box__url {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--ink-3);
+	}
+
+	/* --- Fontes --- */
+	.ea-fontes {
+		margin-top: 3rem;
+		padding-top: 1.6rem;
+		border-top: 1px solid var(--border);
+	}
+	.ea-fontes h2 {
+		font-size: var(--step-1);
+		font-family: var(--font-ui);
+		letter-spacing: -0.2px;
+	}
+	.ea-fontes ol {
+		padding-left: 1.3em;
+		font-size: 0.92rem;
+	}
+	.ea-fontes li {
+		margin-bottom: 0.5em;
+	}
+	.ea-fontes a {
+		color: var(--accent);
+		border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+	}
+
+	/* --- Relacionados --- */
+	.ea-related {
+		margin-top: 3.5rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--border);
+	}
+	.ea-related h2 {
+		font-size: var(--step-2);
+		margin-bottom: 0.5rem;
+	}
+	.ea-related__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+		gap: 0.25rem 1.5rem;
+	}
+
+	@media (max-width: 980px) {
+		.ea-article__grid {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+		.ea-article__side {
+			position: static;
+		}
+	}
+</style>

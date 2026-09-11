@@ -1,0 +1,45 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArtigoLayout from '../../layouts/ArtigoLayout.astro';
+
+export async function getStaticPaths() {
+	const todos = await getCollection('artigos');
+	const dossies = await getCollection('biblioteca');
+	const tituloDossie = new Map(dossies.map((d) => [d.id, d.data.title]));
+
+	return todos.map((artigo) => {
+		const mesmosAssunto = todos
+			.filter(
+				(a) =>
+					a.id !== artigo.id &&
+					(a.data.area === artigo.data.area ||
+						a.data.tags.some((t) => artigo.data.tags.includes(t)))
+			)
+			.sort((a, b) => b.data.data.getTime() - a.data.data.getTime())
+			.slice(0, 3);
+
+		return {
+			params: { slug: artigo.id },
+			props: {
+				artigo,
+				relacionados: mesmosAssunto,
+				dossieTitulo: artigo.data.dossie
+					? tituloDossie.get(artigo.data.dossie)
+					: undefined,
+			},
+		};
+	});
+}
+
+const { artigo, relacionados, dossieTitulo } = Astro.props;
+const { Content, headings } = await render(artigo);
+---
+
+<ArtigoLayout
+	artigo={artigo}
+	headings={headings}
+	relacionados={relacionados}
+	dossieTitulo={dossieTitulo}
+>
+	<Content />
+</ArtigoLayout>

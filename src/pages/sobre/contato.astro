@@ -1,0 +1,80 @@
+---
+import PaginaLayout from '../../layouts/PaginaLayout.astro';
+import Aside from '../../components/Aside.astro';
+---
+
+<PaginaLayout
+	title="Contato"
+	description="Como entrar em contato com o Estudos Antigos: correções, indicação de fontes e imprensa."
+	eyebrow="Institucional"
+	crumbs={[{ href: '/', label: 'Início' }, { label: 'Contato' }]}
+>
+	<p class="abertura">
+		Para correções, indicação de fontes e propostas de colaboração.
+	</p>
+
+	<h2>Canais</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Assunto</th>
+				<th>Canal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Correções e erros factuais</td>
+				<td>
+					<a
+						href="https://github.com/belerofonte1973/estudos-antigos/issues"
+						rel="noopener noreferrer"
+						target="_blank">GitHub Issues</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>Indicação de fontes e bibliografia</td>
+				<td>
+					<a
+						href="https://github.com/belerofonte1973/estudos-antigos/issues"
+						rel="noopener noreferrer"
+						target="_blank">GitHub Issues</a
+					>
+				</td>
+			</tr>
+			<tr>
+				<td>Colaboração, tradução, uso institucional</td>
+				<td>Pelo repositório do projeto</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<Aside type="note" title="Por que o GitHub">
+		<p>
+			Um rastro público de correções é mais útil do que e-mail. A discussão fica
+			registrada, qualquer pessoa pode acompanhar, e a correção fica vinculada à
+			página que a originou.
+		</p>
+		<p>
+			Se você não usa GitHub e ainda assim quer contribuir, abra uma issue por
+			conta própria ou peça a alguém que abra — o conteúdo importa mais que o
+			canal.
+		</p>
+	</Aside>
+
+	<h2>O que não tratamos por aqui</h2>
+	<ul>
+		<li>Consultoria acadêmica individual ou orientação de pesquisa.</li>
+		<li>Debate confessional ou apologético sobre doutrina.</li>
+		<li>Venda de espaço, links patrocinados ou conteúdo pago.</li>
+	</ul>
+</PaginaLayout>
+
+<style>
+	.abertura {
+		font-size: var(--step-1);
+		line-height: 1.6;
+		color: var(--ink-2);
+	}
+</style>

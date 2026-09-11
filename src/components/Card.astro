@@ -1,0 +1,84 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	title?: string;
+	icon?: string;
+	href?: string;
+	class?: string;
+}
+
+const { title, icon, href, class: cls = '' } = Astro.props;
+const Tag = href ? 'a' : 'div';
+const classes = ['ea-card', href ? 'ea-card--link' : '', cls].filter(Boolean).join(' ');
+---
+
+<Tag href={href} class={classes}>
+	{
+		icon && (
+			<span class="ea-card__icon">
+				<Icon name={icon} size={20} />
+			</span>
+		)
+	}
+	{title && <h3 class="ea-card__title">{title}</h3>}
+	<div class="ea-card__body"><slot /></div>
+</Tag>
+
+<style>
+	.ea-card {
+		display: block;
+		padding: 1.35rem 1.4rem 1.45rem;
+		background: var(--bg-raised);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease,
+			border-color 0.18s ease;
+		color: inherit;
+		height: 100%;
+	}
+
+	.ea-card--link {
+		border-bottom: 1px solid var(--border);
+	}
+
+	.ea-card--link:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--border-strong);
+	}
+
+	.ea-card__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 38px;
+		height: 38px;
+		border-radius: var(--radius-sm);
+		background: var(--accent-soft);
+		color: var(--accent);
+		margin-bottom: 0.85rem;
+	}
+
+	.ea-card__title {
+		font-size: 1.05rem;
+		font-weight: 600;
+		letter-spacing: -0.2px;
+		margin: 0 0 0.45rem;
+		line-height: 1.35;
+	}
+
+	.ea-card__body {
+		color: var(--ink-2);
+		font-size: 0.92rem;
+		line-height: 1.6;
+	}
+
+	.ea-card__body :global(p:last-child) {
+		margin-bottom: 0;
+	}
+	.ea-card__body :global(p) {
+		margin-bottom: 0.6em;
+	}
+</style>

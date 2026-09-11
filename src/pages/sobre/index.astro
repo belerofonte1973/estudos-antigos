@@ -1,0 +1,121 @@
+---
+import PaginaLayout from '../../layouts/PaginaLayout.astro';
+import Aside from '../../components/Aside.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+---
+
+<PaginaLayout
+	title="Sobre o projeto"
+	description="O que é o Estudos Antigos, por que ele existe e qual é o seu método de verificação de fontes."
+	eyebrow="Institucional"
+	crumbs={[{ href: '/', label: 'Início' }, { label: 'Sobre' }]}
+>
+	<p class="abertura">
+		O <strong>Estudos Antigos</strong> é um portal independente de pesquisa e
+		divulgação sobre Antiguidade Bíblica, Antiguidade Clássica e Idade Média. Ele
+		existe para resolver um problema específico do nosso tempo.
+	</p>
+
+	<h2>O problema</h2>
+	<p>
+		Nunca foi tão fácil produzir texto sobre o passado. Nunca foi tão difícil saber
+		qual texto merece confiança. Um parágrafo convincente sobre a hipótese
+		documentária pode ser escrito em segundos, sem que uma única obra tenha sido
+		aberta — e nada, na sua forma, denuncia isso.
+	</p>
+	<p>
+		Em português o problema é maior. A boa pesquisa sobre a Antiguidade está
+		sobretudo em inglês, alemão e francês; o que circula em português é, com
+		frequência, repetição em terceira mão ou material confessional apresentado como
+		história.
+	</p>
+
+	<h2>O método</h2>
+	<p>
+		Cada afirmação factual publicada aqui carrega citação inline e um marcador de
+		estado de verificação:
+	</p>
+
+	<CardGrid columns={3}>
+		<Card title="[V] Verificado">
+			A fonte foi efetivamente conferida — Open Library, Crossref, OpenAlex,
+			catálogo de editora oficial ou obra atestada.
+		</Card>
+		<Card title="[W] Provável">
+			Obra canônica conhecida na área, mas sem verificação direta nesta sessão.
+		</Card>
+		<Card title="[—] Lacuna">
+			Não localizado. A lacuna é declarada em vez de preenchida com plausibilidade.
+		</Card>
+	</CardGrid>
+
+	<Aside type="caution" title="O que estes marcadores não significam">
+		<p>
+			<strong>[V] não é selo de verdade.</strong> Significa que a existência e os
+			dados bibliográficos da fonte foram conferidos — não que o conteúdo dela
+			esteja correto, nem que haja consenso acadêmico em torno da tese.
+		</p>
+		<p>
+			<strong>Nenhuma página ou número de página é citado sem ter sido visto.</strong>
+			Quando o acesso ao texto integral não foi possível, está escrito que não foi.
+		</p>
+	</Aside>
+
+	<h2>Duas profundidades, um mesmo material</h2>
+	<p>
+		O portal se organiza em duas camadas deliberadamente distintas:
+	</p>
+	<ul>
+		<li>
+			<strong>A <a href="/artigos/">revista</a></strong> responde uma pergunta por
+			endereço, em texto curto e direto. É feita para ser encontrada, lida em cinco
+			minutos e compartilhada.
+		</li>
+		<li>
+			<strong>A <a href="/biblioteca/">biblioteca</a></strong> traz o dossiê
+			completo: as hipóteses em disputa, quem as defende, onde a evidência falha, a
+			bibliografia inteira.
+		</li>
+	</ul>
+	<p>
+		As duas camadas são ligadas por links mútuos. Quem chegou por curiosidade e quer
+		rigor encontra o caminho; quem veio pelo rigor sabe onde está a versão curta.
+	</p>
+
+	<h2>O que este site não é</h2>
+	<ul>
+		<li><strong>Não é apologética.</strong> Nem a favor, nem contra qualquer tradição religiosa.</li>
+		<li><strong>Não é revisão por pares.</strong> É material didático de alta qualidade, não literatura científica original.</li>
+		<li><strong>Não é neutro quanto ao método.</strong> Trata a evidência como instância final, e diz quando ela é insuficiente.</li>
+	</ul>
+
+	<Aside type="note" title="Aviso de uso acadêmico">
+		<p>
+			Para citação em trabalho acadêmico, confira sempre a fonte primária
+			indicada. Este portal serve para orientar a leitura e encurtar a busca — não
+			para substituí-la.
+		</p>
+	</Aside>
+
+	<h2>Como o material é produzido</h2>
+	<p>
+		A pesquisa bibliográfica é conduzida com apoio de ferramentas de busca
+		acadêmica (Crossref, Open Library, OpenAlex, bases de acesso aberto) e revisada
+		por etapas antes de publicar. O <a href="/como-pesquisar/">guia de pesquisa</a>
+		descreve o método aberto, para que qualquer pessoa possa replicá-lo ou
+		contestá-lo.
+	</p>
+	<p>
+		O código-fonte do site é aberto e o conteúdo é de acesso livre, sem anúncios e
+		sem cadastro. Veja <a href="/sobre/contribua/">como contribuir</a>.
+	</p>
+</PaginaLayout>
+
+<style>
+	.abertura {
+		font-size: var(--step-1);
+		line-height: 1.6;
+		color: var(--ink-2);
+	}
+</style>

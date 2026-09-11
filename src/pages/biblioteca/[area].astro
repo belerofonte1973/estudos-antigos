@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Icon from '../../components/Icon.astro';
+import { AREAS } from '../../content.config';
+
+export async function getStaticPaths() {
+	const dossies = await getCollection('biblioteca');
+	return Object.keys(AREAS)
+		.map((area) => ({
+			params: { area },
+			props: {
+				area,
+				itens: dossies
+					.filter((d) => d.data.area === area)
+					.sort((a, b) => a.data.ordem - b.data.ordem),
+			},
+		}))
+		.filter((r) => r.props.itens.length > 0);
+}
+
+const { area, itens } = Astro.props;
+const areaLabel = (AREAS as Record<string, string>)[area] ?? area;
+---
+
+<BaseLayout
+	title={areaLabel}
+	description={`Dossiês de ${areaLabel} — material acadêmico com bibliografia, hipóteses em disputa e marcadores de verificação.`}
+>
+	<header class="cabeca">
+		<Breadcrumbs
+			items={[
+				{ href: '/', label: 'Início' },
+				{ href: '/biblioteca/', label: 'Biblioteca' },
+				{ label: areaLabel },
+			]}
+		/>
+		<p class="eyebrow">Biblioteca</p>
+		<h1>{areaLabel}</h1>
+		<p class="contagem">
+			<Icon name="book" size={14} /> {itens.length}
+			{itens.length === 1 ? ' dossiê' : ' dossiês'}
+		</p>
+	</header>
+
+	<div class="lista">
+		{
+			itens.map((d) => (
+				<a class="item" href={`/biblioteca/${d.id}/`}>
+					<span class="item__titulo">{d.data.title}</span>
+					<span class="item__desc">{d.data.description}</span>
+					<span class="item__mais">
+						Abrir dossiê <Icon name="arrow" size={14} />
+					</span>
+				</a>
+			))
+		}
+	</div>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 66ch;
+		margin-bottom: 2rem;
+	}
+	.contagem {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+		margin: 0;
+	}
+	.lista {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+		gap: 1rem;
+	}
+	.item {
+		display: flex;
+		flex-direction: column;
+		padding: 1.2rem 1.3rem;
+		background: var(--bg-raised);
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-card);
+		transition: transform 0.18s ease, box-shadow 0.3s ease;
+	}
+	.item:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+	}
+	.item__titulo {
+		font-weight: 650;
+		margin-bottom: 0.45rem;
+		line-height: 1.35;
+	}
+	.item__desc {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin-bottom: 0.9rem;
+	}
+	.item__mais {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+</style>

@@ -1,0 +1,310 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import Icon from '../components/Icon.astro';
+import { AREAS } from '../content.config';
+
+interface NavItem {
+	href: string;
+	label: string;
+	area: string;
+	ordem: number;
+}
+
+interface Props {
+	title: string;
+	description: string;
+	area: string;
+	headings: { depth: number; slug: string; text: string }[];
+	nav: NavItem[];
+	currentId: string;
+	atualizado?: Date;
+	/** Link para o artigo de entrada (versão curta) deste dossiê. */
+	entrada?: { href: string; titulo: string };
+}
+
+const {
+	title,
+	description,
+	area,
+	headings,
+	nav,
+	currentId,
+	atualizado,
+	entrada,
+} = Astro.props;
+
+const areaLabel = (AREAS as Record<string, string>)[area] ?? area;
+
+const atualizadoFmt = atualizado
+	? new Intl.DateTimeFormat('pt-BR', {
+			day: '2-digit',
+			month: 'long',
+			year: 'numeric',
+		}).format(atualizado)
+	: undefined;
+
+// Agrupa o índice lateral por área, preservando a ordem declarada no frontmatter.
+const grupos = nav.reduce<Record<string, NavItem[]>>((acc, item) => {
+	(acc[item.area] ??= []).push(item);
+	return acc;
+}, {});
+Object.values(grupos).forEach((g) => g.sort((a, b) => a.ordem - b.ordem));
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const url = new URL(Astro.url.pathname, site).href;
+
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'ScholarlyArticle',
+		headline: title,
+		description,
+		inLanguage: 'pt-BR',
+		...(atualizado ? { dateModified: atualizado.toISOString() } : {}),
+		mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+		author: { '@type': 'Organization', name: 'Estudos Antigos' },
+		publisher: { '@type': 'Organization', name: 'Estudos Antigos' },
+		about: areaLabel,
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', site).href },
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: 'Biblioteca',
+				item: new URL('/biblioteca/', site).href,
+			},
+			{ '@type': 'ListItem', position: 3, name: title, item: url },
+		],
+	},
+];
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	type="article"
+	modifiedTime={atualizado?.toISOString()}
+	jsonLd={jsonLd}
+	area={areaLabel}
+>
+	<div class="ea-lib">
+		<!-- ---------- Índice lateral ---------- -->
+		<aside class="ea-lib__nav" aria-label="Índice da biblioteca">
+			<p class="ea-lib__nav-title">Biblioteca</p>
+			{
+				Object.entries(grupos).map(([areaKey, itens]) => (
+					<div class="ea-lib__group">
+						<p class="ea-lib__group-title">
+							{(AREAS as Record<string, string>)[areaKey] ?? areaKey}
+						</p>
+						<ul>
+							{itens.map((item) => (
+								<li>
+									<a
+										href={item.href}
+										aria-current={item.href.includes(currentId) ? 'page' : undefined}
+									>
+										{item.label}
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+				))
+			}
+		</aside>
+
+		<!-- ---------- Conteúdo ---------- -->
+		<article class="ea-lib__main">
+			<Breadcrumbs
+				items={[
+					{ href: '/', label: 'Início' },
+					{ href: '/biblioteca/', label: 'Biblioteca' },
+					{ label: title },
+				]}
+			/>
+
+			<p class="eyebrow">{areaLabel}</p>
+			<h1>{title}</h1>
+
+			{
+				atualizadoFmt && (
+					<p class="ea-lib__stamp">
+						<Icon name="clock" size={13} /> Revisado em {atualizadoFmt}
+					</p>
+				)
+			}
+
+			{
+				entrada && (
+					<a class="ea-lib__entrada" href={entrada.href}>
+						<span class="ea-lib__entrada-eyebrow">Versão curta</span>
+						<span class="ea-lib__entrada-titulo">{entrada.titulo}</span>
+						<Icon name="arrow" size={15} />
+					</a>
+				)
+			}
+
+			<div class="ea-lib__grid">
+				<div class="ea-lib__body prose">
+					<slot />
+				</div>
+				<div class="ea-lib__toc">
+					<TableOfContents headings={headings} title="Seções" />
+				</div>
+			</div>
+		</article>
+	</div>
+</BaseLayout>
+
+<style>
+	.ea-lib {
+		display: grid;
+		grid-template-columns: 230px minmax(0, 1fr);
+		gap: 3rem;
+		align-items: start;
+		padding-top: 2rem;
+	}
+
+	/* --- Lateral --- */
+	.ea-lib__nav {
+		position: sticky;
+		top: calc(var(--header-h) + 1.2rem);
+		max-height: calc(100vh - var(--header-h) - 3rem);
+		overflow-y: auto;
+		font-size: 0.86rem;
+		padding-right: 0.5rem;
+	}
+	.ea-lib__nav-title {
+		font-size: 0.7rem;
+		font-weight: 650;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--ink-3);
+		margin: 0 0 1rem;
+	}
+	.ea-lib__group {
+		margin-bottom: 1.4rem;
+	}
+	.ea-lib__group-title {
+		font-size: 0.74rem;
+		font-weight: 650;
+		color: var(--ink);
+		margin: 0 0 0.45rem;
+		letter-spacing: -0.1px;
+	}
+	.ea-lib__group ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-left: 1px solid var(--border);
+	}
+	.ea-lib__group a {
+		display: block;
+		padding: 0.25rem 0 0.25rem 0.8rem;
+		margin-left: -1px;
+		border-left: 2px solid transparent;
+		color: var(--ink-2);
+		border-bottom: 0;
+		transition: color 0.15s ease, border-color 0.15s ease;
+	}
+	.ea-lib__group a:hover {
+		color: var(--accent);
+	}
+	.ea-lib__group a[aria-current='page'] {
+		color: var(--accent);
+		font-weight: 600;
+		border-left-color: var(--accent);
+	}
+
+	/* --- Cabeçalho do conteúdo --- */
+	.ea-lib__main {
+		min-width: 0;
+	}
+	.ea-lib__main h1 {
+		margin-bottom: 0.5rem;
+		max-width: 30ch;
+	}
+	.ea-lib__stamp {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.78rem;
+		color: var(--ink-3);
+		margin-bottom: 1.5rem;
+	}
+
+	.ea-lib__entrada {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.65rem 1rem;
+		margin-bottom: 2.2rem;
+		background: var(--accent-soft);
+		border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+		border-radius: var(--radius-sm);
+		color: var(--accent);
+		font-size: 0.88rem;
+	}
+	.ea-lib__entrada:hover {
+		border-color: var(--accent);
+		border-bottom-color: var(--accent);
+	}
+	.ea-lib__entrada-eyebrow {
+		font-size: 0.66rem;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		opacity: 0.75;
+	}
+	.ea-lib__entrada-titulo {
+		font-weight: 600;
+	}
+
+	/* --- Grade corpo + índice --- */
+	.ea-lib__grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 220px;
+		gap: 3rem;
+		align-items: start;
+	}
+	.ea-lib__toc {
+		position: sticky;
+		top: calc(var(--header-h) + 1.5rem);
+	}
+
+	@media (max-width: 1080px) {
+		.ea-lib {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		.ea-lib__nav {
+			position: static;
+			max-height: none;
+			overflow: visible;
+			border-bottom: 1px solid var(--border);
+			padding-bottom: 1rem;
+		}
+		.ea-lib__nav > .ea-lib__group {
+			display: inline-block;
+			margin-right: 1.5rem;
+			vertical-align: top;
+		}
+	}
+	@media (max-width: 860px) {
+		.ea-lib__grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+		.ea-lib__toc {
+			position: static;
+			order: -1;
+		}
+	}
+</style>

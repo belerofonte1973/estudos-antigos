@@ -1,0 +1,496 @@
+/* ============================================================
+   Estudos Antigos — Design System
+   Base: Notion Warm Minimalism (popular-web-designs/notion.md)
+   Adaptação editorial: serif para corpo longo, Inter para interface.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap');
+
+/* ---------- Tokens ---------- */
+:root {
+	/* Tinta */
+	--ink: rgba(0, 0, 0, 0.95);
+	--ink-2: #615d59;
+	--ink-3: #a39e98;
+
+	/* Superfícies */
+	--bg: #ffffff;
+	--bg-warm: #f6f5f4;
+	--bg-raised: #ffffff;
+	--bg-sunken: #faf9f8;
+
+	/* Acento — siena, identidade histórica */
+	--accent: #6b4423;
+	--accent-soft: #f5ebe0;
+	--accent-strong: #4a2f15;
+	--accent-ink: #ffffff;
+
+	/* Funcionais */
+	--link: #0075de;
+	--ok: #1aae39;
+	--warn: #dd5b00;
+	--danger: #c62828;
+
+	--border: rgba(0, 0, 0, 0.1);
+	--border-strong: rgba(0, 0, 0, 0.18);
+	--hairline: rgba(0, 0, 0, 0.08);
+
+	--shadow-card: rgba(0, 0, 0, 0.04) 0px 4px 18px,
+		rgba(0, 0, 0, 0.027) 0px 2.025px 7.847px,
+		rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px,
+		rgba(0, 0, 0, 0.01) 0px 0.175px 1.041px;
+	--shadow-lg: rgba(0, 0, 0, 0.08) 0px 12px 32px, rgba(0, 0, 0, 0.04) 0px 4px 10px;
+
+	/* Tipografia */
+	--font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--font-read: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+	--font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+	/* Escala — fluida */
+	--step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
+	--step-0: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
+	--step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
+	--step-2: clamp(1.4rem, 1.26rem + 0.7vw, 1.85rem);
+	--step-3: clamp(1.75rem, 1.5rem + 1.25vw, 2.6rem);
+	--step-4: clamp(2.1rem, 1.7rem + 2vw, 3.4rem);
+	--step-5: clamp(2.6rem, 1.9rem + 3.4vw, 4.6rem);
+
+	/* Layout */
+	--measure: 68ch;
+	--wrap: 1200px;
+	--wrap-narrow: 760px;
+	--radius: 12px;
+	--radius-sm: 8px;
+	--radius-pill: 9999px;
+
+	--gap: clamp(1rem, 2.5vw, 2rem);
+	--section: clamp(3rem, 7vw, 6rem);
+
+	--header-h: 62px;
+	color-scheme: light;
+}
+
+[data-theme='dark'] {
+	--ink: #ffffff;
+	--ink-2: #b9b9b9;
+	--ink-3: #797979;
+
+	--bg: #0d0d0d;
+	--bg-warm: #101010;
+	--bg-raised: #151515;
+	--bg-sunken: #0a0a0a;
+
+	--accent: #d4a574;
+	--accent-soft: #2d1f10;
+	--accent-strong: #e8c9a0;
+	--accent-ink: #1a1206;
+
+	--link: #62aef0;
+	--ok: #3fb950;
+	--warn: #f0883e;
+	--danger: #f85149;
+
+	--border: #262626;
+	--border-strong: #3a3a3a;
+	--hairline: #1f1f1f;
+
+	--shadow-card: rgba(0, 0, 0, 0.5) 0px 4px 18px;
+	--shadow-lg: rgba(0, 0, 0, 0.6) 0px 12px 32px;
+	color-scheme: dark;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--header-h) + 1rem);
+	-webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-ui);
+	font-size: var(--step-0);
+	line-height: 1.65;
+	color: var(--ink);
+	background: var(--bg);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* ---------- Tipografia ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-ui);
+	color: var(--ink);
+	text-wrap: balance;
+	margin: 0 0 0.5em;
+}
+
+h1 {
+	font-size: var(--step-4);
+	font-weight: 700;
+	letter-spacing: -1.5px;
+	line-height: 1.08;
+}
+h2 {
+	font-size: var(--step-3);
+	font-weight: 700;
+	letter-spacing: -0.625px;
+	line-height: 1.2;
+}
+h3 {
+	font-size: var(--step-2);
+	font-weight: 600;
+	letter-spacing: -0.3px;
+	line-height: 1.3;
+}
+h4 {
+	font-size: var(--step-1);
+	font-weight: 600;
+	letter-spacing: -0.2px;
+}
+
+p {
+	margin: 0 0 1.15em;
+	text-wrap: pretty;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.18s ease, color 0.18s ease;
+}
+a:hover {
+	border-bottom-color: currentColor;
+}
+
+/* Links dentro do corpo de leitura */
+.prose a {
+	color: var(--accent);
+	border-bottom-color: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.prose a:hover {
+	border-bottom-color: var(--accent);
+}
+
+strong {
+	font-weight: 650;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--border);
+	margin: var(--section) 0;
+}
+
+::selection {
+	background: color-mix(in srgb, var(--link) 18%, transparent);
+}
+
+:focus-visible {
+	outline: 2px solid var(--link);
+	outline-offset: 2px;
+	border-radius: 3px;
+}
+
+/* ---------- Layout ---------- */
+.wrap {
+	width: min(100% - 2.5rem, var(--wrap));
+	margin-inline: auto;
+}
+.wrap-narrow {
+	width: min(100% - 2.5rem, var(--wrap-narrow));
+	margin-inline: auto;
+}
+
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 999;
+	background: var(--accent);
+	color: var(--accent-ink);
+	padding: 0.75rem 1.25rem;
+	border-radius: 0 0 var(--radius-sm) 0;
+}
+.skip-link:focus {
+	left: 0;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* ---------- Prosa de leitura longa ---------- */
+.prose {
+	font-family: var(--font-read);
+	font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+	line-height: 1.75;
+	color: var(--ink);
+	max-width: var(--measure);
+}
+.prose > * + * {
+	margin-top: 0;
+}
+.prose h2 {
+	font-family: var(--font-ui);
+	font-size: var(--step-2);
+	margin-top: 2.2em;
+	letter-spacing: -0.4px;
+	padding-top: 0.2em;
+}
+.prose h3 {
+	font-family: var(--font-ui);
+	font-size: var(--step-1);
+	margin-top: 1.8em;
+}
+.prose h4 {
+	font-family: var(--font-ui);
+	margin-top: 1.5em;
+}
+.prose ul,
+.prose ol {
+	padding-left: 1.4em;
+	margin-bottom: 1.15em;
+}
+.prose li {
+	margin-bottom: 0.45em;
+}
+.prose li::marker {
+	color: var(--ink-3);
+}
+.prose blockquote {
+	margin: 1.6em 0;
+	padding: 0.9em 1.25em;
+	border-left: 3px solid var(--accent);
+	background: var(--bg-warm);
+	border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+	color: var(--ink-2);
+	font-style: italic;
+}
+.prose blockquote p:last-child {
+	margin-bottom: 0;
+}
+.prose code {
+	font-family: var(--font-mono);
+	font-size: 0.86em;
+	background: var(--bg-warm);
+	padding: 0.15em 0.4em;
+	border-radius: 4px;
+	border: 1px solid var(--border);
+}
+.prose pre {
+	font-family: var(--font-mono);
+	font-size: 0.85rem;
+	line-height: 1.6;
+	padding: 1rem 1.15rem;
+	overflow-x: auto;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--border);
+	margin: 1.6em 0;
+}
+.prose pre code {
+	background: none;
+	border: 0;
+	padding: 0;
+	font-size: inherit;
+}
+.prose img {
+	border-radius: var(--radius-sm);
+	margin: 1.8em 0;
+	border: 1px solid var(--border);
+}
+.prose hr {
+	margin: 2.6em 0;
+}
+
+/* ---------- Tabelas ---------- */
+.prose table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: var(--font-ui);
+	font-size: 0.88rem;
+	line-height: 1.5;
+	margin: 1.8em 0;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+	display: block;
+	overflow-x: auto;
+	white-space: normal;
+}
+.prose th {
+	background: var(--bg-warm);
+	font-weight: 600;
+	font-size: 0.76rem;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+	text-align: left;
+	color: var(--ink-2);
+}
+.prose th,
+.prose td {
+	padding: 0.7em 0.9em;
+	border-bottom: 1px solid var(--border);
+	vertical-align: top;
+}
+.prose tbody tr:last-child td {
+	border-bottom: 0;
+}
+.prose tbody tr:hover {
+	background: var(--bg-sunken);
+}
+
+/* ---------- Línguas antigas ---------- */
+.he {
+	font-family: 'Segoe UI', 'David', 'Times New Roman', serif;
+	font-size: 1.05em;
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.grc {
+	font-family: 'Palatino Linotype', 'Segoe UI', Georgia, serif;
+}
+[lang='ar'],
+[lang='syc'] {
+	font-family: 'Segoe UI', 'Traditional Arabic', serif;
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/* ---------- Marcadores de verificação [V] / [W] / [—] ---------- */
+.status-v,
+.status-w,
+.status-gap {
+	display: inline-block;
+	font-family: var(--font-mono);
+	font-size: 0.66rem;
+	font-weight: 600;
+	padding: 1px 8px;
+	border-radius: var(--radius-pill);
+	letter-spacing: 0.2px;
+	vertical-align: middle;
+	margin: 0 2px;
+	line-height: 1.5;
+}
+.status-v {
+	background: color-mix(in srgb, var(--ok) 12%, transparent);
+	color: var(--ok);
+	border: 1px solid color-mix(in srgb, var(--ok) 25%, transparent);
+}
+.status-w {
+	background: color-mix(in srgb, var(--warn) 12%, transparent);
+	color: var(--warn);
+	border: 1px solid color-mix(in srgb, var(--warn) 25%, transparent);
+}
+.status-gap {
+	background: color-mix(in srgb, var(--danger) 10%, transparent);
+	color: var(--danger);
+	border: 1px solid color-mix(in srgb, var(--danger) 25%, transparent);
+}
+
+/* ---------- Utilitários ---------- */
+.eyebrow {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 0.9rem;
+}
+.lede {
+	font-size: var(--step-1);
+	line-height: 1.6;
+	color: var(--ink-2);
+	max-width: 60ch;
+}
+.muted {
+	color: var(--ink-2);
+}
+.small {
+	font-size: var(--step--1);
+}
+.reveal {
+	opacity: 0;
+	transform: translateY(12px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--ink-3);
+	border-radius: 10px;
+	border: 2px solid var(--bg);
+}
+
+/* ---------- Impressão ---------- */
+@media print {
+	header,
+	footer,
+	.ea-toc,
+	.no-print {
+		display: none !important;
+	}
+	.prose {
+		font-size: 11pt;
+		max-width: none;
+	}
+	a {
+		border: 0;
+	}
+	a[href^='http']::after {
+		content: ' (' attr(href) ')';
+		font-size: 0.8em;
+		color: #555;
+	}
+}

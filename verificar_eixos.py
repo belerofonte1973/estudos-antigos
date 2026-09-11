@@ -128,6 +128,21 @@ for slug, nome in (
     if html:
         exigir(nome in html, f"hub de livro: {nome} em /biblia/{slug}/")
 
+# ---------- 8. Dossiê de unidade canônica alcança os dois hubs ----------
+# Samuel e Reis são um livro só no cânon hebraico: o dossiê único precisa
+# aparecer tanto em 1 quanto em 2, senão o campo livros[] não está funcionando.
+for a, b, slug in (
+    ("samuel-1", "samuel-2", "samuel"),
+    ("reis-1", "reis-2", "reis"),
+):
+    for hub in (a, b):
+        html = ler(f"biblia/{hub}/index.html")
+        if html:
+            exigir(
+                f'href="/biblioteca/biblia/{slug}/"' in html,
+                f"unidade canônica: /biblia/{hub}/ aponta para o dossiê {slug}",
+            )
+
 print("== Verificação do modelo de três eixos ==\n")
 for m in ok:
     print(f"  ok  {m}")

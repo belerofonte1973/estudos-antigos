@@ -33,8 +33,14 @@ const biblioteca = defineCollection({
 		atualizado: z.coerce.date().optional(),
 		/** Slug em `artigos` que serve de porta de entrada para este dossiê. */
 		entrada: z.string().optional(),
-		/** Livro bíblico relacionado, quando houver. */
+		/** Livro bíblico relacionado, quando o dossiê trata de um só. */
 		livro: livrosEnum.optional(),
+		/**
+		 * Livros cobertos, quando o dossiê trata a unidade canônica.
+		 * No cânon hebraico Samuel e Reis não são divididos em 1 e 2 — o
+		 * dossiê cobre os dois, e os dois hubs de livro apontam para ele.
+		 */
+		livros: z.array(livrosEnum).default([]),
 	}),
 });
 

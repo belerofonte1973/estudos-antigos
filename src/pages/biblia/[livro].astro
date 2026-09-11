@@ -19,7 +19,9 @@ export async function getStaticPaths() {
 			passagens: passagens
 				.filter((p) => p.data.livro === slug)
 				.sort((a, b) => a.data.ordem - b.data.ordem),
-			dossie: dossies.find((d) => d.id === `biblia/${slug}`),
+			dossie: dossies.find(
+				(d) => d.id === `biblia/${slug}` || d.data.livros.includes(slug)
+			),
 			artigos: artigos
 				.filter((a) => a.data.livro === slug)
 				.sort((a, b) => b.data.data.getTime() - a.data.data.getTime()),

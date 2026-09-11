@@ -17,3 +17,4 @@ _backup_docs_starlight/
 video/saida/
 __pycache__/
 *.pyc
+_camadas/

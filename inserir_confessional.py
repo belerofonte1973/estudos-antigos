@@ -42,8 +42,23 @@ SLUGS = [
     "reis",
 ]
 
-CABECALHO = "### 11.1. Comentaristas por esfera confessional"
+CABECALHO_BASE = "Comentaristas por esfera confessional"
+CABECALHO_ESCRITO = f"### 11.1. {CABECALHO_BASE}"
 ANCORA_INSERCAO = re.compile(r"^##\s*12\.\s*Ci", re.IGNORECASE)
+
+# Numeração das subseções: NÃO é fixa. Deuteronômio já usa `### 11.1` a `11.8` e
+# Josué `11.1` a `11.4` — inserir `11.1` colidiria. O script descobre o próximo
+# número livre na seção 11 e renumera o cabeçalho do fragmento ao inserir.
+RE_SUBSECAO_11 = re.compile(r"^###\s*11\.(\d+)", re.MULTILINE)
+RE_CABECALHO_FRAG = re.compile(r"^###\s*11\.\d+\.\s*" + CABECALHO_BASE, re.MULTILINE)
+
+
+def proximo_numero(corpo: str) -> int:
+    """Próximo número livre em `### 11.N` dentro da seção 11."""
+    m = re.search(r"^##\s*11\..*?(?=^##\s*12\.)", corpo, re.MULTILINE | re.DOTALL)
+    trecho = m.group(0) if m else corpo
+    existentes = [int(n) for n in RE_SUBSECAO_11.findall(trecho)]
+    return max(existentes) + 1 if existentes else 1
 
 # As cinco esferas são conferidas no verificador (verificar_camadas.py); aqui só
 # se valida a forma do fragmento, para não duplicar a régua em dois lugares.
@@ -62,11 +77,11 @@ def escrever(caminho: Path, texto: str) -> None:
 def validar(texto: str) -> list[str]:
     problemas: list[str] = []
 
-    if not texto.lstrip().startswith(CABECALHO):
-        problemas.append(f"não começa com o cabeçalho exato: {CABECALHO!r}")
+    if not texto.lstrip().startswith(CABECALHO_ESCRITO):
+        problemas.append(f"não começa com o cabeçalho exato: {CABECALHO_ESCRITO!r}")
 
-    if len(re.findall(r"^###\s*11\.1", texto, re.M)) != 1:
-        problemas.append("deve haver exatamente um cabeçalho '### 11.1'")
+    if len(RE_CABECALHO_FRAG.findall(texto)) != 1:
+        problemas.append("deve haver exatamente um cabeçalho de comentaristas")
 
     # um fragmento de subseção não pode trazer cabeçalho de nível 2
     if re.search(r"^##\s", texto, re.M):
@@ -107,7 +122,7 @@ def inserir(slug: str, seco: bool) -> tuple[bool, str]:
 
     corpo = ler(dossie)
 
-    if CABECALHO in corpo:
+    if CABECALHO_BASE in corpo:
         return True, "já inserido antes (nada a fazer)"
 
     linhas = corpo.splitlines(keepends=True)
@@ -115,7 +130,14 @@ def inserir(slug: str, seco: bool) -> tuple[bool, str]:
     if idx is None:
         return False, "não achei a seção '## 12. Ciência' para ancorar"
 
-    frag_limpo = frag.strip() + "\n\n"
+    # renumera o cabeçalho do fragmento para o próximo número livre da seção 11
+    n = proximo_numero(corpo)
+    frag_num = RE_CABECALHO_FRAG.sub(
+        f"### 11.{n}. {CABECALHO_BASE}", frag, count=1
+    )
+    nota = f" (renumerado para 11.{n})" if n != 1 else ""
+
+    frag_limpo = frag_num.strip() + "\n\n"
     if not seco:
         BACKUP.mkdir(parents=True, exist_ok=True)
         shutil.copy2(dossie, BACKUP / f"{slug}.mdx.pre-confessional")
@@ -124,7 +146,7 @@ def inserir(slug: str, seco: bool) -> tuple[bool, str]:
     if not seco:
         escrever(dossie, "".join(novas))
 
-    return True, f"inserido antes de '{linhas[idx].strip()}'"
+    return True, f"inserido como 11.{n} antes de '{linhas[idx].strip()}'{nota}"
 
 
 def reverter() -> int:

@@ -110,6 +110,79 @@ CAMADAS: dict[str, tuple[str, int, int, list[str]]] = {
     ),
 }
 
+# Esferas confessionais — a exigência do usuário: católico ocidental E oriental,
+# ortodoxo, protestante, e ateus/agnósticos com a perspectiva declarada.
+# Contar nomes por esfera é o que transforma "equilíbrio" em medida.
+ESFERAS: dict[str, list[str]] = {
+    "catolico-ocidental": [
+        "Agostinho", "Jerônimo", "Jeronimo", "Ambrósio", "Ambrosio",
+        "Gregório Magno", "Gregorio Magno", "Beda", "Isidoro", "Glossa",
+        "Nicolau de Lira", "Lapide", "Maldonado", "Belarmino", "Aquino",
+        "Tomás de Aquino", "Catena aurea", "Bernardo", "Hugo de São Vítor",
+        "Pedro Lombardo", "Raymond", "Fitzmyer", "De Vaux", "Schökel",
+        "Schoekel", "Lohfink", "Ska", "Markl", "Gianto", "Sacra Pagina",
+        "Dei Verbum", "Divino Afflante", "Pontifícia Comissão",
+        "Pontificia Comissao", "Salamanca", "latina",
+    ],
+    "catolico-oriental-grego": [
+        "Orígenes", "Origenes", "Clemente de Alexandria", "Cirilo",
+        "Atanásio", "Atanasio", "Basílio", "Basilio", "Gregório de Nissa",
+        "Gregorio de Nissa", "Gregório Nazianzeno", "Crisóstomo", "Crisostomo",
+        "Teodoreto", "Diodoro de Tarso", "Teodoro de Mopsuéstia",
+        "Teodoro de Mopsuestia", "Evágrio", "Evagrio", "Máximo o Confessor",
+        "Maximo o Confessor", "alexandrina", "antioquena", "Efrém", "Efrem",
+        "Afraate", "siríaca", "siriaca", "copta", "armênia", "armenia",
+        "Hexapla", "Octateuco", "Heptateuco", "grega", "grego",
+    ],
+    "ortodoxo": [
+        "catena", "Catena", "catenae", "Lopukhin", "Толковая", "Tolkovaya",
+        "Orthodox Study Bible", "Trembelas", "Stăniloae", "Staniloae",
+        "Florovsky", "Lossky", "Kallistos", "Ware", "Schmemann", "Pentiuc",
+        "Behr", "Filocalia", "Teófano", "Teofano", "Kronstadt",
+        "neopatrística", "neopatristica", "ortodoxa", "ortodoxo",
+    ],
+    "protestante": [
+        "Lutero", "Calvino", "Institutas", "Melanchthon", "Zuinglio", "Bucer",
+        "Bullinger", "Oecolampadius", "Genebra", "Matthew Henry", "Owen",
+        "Edwards", "Spurgeon", "Ryle", "Maclaren", "Keil", "Delitzsch",
+        "Lenski", "F. F. Bruce", "Morris", "Carson", "Wenham", "Kidner",
+        "Waltke", "Motyer", "Stott", "Lloyd-Jones", "Wright", "Keener",
+        "Kline", "Vos", "Beale", "NICOT", "NICNT", "WBC", "PNTC", "TOTC",
+        "ACCS", "RCS", "Hermeneia", "ICC", "reformada", "reformado",
+        "luterana", "luterano", "anglicana", "puritano", "evangélic",
+    ],
+    "judaico-islamico": [
+        "Rashi", "Ramban", "Radak", "Ralbag", "Gersonides", "Abravanel",
+        "midrash", "Midrash", "Talmude", "Talmud", "Sifra", "Bereshit",
+        "Sefaria", "Cassuto", "Milgrom", "Levine", "Tigay", "Weinfeld",
+        "Corão", "Corão", "Tabari", "Ṭabarī", "Ibn Kathir", "tahrīf",
+        "Sulaymān", "Sulayman", "Dāwūd", "Dawud", "Mūsā", "Musa", "Nūḥ",
+        "islâmica", "islamica", "judaica", "judaico", "rabínica",
+    ],
+    "ateu-agnostico": [
+        "ateu", "ateia", "ateus", "agnóstico", "agnostico", "agnóstica",
+        "não confessional", "nao confessional", "secular", "Thompson",
+        "Davies", "Lemche", "Whitelam", "Avalos", "Ehrman", "Lüdemann",
+        "Ludemann", "Price", "Stavrakopoulou", "Carrier", "Feuerbach",
+        "Nietzsche", "Marx", "Freud", "Russell", "Strauss", "Bauer",
+        "Wellhausen", "Schweitzer", "Frazer", "Frye", "Bloom", "Miles",
+        "Saramago", "Dawkins", "Hitchens", "Dennett", "Camus", "Sartre",
+        "minimalis", "Copenhague", "Finkelstein", "Prior", "Niditch",
+        "naturalista", "histórico-crítico",
+    ],
+}
+
+# Esferas que o usuário exigiu em TODO dossiê. Judaico-islâmica é contada à
+# parte: nem todo livro tem leitura corânica, mas Samuel e Reis têm (Dāwūd,
+# Sulaymān) e o Pentateuco inteiro tem leitura rabínica.
+ESFERAS_OBRIGATORIAS = [
+    "catolico-ocidental",
+    "catolico-oriental-grego",
+    "ortodoxo",
+    "protestante",
+    "ateu-agnostico",
+]
+
 # A seção de ciência tem de dizer onde a ciência NÃO decide. Sem isso ela
 # ultrapassa a competência e o dossiê fica tendencioso em algum sentido.
 MARCADORES_LIMITE = [
@@ -173,6 +246,7 @@ def achar_secao(mapa: dict[str, str], numero: str, titulo: str) -> str | None:
 def main() -> int:
     falhas: list[str] = []
     ok = 0
+    esferas_ok = 0
 
     print("== Verificação das quatro camadas nos nove dossiês ==\n")
 
@@ -223,14 +297,43 @@ def main() -> int:
             )
             print("    FALHA  ciência não declara o limite de competência")
 
+        # esferas confessionais na seção 11 — a exigência do usuário:
+        # católico ocidental, católico oriental/grego, ortodoxo, protestante e
+        # ateus/agnósticos, todos presentes. Contar é o que mede o equilíbrio.
+        corpo_teo = achar_secao(mapa, "11", "Teologia")
+        if corpo_teo is not None:
+            contagem = {
+                esf: sorted({n for n in nomes if n in corpo_teo})
+                for esf, nomes in ESFERAS.items()
+            }
+            faltando = [e for e in ESFERAS_OBRIGATORIAS if not contagem[e]]
+            detalhe = " · ".join(
+                f"{e[:9]}:{len(contagem[e])}" for e in ESFERAS
+            )
+            if faltando:
+                falhas.append(
+                    f"{slug}: esferas sem nome na seção Teologia — "
+                    f"{', '.join(faltando)}"
+                )
+                print(f"    FALHA  esferas ausentes: {', '.join(faltando)}")
+            else:
+                esferas_ok += 1
+            print(f"          esferas → {detalhe}")
+
     print()
     if falhas:
         for f in falhas:
             print(f"  FALHA  {f}")
-        print(f"\n{len(falhas)} falha(s) · {ok} camada(s) aprovada(s)")
+        print(
+            f"\n{len(falhas)} falha(s) · {ok} camada(s) aprovada(s) · "
+            f"{esferas_ok}/{len(DOSSIES)} dossiê(s) com as 5 esferas"
+        )
         return 1
 
-    print(f"OK — 9 dossiês × 4 camadas: {ok} camadas aprovadas, nenhuma falha.")
+    print(
+        f"OK — 9 dossiês × 4 camadas: {ok} camadas aprovadas, nenhuma falha.\n"
+        f"     as 5 esferas confessionais presentes nos 9 dossiês."
+    )
     return 0
 
 

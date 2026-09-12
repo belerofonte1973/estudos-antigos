@@ -126,8 +126,21 @@ livro: <slug>       # ou livros: [a, b] para unidade canônica
 
 ## Modelo de pesquisa
 
-`deepseek/deepseek-v4.1-flash` (Nous Portal) — 1M de contexto, visão, raciocínio.
-Configurado em `delegation.model` para os redatores.
+`deepseek/deepseek-v4.1-flash`, com **o provedor escolhido pelo dia e hora** —
+mesmo modelo, dois canais de cobrança:
+
+| Quando | Provedor | Comando |
+|---|---|---|
+| **Fim de semana** (sáb/dom, qualquer hora) | **OpenRouter** (base $0,15/$0,60) | `hermes config set delegation.provider openrouter` |
+| Dia útil 13:40–21:00 e madrugada 03:40–07:00 BRT | **OpenRouter** | idem |
+| Dia útil no pico 22:40–03:40 e 07:00–13:40 BRT | **Nous Portal** (fixo $0,12/$0,96) | `hermes config set delegation.provider nous` |
+
+O OpenRouter dobra o preço na janela de pico dos dias úteis; o Portal é fixo.
+Conferir antes de um lote grande: `https://openrouter.ai/api/v1/models` →
+`pricing.prompt`. Trocar no meio da produção é seguro — subagente já iniciado
+mantém o provedor com que nasceu.
+
+Configurado em `delegation.model` / `delegation.provider`.
 
 ## Fluxo de um lote
 

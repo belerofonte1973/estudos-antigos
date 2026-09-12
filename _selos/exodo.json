@@ -1,0 +1,175 @@
+{
+ "slug": "exodo",
+ "anos": 0,
+ "obras": [
+  {
+   "rotulo": "Wellhausen",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9781555409388",
+   "isbn": "9781555409388"
+  },
+  {
+   "rotulo": "Childs",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/bookofexoduscrit0000chil",
+   "isbn": "9780664229689"
+  },
+  {
+   "rotulo": "Finkelstein & Silberman (2001), The Bible Unearthed",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780743223386",
+   "isbn": "9780743223386"
+  },
+  {
+   "rotulo": "Kitchen (2003), On the Reliability of the Old Testament",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780802803962",
+   "isbn": "9780802803962"
+  },
+  {
+   "rotulo": "Meyers 2005 lê o livro como «memória cultural», não como relato histórico",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780521002912",
+   "isbn": "9780521002912"
+  },
+  {
+   "rotulo": "cf. Sarna 1986",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/exploringexoduso0000sarn",
+   "isbn": "9780805210637"
+  },
+  {
+   "rotulo": "Durham 1987, WBC 3",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780849902024",
+   "isbn": "9780849902024"
+  },
+  {
+   "rotulo": "Lewis",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/sargonlegendstud0000lewi",
+   "isbn": "9780897571043"
+  },
+  {
+   "rotulo": "estudo de referência: B. Lewis, The Sargon Legend (ASOR, 1980 ISBN ). H. Gressmann, Mose und seine Zeit",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780790514079",
+   "isbn": "9780790514079"
+  },
+  {
+   "rotulo": "3:11) e celebra a libertação coletiva, não o ascenso individual ( leitura exegética corrente). Humphreys (2003) naturaliza a sarça como emanação de gás/vulcânica ( The Miracles of Exodus, Harper",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780060514044",
+   "isbn": "9780060514044"
+  },
+  {
+   "rotulo": "deve-se corrigir para C. Drews & Han (2010) para o wind setdown e para R. Drews, The End of the Bronze Age",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/endofbronzeagech0000drew",
+   "isbn": "9780691048116"
+  },
+  {
+   "rotulo": "6. Ano 1981 da 1ª trad. portuguesa da Bíblia de Jerusalém (fonte: cs.wikipedia) e ISBN Paulus",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9788534920001",
+   "isbn": "9788534920001"
+  },
+  {
+   "rotulo": "Sociedade Bíblica Internacional 2000",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/bibliasagradanov0000god",
+   "isbn": "9781563201509"
+  },
+  {
+   "rotulo": "ed. de bolso/estudo, Editora Vida 2002",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9788573674842",
+   "isbn": "9788573674842"
+  },
+  {
+   "rotulo": "Alter",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/fivebooksofmoses0000unse",
+   "isbn": "9780393019551"
+  },
+  {
+   "rotulo": "vol. II, Ex 19–40, 2006",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/exodusnewtransla0000unse",
+   "isbn": "9780385246934"
+  },
+  {
+   "rotulo": "reed. Yale UP 2006",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780300261103",
+   "isbn": "9780300261103"
+  },
+  {
+   "rotulo": "Fretheim",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780804231022",
+   "isbn": "9780804231022"
+  },
+  {
+   "rotulo": "JPS Exodus, 1991",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/jpstorahcommenta0000unse",
+   "isbn": "9780827603271"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "9781555409388",
+  "9780664229689",
+  "9780743223386",
+  "9780802803962",
+  "9780521002912",
+  "9780805210637",
+  "9780849902024",
+  "9780897571043",
+  "9780790514079",
+  "9780060514044",
+  "9780691048116",
+  "9781575061856",
+  "9788573803533",
+  "9788534920001",
+  "9781563201509",
+  "9788573674842",
+  "9780674587397",
+  "9780393019551",
+  "9780385246934",
+  "9780300261103",
+  "9780804231022",
+  "9780827603271"
+ ],
+ "rotulos": {
+  "9781555409388": "Wellhausen",
+  "9780664229689": "Childs",
+  "9780743223386": "Finkelstein & Silberman (2001), The Bible Unearthed",
+  "9780802803962": "Kitchen (2003), On the Reliability of the Old Testament",
+  "9780521002912": "Meyers 2005 lê o livro como «memória cultural», não como relato histórico",
+  "9780805210637": "cf. Sarna 1986",
+  "9780849902024": "Durham 1987, WBC 3",
+  "9780897571043": "Lewis",
+  "9780790514079": "estudo de referência: B. Lewis, The Sargon Legend (ASOR, 1980 ISBN ). H. Gressmann, Mose und seine Zeit",
+  "9780060514044": "3:11) e celebra a libertação coletiva, não o ascenso individual ( leitura exegética corrente). Humphreys (2003) naturaliza a sarça como emanação de gás/vulcânica ( The Miracles of Exodus, Harper",
+  "9780691048116": "deve-se corrigir para C. Drews & Han (2010) para o wind setdown e para R. Drews, The End of the Bronze Age",
+  "9781575061856": "Tradição real: M. Haran, Temples and Temple Service in Ancient Israel",
+  "9788573803533": "SBT-Trinitariana 2017",
+  "9788534920001": "6. Ano 1981 da 1ª trad. portuguesa da Bíblia de Jerusalém (fonte: cs.wikipedia) e ISBN Paulus",
+  "9781563201509": "Sociedade Bíblica Internacional 2000",
+  "9788573674842": "ed. de bolso/estudo, Editora Vida 2002",
+  "9780674587397": "ed. 1998",
+  "9780393019551": "Alter",
+  "9780385246934": "vol. II, Ex 19–40, 2006",
+  "9780300261103": "reed. Yale UP 2006",
+  "9780804231022": "Fretheim",
+  "9780827603271": "JPS Exodus, 1991"
+ },
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9781575061856",
+  "9788573803533",
+  "9780674587397"
+ ]
+}

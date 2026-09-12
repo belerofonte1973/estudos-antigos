@@ -192,6 +192,65 @@ for slug in BIBLICOS:
 
 print(f"\n  {len(vistos)} destino(s) de pré-requisito conferido(s)")
 
+# ---------- 6. selos de acesso: a tabela 'Como conseguir estas obras' ----------
+ORDEM_ACESSO = ["livre", "emprestimo", "biblioteca", "compra", "esgotado"]
+selos_vistos: dict[str, int] = {}
+paginas_com = 0
+
+for slug in BIBLICOS:
+    h = pagina_dossie("biblia", slug)
+    m = re.search(
+        r'<h3[^>]*id="como-conseguir-estas-obras".*?(?=<h2|<h3|\Z)', h, re.S
+    )
+    if not m:
+        falhas.append(f"{slug}: sem a seção 'Como conseguir estas obras'")
+        continue
+    sec = m.group(0)
+    paginas_com += 1
+
+    linhas = re.findall(r"<tr>(.*?)</tr>", sec, re.S)
+    linhas = linhas[1:] if linhas else []  # descarta o cabeçalho
+    exigir(len(linhas) >= 4, f"{slug}: só {len(linhas)} obra(s) com selo (mínimo 4)")
+
+    ordem_num: list[int] = []
+    for tr in linhas:
+        ts = re.findall(r"ea-selo--(\w+)", tr)
+        exigir(len(ts) == 1, f"{slug}: linha com {len(ts)} selo(s), esperado 1")
+        for t in ts:
+            exigir(t in ORDEM_ACESSO, f"{slug}: selo desconhecido '{t}'")
+            selos_vistos[t] = selos_vistos.get(t, 0) + 1
+            ordem_num.append(ORDEM_ACESSO.index(t))
+        # O link pode ser http:// — servidor acadêmico sem TLS (rosetta.reltech.org
+        # responde 200 em http e não atende em https). O que não pode é linha sem
+        # link nenhum: aí o selo afirma uma via de acesso que não existe.
+        exigir(
+            'href="https://' in tr or 'href="http://' in tr,
+            f"{slug}: linha sem link de acesso",
+        )
+        exigir(
+            "<td>—</td>" not in tr,
+            f"{slug}: linha com coluna de acesso vazia",
+        )
+
+    # a tabela é ordenada por acessibilidade: quem tem menos recursos lê de cima
+    exigir(
+        ordem_num == sorted(ordem_num),
+        f"{slug}: tabela fora da ordem de acessibilidade {ordem_num}",
+    )
+    exigir(
+        "Rotulagem" not in sec,
+        f"{slug}: resíduo de rótulo de site na tabela",
+    )
+    print(f"  ok  {slug:12s} {len(linhas)} obras com selo · em ordem de acesso")
+
+dist_selos = (
+    " · ".join(f"{k}:{v}" for k, v in sorted(selos_vistos.items()))
+    if selos_vistos
+    else "(nenhum)"
+)
+print(f"\n  selos: {dist_selos}")
+print(f"  {paginas_com}/{len(BIBLICOS)} dossiês com a tabela de acesso")
+
 print()
 if falhas:
     for f in falhas:

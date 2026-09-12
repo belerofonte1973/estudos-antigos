@@ -3,115 +3,169 @@
  "anos": 0,
  "obras": [
   {
-   "rotulo": "Wellhausen",
+   "rotulo": "Julius Wellhausen ; with a reprint of the article Israel from the Encyclopaedia Britannica ; preface by W. Robertson Smith ; foreword to the Scholars Press edition by Douglas A. Knight. — Prolegomena to the history of Israel",
+   "rotulo_local": "Wellhausen",
+   "rotulo_api": "Julius Wellhausen ; with a reprint of the article Israel from the Encyclopaedia Britannica ; preface by W. Robertson Smith ; foreword to the Scholars Press edition by Douglas A. Knight. — Prolegomena to the history of Israel",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9781555409388",
    "isbn": "9781555409388"
   },
   {
-   "rotulo": "Childs",
+   "rotulo": "Brevard S. Childs — Book of Exodus (Old Testament Library)",
+   "rotulo_local": "Childs",
+   "rotulo_api": "Brevard S. Childs — Book of Exodus (Old Testament Library)",
    "selo": "emprestimo",
    "url": "https://archive.org/details/bookofexoduscrit0000chil",
    "isbn": "9780664229689"
   },
   {
    "rotulo": "Finkelstein & Silberman (2001), The Bible Unearthed",
+   "rotulo_local": "Finkelstein & Silberman (2001), The Bible Unearthed",
+   "rotulo_api": "Israel Finkelstein — The Bible Unearthed",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780743223386",
    "isbn": "9780743223386"
   },
   {
    "rotulo": "Kitchen (2003), On the Reliability of the Old Testament",
+   "rotulo_local": "Kitchen (2003), On the Reliability of the Old Testament",
+   "rotulo_api": "K. A. Kitchen — On the Reliability of the Old Testament",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780802803962",
    "isbn": "9780802803962"
   },
   {
    "rotulo": "Meyers 2005 lê o livro como «memória cultural», não como relato histórico",
+   "rotulo_local": "Meyers 2005 lê o livro como «memória cultural», não como relato histórico",
+   "rotulo_api": "Carol Meyers. — Exodus",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780521002912",
    "isbn": "9780521002912"
   },
   {
-   "rotulo": "cf. Sarna 1986",
+   "rotulo": "Nahum M. Sarna. — Exploring Exodus",
+   "rotulo_local": "cf. Sarna 1986",
+   "rotulo_api": "Nahum M. Sarna. — Exploring Exodus",
    "selo": "emprestimo",
    "url": "https://archive.org/details/exploringexoduso0000sarn",
    "isbn": "9780805210637"
   },
   {
-   "rotulo": "Durham 1987, WBC 3",
+   "rotulo": "John I. Durham. — Exodus",
+   "rotulo_local": "Durham 1987, WBC 3",
+   "rotulo_api": "John I. Durham. — Exodus",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780849902024",
    "isbn": "9780849902024"
   },
   {
-   "rotulo": "Lewis",
+   "rotulo": "Brian Lewis. — The Sargon Legend",
+   "rotulo_local": "Lewis",
+   "rotulo_api": "Brian Lewis. — The Sargon Legend",
    "selo": "emprestimo",
    "url": "https://archive.org/details/sargonlegendstud0000lewi",
    "isbn": "9780897571043"
   },
   {
    "rotulo": "estudo de referência: B. Lewis, The Sargon Legend (ASOR, 1980 ISBN ). H. Gressmann, Mose und seine Zeit",
+   "rotulo_local": "estudo de referência: B. Lewis, The Sargon Legend (ASOR, 1980 ISBN ). H. Gressmann, Mose und seine Zeit",
+   "rotulo_api": "von Hugo Gressmann — Mose und seine Zeit",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780790514079",
    "isbn": "9780790514079"
   },
   {
    "rotulo": "3:11) e celebra a libertação coletiva, não o ascenso individual ( leitura exegética corrente). Humphreys (2003) naturaliza a sarça como emanação de gás/vulcânica ( The Miracles of Exodus, Harper",
+   "rotulo_local": "3:11) e celebra a libertação coletiva, não o ascenso individual ( leitura exegética corrente). Humphreys (2003) naturaliza a sarça como emanação de gás/vulcânica ( The Miracles of Exodus, Harper",
+   "rotulo_api": "Colin J. Humphreys. — The miracles of Exodus",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780060514044",
    "isbn": "9780060514044"
   },
   {
    "rotulo": "deve-se corrigir para C. Drews & Han (2010) para o wind setdown e para R. Drews, The End of the Bronze Age",
+   "rotulo_local": "deve-se corrigir para C. Drews & Han (2010) para o wind setdown e para R. Drews, The End of the Bronze Age",
+   "rotulo_api": "Robert Drews. — The end of the Bronze Age",
    "selo": "emprestimo",
    "url": "https://archive.org/details/endofbronzeagech0000drew",
    "isbn": "9780691048116"
   },
   {
+   "rotulo": "Tradição real: M. Haran, Temples and Temple Service in Ancient Israel",
+   "rotulo_local": "Tradição real: M. Haran, Temples and Temple Service in Ancient Israel",
+   "rotulo_api": "Menahem Haran — Temples and Temple-Service in Ancient Israel",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9781575061856",
+   "isbn": "9781575061856"
+  },
+  {
    "rotulo": "6. Ano 1981 da 1ª trad. portuguesa da Bíblia de Jerusalém (fonte: cs.wikipedia) e ISBN Paulus",
+   "rotulo_local": "6. Ano 1981 da 1ª trad. portuguesa da Bíblia de Jerusalém (fonte: cs.wikipedia) e ISBN Paulus",
+   "rotulo_api": "Bíblia de Jerusalém",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9788534920001",
    "isbn": "9788534920001"
   },
   {
    "rotulo": "Sociedade Bíblica Internacional 2000",
+   "rotulo_local": "Sociedade Bíblica Internacional 2000",
+   "rotulo_api": "God — Biblia Sagrada - Nova Versao Internacional",
    "selo": "emprestimo",
    "url": "https://archive.org/details/bibliasagradanov0000god",
    "isbn": "9781563201509"
   },
   {
    "rotulo": "ed. de bolso/estudo, Editora Vida 2002",
+   "rotulo_local": "ed. de bolso/estudo, Editora Vida 2002",
+   "rotulo_api": "Bíblia Sagrada Nova Versão Internacional de Bolso - Vinho",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9788573674842",
    "isbn": "9788573674842"
   },
   {
-   "rotulo": "Alter",
+   "rotulo": "Jan Assmann — Moses the Egyptian",
+   "rotulo_local": "ed. 1998",
+   "rotulo_api": "Jan Assmann — Moses the Egyptian",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780674587397",
+   "isbn": "9780674587397"
+  },
+  {
+   "rotulo": "Robert Alter — The Five Books of Moses",
+   "rotulo_local": "Alter",
+   "rotulo_api": "Robert Alter — The Five Books of Moses",
    "selo": "emprestimo",
    "url": "https://archive.org/details/fivebooksofmoses0000unse",
    "isbn": "9780393019551"
   },
   {
    "rotulo": "vol. II, Ex 19–40, 2006",
+   "rotulo_local": "vol. II, Ex 19–40, 2006",
+   "rotulo_api": "William H.C. Propp. — Exodus 19-40",
    "selo": "emprestimo",
    "url": "https://archive.org/details/exodusnewtransla0000unse",
    "isbn": "9780385246934"
   },
   {
-   "rotulo": "reed. Yale UP 2006",
+   "rotulo": "William Henry Propp — Exodus 19–40",
+   "rotulo_local": "reed. Yale UP 2006",
+   "rotulo_api": "William Henry Propp — Exodus 19–40",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780300261103",
    "isbn": "9780300261103"
   },
   {
-   "rotulo": "Fretheim",
+   "rotulo": "Terence E. Fretheim. — Exodus",
+   "rotulo_local": "Fretheim",
+   "rotulo_api": "Terence E. Fretheim. — Exodus",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780804231022",
    "isbn": "9780804231022"
   },
   {
-   "rotulo": "JPS Exodus, 1991",
+   "rotulo": "Nahum M. Sarna — Exodus",
+   "rotulo_local": "JPS Exodus, 1991",
+   "rotulo_api": "Nahum M. Sarna — Exodus",
    "selo": "emprestimo",
    "url": "https://archive.org/details/jpstorahcommenta0000unse",
    "isbn": "9780827603271"
@@ -166,10 +220,9 @@
   "9780804231022": "Fretheim",
   "9780827603271": "JPS Exodus, 1991"
  },
+ "entradas": [],
  "tem_bibliografia": true,
  "isbns_sem_selo": [
-  "9781575061856",
-  "9788573803533",
-  "9780674587397"
+  "9788573803533"
  ]
 }

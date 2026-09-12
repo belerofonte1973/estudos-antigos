@@ -1,0 +1,113 @@
+{
+ "slug": "juizes",
+ "anos": 10,
+ "obras": [
+  {
+   "rotulo": "Noth, Das System der zwölf Stämme Israels (Stuttgart: Kohlhammer, 1930). JSTOR: https://www.jstor.org/stable/2",
+   "selo": "biblioteca",
+   "url": "https://www.jstor.org/stable/23040468"
+  },
+  {
+   "rotulo": "Noth, Überlieferungsgeschichtliche Studien (Halle: Niemeyer, 1943). OL: https://openlibrary.org/books/OL198147",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/books/OL19814792M"
+  },
+  {
+   "rotulo": "Mendenhall, \"The Hebrew Conquest of Palestine\", Biblical Archaeologist 25 (1962). SAGE: https://journals.sagep",
+   "selo": "biblioteca",
+   "url": "https://journals.sagepub.com/doi/10.1177/030908927800300701"
+  },
+  {
+   "rotulo": "Boling, Judges: Introduction, Translation, and Commentary (Anchor Bible 6A; Doubleday, 1975). archive.org: htt",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/judgesintroducti00boli"
+  },
+  {
+   "rotulo": "Frolov, \"Dating Deborah\" (TheTorah.com, 2017). https://www.thetorah.com/article/dating-deborah.",
+   "selo": "livre",
+   "url": "https://www.thetorah.com/article/dating-deborah"
+  },
+  {
+   "rotulo": "Tov, Biblia Hebraica Quinta: Judges (2012), discutido em SciELO SA: https://scielo.org.za/scielo.php?script=sc",
+   "selo": "livre",
+   "url": "https://scielo.org.za/scielo.php?script=sci_arttext&pid=S1010-99192014000200003"
+  },
+  {
+   "rotulo": "Cerâmica filisteia (Mycenaean IIIC:1b), Tel Miqne-Ecrom e Asdode. estudo de conjunto: https://www.academia.edu",
+   "selo": "livre",
+   "url": "https://www.academia.edu/1403840/"
+  },
+  {
+   "rotulo": "Wénin, O livro dos Juízes (coleção \"ABC da Bíblia\"; Edições Loyola, 2024; ISBN 9786555043532). Loyola: https:/",
+   "selo": "compra",
+   "url": "https://www.loyola.com.br/produto/o-livro-dos-juizes-5600"
+  },
+  {
+   "rotulo": "Frederico Lourenço (trad.), Bíblia Grega — vol. V, tomo 1: \"Livros Históricos\" (Quetzal, 2023), ISBN 978989722",
+   "selo": "compra",
+   "url": "https://www.quetzaleditores.pt/autor/frederico-lourenco/3703457"
+  },
+  {
+   "rotulo": "TEB — Tradução Ecumênica da Bíblia (Edições Loyola, nova ed. 2010; ISBN 9788515030163). Loyola: https://www.lo",
+   "selo": "compra",
+   "url": "https://www.loyola.com.br/produto/biblia-teb-nova-edicao-2392"
+  },
+  {
+   "rotulo": "Gottwald, The Tribes of Yahweh",
+   "rotulo_local": "Gottwald, The Tribes of Yahweh",
+   "rotulo_api": "Norman K. Gottwald — The Tribes of Yahweh",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/1841270261",
+   "isbn": "1841270261"
+  },
+  {
+   "rotulo": "Judges",
+   "rotulo_local": "",
+   "rotulo_api": "Judges",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780300139457",
+   "isbn": "9780300139457"
+  },
+  {
+   "rotulo": "Jz 19 narra o crime dos homens de Gibeá contra a mulher de Gibeá, entregue pelo levita, violada e morta, o corpo desmembrado em doze partes (Jz 19,1–30) . Phyllis Trible, em Texts of Terror (Fortress Press, 1984), fez do episódio o paradigma do \"texto de terror\" — mulher sem nome, sem fala e sem luto — e sua contribuição é o método: ler o texto de dentro e perguntar quem ele silencia [V — Fortress Press",
+   "rotulo_local": "Jz 19 narra o crime dos homens de Gibeá contra a mulher de Gibeá, entregue pelo levita, violada e morta, o corpo desmembrado em doze partes (Jz 19,1–30) . Phyllis Trible, em Texts of Terror (Fortress Press, 1984), fez do episódio o paradigma do \"texto de terror\" — mulher sem nome, sem fala e sem luto — e sua contribuição é o método: ler o texto de dentro e perguntar quem ele silencia [V — Fortress Press",
+   "rotulo_api": "Phyllis Trible. — Texts of terror",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/textsofterrorlit0000trib",
+   "isbn": "9780800615376"
+  },
+  {
+   "rotulo": "Judges (University of Chicago Press, 1988) [V",
+   "rotulo_local": "Judges (University of Chicago Press, 1988) [V",
+   "rotulo_api": "Mieke Bal. — Death & dissymmetry",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/deathdissymmetry0000balm",
+   "isbn": "9780226035550"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "1841270261",
+  "9788515030163",
+  "9789897224621",
+  "9786555043532",
+  "9780300139457",
+  "9780800615376",
+  "9780226035550"
+ ],
+ "rotulos": {
+  "1841270261": "Gottwald, The Tribes of Yahweh",
+  "9788515030163": "nova edição de 2010",
+  "9789897224621": "Frederico Lourenço (trad.), Bíblia Grega — vol. V, tomo 1: \"Livros Históricos\"",
+  "9786555043532": "André Wénin, O livro dos Juízes, São Paulo: Edições Loyola, coleção \"ABC da Bíblia\", 2024, 146 páginas",
+  "9780800615376": "Jz 19 narra o crime dos homens de Gibeá contra a mulher de Gibeá, entregue pelo levita, violada e morta, o corpo desmembrado em doze partes (Jz 19,1–30) . Phyllis Trible, em Texts of Terror (Fortress Press, 1984), fez do episódio o paradigma do \"texto de terror\" — mulher sem nome, sem fala e sem luto — e sua contribuição é o método: ler o texto de dentro e perguntar quem ele silencia [V — Fortress Press",
+  "9780226035550": "Judges (University of Chicago Press, 1988) [V"
+ },
+ "entradas": [],
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9788515030163",
+  "9789897224621",
+  "9786555043532"
+ ]
+}

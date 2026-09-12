@@ -10,7 +10,6 @@ livro: deuteronomio
 import Card from '../../../components/Card.astro';
 import CardGrid from '../../../components/CardGrid.astro';
 import Aside from '../../../components/Aside.astro';
-import SeloAcesso from '../../../components/SeloAcesso.astro';
 import LinkButton from '../../../components/LinkButton.astro';
 
 <Aside type="note" title="Rastreabilidade acadêmica">
@@ -292,28 +291,3 @@ A ciência **data** o texto, **escava** os sítios, **classifica** o hebraico e 
 - **Finkelstein & Silberman**, *The Bible Unearthed* (2001); ES *La Biblia desenterrada* (Siglo XXI, 2003) [V — OL]; PT-BR *A Bíblia não tinha razão* (A Girafa, 2003) [W].
 
 *Fontes documentais:* Papiro Nash [V] [https://www.50treasures.divinity.cam.ac.uk/treasure/nash-papyrus](https://www.50treasures.divinity.cam.ac.uk/treasure/nash-papyrus); Papiro Rylands 458 [V] [https://en.wikipedia.org/wiki/Papyrus_Rylands_458](https://en.wikipedia.org/wiki/Papyrus_Rylands_458); estatística massorética [V] [https://aish.com/number-of-words-and-letters/](https://aish.com/number-of-words-and-letters/); Qumran 29 cópias [W] [https://www.deadseascrolls.org.il/explore-the-archive/search](https://www.deadseascrolls.org.il/explore-the-archive/search); TEB-Loyola [V] [https://www.loyola.com.br/produto/biblia-teb-nova-edicao-2392](https://www.loyola.com.br/produto/biblia-teb-nova-edicao-2392); Bíblia de Jerusalém PT [V] [https://pt.wikipedia.org/wiki/B%C3%ADblia_de_Jerusal%C3%A9m](https://pt.wikipedia.org/wiki/B%C3%ADblia_de_Jerusal%C3%A9m); áudio Almeida [V] [https://www.wordproject.org/bibles/audio/02_portuguese/index.htm](https://www.wordproject.org/bibles/audio/02_portuguese/index.htm).
-
-### Como conseguir estas obras
-
-A bibliografia de um site didático não é a de uma tese: cita o que importa **e o leitor consegue alcançar**. O selo diz por onde — e a tabela está ordenada por acessibilidade, do que se lê hoje ao que só se compra.
-
-*2 livre · 8 emprestimo · 2 biblioteca · 1 compra.*
-
-| Obra | Acesso | Onde |
-| --- | --- | --- |
-| de Wette (1805), tese sobre Dt como "livro achado" de Josias | <SeloAcesso tipo="livre" /> | [britannica.com](https://www.britannica.com/biography/Wilhelm-M-L-de-Wette) |
-| von Rad, Das formgeschichtliche Problem des Hexateuch (Kohlhammer, 1938) | <SeloAcesso tipo="livre" /> | [ixtheo.de](https://www.ixtheo.de/Record/143610694) |
-| Noth, Überlieferungsgeschichtliche Studien (Niemeyer, 1943) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/books/OL19814792M) |
-| Weinfeld, Deuteronomy and the Deuteronomic School (Clarendon, 1972) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/works/OL3744015W) |
-| Levinson, Deuteronomy and the Hermeneutics of Legal Innovation (OUP, 1997) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/works/OL3349578W) |
-| Mayes, Deuteronomy (NCB; 1979/1981) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/works/OL6437768W) |
-| Nelson, Deuteronomy: A Commentary (OTL, Westminster John Knox, 2002) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/works/OL1918496W) |
-| Tigay, Deuteronomy (JPS Torah Commentary, 1996) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/works/OL3237772W) |
-| Kline, Treaty of the Great King (Eerdmans, 1963) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/works/OL6942220W) |
-| Moshe Weinfeld — Deuteronomy 1-11 | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/deuteronomy111an00mosh) |
-| Jan Assmann ; translated by Robert Savage — The price of monotheism | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780804761604) |
-| Doubleday 1991 / Yale UP 2008). Yale UP: [ | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780300139433) |
-| Block, Deuteronomy (NIVAC; Zondervan, 2012) | <SeloAcesso tipo="compra" /> | [zondervanacademic.com](https://zondervanacademic.com/products/deuteronomy) |
-
-Selo `[esgotado]` não aparece aqui: quando a obra não é alcançável de nenhuma forma, o texto aponta o substituto acessível ao lado dela.
-

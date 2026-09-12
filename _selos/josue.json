@@ -1,0 +1,92 @@
+{
+ "slug": "josue",
+ "anos": 8,
+ "obras": [
+  {
+   "rotulo": "Noth, M., Überlieferungsgeschichtliche Studien (Halle: Niemeyer, 1943). OL: https://openlibrary.org/books/OL19",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/books/OL19814792M"
+  },
+  {
+   "rotulo": "Finkelstein, I. & Silberman, N. A., The Bible Unearthed (New York: Free Press, 2001/2002). OL: https://openlib",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/isbn/9780743223386"
+  },
+  {
+   "rotulo": "Kenyon, K., Tell es-Sultan (Jericó), escavações 1952–1958; destruição do Bronze Médio-Recente c. 1550 a.C. Rel",
+   "selo": "livre",
+   "url": "https://www.mdpi.com/2077-1444/14/6/796"
+  },
+  {
+   "rotulo": "Alt, A. (1939) e Noth, M. — modelo da infiltração pacífica; Mendenhall, G. E., «The Hebrew Conquest of Palesti",
+   "selo": "livre",
+   "url": "https://library.biblicalarchaeology.org/article/israels-emergence-in-canaan/"
+  },
+  {
+   "rotulo": "4QJoshua (4Q47, 4Q48), Qumran, Caverna 4. Israel Antiquities Authority: https://www.deadseascrolls.org.il/expl",
+   "selo": "livre",
+   "url": "https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q47-1"
+  },
+  {
+   "rotulo": "Quetzal Editores — Bíblia, Volume V, Tomo I: Antigo Testamento — os Livros Históricos, trad. Frederico Lourenç",
+   "selo": "compra",
+   "url": "https://www.quetzaleditores.pt/produtos/ficha/biblia-volume-v-tomo-i/21328922"
+  },
+  {
+   "rotulo": "Howard Jr., D. M., Josué: Comentário Exegético (Vida Nova, 2024) : https://www.vidanova.com.br/; Storniolo, I.",
+   "selo": "compra",
+   "url": "https://www.vidanova.com.br/"
+  },
+  {
+   "rotulo": "Britannica, «Nevi'im (Prophets)» e «Book of Joshua» : https://www.britannica.com/topic/biblical-literature/The",
+   "selo": "livre",
+   "url": "https://www.britannica.com/topic/biblical-literature/The-Nevi-im-Prophets"
+  },
+  {
+   "rotulo": "Younger, K. Lawson, Jr. — Ancient Conquest Accounts",
+   "rotulo_local": "",
+   "rotulo_api": "Younger, K. Lawson, Jr. — Ancient Conquest Accounts",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/0567557049",
+   "isbn": "0567557049"
+  },
+  {
+   "rotulo": "Samuel Sandmel. — Anti-Semitism in the New Testament?",
+   "rotulo_local": "",
+   "rotulo_api": "Samuel Sandmel. — Anti-Semitism in the New Testament?",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/0800605217",
+   "isbn": "0800605217"
+  },
+  {
+   "rotulo": "Finkelstein, I. & Silberman, N. A., The Bible Unearthed (New York: Free Press, 2001/2002). OL: [https://openlibrary.org/isbn/",
+   "rotulo_local": "Finkelstein, I. & Silberman, N. A., The Bible Unearthed (New York: Free Press, 2001/2002). OL: [https://openlibrary.org/isbn/",
+   "rotulo_api": "Israel Finkelstein — The Bible Unearthed",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780743223386",
+   "isbn": "9780743223386"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "9788534902915",
+  "9789897224621",
+  "0567557049",
+  "0800605217",
+  "9780743223386",
+  "9794114015883"
+ ],
+ "rotulos": {
+  "9788534902915": "mantida em catálogo contínuo desde 1994, com reimpressões anuais recentes",
+  "9789897224621": "Volume Quetzal — Livros Históricos. A editora portuguesa Quetzal Editores publicou, com tradução do helenista Frederico Lourenço (Prémio Pessoa 2023), o volume «Bíblia — Volume V, Tomo I: Antigo Testamento — os Livros Históricos»",
+  "9780743223386": "Finkelstein, I. & Silberman, N. A., The Bible Unearthed (New York: Free Press, 2001/2002). OL: [https://openlibrary.org/isbn/",
+  "9794114015883": "Bíblia Hebraica bilíngue HE/PT"
+ },
+ "entradas": [],
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9788534902915",
+  "9789897224621",
+  "9794114015883"
+ ]
+}

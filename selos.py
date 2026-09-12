@@ -35,6 +35,13 @@ from pathlib import Path
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) estudos-antigos/1.0"
 
+# Abaixo disto, o caminho por ISBN rendeu pouco e vale tentar o caminho por
+# título (a bibliografia do dossiê de Números não traz ISBN nenhum).
+MIN_OBRAS = 6
+
+# Marcador da seção que este próprio script insere nos dossiês.
+MARCADOR = "### Como conseguir estas obras"
+
 RAIZ = Path(__file__).resolve().parent
 DOSSIES = RAIZ / "src" / "content" / "biblioteca" / "biblia"
 
@@ -261,8 +268,228 @@ def rotulos_por_isbn(texto: str) -> dict[str, str]:
     return {k: v[1] for k, v in melhores.items()}
 
 
+def _rotulo_forte(rot: str) -> bool:
+    """
+    O rótulo do dossiê é informativo o bastante para ir à tabela?
+
+    Os dossiês do Pentateuco citam em PROSA, e ali o ISBN às vezes vem logo depois
+    do sobrenome e nada mais ("Wellhausen", "Childs", "Lewis"). Publicar
+    "Wellhausen" como linha de tabela não diz ao leitor que obra é. Nesses casos
+    vale mais o rótulo da API, que traz título e autor.
+    """
+    if len(rot) < 22:
+        return False
+    if not re.search(r"\b(?:19|20)\d{2}\b", rot) and len(rot.split()) < 4:
+        return False
+    return True
+
+
+# Prefixos de identificador do Internet Archive que NÃO são livros: "bwb_" é
+# ficha de estoque da Better World Books, "imslp" é partitura. O filtro por
+# título não os pega — o identificador é que denuncia.
+JUNK_ID = ("bwb_", "imslp", "sim_", "cvb_")
+
+
+def id_suspeito(ident: str) -> bool:
+    i = (ident or "").lower()
+    return any(i.startswith(p) for p in JUNK_ID)
+
+
+def sobrenomes(nome: str) -> set[str]:
+    """
+    Sobrenome(s) plausíveis de um nome de autor. Cobre as duas ordens: "Budd,
+    Philip J" (catálogo) e "Philip J. Budd" (prosa).
+
+    Existe por causa de um caso concreto: buscar no Internet Archive
+    title:"Numbers" AND creator:"Budd" devolveu em PRIMEIRO lugar *The hand of God
+    as revealed by the light of numbers to **Budd** Reeve* — o campo `creator`
+    continha "Budd" (o prenome do autor) e o título continha "numbers". O
+    comentário certo, `numbers0005budd` de "Budd, Philip J", vinha em segundo.
+    Comparar só título aceita o primeiro; comparar o sobrenome aceita o segundo.
+    """
+    n = (nome or "").strip()
+    if not n:
+        return set()
+    if "," in n:
+        return {normalizar(n.split(",")[0]).strip()}
+    toks = re.findall(r"[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ.'-]{2,}", n)
+    if not toks:
+        return set()
+    if len(toks) == 1:
+        return {normalizar(toks[0])}
+    return {normalizar(toks[-1]), normalizar(toks[0])}
+
+
+def autor_concorda(pedido: str, creator: str) -> bool:
+    a, b = sobrenomes(pedido), sobrenomes(creator)
+    return bool(a and b and (a & b))
+
+
+def titulo_especifico(t: str) -> bool:
+    """
+    O título distingue a obra sozinho? Título de uma palavra não distingue: há
+    dezenas de comentários chamados só "Numbers" ou "Genesis".
+    """
+    return len(tokens(t)) >= 3
+
+
+def titulo_contido(req: str, rec: str) -> bool:
+    """
+    O título do registro é ESSENCIALMENTE o título pedido, ou apenas o contém?
+
+    Para título curto a diferença é decisiva, e há dois casos concretos que a
+    mostram: buscar "Numbers" + "Davies" aceitou *University Arithmetic:
+    Embracing the Science of Numbers* — livro de matemática de Charles Davies
+    (1846), não o comentário de Números de E. W. Davies. O sobrenome conferia e o
+    título continha a palavra.
+
+    Regra: além da sobreposição, o registro não pode acrescentar muito ao título
+    pedido. "Numbers" vs "Numbers: A Commentary" passa (1 token a mais); vs
+    "University Arithmetic: Embracing the Science of Numbers..." não passa.
+    """
+    tr, tc = tokens(req), tokens(rec)
+    if not tr or not tc:
+        return False
+    if len(tr & tc) / min(len(tr), len(tc)) < 0.4:
+        return False
+    limite = 2 if len(tr) <= 2 else 6
+    return len(tc - tr) <= limite
+
+
+def ol_por_titulo(autor: str, titulo: str) -> tuple[str, str] | None:
+    """Ficha do Open Library buscando por título+autor. Devolve (título, chave)."""
+    try:
+        q = urllib.parse.quote(f"{titulo} {autor}".strip())
+        url = (
+            "https://openlibrary.org/search.json"
+            f"?q={q}&limit=5&fields=key,title,author_name,first_publish_year"
+        )
+        req = urllib.request.Request(
+            url, headers={"Accept": "application/json", "User-Agent": UA}
+        )
+        d = json.loads(urllib.request.urlopen(req, timeout=25).read())
+        for doc in d.get("docs", []):
+            t = doc.get("title", "")
+            if not t or not titulo_contido(titulo, t):
+                continue
+            # Só aceito se o TÍTULO conferir: buscar por texto livre devolve
+            # vizinhos temáticos ("Numbers" casa com qualquer comentário de
+            # Números), e sem este teste a obra errada entraria na tabela.
+            nomes = doc.get("author_name") or []
+            if nomes:
+                if not any(autor_concorda(autor, n) for n in nomes):
+                    continue
+            elif not titulo_especifico(titulo):
+                # Sem autor no registro e título genérico: não dá para dizer que é
+                # esta obra. Prefiro não ter linha a ter linha errada.
+                continue
+            return t, doc.get("key", "")
+    except Exception:
+        pass
+    return None
+
+
+def ia_por_titulo(titulo: str, autor: str) -> tuple[str, str, str] | None:
+    """
+    Cópia no Internet Archive buscando por título+autor. None se não confiável.
+
+    Exige TÍTULO DISTINTIVO (3+ palavras). Um título de uma só palavra não é
+    verificável por busca, e a tentativa produz lixo: buscar "Numbers" achou
+    *University Arithmetic: Embracing the Science of Numbers* (Charles Davies,
+    1846), *Numbers, Op. 28* (partitura de Walford Davies) e uma ficha de estoque
+    da Better World Books. Título curto vai pelo Open Library, que é catálogo
+    curado; se nem lá resolver, a obra fica sem selo — que é a resposta honesta.
+    """
+    if not titulo_especifico(titulo):
+        return None
+    try:
+        q = urllib.parse.quote(f'title:("{titulo}") AND creator:("{autor}")')
+        url = (
+            "https://archive.org/advancedsearch.php"
+            f"?q={q}&fl%5B%5D=identifier&fl%5B%5D=access-restricted-item"
+            "&fl%5B%5D=title&fl%5B%5D=creator&fl%5B%5D=mediatype&rows=8&page=1&output=json"
+        )
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        dados = json.loads(urllib.request.urlopen(req, timeout=25).read())
+        for d in dados.get("response", {}).get("docs", []):
+            t = d.get("title", "")
+            if isinstance(t, list):
+                t = t[0] if t else ""
+            if not t or d.get("mediatype") not in ("texts", None):
+                continue
+            if id_suspeito(d.get("identifier", "")):
+                continue
+            if any(j in normalizar(t) for j in JUNK_IA):
+                continue
+            if not titulo_contido(titulo, t):
+                continue
+            cr = d.get("creator", "")
+            if isinstance(cr, list):
+                cr = cr[0] if cr else ""
+            if cr:
+                if not autor_concorda(autor, cr):
+                    continue
+            elif not titulo_especifico(titulo):
+                continue
+            restrito = str(d.get("access-restricted-item", "")).lower()
+            selo = "emprestimo" if restrito == "true" else "livre"
+            return selo, f"https://archive.org/details/{d['identifier']}", t
+    except Exception:
+        pass
+    return None
+
+
+# Formato "horizontal" da bibliografia do dossiê de Números: várias obras por
+# linha, separadas por `|`, SEM ISBN — só "**Gray 1903**, *Título* (Série, Ed.)".
+# Sem este caminho o dossiê rendia 2 linhas de tabela contra as 26 obras que o
+# próprio relatório dele declara.
+ENTRADA_H = re.compile(r"\*\*([^*]{2,44}?)\*\*\s*,?\s*\*([^*]{3,130})\*")
+
+
+def entradas_horizontais(texto: str) -> list[dict]:
+    bloco = secao_bibliografia(texto)
+    fora: list[dict] = []
+    vistos: set[tuple[str, str]] = set()
+    for m in ENTRADA_H.finditer(bloco):
+        cabeca, titulo = m.group(1).strip(), m.group(2).strip()
+        ma = re.match(r"([A-Za-zÀ-ÿ.'&\-\s]{2,40}?)\s+((?:1[5-9]|20)\d{2})\b", cabeca)
+        if not ma:
+            continue
+        autor, ano = ma.group(1).strip(), ma.group(2)
+        chave = (autor.lower(), titulo.lower()[:30])
+        if chave in vistos:
+            continue
+        vistos.add(chave)
+        fora.append({"autor": autor, "ano": ano, "titulo": titulo})
+    return fora
+
+
+def selo_por_titulo(autor: str, titulo: str) -> tuple[str, str, str]:
+    """Selo para uma obra buscada por título+autor. Mesma escada do ISBN."""
+    ia = ia_por_titulo(titulo, autor)
+    if ia:
+        rotulo = f"{autor} {titulo}".strip()
+        return ia[0], ia[1], rotulo
+    ol = ol_por_titulo(autor, titulo)
+    if ol:
+        t, key = ol
+        url = f"https://openlibrary.org{key}" if key else ""
+        if url:
+            return "biblioteca", url, f"{autor} — {t}".strip(" —")
+    return "indeterminado", "", f"{autor} {titulo}".strip()
+
+
 def analisar(slug: str) -> dict:
     texto = (DOSSIES / f"{slug}.mdx").read_text(encoding="utf-8")
+
+    # O próprio script insere a seção 'Como conseguir estas obras' dentro da
+    # bibliografia. Sem cortá-la aqui, a segunda execução leria a tabela que ele
+    # mesmo escreveu como se fosse bibliografia — e duplicaria as obras. Cortar
+    # torna a re-execução idempotente.
+    i = texto.find(MARCADOR)
+    if i != -1:
+        texto = texto[:i]
+
     bloco = secao_bibliografia(texto)
 
     obras: list[dict] = []
@@ -296,7 +523,12 @@ def analisar(slug: str) -> dict:
         # precedência: livre > empréstimo > biblioteca > compra
         ordem = ["livre", "emprestimo", "biblioteca", "compra"]
         selo = next((o for o in ordem if o in selos), "compra")
-        prova = next((u for u in de_obra if selo_do_link(u) == selo), de_obra[0])
+        # Entre os links que sustentam o mesmo selo, prefiro https. Alguns
+        # servidores acadêmicos são http-only (rosetta.reltech.org responde 200 em
+        # http e não atende em https): o link http continua servindo e por isso
+        # NÃO é descartado — só perde para um https equivalente.
+        cands = [u for u in de_obra if selo_do_link(u) == selo]
+        prova = next((u for u in cands if u.startswith("https://")), cands[0])
 
         obras.append({"rotulo": rotulo, "selo": selo, "url": prova})
 
@@ -309,6 +541,7 @@ def analisar(slug: str) -> dict:
         # Rótulos locais expostos aqui porque `texto` é local desta função: quem
         # precisa deles (o modo --online, em main) não tem o texto em mãos.
         "rotulos": rotulos_por_isbn(texto),
+        "entradas": entradas_horizontais(texto),
         "tem_bibliografia": bool(bloco.strip()),
     }
 
@@ -385,6 +618,8 @@ def ia_por_isbn(isbn: str) -> tuple[str, str, str] | None:
             if not titulo:
                 continue
             if d.get("mediatype") not in ("texts", None):
+                continue
+            if id_suspeito(d.get("identifier", "")):
                 continue
             if any(j in normalizar(titulo) for j in JUNK_IA):
                 continue
@@ -497,7 +732,7 @@ def main() -> int:
         r = analisar(slug)
 
         # Dossiês sem link na bibliografia: o selo sai do ISBN.
-        if args.online and not r["obras"] and r["isbns"]:
+        if args.online and r["isbns"]:
             print(f"--- {slug}: {len(r['isbns'])} ISBNs, checando online...")
             locais = r["rotulos"]
             # Em paralelo: em série, um punhado de consultas lentas transforma
@@ -509,10 +744,42 @@ def main() -> int:
                     r.setdefault("isbns_sem_selo", []).append(isbn)
                     continue
                 # O rótulo do dossiê tem precedência sobre o da API (ver
-                # rotulos_por_isbn: a API atribui autor errado em metadado podre).
-                rotulo = locais.get(isbn) or rot_api
+                # rotulos_por_isbn: a API atribui autor errado em metadado podre),
+                # mas só quando é informativo — senão vale o da API, que ao menos
+                # traz o título.
+                rot_local = locais.get(isbn, "")
+                rotulo = rot_local if _rotulo_forte(rot_local) else (rot_api or rot_local)
                 r["obras"].append(
-                    {"rotulo": rotulo, "selo": selo, "url": url, "isbn": isbn}
+                    {
+                        "rotulo": rotulo,
+                        "rotulo_local": rot_local,
+                        "rotulo_api": rot_api,
+                        "selo": selo,
+                        "url": url,
+                        "isbn": isbn,
+                    }
+                )
+
+        # Caminho por TÍTULO: o dossiê de Números lista as obras sem ISBN nenhum
+        # ("**Gray 1903**, *A Critical...* (ICC, T&T Clark)"), separadas por `|`.
+        # O caminho por ISBN rendia 2 linhas contra as 26 obras que o relatório do
+        # próprio dossiê declara. Rodo quando o resultado ficou magro.
+        if args.online and len(r["obras"]) < MIN_OBRAS and r["entradas"]:
+            ent = r["entradas"]
+            print(f"--- {slug}: {len(ent)} entradas sem ISBN, buscando por título...")
+            with ThreadPoolExecutor(max_workers=6) as pool:
+                res2 = list(
+                    pool.map(lambda e: selo_por_titulo(e["autor"], e["titulo"]), ent)
+                )
+            for e, (selo, url, _rot) in zip(ent, res2):
+                if selo == "indeterminado":
+                    continue
+                r["obras"].append(
+                    {
+                        "rotulo": f"{e['autor']} {e['ano']}, {e['titulo']}",
+                        "selo": selo,
+                        "url": url,
+                    }
                 )
 
         total += len(r["obras"])

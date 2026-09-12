@@ -10,7 +10,6 @@ livro: numeros
 import Card from '../../../components/Card.astro';
 import CardGrid from '../../../components/CardGrid.astro';
 import Aside from '../../../components/Aside.astro';
-import SeloAcesso from '../../../components/SeloAcesso.astro';
 import LinkButton from '../../../components/LinkButton.astro';
 
 <Aside type="note" title="Rastreabilidade acadêmica">
@@ -295,28 +294,6 @@ Desequilíbrio a declarar: as séries modernas de comentário a Números são ma
 - EN-Wikipedia, "Book of Numbers"; PT-Wikipedia, "Livro de Números", "Os Dez Mandamentos (telenovela)", "A Terra Prometida", "The Exodus Decoded", "Tradução Ecumênica da Bíblia"; EN-Wikipedia, "Deir Alla inscription". **[V-Wiki]**
 
 ---
-
-### Como conseguir estas obras
-
-A bibliografia de um site didático não é a de uma tese: cita o que importa **e o leitor consegue alcançar**. O selo diz por onde — e a tabela está ordenada por acessibilidade, do que se lê hoje ao que só se compra.
-
-*1 livre · 10 biblioteca.*
-
-| Obra | Acesso | Onde |
-| --- | --- | --- |
-| Gray 1903, A Critical and Exegetical Commentary on Numbers | <SeloAcesso tipo="livre" /> | [Internet Archive](https://archive.org/details/criticalexegetic04gray) |
-| Tikva Frymer-Kensky — Reading the Women of the Bible | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780805211825) |
-| Olson 1985, The Death of the Old and the Birth of the New | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL3231143W) |
-| Milgrom 1990, The JPS Torah Commentary: Numbers | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL4801095W) |
-| Levine 1993, Numbers 1–20 | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL4771955W) |
-| Ashley 1993, The Book of Numbers | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL13547226W) |
-| Sakenfeld 1995, Numbers: Journeying with God | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL34273013W) |
-| Levine 2000, Numbers 21–36 | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL18455511W) |
-| Coats 1968, Rebellion in the Wilderness | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL1955410W) |
-| Hackett 1984, The Balaam Text from Deir ʿAlla | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL5607465W) |
-| Hoftijzer & van der Kooij 1991, The Balaam Text from Deir ʿAllā Re-evaluated | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/works/OL20963182W) |
-
-Selo `[esgotado]` não aparece aqui: quando a obra não é alcançável de nenhuma forma, o texto aponta o substituto acessível ao lado dela.
 
 ## RELATÓRIO DE CONTAGEM (verificação 2026-09-10)
 

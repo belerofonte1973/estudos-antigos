@@ -10,7 +10,6 @@ livro: exodo
 import Card from '../../../components/Card.astro';
 import CardGrid from '../../../components/CardGrid.astro';
 import Aside from '../../../components/Aside.astro';
-import SeloAcesso from '../../../components/SeloAcesso.astro';
 import LinkButton from '../../../components/LinkButton.astro';
 
 <Aside type="note" title="Rastreabilidade acadêmica">
@@ -249,36 +248,3 @@ A decisão **não é dada pela arqueologia** — a mesma evidência é lida a pa
 ## Autores-âncora (validação OL, título+autor)
 
 Alter (2004, *The Five Books of Moses*, Norton [V-OL] ISBN 9780393019551) · Propp (vol. I, Ex 1–18, Doubleday/Anchor, 1998 [V-OL]; vol. II, Ex 19–40, 2006 [V-OL] ISBN 9780385246934; reed. Yale UP 2006 ISBN 9780300261103; anos de reimpressão «2006/2007» [W]) · Childs (1974 [V-OL] ISBN 9780664229689) · Fretheim (1991 [V-OL] ISBN 9780804231022) · Durham (1987 [V-OL] ISBN 9780849902024) · Kitchen (2003 [V-OL] ISBN 9780802803962) · Finkelstein & Silberman (2001 [V-OL] ISBN 9780743223386) · Meyers (2005 [V-OL] ISBN 9780521002912) · Sarna (*Exploring Exodus*, 1986 [V-OL] ISBN 9780805210637; JPS *Exodus*, 1991 [V-OL] ISBN 9780827603271) · Mendenhall (1955 [V-OL]) · Haran (1977/78 [V-OL] ISBN 9781575061856) · Gressmann (1913 [V-OL] ISBN 9780790514079) · Lewis (1980 [V-OL] ISBN 9780897571043) · Wellhausen (1885, reimpr. [V-OL] ISBN 9781555409388) · Humphreys (2003 [V-OL] ISBN 9780060514044) · Dozeman (2009 [V-OL]).
-
-### Como conseguir estas obras
-
-A bibliografia de um site didático não é a de uma tese: cita o que importa **e o leitor consegue alcançar**. O selo diz por onde — e a tabela está ordenada por acessibilidade, do que se lê hoje ao que só se compra.
-
-*8 emprestimo · 13 biblioteca.*
-
-| Obra | Acesso | Onde |
-| --- | --- | --- |
-| Brevard S. Childs — Book of Exodus (Old Testament Library) | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/bookofexoduscrit0000chil) |
-| Nahum M. Sarna — Exploring Exodus | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/exploringexoduso0000sarn) |
-| Brian Lewis — The Sargon Legend | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/sargonlegendstud0000lewi) |
-| deve-se corrigir para C. Drews & Han (2010) para o wind setdown e para R. Drews, The End of the … | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/endofbronzeagech0000drew) |
-| Sociedade Bíblica Internacional 2000 | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/bibliasagradanov0000god) |
-| Robert Alter — The Five Books of Moses | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/fivebooksofmoses0000unse) |
-| vol. II, Ex 19–40, 2006 | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/exodusnewtransla0000unse) |
-| Nahum M. Sarna — Exodus | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/jpstorahcommenta0000unse) |
-| Julius Wellhausen ; with a reprint of the article Israel from the Encyclopaedia Britannica ; pre… | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9781555409388) |
-| Finkelstein & Silberman (2001), The Bible Unearthed | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780743223386) |
-| Kitchen (2003), On the Reliability of the Old Testament | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780802803962) |
-| Meyers 2005 lê o livro como «memória cultural», não como relato histórico | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780521002912) |
-| John I. Durham — Exodus | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780849902024) |
-| estudo de referência: B. Lewis, The Sargon Legend (ASOR, 1980 ISBN ). H. Gressmann, Mose und sei… | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780790514079) |
-| 3:11) e celebra a libertação coletiva, não o ascenso individual ( leitura exegética corrente). H… | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780060514044) |
-| Tradição real: M. Haran, Temples and Temple Service in Ancient Israel | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9781575061856) |
-| 6. Ano 1981 da 1ª trad. portuguesa da Bíblia de Jerusalém (fonte: cs.wikipedia) e ISBN Paulus | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9788534920001) |
-| ed. de bolso/estudo, Editora Vida 2002 | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9788573674842) |
-| Jan Assmann — Moses the Egyptian | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780674587397) |
-| William Henry Propp — Exodus 19–40 | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780300261103) |
-| Terence E. Fretheim — Exodus | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/9780804231022) |
-
-Selo `[esgotado]` não aparece aqui: quando a obra não é alcançável de nenhuma forma, o texto aponta o substituto acessível ao lado dela.
-

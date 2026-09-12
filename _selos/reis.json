@@ -1,0 +1,85 @@
+{
+ "slug": "reis",
+ "anos": 9,
+ "obras": [
+  {
+   "rotulo": "Noth, M., Überlieferungsgeschichtliche Studien (Niemeyer, 1943). Internet Archive: https://archive.org/details",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/deuteronomistich0000noth"
+  },
+  {
+   "rotulo": "Cross, F. M., \"The Themes of the Book of Kings…\", em Canaanite Myth and Hebrew Epic (Harvard UP, 1973). texto:",
+   "selo": "livre",
+   "url": "http://rosetta.reltech.org/Logsdon/BIBL6301/Cross.pdf"
+  },
+  {
+   "rotulo": "Thiele, E. R., The Mysterious Numbers of the Hebrew Kings (1951; 3.ª ed. Zondervan, 1983). Internet Archive: h",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/mysteriousnumber0000thie"
+  },
+  {
+   "rotulo": "Hughes, J., Secrets of the Times: Myth and History in Biblical Chronology (JSOTSup 111; Sheffield, 1990). Them",
+   "selo": "compra",
+   "url": "https://books.google.com/books/about/Secrets_of_the_Times.html?id=FeDYAAAAMAAJ"
+  },
+  {
+   "rotulo": "Finkelstein, I. — cronologia baixa e a \"United Monarchy\". Bible Archaeology: https://biblearchaeology.org/rese",
+   "selo": "livre",
+   "url": "https://biblearchaeology.org/research-articles/the-united-monarchy-under-david-and-solomon/"
+  },
+  {
+   "rotulo": "Estela de Mesha (Louvre AO 5066; descoberta 1868, Dibon; c. 840 a.C.). LouvreBible: https://louvrebible.org.uk",
+   "selo": "livre",
+   "url": "https://www.biblicalarchaeology.org/daily/biblical-artifacts/inscriptions/what-does-the-mesha-stele-say/"
+  },
+  {
+   "rotulo": "Lourenço, F. (trad.), Bíblia — Volume V, Tomo I: Antigo Testamento — Os Livros Históricos (Lisboa: Quetzal, 20",
+   "selo": "compra",
+   "url": "https://www.wook.pt/livro/biblia-volume-v-tomo-i-frederico-lourenco/21328922"
+  },
+  {
+   "rotulo": "Wiseman, D. J., 1 e 2 Reis: Introdução e Comentário (Série Cultura Bíblica; Vida Nova). Vida Nova: https://www",
+   "selo": "compra",
+   "url": "https://www.vidanova.com.br/livros/1-e-2reis-introducao-e-comentario-serie-cultura-biblica"
+  },
+  {
+   "rotulo": "Kebra Nagast (ge'ez; trad. ingl. E. A. W. Budge). Sacred Texts: https://sacred-texts.com/afr/kn/index.htm.",
+   "selo": "livre",
+   "url": "https://sacred-texts.com/afr/kn/index.htm"
+  },
+  {
+   "rotulo": "K. L. Noll — Raising Up a Faithful Exegete",
+   "rotulo_local": "De Gruyter/Brill: [https://www.degruyterbrill.com/document/doi/10.1515/",
+   "rotulo_api": "K. L. Noll — Raising Up a Faithful Exegete",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9781575066264",
+   "isbn": "9781575066264"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "9789726523789",
+  "9789897224621",
+  "9788527503716",
+  "2321024121",
+  "0804950105",
+  "9781575066264"
+ ],
+ "rotulos": {
+  "9789726523789": "PT-PT), 7.ª ed",
+  "9789897224621": "Lourenço, F. (trad.), Bíblia — Volume V, Tomo I: Antigo Testamento — Os Livros Históricos",
+  "2321024121": "Radiocarbono da destruição de Jerusalém e Láquis. Um estudo de 2024, com 103 medições de 14C em contextos do Ferro II de Jerusalém, mostrou desvios de calibração regionais relevantes e refinou as fases construtivas da cidade em relação às campanhas assíria (701) e babilônica (586)",
+  "0804950105": "A arqueologia de Edom e a datação do cobre do Arabá. Levy et al. (2008), na PNAS, dataram por radiocarbono de alta precisão a produção de cobre de Khirbat en-Nahas (Faynan, Jordânia) e empurraram a cronologia do Ferro de Edom cerca de dois séculos para trás (para c. 1200–500 a.C.), sugerindo entidade política edomita anterior ao previsto",
+  "9788527503716": "7. ISBN de comentários PT: o",
+  "9781575066264": "De Gruyter/Brill: [https://www.degruyterbrill.com/document/doi/10.1515/"
+ },
+ "entradas": [],
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9789726523789",
+  "9789897224621",
+  "9788527503716",
+  "2321024121",
+  "0804950105"
+ ]
+}

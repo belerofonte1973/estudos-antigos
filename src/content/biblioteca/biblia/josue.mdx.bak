@@ -10,7 +10,6 @@ livro: josue
 import Card from '../../../components/Card.astro';
 import CardGrid from '../../../components/CardGrid.astro';
 import Aside from '../../../components/Aside.astro';
-import SeloAcesso from '../../../components/SeloAcesso.astro';
 import LinkButton from '../../../components/LinkButton.astro';
 
 <Aside type="note" title="Rastreabilidade acadêmica">
@@ -294,25 +293,3 @@ Dois dados que o texto ignora. A **topografia**: Tell es-Sultan é um *tell* mod
 - **Britannica**, «Nevi'im (Prophets)» e «Book of Joshua» [W]: [https://www.britannica.com/topic/biblical-literature/The-Nevi-im-Prophets](https://www.britannica.com/topic/biblical-literature/The-Nevi-im-Prophets).
 
 *Nota de método:* as fontes marcadas [V] foram conferidas nesta sessão (catálogo de editora, repositório de manuscritos, periódico ou registro Open Library); as marcadas [W] são obras/registros canônicos conhecidos citados sem conferência direta; as marcadas [—] são lacunas assumidas. Nenhum número de página, ISBN ou DOI foi inventado.
-
-### Como conseguir estas obras
-
-A bibliografia de um site didático não é a de uma tese: cita o que importa **e o leitor consegue alcançar**. O selo diz por onde — e a tabela está ordenada por acessibilidade, do que se lê hoje ao que só se compra.
-
-*4 livre · 2 emprestimo · 2 biblioteca · 2 compra.*
-
-| Obra | Acesso | Onde |
-| --- | --- | --- |
-| Kenyon, K., Tell es-Sultan (Jericó), escavações 1952–1958; destruição do Bronze Médio-Recente c.… | <SeloAcesso tipo="livre" /> | [mdpi.com](https://www.mdpi.com/2077-1444/14/6/796) |
-| Alt, A. (1939) e Noth, M — modelo da infiltração pacífica; Mendenhall, G. E., «The Hebrew Conque… | <SeloAcesso tipo="livre" /> | [library.biblicalarchaeology.org](https://library.biblicalarchaeology.org/article/israels-emergence-in-canaan/) |
-| 4QJoshua (4Q47, 4Q48), Qumran, Caverna 4 | <SeloAcesso tipo="livre" /> | [deadseascrolls.org.il](https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q47-1) |
-| Britannica, «Nevi'im (Prophets)» e «Book of Joshua» | <SeloAcesso tipo="livre" /> | [britannica.com](https://www.britannica.com/topic/biblical-literature/The-Nevi-im-Prophets) |
-| Noth, M., Überlieferungsgeschichtliche Studien (Halle: Niemeyer, 1943) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/books/OL19814792M) |
-| Finkelstein, I. & Silberman, N. A., The Bible Unearthed (New York: Free Press, 2001/2002) | <SeloAcesso tipo="emprestimo" /> | [Open Library](https://openlibrary.org/isbn/9780743223386) |
-| Younger, K. Lawson, Jr — Ancient Conquest Accounts | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/0567557049) |
-| Samuel Sandmel — Anti-Semitism in the New Testament? | <SeloAcesso tipo="biblioteca" /> | [Open Library](https://openlibrary.org/isbn/0800605217) |
-| Quetzal Editores — Bíblia, Volume V, Tomo I: Antigo Testamento — os Livros Históricos, trad. Fre… | <SeloAcesso tipo="compra" /> | [quetzaleditores.pt](https://www.quetzaleditores.pt/produtos/ficha/biblia-volume-v-tomo-i/21328922) |
-| Howard Jr., D. M., Josué: Comentário Exegético (Vida Nova, 2024) | <SeloAcesso tipo="compra" /> | [vidanova.com.br](https://www.vidanova.com.br/) |
-
-Selo `[esgotado]` não aparece aqui: quando a obra não é alcançável de nenhuma forma, o texto aponta o substituto acessível ao lado dela.
-

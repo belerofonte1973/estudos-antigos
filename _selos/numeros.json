@@ -1,0 +1,184 @@
+{
+ "slug": "numeros",
+ "anos": 0,
+ "obras": [
+  {
+   "rotulo": "Tikva Frymer-Kensky — Reading the Women of the Bible",
+   "rotulo_local": "",
+   "rotulo_api": "Tikva Frymer-Kensky — Reading the Women of the Bible",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780805211825",
+   "isbn": "9780805211825"
+  },
+  {
+   "rotulo": "Gray 1903, A Critical and Exegetical Commentary on Numbers",
+   "selo": "livre",
+   "url": "https://archive.org/details/criticalexegetic04gray"
+  },
+  {
+   "rotulo": "Budd 1984, Numbers",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL2985116W"
+  },
+  {
+   "rotulo": "Olson 1985, The Death of the Old and the Birth of the New",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL3231143W"
+  },
+  {
+   "rotulo": "Milgrom 1990, The JPS Torah Commentary: Numbers",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL4801095W"
+  },
+  {
+   "rotulo": "Levine 1993, Numbers 1–20",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL4771955W"
+  },
+  {
+   "rotulo": "Ashley 1993, The Book of Numbers",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL13547226W"
+  },
+  {
+   "rotulo": "Davies 1995, Numbers",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL2935885W"
+  },
+  {
+   "rotulo": "Sakenfeld 1995, Numbers: Journeying with God",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL34273013W"
+  },
+  {
+   "rotulo": "Olson 1996, Numbers",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL3231144W"
+  },
+  {
+   "rotulo": "Levine 2000, Numbers 21–36",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL18455511W"
+  },
+  {
+   "rotulo": "Coats 1968, Rebellion in the Wilderness",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL1955410W"
+  },
+  {
+   "rotulo": "Hackett 1984, The Balaam Text from Deir ʿAlla",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL5607465W"
+  },
+  {
+   "rotulo": "Hoftijzer & van der Kooij 1991, The Balaam Text from Deir ʿAllā Re-evaluated",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/works/OL20963182W"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "9788515030163",
+  "9780805211825",
+  "9786559282012",
+  "9783110707014"
+ ],
+ "rotulos": {
+  "9788515030163": "3ª ed. 1994",
+  "9786559282012": "4. Correção de validação anterior (ago-2026): a entrada \"Torah Comentada, Jacyntho Lins Brandão, Autêntica 2023",
+  "9783110707014": "Achenbach 2021, \"Theocratic Reworking in the Pentateuch\", De Gruyter, DOI 10.1515/"
+ },
+ "entradas": [
+  {
+   "autor": "Gray",
+   "ano": "1903",
+   "titulo": "A Critical and Exegetical Commentary on Numbers"
+  },
+  {
+   "autor": "Noth",
+   "ano": "1968",
+   "titulo": "Numbers"
+  },
+  {
+   "autor": "Budd",
+   "ano": "1984",
+   "titulo": "Numbers"
+  },
+  {
+   "autor": "Olson",
+   "ano": "1985",
+   "titulo": "The Death of the Old and the Birth of the New"
+  },
+  {
+   "autor": "Milgrom",
+   "ano": "1990",
+   "titulo": "The JPS Torah Commentary: Numbers"
+  },
+  {
+   "autor": "Levine",
+   "ano": "1993",
+   "titulo": "Numbers 1–20"
+  },
+  {
+   "autor": "Ashley",
+   "ano": "1993",
+   "titulo": "The Book of Numbers"
+  },
+  {
+   "autor": "Davies",
+   "ano": "1995",
+   "titulo": "Numbers"
+  },
+  {
+   "autor": "Sakenfeld",
+   "ano": "1995",
+   "titulo": "Numbers: Journeying with God"
+  },
+  {
+   "autor": "Newsom & Ringe",
+   "ano": "1992",
+   "titulo": "Women's Bible Commentary"
+  },
+  {
+   "autor": "Olson",
+   "ano": "1996",
+   "titulo": "Numbers"
+  },
+  {
+   "autor": "Levine",
+   "ano": "2000",
+   "titulo": "Numbers 21–36"
+  },
+  {
+   "autor": "Coats",
+   "ano": "1968",
+   "titulo": "Rebellion in the Wilderness"
+  },
+  {
+   "autor": "Hoftijzer & van der Kooij",
+   "ano": "1976",
+   "titulo": "Aramaic Texts from Deir ʿAlla"
+  },
+  {
+   "autor": "Hackett",
+   "ano": "1984",
+   "titulo": "The Balaam Text from Deir ʿAlla"
+  },
+  {
+   "autor": "Hoftijzer & van der Kooij",
+   "ano": "1991",
+   "titulo": "The Balaam Text from Deir ʿAllā Re-evaluated"
+  },
+  {
+   "autor": "Finkelstein & Silberman",
+   "ano": "2001",
+   "titulo": "The Bible Unearthed"
+  }
+ ],
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9788515030163",
+  "9786559282012",
+  "9783110707014"
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "slug": "deuteronomio",
+ "anos": 10,
+ "obras": [
+  {
+   "rotulo": "de Wette (1805), tese sobre Dt como \"livro achado\" de Josias. Britannica: https://www.britannica.com/biography",
+   "selo": "livre",
+   "url": "https://www.britannica.com/biography/Wilhelm-M-L-de-Wette"
+  },
+  {
+   "rotulo": "Noth, Überlieferungsgeschichtliche Studien (Niemeyer, 1943). OL: https://openlibrary.org/books/OL19814792M. — ",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/books/OL19814792M"
+  },
+  {
+   "rotulo": "von Rad, Das formgeschichtliche Problem des Hexateuch (Kohlhammer, 1938). IxTheo: https://www.ixtheo.de/Record",
+   "selo": "livre",
+   "url": "https://www.ixtheo.de/Record/143610694"
+  },
+  {
+   "rotulo": "Weinfeld, Deuteronomy and the Deuteronomic School (Clarendon, 1972). OL: https://openlibrary.org/works/OL37440",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/works/OL3744015W"
+  },
+  {
+   "rotulo": "Levinson, Deuteronomy and the Hermeneutics of Legal Innovation (OUP, 1997). OL: https://openlibrary.org/works/",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/works/OL3349578W"
+  },
+  {
+   "rotulo": "Mayes, Deuteronomy (NCB; 1979/1981). OL: https://openlibrary.org/works/OL6437768W. — The Story of Israel Betwe",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/works/OL6437768W"
+  },
+  {
+   "rotulo": "Nelson, Deuteronomy: A Commentary (OTL, Westminster John Knox, 2002). OL: https://openlibrary.org/works/OL1918",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/works/OL1918496W"
+  },
+  {
+   "rotulo": "Block, Deuteronomy (NIVAC; Zondervan, 2012). Zondervan: https://zondervanacademic.com/products/deuteronomy.",
+   "selo": "compra",
+   "url": "https://zondervanacademic.com/products/deuteronomy"
+  },
+  {
+   "rotulo": "Tigay, Deuteronomy (JPS Torah Commentary, 1996). OL: https://openlibrary.org/works/OL3237772W.",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/works/OL3237772W"
+  },
+  {
+   "rotulo": "Kline, Treaty of the Great King (Eerdmans, 1963). OL: https://openlibrary.org/works/OL6942220W.",
+   "selo": "emprestimo",
+   "url": "https://openlibrary.org/works/OL6942220W"
+  },
+  {
+   "rotulo": "Moshe Weinfeld. — Deuteronomy 1-11",
+   "rotulo_local": "",
+   "rotulo_api": "Moshe Weinfeld. — Deuteronomy 1-11",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/deuteronomy111an00mosh",
+   "isbn": "0385175930"
+  },
+  {
+   "rotulo": "Jan Assmann ; translated by Robert Savage. — The price of monotheism",
+   "rotulo_local": "",
+   "rotulo_api": "Jan Assmann ; translated by Robert Savage. — The price of monotheism",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780804761604",
+   "isbn": "9780804761604"
+  },
+  {
+   "rotulo": "Doubleday 1991 / Yale UP 2008). Yale UP: [https://yalebooks.yale.edu/book/",
+   "rotulo_local": "Doubleday 1991 / Yale UP 2008). Yale UP: [https://yalebooks.yale.edu/book/",
+   "rotulo_api": "Deuteronomy 111 A New Translation With Introduction And Commentary",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780300139433",
+   "isbn": "9780300139433"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "0385175930",
+  "9788515030163",
+  "9780804761604",
+  "9780300139433"
+ ],
+ "rotulos": {
+  "9780300139433": "Doubleday 1991 / Yale UP 2008). Yale UP: [https://yalebooks.yale.edu/book/"
+ },
+ "entradas": [],
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9788515030163"
+ ]
+}

@@ -3,73 +3,153 @@
  "anos": 0,
  "obras": [
   {
-   "rotulo": "Friedman 1987/1997",
+   "rotulo": "Richard Elliott Friedman. — Who wrote the Bible?",
+   "rotulo_local": "Friedman 1987/1997",
+   "rotulo_api": "Richard Elliott Friedman. — Who wrote the Bible?",
    "selo": "emprestimo",
    "url": "https://archive.org/details/whowrotebible0000frie",
    "isbn": "9780060630355"
   },
   {
-   "rotulo": "Alter 1996",
+   "rotulo": "Anchor Yale Bible Reference Library : Composition of the Pentateuch",
+   "rotulo_local": "Baden 2012",
+   "rotulo_api": "Anchor Yale Bible Reference Library : Composition of the Pentateuch",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780300152647",
+   "isbn": "9780300152647"
+  },
+  {
+   "rotulo": "translation and commentary, Robert Alter. — Genesis",
+   "rotulo_local": "Alter 1996",
+   "rotulo_api": "translation and commentary, Robert Alter. — Genesis",
    "selo": "emprestimo",
    "url": "https://archive.org/details/genesis0000unse_h9l6",
    "isbn": "9780393039818"
   },
   {
-   "rotulo": "George 1999",
+   "rotulo": "The Epic of Gilgamesh",
+   "rotulo_local": "George 1999",
+   "rotulo_api": "The Epic of Gilgamesh",
    "selo": "emprestimo",
    "url": "https://archive.org/details/isbn_9780140449198",
    "isbn": "9780140449198"
   },
   {
-   "rotulo": "Moran 1992",
+   "rotulo": "Samuel P. Huntington — Death and Resurrection of the Beloved Son",
+   "rotulo_local": "Levenson 1993",
+   "rotulo_api": "Samuel P. Huntington — Death and Resurrection of the Beloved Son",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780300157475",
+   "isbn": "9780300157475"
+  },
+  {
+   "rotulo": "commentary by Nahum M. Sarna. — Genesis =",
+   "rotulo_local": "Sarna 1989",
+   "rotulo_api": "commentary by Nahum M. Sarna. — Genesis =",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780827603264",
+   "isbn": "9780827603264"
+  },
+  {
+   "rotulo": "edited and translated by William L. Moran. — The Amarna Letters",
+   "rotulo_local": "Moran 1992",
+   "rotulo_api": "edited and translated by William L. Moran. — The Amarna Letters",
    "selo": "emprestimo",
    "url": "https://archive.org/details/amarnaletters0000unse_c3q4",
    "isbn": "0801842514"
   },
   {
-   "rotulo": "NVI 2002",
+   "rotulo": "James L. Kugel — The Bible As It Was",
+   "rotulo_local": "Kugel 1997",
+   "rotulo_api": "James L. Kugel — The Bible As It Was",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780965085472",
+   "isbn": "9780965085472"
+  },
+  {
+   "rotulo": "Bíblia de Estudo Almeida - Luxo, Beiras Douradas - Corrigida - Preta",
+   "rotulo_local": "ARC Estudo 2004",
+   "rotulo_api": "Bíblia de Estudo Almeida - Luxo, Beiras Douradas - Corrigida - Preta",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9788531103278",
+   "isbn": "9788531103278"
+  },
+  {
+   "rotulo": "Bíblia Sagrada Nova Versão Internacional de Bolso - Vinho",
+   "rotulo_local": "NVI 2002",
+   "rotulo_api": "Bíblia Sagrada Nova Versão Internacional de Bolso - Vinho",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9788573674842",
    "isbn": "9788573674842"
   },
   {
-   "rotulo": "NTLH 2000",
+   "rotulo": "Bíblia Sagrada",
+   "rotulo_local": "NTLH 2000",
+   "rotulo_api": "Bíblia Sagrada",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9788531103377",
    "isbn": "9788531103377"
   },
   {
-   "rotulo": "Bíblia Pastoral 1990",
+   "rotulo": "Bíblia Sagrada",
+   "rotulo_local": "2000:  /",
+   "rotulo_api": "Bíblia Sagrada",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9788531103384",
+   "isbn": "9788531103384"
+  },
+  {
+   "rotulo": "Bíblia de Jerusalém",
+   "rotulo_local": "Bíblia de Jerusalém",
+   "rotulo_api": "Bíblia de Jerusalém",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9788534913218",
+   "isbn": "9788534913218"
+  },
+  {
+   "rotulo": "Bíblia Sagrada",
+   "rotulo_local": "Bíblia Pastoral 1990",
+   "rotulo_api": "Bíblia Sagrada",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9788534902786",
    "isbn": "9788534902786"
   },
   {
-   "rotulo": "Brueggemann 1982",
+   "rotulo": "Walter Brueggemann — Genesis: Interpretation",
+   "rotulo_local": "Brueggemann 1982",
+   "rotulo_api": "Walter Brueggemann — Genesis: Interpretation",
    "selo": "emprestimo",
    "url": "https://archive.org/details/genesis0000brue_y2q6",
    "isbn": "9780804231015"
   },
   {
-   "rotulo": "Loza Vera 2007",
+   "rotulo": "José Loza Vera, O.P., y Raúl Duarte Castillo — Introducción al Pentateuco",
+   "rotulo_local": "Loza Vera 2007",
+   "rotulo_api": "José Loza Vera, O.P., y Raúl Duarte Castillo — Introducción al Pentateuco",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9788481692426",
    "isbn": "9788481692426"
   },
   {
    "rotulo": "O motivo do herói exposto. A lenda de Sargão de Acad (texto neoassírio) narra o rei exposto num cesto de juncos sobre o Eufrates — topos compartilhado no antigo Oriente Próximo e paralelo à exposição de Moisés (Êx 2). Estudo de referência: B. Lewis, The Sargon Legend",
+   "rotulo_local": "O motivo do herói exposto. A lenda de Sargão de Acad (texto neoassírio) narra o rei exposto num cesto de juncos sobre o Eufrates — topos compartilhado no antigo Oriente Próximo e paralelo à exposição de Moisés (Êx 2). Estudo de referência: B. Lewis, The Sargon Legend",
+   "rotulo_api": "Brian Lewis. — The Sargon Legend",
    "selo": "emprestimo",
    "url": "https://archive.org/details/sargonlegendstud0000lewi",
    "isbn": "9780897571043"
   },
   {
-   "rotulo": "Kugel 2007",
+   "rotulo": "James L. Kugel — How to Read the Bible",
+   "rotulo_local": "Kugel 2007",
+   "rotulo_api": "James L. Kugel — How to Read the Bible",
    "selo": "emprestimo",
    "url": "https://archive.org/details/howtoreadbiblegu0000kuge",
    "isbn": "9780743235860"
   },
   {
-   "rotulo": "Blenkinsopp 1992",
+   "rotulo": "The Pentateuch An Introduction To The First Five Books Of The Bible",
+   "rotulo_local": "Blenkinsopp 1992",
+   "rotulo_api": "The Pentateuch An Introduction To The First Five Books Of The Bible",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780300140217",
    "isbn": "9780300140217"
@@ -124,15 +204,9 @@
   "9788534913218": "Bíblia de Jerusalém",
   "9788534902786": "Bíblia Pastoral 1990"
  },
+ "entradas": [],
  "tem_bibliografia": true,
  "isbns_sem_selo": [
-  "9780300152647",
-  "9780300157475",
-  "9780827603264",
-  "9780965085472",
-  "9788531103278",
-  "9788531103384",
-  "9788534913218",
   "9788534902915",
   "9788534946711",
   "9780385414519"

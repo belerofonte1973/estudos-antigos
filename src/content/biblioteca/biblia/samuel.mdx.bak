@@ -10,7 +10,6 @@ livros: [samuel-1, samuel-2]
 import Card from '../../../components/Card.astro';
 import CardGrid from '../../../components/CardGrid.astro';
 import Aside from '../../../components/Aside.astro';
-import SeloAcesso from '../../../components/SeloAcesso.astro';
 import LinkButton from '../../../components/LinkButton.astro';
 
 <Aside type="note" title="Rastreabilidade acadêmica">
@@ -618,25 +617,3 @@ aconteceu, só o que se escreveu primeiro.
 - **Arte (fichas conferidas):** Michelangelo, *David* — Galleria dell'Accademia [V]: https://www.galleriaaccademiafirenze.it/en/artworks/david-michelangelo/; Bernini, *David* — Galleria Borghese [V]: https://www.collezionegalleriaborghese.it/en/opere/david; Caravaggio, *David com a Cabeça de Golias* — Galleria Borghese [V]: https://www.collezionegalleriaborghese.it/en/opere/david-with-the-head-of-goliath; Donatello, *David* — Bargello [V] en.wiki / V&A [W]: https://www.vam.ac.uk/articles/donatellos-david.
 - **Cinema e música:** *King David* (1985) [V]: https://en.wikipedia.org/wiki/King_David_(film)); *David and Bathsheba* (1951) [V]: https://en.wikipedia.org/wiki/David_and_Bathsheba_(film)); *David* (1997) [V]: https://en.wikipedia.org/wiki/David_(1997_film)); *Solomon* (1997) [W]: https://en.wikipedia.org/wiki/Solomon_(film)); Händel, *Saul* HWV 53 (1739) [V]: https://en.wikipedia.org/wiki/Saul_(Handel)); Opera Today [W]: http://www.operatoday.com/content/2007/05/handel_saul_hwv.php.
 - **Islã:** *David in Islam* [W]: https://en.wikipedia.org/wiki/David_in_Islam; Corão 2:251 (Davi e Jalut) [W]: https://quran.com/al-baqarah/251.
-
-### Como conseguir estas obras
-
-A bibliografia de um site didático não é a de uma tese: cita o que importa **e o leitor consegue alcançar**. O selo diz por onde — e a tabela está ordenada por acessibilidade, do que se lê hoje ao que só se compra.
-
-*5 livre · 2 emprestimo · 1 biblioteca · 2 compra.*
-
-| Obra | Acesso | Onde |
-| --- | --- | --- |
-| Noth, Überlieferungsgeschichtliche Studien (Niemeyer, 1943). trad. ingl. The Deuteronomistic His… | <SeloAcesso tipo="livre" /> | [bibleodyssey.org](https://www.bibleodyssey.org/articles/deuteronomistic-history/;) |
-| Estela de Mesha (Louvre AO 5066) | <SeloAcesso tipo="livre" /> | [biblicalarchaeology.org](https://www.biblicalarchaeology.org/daily/biblical-artifacts/inscriptions/the-mesha-stele-and-king-david-of-the-bible/.) |
-| Tov, "The Composition of 1 Samuel 16-18 in the Light of the Septuagint" | <SeloAcesso tipo="livre" /> | [thetorah.com](https://www.thetorah.com/article/why-is-david-and-goliaths-story-40-longer-in-the-mt-than-in-the-lxx.) |
-| Cross (4QSamᵇ, séc. III a.C.) | <SeloAcesso tipo="livre" /> | [cojs.org](https://cojs.org/reminiscences_of_the_early_days_in_the_discovery_and_study_of_the_dead_sea_scrolls-_frank_moore_cross/.) |
-| Avioz, Nathan's Oracle (2 Samuel 7) and Its Interpreters | <SeloAcesso tipo="livre" /> | [jhsonline.org](https://jhsonline.org/index.php/jhs/article/view/5703/4756.) |
-| Rost, Die Überlieferung von der Thronnachfolge Davids (Kohlhammer, 1926) | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/dieberlieferungv0000rost.) |
-| Alter, The David Story (Norton, 1999) | <SeloAcesso tipo="emprestimo" /> | [Internet Archive](https://archive.org/details/davidstory00robe.) |
-| Biran & Naveh, "An Aramaic Stele Fragment from Tel Dan", IEJ 43 (1993), 81-98 | <SeloAcesso tipo="biblioteca" /> | [jstor.org](https://www.jstor.org/stable/27926300.) |
-| Tsumura, The First Book of Samuel (NICOT; Eerdmans, 2007) | <SeloAcesso tipo="compra" /> | [eerdmans.com](https://www.eerdmans.com/9780802823595/the-first-book-of-samuel/.) |
-| Lourenço (trad.), Bíblia — Volume V, Tomo I: Os Livros Históricos (Quetzal, 2023), ISBN 97898972… | <SeloAcesso tipo="compra" /> | [wook.pt](https://www.wook.pt/livro/biblia-volume-v-tomo-i-frederico-lourenco/21328922.) |
-
-Selo `[esgotado]` não aparece aqui: quando a obra não é alcançável de nenhuma forma, o texto aponta o substituto acessível ao lado dela.
-

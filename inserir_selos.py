@@ -53,15 +53,50 @@ NOME_DOMINIO = {
 
 def limpar_rotulo(r: str) -> str:
     """
-    Encurta o rótulo: corta no primeiro "RótuloDeSite:" e trunca.
+    Encurta o rótulo para a tabela.
 
-    O rótulo bruto vem do item da bibliografia inteiro ("Noth, M.,
-    Überlieferungsgeschichtliche Studien (Niemeyer, 1943). Internet Archive: —
-    trad. ingl. ..."). Na tabela só interessa a referência.
+    A armadilha que isto evita: cortar em "Palavra:" parece funcionar ("OL:
+    <url>", "JSTOR: <url>"), mas decepa títulos que legitimamente têm dois-pontos
+    — "Boling, Judges: Introduction, Translation, and Commentary (Anchor Bible
+    6A; Doubleday, 1975)" virava só "Boling,". O corte certo é no URL: a
+    referência vem antes, o link vem depois.
     """
-    r = re.split(r"\s+[A-Z][\w&.'À-ÿ-]{0,26}:\s", r)[0]
-    r = re.sub(r"\s+", " ", r).strip(" .·—-")
+    r = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", r)  # link markdown -> texto
+    r = r.replace("**", "").replace("*", "")
+    r = re.sub(r"\[[VW—][^\]]*\]", "", r)
+
+    # 1. corta no primeiro URL, com ou sem esquema
+    r = re.split(r"\s*(?:https?://|www\.)", r)[0]
+    # 2. sobra um rótulo de site pendurado ("OL:", "JSTOR:", "Internet Archive:",
+    #    "Bible Archaeology:"). Duas sutilezas, ambas por defeito observado:
+    #    (a) precisa aceitar MAIS DE UMA palavra — com um só token o corte deixava
+    #        "Internet" e "Bible" órfãos no fim da linha;
+    #    (b) NÃO pode aceitar ponto dentro do token — com ponto, "Its Interpreters.
+    #        JHS:" casava inteiro e a referência virava "…(2 Samuel 7) and".
+    #        Ponto final de frase é justamente onde a referência terminou.
+    r = re.sub(
+        r"\s+[A-Z][A-Za-z&\-]*(?:\s+[A-Z][A-Za-z&\-]*){0,3}:\s*$",
+        "",
+        r,
+    )
+    # 3. ou um domínio solto no fim ("archive.org")
+    r = re.sub(r"\s+\w[\w-]*\.(?:org|com|net|edu|br|pt|uk|de)\s*$", "", r, flags=re.I)
+
+    r = re.sub(r"\s+", " ", r).strip(" .·—-:,")
+    # "Brian Lewis. — The Sargon Legend": a API põe ponto no fim do autor
+    r = re.sub(r"\.\s*—\s*", " — ", r)
+    # fecha parêntese que ficou pela metade
+    while r.count("(") > r.count(")"):
+        r = r[: r.rfind("(")].strip(" .—-,")
     return (r[:96] + "…") if len(r) > 96 else r
+
+
+# Rótulo curto demais para identificar uma obra. Descartado em vez de publicado:
+# "Genesis" ou "Bíblia Sagrada" como linha de tabela não dizem AO LEITOR que obra
+# é, e uma linha que não informa ocupa o lugar de uma que informaria. As
+# traduções PT ficam de fora de propósito — o degrau 1 da escada já dá o texto
+# online de graça, com quatro traduções; esta tabela é para as obras acadêmicas.
+MIN_ROTULO = 22
 
 
 def rotulo_dominio(url: str) -> str:
@@ -87,15 +122,24 @@ def bloco(dados: dict) -> str:
     # Dedup por rótulo limpo; a primeira ocorrência vence.
     vistos: set[str] = set()
     limpas: list[dict] = []
+    descartados = 0
     for o in obras:
         r = limpar_rotulo(o["rotulo"])
         if not r or r.lower().startswith("isbn"):
+            descartados += 1
+            continue
+        if len(r) < MIN_ROTULO:
+            descartados += 1
             continue
         chave = r.lower()[:40]
         if chave in vistos:
+            descartados += 1
             continue
         vistos.add(chave)
         limpas.append({**o, "rotulo": r})
+
+    if descartados:
+        print(f"        ({descartados} linha(s) descartada(s): rótulo curto ou repetido)")
 
     if not limpas:
         return ""

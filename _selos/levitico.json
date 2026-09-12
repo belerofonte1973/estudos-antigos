@@ -1,0 +1,96 @@
+{
+ "slug": "levitico",
+ "anos": 0,
+ "obras": [
+  {
+   "rotulo": "Jacob Milgrom. — Leviticus 17-22",
+   "rotulo_local": "",
+   "rotulo_api": "Jacob Milgrom. — Leviticus 17-22",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/leviticus1722new0000unse",
+   "isbn": "9780385412551"
+  },
+  {
+   "rotulo": "Purification Offering in the Priestly Literature Its Meaning and Function (JSOT Supplement)",
+   "rotulo_local": "",
+   "rotulo_api": "Purification Offering in the Priestly Literature Its Meaning and Function (JSOT Supplement)",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9781850751038",
+   "isbn": "9781850751038"
+  },
+  {
+   "rotulo": "Nobuyoshi Kiuchi — Leviticus (Apollos Old Testament Commentary)",
+   "rotulo_local": "",
+   "rotulo_api": "Nobuyoshi Kiuchi — Leviticus (Apollos Old Testament Commentary)",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780830825035",
+   "isbn": "9780830825035"
+  },
+  {
+   "rotulo": "Gordon J. Wenham — The book of Leviticus",
+   "rotulo_local": "",
+   "rotulo_api": "Gordon J. Wenham — The book of Leviticus",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/080282353X",
+   "isbn": "080282353X"
+  },
+  {
+   "rotulo": "commentary by Baruch A. Levine. — Leviticus =",
+   "rotulo_local": "",
+   "rotulo_api": "commentary by Baruch A. Levine. — Leviticus =",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/leviticustraditi0000levi",
+   "isbn": "9780827603288"
+  },
+  {
+   "rotulo": "John E. Hartley — Word Biblical Commentary Vol. 4, Leviticus  (hartley), 593pp",
+   "rotulo_local": "",
+   "rotulo_api": "John E. Hartley — Word Biblical Commentary Vol. 4, Leviticus  (hartley), 593pp",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/wordbiblicalcomm0000unse",
+   "isbn": "9780849902031"
+  },
+  {
+   "rotulo": "Erhard S. Gerstenberger ; [translated by Douglas W. Stott]. — Leviticus",
+   "rotulo_local": "",
+   "rotulo_api": "Erhard S. Gerstenberger ; [translated by Douglas W. Stott]. — Leviticus",
+   "selo": "emprestimo",
+   "url": "https://archive.org/details/leviticuscomment0000gers",
+   "isbn": "9780664220648"
+  },
+  {
+   "rotulo": "Frank Gorman — Divine Presence and Community",
+   "rotulo_local": "",
+   "rotulo_api": "Frank Gorman — Divine Presence and Community",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9780802801104",
+   "isbn": "9780802801104"
+  }
+ ],
+ "indeterminados": [],
+ "isbns": [
+  "9780385412551",
+  "9781451410150",
+  "9781850751038",
+  "9780830825035",
+  "080282353X",
+  "9788534942829",
+  "9788527309080",
+  "9780827603288",
+  "9780849902031",
+  "9780664220648",
+  "9781850752318",
+  "9780802801104"
+ ],
+ "rotulos": {
+  "9788534942829": "SKU"
+ },
+ "entradas": [],
+ "tem_bibliografia": true,
+ "isbns_sem_selo": [
+  "9781451410150",
+  "9788534942829",
+  "9788527309080",
+  "9781850752318"
+ ]
+}

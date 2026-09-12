@@ -6,16 +6,17 @@ Foi escrito para que a produção sobreviva à sessão que a começou.
 ## Estado
 
 A taxonomia (`src/taxonomia.ts`) declara **58 livros** em **4 cânones**. Deles,
-**11 entradas já têm dossiê** (9 dossiês cobrem 11 hubs, porque Samuel e Reis são
-unidades canônicas: um dossiê cada, dois livros cada).
+**33 entradas já têm dossiê** (29 dossiês cobrem 33 livros, porque Samuel, Reis,
+Crônicas e Esdras+Neemias são unidades canônicas: um dossiê cada, dois livros
+cada). Faltam 25 livros: sapienciais, deuterocanônicos, ortodoxos e etíopes.
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | **26** (Gênesis … Reis + Profetas Maiores + os Doze completos) |
+| Biblioteca — dossiês bíblicos | **29** = 33 dos 58 livros (da Gênesis a Malaquias, sem os sapienciais) |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **93** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **101** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes:
 `python validar_dossie.py --todos` (forma, ANTES do build) ·
@@ -55,9 +56,11 @@ Os doze passaram o validador com 0 falhas e 0 avisos; build em 93 páginas.
 trata os Doze como um livro, mas cada profeta tem bibliografia própria e é
 buscado pelo nome, que é o que a revista explora.)*
 
-### Lote 3 — Históricos restantes (3)
-`rute` · `cronicas-1`+`cronicas-2` (um dossiê, `livros: [cronicas-1, cronicas-2]`) ·
-`esdras`+`neemias` (um dossiê, `livros: [esdras, neemias]`)
+### Lote 3 — Históricos restantes (3) — FEITO
+`rute` (8.323 palavras) · `cronicas` (8.282 — um dossiê, `livros: [cronicas-1,
+cronicas-2]`) · `esdras-neemias` (8.490 — um dossiê, `livros: [esdras, neemias]`).
+Os três passaram o validador com 0 falhas e 0 avisos; build em 101 páginas.
+*(Os Históricos estão completos: Gênesis a Ester do bloco histórico, mais Rute.)*
 
 ### Lote 4 — Sapienciais (5)
 `jo` · `salmos` · `proverbios` · `coelet` · `cantico`

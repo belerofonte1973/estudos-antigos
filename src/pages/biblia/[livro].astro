@@ -4,14 +4,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Icon from '../../components/Icon.astro';
-import {LIVROS, EIXOS} from '../../taxonomia';
+import {LIVROS, EIXOS, rotuloCanon} from '../../taxonomia';
 
 export async function getStaticPaths() {
 	const dossies = await getCollection('biblioteca');
 	const artigos = await getCollection('artigos');
 	const passagens = await getCollection('passagens');
 
-	return Object.entries(LIVROS).map(([slug, meta]) => ({
+	/*
+		Só gera hub para livro que já tem material publicado. A taxonomia declara
+		os 58 livros do cânon, mas emitir 40 e poucas páginas vazias seria pior
+		que não emitir nenhuma: o endereço é estável (vem do slug), então o hub
+		pode nascer no dia em que o primeiro dossiê, passagem ou artigo do livro
+		existir — sem quebrar endereço nenhum e sem publicar página fina.
+	*/
+	const comConteudo = Object.entries(LIVROS).filter(
+		([slug]) =>
+			dossies.some(
+				(d) => d.id === `biblia/${slug}` || d.data.livros.includes(slug)
+			) ||
+			passagens.some((p) => p.data.livro === slug) ||
+			artigos.some((a) => a.data.livro === slug)
+	);
+
+	return comConteudo.map(([slug, meta]) => ({
 		params: { livro: slug },
 		props: {
 			slug,
@@ -72,9 +88,30 @@ const jsonLd = [
 		<p class="eyebrow">Núcleo bíblico · livro {String(meta.ordem).padStart(2, '0')}</p>
 		<h1>
 			{meta.nome}
-			<span class="hebraico" dir="rtl" lang="he">{meta.hebraico}</span>
+			{meta.original && (
+				<span
+					class="original"
+					dir={meta.lang === 'he' ? 'rtl' : undefined}
+					lang={meta.lang}
+				>
+					{meta.original}
+				</span>
+			)}
 		</h1>
 		<p class="translit">{meta.translit}</p>
+		<!--
+			O livro declara em que cânones ele é recebido. Sem isto o leitor
+			supõe que a Bíblia é uma só, e "Tobias" pareceria estar no mesmo
+			plano de "Gênesis" — quando a diferença é justamente o dado.
+		-->
+		<p class="canones">
+			{meta.tradicoes.map((c) => (
+				<span class="canon">{rotuloCanon(c)}</span>
+			))}
+			{meta.tradicoes.includes('hebraico') ? null : (
+				<span class="canon canon--nota">fora do cânon hebraico</span>
+			)}
+		</p>
 		{descricao && <p class="lede">{descricao}</p>}
 	</header>
 
@@ -165,7 +202,7 @@ const jsonLd = [
 		flex-wrap: wrap;
 		margin-bottom: 0.3rem;
 	}
-	.hebraico {
+	.original {
 		font-size: 0.6em;
 		color: var(--accent);
 		font-weight: 400;
@@ -174,6 +211,29 @@ const jsonLd = [
 		font-style: italic;
 		color: var(--ink-3);
 		margin: 0 0 1rem;
+	}
+	.canones {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin: 0 0 1.2rem;
+	}
+	.canon {
+		font-size: 0.68rem;
+		font-weight: 600;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		color: var(--accent);
+		background: var(--accent-soft);
+		padding: 2px 9px;
+		border-radius: var(--radius-pill);
+	}
+	.canon--nota {
+		color: var(--ink-3);
+		background: none;
+		border: 1px dashed var(--border-strong);
+		text-transform: none;
+		letter-spacing: 0;
 	}
 
 	.bloco {

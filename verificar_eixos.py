@@ -143,6 +143,55 @@ for a, b, slug in (
                 f"unidade canônica: /biblia/{hub}/ aponta para o dossiê {slug}",
             )
 
+# ---------- 9. A taxonomia canônica está expressa no núcleo ----------
+# A grade do núcleo declara os quatro cânones e marca o livro fora do hebraico
+# com a tradição que o recebe. Sem esta checagem, a extensão da taxonomia pode
+# estar nos dados e não chegar ao HTML — que é o modo de falha desta família.
+if bib:
+    for nome in (
+        "Tobias", "Judite", "Sabedoria", "Eclesiástico", "Baruque",
+        "1 Macabeus", "2 Macabeus",
+    ):
+        exigir(nome in bib, f"cânones: deuterocanônico '{nome}' aparece na grade")
+    for nome in ("1 Enoque", "Jubileus", "1 Meqabyan", "4 Baruque"):
+        exigir(nome in bib, f"cânones: livro etíope '{nome}' aparece na grade")
+    for nome in ("1 Esdras", "2 Esdras", "3 Macabeus", "4 Macabeus", "Salmo 151"):
+        exigir(nome in bib, f"cânones: livro ortodoxo '{nome}' aparece na grade")
+    for rot in ("Cânon hebraico", "Cânon católico", "Cânon ortodoxo", "Cânon etíope"):
+        exigir(rot in bib, f"cânones: a tradição '{rot}' é declarada")
+    exigir("58" in bib, "cânones: o total de 58 livros da taxonomia é declarado")
+    # O mecanismo que importa: o cartão de um livro fora do cânon hebraico
+    # declara a tradição que o recebe. Ancorar em `bib.find(nome)` erra — a
+    # primeira ocorrência do nome está no JSON-LD (hasPart), não no cartão.
+    # E o Astro escopa o CSS com data-astro-cid-*, então o `>` nunca vem logo
+    # depois do valor da classe: case com class="...'[^>]*>.
+    for livro, trad in (("Tobias", "Católico"), ("1 Enoque", "Etíope")):
+        m = re.search(
+            rf'class="livro__nome"[^>]*>{re.escape(livro)}<', bib
+        )
+        if not m:
+            falhas.append(f"cânones: cartão de '{livro}' ausente da grade")
+            continue
+        trecho = bib[m.end() : m.end() + 800]
+        exigir(
+            bool(re.search(rf'class="livro__canon"[^>]*>[^<]*{re.escape(trad)}', trecho)),
+            f"cânones: o cartão de '{livro}' declara a tradição '{trad}'",
+        )
+
+# ---------- 10. Cada hub de cânon existe e declara o que lhe é próprio ----------
+for slug, termo in (
+    ("hebraico", "39"),
+    ("catolico", "Tobias"),
+    ("ortodoxo", "3 Macabeus"),
+    ("etiope", "1 Enoque"),
+):
+    html = ler(f"biblia/canon/{slug}/index.html")
+    if html:
+        exigir(
+            termo in html,
+            f"cânon /{slug}/: declara o que lhe é próprio ('{termo}')",
+        )
+
 print("== Verificação do modelo de três eixos ==\n")
 for m in ok:
     print(f"  ok  {m}")

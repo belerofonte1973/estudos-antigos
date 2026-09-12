@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Icon from './Icon.astro';
 import {EIXOS, LIVROS} from '../taxonomia';
 
@@ -18,10 +19,30 @@ const EIXOS_NAV = [
 	{ href: '/recepcao/', label: `${EIXOS.recepcao.nome} — ${EIXOS.recepcao.rotulo}` },
 ];
 
-const LIVROS_NAV = Object.entries(LIVROS).map(([slug, m]) => ({
-	href: `/biblia/${slug}/`,
-	label: m.nome,
-}));
+/*
+	O rodapé aparece em TODAS as páginas: um link morto aqui é um link morto
+	repetido em todas. A taxonomia declara os 58 livros do cânon, mas só o livro
+	que já tem dossiê, passagem ou pergunta publicada ganha hub — então a lista
+	do rodapé é filtrada pelo mesmo critério, e o total do cânon vai como link
+	para o núcleo, que é onde a grade inteira está visível.
+*/
+const dossies = await getCollection('biblioteca');
+const passagens = await getCollection('passagens');
+const artigos = await getCollection('artigos');
+
+const TOTAL_LIVROS = Object.keys(LIVROS).length;
+
+const LIVROS_NAV = Object.entries(LIVROS)
+	.filter(
+		([slug]) =>
+			dossies.some(
+				(d) => d.id === `biblia/${slug}` || d.data.livros.includes(slug)
+			) ||
+			passagens.some((p) => p.data.livro === slug) ||
+			artigos.some((a) => a.data.livro === slug)
+	)
+	.sort((a, b) => a[1].ordem - b[1].ordem)
+	.map(([slug, m]) => ({ href: `/biblia/${slug}/`, label: m.nome }));
 ---
 
 <footer class="ea-footer">
@@ -64,6 +85,11 @@ const LIVROS_NAV = Object.entries(LIVROS).map(([slug, m]) => ({
 							</li>
 						))
 					}
+					<li>
+						<a class="ea-footer__todos" href="/biblia/">
+							Os {TOTAL_LIVROS} livros do cânon
+						</a>
+					</li>
 				</ul>
 			</nav>
 
@@ -167,6 +193,10 @@ const LIVROS_NAV = Object.entries(LIVROS).map(([slug, m]) => ({
 		gap: 0.4rem;
 	}
 	.ea-footer__col a:hover {
+		color: var(--accent);
+	}
+	.ea-footer__todos {
+		font-weight: 600;
 		color: var(--accent);
 	}
 

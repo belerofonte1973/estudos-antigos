@@ -11,7 +11,7 @@
  * endereço morrer, corrigir aqui e reconferir — a rota é a mesma para os onze
  * livros, então um erro aqui é um erro em tudo.
  */
-import { BIBLIAS, LIVROS } from '../taxonomia';
+import { bibliasPara, LIVROS } from '../taxonomia';
 
 interface Props {
 	/** Slug do livro, conforme LIVROS (ex.: 'genesis'). */
@@ -30,7 +30,7 @@ const { livro, capitulo, referencia, titulo = 'Ler a passagem', compacto = false
 const meta = LIVROS[livro];
 if (!meta) throw new Error(`BibliaLinks: livro desconhecido '${livro}'`);
 
-const opcoes = BIBLIAS.map((b) => ({
+const opcoes = bibliasPara(livro as string).map((b) => ({
 	id: b.id,
 	nome: b.nome,
 	sigla: b.sigla,
@@ -47,19 +47,30 @@ const opcoes = BIBLIAS.map((b) => ({
 		Compare duas traduções de tradições diferentes. Onde elas divergem, o
 		original é ambíguo — e é aí que o estudo começa.
 	</p>
-	<ul class="ea-biblia__lista">
-		{
-			opcoes.map((o) => (
-				<li>
-					<a href={o.href} target="_blank" rel="noopener">
-						<span class="ea-biblia__sigla">{o.sigla}</span>
-						<span class="ea-biblia__nome">{o.nome}</span>
-						<span class="ea-biblia__trad">{o.tradicao}</span>
-					</a>
-				</li>
-			))
-		}
-	</ul>
+	{
+		opcoes.length === 0 ? (
+			<p class="ea-biblia__aviso">
+				Nenhuma das traduções online deste catálogo recebe <strong>{meta.nome}</strong>.
+				Os catálogos protestantes param antes dele e o católico não o traz — este
+				livro pede uma edição ortodoxa ou etíope. As obras que o discutem estão na
+				bibliografia do dossiê.
+			</p>
+		) : (
+			<ul class="ea-biblia__lista">
+				{
+					opcoes.map((o) => (
+						<li>
+							<a href={o.href} target="_blank" rel="noopener">
+								<span class="ea-biblia__sigla">{o.sigla}</span>
+								<span class="ea-biblia__nome">{o.nome}</span>
+								<span class="ea-biblia__trad">{o.tradicao}</span>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		)
+	}
 </aside>
 
 <style>
@@ -107,6 +118,16 @@ const opcoes = BIBLIAS.map((b) => ({
 	.ea-biblia__lista a:hover {
 		border-color: var(--accent);
 		transform: translateY(-1px);
+	}
+	.ea-biblia__aviso {
+		margin: 0;
+		font-size: 0.85rem;
+		line-height: 1.55;
+		color: var(--ink-2);
+		max-width: 68ch;
+	}
+	.ea-biblia__aviso strong {
+		color: var(--ink);
 	}
 	.ea-biblia__sigla {
 		font-family: var(--font-mono);

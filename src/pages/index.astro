@@ -172,9 +172,15 @@ const jsonLd = {
 							aria-disabled={vazio ? 'true' : undefined}
 						>
 							<span class="livro__nome">{l.nome}</span>
-							<span class="livro__he" dir="rtl" lang="he">
-								{l.hebraico}
-							</span>
+							{l.original && (
+								<span
+									class="livro__he"
+									dir={l.lang === 'he' ? 'rtl' : undefined}
+									lang={l.lang}
+								>
+									{l.original}
+								</span>
+							)}
 							<span class="livro__cont">
 								{vazio
 									? 'em preparação'

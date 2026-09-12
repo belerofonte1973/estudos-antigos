@@ -4,7 +4,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Icon from '../../components/Icon.astro';
-import {LIVROS, EIXOS} from '../../taxonomia';
+import {LIVROS, EIXOS, CANONES, BLOCOS, rotuloCanon, livrosDoCanon} from '../../taxonomia';
+
+const TOTAL_LIVROS = Object.keys(LIVROS).length;
 
 const dossies = (await getCollection('biblioteca')).filter(
 	(d) => d.data.eixo === 'nucleo'
@@ -73,41 +75,103 @@ const jsonLd = {
 		cresce: cada passagem nova entra no livro correspondente sem mexer em
 		mais nada.
 	-->
-	<section class="livros" aria-labelledby="livros">
-		<h2 id="livros">Livros</h2>
-		<div class="livros__grid">
+	<!--
+		Os cânones. Sem este bloco o leitor supõe que "a Bíblia" é uma só e que a
+		grade é protestante — quando a diferença entre os cânones é justamente o
+		dado. Aqui o site declara as quatro fronteiras e quanto cada uma recebe.
+	-->
+	<section class="canones" aria-labelledby="canones">
+		<h2 id="canones">Os cânones</h2>
+		<p class="lede">
+			"O Antigo Testamento" não é um só: são coleções com fronteiras diferentes,
+			e cada acréscimo tem uma razão histórica verificável. Os {TOTAL_LIVROS}
+			livros abaixo estão marcados pela tradição que os recebe — do cânon
+			hebraico, comum a todos, ao etíope, que preservou em ge'ez textos que
+			ninguém mais canonizou.
+		</p>
+		<div class="canones__grid">
 			{
-				livros.map((l) => {
-					const vazio = !l.passagens.length && !l.dossie && !l.artigos.length;
-					return (
-						<a
-							class:list={['livro', { 'livro--vazio': vazio }]}
-							href={vazio ? undefined : `/biblia/${l.slug}/`}
-						>
-							<span class="livro__num">{String(l.ordem).padStart(2, '0')}</span>
-							<span class="livro__nome">{l.nome}</span>
-							<span class="livro__he" dir="rtl" lang="he">{l.hebraico}</span>
-							<span class="livro__translit">{l.translit}</span>
-							<span class="livro__cont">
-								{vazio ? (
-									<span class="muted">em preparação</span>
-								) : (
-									<>
-										{l.passagens.length > 0 && (
-											<span>{l.passagens.length} passagens</span>
-										)}
-										{l.dossie && <span>dossiê</span>}
-										{l.artigos.length > 0 && (
-											<span>{l.artigos.length} perguntas</span>
-										)}
-									</>
-								)}
+				(Object.entries(CANONES) as Array<[string, (typeof CANONES)[keyof typeof CANONES]]>).map(
+					([id, c]) => (
+						<a class="canon-card" href={`/biblia/canon/${id}/`}>
+							<span class="canon-card__nome">{c.nome}</span>
+							<span class="canon-card__n">
+								{livrosDoCanon(id as never).length} livros
 							</span>
+							<span class="canon-card__desc">{c.descricao}</span>
 						</a>
-					);
-				})
+					)
+				)
 			}
 		</div>
+	</section>
+
+	<section class="livros" aria-labelledby="livros">
+		<h2 id="livros">Livros</h2>
+		<p class="livros__nota">
+			Agrupados pelo bloco a que pertencem. Os livros fora do cânon hebraico
+			trazem a tradição que os recebe — e o sinal de "em preparação" marca o que
+			ainda não tem estudo publicado.
+		</p>
+		{
+			BLOCOS.map((bloco) => {
+				const doBloco = livros.filter((l) => l.bloco === bloco);
+				if (!doBloco.length) return null;
+				return (
+					<div class="bloco">
+						<h3 class="bloco__titulo">
+							{bloco} <span class="bloco__n">{doBloco.length}</span>
+						</h3>
+						<div class="livros__grid">
+							{doBloco.map((l) => {
+								const vazio = !l.passagens.length && !l.dossie && !l.artigos.length;
+								return (
+									<a
+										class:list={['livro', { 'livro--vazio': vazio }]}
+										href={vazio ? undefined : `/biblia/${l.slug}/`}
+									>
+										<span class="livro__num">
+											{String(l.ordem).padStart(2, '0')}
+										</span>
+										<span class="livro__nome">{l.nome}</span>
+										{l.original && (
+											<span
+												class="livro__he"
+												dir={l.lang === 'he' ? 'rtl' : undefined}
+												lang={l.lang}
+											>
+												{l.original}
+											</span>
+										)}
+										{!l.tradicoes.includes('hebraico') && (
+											<span class="livro__canon">
+												{l.tradicoes.map(rotuloCanon).join(' · ')}
+											</span>
+										)}
+										<span class="livro__translit">{l.translit}</span>
+										<span class="livro__cont">
+											{vazio ? (
+												<span class="muted">em preparação</span>
+											) : (
+												<>
+													{l.passagens.length > 0 && (
+														<span>{l.passagens.length} passagens</span>
+													)}
+													{l.dossie && <span>dossiê</span>}
+													{l.artigos.length > 0 && (
+														<span>{l.artigos.length} perguntas</span>
+													)}
+												</>
+											)}
+										</span>
+									</a>
+								);
+							})}
+						</div>
+					</div>
+				);
+			})
+		}
 	</section>
 
 	{
@@ -178,6 +242,76 @@ const jsonLd = {
 		padding-bottom: 0.8rem;
 		border-bottom: 1px solid var(--border);
 	}
+	.livros__nota {
+		color: var(--ink-2);
+		max-width: 68ch;
+		margin: 0 0 2rem;
+	}
+
+	/* --- os cânones --- */
+	.canones {
+		padding-top: var(--section);
+	}
+	.canones h2 {
+		font-size: var(--step-2);
+		margin-bottom: 1rem;
+	}
+	.canones .lede {
+		color: var(--ink-2);
+		max-width: 68ch;
+		margin-bottom: 1.6rem;
+	}
+	.canones__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+		gap: 1rem;
+	}
+	.canon-card {
+		display: flex;
+		flex-direction: column;
+		padding: 1.2rem 1.3rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--bg-warm);
+		transition: border-color 0.18s ease, transform 0.18s ease;
+	}
+	.canon-card:hover {
+		border-color: var(--accent);
+		transform: translateY(-3px);
+	}
+	.canon-card__nome {
+		font-size: 1.05rem;
+		font-weight: 650;
+		color: var(--accent);
+	}
+	.canon-card__n {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--ink-3);
+		margin-bottom: 0.7rem;
+	}
+	.canon-card__desc {
+		font-size: 0.84rem;
+		line-height: 1.55;
+		color: var(--ink-2);
+	}
+
+	/* --- grade por bloco --- */
+	.bloco + .bloco {
+		margin-top: 2.6rem;
+	}
+	.bloco__titulo {
+		font-size: 1.05rem;
+		font-weight: 650;
+		letter-spacing: -0.2px;
+		margin: 0 0 1rem;
+	}
+	.bloco__n {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 400;
+		color: var(--ink-3);
+	}
 	.livros__grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
@@ -233,6 +367,16 @@ const jsonLd = {
 		font-style: italic;
 		color: var(--ink-3);
 		margin-bottom: 0.8rem;
+	}
+	/* Livro fora do cânon hebraico: diz de que tradição ele vem, em vez de
+	   deixar o leitor supor que a grade inteira é protestante. */
+	.livro__canon {
+		font-size: 0.66rem;
+		font-weight: 650;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: var(--accent);
+		margin-bottom: 0.5rem;
 	}
 	.livro__cont {
 		margin-top: auto;

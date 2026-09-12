@@ -24,6 +24,26 @@ equivalentes próprios em `src/components/` (`Card`, `CardGrid`, `Aside`,
 `LinkButton`, `Icon`). Os nomes de ícone do conteúdo (`open-book`, `pencil`,
 `document`, `star`) continuam funcionando.
 
+## O cânon: 58 livros, 4 tradições
+
+O site cobre os livros bíblicos por **cânon**, não por uma lista única. A
+taxonomia declara 58 livros distribuídos em quatro tradições:
+
+| Cânon | Livros | O que acrescenta sobre o hebraico |
+|---|---|---|
+| Hebraico / protestante | 39 | — |
+| Católico | 46 | deuterocanônicos (Trento, 1546) |
+| Ortodoxo | 52 | 1–2 Esdras, 3–4 Macabeus, Salmo 151, Oração de Manassés |
+| Etíope (Tewahedo) | 58 | 1 Enoque, Jubileus, 1–3 Meqabyan, 4 Baruque |
+
+Cada tradição tem página própria em `/biblia/canon/<slug>/`, com os seus livros e
+o que ela recebe a mais. Na grade do núcleo, o cartão de um livro fora do cânon
+hebraico **declara a tradição que o recebe** — a diferença é o dado, não uma
+nota de rodapé.
+
+O mapa de produção (o que falta, em que lotes, com que regras) está em
+[`CANON.md`](CANON.md).
+
 ## Comandos
 
 ```bash
@@ -54,13 +74,14 @@ Falha com **exit 1** quando encontra problema. É o portão de qualidade.
 
 ```
 src/
-├── content.config.ts          # coleções: biblioteca + artigos (schemas Zod)
+├── content.config.ts          # coleções: biblioteca + artigos + passagens (Zod)
+├── taxonomia.ts               # eixos, áreas, cânones e os 58 livros (sem imports)
 ├── content/
 │   ├── biblioteca/            # dossiês profundos (MDX)
 │   └── artigos/               # revista (MD)
 ├── components/                # Card, CardGrid, Aside, LinkButton, Icon,
 │   │                          # Header, Footer, Breadcrumbs, TableOfContents,
-│   │                          # ArticleCard, Seo
+│   │                          # ArticleCard, BibliaLinks, EscadaEstudo, Seo
 ├── layouts/
 │   ├── BaseLayout.astro       # head, tema, scripts globais
 │   ├── ArtigoLayout.astro     # artigo (resposta rápida + fontes + sumário)
@@ -69,14 +90,21 @@ src/
 ├── pages/
 │   ├── index.astro            # capa da revista
 │   ├── artigos/               # índice + [...slug]
+│   ├── biblia/                # hub do núcleo + [livro] + canon/[canon]
 │   ├── biblioteca/            # índice + [area] + [...slug]
+│   ├── contexto/ recepcao/    # hubs de eixo
 │   ├── sobre/                 # projeto, contribua, contato
 │   ├── rss.xml.ts
 │   └── 404.astro
 ├── plugins/
-│   └── remark-linguas-antigas.mjs   # hebraico/grego: bidi + lang
+│   └── remark-linguas-antigas.mjs   # hebraico/grego/ge'ez: bidi + lang
 └── styles/global.css          # design system (Notion Warm Minimalism)
 ```
+
+**`taxonomia.ts` é a fonte única** de eixos, áreas, cânones e livros. Não
+importar `content.config.ts` de dentro de um componente — ele importa
+`astro:content` e as constantes chegam `undefined` (ciclo). Componentes importam
+de `taxonomia`.
 
 ## Como escrever um artigo da revista
 

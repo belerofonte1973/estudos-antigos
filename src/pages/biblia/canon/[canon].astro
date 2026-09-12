@@ -1,0 +1,362 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Icon from '../../../components/Icon.astro';
+import { CANONES, LIVROS, BLOCOS, livrosDoCanon, rotuloCanon } from '../../../taxonomia';
+
+/*
+	Uma página por cânon. Existe porque a diferença entre as tradições é dado,
+	não polêmica: quem chega em Tobias precisa poder ver que ele é recebido por
+	católicos, ortodoxos e etíopes, e recusado pelo cânon hebraico/protestante —
+	e quem chega em 1 Enoque precisa ver que só o cânone etíope o recebe.
+*/
+export async function getStaticPaths() {
+	return Object.entries(CANONES).map(([id, canon]) => ({
+		params: { canon: id },
+		props: { id, canon },
+	}));
+}
+
+const { id, canon } = Astro.props;
+
+const dossies = await getCollection('biblioteca');
+const artigos = await getCollection('artigos');
+const passagens = await getCollection('passagens');
+
+const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const url = new URL(`/biblia/canon/${id}/`, site).href;
+
+const doCanon = livrosDoCanon(id as never);
+
+const comEstado = doCanon.map(({ slug, meta }) => ({
+	slug,
+	meta,
+	dossie: dossies.find(
+		(d) => d.id === `biblia/${slug}` || d.data.livros.includes(slug)
+	),
+	passagens: passagens.filter((p) => p.data.livro === slug),
+	artigos: artigos.filter((a) => a.data.livro === slug),
+}));
+
+// O que este cânon tem que os outros não têm — é a informação que a página
+// existe para dar. Comparar com o cânon hebraico é o corte mais informativo,
+// porque é o denominador comum de todas as tradições.
+const EXCLUSIVOS = {
+	hebraico: [],
+	catolico: ['tobias', 'judite', 'sabedoria', 'eclesiastico', 'baruque', 'macabeus-1', 'macabeus-2'],
+	ortodoxo: ['esdras-1', 'esdras-2', 'oracao-manasses', 'salmo-151', 'macabeus-3', 'macabeus-4'],
+	etiope: ['enoque-1', 'jubileus', 'meqabyan-1', 'meqabyan-2', 'meqabyan-3', 'baruque-4'],
+} as const;
+
+const exclusivos = (EXCLUSIVOS[id as keyof typeof EXCLUSIVOS] ?? []).map((s) => {
+	const item = comEstado.find((x) => x.slug === s);
+	return {
+		slug: s,
+		nome: (LIVROS as Record<string, { nome: string }>)[s]?.nome ?? s,
+		// Só linka o que tem hub: a taxonomia declara 58 livros, mas só nasce
+		// página do livro que já tem dossiê, passagem ou pergunta publicada.
+		temConteudo: Boolean(item?.dossie || item?.passagens.length || item?.artigos.length),
+	};
+});
+
+const jsonLd = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: canon.nome,
+		description: canon.descricao,
+		inLanguage: 'pt-BR',
+		url,
+		hasPart: doCanon.map(({ slug, meta }) => ({
+			'@type': 'Book',
+			name: meta.nome,
+			url: new URL(`/biblia/${slug}/`, site).href,
+		})),
+	},
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', site).href },
+			{ '@type': 'ListItem', position: 2, name: 'Bíblia', item: new URL('/biblia/', site).href },
+			{ '@type': 'ListItem', position: 3, name: canon.nome, item: url },
+		],
+	},
+];
+---
+
+<BaseLayout title={canon.nome} description={canon.descricao} jsonLd={jsonLd}>
+	<header class="cabeca">
+		<Breadcrumbs
+			items={[
+				{ href: '/', label: 'Início' },
+				{ href: '/biblia/', label: 'Bíblia' },
+				{ label: canon.nome },
+			]}
+		/>
+		<p class="eyebrow">Cânon · {doCanon.length} livros</p>
+		<h1>{canon.nome}</h1>
+		<p class="lede">{canon.descricao}</p>
+		<p class="ponte">
+			Comparar com: {
+				Object.entries(CANONES)
+					.filter(([outro]) => outro !== id)
+					.map(([outro, c]) => (
+						<a href={`/biblia/canon/${outro}/`}>{c.rotulo}</a>
+					))
+			}
+		</p>
+	</header>
+
+	{
+		exclusivos.length > 0 && (
+			<section class="bloco" aria-labelledby="exclusivos">
+				<h2 id="exclusivos">Livros que só esta tradição recebe (ou acrescenta)</h2>
+				<p class="nota">
+					São os livros que este cânon tem a mais que o hebraico/protestante. A
+					distinção é histórica — cada acréscimo tem data e concílio — e é
+					justamente o que se perde quando se fala de "a Bíblia" no singular.
+				</p>
+				<div class="listas">
+					{exclusivos.map((e) =>
+						e.temConteudo ? (
+							<a class="linha" href={`/biblia/${e.slug}/`}>
+								<span class="linha__nome">{e.nome}</span>
+								<span class="linha__mais">
+									Abrir <Icon name="arrow" size={13} />
+								</span>
+							</a>
+						) : (
+							<span class="linha linha--vazia">
+								<span class="linha__nome">{e.nome}</span>
+								<span class="linha__mais">em preparação</span>
+							</span>
+						)
+					)}
+				</div>
+			</section>
+		)
+	}
+
+	<section class="bloco" aria-labelledby="livros">
+		<h2 id="livros">Os {doCanon.length} livros, na ordem</h2>
+		<p class="nota">
+			O que já tem estudo publicado aparece marcado; o resto está em preparação.
+			Clicar abre o hub do livro.
+		</p>
+		{
+			BLOCOS.map((bloco) => {
+				const noBloco = comEstado.filter((x) => x.meta.bloco === bloco);
+				if (!noBloco.length) return null;
+				return (
+					<div class="grupo">
+						<h3 class="grupo__titulo">
+							{bloco} <span class="grupo__n">{noBloco.length}</span>
+						</h3>
+						<ul class="indice">
+							{noBloco.map((x) => {
+								const temConteudo = x.dossie || x.passagens.length || x.artigos.length;
+								return (
+									<li>
+										{temConteudo ? (
+											<a href={`/biblia/${x.slug}/`}>
+												<span class="indice__num">
+													{String(x.meta.ordem).padStart(2, '0')}
+												</span>
+												<span class="indice__nome">{x.meta.nome}</span>
+												{x.dossie && <span class="marca">dossiê</span>}
+												{x.passagens.length > 0 && (
+													<span class="marca">{x.passagens.length} passagens</span>
+												)}
+												{x.artigos.length > 0 && (
+													<span class="marca">
+														{x.artigos.length} {x.artigos.length === 1 ? 'pergunta' : 'perguntas'}
+													</span>
+												)}
+											</a>
+										) : (
+											<span class="indice--vazio">
+												<span class="indice__num">
+													{String(x.meta.ordem).padStart(2, '0')}
+												</span>
+												<span class="indice__nome">{x.meta.nome}</span>
+												<span class="marca marca--vazia">em preparação</span>
+											</span>
+										)}
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				);
+			})
+		}
+	</section>
+
+	<aside class="rodape-nota">
+		<p>
+			O cânon não é um dado do texto, é um dado da recepção: uma coleção é
+			canônica porque uma comunidade a leu como tal. As fronteiras acima são as
+			das quatro tradições que este site estuda — e cada dossiê de livro trata a
+			questão canônica no lugar em que ela importa.
+		</p>
+	</aside>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 70ch;
+	}
+	.cabeca h1 {
+		margin-bottom: 0.7rem;
+	}
+	.lede {
+		color: var(--ink-2);
+		margin-bottom: 1rem;
+	}
+	.ponte {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		font-size: 0.85rem;
+		color: var(--ink-3);
+		align-items: center;
+	}
+	.ponte a {
+		color: var(--accent);
+		font-weight: 600;
+	}
+
+	.bloco {
+		padding-top: var(--section);
+	}
+	.bloco h2 {
+		font-size: var(--step-2);
+		margin-bottom: 1rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.nota {
+		color: var(--ink-2);
+		max-width: 68ch;
+		margin: 0 0 1.6rem;
+	}
+
+	.listas {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+		gap: 0.7rem;
+	}
+	.linha {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.6rem;
+		padding: 0.85rem 1rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: var(--bg-raised);
+		transition: border-color 0.15s ease, transform 0.15s ease;
+	}
+	.linha:hover {
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	.linha__nome {
+		font-weight: 600;
+	}
+	.linha__mais {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.8rem;
+		color: var(--accent);
+	}
+	.linha--vazia {
+		border-style: dashed;
+		background: transparent;
+		color: var(--ink-3);
+	}
+	.linha--vazia .linha__mais {
+		color: var(--ink-3);
+	}
+
+	.grupo + .grupo {
+		margin-top: 2rem;
+	}
+	.grupo__titulo {
+		font-size: 1rem;
+		font-weight: 650;
+		margin: 0 0 0.8rem;
+	}
+	.grupo__n {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 400;
+		color: var(--ink-3);
+	}
+	.indice {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+	}
+	.indice a,
+	.indice--vazio {
+		display: flex;
+		align-items: baseline;
+		gap: 0.7rem;
+		padding: 0.6rem 0.8rem;
+		border-radius: var(--radius-sm);
+	}
+	.indice a:hover {
+		background: var(--accent-soft);
+	}
+	.indice--vazio {
+		color: var(--ink-3);
+	}
+	.indice__num {
+		font-family: var(--font-mono);
+		font-size: 0.7rem;
+		color: var(--ink-3);
+		min-width: 2ch;
+	}
+	.indice__nome {
+		font-weight: 550;
+	}
+	.indice--vazio .indice__nome {
+		font-weight: 400;
+	}
+	.marca {
+		font-size: 0.68rem;
+		font-weight: 600;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		color: var(--accent);
+		background: var(--accent-soft);
+		padding: 1px 8px;
+		border-radius: var(--radius-pill);
+		margin-left: auto;
+	}
+	.marca--vazia {
+		color: var(--ink-3);
+		background: none;
+		text-transform: none;
+		letter-spacing: 0;
+	}
+
+	.rodape-nota {
+		margin-top: var(--section);
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--border);
+		max-width: 70ch;
+	}
+	.rodape-nota p {
+		font-size: 0.9rem;
+		color: var(--ink-2);
+	}
+</style>

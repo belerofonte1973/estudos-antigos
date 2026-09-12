@@ -11,14 +11,16 @@ unidades canônicas: um dossiê cada, dois livros cada).
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | 9 (Gênesis … Reis) |
+| Biblioteca — dossiês bíblicos | **14** (Gênesis … Reis + Isaías, Jeremias, Lamentações, Ezequiel, Daniel) |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | 59 (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **69** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
-Portões: `python verificar_site.py` (integridade, exit 1) e
-`python verificar_eixos.py` (modelo, exit 1). Ambos verdes — 67 verificações.
+Portões, todos verdes:
+`python validar_dossie.py --todos` (forma, ANTES do build) ·
+`python verificar_site.py` (integridade, exit 1) ·
+`python verificar_eixos.py` (modelo, 67 checagens, exit 1).
 
 ## Os cânones, e por que estão no site
 
@@ -38,10 +40,12 @@ que o recebe — na grade, não em nota de rodapé.
 Ordem por densidade de material acadêmico disponível e por utilidade para quem
 estuda o cânon inteiro. Cada lote é uma leva de dossiês na forma consagrada.
 
-### Lote 1 — Profetas Maiores (5)
-`isaias` · `jeremias` · `lamentacoes` · `ezequiel` · `daniel`
+### Lote 1 — Profetas Maiores (5) — FEITO
+`isaias` (8.441 palavras) · `jeremias` (8.384) · `lamentacoes` (8.330) ·
+`ezequiel` (8.384) · `daniel` (8.285). Commit `40ce611`. Os cinco passaram com
+0 falhas e 0 avisos no validador.
 
-### Lote 2 — Os Doze (12)
+### Lote 2 — Os Doze (12) — EM CURSO
 `oseias` · `joel` · `amos` · `obadias` · `jonas` · `miqueias` · `naum` ·
 `habacuque` · `sofonias` · `ageu` · `zacarias` · `malaquias`
 *(Decisão: 12 dossiês, um por livro — não um dossiê dos Doze. O cânon hebraico

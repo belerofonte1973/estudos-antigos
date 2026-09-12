@@ -11,11 +11,11 @@ unidades canônicas: um dossiê cada, dois livros cada).
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | **20** (Gênesis … Reis + Isaías, Jeremias, Lamentações, Ezequiel, Daniel + Oséias, Joel, Amós, Obadias, Jonas, Miqueias) |
+| Biblioteca — dossiês bíblicos | **26** (Gênesis … Reis + Profetas Maiores + os Doze completos) |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **81** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **93** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes:
 `python validar_dossie.py --todos` (forma, ANTES do build) ·
@@ -45,13 +45,12 @@ estuda o cânon inteiro. Cada lote é uma leva de dossiês na forma consagrada.
 `ezequiel` (8.384) · `daniel` (8.285). Commit `40ce611`. Os cinco passaram com
 0 falhas e 0 avisos no validador.
 
-### Lote 2 — Os Doze (12) — primeira metade FEITA, segunda EM CURSO
-Primeira metade — FEITO: `oseias` (8.499 palavras) · `joel` (8.459) ·
-`amos` (8.497) · `obadias` (8.243) · `jonas` (8.480) · `miqueias` (8.493).
-Os seis passaram o validador com 0 falhas e 0 avisos; build em 81 páginas.
-
-Segunda metade — EM CURSO: `naum` · `habacuque` · `sofonias` · `ageu` ·
-`zacarias` · `malaquias`
+### Lote 2 — Os Doze (12) — FEITO
+Primeira metade: `oseias` (8.499 palavras) · `joel` (8.459) · `amos` (8.497) ·
+`obadias` (8.243) · `jonas` (8.480) · `miqueias` (8.493).
+Segunda metade: `naum` (8.493) · `habacuque` (8.400) · `sofonias` (8.334) ·
+`ageu` (8.498) · `zacarias` (8.499) · `malaquias` (8.500).
+Os doze passaram o validador com 0 falhas e 0 avisos; build em 93 páginas.
 *(Decisão: 12 dossiês, um por livro — não um dossiê dos Doze. O cânon hebraico
 trata os Doze como um livro, mas cada profeta tem bibliografia própria e é
 buscado pelo nome, que é o que a revista explora.)*

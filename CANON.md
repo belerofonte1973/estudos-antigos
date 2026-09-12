@@ -146,11 +146,38 @@ Configurado em `delegation.model` / `delegation.provider`.
 
 1. Redator escreve o dossiê **completo** no caminho final
    (`src/content/biblioteca/biblia/<slug>.mdx`), seguindo a forma e as regras.
-2. Pai **verifica o artefato**, não o relatório: frontmatter, treze seções,
-   contagem de palavras, marcadores, quatro camadas com nomes, selos, ausência
-   de espanhol, ausência de `<` ou `{` solto (MDX).
+2. Pai **verifica o artefato**, não o relatório:
+   `python validar_dossie.py <slug>` — frontmatter, treze seções, imports e a
+   linha em branco do MDX, tamanho, marcadores, quatro camadas com autores
+   nomeados, esferas confessionais, selos, ausência de espanhol, `<` ou `{`
+   soltos. **Falha = não buildar.** Os avisos são para revisão, não bloqueiam.
 3. `npm run build` + `python verificar_site.py` + `python verificar_eixos.py`.
 4. Commit por lote.
+
+### O que o validador aprendeu (não repetir)
+
+O acervo tem **duas gerações** de dossiês: os do Pentateuco usam títulos em
+caixa alta (`2. CONTEXTO E AUTORIA`, `4. NARRATIVAS-CHAVE E DEBATE ACADÊMICO`) e
+os de Josué a Reis a forma consagrada (`2. Contexto e Autoria`). A primeira
+versão do validador só conhecia a segunda e reprovou dossiê íntegro — o defeito
+era do extrator. Corolários que valem para qualquer verificador novo:
+
+- A bibliografia tem **quatro** grafias legítimas: `Bibliografia-âncora
+  verificada`, `Referências-âncora verificadas` (Levítico), `Autores-âncora`
+  (Êxodo), `ANEXO — OBRAS-ÂNCORA E VERIFICAÇÃO` (Gênesis). Aceitar todas.
+- O `max(160)` da descrição vale para `artigos` (meta de SERP), não para a
+  biblioteca: ali é aviso.
+- **Recortar seção por posição do cabeçalho, nunca por `texto.find(título)`** —
+  o sumário lateral repete os títulos e o `find` ancora nele, devolvendo corpo
+  truncado. Foi o que produziu "autores 0/0/0/0" em dossiê que os tem.
+- Dossiê de contexto (`area: oriente`, `pre-historia`) e página de área têm
+  forma própria: o validador os pula em vez de reprová-los.
+
+### Armadilha de arquivo parcial
+
+Redator que escreve em partes deixa `_<slug>_parte2.mdx` no diretório de
+conteúdo — e o glob `**/*.mdx` do Astro o lê, falhando o build por frontmatter
+ausente. Conferir antes de buildar: `ls src/content/biblioteca/biblia/_*.mdx`.
 
 ## Pendências que não são dossiê
 

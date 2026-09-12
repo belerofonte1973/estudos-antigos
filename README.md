@@ -52,6 +52,7 @@ npm run dev                # servidor local — http://localhost:4321
 npm run build              # build de produção em dist/
 
 python verificar_site.py   # verificação pós-build — SEMPRE após build
+python validar_dossie.py --todos   # valida a forma dos dossiês ANTES do build
 node scripts/gerar_og.mjs  # regenera public/og-default.png
 ```
 

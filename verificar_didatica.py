@@ -231,6 +231,13 @@ for slug in BIBLICOS:
             "<td>—</td>" not in tr,
             f"{slug}: linha com coluna de acesso vazia",
         )
+        # Pontuação de fim de frase grudada na URL quebra o link de verdade
+        # (a versão com ponto dava 404 e sem ponto 200). Portão para não voltar.
+        for href in re.findall(r'href="([^"]+)"', tr):
+            exigir(
+                not href.endswith((".", ",", ";", ":", "!")),
+                f"{slug}: URL terminando em pontuação: {href[-40:]}",
+            )
 
     # a tabela é ordenada por acessibilidade: quem tem menos recursos lê de cima
     exigir(

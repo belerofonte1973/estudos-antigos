@@ -11,9 +11,9 @@
    "isbn": "9781555409388"
   },
   {
-   "rotulo": "Brevard S. Childs — Book of Exodus (Old Testament Library)",
+   "rotulo": "The book of Exodus : a critical, theological commentary",
    "rotulo_local": "Childs",
-   "rotulo_api": "Brevard S. Childs — Book of Exodus (Old Testament Library)",
+   "rotulo_api": "The book of Exodus : a critical, theological commentary",
    "selo": "emprestimo",
    "url": "https://archive.org/details/bookofexoduscrit0000chil",
    "isbn": "9780664229689"
@@ -25,14 +25,6 @@
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780743223386",
    "isbn": "9780743223386"
-  },
-  {
-   "rotulo": "Kitchen (2003), On the Reliability of the Old Testament",
-   "rotulo_local": "Kitchen (2003), On the Reliability of the Old Testament",
-   "rotulo_api": "K. A. Kitchen — On the Reliability of the Old Testament",
-   "selo": "biblioteca",
-   "url": "https://openlibrary.org/isbn/9780802803962",
-   "isbn": "9780802803962"
   },
   {
    "rotulo": "Meyers 2005 lê o livro como «memória cultural», não como relato histórico",
@@ -89,14 +81,6 @@
    "selo": "emprestimo",
    "url": "https://archive.org/details/endofbronzeagech0000drew",
    "isbn": "9780691048116"
-  },
-  {
-   "rotulo": "Tradição real: M. Haran, Temples and Temple Service in Ancient Israel",
-   "rotulo_local": "Tradição real: M. Haran, Temples and Temple Service in Ancient Israel",
-   "rotulo_api": "Menahem Haran — Temples and Temple-Service in Ancient Israel",
-   "selo": "biblioteca",
-   "url": "https://openlibrary.org/isbn/9781575061856",
-   "isbn": "9781575061856"
   },
   {
    "rotulo": "6. Ano 1981 da 1ª trad. portuguesa da Bíblia de Jerusalém (fonte: cs.wikipedia) e ISBN Paulus",
@@ -223,6 +207,8 @@
  "entradas": [],
  "tem_bibliografia": true,
  "isbns_sem_selo": [
+  "9780802803962",
+  "9781575061856",
   "9788573803533"
  ]
 }

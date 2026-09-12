@@ -3,9 +3,9 @@
  "anos": 0,
  "obras": [
   {
-   "rotulo": "Jacob Milgrom. — Leviticus 17-22",
+   "rotulo": "Leviticus 17-22 : a new translation with introduction and commentary",
    "rotulo_local": "",
-   "rotulo_api": "Jacob Milgrom. — Leviticus 17-22",
+   "rotulo_api": "Leviticus 17-22 : a new translation with introduction and commentary",
    "selo": "emprestimo",
    "url": "https://archive.org/details/leviticus1722new0000unse",
    "isbn": "9780385412551"
@@ -35,6 +35,14 @@
    "isbn": "080282353X"
   },
   {
+   "rotulo": "Pureza e Perigo",
+   "rotulo_local": "",
+   "rotulo_api": "Pureza e Perigo",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9788527309080",
+   "isbn": "9788527309080"
+  },
+  {
    "rotulo": "commentary by Baruch A. Levine. — Leviticus =",
    "rotulo_local": "",
    "rotulo_api": "commentary by Baruch A. Levine. — Leviticus =",
@@ -57,6 +65,14 @@
    "selo": "emprestimo",
    "url": "https://archive.org/details/leviticuscomment0000gers",
    "isbn": "9780664220648"
+  },
+  {
+   "rotulo": "Frank H. Gorman, Jr. — The ideology of ritual",
+   "rotulo_local": "",
+   "rotulo_api": "Frank H. Gorman, Jr. — The ideology of ritual",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9781850752318",
+   "isbn": "9781850752318"
   },
   {
    "rotulo": "Frank Gorman — Divine Presence and Community",
@@ -89,8 +105,6 @@
  "tem_bibliografia": true,
  "isbns_sem_selo": [
   "9781451410150",
-  "9788534942829",
-  "9788527309080",
-  "9781850752318"
+  "9788534942829"
  ]
 }

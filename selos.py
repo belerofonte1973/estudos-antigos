@@ -502,6 +502,10 @@ def analisar(slug: str) -> dict:
             continue
 
         urls = re.findall(r"https?://[^\s\)\]<>]+", s)
+        # A pontuação final da frase em português gruda na URL extraída:
+        # ".../456/4756." e ".../history/;". Não é cosmético — a versão com ponto
+        # respondia 404 e a sem ponto 200, ou seja o link publicado estava morto.
+        urls = [u.rstrip(".,;:!?") for u in urls]
         if not urls:
             continue
 

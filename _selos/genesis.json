@@ -35,9 +35,9 @@
    "isbn": "9780140449198"
   },
   {
-   "rotulo": "Samuel P. Huntington — Death and Resurrection of the Beloved Son",
+   "rotulo": "Death and Resurrection of the Beloved Son",
    "rotulo_local": "Levenson 1993",
-   "rotulo_api": "Samuel P. Huntington — Death and Resurrection of the Beloved Son",
+   "rotulo_api": "Death and Resurrection of the Beloved Son",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780300157475",
    "isbn": "9780300157475"
@@ -59,28 +59,12 @@
    "isbn": "0801842514"
   },
   {
-   "rotulo": "James L. Kugel — The Bible As It Was",
+   "rotulo": "The Bible As It Was",
    "rotulo_local": "Kugel 1997",
-   "rotulo_api": "James L. Kugel — The Bible As It Was",
+   "rotulo_api": "The Bible As It Was",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/isbn/9780965085472",
    "isbn": "9780965085472"
-  },
-  {
-   "rotulo": "Bíblia de Estudo Almeida - Luxo, Beiras Douradas - Corrigida - Preta",
-   "rotulo_local": "ARC Estudo 2004",
-   "rotulo_api": "Bíblia de Estudo Almeida - Luxo, Beiras Douradas - Corrigida - Preta",
-   "selo": "biblioteca",
-   "url": "https://openlibrary.org/isbn/9788531103278",
-   "isbn": "9788531103278"
-  },
-  {
-   "rotulo": "Bíblia Sagrada Nova Versão Internacional de Bolso - Vinho",
-   "rotulo_local": "NVI 2002",
-   "rotulo_api": "Bíblia Sagrada Nova Versão Internacional de Bolso - Vinho",
-   "selo": "biblioteca",
-   "url": "https://openlibrary.org/isbn/9788573674842",
-   "isbn": "9788573674842"
   },
   {
    "rotulo": "Bíblia Sagrada",
@@ -115,9 +99,9 @@
    "isbn": "9788534902786"
   },
   {
-   "rotulo": "Walter Brueggemann — Genesis: Interpretation",
+   "rotulo": "Genesis",
    "rotulo_local": "Brueggemann 1982",
-   "rotulo_api": "Walter Brueggemann — Genesis: Interpretation",
+   "rotulo_api": "Genesis",
    "selo": "emprestimo",
    "url": "https://archive.org/details/genesis0000brue_y2q6",
    "isbn": "9780804231015"
@@ -207,6 +191,8 @@
  "entradas": [],
  "tem_bibliografia": true,
  "isbns_sem_selo": [
+  "9788531103278",
+  "9788573674842",
   "9788534902915",
   "9788534946711",
   "9780385414519"

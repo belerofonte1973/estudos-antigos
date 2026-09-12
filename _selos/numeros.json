@@ -11,6 +11,14 @@
    "isbn": "9780805211825"
   },
   {
+   "rotulo": "Achenbach 2021, \"Theocratic Reworking in the Pentateuch\", De Gruyter, DOI 10.1515/",
+   "rotulo_local": "Achenbach 2021, \"Theocratic Reworking in the Pentateuch\", De Gruyter, DOI 10.1515/",
+   "rotulo_api": "Jaeyoung Jeon — Chronicles and the Priestly Literature of the Hebrew Bible",
+   "selo": "biblioteca",
+   "url": "https://openlibrary.org/isbn/9783110707014",
+   "isbn": "9783110707014"
+  },
+  {
    "rotulo": "Gray 1903, A Critical and Exegetical Commentary on Numbers",
    "selo": "livre",
    "url": "https://archive.org/details/criticalexegetic04gray"
@@ -44,11 +52,6 @@
    "rotulo": "Davies 1995, Numbers",
    "selo": "biblioteca",
    "url": "https://openlibrary.org/works/OL2935885W"
-  },
-  {
-   "rotulo": "Sakenfeld 1995, Numbers: Journeying with God",
-   "selo": "biblioteca",
-   "url": "https://openlibrary.org/works/OL34273013W"
   },
   {
    "rotulo": "Olson 1996, Numbers",
@@ -178,7 +181,6 @@
  "tem_bibliografia": true,
  "isbns_sem_selo": [
   "9788515030163",
-  "9786559282012",
-  "9783110707014"
+  "9786559282012"
  ]
 }

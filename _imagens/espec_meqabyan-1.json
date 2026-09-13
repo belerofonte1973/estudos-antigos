@@ -1,0 +1,51 @@
+{
+ "slug": "meqabyan-1",
+ "_comentario": "Especificação editorial das figuras do dossiê de 1 Meqabyan. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "_material_escasso": "1 Meqabyan tem pouco material figurativo de licença livre: não existe obra antiga que represente Tsirutsaydan, Akrandis, os três irmãos (Abya, Sila e Fanto) ou a morte do rei à mesa, e nenhuma inscrição, selo ou escavação menciona as personagens do livro (§12). Não localizei manuscrito etíope dos Meqabyan em repositório de licença livre — o testemunho citado pela literatura, o British Library Or. 506, não está no Commons. As figuras abaixo são, por isso, quatro: o martírio dos irmãos na arte europeia (o paralelo grego que o dossiê discute), a tábua material da etimologia do nome do tirano e um testemunho da oficina de escrita etíope.",
+ "figuras": [
+  {
+   "arquivo": "File:Monnaie - Module C (SC), Tyr, Phénicie, Antiochos IV Épiphane - btv1b85680206 (1 of 2).jpg",
+   "titulo": "Moeda de Antíoco IV cunhada em Tiro",
+   "alt": "Moeda de bronze antiga fotografada com o retrato de um rei helenístico de um lado",
+   "legenda": "Moeda de bronze de Antíoco IV Epifânio batida na casa da moeda de Tiro, na Fenícia, hoje no acervo da Bibliothèque nationale de France. É a base material da etimologia mais discutida do dossiê: o nome do rei perseguidor, Tsirutsaydan, é lido como Tsyr u Tsaydan, 'Tiro e Sidom', cidades em que o selêucida cunhou moeda (§4.1) — leitura que a §12.3 registra como hipótese sólida de base material que a pesquisa não conferiu moeda por moeda. Esta é uma das moedas a conferir.",
+   "passagem": "1 Meq 1-2 (cf. §4.1 e §12.3)",
+   "tecnica": "moeda (séc. II a.C.)",
+   "acervo": "Bibliothèque nationale de France, Paris (fotografia de reprodução)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Crispijn van de Passe I after Maarten de Vos, The Seven Maccabean Brothers Killed by Antiochus, 1591, NGA 156151.jpg",
+   "titulo": "Os sete irmãos macabeus mortos por Antíoco",
+   "alt": "Gravura em preto e branco com um tirano entronizado assistindo à execução de vários jovens diante de uma multidão",
+   "legenda": "Gravura de Crispijn van de Passe a partir de Maarten de Vos (1591), hoje na National Gallery of Art. O assunto é 2 Macabeus 7 — os sete irmãos e a mãe que recusam comer carne de porco e morrem um a um diante do rei. É o parente grego que a §4.2 põe em cena: o texto etíope nomeia três filhos de Meqabes (Abya, Sila e Fanto) e menciona mais dois, o que perfaz cinco [V — Wills, 2021], e o Sinaxário conta a mesma família martirizada. O dossiê registra o paralelo e não afirma dependência literária — a gravura mostra o que a tradição europeia fez do motivo, não a sua fonte.",
+   "passagem": "1 Meq 3; cf. 2 Mc 7 (cf. §4.2 e §9)",
+   "tecnica": "gravura (1591)",
+   "acervo": "National Gallery of Art, Washington, D.C. (inv. NGA 156151)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:150.The Courage of a Mother.jpg",
+   "titulo": "A coragem de uma mãe",
+   "alt": "Gravura em preto e branco com uma mulher de braços erguidos diante de corpos caídos e de um tirano em seu trono",
+   "legenda": "Gravura de Gustave Doré para a série Doré's English Bible (1866), titulada 'A Coragem de uma Mãe' e referida a 2 Macabeus 7,20-42: a mãe que assiste à morte dos sete filhos e exorta cada um a não ceder. O dossiê usa o material grego como comparando na §9 — o alvo de 1 Meqabyan é a idolatria e a recusa de sacrificar, não a helenização nem o Templo — e o Sinaxário etíope dá aos irmãos festa própria (§4.2). A cena de Doré é a versão ocidental mais difundida do mesmo martírio.",
+   "passagem": "cf. 2 Mc 7,20-42 (§9)",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Monnaie - Bronze, Sidon, Phénicie, Antiochos Iv Épiphane - btv1b8480099d (1 of 2).jpg",
+   "titulo": "Moeda de Antíoco IV cunhada em Sidom",
+   "alt": "Moeda de bronze antiga fotografada de um lado, com superfície esverdeada e relevo desgastado",
+   "legenda": "A segunda metade da hipótese: moeda de bronze de Antíoco IV batida em Sidom, também no acervo da Bibliothèque nationale de France. Com a de Tiro, ela forma o par 'Tiro e Sidom' de que se faz derivar Tsirutsaydan, e é a razão pela qual a §12.3 insiste que a base documental da etimologia é numismática. A §12 registra que a arqueologia não produziu inscrição alguma que nomeie 1 Meqabyan, Tsirutsaydan, Akrandis ou os três irmãos: o que existe de verificável é a moeda, não a personagem.",
+   "passagem": "1 Meq 1-2 (cf. §12.3)",
+   "tecnica": "moeda de bronze (séc. II a.C.)",
+   "acervo": "Bibliothèque nationale de France, Paris (antiga coleção do marquês de Vogüé)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

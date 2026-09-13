@@ -1,0 +1,101 @@
+{
+ "slug": "oracao-manasses",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 2,
+   "src": "/imagens/oracao-manasses/02-manasses-como-pecador-arrependido.webp",
+   "arquivo_origem": "File:Manasse als berouwvolle zondaar Acht berouwvolle zondaars uit het Oude en Nieuwe Testament (serietitel), RP-P-1877-A-345.jpg",
+   "titulo": "Manassés como pecador arrependido",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1877-A-345), da série 'Oito pecadores arrependidos do Antigo e do Novo Testamento', impressa entre 1595 e 1596. Manassés é o modelo do arrependimento tardio na tradição cristã, e a série o coloca ao lado de Davi e do filho pródigo. É a leitura da Oração de Manassés já fixada na devoção do fim do século XVI.",
+   "passagem": "2Cr 33,12-13",
+   "artista": "Rijksmuseum",
+   "data": "between 1595 and 1596",
+   "tecnica": "gravura (série Oito pecadores arrependidos, 1595-1596)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1877-A-345)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AManasse_als_berouwvolle_zondaar_Acht_berouwvolle_zondaars_uit_het_Oude_en_Nieuwe_Testament_%28serietitel%29%2C_RP-P-1877-A-345.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 4784,
+   "altura_original": 6252,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Identificatie Titel(s): Manasse als berouwvolle zondaar. Acht berouwvolle zondaars uit het Oude en Nieuwe Testament (serietitel). Objecttype: prent Serienummer: 2/8 Objectnummer: RP-P-1877-A-345 Catalogusreferentie: New Hollstein Dutch 16-2(2) Omschrijving: Manasse, gekluisterd aan hals, handen en voeten nabij een brug. Voor hem ligt een kroon - een verwijzing naar zijn koningschap. Op de achtergrond een scène uit het leven van Manasse: twee mannen worden over een brug geboeid weggevoerd door ee",
+   "sha256": "68ed9b39a427640b",
+   "bytes": 320258,
+   "largura_final": 950,
+   "altura_final": 1241
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/oracao-manasses/03-manasses-amom-e-josias-reis-de-juda.webp",
+   "arquivo_origem": "File:Manasse, Amon en Josia Koningen van Juda (serietitel) Theatrum biblicum (..) (serietitel), RP-P-1904-3499.jpg",
+   "titulo": "Manassés, Amom e Josias, reis de Judá",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1904-3499), da série 'Theatrum biblicum' impressa em 1585 segundo desenho de Maarten van Heemskerck. As três cenas mostram a sequência dos reis de Judá — Manassés, o filho Amom e o neto Josias —, e é no reinado de Manassés que os livros de Reis situam a pior idolatria de Judá (2Rs 21,1-18). A oração que leva o seu nome pertence, portanto, à figura mais condenada dos reis de Judá, convertida no cativeiro.",
+   "passagem": "2Rs 21,1-18; 2Cr 33,1-20",
+   "artista": "Rijksmuseum",
+   "data": "1585",
+   "tecnica": "gravura (série Theatrum biblicum, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1904-3499); segundo desenho de Maarten van Heemskerck",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AManasse%2C_Amon_en_Josia_Koningen_van_Juda_%28serietitel%29_Theatrum_biblicum_%28..%29_%28serietitel%29%2C_RP-P-1904-3499.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 7134,
+   "altura_original": 5818,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Identificatie Titel(s): Manasse, Amon en Josia. Koningen van Juda (serietitel). Theatrum biblicum (...) (serietitel) Objecttype: prent Serienummer: 6/8 Objectnummer: RP-P-1904-3499 Catalogusreferentie: Mielke 39-2(2) Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228 Omschrijving: De koningen Manasse, Amon en Josia. Op de achtergrond enkele belangrijke gebeurtenissen uit hun leven. Links op de achtergrond zit koning Manasse in zijn strijdwagen. Midden op de achtergrond de moord",
+   "sha256": "57eb8dcb60e79617",
+   "bytes": 116342,
+   "largura_final": 950,
+   "altura_final": 775
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/oracao-manasses/05-a-oracao-de-manasses-na-vulgata-sixto-clementina.webp",
+   "arquivo_origem": "File:Prayer of Manasseh and beginning of 1 (3) Esdras - Sixto-Clementine Vulgate (1592).jpg",
+   "titulo": "A Oração de Manassés na Vulgata Sixto-Clementina",
+   "legenda": "Página da Vulgata Sixto-Clementina (1592), com o texto da Oração de Manassés e o início de 1 Esdras, na edição digitalizada pela Universidade de Bolonha. O pequeno texto de quinze versículos sobreviveu em apêndice às Bíblias latinas, fora do cânon, e a página mostra a sua posição material nos impressos. É esse lugar marginal que explica, ao mesmo tempo, a sua circulação e a sua exclusão das listas canônicas.",
+   "passagem": "Oração de Manassés (texto integral)",
+   "artista": "anônimo",
+   "data": "2006-11-30 12:54:39",
+   "tecnica": "impresso tipográfico (1592)",
+   "acervo": "Universidade de Bolonha (reprodução digital da Vulgata Sixto-Clementina, 1592)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3APrayer_of_Manasseh_and_beginning_of_1_%283%29_Esdras_-_Sixto-Clementine_Vulgate_%281592%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 2000,
+   "altura_original": 1325,
+   "secao": "12",
+   "posicao": "fim",
+   "descricao_fonte": "Prayer of Manasseh and beginning of 1 (3) Esdras - Sixto-Clementine Vulgate (1592)",
+   "sha256": "12eb6e5739b5d051",
+   "bytes": 82650,
+   "largura_final": 950,
+   "altura_final": 629
+  }
+ ],
+ "recusadas": [
+  [
+   "File:Manasses in Vinculis.png",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Relief Esarhaddon Louvre AO20185.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Charles XII Bible (1709) - The Prayer of Azariah and Song of the Three Holy Children and Prayer of Manassee.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

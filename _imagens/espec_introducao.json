@@ -1,0 +1,79 @@
+{
+ "slug": "introducao",
+ "_comentario": "Especificação editorial das figuras do dossiê de abertura da biblioteca bíblica (Introdução à Antiguidade Bíblica). Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "_aviso_secoes": "ATENÇÃO: introducao.mdx não tem seções numeradas — traz apenas '## Áreas de estudo', '## Períodos' e '## Como usar esta seção'. O campo secao abaixo segue a convenção do caderno (4 conteúdos-chave, 6 recepção/cânone, 9 contexto do Antigo Oriente, 12 arqueologia), mas imagens_inserir.py só insere em cabeçalho no formato '## N.'; enquanto o dossiê não receber a numeração padrão, ele responderá 'SEÇÃO n não encontrada' e não inserirá nada. O campo secao_rotulo indica o cabeçalho atual que deve receber cada figura.",
+ "figuras": [
+  {
+   "arquivo": "File:Le Scribe accroupi - Musée du Louvre Antiquités égyptiennes E 3023.jpg",
+   "titulo": "O escriba sentado",
+   "alt": "Estátua egípcia de um homem sentado de pernas cruzadas, com um rolo de papiro sobre os joelhos e olhar fixo",
+   "legenda": "O Escriba sentado do Museu do Louvre (E 3023) é a imagem mais conhecida do ofício que produziu e transmitiu os textos do antigo Oriente. Ele abre este dossiê porque a Antiguidade Bíblica é, antes de tudo, uma cultura de escribas: sem eles não há tabuleta, rolo, códex nem cópia — e a seção 'Áreas de estudo' inclui a crítica textual e as línguas bíblicas entre os seus campos. A estátua não documenta nenhum livro da Bíblia; documenta quem os escreveu.",
+   "passagem": "contexto (cf. Áreas de estudo)",
+   "tecnica": "estátua em calcário pintado (Egito antigo)",
+   "acervo": "Musée du Louvre, Paris (Antiguidades egípcias, E 3023); fotografia de Shonagon, CC0",
+   "secao": "4",
+   "secao_rotulo": "Áreas de estudo",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Cuneiform tablet- student exercise tablet MET DP360672.jpg",
+   "titulo": "Tabuleta escolar de escriba",
+   "alt": "Pequena tábua de argila amarelada coberta de sinais cuneiformes em linhas regulares",
+   "legenda": "Tábua de argila com exercício de escola, feita na Babilônia entre os séculos XX e XVI a.C. e hoje no Metropolitan Museum. É o objeto que mostra o trabalho por trás da literatura do Antigo Oriente Próximo: as listas que o aprendiz copiava eram o caminho pelo qual passavam os textos que interessam ao estudo da Bíblia. O dossiê inclui a literatura mesopotâmica entre as suas áreas de estudo, e a tábua é o exemplo material do método — copiar, memorizar, transmitir.",
+   "passagem": "contexto (cf. Literatura do Antigo Oriente Próximo)",
+   "tecnica": "tábua de argila inscrita em cuneiforme",
+   "acervo": "The Metropolitan Museum of Art, Nova York (doação do museu, acesso aberto)",
+   "secao": "4",
+   "secao_rotulo": "Áreas de estudo",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Codex Vaticanus Matthew 1,22-2,18.jpg",
+   "titulo": "Página do Códice Vaticano",
+   "alt": "Página de manuscrito grego em unciais, escrita em três colunas sobre pergaminho",
+   "legenda": "Página do Códice Vaticano (século IV), um dos grandes códices que transmitiram a Bíblia grega — a Septuaginta no Antigo Testamento e o Novo Testamento. Ele ilustra o campo da crítica textual, que estuda como os textos chegaram até nós e o que muda entre as versões antigas: a página traz Mateus 1,22-2,18 em escrita uncial, conforme a ficha do Commons.",
+   "passagem": "Mt 1,22-2,18 (crítica textual)",
+   "tecnica": "pergaminho, escrita uncial grega (século IV)",
+   "acervo": "Códice Vaticano (Vaticanus graecus 1209); reprodução em domínio público",
+   "secao": "6",
+   "secao_rotulo": "Áreas de estudo",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Babylonian Map of the World, 700-500 BC.jpg",
+   "titulo": "Mapa babilônico do mundo",
+   "alt": "Tábua de argila gravada com um mapa circular, com círculos, linhas e inscrições cuneiformes",
+   "legenda": "O chamado Mapa Babilônico do Mundo (700-500 a.C.), exposto no Museu Britânico, representa a terra como um disco cercado por um oceano, com a Babilônia ao centro. É o objeto mais direto para a comparação que a seção de contexto do dossiê propõe: como o antigo Oriente imaginava o mundo antes de qualquer cosmografia bíblica. Ele não ilustra nenhum texto da Bíblia — documenta o universo mental compartilhado em que esses textos circulavam.",
+   "passagem": "contexto (cf. Literatura do Antigo Oriente Próximo)",
+   "tecnica": "tábua de argila inscrita em cuneiforme (700-500 a.C.)",
+   "acervo": "The British Museum, Londres; fotografia de Gary Todd, CC0",
+   "secao": "9",
+   "secao_rotulo": "Períodos",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Aramaic Inscription on Basalt Monument, Dan, 9th Century BC (43167226572).jpg",
+   "titulo": "Estela de Tel Dan",
+   "alt": "Fragmento de pedra basáltica escura com linhas de escrita aramaica antiga, em museu",
+   "legenda": "A inscrição aramaica em basalto encontrada em Tel Dan, do século IX a.C., e hoje no Museu de Israel, menciona a 'casa de Davi' — e é um dos achados que a arqueologia bíblica usa para situar as dinastias de Israel e Judá no solo. Ela pertence à seção de Arqueologia: prova o ambiente e a epigrafia, não a verdade de uma narrativa. O dossiê a inclui como exemplo do que a arqueologia pode e não pode fazer — datar um reino, não comprovar um milagre.",
+   "passagem": "contexto histórico (séc. IX a.C.)",
+   "tecnica": "basalto inscrito em aramaico (séc. IX a.C.)",
+   "acervo": "Museu de Israel, Jerusalém; fotografia de Gary Todd, CC0",
+   "secao": "12",
+   "secao_rotulo": "Períodos",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Great Isaiah Scroll Ch53.jpg",
+   "titulo": "O rolo de Isaías nas cavernas de Qumran",
+   "alt": "Porção de rolo de pergaminho antigo com colunas de texto hebraico, costuras visíveis entre as folhas",
+   "legenda": "Trecho do Grande Rolo de Isaías, o mais bem conservado dos rolos bíblicos achados em Qumran, com todo o livro em hebraico e cerca de mil anos mais antigo que os manuscritos massoréticos conhecidos. A reprodução fotográfica é do Museu de Israel. É a peça que explica por que a descoberta de 1947 reescreveu a história do texto bíblico, e por isso abre a seção de manuscritos e crítica textual deste dossiê.",
+   "passagem": "Is 53 (cf. Crítica textual)",
+   "tecnica": "rolo de pergaminho, escrita hebraica (c. séc. II a.C.)",
+   "acervo": "Museu de Israel, Jerusalém (Grande Rolo de Isaías, 1QIsa; fotografia de Ardon Bar Hama)",
+   "secao": "12",
+   "secao_rotulo": "Como usar esta seção",
+   "posicao": "fim"
+  }
+ ]
+}

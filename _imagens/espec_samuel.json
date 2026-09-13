@@ -1,0 +1,72 @@
+{
+ "slug": "samuel",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Saul and David by Rembrandt Mauritshuis 621.jpg",
+   "titulo": "Saul e Davi",
+   "alt": "Pintura escura com um rei pensativo sentado e um jovem tocando harpa à sua frente",
+   "legenda": "Rembrandt, ou sua oficina, pinta 1Sm 16,14-23: Davi toca a harpa para acalmar Saul, atormentado por um espírito mau. O dossiê usa a cena porque ela abre a relação mais longa do livro — a música que consola o rei é do mesmo Davi que o substituirá, e o quadro deixa isso no silêncio entre os dois.",
+   "passagem": "1Sm 16,14-23",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Mauritshuis, Haia (621)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:071A.David Slays Goliath.jpg",
+   "titulo": "Davi derruba Golias",
+   "alt": "Gravura em preto e branco com um jovem de funda diante de um guerreiro gigantesco de armadura",
+   "legenda": "Gravura de Doré para 1Sm 17: Davi derruba Golias com a funda, e o texto insiste que ele recusa a armadura de Saul (1Sm 17,38-40). O dossiê usa a cena porque é o episódio que a arte transformou em imagem da força que não vem do armamento — e o ponto do capítulo é justamente a rejeição das armas do rei.",
+   "passagem": "1Sm 17,38-51",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Plate with David Anointed by Samuel MET DT11583.jpg",
+   "titulo": "Prato bizantino com Davi ungido por Samuel",
+   "alt": "Peça circular de prata trabalhada, com figuras em relevo no centro e moldura decorada",
+   "legenda": "Prato de prata bizantino de 629-630, no Metropolitan Museum: Davi é ungido por Samuel, e o friso ao redor traz cenas de sua vida. O dossiê usa o objeto na seção de recepção porque a unção de 1Sm 16,1-13 se tornou programa imperial — Davi como modelo do rei ungido por Deus, num objeto de mesa anterior às pinturas que o acervo mostra noutros dossiês.",
+   "passagem": "1Sm 16,1-13",
+   "tecnica": "prato de prata trabalhada",
+   "acervo": "The Metropolitan Museum of Art, Nova York (open access)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Michelangelo's David 2015.jpg",
+   "titulo": "O Davi de Michelangelo",
+   "alt": "Escultura monumental de mármore de um jovem com a funda ao ombro, em galeria",
+   "legenda": "O Davi de Michelangelo, esculpido entre 1501 e 1504, mostra o jovem antes do combate de 1Sm 17 — não o vencedor com a cabeça do gigante, mas o momento em que decide enfrentá-lo. O dossiê usa a escultura para discutir a recepção do personagem: o herói de Samuel se torna, no Renascimento, imagem da cidade que se prepara para resistir.",
+   "passagem": "1Sm 17,32-40 (recepção)",
+   "tecnica": "escultura em mármore",
+   "acervo": "Exposta em Florença; fotografia de Livioandronico2013, CC BY-SA 4.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Dura Synagogue WC3 David anointed by Samuel.jpg",
+   "titulo": "Samuel unge Davi, em Dura Europos",
+   "alt": "Pintura mural desbotada com figuras de pé alinhadas diante de outras, em traço linear",
+   "legenda": "Painel WC3 da sinagoga de Dura Europos (século III, Síria): Samuel unge Davi na presença de seus irmãos, cena de 1Sm 16,1-13. O dossiê usa o painel na seção de ciência porque, além de ser um dos testemunhos mais antigos da cena, ele mostra que o ciclo de Samuel já tinha iconografia própria numa sinagoga da fronteira romana no século III.",
+   "passagem": "1Sm 16,1-13",
+   "tecnica": "pintura mural (século III)",
+   "acervo": "Sinagoga de Dura Europos, Síria (painel WC3)",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:JRSLM 300116 Tel Dan Stele 01.jpg",
+   "titulo": "A estela de Tel Dan",
+   "alt": "Fragmento de pedra escura com linhas de escrita aramaica, em vitrine de museu",
+   "legenda": "A estela aramaica encontrada em Tel Dan, exposta no Museu de Israel, menciona a casa de Davi — a mais antiga referência extra-bíblica ao nome da dinastia. O dossiê a usa na seção de ciência porque o que ela documenta é a existência de um reino de Judá governado por uma dinastia chamada casa de Davi no século IX a.C., não os episódios narrados nos capítulos 16 a 31.",
+   "passagem": "contexto epigráfico (séc. IX a.C.)",
+   "tecnica": "pedra basáltica com inscrição aramaica (séc. IX a.C.)",
+   "acervo": "Museu de Israel, Jerusalém; fotografia de Oren Rozen, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "slug": "levitico",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 4,
+   "src": "/imagens/levitico/04-a-construcao-do-tabernaculo.webp",
+   "arquivo_origem": "File:Bouw van de tabernakel onder leiding van Mozes Le Tabernacle dressé dans le Desert par les Lévites (titel op object), RP-P-1896-A-19368-2387.jpg",
+   "titulo": "A construção do tabernáculo",
+   "legenda": "Gravura de 1705 conservada no Rijksmuseum: o tabernáculo montado no deserto, com o pátio, o altar e o povo em volta. O dossiê usa a estampa para mostrar que o espaço do culto levítico — tenda, pátio e altar — é reconstruído na arte europeia a partir do texto, e que cada reconstrução é uma hipótese sobre o que o relato descreve.",
+   "passagem": "Lv 1,1-9 (cf. Ex 40)",
+   "artista": "Rijksmuseum",
+   "data": "1705",
+   "tecnica": "gravura (água-forte e buril)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1896-A-19368-2387)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ABouw_van_de_tabernakel_onder_leiding_van_Mozes_Le_Tabernacle_dress%C3%A9_dans_le_Desert_par_les_L%C3%A9vites_%28titel_op_object%29%2C_RP-P-1896-A-19368-2387.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 7670,
+   "altura_original": 3648,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Identificatie Titel(s): Bouw van de tabernakel onder leiding van Mozes. Le Tabernacle dressé dans le Desert par les Lévites (titel op object) Objecttype: prent boekillustratie Objectnummer: RP-P-1896-A-19368-2387 Catalogusreferentie: Van Eeghen 3373. Collectie Rijksmuseum-2(2). Opmerking: 2 staten aanwezig in de collectie van het Rijksmuseum Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228 Vervaardiging Vervaardiger: prentmaker: Jan Luyken, uitgever: Pieter Mortier (I) Plaats",
+   "sha256": "491bace594efa40e",
+   "bytes": 116134,
+   "largura_final": 950,
+   "altura_final": 452
+  },
+  {
+   "ordem": 6,
+   "src": "/imagens/levitico/06-o-altar-do-santuario-de-tel-arad.webp",
+   "arquivo_origem": "File:Tel Arad - Lower City altar1932.jpg",
+   "titulo": "O altar do santuário de Tel Arad",
+   "legenda": "O santuário israelita de Arad, da baixa Idade do Ferro, conserva o altar de pedra de seu pátio e, na sala do fundo, dois altares de incenso — a estrutura que mais se aproxima do que o Levítico descreve para o culto. É a evidência de ciência do dossiê: o culto sacrificial do livro tem correspondência material em Israel, ainda que relato e sítio não coincidam em escala.",
+   "passagem": "contexto cultual (cf. Lv 1-7; 16)",
+   "artista": "יעקב",
+   "data": "2023-02-12 12:04:05",
+   "tecnica": "sítio arqueológico (Idade do Ferro II)",
+   "acervo": "Tel Arad, Israel; fotografia de יעקב, CC BY-SA 4.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ATel_Arad_-_Lower_City_altar1932.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 4.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 5184,
+   "altura_original": 3888,
+   "secao": "12",
+   "posicao": "fim",
+   "descricao_fonte": "Tel Arad - Lower City altar",
+   "sha256": "d0f3eed0d28595ff",
+   "bytes": 97746,
+   "largura_final": 950,
+   "altura_final": 712
+  }
+ ],
+ "recusadas": [
+  [
+   "File:William Holman Hunt - The Scapegoat - WGA11808.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Karel van III Mander - Aron as High Priest - KMS7985 - Statens Museum for Kunst.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Moses, Aaron the High Priest and King David - Passover Haggadah (1740), f.1 - BL Add MS 18724.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Babylonian - Sumerian Temple Hymn - Walters 481802 - View A.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

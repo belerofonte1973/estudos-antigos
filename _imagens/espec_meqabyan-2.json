@@ -1,0 +1,51 @@
+{
+ "slug": "meqabyan-2",
+ "_comentario": "Especificação editorial das figuras do dossiê de 2 Meqabyan. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "_material_escasso": "2 Meqabyan não tem iconografia: o rei Meqabis, o profeta Rei e os cinco filhos de Meqabees não aparecem em obra alguma, e nenhuma descoberta arqueológica menciona as personagens (§12). Não localizei manuscrito etíope dos Meqabyan em repositório de licença livre — o testemunho citado, o British Library Or. 506 (século XVIII, fólios 4r-87r), não está no Commons. O dossiê recebe quatro figuras: a esperança da ressurreição do corpo na liturgia etíope e armênia, o martírio macabaico na pintura europeia, o rei pagão humilhado (o modelo de Daniel 4 com que a §9 compara Meqabis) e o testemunho material da oficina de escrita etíope.",
+ "figuras": [
+  {
+   "arquivo": "File:The Resurrection. From an Ethiopian prayer book (CBL W 942, f.2v).jpg",
+   "titulo": "A Ressurreição num livro de orações etíope",
+   "alt": "Iluminura etíope com a figura de Cristo ressuscitado entre soldados e mulheres, sobre pergaminho",
+   "legenda": "Fólio 2v de um livro de orações etíope pintado e escrito sobre pergaminho em ge'ez no século XVII ou no começo do XVIII (Chester Beatty Library, W.942). A imagem da Ressurreição abre o que o dossiê discute na §4.4: 2 Meqabyan não é narrativa de corte, é uma defesa da ressurreição do corpo — 'unidos em alma e carne' (18,1) —, argumentada pela natureza (as unhas e os cabelos que crescem), pela semente (o grão de trigo que só frutifica se for destruído, 17,1) e pelo juízo. A peça mostra como essa doutrina se tornou imagem na Igreja Tewahedo, onde os Meqabyan são Escritura.",
+   "passagem": "2 Meq 16-18 (cf. 1Cor 15,36-38)",
+   "tecnica": "pintura sobre pergaminho (ge'ez)",
+   "acervo": "Chester Beatty Library, Dublin (W.942, f.2v)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Scuola Grande dei Carmini - Sala dell'Archivio - Il martirio dei Maccabei di Giustino Menescardi.jpg",
+   "titulo": "O martírio dos Macabeus, de Menescardi",
+   "alt": "Pintura com um grupo de jovens e uma mulher diante de um altar",
+   "legenda": "Pintura de Giustino Menescardi na Scuola Grande dei Carmini, em Veneza, com o martírio dos Macabeus. O dossiê registra que a recusa de sacrificar aos ídolos de Tseerutsaydan e a morte no fogo são contadas duas vezes dentro do próprio livro — brevemente no cap. 6 e doutrinalmente no cap. 13, onde os mártires são 'cinco filhos de Meqabees' que entregaram os corpos à morte (§4.3). A pintura pertence à recepção europeia do mesmo motivo, que circulara antes em 1 e 2 Macabeus; o paralelo é de motivo hagiográfico, e o dossiê não deduz dele dependência literária.",
+   "passagem": "2 Meq 6,10-14; 13,1 (cf. 2 Mc 7)",
+   "tecnica": "pintura",
+   "acervo": "Scuola Grande dei Carmini, Veneza; fotografia de Didier Descouens",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William Blake - Nebuchadnezzar (Minneapolis).jpg",
+   "titulo": "Nabucodonosor, de William Blake",
+   "alt": "Gravura colorida com uma figura humana de quatro apoios, com longos cabelos e unhas, em postura animal",
+   "legenda": "Gravura de William Blake (1795, Minneapolis Institute of Arts) com Nabucodonosor na sua humilhação: o rei de Daniel 4 que 'come erva como os bois' e é restaurado quando confessa o Altíssimo. O dossiê usa esse motivo, na §9, como o paralelo canônico mais forte do rei Meqabis, que ataca Israel como castigo e depois se arrepende — mas com um passo a mais: no 2 Meqabyan o flagelo não apenas confessa, ensina a Lei aos cativos (2 Meq 3,19). Blake dá à cena bíblica a sua forma mais perturbadora, a do rei reduzido a besta antes de recuperar a razão.",
+   "passagem": "2 Meq 3,2-19 (cf. Dn 4)",
+   "tecnica": "gravura colorida (1795)",
+   "acervo": "Minneapolis Institute of Arts",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Saint Mark from MS 105 (Getty museum) - Ethiopian Gospel Book FOL. 82V.jpg",
+   "titulo": "São Marcos num evangelho etíope",
+   "alt": "Página de evangelho etíope com a figura do evangelista Marcos a têmpera sobre pergaminho",
+   "legenda": "Fólio 82v do evangelho etíope MS. 105 do Getty Museum, pintado a têmpera sobre pergaminho entre cerca de 1480 e 1520. Não é um manuscrito dos Meqabyan: é o testemunho do tipo de códex que a §12 descreve. O dossiê registra que o testemunho manuscrito dos Meqabyan é tardio e pouco estudado — todos os manuscritos conhecidos são modernos ou tardios, o que impede a paleografia de ancorar a data de composição, e a única proposta publicada (Beckwith, 2008) é textual, não laboratorial. A página documenta a oficina, não o texto.",
+   "passagem": "cf. §12 (codicologia etíope)",
+   "tecnica": "têmpera sobre pergaminho",
+   "acervo": "The J. Paul Getty Museum (MS. 105, f. 82v)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

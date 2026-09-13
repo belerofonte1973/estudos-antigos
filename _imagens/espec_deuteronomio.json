@@ -1,0 +1,61 @@
+{
+ "slug": "deuteronomio",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Dood van Mozes Scènes uit het Oude Testament (serietitel), RP-P-1966-41.jpg",
+   "titulo": "A morte de Moisés no monte Nebo",
+   "alt": "Gravura com um homem idoso ajoelhado no alto de um monte, com uma paisagem ampla ao fundo",
+   "legenda": "Gravura holandesa de c. 1582-1583, conservada no Rijksmuseum: Moisés morre no alto do monte Nebo depois de ver a terra que não atravessará (Dt 34,1-5). A cena é o desfecho de Deuteronômio e o lugar onde o dossiê discute o que o livro faz com seu protagonista — o mediador que fala com Deus face a face e, no fim, não entra na terra.",
+   "passagem": "Dt 34,1-8",
+   "tecnica": "gravura (buril)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1966-41)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Casale Monferrato - Synagogue -Sefer Torah.jpg",
+   "titulo": "Rolo da Torá do museu de Casale Monferrato",
+   "alt": "Rolo de pergaminho aberto em duas colunas de escrita, com manto e ornamentos ao lado",
+   "legenda": "Rolo da Torá dos séculos XVII-XVIII, em pergaminho, exposto no museu da sinagoga de Casale Monferrato, na Itália. O dossiê usa o objeto ao tratar do Shemá (Dt 6,4-9): é nos rolos da liturgia que a confissão de fé de Deuteronômio continua sendo lida e ensinada, e o objeto mostra que a ordem de escrever a palavra nas portas da casa tem história material.",
+   "passagem": "Dt 6,4-9",
+   "tecnica": "rolo de pergaminho manuscrito (séc. XVII-XVIII)",
+   "acervo": "Museu da Sinagoga de Casale Monferrato, Itália; fotografia de FLLL, CC BY-SA 3.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Mosaics of the Basilica, mid-6th century CE. Inside the Memorial Church of Moses, Mount Nebo, Jordan.jpg",
+   "titulo": "Mosaicos da basílica do monte Nebo",
+   "alt": "Piso de mosaico com motivos geométricos e figuras, em interior de igreja",
+   "legenda": "Mosaicos do século VI da basílica do Memorial de Moisés, no monte Nebo, na Jordânia, onde a tradição situa a morte de Moisés. O dossiê usa a imagem na seção de recepção porque documenta como o lugar de Dt 34 foi marcado, construído e percorrido na Antiguidade tardia: o texto virou topografia.",
+   "passagem": "Dt 34,1-6 (recepção)",
+   "tecnica": "mosaico (século VI)",
+   "acervo": "Basílica do Memorial de Moisés, monte Nebo, Jordânia; fotografia de Osama Shukir Muhammed Amin, CC BY-SA 4.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:1. Part of the clay tablet of Kadesh Treaty, written in Akkadian. 1269 BCE. From Boğazköy, Turkey. Clay tablet. Museum of the Ancient Orient, Istanbul, Turkey.jpg",
+   "titulo": "O tratado de Cades",
+   "alt": "Fragmento de tábua de argila coberta de escrita cuneiforme, com etiqueta de museu",
+   "legenda": "Tábua do tratado concluído entre Ramsés II e o rei hitita em 1269 a.C., no Museu do Oriente Antigo em Istambul. O dossiê o usa na seção de comparação porque a estrutura desses tratados de vassalagem — preâmbulo, história das relações, estipulações, testemunhas e maldições — é o modelo com que se costuma comparar a forma da aliança em Deuteronômio: as bênçãos e maldições do fim do livro não são ornamento, são cláusula.",
+   "passagem": "contexto do Antigo Oriente Próximo (cf. Dt 28)",
+   "tecnica": "argila inscrita (1269 a.C.)",
+   "acervo": "Museu do Oriente Antigo, Istambul; fotografia de Osama Shukir Muhammed Amin, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:F4171 Louvre stele de Mesha AO5066 rwk.jpg",
+   "titulo": "A estela de Mesha",
+   "alt": "Bloco de pedra escura com relevo e longas linhas de inscrição, sob iluminação de museu",
+   "legenda": "A estela erguida pelo rei moabita Mesha (c. 840 a.C.), no Louvre, narra em moabita a guerra contra Israel e menciona a dinastia de Onri — é uma das poucas inscrições que contam, do outro lado, um conflito também relatado na Bíblia. O dossiê a usa na seção de ciência porque mostra que a linguagem da guerra, da aliança e da fidelidade divina que Deuteronômio emprega para Israel era corrente entre seus vizinhos.",
+   "passagem": "contexto epigráfico (cf. Dt 28; 2Rs 3)",
+   "tecnica": "pedra basáltica com inscrição (c. 840 a.C.)",
+   "acervo": "Musée du Louvre, Paris (AO 5066); fotografia de Mbzt, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

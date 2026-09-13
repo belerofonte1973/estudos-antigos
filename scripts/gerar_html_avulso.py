@@ -186,7 +186,25 @@ def transformar(html, mapa, import_original=None, fontes_bloco=None):
         'Abre sem servidor e sem internet; o tema claro/escuro alterna no botão '
         'do topo.</div>'
     )
-    return html.replace("</body>", aviso + "</body>", 1)
+    html = html.replace("</body>", aviso + "</body>", 1)
+
+    # 4. CSS de impressão embutido: qualquer exportação PDF (Chrome/Edge headless,
+    #    "Salvar como PDF" do navegador) sai sem a navegação do site e com o corpo
+    #    em A4 — é o que a geração dos PDFs usa.
+    print_css = (
+        '<style media="print">'
+        "@page { size: A4; margin: 12mm 10mm; }"
+        ".ea-header,.ea-footer,footer,.ea-lib__nav,.ea-toc,.ea-crumbs{display:none!important}"
+        "body>div:last-child{display:none!important}"
+        "main,.wrap{max-width:none!important;margin:0!important;padding:0!important}"
+        "a{color:inherit!important;text-decoration:none!important}"
+        "h1,h2,h3{break-after:avoid}"
+        "figure,.ea-aside,.ea-card{break-inside:avoid}"
+        "tr{break-inside:avoid}thead{display:table-header-group}"
+        "p,li{orphans:2;widows:2}"
+        "</style>"
+    )
+    return html.replace("</head>", print_css + "</head>", 1)
 
 
 def main():

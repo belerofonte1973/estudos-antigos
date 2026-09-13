@@ -1,0 +1,72 @@
+{
+ "slug": "sabedoria",
+ "_comentario": "Especificação editorial das figuras do dossiê da Sabedoria de Salomão. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:Solomon prays for wisdom.jpg",
+   "titulo": "Salomão pede a sabedoria",
+   "alt": "Gravura com um rei ajoelhado em oração, com uma figura divina aparecendo entre nuvens acima dele",
+   "legenda": "A cena é a oração de Salomão pela sabedoria, que a Sabedoria de Salomão reescreve em primeira pessoa: 'orei, e a prudência me foi dada' (Sb 7,7), e 'sendo eu um menino bem dotado, coube-me uma boa alma' (Sb 8,19-20). O dossiê compara esta oração com 1Rs 3, e é aí que a questão da antropologia grega — a alma que precede o corpo — entra no debate.",
+   "passagem": "Sb 7,7-14; 8,19-20 (cf. 1Rs 3,5-14)",
+   "tecnica": "gravura",
+   "acervo": "Netherlands Institute for Art History (RKD, id. digital 2792)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Spiritus Sapientiae (The Spirit of Wisdom) (BM 1937,0915.309).jpg",
+   "titulo": "O Espírito da Sabedoria",
+   "alt": "Gravura antiga com um rei entronizado, cortesãos de pé atrás dele e, à direita, um soldado que ameaça cortar uma criança ao meio",
+   "legenda": "Primeira prancha da série sobre o Espírito da Sabedoria, publicada por Adriaen Collaert a partir de composição de Jan van der Straet (c. 1595): Salomão julga as duas mães e manda dividir a criança (1Rs 3,16-28). A obra mostra a recepção do tema da sabedoria régia na gravura flamenga — o mesmo Salomão que o livro da Sabedoria põe a falar na primeira pessoa e cuja sabedoria Sb 7-9 descreve como dom.",
+   "passagem": "Sb 7,7-14 (cf. 1Rs 3,16-28)",
+   "tecnica": "gravura",
+   "acervo": "British Museum, Londres (1937,0915.309)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:(Venice) Biblioteca Nazionale Marciana - Interior - Wisdom by Titien.jpg",
+   "titulo": "A Sabedoria no teto da Biblioteca Marciana",
+   "alt": "Interior de biblioteca renascentista com teto pintado em caixotões e, num deles, uma figura feminina alada com um livro",
+   "legenda": "A figura da Sabedoria pintada por Ticiano no teto da Biblioteca Nacional Marciana, em Veneza, no quadro do programa decorativo do século XVI. A imagem documenta a recepção da Sabedoria personificada como virtude pública e sapiencial — a mesma personificação de Sb 7,25-26, cujo vocabulário ('sopro do poder de Deus', 'resplendor da luz eterna') forneceu às gerações nicenas a linguagem da relação entre o Pai e o Filho.",
+   "passagem": "Sb 7,25-26",
+   "tecnica": "",
+   "acervo": "Biblioteca Nacional Marciana, Veneza (pintura de Ticiano); fotografia de Didier Descouens (domínio público)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Illumination of Solomon and Sheba - Old Testament I LCCN2002723391.jpg",
+   "titulo": "Salomão e a rainha de Sabá",
+   "alt": "Iluminura antiga com um rei entronizado recebendo uma rainha coroada, num interior ornamentado",
+   "legenda": "Iluminura de 1452 com a rainha de Sabá diante de Salomão (1Rs 10,1-13), a visita em que a rainha vem 'provar com enigmas' a sabedoria do rei. A cena não está no livro da Sabedoria, mas é a matriz narrativa da fama sapiencial de Salomão que o livro pressupõe quando põe na boca dele o discurso sobre a sabedoria (§4.3).",
+   "passagem": "Sb 7-9 (cf. 1Rs 10,1-13)",
+   "tecnica": "iluminura",
+   "acervo": "Library of Congress, Washington (divisão de Gravuras e Fotografias, LCCN 2002723391)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Plato, MC 571, Roman - Musei Capitolini - Rome, Italy - DSC05999.jpg",
+   "titulo": "Busto de Platão nos Museus Capitolinos",
+   "alt": "Busto de mármore de um homem barbado com faixa na cabeça, exposto sobre pedestal em museu",
+   "legenda": "Busto romano de Platão (Museus Capitolinos, MC 571). Ele entra no dossiê como referência visual do comparando da §9: a Sabedoria de Salomão escreve em grego, em Alexandria, e dialoga com o pensamento grego — a imortalidade da alma e a pré-existência de Sb 8,19-20 são discutidas em paralelo com o Fedão, e a distinção entre o dom da imortalidade ligado à justiça e a alma imortal por natureza é o ponto exato do debate.",
+   "passagem": "contexto comparado (Sb 1-5; 9,15)",
+   "tecnica": "busto de mármore (escultura)",
+   "acervo": "Musei Capitolini, Roma (MC 571); fotografia de Daderot (domínio público)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Kom El-Dikka.jpg",
+   "titulo": "O teatro romano de Alexandria, em Kom el-Dikka",
+   "alt": "Ruínas de um teatro antigo em pedra, com arquibancadas curvas e colunas, sob céu claro",
+   "legenda": "As ruínas do teatro romano de Kom el-Dikka, no centro de Alexandria — o sítio que mais informa sobre a cidade romana, escavado pelo Centro de Arqueologia Mediterrânea da Universidade de Varsóvia. É o quadro material em que o livro foi escrito, e o dossiê registra o limite do dado: nada resta das coleções da Biblioteca de Alexandria e não há testemunho de biblioteca judaica alexandrina; o ambiente reconstrói-se por textos, não por estratos.",
+   "passagem": "contexto histórico (Alexandria ptolomaica e romana)",
+   "tecnica": "sítio arqueológico (fotografia)",
+   "acervo": "Kom el-Dikka, Alexandria, Egito; fotografia de Keith (domínio público)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

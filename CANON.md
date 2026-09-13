@@ -245,6 +245,58 @@ Redator que escreve em partes deixa `_<slug>_parte2.mdx` no diretório de
 conteúdo — e o glob `**/*.mdx` do Astro o lê, falhando o build por frontmatter
 ausente. Conferir antes de buildar: `ls src/content/biblioteca/biblia/_*.mdx`.
 
+## Figuras nos dossiês (13/set/2026)
+
+Cada dossiê recebe **4 a 6 obras** — pinturas, gravuras, esculturas, estátuas,
+iluminuras e objetos arqueológicos — das personagens, figuras, animais e temas
+do livro, com **ficha completa e fonte verificável**.
+
+Fonte: **Wikimedia Commons** (que reúne também as doações de acesso aberto do
+MET, Rijksmuseum, NGA). Nada entra sem passar pelo portão de licença:
+
+    LIVRE       domínio público / PDM / CC0        preferir sempre
+    ATRIBUICAO  CC BY / CC BY-SA                   aceitável, creditando o autor da foto
+    NAO-USAR    qualquer outra                     recusada e registrada no manifesto
+
+Ferramentas (versionadas):
+
+    python scripts/imagens_buscar.py "termo"        # busca com licença/autor/data/px já classificados
+    python scripts/imagens_baixar.py --spec _imagens/espec_<slug>.json
+    python scripts/imagens_inserir.py --slug <slug> [--seco|--reverter]
+    python scripts/comprimir_pdf.py html-avulso/pdf/*.pdf
+
+- `scripts/commons_api.py` centraliza o acesso à API: throttle de 1,1 s, backoff
+  para 429/5xx e **cache em disco** (`_imagens/cache/`, no `.gitignore`). A API
+  limita com força as chamadas de busca; um 429 tratado como "não achei" viraria
+  lacuna de imagem fabricada.
+- `public/imagens/<slug>/` — as imagens do site (WebP, largura máxima 950 px,
+  qualidade 75, ~210 KB de média). `_imagens/<slug>.json` — o manifesto: ficha de
+  cada figura, sha256, licença e as recusas. `_imagens/espec_<slug>.json` — a
+  especificação editorial de cada dossiê.
+- O componente é `src/components/Figura.astro`; a legenda descreve a cena e cita
+  a passagem, e a ficha (autor · data · técnica · acervo) mais a linha
+  `Fonte: <link> · Licença:` são obrigatórias.
+
+**Dois aprendizados que valem para qualquer PDF com imagens:**
+1. O Chrome (`Page.printToPDF`) **embute as figuras sem compressão com perdas** —
+   um dossiê de 9 figuras saiu com 20 MB. `scripts/comprimir_pdf.py` recomprime
+   cada imagem embutida (pypdf `ImageFile.replace`, que só funciona em página de
+   `PdfWriter`) e faz uma segunda passada para normalizar o `/Size` do trailer:
+   20,1 MB → **3,3 MB**, mesmas páginas, mesmo texto.
+2. `loading="lazy"` no HTML **não** impede o Chrome de incluir as figuras na
+   impressão (verificado contando os XObjects do PDF) — mas isso é observação,
+   não garantia: conte-os sempre.
+
+**Pendência conhecida (13/set/2026):** o `upload.wikimedia.org` limitou o IP
+durante o lote grande (HTTP 429 intermitente) e **56 figuras ficaram fora**
+(260 de 315 especificadas). A recusa é de REDE, não de licença — está registrada
+em cada manifesto, e `scripts/baixar_pendentes.py` sabe re-tentá-la: basta rodar
+`python scripts/baixar_pendentes.py` quando a cota abrir, depois
+`python scripts/aplicar_figuras.py`, `npm run build`, regenerar `html-avulso/`
+e reimprimir os PDFs dos dossiês afetados. Os dossiês mais finos hoje: oseias (1),
+levitico, rute, sofonias, meqabyan-3 (2), baruque, ezequiel, habacuque, joel,
+jubileus, oracao-manasses, sabedoria (3).
+
 ## Pendências que não são dossiê
 
 - Domínio próprio (hoje `estudos-antigos.netlify.app`).

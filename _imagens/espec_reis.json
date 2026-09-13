@@ -1,0 +1,72 @@
+{
+ "slug": "reis",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Elia en de profeten van Baäl Geschiedenis van Elia (serietitel) Thesaurus sacrarum historiarum veteris testamenti (..) (serietitel), RP-P-1988-305.jpg",
+   "titulo": "Elias e os profetas de Baal no Carmelo",
+   "alt": "Gravura com dois altares e grupos de figuras, sob céu de nuvens densas",
+   "legenda": "Gravura de 1579 conservada no Rijksmuseum: o duelo do Carmelo, em que Elias propõe que o deus que responder com fogo seja reconhecido como Deus (1Rs 18,20-40). O dossiê usa a cena porque ela resume o conflito religioso que atravessa o ciclo de Elias, e a estampa renascentista a apresenta como disputa pública, com o povo e o rei assistindo.",
+   "passagem": "1Rs 18,20-40",
+   "tecnica": "gravura (buril)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1988-305)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Giuseppe Angeli, Elijah Taken Up in a Chariot of Fire, c. 1740-1755, NGA 41685.jpg",
+   "titulo": "Elias arrebatado num carro de fogo",
+   "alt": "Pintura com uma figura de braços abertos levada por um carro luminoso, sobre paisagem com rio",
+   "legenda": "Pintura de Giuseppe Angeli (c. 1740-1755), do acervo aberto da National Gallery of Art: Elias é levado ao céu no carro de fogo diante de Eliseu, que recebe seu manto (2Rs 2,1-15). O dossiê usa a obra na seção de recepção porque a passagem de Elias para Eliseu é a única sucessão profética narrada com essa solenidade no ciclo dos Reis.",
+   "passagem": "2Rs 2,1-15",
+   "tecnica": "óleo sobre tela",
+   "acervo": "National Gallery of Art, Washington (open access)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Francois Vatable, reconstructie van de tempel van Salomo (detail).jpg",
+   "titulo": "Reconstrução do templo de Salomão",
+   "alt": "Gravura de um edifício com pátios sucessivos, em corte, com proporções anotadas",
+   "legenda": "Gravura de 1546, publicada por François Vatablus na Bíblia parisiense, com a reconstrução do templo de 1Rs 6-7 e seus pátios. O dossiê usa a estampa porque mostra que cada geração refez o edifício a partir do texto — e a dificuldade de reconstruir o templo é a mesma que atravessa todo o dossiê de Reis.",
+   "passagem": "1Rs 6,1-38",
+   "tecnica": "gravura",
+   "acervo": "Biblia (Paris, 1546), de François Vatablus",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:King Solomon and the Queen of Sheba MET DT1051.jpg",
+   "titulo": "Salomão e a rainha de Sabá",
+   "alt": "Pintura alongada com cortejos em fila diante de um palácio, em estilo do início do Renascimento",
+   "legenda": "Painel de cassone do Mestre de Lecceto (século XV), no Metropolitan Museum, com a visita da rainha de Sabá a Salomão (1Rs 10,1-13). O dossiê usa a obra porque a cena é o retrato que o livro faz da corte de Salomão em seu auge — a sabedoria que chega de fora para ser reconhecida, poucos capítulos antes da ruína do reino.",
+   "passagem": "1Rs 10,1-13",
+   "tecnica": "têmpera sobre madeira (painel de cassone)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (open access)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Taylor Prism-1.jpg",
+   "titulo": "Prisma de Taylor (anais de Senaqueribe)",
+   "alt": "Prisma de argila hexagonal coberto de escrita cuneiforme, exibido em museu",
+   "legenda": "O prisma de Taylor, no British Museum, reúne os anais de Senaqueribe e o relato de sua campanha na região de Judá, com o cerco de Jerusalém e o tributo de Ezequias, sem que se mencione a tomada da cidade (cf. 2Rs 18-19). O dossiê o usa na seção de ciência: é o caso mais discutido de uma inscrição real que confirma um episódio do livro e, ao mesmo tempo, o conta de outro modo.",
+   "passagem": "contexto epigráfico (cf. 2Rs 18-19)",
+   "tecnica": "argila inscrita (prisma, c. 691 a.C.)",
+   "acervo": "British Museum, Londres (prisma de Taylor); fotografia de David Castor",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Siloam Inscription 2.jpg",
+   "titulo": "A inscrição de Siloé",
+   "alt": "Placa de pedra com linhas de escrita hebraica antiga, em museu",
+   "legenda": "A inscrição gravada no túnel aberto em Jerusalém sob Ezequias (2Rs 20,20) narra, em hebraico, o encontro dos dois grupos de escavadores no meio da rocha. O dossiê usa a imagem — fotografia de uma cópia da inscrição — na seção de ciência porque é o testemunho epigráfico de uma obra de engenharia que o livro menciona numa linha e que, no chão, tem centenas de metros de túnel.",
+   "passagem": "2Rs 20,20 (cf. 2Cr 32,30)",
+   "tecnica": "pedra com inscrição (séc. VIII-VII a.C.)",
+   "acervo": "Fotografia de uma cópia da inscrição (Wikimedia Commons)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

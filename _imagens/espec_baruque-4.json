@@ -1,0 +1,73 @@
+{
+ "slug": "baruque-4",
+ "_comentario": "Especificação editorial das figuras do dossiê de 4 Baruque (Paralipômenos de Jeremias). Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "_aviso_trinta_moedas": "O dossiê declara (§4.4) que a 'Profecia de Jeremias a Pasur', com as trinta moedas e o campo do oleiro, NÃO está no 4 Baruque — nenhuma recensão dos Paralipômenos contém o episódio. Nenhuma figura abaixo ilustra as trinta moedas justamente para não repetir o erro da erudição popular.",
+ "figuras": [
+  {
+   "arquivo": "File:Jeremia treurend over de verwoesting van Jeruzalem Rijksmuseum SK-A-3276.jpeg",
+   "titulo": "Jeremias chora a destruição de Jerusalém",
+   "alt": "Pintura escura com um velho de barba sentado em pedras, a cabeça apoiada no braço, com vasos de ouro ao lado e edifícios em chamas ao fundo",
+   "legenda": "Rembrandt (1630) pinta o profeta sentado nos rochedos, a cabeça apoiada no braço; ao seu lado estão um prato de ouro, um jarro de ouro e livros — os tesouros do Templo já destruído — e, mais abaixo, Jerusalém em chamas com os soldados. É a cena do cap. 3 do 4 Baruque: Jeremias e Baruque depositam os vasos sagrados na terra, que os engole 'até a reunião do amado' (§4.2), e o paralelo canônico imediato é 2 Macabeus 2,4-8. O quadro põe lado a lado os dois elementos que o dossiê discute — o tesouro escondido e a cidade perdida.",
+   "passagem": "4 Bar 3,8-19 (cf. 2 Mc 2,4-8)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Rijksmuseum, Amsterdã (inv. SK-A-3276)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Jeremias, PA08266.jpg",
+   "titulo": "Jeremias, de Jean Leclerc",
+   "alt": "Gravura em preto e branco com a figura de um profeta de barba, sentado em ruínas, com uma inscrição latina ao pé",
+   "legenda": "Gravura de Jean Leclerc (c. 1600-1650) para os Icones historiarum Veteris Testamenti, de Gilles Corrozet, com a legenda latina que resume o papel do profeta no livro inteiro: 'Defleo Iudaeae cladem, Solymaeque ruinam' — choro a derrota de Judá e a ruína de Jerusalém. O 4 Baruque é construído sobre esse luto e sobre a pergunta que ele deixa no ar: o livro data a queda do primeiro Templo como cifra transparente da do segundo, e a §4.3 registra que os 66 anos de Abimeleque servem a essa aritmética (66 = 136 − 70).",
+   "passagem": "4 Bar 1,1-8; 4,1-18 (cf. §4.3)",
+   "tecnica": "gravura (água-forte, séc. XVII)",
+   "acervo": "Coleção da KU Leuven (PA08266)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Baruch, PA08267.jpg",
+   "titulo": "Baruque, de Jean de Courbes",
+   "alt": "Gravura em preto e branco com a figura de um escriba de barba, segurando um livro, com inscrição latina ao pé",
+   "legenda": "Gravura de Jean de Courbes (1592-1641), do mesmo conjunto de Leclerc, com Baruc ben Nerias representado — 'amigo do profeta Jeremias', como diz a ficha da gravura. O dossiê abre discutindo exatamente essa duplicidade de títulos: no grego o livro se chama 'As coisas omitidas de Jeremias'; na tradição etíope, 'O Resto das Palavras de Baruque' (Baruk za-ri'ya), e Harris notava que os dois nomes eram intercambiáveis na circulação antiga (§4.1). A estampa fixa o escriba como a figura por que o livro passou a ser chamado na Etiópia.",
+   "passagem": "4 Bar 1,1 (cf. §4.1)",
+   "tecnica": "gravura (água-forte, séc. XVII)",
+   "acervo": "Coleção da KU Leuven (PA08267)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Menalogical icon for August (c. 1800, Russia. Priv. coll.).jpg",
+   "titulo": "Ícone de menológio com os Sete Dormentes de Éfeso",
+   "alt": "Ícone russo dividido em registros, com fileiras de santos e cenas, pintado a têmpera sobre madeira",
+   "legenda": "Ícone de menológio do mês de agosto, pintado na Rússia por volta de 1800: a ficha da obra registra, no registro superior, entre as cenas destacadas, os Sete Dormentes de Éfeso — além da Transfiguração e da Dormição. O motivo do sono que atravessa o tempo é o comparando direto do Abimeleque do 4 Baruque, que dorme 66 anos e acorda com os figos intactos (§9); Allison registra o paralelo com os Sete Dormentes, com Epimênides de Creta e com Rip Van Winkle, e a diferença teológica importa: no 4 Baruque o sono não é fuga, é preservação-testemunho.",
+   "passagem": "4 Bar 5-6 (cf. §9)",
+   "tecnica": "têmpera sobre madeira",
+   "acervo": "Coleção particular (leilão Fischer, Alemanha); ícone russo, c. 1800",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Weiner Codex 21 Ethiopian Biblical Manuscript 18th century.jpg",
+   "titulo": "Manuscrito bíblico etíope do século XVIII",
+   "alt": "Página de manuscrito etíope sobre pergaminho, com texto em ge'ez escrito em colunas",
+   "legenda": "O Códice Weiner 21, manuscrito bíblico etíope do início do século XVIII conservado na Hill Museum & Manuscript Library, representa o canal por que o 4 Baruque chegou até nós. A versão etíope remonta a manuscritos do século XV, e no cânon etíope o livro não circula sozinho: entra no compósito Säqoqawä Eremyas, com Lamentações, a Carta de Jeremias, a profecia a Pasur e o Resto das Palavras de Baruque (§4.4). É dessa contiguidade de manuscrito que nasceu a confusão popular sobre Mateus 27,9-10 — e o dossiê a registra sem endossá-la.",
+   "passagem": "transmissão etíope (cf. §4.4 e §12)",
+   "tecnica": "manuscrito em ge'ez (século XVIII)",
+   "acervo": "Hill Museum & Manuscript Library (Códice Weiner 21)",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The cuneiform inscription highlights the conquest of Jerusalem and the surrender of Jehoiakim, king of Judah, in 597 BCE. From Babylon, Iraq.jpg",
+   "titulo": "A Crônica Babilônica e a queda de Jerusalém",
+   "alt": "Tábua de argila escura coberta de escrita cuneiforme densa, exposta em museu",
+   "legenda": "A Crônica Babilônica dos anos 605-594 a.C., feita entre cerca de 550 e 400 a.C. e hoje no Museu Britânico: é nela que se lê a conquista de Jerusalém e a rendição de Jeoaquim, rei de Judá, em 597 a.C. A §12 usa esse documento para separar o que a arqueologia estabelece do que o livro narra — o cerco, a deportação e as camadas de destruição de 587/586 a.C. são o ambiente histórico do 4 Baruque, não a sua datação, que a leitura moderna situa depois de 70 d.C. O tablet documenta o cenário de fundo que o livro cifra nos 66 anos do sono de Abimeleque.",
+   "passagem": "cf. 2 Rs 24-25 (cf. §12)",
+   "tecnica": "tábua de argila inscrita em cuneiforme (c. 550-400 a.C.)",
+   "acervo": "The British Museum, Londres; fotografia de Osama Shukir Muhammed Amin, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "slug": "meqabyan-3",
+ "_comentario": "Especificação editorial das figuras do dossiê de 3 Meqabyan. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "_material_escasso": "3 Meqabyan é o dossiê com menos material figurativo livre do lote: o livro não tem mártires nem cenas narrativas ilustradas, e o seu assunto — o diálogo entre Deus e o Diabo (1,4-2,7), Adão criado no lugar do anjo caído (4,8), a morte e o destino das almas (6) — só se deixa figurar por temas de outras tradições. Recebe três figuras: a queda do anjo soberbo, o sofredor fiel do prólogo de Jó (o modelo que o próprio livro cita em 8,1-5) e o testemunho da oficina de escrita etíope, que é tudo o que a §12 tem para datar.",
+ "figuras": [
+  {
+   "arquivo": "File:A Queda de Lúcifer (séc. XVI) - Fernão Gomes (MNAA).png",
+   "titulo": "A queda de Lúcifer",
+   "alt": "Desenho a pena com figuras angélicas caindo de um céu luminoso para uma zona escura",
+   "legenda": "Desenho do século XVI de Fernão Gomes, no Museu Nacional de Arte Antiga, em Lisboa: a queda do anjo soberbo. 3 Meqabyan abre com esse motivo, mas com uma razão própria — o Diabo diz ter recebido de Deus permissão para levar consigo os que enganou (1,16), e a sua queda vem da recusa de curvar-se a Adão (1,15) —, e o cap. 4 explica que Deus criou Adão 'no teu lugar' para que o louvor não diminuísse (4,8). A §9 mostra que a mesma narrativa atravessa a Caverna dos Tesouros, a Vida de Adão e Eva e o Corão: o livro é membro de uma família ecumênica, não invenção isolada.",
+   "passagem": "3 Meq 1,15-16; 4,8 (cf. §4.2-4.3 e §9)",
+   "tecnica": "desenho",
+   "acervo": "Museu Nacional de Arte Antiga, Lisboa",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Geseling van Christus, geseling van de zeven broers en Job door zijn vrouw en Satan mishandeld, RP-P-BI-6315F.jpg",
+   "titulo": "Jó maltratado por sua mulher e por Satã",
+   "alt": "Impressão antiga em três cenas: uma flagelação à esquerda, outra ao centro e um homem sentado sobre uma pedra à direita, confrontado por uma mulher e uma figura sombria",
+   "legenda": "Folha de uma Biblia Pauperum impressa em 1521 (Rijksmuseum, RP-P-BI-6315), com três cenas paralelas: a flagelação de Cristo, a dos sete irmãos macabeus e, à direita, Jó sentado sobre a pedra, maltratado pela mulher e por Satã. 3 Meqabyan termina apontando Jó como modelo do sofredor fiel (8,1-5), e o dossiê lê a sua moldura — o céu como tribunal, a acusação, a prova — como a arquitetura do prólogo de Jó 1-2 (§9). A folha mostra que a tradição europeia também leu os três episódios como um só argumento sobre o sofrimento do justo.",
+   "passagem": "3 Meq 8,1-5 (cf. Jó 1-2; §4.7 e §9)",
+   "tecnica": "xilogravura (c. 1520-1540, Biblia Pauperum)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-BI-6315)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Etiopia, gondar, miracoli mariani, miracolo 22 del piede equino, 1680-1700 ca.jpg",
+   "titulo": "Iluminura etíope de Gondar",
+   "alt": "Página de manuscrito etíope com cenas pintadas emolduradas e texto em ge'ez",
+   "legenda": "Iluminura de um manuscrito etíope dos 'Milagres de Maria' copiado em Gondar entre 1680 e 1700, hoje no Art Institute of Chicago. Não é um manuscrito dos Meqabyan — é o tipo de livro que a §12 descreve: todos os testemunhos conhecidos dos Meqabyan são tardios (o exemplo citado é o British Library Or. 506, do século XVIII), o que impede a paleografia de ancorar a data de composição e deixa a única proposta publicada, a de Beckwith (2008), como hipótese textual. A iluminura documenta a oficina, não o texto.",
+   "passagem": "cf. §12 (codicologia etíope)",
+   "tecnica": "",
+   "acervo": "Art Institute of Chicago; fotografia de Sailko, CC BY 3.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

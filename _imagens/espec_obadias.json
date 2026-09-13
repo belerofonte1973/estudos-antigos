@@ -1,0 +1,72 @@
+{
+ "slug": "obadias",
+ "_comentario": "Especificação editorial das figuras do dossiê de Obadias. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:Abdias (Obadiah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
+   "titulo": "Obadias",
+   "alt": "Prancha impressa com a figura do profeta Obadias, na abertura do livro",
+   "legenda": "Prancha da reprodução impressa de 1904 (M. de Brunoff & Cie) das 400 pinturas compostas a partir dos desenhos de James Tissot, na abertura de Ob 1. Com apenas vinte e um versículos, Obadias é o mais curto dos profetas e trata de um único tema: a queda de Edom e a violência que ele cometeu contra Jacó. A prancha abre o dossiê com a figura do vidente tal como o século XIX o imaginou.",
+   "passagem": "Ob 1,1-4",
+   "tecnica": "reprodução impressa (M. de Brunoff & Cie, 1904)",
+   "acervo": "Reprodução impressa de M. de Brunoff & Cie (1904), a partir de desenhos de James Tissot; fotografia de Phillip Medhurst, CC BY-SA 4.0",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Prophet Obadiah, from Prophets and Sibyls MET DP835424.jpg",
+   "titulo": "O profeta Obadias, da série 'Profetas e Sibilas'",
+   "alt": "Gravura renascentista em preto e branco com a figura isolada do profeta Obadias",
+   "legenda": "Prancha da série 'Profetas e Sibilas', gravada em Florença entre 1480 e 1490 e atribuída a Francesco Rosselli e Baccio Baldini, hoje no Metropolitan Museum of Art. É uma das primeiras imagens impressas de Obadias, o profeta que anuncia que Edom, tendo posto 'o seu ninho entre as estrelas', será derrubado de lá (Ob 1,4). A série mostra a entrada do mais curto dos profetas no repertório visual do Renascimento.",
+   "passagem": "Ob 1,3-4",
+   "tecnica": "gravura (série Profetas e Sibilas)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (domínio público/CC0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Simeon Solomon - Who is He that Cometh from Edom with Dyed Garments from Bozrah?.jpg",
+   "titulo": "Quem é este que vem de Edom, com as vestes tingidas de Bozra?",
+   "alt": "Pintura com uma figura humana em vestes de cor forte, tema do oráculo contra Edom e Bozra",
+   "legenda": "Pintura de Simeon Solomon (1862), cujo título cita Is 63,1: 'Quem é este que vem de Edom, de Bozra, com as vestes tingidas?'. Bozra era a capital de Edom, e a imagem do guerreiro que pisa o lagar ficou como o retrato mais forte do juízo sobre o país vizinho — o mesmo juízo que Obadias pronuncia em poucas linhas. A obra pertence à recepção vitoriana do tema.",
+   "passagem": "Ob 1,8-15 (cf. Is 63,1-6)",
+   "tecnica": "",
+   "acervo": "Coleção particular; imagem de catálogo comercial (Mireille Mosler Ltd. e Woolley and Wallis)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Prophet Obadiah (Menologion of Basil II).jpg",
+   "titulo": "Obadias no Menológio de Basílio II",
+   "alt": "Miniatura bizantina com a figura de um profeta, sobre fundo dourado",
+   "legenda": "Miniatura do Menológio de Basílio II, manuscrito constantinopolitano de 985 conservado na Biblioteca Vaticana (Vat. gr. 1613). O menológio reúne, para cada dia do ano litúrgico, a memória de um santo — entre eles os profetas do Antigo Testamento, que a Igreja bizantina festejava como santos. Obadias entra assim na devoção cristã oriental muito antes de qualquer ilustração moderna do livro.",
+   "passagem": "Ob 1,1",
+   "tecnica": "iluminura (manuscrito bizantino)",
+   "acervo": "Biblioteca Apostólica Vaticana (Vat. gr. 1613), Roma",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Edomite goddess, Qitmit. Israel Museum, Jerusalem.JPG",
+   "titulo": "Figura feminina edomita de Horvat Qitmit",
+   "alt": "Estatueta de barro com uma figura feminina coroada com três chifres, em vitrine de museu",
+   "legenda": "Figura feminina de barro coroada com três chifres, procedente do santuário edomita de Horvat Qitmit (séculos VII-VI a.C.), hoje no Museu de Israel. O objeto documenta a religião de Edom com material escavado — as divindades, os altares e as ofertas dos edomitas, o povo cujo oráculo de juízo Obadias pronuncia. É com esse material arqueológico, e não com descrições tardias, que a comparação com o Antigo Oriente Próximo se faz hoje.",
+   "passagem": "Ob 1,8-14 (contexto edomita)",
+   "tecnica": "figura de barro (terracota)",
+   "acervo": "Museu de Israel, Jerusalém (santuário de Horvat Qitmit, séc. VII-VI a.C.); fotografia de Chamberi, CC BY-SA 3.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Edomite ostracon from Ḥorvat 'Uzza.jpg",
+   "titulo": "Óstraco edomita de Horvat 'Uzza",
+   "alt": "Fragmento de cerâmica com inscrição, fotografado em museu",
+   "legenda": "Óstraco edomita procedente de Horvat 'Uzza, no vale de Arade, datado do século VI a.C. e fotografado no Museu de Israel. São inscrições como esta que permitem ler em edomita — e não apenas em fontes hebraicas — os nomes e a cultura material do reino vizinho de Judá. O livro de Obadias supõe exatamente esse Edom histórico, vizinho e rival, que a epigrafia vem documentando.",
+   "passagem": "Ob 1,1-4",
+   "tecnica": "óstraco (cerâmica inscrita)",
+   "acervo": "Museu de Israel, Jerusalém (procedente de Horvat 'Uzza); fotografia de פעמי-עליון, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

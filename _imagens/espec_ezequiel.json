@@ -1,0 +1,61 @@
+{
+ "slug": "ezequiel",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:127.Ezekiel’s Vision of the Valley of Dry Bones.jpg",
+   "titulo": "A visão do vale de ossos secos",
+   "alt": "Gravura com um profeta pregando sobre um campo coberto de ossos e de corpos que se levantam",
+   "legenda": "Gravura de Doré para Ez 37,1-14: os ossos secos se articulam ao som da palavra do profeta e um exército se levanta. O dossiê usa a cena porque ela é a imagem que o livro constrói para o exílio — a nação morta que pode reviver — e é a passagem de Ezequiel mais retomada na arte e na música.",
+   "passagem": "Ez 37,1-14",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William Blake Ezekiel's Vision ca 1803-5 Boston Museum.jpg",
+   "titulo": "O turbilhão: a visão de Ezequiel",
+   "alt": "Desenho colorido com uma figura num redemoinho de nuvens e criaturas aladas de muitas faces",
+   "legenda": "William Blake desenhou entre 1803 e 1805 O turbilhão: a visão dos querubins e das rodas com olhos, ilustração para Ez 1,4-28. O dossiê usa o desenho porque a visão do carro é o texto mais especulativo do livro, e Blake o leu como estrutura do cosmos — a mesma leitura que a mística judaica fez da merkavá.",
+   "passagem": "Ez 1,4-28",
+   "tecnica": "aquarela e têmpera sobre papel",
+   "acervo": "Museum of Fine Arts, Boston",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ezekiel by Michelangelo, restored - large.jpg",
+   "titulo": "Ezequiel na Capela Sistina",
+   "alt": "Afresco com um profeta sentado, de corpo volumoso, voltado para uma figura alada que o instrui",
+   "legenda": "Ezequiel na abóbada da Capela Sistina, entre 1508 e 1512: o profeta se volta para o anjo que o instrui e lhe dá o rolo a comer (Ez 2,8-3,3). O dossiê usa o afresco na seção de recepção porque Michelangelo figura o momento em que o livro transforma o vidente em quem come o texto que deve anunciar.",
+   "passagem": "Ez 2,8-3,3 (recepção)",
+   "tecnica": "afresco",
+   "acervo": "Capela Sistina, Vaticano",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Giorgio Ghisi after Michelangelo, The Prophet Ezekiel, early 1570s, NGA 66248.jpg",
+   "titulo": "Ezequiel, gravura de Ghisi a partir de Michelangelo",
+   "alt": "Gravura com um profeta sentado em posição pensativa, com um livro aberto ao lado",
+   "legenda": "Gravura de Giorgio Ghisi, do início da década de 1570, no acervo aberto da National Gallery of Art, a partir do Ezequiel da Capela Sistina. O dossiê usa a estampa para mostrar que a figura de Michelangelo ganhou circulação própria em gravura e passou a representar o profeta na cultura impressa — antes mesmo das ilustrações de livros bíblicos.",
+   "passagem": "Ez 2,1-3,3 (recepção)",
+   "tecnica": "gravura (buril)",
+   "acervo": "National Gallery of Art, Washington (open access)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ezekiel 2.jpeg",
+   "titulo": "Ezequiel em Dura Europos",
+   "alt": "Fragmento de pintura mural com figuras emolduradas em compartimentos, de cores desbotadas",
+   "legenda": "Painel NC I da sinagoga de Dura Europos (século III, Síria), com cenas do ciclo de Ezequiel — a destruição e a restauração da vida nacional. O dossiê usa o painel na seção de ciência porque ele mostra que a síntese de Ezequiel já estava pintada nas paredes de uma sinagoga antes de qualquer comentário medieval.",
+   "passagem": "Ez 37 (cf. painel NC I)",
+   "tecnica": "pintura mural (século III)",
+   "acervo": "Sinagoga de Dura Europos, Síria (painel NC I)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

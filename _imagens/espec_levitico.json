@@ -1,0 +1,72 @@
+{
+ "slug": "levitico",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:William Holman Hunt - The Scapegoat - WGA11808.jpg",
+   "titulo": "O bode emissário",
+   "alt": "Pintura de uma planície árida e salgada junto a um grande lago, com um bode solitário e ossadas de animais",
+   "legenda": "Holman Hunt viajou até o mar Morto para pintar o bode de Lv 16,20-22, enviado ao deserto com os pecados do povo. O animal aparece sozinho num cenário de sal e carcaças, e a pintura é hoje o comentário visual mais conhecido do rito — o dossiê a usa para discutir o que o sacrifício faz com a culpa.",
+   "passagem": "Lv 16,20-22",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Manchester Art Gallery (nº 1906.2); imagem da Web Gallery of Art",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Karel van III Mander - Aron as High Priest - KMS7985 - Statens Museum for Kunst.jpg",
+   "titulo": "Arão como sumo sacerdote",
+   "alt": "Pintura de uma figura masculina idosa, de barba, turbante e vestes ornamentadas, segurando um objeto ritual",
+   "legenda": "Karel van Mander III pinta Arão com as vestes que Lv 8 exige para a ordenação e que Ex 28 descreve peça por peça: o turbante, o peitoral e as cores do ofício. O dossiê usa a obra para mostrar como o sacerdócio levítico foi figurado na Europa seiscentista, e o que a pintura acrescenta ao texto é justamente a indumentária.",
+   "passagem": "Lv 8,1-13",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Statens Museum for Kunst, Copenhague (KMS7985)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Moses, Aaron the High Priest and King David - Passover Haggadah (1740), f.1 - BL Add MS 18724.jpg",
+   "titulo": "Moisés, Arão e Davi no frontispício de um Haggadá",
+   "alt": "Página iluminada com três figuras, uma delas segurando tábuas da lei, e um rei tocando harpa",
+   "legenda": "Frontispício de um Haggadá de Pessach copiado em Berlim em 1740 (British Library, Add MS 18724): Moisés com as tábuas à direita, Arão sumo sacerdote à esquerda e Davi tocando harpa sobre eles. O dossiê usa a página porque ela reúne, num só objeto litúrgico, os três ofícios que o Levítico organiza — profeta, sacerdote e rei.",
+   "passagem": "Lv 8-9 (recepção litúrgica)",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "British Library, Londres (Add MS 18724)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Bouw van de tabernakel onder leiding van Mozes Le Tabernacle dressé dans le Desert par les Lévites (titel op object), RP-P-1896-A-19368-2387.jpg",
+   "titulo": "A construção do tabernáculo",
+   "alt": "Gravura com uma grande tenda cercada de estacas e panos, trabalhadores ao redor e um pátio com altar",
+   "legenda": "Gravura de 1705 conservada no Rijksmuseum: o tabernáculo montado no deserto, com o pátio, o altar e o povo em volta. O dossiê usa a estampa para mostrar que o espaço do culto levítico — tenda, pátio e altar — é reconstruído na arte europeia a partir do texto, e que cada reconstrução é uma hipótese sobre o que o relato descreve.",
+   "passagem": "Lv 1,1-9 (cf. Ex 40)",
+   "tecnica": "gravura (água-forte e buril)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1896-A-19368-2387)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Babylonian - Sumerian Temple Hymn - Walters 481802 - View A.jpg",
+   "titulo": "Hino sumério ao templo de Kesh",
+   "alt": "Cilindro de argila quadrado com escrita cuneiforme nas quatro faces, sobre suporte de museu",
+   "legenda": "Cilindro com o hino sumério ao templo de Kesh (c. 1800-1600 a.C.), no Walters Art Museum: o texto descreve o templo em termos físicos e celestes e organiza a liturgia em torno dele. O dossiê o usa na seção de comparação porque mostra que a ideia de um espaço construído para o sacrifício e para os sacerdotes não é exclusiva de Israel — o que muda é o que cada texto diz que ali acontece.",
+   "passagem": "contexto do Antigo Oriente Próximo (cf. Lv 1-7)",
+   "tecnica": "argila inscrita (c. 1800-1600 a.C.)",
+   "acervo": "Walters Art Museum, Baltimore (481802)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tel Arad - Lower City altar1932.jpg",
+   "titulo": "O altar do santuário de Tel Arad",
+   "alt": "Estrutura de pedra retangular com degraus, ao ar livre, sob céu claro",
+   "legenda": "O santuário israelita de Arad, da baixa Idade do Ferro, conserva o altar de pedra de seu pátio e, na sala do fundo, dois altares de incenso — a estrutura que mais se aproxima do que o Levítico descreve para o culto. É a evidência de ciência do dossiê: o culto sacrificial do livro tem correspondência material em Israel, ainda que relato e sítio não coincidam em escala.",
+   "passagem": "contexto cultual (cf. Lv 1-7; 16)",
+   "tecnica": "sítio arqueológico (Idade do Ferro II)",
+   "acervo": "Tel Arad, Israel; fotografia de יעקב, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

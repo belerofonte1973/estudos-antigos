@@ -1,0 +1,72 @@
+{
+ "slug": "numeros",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Ebbinghaus The Spies Return.jpg",
+   "titulo": "O retorno dos espias",
+   "alt": "Gravura com dois homens carregando um cacho colossal de uvas suspenso numa vara sobre os ombros",
+   "legenda": "Ilustração de Wilhelm Ebbinghaus para Nm 13,23-24: os espias voltam do vale de Escol com o cacho de uvas tão grande que precisa ser levado numa vara entre dois homens. O dossiê usa a cena porque ela é o argumento visual do capítulo — a terra é boa, e é o medo do povo, não a esterilidade da terra, que decide o rumo da narrativa.",
+   "passagem": "Nm 13,17-33",
+   "tecnica": "gravura de livro (The Bible and Its Story, 1908)",
+   "acervo": "The Bible and Its Story (1908), vol. 2",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Rembrandt - L'Ânesse du prophète Balaam - J 95 - Musée Cognacq-Jay.jpg",
+   "titulo": "A jumenta de Balaão",
+   "alt": "Pintura escura com um homem de bastão diante de um animal que se detém, em paisagem noturna",
+   "legenda": "Rembrandt, aos vinte anos, pinta o momento de Nm 22,21-31 em que a jumenta de Balaão se detém diante do anjo que o profeta não vê. O dossiê usa a cena para discutir a ironia do capítulo: o animal enxerga o que o vidente não enxerga, e o profeta contratado para amaldiçoar é obrigado a abençoar.",
+   "passagem": "Nm 22,21-35",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Musée Cognacq-Jay, Paris (J 95)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Peter Paul Rubens - Moses and the Brazen Serpent.jpg",
+   "titulo": "Moisés e a serpente de bronze",
+   "alt": "Pintura noturna com multidão em movimento sob uma coluna da qual pende uma serpente de metal",
+   "legenda": "Rubens representa Nm 21,4-9: a serpente de bronze erguida por Moisés, para a qual os mordidos devem olhar e viver. O episódio é dos mais retomados na arte cristã, que nele lê a figura da cruz (Jo 3,14); o dossiê o usa para mostrar como um objeto do deserto se tornou imagem teológica — e também problema, quando virou ídolo (2Rs 18,4).",
+   "passagem": "Nm 21,4-9",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Google Arts & Culture (Google Cultural Institute)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:043.An Angel Appears to Balaam.jpg",
+   "titulo": "Um anjo aparece a Balaão",
+   "alt": "Gravura em preto e branco com um homem detido por uma figura alada no caminho, e uma terceira figura ao fundo",
+   "legenda": "Gravura de Doré para Nm 23: o anjo se põe no caminho de Balaão e o profeta, que viera para amaldiçoar Israel, pronuncia as bênçãos que o texto põe em sua boca. A série Doré's English Bible (1866) fixa a cena na memória visual do século XIX, e o dossiê a usa porque o capítulo é o exemplo mais claro de uma profecia que o próprio profeta não controla.",
+   "passagem": "Nm 23,1-12",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Deir 'Alla Inscription.png",
+   "titulo": "A inscrição de Deir 'Alla",
+   "alt": "Fragmento de reboco com linhas de escrita semítica clara sobre fundo claro",
+   "legenda": "Nos fragmentos de reboco de Deir 'Alla, no vale do Jordão, do século VIII a.C., lê-se o nome de Balaão filho de Beor, vidente dos deuses, em texto aramaico que relata uma visão noturna de destruição. O dossiê o usa na seção de comparação: uma figura chamada Balaão existia fora da Bíblia, e o que o texto de Nm 22-24 e o de Deir 'Alla partilham é o nome e a função, não a história.",
+   "passagem": "contexto epigráfico (cf. Nm 22-24)",
+   "tecnica": "inscrição em reboco (séc. VIII a.C.)",
+   "acervo": "Sítio de Deir 'Alla, Jordânia; fotografia de Disdero, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:TVDB1861 Timna 200 2024-02-23 Gichon Photo 003 Selected.jpg",
+   "titulo": "O santuário de Timna",
+   "alt": "Paredão de arenito com nichos e estelas de pedra eretas junto a uma área aberta no deserto",
+   "legenda": "No vale de Timna, no sul do deserto do Neguev, o santuário do século XII a.C. conserva estelas de pedra eretas e nichos escavados na rocha, associados à presença midianita. O dossiê o usa na seção de ciência porque documenta o ambiente cultual do deserto por onde Números faz passar Israel, e porque mostra que o culto em estelas, condenado pelo texto, era prática corrente no mundo em que ele se situa.",
+   "passagem": "contexto do deserto (cf. Nm 21-25)",
+   "tecnica": "sítio arqueológico (Bronze Final/Idade do Ferro I)",
+   "acervo": "Timna Valley Database; fotografia de Erez Ben-Yosef, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

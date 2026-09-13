@@ -1,0 +1,61 @@
+{
+ "slug": "zacarias",
+ "_comentario": "Especificação editorial das figuras do dossiê de Zacarias. 5 figuras. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:Ghent Altarpiece - Prophet Zacharias; Angel of The Annunciation.jpg",
+   "titulo": "O profeta Zacarias, no políptico de Gante",
+   "alt": "Detalhe de pintura flamenga com a figura de um profeta e, acima, um anjo, sobre fundo escuro",
+   "legenda": "Detalhe do retábulo de Gante, pintado pelos irmãos van Eyck em 1432, com o profeta Zacarias e o anjo da Anunciação no reverso fechado do políptico. Zacarias abre o seu livro exortando ao retorno — 'voltai para mim, diz o Senhor dos exércitos' (Zc 1,3) —, e a arte flamenga o colocou entre as figuras que anunciam o cumprimento cristão das promessas.",
+   "passagem": "Zc 1,1-6",
+   "tecnica": "óleo sobre madeira (detalhe do retábulo)",
+   "acervo": "Catedral de São Bavão, Gante (Retábulo de Gante, 1432)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Zechariah (Menologion of Basil II).jpg",
+   "titulo": "Zacarias no Menológio de Basílio II",
+   "alt": "Miniatura bizantina com a figura de um profeta, sobre fundo dourado",
+   "legenda": "Miniatura do Menológio de Basílio II (Constantinopla, 985), conservada na Biblioteca Vaticana (Vat. gr. 1613), com Zacarias entre os doze profetas menores; a legenda do manuscrito o apresenta como 'Zacarias, o vidente da foice'. O calendário bizantino comemora os profetas como santos, e a página permite distinguir o profeta do livro, do Zacarias pai de João Batista, que aparece em outra folha do mesmo manuscrito.",
+   "passagem": "Zc 1,1",
+   "tecnica": "iluminura (manuscrito bizantino)",
+   "acervo": "Biblioteca Apostólica Vaticana (Vat. gr. 1613), Roma",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Anonymous - Der Prophet Zacharias - GG 6372 - Kunsthistorisches Museum.jpg",
+   "titulo": "O profeta Zacarias",
+   "alt": "Pintura barroca com uma figura profética e uma figura angélica, em composição movimentada",
+   "legenda": "Pintura da oficina de Corrado Giaquinto (cerca de 1750-1752) no Kunsthistorisches Museum, em Viena (inv. GG 6372). A composição barroca reúne o profeta e a figura angélica, eco das visões noturnas de Zacarias, em que o profeta é acompanhado por um anjo que explica cada cena (Zc 1,9.19; 2,2.7; 5,5; 6,4). É uma das raras pinturas de grande formato dedicadas exclusivamente a Zacarias.",
+   "passagem": "Zc 1,7-17",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Kunsthistorisches Museum, Viena (inv. GG 6372)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Michelangelo, profeti, Zechariah 01.jpg",
+   "titulo": "O profeta Zacarias, na Capela Sistina",
+   "alt": "Detalhe de afresco com a figura de um profeta sentado, lendo um livro",
+   "legenda": "Detalhe do afresco de Zacarias pintado por Michelangelo no teto da Capela Sistina (1509). Zacarias ocupa um dos lugares maiores do teto e aparece lendo — o livro que ele mesmo escreveu. A escolha não é casual: as visões noturnas de Zacarias, com o candelabro de ouro, as murtas e o sumo sacerdote coroado (Zc 3-4), foram lidas pela teologia cristã como anúncio detalhado do culto novo.",
+   "passagem": "Zc 3-4",
+   "tecnica": "afresco",
+   "acervo": "Capela Sistina, Palácio Apostólico, Cidade do Vaticano",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:04 2022 Roma (Arco di Trionfo di Tito- Bassorilievi) FO228685 bis Photo by Paolo Villa.jpg",
+   "titulo": "O candelabro de sete braços no Arco de Tito",
+   "alt": "Relevo romano em pedra com um cortejo triunfal carregando um candelabro de sete braços",
+   "legenda": "Detalhe do relevo interno do Arco de Tito, em Roma, erguido depois de 81 d.C. para celebrar a tomada de Jerusalém, com os objetos do templo carregados no cortejo triunfal — entre eles o candelabro de sete braços. O objeto é o testemunho mais antigo conservado da forma do candelabro que Zacarias vê na sua visão (Zc 4,1-14) e serve de referência material para a leitura do texto.",
+   "passagem": "Zc 4,1-14",
+   "tecnica": "relevo em mármore (Arco de Tito)",
+   "acervo": "Arco de Tito, Fórum Romano, Roma; fotografia de Paolo Villa, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "slug": "jo",
+ "_comentario": "Especificação editorial das figuras do dossiê de Jó. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:119.Job Speaks with His Friends.jpg",
+   "titulo": "Jó fala com os seus amigos",
+   "alt": "Gravura em preto e branco com um homem sentado no chão entre três figuras de pé que o observam, em paisagem árida",
+   "legenda": "Gravura de Doré para Jó 2,11-13: os três amigos chegam, sentam-se com ele no chão e ficam sete dias em silêncio, antes de abrir o primeiro discurso. É o ponto de partida dos diálogos que ocupam quase todo o livro e o momento em que a narrativa muda de registro — do prólogo em prosa para a disputa poética sobre a retribuição.",
+   "passagem": "Jó 2,11-13",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William Blake - Satan Smiting Job with Sore Boils - Google Art Project.jpg",
+   "titulo": "O adversário fere Jó com chagas",
+   "alt": "Aquarela com uma figura alada e sombria pairando sobre um homem sentado no chão, sob um fundo escuro em turbilhão",
+   "legenda": "Blake ilustra Jó 2,7: o adversário (*ha-satan*) fere o justo com chagas, e o texto diz apenas isso — sem nome próprio, sem reino do mal. A imagem interessa ao dossiê porque a leitura visual posterior carregou a figura muito além do que o prólogo diz, e a distinção entre o adversário da corte celeste e o Satã do Novo Testamento é um dos pontos centrais da seção de conteúdos-chave.",
+   "passagem": "Jó 2,1-8",
+   "tecnica": "",
+   "acervo": "Tate, Londres (Google Arts & Culture, obra em domínio público)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Folio 82r - Job Mocked by His Friends.jpg",
+   "titulo": "Jó zombado pelos amigos",
+   "alt": "Iluminura medieval com um homem ferido sentado ao ar livre, sua mulher ao lado e três homens que gesticulam diante dele",
+   "legenda": "Iluminura do Livro de Horas conhecido como Les Très Riches Heures du duc de Berry (Musée Condé, Chantilly), fol. 82r, com Jó, a mulher e os três amigos. A cena mostra como o livro entrou no devocionário medieval: Jó não apenas como exemplo de paciência, mas como figura lida no ciclo das horas e do luto — recepção que o dossiê trata ao lembrar o uso do livro nos rituais de luto judaicos.",
+   "passagem": "Jó 2,11-13; 16,1-5",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Musée Condé, Chantilly (Les Très Riches Heures du duc de Berry, fol. 82r)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William Blake, Behemoth and Leviathan, 1825, NGA 819.jpg",
+   "titulo": "Beemote e Leviatã",
+   "alt": "Prancha gravada em tons claros com duas criaturas monstruosas, uma quadrúpede e uma aquática, sob uma figura divina",
+   "legenda": "Prancha da série de Blake para o Livro de Jó (1825): Beemote e Leviatã, as duas criaturas que o discurso divino apresenta a Jó (Jó 40,15-41,26) sem explicar o sofrimento do justo. É a ilustração mais conhecida dos dois animais e mostra como a resposta de Deus a Jó é feita — não por argumento sobre a justiça, mas pela exibição do que o homem não governa.",
+   "passagem": "Jó 40,15-41,26",
+   "tecnica": "gravura",
+   "acervo": "National Gallery of Art, Washington (arquivo de acesso aberto doado ao Wikimedia Commons)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ludlul bel nemeqi Ninive.jpg",
+   "titulo": "O tablete de Ludlul bēl nēmeqi",
+   "alt": "Fotografia de um tablete de argila coberto de escrita cuneiforme, em exposição",
+   "legenda": "Tablete com o texto acádio *Ludlul bēl nēmeqi* ('Louvarei o Senhor da Sabedoria'), na versão do século VII a.C. procedente de Nínive — o poema do justo sofredor Šubši-mešrê-Šakkan, abandonado pelos deuses e pela corte e depois restaurado. É o paralelo antigo mais citado dos capítulos de Jó, e a comparação é de género e de problema: o poema termina sem teodiceia e não tem cena celeste nem aposta.",
+   "passagem": "contexto comparado (Jó 1-2; 40-41)",
+   "tecnica": "tablete de argila com escrita cuneiforme",
+   "acervo": "Nínive (versão do séc. VII a.C.); fotografia de Zunkir, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Elephantine papyrus J 37113 (Sayce and Cowley 1906, J) from the Mibtahiah archive.jpg",
+   "titulo": "Papiro aramaico de Elefantina",
+   "alt": "Fotografia de um papiro antigo escrito em aramaico, com fibras visíveis, em vitrina de museu",
+   "legenda": "Documento aramaico do arquivo de Mibtahiah, procedente de Elefantina, no Egito, hoje no Museu Egípcio do Cairo. A coleção de papiros de Elefantina é o testemunho material da vida de uma comunidade judaica do período persa e é citada no dossiê como parte da epigrafia que documenta a escrita, a onomástica e a administração do mundo em que o livro foi composto — sem que nenhuma dessas fontes mencione Jó, Uz ou os seus interlocutores.",
+   "passagem": "contexto histórico (epigrafia aramaica do período persa)",
+   "tecnica": "papiro com escrita aramaica",
+   "acervo": "Museu Egípcio, Cairo; fotografia de Onceinawhile, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

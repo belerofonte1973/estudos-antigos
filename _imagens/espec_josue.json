@@ -1,0 +1,72 @@
+{
+ "slug": "josue",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:046.The Walls of Jericho Fall Down.jpg",
+   "titulo": "As muralhas de Jericó caem",
+   "alt": "Gravura em preto e branco com uma multidão em marcha ao redor de uma cidade murada cujas muralhas desabam",
+   "legenda": "Gravura de Doré para Js 6: os muros de Jericó desabam depois das voltas da procissão e do grito do povo. O dossiê usa a imagem para discutir a narrativa de conquista, e é a ilustração que fixou a cena no século XIX — a queda em bloco, sem batalha, é o que o texto afirma e o que as escavações de Tel es-Sultan não confirmam.",
+   "passagem": "Js 6,1-20",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:John Martin - Joshua Commanding the Sun to Stand Still - Google Art Project.jpg",
+   "titulo": "Josué detém o sol sobre Gibeão",
+   "alt": "Pintura com paisagem montanhosa ao crepúsculo e pequenos exércitos em combate, sob céu carregado",
+   "legenda": "John Martin pinta a ordem de Js 10,12-13 — sol, detém-te sobre Gibeão — como um vasto panorama de montanhas e nuvens, com a batalha reduzida a pontos na imensidão. O dossiê usa a obra porque ela faz o inverso da leitura devocional: o milagre não é espetáculo, é o quadro inteiro parado.",
+   "passagem": "Js 10,12-14",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Google Arts & Culture (Google Cultural Institute)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tissot The Harlot of Jericho and the Two Spies.jpg",
+   "titulo": "Raabe e os dois espias",
+   "alt": "Pintura de duas figuras masculinas em trajes antigos diante de uma mulher à janela de uma casa sobre a muralha",
+   "legenda": "Tissot representa Js 2,1-21: Raabe esconde os espias e os faz descer pela janela, com o cordão vermelho preso à muralha. O dossiê usa a cena porque o livro faz dela o primeiro acerto do relato de conquista — uma mulher de Jericó é quem reconhece o que os israelitas ainda vão descobrir.",
+   "passagem": "Js 2,1-21",
+   "tecnica": "gouache sobre cartão",
+   "acervo": "Jewish Museum, Nova York (Tissot, c. 1896-1902)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:John Canne, A view of the division of the land of Canaan among the twelve tribes of Israel the situation of the city and sanctuary &c as described by Josephus antiquities (FL45602025 3935134).jpg",
+   "titulo": "A divisão da terra de Canaã entre as doze tribos",
+   "alt": "Mapa antigo impresso com linhas de divisão do território em doze partes, com nomes de tribos",
+   "legenda": "Mapa de John Canne para a repartição da terra entre as tribos, conservado na Coleção Cartográfica Eran Laor da Biblioteca Nacional de Israel. O dossiê usa a estampa ao tratar de Js 13-21: as longas listas de limites do livro são, na tradição europeia, o material com que se desenha a terra — e cada mapa é uma tentativa de fazer a lista virar geografia.",
+   "passagem": "Js 13-21",
+   "tecnica": "mapa impresso (gravura)",
+   "acervo": "Biblioteca Nacional de Israel, Coleção Eran Laor de Cartografia",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tell es-Sultan, Jericho, Palestine2.jpg",
+   "titulo": "A colina de Tell es-Sultan, em Jericó",
+   "alt": "Colina de terra com escavações abertas e encostas secas, sob céu azul",
+   "legenda": "A colina de Tell es-Sultan, em Jericó, é o sítio cujas escavações desfizeram a leitura direta do capítulo 6: as muralhas mais conhecidas são muito anteriores à data em que se costuma situar a entrada de Israel. O dossiê usa a fotografia na seção de ciência porque o lugar onde a narrativa põe o milagre é exatamente o lugar onde a arqueologia põe a pergunta.",
+   "passagem": "contexto arqueológico (cf. Js 6)",
+   "tecnica": "sítio arqueológico",
+   "acervo": "Tell es-Sultan, Jericó; fotografia de Diego Delso, CC BY-SA 3.0",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Merneptah Stele 2022 11.jpg",
+   "titulo": "A estela de Merneptah no Museu Egípcio",
+   "alt": "Estela de granito com relevo e colunas de hieróglifos, em museu",
+   "legenda": "A inscrição de Merneptah (c. 1208 a.C.) é o testemunho egípcio mais antigo do nome Israel como povo no país, e o dossiê a usa na seção de ciência para delimitar o quadro histórico do livro de Josué: o que ela documenta é a existência do nome no fim do século XIII a.C., não qualquer episódio da conquista.",
+   "passagem": "contexto histórico (séc. XIII a.C.)",
+   "tecnica": "granito inscrito (c. 1208 a.C.)",
+   "acervo": "Museu Egípcio, Cairo; fotografia de Onceinawhile, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

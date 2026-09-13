@@ -1,0 +1,70 @@
+{
+ "slug": "enoque-1",
+ "_comentario": "Especificação editorial das figuras do dossiê de 1 Enoque. Só os textos (titulo, alt, legenda, passagem, tecnica, acervo) e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra abaixo foi confirmada com scripts/imagens_buscar.py.",
+ "_material_escasso": "Não existe obra de licença livre que represente a cena central do livro — a descida dos Vigilantes ao monte Hermon e os nefilins. A arte europeia não ilustrou 1 Enoque porque o livro ficou fora do cânon ocidental: a queda angélica que ela figura vem de Apocalipse 12, não do Enoque etíope.",
+ "figuras": [
+  {
+   "arquivo": "File:Lucas Emil Vorsterman after Sir Peter Paul Rubens, The Fall of the Rebel Angels, 1621, NGA 56631.jpg",
+   "titulo": "A queda dos anjos rebeldes",
+   "alt": "Gravura em preto e branco com multidão de figuras angélicas precipitando-se do alto entre nuvens e raios de luz",
+   "legenda": "Gravura de Lucas Vorsterman a partir de Rubens (1621), hoje na National Gallery of Art: é a imagem da queda angélica tal como o Ocidente a imaginou, e ela vem de Apocalipse 12,7-9, não de 1 Enoque — o livro ficou fora do cânon ocidental (cf. §6, os veredictos de Atanásio e Agostinho). O contraste é o argumento da §4.1: Gênesis 6,1-4 dedica quatro versículos aos 'filhos de Deus' sem dizer por que caíram, e é esse silêncio que 1 Enoque preenche com nomes (Semihazá, Azazel), com a lista dos ensinamentos proibidos e com a sentença sobre os gigantes. A gravura mostra o que a arte cristã tinha para oferecer no lugar da narrativa enóquica.",
+   "passagem": "1 En 6-10 (cf. Gn 6,1-4)",
+   "tecnica": "gravura",
+   "acervo": "National Gallery of Art, Washington, D.C. (inv. NGA 56631)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William Blake, Enoch before the Great Glory, c. 1824-1827, NGA 30675.jpg",
+   "titulo": "Enoque diante da Grande Glória",
+   "alt": "Desenho a grafite com a figura de Enoque de pé diante da visão que o título da obra chama de Grande Glória",
+   "legenda": "Desenho a grafite de William Blake, feito por volta de 1824-1827 — poucos anos depois de o texto ge'ez ter chegado à Europa na década de 1770 e de a tradução inglesa de 1821 ter provocado sensação. O dossiê registra essa influência (§6): Blake é a prova visual de que o Enoque etíope entrou na imaginação do Ocidente romântico por uma porta que o cânon havia fechado. O tema é o que 1 Enoque 14 e 17-36 narram — Enoque levado em visão até o trono e a glória, matriz da literatura mística que a pesquisa chama de merkabah (§5).",
+   "passagem": "1 En 14,8-25; 17-36",
+   "tecnica": "grafite sobre papel",
+   "acervo": "National Gallery of Art, Washington, D.C. (Coleção Rosenwald, inv. 1944.14.8)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Archangel Phanuel, Ethiopian scroll.jpg",
+   "titulo": "O arcanjo Fanuel num rolo etíope",
+   "alt": "Iluminura etíope com a figura do arcanjo Fanuel num rolo de orações do século XIX",
+   "legenda": "Iluminura de um rolo etíope do século XIX conservado no Walters Art Museum (W.845), cujas orações contra o mal invocam o arcanjo Fanuel. Fanuel é um dos quatro arcanjos que 1 Enoque 40,9 nomeia — com Miguel, Rafael e Gabriel —, e essa lista de quatro é uma marca própria do livro: quem o leu como Escritura na Etiópia rezou pelos anjos que ele nomeia. A peça documenta a recepção viva tratada na §6, onde o livro é o 14.º título do Antigo Testamento da Igreja Tewahedo e nunca saiu do cânon.",
+   "passagem": "1 En 40,9",
+   "acervo": "Walters Art Museum, Baltimore (W.845)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Apkallu életfával (1).jpg",
+   "titulo": "Apkallu e a árvore sagrada",
+   "alt": "Relevo neo-assírio em pedra com uma figura de apkallu junto a uma árvore estilizada",
+   "legenda": "Relevo neo-assírio datado de 883-859 a.C. (reinado de Assurnasirpal II), com uma figura apkallu junto à árvore sagrada. Os apkallu são os sábios antediluvianos que, na tradição mesopotâmica, trouxeram ao mundo os ofícios e a escrita — e é com eles que Amar Annus comparou os Vigilantes de 1 Enoque, que ensinam as artes proibidas antes do dilúvio [ACAD — Annus, 2010]. A comparação é a mais estudada da §9 porque os dois casos respondem à mesma pergunta: de onde vem o conhecimento, e quem o trouxe.",
+   "passagem": "1 En 8,1-3 (cf. §9)",
+   "acervo": "Szépművészeti Múzeum (Museu de Belas Artes), Budapeste",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Enoch 106.8-18; Melito's Homily 1-4 (CBL BP XII, f.13v).jpg",
+   "titulo": "O fim da Epístola de Enoque no papiro Chester Beatty XII",
+   "alt": "Página de papiro com texto grego em colunas e um pequeno floreio decorativo entre os blocos de escrita",
+   "legenda": "Folha do papiro Chester Beatty XII (Egito, século IV), em grego: um floreio decorativo marca o fim da 'Epístola de Enoque' e o começo da homilia da Paixão atribuída a Melito de Sardes (BP XII, f.13v). O trecho é 1 Enoque 106,8-18, a passagem em que Lameque desconfia da paternidade do menino Noé. A §12 usa este material para mostrar por onde o livro circulou antes do ge'ez — o grego, atestado aqui, no Códice Panopolitano e nos fragmentos vaticanos —, e o mesmo fólio é um dos exemplos mais antigos de ornamentação em códice cristão.",
+   "passagem": "1 En 106,8-18",
+   "tecnica": "papiro (século IV)",
+   "acervo": "Chester Beatty Library, Dublin (BP XII, f.13v)",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Etiopia, libro di enoch (in ge'ez), xviii secolo (bnf).jpg",
+   "titulo": "O Livro de Enoque em ge'ez",
+   "alt": "Manuscrito etíope do Livro de Enoque, em ge'ez, em fotografia de página dupla",
+   "legenda": "Manuscrito etíope do Livro de Enoque em ge'ez, do século XVIII. É por este ramo que o texto existe inteiro: fora da tradição etíope, 1 Enoque só sobreviveu em fragmentos aramaicos de Qumran, em grego, em copta e em latim (§12). A §6 mostra que a recepção etíope não é folclore de arquivo — o livro é Escritura da Igreja Tewahedo e foi traduzido para o ge'ez antes do século VI, o que faz da Etiópia o único canal completo de transmissão.",
+   "passagem": "transmissão do texto (século XVIII)",
+   "acervo": "Fotografia de Francesco Bini (Sailko), CC BY-SA 4.0; manuscrito etíope em ge'ez do Livro de Enoque, século XVIII",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

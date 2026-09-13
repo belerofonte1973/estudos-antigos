@@ -1,0 +1,72 @@
+{
+ "slug": "coelet",
+ "_comentario": "Especificação editorial das figuras do dossiê de Coélet (Eclesiastes). Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:Adriaen van Utrecht - Vanitas Still-Life with a Bouquet, a Skull and Precious Objects.jpg",
+   "titulo": "Vaidade das vaidades: caveira, flores e objetos preciosos",
+   "alt": "Pintura de natureza-morta com um ramo de flores, uma caveira e objetos de valor sobre uma mesa",
+   "legenda": "Natureza-morta de Adriaen van Utrecht (1643) que reúne o que o livro declara fugaz: as flores que murcham, a caveira e os objetos que se acumulam. A imagem conversa diretamente com o lema de Ec 1,2 — 'hevel havalim' —, que o dossiê discute como vapor que existe e não se retém, e não como simples 'vaidade' moral.",
+   "passagem": "Ec 1,2; 12,8",
+   "tecnica": "",
+   "acervo": "Coleção particular; imagem de catálogo da Bonhams",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Julien Dupré - Les faucheurs (1886).jpg",
+   "titulo": "Os ceifeiros",
+   "alt": "Pintura com trabalhadores curvados ceifando um campo de feno, sob luz de dia claro",
+   "legenda": "Julien Dupré pinta o trabalho da ceifa em 1886 — o gesto que o livro toma como medida do tempo humano: semear, colher e passar adiante o resultado a quem não o plantou (Ec 2,18-22). É a leitura do 'tempo' de Ec 3,1-8 que o dossiê trata ao discutir o vocabulário de hevel e a fugacidade do esforço.",
+   "passagem": "Ec 3,1-8; 2,18-22",
+   "tecnica": "",
+   "acervo": "Sotheby's, Nova York (leilão de 4 de novembro de 2011, lote 2)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Gerrit van vucht a vanitas with books a skull a candle and various obj050442).jpg",
+   "titulo": "Vanitas com livros, caveira e vela",
+   "alt": "Natureza-morta escura com livros empilhados, uma caveira e uma vela acesa sobre mesa, entre outros objetos",
+   "legenda": "Vanitas de Gerrit van Vucht em que a vela acesa mede o tempo que resta e a caveira o fim de todo saber acumulado. É a fórmula visual que a pintura holandesa do século XVII extraiu de Coélet — o saber que não salva o sábio (Ec 1,17-18) e o mesmo fim para todos (Ec 9,1-6) —, e que faz do livro o texto mais citado pela tradição artística da vanitas.",
+   "passagem": "Ec 1,17-18; 9,1-6",
+   "tecnica": "",
+   "acervo": "Christie's, leilão Old Masters (Gerrit van Vucht, Schiedam c. 1610-1697)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Cornelis Norbertus Gijsbrechts - Vanitas still life with a skull, sheet music, violin, globe, candle, hourglass and playing cards, all on a draped table.jpg",
+   "titulo": "Vanitas com instrumentos, globo e ampulheta",
+   "alt": "Natureza-morta com caveira, partitura, violino, globo terrestre, vela, ampulheta e cartas de baralho sobre mesa coberta",
+   "legenda": "Gijsbrechts reúne numa mesa a música, o saber do mundo (o globo), o jogo e a ampulheta: tudo o que o livro põe sob o juízo de hevel. A obra pertence à recepção holandesa do século XVII de Coélet, cuja chave é a pergunta de Ec 3,9 — 'que proveito tira o que trabalha do seu esforço?'.",
+   "passagem": "Ec 3,9; 2,1-11",
+   "tecnica": "",
+   "acervo": "Sotheby's, coleção Soer-Rusche (leilão on-line de 2019)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:DisputeBetweenAManAndHisBa-Soul Photomerge-AltesMuseum-Berlin.png",
+   "titulo": "A disputa entre um homem e o seu ba (Papiro Berlin 3024)",
+   "alt": "Fotografia panorâmica de um papiro egípcio escrito em hierático, com muitas linhas de texto",
+   "legenda": "O Papiro Berlin 3024 transmite a 'Disputa entre um homem e o seu ba', texto do Império Médio em que um homem em desgraça pondera a morte e a sua alma o contesta (§9.2). É o paralelo egípcio mais próximo do questionamento de Coélet sobre a morte e o valor da vida, e a comparação serve para mostrar o que é gênero comum do Oriente Próximo e o que é próprio do livro bíblico.",
+   "passagem": "contexto comparado (Ec 4,2-3; 9,4-6)",
+   "tecnica": "papiro escrito em hierático",
+   "acervo": "Ägyptisches Museum, Berlim (Papiro Berlin 3024); fotografia de Keith Schengili-Roberts, CC BY-SA 3.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Dead Sea Scroll 109, Qohelet or Ecclesiastes, from Qumran Cave 4, at the Jordan Museum in Amman.jpg",
+   "titulo": "4Q109: o rolo de Coélet de Qumran",
+   "alt": "Fotografia de fragmento de rolo de pergaminho antigo com texto hebraico, montado sobre suporte escuro em vitrina de museu",
+   "legenda": "Fragmento do rolo 4Q109 (4QQoha), copiado em escrita hasmoneia e datado por paleografia em cerca de 175-150 a.C. (§12.1). É o testemunho manuscrito mais antigo de Coélet e o dado material que impede qualquer datação tardia do livro — o fragmento confirma o texto consonantal hoje conhecido, sem variantes de grande porte.",
+   "passagem": "manuscrito de Ec 5,13-17; 6,3-8.12; 7,1-10.19-20 (4Q109)",
+   "tecnica": "pergaminho com texto hebraico (escrita hasmoneia)",
+   "acervo": "The Jordan Museum, Amã; fotografia de Osama Shukir Muhammed Amin, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

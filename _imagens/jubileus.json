@@ -1,0 +1,101 @@
+{
+ "slug": "jubileus",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 1,
+   "src": "/imagens/jubileus/01-moises-com-as-tabuas-da-lei.webp",
+   "arquivo_origem": "File:Rembrandt - Moses with the Ten Commandments - Google Art Project.jpg",
+   "titulo": "Moisés com as Tábuas da Lei",
+   "legenda": "Jubileus não se apresenta como obra humana: é o anjo da presença que dita a Moisés, no Sinai, a Torá integral — a versão que o livro considera completa, contra o Gênesis abreviado (§4.1). Rembrandt fixa o gesto dessa entrega: as duas tábuas na mão do legislador. É a moldura de que a §4.2 depende, porque é no Sinai que o anjo revela o ano de 364 dias, a cronologia das semanas e dos jubileus e a Festa das Semanas que Noé celebra depois do dilúvio.",
+   "passagem": "Jub 1,1-4; 6,17-22 (cf. §4.1)",
+   "artista": "Rembrandt",
+   "data": "1659",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Rembrandt, 1659; digitalização da Google Arts & Culture (Google Art Project)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ARembrandt_-_Moses_with_the_Ten_Commandments_-_Google_Art_Project.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 4000,
+   "altura_original": 4990,
+   "secao": "4",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "d013ae34aaa0e8a3",
+   "bytes": 102286,
+   "largura_final": 950,
+   "altura_final": 1185
+  },
+  {
+   "ordem": 2,
+   "src": "/imagens/jubileus/02-moises-com-as-tabuas-escultura-do-seculo-xii.webp",
+   "arquivo_origem": "File:Sculpture of Moses with Tablets of the Law MET DP359501.jpg",
+   "titulo": "Moisés com as tábuas, escultura do século XII",
+   "legenda": "Escultura francesa de cerca de 1170, hoje no Metropolitan Museum: Moisés com as tábuas da lei esculpido para ser visto dentro de uma igreja, quando o Ocidente já não lia Jubileus. A peça mostra como o tema chegou à arte medieval pela via canônica — e serve de contraponto ao que o dossiê argumenta na §4.3: a halakhá de Jubileus não coincide com a rabínica posterior nem com a leitura cristã, e é justamente esse desencontro que faz do livro uma peça-chave na reconstrução do pluralismo legal do Segundo Templo.",
+   "passagem": "Jub 1; 15; 16; 21 (cf. §4.3)",
+   "artista": "anônimo",
+   "data": "circa 1170",
+   "tecnica": "escultura (c. 1170)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (doação do museu, acesso aberto)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ASculpture_of_Moses_with_Tablets_of_the_Law_MET_DP359501.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 2451,
+   "altura_original": 3890,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "French; Sculpture; Sculpture",
+   "sha256": "3430ae245fb7971d",
+   "bytes": 115712,
+   "largura_final": 950,
+   "altura_final": 1508
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/jubileus/04-tabua-do-enuma-elis.webp",
+   "arquivo_origem": "File:Enuma Elish K.3473.jpg",
+   "titulo": "Tábua do Enūma Eliš",
+   "legenda": "Fragmento de tábua do Enūma Eliš, o poema babilônico da criação, encontrado em Nínive na biblioteca de Assurbanípal (século VII a.C., tábua K.3473). O motivo das tábuas do céu de Jubileus tem aqui o seu ancestral preciso: as 'tábuas do destino' mesopotâmicas, que quem as possui governa a história. A diferença que a §9 sublinha é o que o livro faz com o empréstimo — trata a tábua como lei moral eterna, escrita antes da criação: o destino é desmitologizado e convertido em Torá.",
+   "passagem": "Jub 4,32; 30,20-22 (cf. §9)",
+   "artista": "Zunkir",
+   "data": "2020-03-09 13:06:22",
+   "tecnica": "tábua de argila inscrita em cuneiforme (séc. VII a.C.)",
+   "acervo": "Nínive, biblioteca de Assurbanípal (tábua K.3473); fotografia de Zunkir, CC BY-SA 4.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AEnuma_Elish_K.3473.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 4.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 2170,
+   "altura_original": 4908,
+   "secao": "9",
+   "posicao": "fim",
+   "descricao_fonte": "Fragment of a tablet from the Babylonian myth Enuma Elish, or Epic of Creation. Unearthed in Nineveh, in the \"Library of Assurbanipal\". 7th century BC. J.-C. K.3473.",
+   "sha256": "1f29adfef8dcf2bf",
+   "bytes": 290634,
+   "largura_final": 950,
+   "altura_final": 2149
+  }
+ ],
+ "recusadas": [
+  [
+   "File:Ethiopian - Leaf from Gunda Gunde Gospels - Walters W8504V - Open Group.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Alexander Jannaeus coin.JPG",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Genesis 1 Dead Sea Scroll.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "slug": "macabeus-4",
+ "_comentario": "Especificação editorial das figuras do dossiê de 4 Macabeus. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:149.The Martyrdom of Eleazar the Scribe.jpg",
+   "titulo": "O martírio do escriba Eleazar",
+   "alt": "Gravura em preto e branco com um homem idoso conduzido ao suplício, cercado por soldados",
+   "legenda": "Gravura de Doré para a série Doré's English Bible (1866), sobre o martírio de Eleazar (2Mc 6,18-31). 4 Macabeus abre com esse episódio e o retoma longamente (4Mc 5-7), transformando o relato do martírio em tratado filosófico: Eleazar é o modelo do domínio da razão piedosa sobre as paixões, tese que o livro desenvolve como argumento. A gravura representa os fatos que o livro interpreta.",
+   "passagem": "4Mc 5-7 (cf. 2Mc 6,18-31)",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:150.The Courage of a Mother.jpg",
+   "titulo": "A coragem de uma mãe",
+   "alt": "Gravura em preto e branco com uma mulher de pé diante de figuras armadas, junto a corpos caídos",
+   "legenda": "Gravura de Doré para a mesma série de 1866, sobre o martírio dos sete irmãos e da mãe (2Mc 7,20-42). 4 Macabeus dedica a essa cena os capítulos 8 a 18 e conclui com o elogio da mãe que assistiu à morte dos filhos, sustentando a tese anunciada na primeira linha do livro: a razão piedosa é soberana sobre as paixões (4Mc 1,1). É a única obra do judaísmo helenístico conservada com essa forma de discurso filosófico em torno de um martírio.",
+   "passagem": "4Mc 8-18 (cf. 2Mc 7,1-42)",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Stattler-Machabeusze.jpg",
+   "titulo": "Os Macabeus",
+   "alt": "Pintura histórica com uma mulher e jovens em vestes antigas, em cena dramática",
+   "legenda": "Pintura de Wojciech Stattler (1842), um dos quadros históricos mais conhecidos da pintura polonesa do século XIX, com a mãe e os sete filhos. A obra pertence à recepção moderna do martírio tal como 4 Macabeus o formula: a mãe exortando os filhos a suportar, e o martírio lido como prova da liberdade interior do justo diante do tirano.",
+   "passagem": "4Mc 15-17 (cf. 2Mc 7,20-42)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Reprodução em 'Od starożytności do współczesności — Malarstwo i rzeźba' (Varsóvia, 2006)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Initial A with the Battle of the Maccabees MET DP164983.jpg",
+   "titulo": "Inicial 'A' com a batalha dos Macabeus",
+   "alt": "Recorte de manuscrito com uma inicial iluminada que contém uma cena de batalha",
+   "legenda": "Recorte de antifonário italiano (cerca de 1360), no Metropolitan Museum of Art, com a inicial que abre o ofício dos Macabeus e uma cena de batalha no seu interior. Os Macabeus eram celebrados no calendário litúrgico medieval como mártires, e esta inicial documenta a presença do livro — e do martírio de 4 Macabeus — na liturgia cantada do Ocidente medieval.",
+   "passagem": "4Mc 8-18",
+   "tecnica": "iluminura sobre pergaminho (recorte de antifonário)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (domínio público/CC0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Pilastro con icone, 600-650 ca. 03 solomone e i maccabei.jpg",
+   "titulo": "Pilastra com Salomão e os Macabeus, em Santa Maria Antiqua",
+   "alt": "Fotografia de uma pilastra pintada com figuras sagradas, no interior de uma igreja antiga",
+   "legenda": "Pilastra pintada da igreja de Santa Maria Antiqua, em Roma (cerca de 600-650), com Salomão e os santos Macabeus. A decoração está entre as mais antigas representações conservadas dos Macabeus como mártires e mostra que a memória dos sete irmãos e de Eleazar — o assunto de 4 Macabeus — já estava fixada na arte cristã de Roma antes de qualquer tradução latina do livro.",
+   "passagem": "4Mc 8-18 (cf. 2Mc 7)",
+   "tecnica": "pintura sobre pilastra (século VII)",
+   "acervo": "Santa Maria Antiqua, Fórum Romano, Roma; fotografia de Sailko, CC BY 3.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Legendari di sancti istoriado uulgar, 1497 – (Maccabei) - BEIC IE4411198.jpg",
+   "titulo": "Os Macabeus na 'Legenda aurea' impressa em 1497",
+   "alt": "Página impressa antiga com texto em língua vulgar, em duas colunas",
+   "legenda": "Página da edição em língua vulgar da Legenda aurea impressa em 1497, no capítulo XLI, dedicado aos Macabeus. A coletânea de vidas de santos de Jacopo de Varazze inclui os sete irmãos, a mãe e Eleazar entre os mártires, e o incunábulo mostra como o episódio retomado por 4 Macabeus circulava como devoção popular antes de chegar às mãos dos humanistas.",
+   "passagem": "4Mc 8-18",
+   "tecnica": "impresso tipográfico (incunábulo, 1497)",
+   "acervo": "Biblioteca Europeia de Informação e Cultura (BEIC), Milão",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

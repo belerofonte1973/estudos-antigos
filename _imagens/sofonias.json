@@ -1,0 +1,75 @@
+{
+ "slug": "sofonias",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 4,
+   "src": "/imagens/sofonias/04-manasses-amom-e-josias-reis-de-juda.webp",
+   "arquivo_origem": "File:Manasse, Amon en Josia Koningen van Juda (serietitel) Theatrum biblicum (..) (serietitel), RP-P-1904-3499.jpg",
+   "titulo": "Manassés, Amom e Josias, reis de Judá",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1904-3499), da série 'Theatrum biblicum' impressa em 1585 segundo desenho de Maarten van Heemskerck. As três cenas reúnem Manassés, Amom e Josias, os reis de Judá do fim do século VII a.C. O livro é datado dos dias de Josias (Sf 1,1), e a denúncia do culto aos astros e aos ídolos (Sf 1,4-6) responde exatamente ao que a reforma de Josias procurou extirpar (2Rs 23).",
+   "passagem": "Sf 1,1-6",
+   "artista": "Rijksmuseum",
+   "data": "1585",
+   "tecnica": "gravura (série Theatrum biblicum, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1904-3499); segundo desenho de Maarten van Heemskerck",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AManasse%2C_Amon_en_Josia_Koningen_van_Juda_%28serietitel%29_Theatrum_biblicum_%28..%29_%28serietitel%29%2C_RP-P-1904-3499.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 7134,
+   "altura_original": 5818,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Identificatie Titel(s): Manasse, Amon en Josia. Koningen van Juda (serietitel). Theatrum biblicum (...) (serietitel) Objecttype: prent Serienummer: 6/8 Objectnummer: RP-P-1904-3499 Catalogusreferentie: Mielke 39-2(2) Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228 Omschrijving: De koningen Manasse, Amon en Josia. Op de achtergrond enkele belangrijke gebeurtenissen uit hun leven. Links op de achtergrond zit koning Manasse in zijn strijdwagen. Midden op de achtergrond de moord",
+   "sha256": "57eb8dcb60e79617",
+   "bytes": 116342,
+   "largura_final": 950,
+   "altura_final": 775
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/sofonias/05-relevo-assirio-de-caca.webp",
+   "arquivo_origem": "File:VAM - Jagdrelief.jpg",
+   "titulo": "Relevo assírio de caça",
+   "legenda": "Relevo assírio com cena de caça do século IX a.C., no Museu do Oriente Próximo Antigo, em Berlim. Sofonias anuncia a queda de Nínive — 'esta é a cidade alegre que vivia em segurança' (Sf 2,15) — e descreve o império assírio como o poder que devasta as nações. O relevo é a imagem mesma da soberania assíria que o profeta diz condenada, e a documentação material do império que dominou Judá no século VII a.C.",
+   "passagem": "Sf 2,13-15",
+   "artista": "Wolfgang Sauber",
+   "data": "2012-04-05",
+   "tecnica": "relevo em pedra (século IX a.C.)",
+   "acervo": "Vorderasiatisches Museum (Museu do Oriente Próximo Antigo), Berlim; fotografia de Wolfgang Sauber, CC BY-SA 3.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AVAM_-_Jagdrelief.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 3.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 2560,
+   "altura_original": 1712,
+   "secao": "9",
+   "posicao": "fim",
+   "descricao_fonte": "Museum of Ancient Near East ( Berlin ). Relief with hunting scene ( 9th century BC ).",
+   "sha256": "cd39fbe8301398ae",
+   "bytes": 113870,
+   "largura_final": 950,
+   "altura_final": 635
+  }
+ ],
+ "recusadas": [
+  [
+   "File:Sophonie (Zephaniah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Fethiye Camii, parekklesion, dome, mosaics, Istanbul, Turkey - Zephaniah and Micah - MSBZ004 BF T F 007 D - Dumbarton Oaks.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Zephaniah from Yaroslavl (18 c, priv.coll).jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

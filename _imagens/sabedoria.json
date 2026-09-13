@@ -1,0 +1,101 @@
+{
+ "slug": "sabedoria",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 3,
+   "src": "/imagens/sabedoria/03-a-sabedoria-no-teto-da-biblioteca-marciana.webp",
+   "arquivo_origem": "File:(Venice) Biblioteca Nazionale Marciana - Interior - Wisdom by Titien.jpg",
+   "titulo": "A Sabedoria no teto da Biblioteca Marciana",
+   "legenda": "A figura da Sabedoria pintada por Ticiano no teto da Biblioteca Nacional Marciana, em Veneza, no quadro do programa decorativo do século XVI. A imagem documenta a recepção da Sabedoria personificada como virtude pública e sapiencial — a mesma personificação de Sb 7,25-26, cujo vocabulário ('sopro do poder de Deus', 'resplendor da luz eterna') forneceu às gerações nicenas a linguagem da relação entre o Pai e o Filho.",
+   "passagem": "Sb 7,25-26",
+   "artista": "Didier Descouens",
+   "data": "Taken on 12 May 2023",
+   "tecnica": "",
+   "acervo": "Biblioteca Nacional Marciana, Veneza (pintura de Ticiano); fotografia de Didier Descouens (domínio público)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3A%28Venice%29_Biblioteca_Nazionale_Marciana_-_Interior_-_Wisdom_by_Titien.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 5802,
+   "altura_original": 5671,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "4d7fea3b01c36ca0",
+   "bytes": 136626,
+   "largura_final": 950,
+   "altura_final": 929
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/sabedoria/05-busto-de-platao-nos-museus-capitolinos.webp",
+   "arquivo_origem": "File:Plato, MC 571, Roman - Musei Capitolini - Rome, Italy - DSC05999.jpg",
+   "titulo": "Busto de Platão nos Museus Capitolinos",
+   "legenda": "Busto romano de Platão (Museus Capitolinos, MC 571). Ele entra no dossiê como referência visual do comparando da §9: a Sabedoria de Salomão escreve em grego, em Alexandria, e dialoga com o pensamento grego — a imortalidade da alma e a pré-existência de Sb 8,19-20 são discutidas em paralelo com o Fedão, e a distinção entre o dom da imortalidade ligado à justiça e a alma imortal por natureza é o ponto exato do debate.",
+   "passagem": "contexto comparado (Sb 1-5; 9,15)",
+   "artista": "Daderot",
+   "data": "2019-04-15 08:29:26",
+   "tecnica": "busto de mármore (escultura)",
+   "acervo": "Musei Capitolini, Roma (MC 571); fotografia de Daderot (domínio público)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3APlato%2C_MC_571%2C_Roman_-_Musei_Capitolini_-_Rome%2C_Italy_-_DSC05999.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 3648,
+   "altura_original": 5472,
+   "secao": "9",
+   "posicao": "fim",
+   "descricao_fonte": "Exhibit in the Musei Capitolini - Rome, Italy.",
+   "sha256": "748512b75c25faf2",
+   "bytes": 62844,
+   "largura_final": 950,
+   "altura_final": 1425
+  },
+  {
+   "ordem": 6,
+   "src": "/imagens/sabedoria/06-o-teatro-romano-de-alexandria-em-kom-el-dikka.webp",
+   "arquivo_origem": "File:Kom El-Dikka.jpg",
+   "titulo": "O teatro romano de Alexandria, em Kom el-Dikka",
+   "legenda": "As ruínas do teatro romano de Kom el-Dikka, no centro de Alexandria — o sítio que mais informa sobre a cidade romana, escavado pelo Centro de Arqueologia Mediterrânea da Universidade de Varsóvia. É o quadro material em que o livro foi escrito, e o dossiê registra o limite do dado: nada resta das coleções da Biblioteca de Alexandria e não há testemunho de biblioteca judaica alexandrina; o ambiente reconstrói-se por textos, não por estratos.",
+   "passagem": "contexto histórico (Alexandria ptolomaica e romana)",
+   "artista": "Keith",
+   "data": "2022-04-11 09:32:17",
+   "tecnica": "sítio arqueológico (fotografia)",
+   "acervo": "Kom el-Dikka, Alexandria, Egito; fotografia de Keith (domínio público)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AKom_El-Dikka.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 3710,
+   "altura_original": 2783,
+   "secao": "12",
+   "posicao": "fim",
+   "descricao_fonte": "Roman Theater In Alexandria",
+   "sha256": "00a98c4bd4727ca1",
+   "bytes": 135058,
+   "largura_final": 950,
+   "altura_final": 712
+  }
+ ],
+ "recusadas": [
+  [
+   "File:Solomon prays for wisdom.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Spiritus Sapientiae (The Spirit of Wisdom) (BM 1937,0915.309).jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Illumination of Solomon and Sheba - Old Testament I LCCN2002723391.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

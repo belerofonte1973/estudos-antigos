@@ -1,0 +1,72 @@
+{
+ "slug": "macabeus-2",
+ "_comentario": "Especificação editorial das figuras do dossiê de 2 Macabeus. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:149.The Martyrdom of Eleazar the Scribe.jpg",
+   "titulo": "O martírio de Eleazar, o escriba",
+   "alt": "Gravura em preto e branco com um ancião de barba branca acossado por soldados armados, em meio a uma multidão",
+   "legenda": "Gravura de Doré para 2 Macabeus 6,18-31: Eleazar, escriba já idoso, recusa comer carne de porco e recusa também a saída fingida que lhe oferecem, morrendo 'por causa da Lei'. O episódio abre a série de martírios dos capítulos 6 e 7, matéria que o dossiê trata como núcleo da teologia do livro e como ponto de partida das narrativas de martírio posteriores.",
+   "passagem": "2Mc 6,18-31",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:\"Expulsion of Heliodorus from the Temple\" by Raphael, Raphael Rooms, Vatican Museum (48466176181).jpg",
+   "titulo": "A expulsão de Heliodoro do Templo, de Rafael",
+   "alt": "Afresco monumental com um cavaleiro armado investindo contra um homem caído, em meio a uma multidão em pânico num interior de templo",
+   "legenda": "Afresco de Rafael (1511-12) na Sala de Heliodoro, no Vaticano, sobre a cena de 2 Macabeus 3,21-28: o ministro de Seleuco IV tenta confiscar o tesouro do Templo e é derrubado por um cavaleiro. É a recepção pictórica mais célebre do livro e interessa ao dossiê porque foi este capítulo que fixou, na arte europeia, a imagem do Templo defendido por intervenção celeste.",
+   "passagem": "2Mc 3,21-28",
+   "tecnica": "afresco",
+   "acervo": "Museus Vaticanos, Roma (Sala de Heliodoro); fotografia de Gary Todd, domínio público",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Marteldood van Eleazar Triomf van het martelaarschap (serietitel) Triumphus Martyrum (serietitel), RP-P-OB-2167.jpg",
+   "titulo": "O martírio de Eleazar (gravura de 1591)",
+   "alt": "Gravura antiga com um homem idoso sendo golpeado por algozes, sob arranjo ornamental com inscrição em latim",
+   "legenda": "Gravura da série 'Triumphus Martyrum', de 1591, dedicada ao martírio de Eleazar. Ela mostra como o episódio de 2Mc 6 foi apropriado pela arte da Contrarreforma como modelo de fidelidade até a morte — leitura que o dossiê trata ao distinguir o martírio do livro dos usos posteriores que dele se fizeram.",
+   "passagem": "2Mc 6,18-31",
+   "tecnica": "gravura (prent, série Triumphus Martyrum)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-OB-2167)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Dying Gaul Musei Capitolini MC747.jpg",
+   "titulo": "O gálata moribundo",
+   "alt": "Estátua de um guerreiro caído sobre o escudo, apoiado no braço, com ferida no peito e expressão de agonia contida",
+   "legenda": "O chamado 'Gálata moribundo' (Museus Capitolinos, MC 747) é a cópia romana de um bronze helenístico e a imagem clássica da morte digna do vencido. Ele entra no dossiê como termo de comparação do §9: a 'morte nobre' era um tema da arte e da filosofia gregas, e o martírio de 2Mc 6-7 é lido em paralelo com esse modelo — sem que a comparação decida a verdade do relato.",
+   "passagem": "contexto comparado (2Mc 6-7)",
+   "tecnica": "",
+   "acervo": "Musei Capitolini, Roma (MC 747); fotografia de Jastrow (domínio público)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Limestone Stele with Greek Inscription of Correspondence Between Seleucus IV and His Viceroy Heliodoros, 178 BC (42499187134).jpg",
+   "titulo": "A Estela de Heliodoro",
+   "alt": "Estela de calcário com longa inscrição em grego, exposta na parede de um museu",
+   "legenda": "Estela de calcário com a correspondência oficial entre Seleuco IV e o seu vice-rei Heliodoro (178 a.C.), hoje no Museu de Israel. O documento confirma a existência do ministro do capítulo 3 e a moldura institucional do livro — a taxação do Templo e o cargo de chefe de ministros —, sem provar o episódio miraculoso narrado em 2Mc 3.",
+   "passagem": "2Mc 3 (contexto epigráfico)",
+   "tecnica": "estela de calcário com inscrição em grego",
+   "acervo": "Museu de Israel, Jerusalém; fotografia de Gary Todd, CC0",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Jericho-Hasmonean-Herodian-Palace-706.jpg",
+   "titulo": "Os palácios hasmoneus de Jericó",
+   "alt": "Fotografia panorâmica de ruínas de alvenaria antiga em terreno árido, junto a um vale profundo",
+   "legenda": "Ruínas do complexo palaciano de inverno hasmoneu e herodiano em Tulul Abu al-Alaiq, no vale de Jericó, escavado por Ehud Netzer entre 1973 e 1987. A cultura material dos vencedores da revolta adota o repertório helenístico que os mártires haviam recusado (§12) — ironia histórica que o dossiê registra como dado arqueológico, não como juízo teológico.",
+   "passagem": "contexto histórico (1Mc 9-16; 2Mc 1-2)",
+   "tecnica": "sítio arqueológico (fotografia)",
+   "acervo": "Tulul Abu al-Alaiq, Jericó; fotografia de Bukvoed, CC BY 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

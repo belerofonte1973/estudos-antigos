@@ -1,0 +1,72 @@
+{
+ "slug": "eclesiastico",
+ "_comentario": "Especificação editorial das figuras do dossiê do Eclesiástico (Ben Sira). Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:The book of Ben Sira (52050363861).jpg",
+   "titulo": "Manuscrito hebraico de Ben Sira da Geniza do Cairo",
+   "alt": "Fotografia de uma página de manuscrito hebraico antigo, com texto em colunas, em vitrina de museu",
+   "legenda": "Folha de um manuscrito hebraico de Ben Sira do século XII, procedente da Geniza do Cairo e hoje no Institut du Monde Arabe, em Paris. O objeto é a peça que sustenta o capítulo mais importante da história do livro: o hebraico original havia desaparecido da transmissão judaica, e a sua recuperação — pelos manuscritos da Geniza e, depois, pelos fragmentos de Qumran e pelo rolo de Masada — devolveu ao Eclesiástico o texto na língua em que foi escrito.",
+   "passagem": "contexto textual (hebraico de Ben Sira; cf. 4.2 do dossiê)",
+   "tecnica": "manuscrito hebraico sobre pergaminho",
+   "acervo": "Institut du Monde Arabe, Paris (Geniza do Cairo, séc. XII); fotografia de Herman Pijpers, CC BY 2.0",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:CodexGigas 187 WisdomofJesusSonofSirach.jpg",
+   "titulo": "Ben Sira no Codex Gigas",
+   "alt": "Página de manuscrito medieval em latim, com duas colunas de texto caligráfico em letras capitais coloridas",
+   "legenda": "Página do Codex Gigas (século XIII, mosteiro beneditino de Podlažice), o maior manuscrito medieval conservado, com o texto do Eclesiástico em latim. A peça documenta a transmissão do livro pela Vulgata, na qual circulou por séculos sem que o hebraico fosse conhecido — e é o elo entre a leitura litúrgica latina e a recuperação moderna do original.",
+   "passagem": "contexto textual (transmissão latina do Eclesiástico)",
+   "tecnica": "manuscrito em latim sobre pergaminho",
+   "acervo": "Biblioteca Nacional da Suécia, Estocolmo (Codex Gigas)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Simon I Simon filius Onye (titel op object) Liber Chronicarum (serietitel), RP-P-2016-49-24-4.jpg",
+   "titulo": "Simão, filho de Onias, no Liber Chronicarum",
+   "alt": "Xilogravura antiga com a figura de um sumo sacerdote de barba longa e vestes rituais, com inscrição em latim",
+   "legenda": "Xilogravura de 1493, da crônica de Hartmann Schedel (Liber Chronicarum), com Simon I, filho de Onias — Simão, o Justo. É o mesmo sumo sacerdote cujo elogio fecha o capítulo 50 de Ben Sira, com a descrição do rito no templo, e a imagem mostra como o personagem sobreviveu na tradição impressa europeia muito depois do período helenístico.",
+   "passagem": "Eclo 50,1-24 (Simão, filho de Onias)",
+   "tecnica": "xilogravura (ilustração de livro impresso)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-2016-49-24-4)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Zentralbibliothek Zürich - Alle Weissheit ist bey Gott dem Herrn - 000012138.jpg",
+   "titulo": "Folha impressa do Eclesiástico (1654)",
+   "alt": "Página impressa antiga com texto alemão em caracteres góticos, dentro de moldura decorada",
+   "legenda": "Folha impressa em 1654 com o primeiro capítulo do Eclesiástico em tradução alemã ('toda a sabedoria vem do Senhor', Eclo 1,1), conservada na Biblioteca Central de Zurique. A peça documenta a recepção do livro na devoção e no ensino das igrejas da Reforma — o texto que foi, por séculos, catequese corrente sob os nomes de Liber Ecclesiasticus e 'Sabedoria de Salomão'.",
+   "passagem": "Eclo 1,1-20",
+   "tecnica": "impresso (folha tipográfica)",
+   "acervo": "Zentralbibliothek Zürich, Zurique (000012138)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Papyrus narrating the story of the wise chancellor Ahiqar. Aramaic script. 5th century BCE. From Elephantine, Egypt. Neues Museum.jpg",
+   "titulo": "Papiro com a história de Ahiqar",
+   "alt": "Fotografia de um papiro antigo com escrita aramaica em tinta preta, em vitrina de museu",
+   "legenda": "Papiro aramaico do século V a.C. com a história e os provérbios de Ahiqar, o sábio caluniado e reabilitado, procedente de Elefantina e exposto no Neues Museum de Berlim. Ahiqar é o comparando aramaico da §9 do dossiê: as suas máximas pertencem à mesma família sapiencial que alimentou a forma do Eclesiástico, e a comparação é de género e de circulação — não de dependência literária provada.",
+   "passagem": "contexto comparado (Eclo 1-2; 6,5-17)",
+   "tecnica": "papiro com escrita aramaica em tinta preta",
+   "acervo": "Neues Museum, Berlim (procedência: Elefantina); fotografia de Osama Shukir Muhammed Amin, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Solomon Schechter studying the fragments of the Cairo Genizah, c. 1898.jpg",
+   "titulo": "Solomon Schechter e os fragmentos da Geniza do Cairo",
+   "alt": "Fotografia antiga em preto e branco de um homem barbado examinando fragmentos de manuscritos sobre uma mesa",
+   "legenda": "Solomon Schechter a examinar os fragmentos da Geniza do Cairo, por volta de 1898 — o momento material da descoberta que devolveu o texto hebraico de Ben Sira à pesquisa moderna. A fotografia pertence à §12 do dossiê porque mostra o próprio trabalho de encontrar: o hebraico de Ben Sira é um caso em que a evidência material (pergaminho, tinta, script) é o dado primário, e não a dedução a partir de traduções.",
+   "passagem": "contexto material (recuperação do hebraico de Ben Sira)",
+   "tecnica": "fotografia histórica",
+   "acervo": "Reprodução de fotografia de c. 1898 (domínio público)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

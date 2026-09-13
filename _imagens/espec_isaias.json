@@ -1,0 +1,61 @@
+{
+ "slug": "isaias",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:120.The Prophet Isaiah.jpg",
+   "titulo": "O profeta Isaías",
+   "alt": "Gravura em preto e branco com um profeta de barba longa, vestes amplas e um livro aberto",
+   "legenda": "Gravura de Doré (1866) para Is 1: o profeta em vestes amplas, com o livro na mão, diante da denúncia que abre o livro — o culto que Deus rejeita quando as mãos estão cheias de sangue (Is 1,11-17). O dossiê usa a imagem porque a série Doré's English Bible fixou a figura do profeta como pregador solitário, leitura que o texto sustenta quando a denúncia atinge o próprio culto.",
+   "passagem": "Is 1,1-20",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:121.Isaiah's Vision of the Destruction of Babylon.jpg",
+   "titulo": "A visão de Isaías sobre a queda da Babilônia",
+   "alt": "Gravura com figuras em fuga diante de uma cidade em ruínas, sob céu dramático",
+   "legenda": "Gravura de Doré para Is 13: o oráculo contra a Babilônia, que o livro apresenta como o dia do Senhor — trevas, fuga e devastação sobre o império que será tema da segunda parte do livro. O dossiê usa a cena porque a Babilônia de Is 13 é mais teológica que histórica: é o nome com que o livro fala de toda potência que se ergue contra o projeto de Deus.",
+   "passagem": "Is 13,1-22",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:'Isaiah Sistine Chapel ceiling' by Michelangelo JBU36.jpg",
+   "titulo": "Isaías no teto da Capela Sistina",
+   "alt": "Afresco com um profeta de barba sentado, um livro apoiado no joelho e as mãos junto ao rosto",
+   "legenda": "Isaías na abóbada da Capela Sistina, pintado por Michelangelo entre 1508 e 1512: o profeta está sentado, absorto, com o livro aberto no joelho e a mão no rosto — a atitude de quem ouve a voz que enche o templo (Is 6,1-8). O dossiê usa o afresco na seção de recepção porque a visão do trono do capítulo 6 é o texto que dá a Michelangelo a medida da cena.",
+   "passagem": "Is 6,1-13",
+   "tecnica": "afresco",
+   "acervo": "Capela Sistina, Vaticano; fotografia de Jörg Bittner Unna, CC BY 3.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Cyrus Cylinder - British Museum - Joy of Museums.jpg",
+   "titulo": "O Cilindro de Ciro",
+   "alt": "Cilindro de argila coberto de escrita cuneiforme, em vitrine de museu",
+   "legenda": "O Cilindro de Ciro, no British Museum, apresenta o rei persa como restaurador dos santuários da Babilônia e autoriza o retorno dos povos deportados. O dossiê o usa na seção de comparação porque Is 44-45 nomeia Ciro e o chama de pastor e ungido: o objeto permite discutir a diferença entre a propaganda imperial que o texto preserva e a leitura teológica que o livro faz dela.",
+   "passagem": "contexto do Antigo Oriente Próximo (cf. Is 44,28-45,4)",
+   "tecnica": "argila inscrita em cuneiforme (séc. VI a.C.)",
+   "acervo": "British Museum, Londres; fotografia de Joyofmuseums, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Great Isaiah Scroll MS A (1QIsa) - Google Art Project.jpg",
+   "titulo": "O Grande Rolo de Isaías",
+   "alt": "Tira longa de pergaminho antigo com dezenas de colunas de escrita, estendida",
+   "legenda": "O Grande Rolo de Isaías, de Qumran (1QIsa-a), do século I a.C., é o mais antigo manuscrito completo de um livro bíblico — e traz o texto de Isaías cerca de mil anos mais velho que as cópias medievais. O dossiê o usa na seção de ciência porque é o documento que permite verificar, coluna por coluna, o que o livro dizia antes de qualquer tradução.",
+   "passagem": "texto de Isaías (séc. I a.C.)",
+   "tecnica": "rolo de pergaminho manuscrito (séc. I a.C.)",
+   "acervo": "Rolo de Isaías de Qumran (1QIsa-a); digitalização Google Arts & Culture",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

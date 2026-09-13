@@ -1,0 +1,61 @@
+{
+ "slug": "cantico",
+ "_comentario": "Especificação editorial das figuras do dossiê do Cântico dos Cânticos. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:De vrouw uit Sulem La Sulamite, RP-P-1922-163.jpg",
+   "titulo": "A mulher de Sulém",
+   "alt": "Gravura com uma jovem em trajes orientais dançando entre músicos e figuras que a rodeiam, num cenário com estandartes",
+   "legenda": "Gravura de 1897, no Rijksmuseum, com a 'mulher de Sulém' — a Sulamita cujos pés e corpo são descritos em Ct 7,1-6. A figura é a única personagem feminina nomeada pela proveniência no poema, e a imagem mostra como o século XIX a representou: não como alegoria, mas como dançarina no quadro de um Oriente imaginado, reação à leitura alegórica tradicional.",
+   "passagem": "Ct 7,1-6 (cf. 1,5-6; 6,13)",
+   "tecnica": "gravura (prent)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1922-163)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Gustave Moreau - Le Cantique des cantiques.jpg",
+   "titulo": "O Cântico dos Cânticos, de Gustave Moreau",
+   "alt": "Pintura simbólica com uma figura feminina desfalecida num interior ornamentado, entre figuras sombrias que a tocam",
+   "legenda": "Gustave Moreau pinta, em 1853, o episódio de Ct 5,7: a amada procura o amado pela cidade, os guardas das muralhas a encontram, ferem-na e levam-lhe o manto. O dossiê cita esta obra justamente por isso — é o verso violento do poema, que desmonta a leitura puramente nupcial e obriga a crítica a encarar o que o texto diz.",
+   "passagem": "Ct 5,2-8",
+   "tecnica": "",
+   "acervo": "Musée des Beaux-Arts de Dijon, Dijon",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:La sulamite - estampe - Odilon Redon - btv1b6951150s.jpg",
+   "titulo": "A Sulamita, litografia de Odilon Redon",
+   "alt": "Litografia simbolista com o torso de uma mulher, os cabelos enfeitados de flores, em tons suaves",
+   "legenda": "Litografia de Odilon Redon, de 1897, conservada no departamento de estampas da Biblioteca Nacional da França. Redon não ilustra uma cena: isola o corpo ornamentado da Sulamita, tomando o poema como matéria simbólica — exemplo do modo como os simbolistas leram o Cântico no fim do século XIX, recepção tratada no dossiê.",
+   "passagem": "Ct 4,1-7 (cf. 6,4-9)",
+   "tecnica": "litografia",
+   "acervo": "Bibliothèque nationale de France, Paris (Estampas, btv1b6951150s)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Scribe and illuminator- Aaron Wolf Herlingen - The Five Scrolls in multilingual micrography Ruth, Song of Songs, Ecclesiastes, Esther, and Lamentat... - Google Art Project.jpg",
+   "titulo": "Os Cinco Rolos, em micrografia de Aaron Wolf Herlingen",
+   "alt": "Página de manuscrito hebraico inteiramente preenchida por micrografia, com letras formando desenhos e ornatos",
+   "legenda": "Manuscrito dos Cinco Rolos (Rute, Cântico dos Cânticos, Coélet, Ester e Lamentações), escrito e iluminado em 1748 por Aaron Wolf Herlingen, com o texto executado em micrografia. A peça documenta a recepção litúrgica do Cântico: o livro é um dos cinco rolos lidos nas festas judaicas, e a sua cópia em manuscrito de luxo mostra a dignidade que a tradição lhe deu, apesar da ausência de nome divino no texto.",
+   "passagem": "Ct 1,1 (rolo das festas; cf. 2,11-13)",
+   "tecnica": "manuscrito hebraico em micrografia sobre pergaminho",
+   "acervo": "Manuscrito de Aaron Wolf Herlingen (1748); imagem do Google Art Project (domínio público)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Cave in Qumran historical place bible scrolls.jpg",
+   "titulo": "As grutas de Qumran",
+   "alt": "Fotografia de uma gruta natural numa encosta rochosa e árida, com o vale do mar Morto ao fundo",
+   "legenda": "As grutas de Qumran, na encosta acima do mar Morto. É deste conjunto que vêm os três rolos do Cântico reconstruídos na gruta 4 — 4Q106, 4Q107 e 4Q108 —, além do fragmento 6Q6, todo o testemunho material do livro entre os Manuscritos do Mar Morto (§12). A cópia de 4Q106 é datada por paleografia como herodiana antiga, o que põe um exemplar do Cântico antes de 70 d.C.",
+   "passagem": "manuscritos de Ct 3,4-11; 4,1-7 (4Q106-108)",
+   "tecnica": "sítio arqueológico (fotografia)",
+   "acervo": "Qumran, Cisjordânia; fotografia de Peter van der Sluijs, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

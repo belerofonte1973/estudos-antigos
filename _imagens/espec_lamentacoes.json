@@ -1,0 +1,61 @@
+{
+ "slug": "lamentacoes",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Nicolas Poussin - The Destruction and Sack of the Temple of Jerusalem - Google Art Project.jpg",
+   "titulo": "A destruição e o saque do templo de Jerusalém",
+   "alt": "Pintura com edifícios em chamas, soldados em combate e multidão em fuga",
+   "legenda": "Poussin pinta, em 1625-1626, o saque do templo pelos romanos no ano 70 — evento que a tradição judaica passou a lembrar junto com a destruição do primeiro templo. O dossiê usa a cena porque as Lamentações cantam a ruína de 587 a.C., e a arte europeia fez dela a memória de toda destruição de Jerusalém.",
+   "passagem": "Lm 1,1-11 (cf. 2Rs 25)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Google Arts & Culture (Google Cultural Institute)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:David Roberts - The Siege and Destruction of Jerusalem by the Romans Under the Command of Titus, A.D. 70.jpg",
+   "titulo": "O cerco e a destruição de Jerusalém por Tito",
+   "alt": "Pintura panorâmica de uma cidade cercada ao entardecer, com acampamentos militares e fogo",
+   "legenda": "David Roberts, pintor que viajou pelo Oriente em 1839-1840, representa o cerco romano de 70 como panorama visto do monte das Oliveiras — exatamente a perspectiva de Lm 1-2, que olham a cidade de fora. O dossiê usa a obra na seção de recepção porque o gênero do lamento pela cidade tem, na arte do século XIX, sua versão de paisagem.",
+   "passagem": "Lm 2,1-22 (cf. Lc 19,41-44)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Williamson Art Gallery and Museum, Birkenhead",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Siege and destruction of Jerusalem (f. 155v).jpg",
+   "titulo": "O cerco e a destruição de Jerusalém (iluminura)",
+   "alt": "Página de manuscrito com uma cidade murada em chamas e cavaleiros armados em volta",
+   "legenda": "Iluminura de c. 1503 conservada na Biblioteca Nacional do País de Gales: o cerco e a destruição de Jerusalém como cena de manuscrito, com a cidade rodeada por exércitos e incêndios. O dossiê usa a página na seção de recepção porque as Lamentações eram cantadas na liturgia medieval, e as Bíblias iluminadas punham a ruína em imagem para quem a ouvia.",
+   "passagem": "Lm 1-2 (recepção)",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "National Library of Wales, Aberystwyth",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Carpentras lamentations.jpg",
+   "titulo": "Manuscrito polifônico das Lamentações",
+   "alt": "Página de manuscrito musical com notação antiga e texto latino em pauta",
+   "legenda": "Página de manuscrito com a música polifônica das Lamentações de Jeremias, atribuída a Carpentras e conservada em arquivo vaticano. O dossiê usa a página para mostrar que as Lamentações são um texto feito para ser entoado: a sua circulação medieval e moderna passa mais pela liturgia cantada do que pela pintura.",
+   "passagem": "Lm 1,1-2 (recepção litúrgica)",
+   "tecnica": "manuscrito musical sobre pergaminho",
+   "acervo": "Arquivo do Vaticano (imagem de domínio público)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Carrying off the Menorah from the Temple in Jerusalem depicted on a frieze on the Arch of Titus in the Forum Romanum.JPG",
+   "titulo": "O saque do templo no arco de Tito",
+   "alt": "Relevo romano com soldados carregando uma grande menorah de sete braços em procissão",
+   "legenda": "No relevo interno do arco de Tito, em Roma, os soldados carregam a menorah e os utensílios do templo no cortejo triunfal de 71 d.C. O dossiê usa a imagem na seção de ciência porque ela documenta em pedra o saque que as Lamentações choram em poesia: o santuário do livro aparece nas mãos de quem o levou.",
+   "passagem": "Lm 1,10; 2,6-7",
+   "tecnica": "relevo em mármore (arco triunfal, séc. I d.C.)",
+   "acervo": "Arco de Tito, Fórum Romano, Roma; fotografia de Laurel Lodged",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

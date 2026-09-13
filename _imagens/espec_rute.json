@@ -1,0 +1,61 @@
+{
+ "slug": "rute",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Julius Schnorr von Carolsfeld- Ruth im Feld des Boaz.jpg",
+   "titulo": "Rute no campo de Booz",
+   "alt": "Pintura com uma jovem colhendo espigas em campo de cevada à direita e um homem sentado à sombra à esquerda",
+   "legenda": "Schnorr von Carolsfeld pintou em 1828 o encontro de Rute e Booz no campo (Rt 2,4-16): Rute colhendo espigas atrás dos ceifadores, Booz a observá-la. Os nazarenos liam o capítulo como idílio rural, e o dossiê usa a obra justamente para contrastar essa leitura com o que o texto diz — fome, estrangeiridade e pobreza.",
+   "passagem": "Rt 2,1-17",
+   "tecnica": "óleo sobre tela",
+   "acervo": "National Gallery, Londres",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William de Brailes - Top - Ruth Meets Boaz as she gleans (Ruth 2 -4-16) - Walters W10618R - Full Page.jpg",
+   "titulo": "Rute encontra Booz",
+   "alt": "Página de manuscrito com duas cenas sobrepostas em molduras e figuras pequenas em trajes medievais",
+   "legenda": "Página do manuscrito W.106 da Walters Art Museum, iluminado por William de Brailes em torno de 1250, com duas cenas da história de Rute: ela colhendo espigas e o encontro com Booz. O dossiê usa a iluminura porque mostra a história lida dentro de um livro de horas, com Rute incorporada à devoção medieval como figura exemplar de fidelidade.",
+   "passagem": "Rt 2,4-16",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Walters Art Museum, Baltimore (W.106)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ruth, having gleaned barley in a field owned by Boaz (engraving by Picart).jpg",
+   "titulo": "Rute é recebida por Booz",
+   "alt": "Gravura com a colheita ao fundo e duas figuras conversando em primeiro plano, entre feixes de cereal",
+   "legenda": "Gravura atribuída a B. Picart, do acervo da Wellcome Collection: Rute, depois de colher espigas no campo de Booz, é recebida por ele e come à mesa dos ceifadores (Rt 2,14). O dossiê usa a estampa porque mostra o episódio como cena de mesa — o que o resgate do capítulo 4 vai formalizar depois, entre o parente mais próximo e as testemunhas do povoado.",
+   "passagem": "Rt 2,14-23",
+   "tecnica": "gravura",
+   "acervo": "Wellcome Collection, Londres (imagem CC BY 4.0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:'Ruth and Naomi' by Jan Victors, 1653.jpg",
+   "titulo": "Rute e Noemi",
+   "alt": "Pintura com duas mulheres, uma jovem e uma mais velha, em ambiente doméstico simples",
+   "legenda": "Jan Victors, discípulo de Rembrandt, pinta em 1653 as duas mulheres de Rt 1: a viúva Noemi, que se diz amargurada, e Rute, que se recusa a deixá-la — aonde fores irei, onde ficares ficarei (Rt 1,16). O dossiê usa a obra porque é a decisão do primeiro capítulo que sustenta tudo o que vem depois, inclusive a genealogia de Davi no fim do livro.",
+   "passagem": "Rt 1,1-22",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Coleção particular; imagem de catálogo da Sotheby's",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Philip Hermogenes Calderon - Ruth and Naomi - B2010.27.8 - Yale Center for British Art.jpg",
+   "titulo": "Rute e Noemi a caminho de Belém",
+   "alt": "Pintura com duas figuras femininas caminhando por uma estrada em paisagem aberta",
+   "legenda": "Obra de Philip Hermogenes Calderon no Yale Center for British Art (B2010.27.8), com as duas mulheres voltando de Moab para Belém no início de Rt 1 — chegaram a Belém no princípio da colheita da cevada (Rt 1,22). O dossiê usa a imagem na seção de recepção porque o século XIX leu a história como paradigma da estrangeira que se integra, tema central das discussões atuais sobre o livro.",
+   "passagem": "Rt 1,19-22",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Yale Center for British Art, New Haven (B2010.27.8)",
+   "secao": "6",
+   "posicao": "fim"
+  }
+ ]
+}

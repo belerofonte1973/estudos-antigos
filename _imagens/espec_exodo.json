@@ -1,0 +1,72 @@
+{
+ "slug": "exodo",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Nicolas poussin, adorazione del vitello d'oro, 1633-34.jpg",
+   "titulo": "A adoração do bezerro de ouro",
+   "alt": "Pintura com grande multidão dançando diante de uma estátua de bezerro sobre pedestal, com Moisés descendo do monte ao fundo",
+   "legenda": "Poussin compõe Ex 32,1-6 com o bezerro sobre um pedestal e o povo em roda, enquanto ao fundo Moisés desce com as tábuas: os dois tempos do capítulo numa só imagem. É a figura central do debate do dossiê sobre idolatria, e o que ela destaca é o que o texto também destaca — não apenas o ídolo, mas a festa que o acompanha.",
+   "passagem": "Ex 32,1-6",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Fotografia de Sailko, CC BY 3.0 (Wikimedia Commons)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Poussin - The Crossing of the Red Sea, 1632-1634, 1843-4.jpg",
+   "titulo": "A travessia do mar Vermelho",
+   "alt": "Pintura de paisagem com uma multidão atravessando um leito marinho entre paredes de água, com carros e cavalos submersos",
+   "legenda": "Poussin representa Ex 14,21-28 como paisagem: as águas erguidas em paredes, o povo em marcha e, atrás, os carros do faraó sendo tragados. É a cena que o dossiê discute como memória fundadora do êxodo — o momento em que a narrativa situa a libertação não num discurso, mas num lugar.",
+   "passagem": "Ex 14,15-31",
+   "tecnica": "óleo sobre tela",
+   "acervo": "National Gallery of Victoria, Melbourne (ngv.vic.gov.au)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Gathering of the Manna - Hours of Catherine of Cleves - MS M. 917-945 137v - Morgan Library New York, around 1440.jpg",
+   "titulo": "A colheita do maná",
+   "alt": "Página iluminada com cena de pessoas recolhendo pequenos grãos do chão e, ao fundo, uma cidade murada",
+   "legenda": "Iluminura das Horas de Catarina de Cleves (c. 1440, Morgan Library), com o maná colhido por homens e mulheres em cestos, tal como Ex 16,14-18 o descreve: cada um recolhe o que basta para o dia. O dossiê usa a página para mostrar como o episódio do deserto foi lido no fim da Idade Média, quando o maná já era figura da eucaristia — e a legenda latina que a acompanha diz exatamente isso.",
+   "passagem": "Ex 16,1-36",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "The Morgan Library & Museum, Nova York (MS M. 917-945, f. 137v)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:039.Moses Comes Down from Mount Sinai.jpg",
+   "titulo": "Moisés desce do monte Sinai",
+   "alt": "Gravura em preto e branco com uma figura barbada trazendo duas tábuas e o povo ajoelhado ao redor de um bezerro de metal",
+   "legenda": "Gravura de Doré para Ex 19-20 e 32: Moisés desce com as tábuas e encontra o povo prostrado diante do bezerro, e o texto que a fonte cita é o da descida. A série Doré's English Bible (1866), que o acervo já usa noutros dossiês, fixa no século XIX a imagem mais difundida da cena — e é essa leitura, mais que a do relato, que a maioria dos leitores traz na memória.",
+   "passagem": "Ex 32,15-20",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Papyrus van Ipoewer - Google Art Project.jpg",
+   "titulo": "Papiro de Ipuwer",
+   "alt": "Papiro antigo com colunas de escrita hierática, emoldurado em museu",
+   "legenda": "O papiro de Ipuwer, copiado no Império Médio egípcio, descreve um país em desordem — o rio de sangue, a fome, os mortos sem sepultura — em fórmulas que estudiosos comparam às pragas de Ex 7-12. É exemplo do tipo de paralelo que o dossiê discute com cautela: o texto egípcio não fala de Israel nem de Moisés, e a comparação se sustenta em motivos, não em eventos.",
+   "passagem": "contexto egípcio (cf. Ex 7-12)",
+   "tecnica": "papiro com escrita hierática (c. 1300-1200 a.C.)",
+   "acervo": "Digitalização Google Arts & Culture (Google Cultural Institute)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Moses and burning bush.jpeg",
+   "titulo": "Moisés diante da sarça ardente, em Dura Europos",
+   "alt": "Fragmento de pintura mural com uma figura junto a um arbusto em chamas, de traço simples",
+   "legenda": "Pintura mural da sinagoga de Dura Europos (século III, Síria), o mais antigo ciclo figurativo bíblico conservado, com Moisés diante da sarça (Ex 3,1-6). O dossiê usa a imagem na seção de ciência porque é testemunho material de que Ex 3 já era lido e pintado numa sinagoga do Eufrates muito antes dos manuscritos medievais que costumam ilustrar a cena.",
+   "passagem": "Ex 3,1-12",
+   "tecnica": "pintura mural (século III)",
+   "acervo": "Sinagoga de Dura Europos, Síria (painel da parede ocidental)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

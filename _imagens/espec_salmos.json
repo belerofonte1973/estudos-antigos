@@ -1,0 +1,73 @@
+{
+ "slug": "salmos",
+ "_comentario": "Especificação editorial das figuras do dossiê dos Salmos. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:Psalm 1, Beatus vir qui non abiit in consilio inpiorum et in via peccatorum non stetit et in cathedra pestilentie non sedit, King David plays harp, David, Goliath - Psalter of Eleanor of Aquitaine (ca. 1185) - KB 76 F 13, folium 029r.jpg",
+   "titulo": "Salmo 1 (Beatus vir) no Saltério de Eleanor de Aquitânia",
+   "alt": "Iluminura que abre com a letra B historiada, mostrando um rei tocando harpa, rodeado por cenas menores com um gigante e um combate",
+   "legenda": "Folha 29r do Saltério de Eleanor de Aquitânia (c. 1185, Biblioteca Nacional dos Países Baixos, KB 76 F 13): a letra inicial do Salmo 1, 'Beatus vir', contém Davi com a harpa e, na margem, cenas do ciclo davídico. A imagem mostra a organização do Saltério medieval, no qual cada salmo se abre por uma inicial figurada — o modo como o livro foi lido e cantado na liturgia das horas.",
+   "passagem": "Sl 1,1-6",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Koninklijke Bibliotheek, Haia (KB 76 F 13, fol. 29r)"
+  ,
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Lord is my Good Shepherd.jpg",
+   "titulo": "O Senhor é o meu pastor",
+   "alt": "Pintura com um pastor que carrega um cordeiro nos ombros e conduz um rebanho por uma paisagem com água e pedras",
+   "legenda": "Pintura de Bernhard Plockhorst sobre o Salmo 23 — 'o Senhor é o meu pastor, nada me falta' —, o salmo mais citado da recepção cristã e aquele que a liturgia usa nas exéquias e na unção dos enfermos. A imagem liga o vocabulário pastoral do salmo à figura do bom pastor, leitura que o dossiê registra como a mais difundida do Saltério na arte moderna.",
+   "passagem": "Sl 23,1-6",
+   "tecnica": "",
+   "acervo": "Reprodução de obra publicada antes de 1923 (domínio público)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Psautier de Paris, MSS. gr. 139, fol. 1v.jpg",
+   "titulo": "Davi compõe os salmos no Saltério de Paris",
+   "alt": "Iluminura bizantina com um jovem coroado tocando uma harpa num jardim, acompanhado por uma figura feminina sentada com um instrumento",
+   "legenda": "Folha 1v do Saltério de Paris (c. 960, Biblioteca Nacional da França, MS. gr. 139), em que Davi aparece tocando a lira e uma figura feminina — personificação da Melodia — o acompanha. É a miniatura bizantina mais célebre do livro e o testemunho de como o Saltério foi recebido como obra do rei-poeta no Oriente grego.",
+   "passagem": "Sl 108,1-4 (título davídico; cf. referência do frontispício ao Saltério)",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Bibliothèque nationale de France, Paris (MS. gr. 139, fol. 1v); fotografia de Gennadii Saus i Segura (domínio público)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Crucifixion with iconoclasts, Chludov Psalter, folio 67r.jpg",
+   "titulo": "Crucificação com iconoclastas no Saltério de Chludov",
+   "alt": "Página de manuscrito bizantino com uma cena de crucificação no alto e, abaixo, figuras armadas com uma esponja diante de uma imagem",
+   "legenda": "Folha 67r do Saltério de Chludov (Moscou, Museu Histórico Estatal, MS. D.129; c. 850-875), o mais importante saltério ilustrado bizantino e documento central da crise iconoclasta: a cena da cruz aparece acompanhada dos que oferecem vinagre a Cristo, imagem que a crítica lê como ataque aos que reprovavam os ícones. O dossiê cita-o para mostrar que o Saltério não foi só cantado, mas também usado como arma na disputa sobre a imagem.",
+   "passagem": "Sl 68,22 (citado na disputa sobre as imagens)",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Museu Histórico Estatal, Moscou (MS. D.129, fol. 67r)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:King David as Orpheus in a synagogue mosaic - Google Art Project.jpg",
+   "titulo": "Davi como Orfeu: mosaico de sinagoga",
+   "alt": "Mosaico antigo com um homem coroado sentado e tocando uma lira entre animais que se aproximam dele",
+   "legenda": "Mosaico da sinagoga de Gaza (508 d.C.), em que Davi é figurado com a lira entre os animais, segundo a convenção grega de Orfeu encantando a criação. O painel é o exemplo mais claro de como a arte judaica tardo-antiga traduziu o salmista no vocabulário visual do mundo greco-romano — comparação que sustenta a discussão do dossiê sobre o que o Saltério deve a motivos do Oriente Próximo e o que deve ao ambiente helenístico.",
+   "passagem": "Sl 108,1-4; 150,1-6 (Davi salmista)",
+   "tecnica": "mosaico de piso",
+   "acervo": "Sinagoga de Gaza (508 d.C.); imagem do Google Art Project (domínio público)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Megiddo ivories IMG 7225.JPG",
+   "titulo": "Marfins de Megiddo",
+   "alt": "Vitrina de museu com peças de marfim esculpido e entalhado, expostas em suporte escuro",
+   "legenda": "Conjunto de marfins de Megiddo, no Museu Rockefeller, em Jerusalém — o corpus que a arqueologia cita ao tratar do aparato musical e decorativo do Levante na Idade do Ferro (§12). A iconografia destas placas, com cenas de corte e de música, é um dos documentos materiais invocados para discutir os instrumentos pressupostos pelos títulos dos salmos.",
+   "passagem": "contexto histórico (Sl 33,2-3; 150,3-5)",
+   "tecnica": "marfim entalhado (objeto arqueológico)",
+   "acervo": "Museu Rockefeller, Jerusalém; fotografia de Deror Avi, CC BY-SA 3.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

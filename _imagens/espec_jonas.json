@@ -1,0 +1,72 @@
+{
+ "slug": "jonas",
+ "_comentario": "Especificação editorial das figuras do dossiê de Jonas. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:137.Jonah Is Spewed Forth by the Whale.jpg",
+   "titulo": "Jonas é vomitado pela baleia",
+   "alt": "Gravura em preto e branco com uma grande criatura marinha que devolve um homem à praia, entre ondas",
+   "legenda": "Gravura de Gustave Doré para a série Doré's English Bible (1866), no episódio em que o grande peixe devolve Jonas à terra (Jn 2,11). O hebraico usa para o animal a expressão dag gadol, 'grande peixe', sem determinar espécie — indeterminação que a gravura respeita com uma criatura monstruosa, depois convertida em baleia pela tradição. A cena é o sinal que o próprio Jesus cita em Mt 12,39-40.",
+   "passagem": "Jn 2,1-11",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Salvator Rosa - Jonah Preaching to the People of Niniveh - KMSsp57 - Statens Museum for Kunst.jpg",
+   "titulo": "Jonas prega ao povo de Nínive",
+   "alt": "Pintura a óleo com um pregador em pé diante de uma multidão, num cenário urbano antigo",
+   "legenda": "Pintura de Salvator Rosa (entre 1630 e 1661) conservada no Statens Museum for Kunst, em Copenhague (inv. KMSsp57). Nínive, capital do império assírio, é a cidade que Jonas tenta evitar, e a pregação de cinco palavras — 'ainda quarenta dias e Nínive será destruída' — obtém em Jn 3,5-9 a conversão de um povo inteiro, o que desagrada ao profeta. A pintura escolhe justamente o momento da pregação, e não o do peixe.",
+   "passagem": "Jn 3,1-10",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Statens Museum for Kunst, Copenhague (inv. KMSsp57)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Jona zit onder de wonderboom Geschiedenis van Jona (serietitel), RP-P-1904-3288.jpg",
+   "titulo": "Jonas sob a planta que secou",
+   "alt": "Gravura em preto e branco com um homem sentado à sombra de uma planta, com uma cidade ao fundo",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1904-3288), da série 'História de Jonas', feita entre 1596 e 1633 segundo desenho de Maarten van Heemskerck. O episódio é Jn 4,5-11: a planta (em hebraico qiqayon, identificada na tradição com o rícino) dá sombra ao profeta e seca na manhã seguinte. A pergunta final de Deus sobre a piedade de Jonas com a cidade é a lição com que o livro termina.",
+   "passagem": "Jn 4,5-11",
+   "tecnica": "gravura (série História de Jonas)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1904-3288); segundo desenho de Maarten van Heemskerck",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Maarten van Heemskerck (Heemskerk 1498-Haarlem 1574) - Jonah Under His Gourd - RCIN 405465 - Royal Collection.jpg",
+   "titulo": "Jonas debaixo da aboboreira",
+   "alt": "Pintura em tons escuros com uma figura sentada sob uma folhagem, ao lado de uma construção",
+   "legenda": "Pintura de Maarten van Heemskerck (1561) da Royal Collection (inv. RCIN 405465), com o mesmo tema tratado diretamente pelo pintor: Jonas sentado fora da cidade, à espera de ver o que aconteceria a Nínive (Jn 4,5). A obra interessa ao dossiê porque mostra que o episódio da planta — e não o do peixe — era o que os pintores do século XVI consideravam o centro do livro.",
+   "passagem": "Jn 4,5-8",
+   "tecnica": "",
+   "acervo": "Royal Collection (inv. RCIN 405465)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:VAM - Palastrelief Ninive 4.jpg",
+   "titulo": "Relevo do palácio de Nínive com soldados",
+   "alt": "Relevo assírio em pedra com filas de soldados, exposto em museu",
+   "legenda": "Relevo do palácio de Nínive (século VII a.C.), hoje no Museu do Oriente Próximo Antigo, em Berlim, com soldados em marcha. Nínive foi capital assíria sob Senaqueribe e Assurbanípal, e é a cidade cuja conversão e cuja queda o livro de Jonas discute. O relevo é o que resta da potência militar que assombrava Judá e que o profeta é enviado a pregar — o cenário histórico do livro.",
+   "passagem": "Jn 3,1-10",
+   "tecnica": "relevo em pedra",
+   "acervo": "Vorderasiatisches Museum (Museu do Oriente Próximo Antigo), Berlim; fotografia de Wolfgang Sauber, CC BY-SA 3.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Jonah Under the Gourd Vine, 280-290 CE, marble, late Roman, Asia Minor, Cleveland Museum of Art.JPG",
+   "titulo": "Jonas sob a aboboreira (escultura do fim do Império Romano)",
+   "alt": "Escultura em mármore com uma figura reclinada sob uma planta estilizada, em vitrine de museu",
+   "legenda": "Escultura em mármore da Ásia Menor (280-290 d.C.) conservada no Cleveland Museum of Art, com Jonas repousando sob a aboboreira. Jonas é a figura do Antigo Testamento mais representada na arte cristã antiga, ao lado de Daniel e dos três jovens, e o episódio é citado por Jesus em Mt 12,39-40 como o 'sinal de Jonas'. A peça documenta essa leitura ainda nos primeiros séculos.",
+   "passagem": "Jn 4,5-11 (cf. Mt 12,39-40)",
+   "tecnica": "escultura em mármore (280-290 d.C.)",
+   "acervo": "Cleveland Museum of Art, Cleveland (Ohio); fotografia de Wmpearl, CC0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "slug": "meqabyan-3",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 2,
+   "src": "/imagens/meqabyan-3/02-jo-maltratado-por-sua-mulher-e-por-sata.webp",
+   "arquivo_origem": "File:Geseling van Christus, geseling van de zeven broers en Job door zijn vrouw en Satan mishandeld, RP-P-BI-6315F.jpg",
+   "titulo": "Jó maltratado por sua mulher e por Satã",
+   "legenda": "Folha de uma Biblia Pauperum impressa em 1521 (Rijksmuseum, RP-P-BI-6315), com três cenas paralelas: a flagelação de Cristo, a dos sete irmãos macabeus e, à direita, Jó sentado sobre a pedra, maltratado pela mulher e por Satã. 3 Meqabyan termina apontando Jó como modelo do sofredor fiel (8,1-5), e o dossiê lê a sua moldura — o céu como tribunal, a acusação, a prova — como a arquitetura do prólogo de Jó 1-2 (§9). A folha mostra que a tradição europeia também leu os três episódios como um só argumento sobre o sofrimento do justo.",
+   "passagem": "3 Meq 8,1-5 (cf. Jó 1-2; §4.7 e §9)",
+   "artista": "Rijksmuseum",
+   "data": "1521",
+   "tecnica": "xilogravura (c. 1520-1540, Biblia Pauperum)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-BI-6315)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AGeseling_van_Christus%2C_geseling_van_de_zeven_broers_en_Job_door_zijn_vrouw_en_Satan_mishandeld%2C_RP-P-BI-6315F.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 6236,
+   "altura_original": 4450,
+   "secao": "9",
+   "posicao": "fim",
+   "descricao_fonte": "Identificatie Titel(s): Geseling van Christus, geseling van de zeven broers en Job door zijn vrouw en Satan mishandeld Objecttype: prent boekillustratie Objectnummer: RP-P-BI-6315. F Catalogusreferentie: Hollstein Dutch 41. Hollstein Dutch 91-c en d. Steinbart 94. Steinbart 25-d Omschrijving: Bovenste deel van een blad uit een Bilbia Pauperum. Gedrukt van meerdere blokken. Links de geseling van de zeven broers, in het midden de geseling van Christus, rechts Job zittend op steen, door zijn vrouw ",
+   "sha256": "fdcf23a9b238c4e0",
+   "bytes": 191690,
+   "largura_final": 950,
+   "altura_final": 678
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/meqabyan-3/03-iluminura-etiope-de-gondar.webp",
+   "arquivo_origem": "File:Etiopia, gondar, miracoli mariani, miracolo 22 del piede equino, 1680-1700 ca.jpg",
+   "titulo": "Iluminura etíope de Gondar",
+   "legenda": "Iluminura de um manuscrito etíope dos 'Milagres de Maria' copiado em Gondar entre 1680 e 1700, hoje no Art Institute of Chicago. Não é um manuscrito dos Meqabyan — é o tipo de livro que a §12 descreve: todos os testemunhos conhecidos dos Meqabyan são tardios (o exemplo citado é o British Library Or. 506, do século XVIII), o que impede a paleografia de ancorar a data de composição e deixa a única proposta publicada, a de Beckwith (2008), como hipótese textual. A iluminura documenta a oficina, não o texto.",
+   "passagem": "cf. §12 (codicologia etíope)",
+   "artista": "Sailko",
+   "data": "2016-10-26 22:38:31",
+   "tecnica": "",
+   "acervo": "Art Institute of Chicago; fotografia de Sailko, CC BY 3.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AEtiopia%2C_gondar%2C_miracoli_mariani%2C_miracolo_22_del_piede_equino%2C_1680-1700_ca.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY 3.0",
+   "licenca_url": "https://creativecommons.org/licenses/by/3.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 3108,
+   "altura_original": 1608,
+   "secao": "12",
+   "posicao": "fim",
+   "descricao_fonte": "African art in the Art Institute of Chicago",
+   "sha256": "226945bfb093d67c",
+   "bytes": 61246,
+   "largura_final": 950,
+   "altura_final": 491
+  }
+ ],
+ "recusadas": [
+  [
+   "File:A Queda de Lúcifer (séc. XVI) - Fernão Gomes (MNAA).png",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

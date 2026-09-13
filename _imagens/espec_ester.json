@@ -1,0 +1,72 @@
+{
+ "slug": "ester",
+ "_comentario": "Especificação editorial das figuras do dossiê de Ester. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:Konrad Witz - Esther before Ahasuerus (c. 1435).jpg",
+   "titulo": "Ester diante de Assuero",
+   "alt": "Painel com uma mulher desfalecida amparada por duas acompanhantes, diante de um rei entronizado que estende o cetro",
+   "legenda": "Konrad Witz pinta o desmaio de Ester diante do rei, cena que só as adições gregas descrevem em detalhe (Est 15,1-16, adição D): Ester desfalece e o rei, temendo por ela, muda o tom e estende o cetro de ouro. A imagem interessa ao dossiê porque mostra como a tradição leu uma passagem que o texto massorético não tem (§4.2).",
+   "passagem": "Est 5,1-8; 15,1-16 (adição D)",
+   "tecnica": "painel (têmpera)",
+   "acervo": "Kunstmuseum Basel, Basileia",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Esther Before Ahasuerus MET DP818944.jpg",
+   "titulo": "Ester diante de Assuero (gravura de Lucas van Leyden)",
+   "alt": "Gravura em preto e branco com um rei sentado em trono e uma mulher que se inclina diante dele, cercados de cortesãos",
+   "legenda": "Gravura de Lucas van Leyden, de 1518, sobre a entrada de Ester no pátio interno do palácio (Est 5,1-2). A cena é o eixo da narrativa de corte do livro: a rainha entra sem ser chamada e depende de um gesto do rei — o episódio em que o dossiê discute o que o texto esconde ao não nomear Deus (§4.1).",
+   "passagem": "Est 5,1-8",
+   "tecnica": "gravura",
+   "acervo": "The Metropolitan Museum of Art, Nova York (doação do museu, acesso aberto)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Esther before Ahasuerus MET DT1440.jpg",
+   "titulo": "Ester diante de Assuero (Artemisia Gentileschi)",
+   "alt": "Pintura barroca com uma mulher desmaiando nos braços de duas servas, diante de um rei que se levanta do trono",
+   "legenda": "Artemisia Gentileschi trata o desmaio de Ester como colapso físico, com o corpo da rainha sustentado por duas mulheres e o rei em pé, surpreso (Est 15,1-16, adição D). A obra pertence à recepção barroca do livro, na qual Ester se torna figura da intercessão — leitura tratada no dossiê.",
+   "passagem": "Est 15,1-16 (adição D); cf. 5,1-2",
+   "tecnica": "",
+   "acervo": "The Metropolitan Museum of Art, Nova York (doação do museu, acesso aberto)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Rembrandt van Rijn, Esther before Ahasuerus, 1655-1660, NGA 74172.jpg",
+   "titulo": "Ester diante de Assuero (Rembrandt)",
+   "alt": "Pintura escura com uma mulher ajoelhada tocando a ponta de um cetro estendido por um rei sentado, sob um dossel",
+   "legenda": "Rembrandt reduz a cena ao essencial: Ester toca o cetro que o rei lhe estende (Est 5,2), num interior de luz baixa. É o episódio que o dossiê discute como o momento em que o poder persa se decide por um gesto mínimo — e que a tradição judaica lê dentro do ciclo de Purim.",
+   "passagem": "Est 5,1-8",
+   "tecnica": "",
+   "acervo": "National Gallery of Art, Washington (arquivo de acesso aberto doado ao Wikimedia Commons)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:View 14 - Persepolis. Relief of Apadana.jpg",
+   "titulo": "Relevo da Apadana, em Persépolis",
+   "alt": "Fotografia antiga em sépia de um painel em relevo com filas de figuras em trajes persas, em ruína de pedra",
+   "legenda": "Fotografia de Luigi Pesce (entre 1851 e 1860) do relevo da escadaria da Apadana, em Persépolis, com as delegações que trazem presentes ao rei. É o repertório visual da corte aquemênida — procissões, banquetes e protocolo —, matriz do cenário de Ester e um dos termos de comparação do dossiê com os contos de corte do Oriente Próximo.",
+   "passagem": "contexto histórico (corte persa aquemênida)",
+   "tecnica": "fotografia (prova de época) de relevo em pedra",
+   "acervo": "Bibliothèque nationale de France, Paris (Gallica); fotografia de Luigi Pesce, domínio público",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:King's apartments Apadana Susa.jpg",
+   "titulo": "A Apadana de Susa e o castelo da escavação",
+   "alt": "Ruínas de colunas de pedra de um palácio aquemênida, com uma construção de tijolo ao fundo sob céu claro",
+   "legenda": "Ruínas da Apadana de Susa, a residência real de inverno dos aquemênidas, com o castelo construído por Jacques de Morgan ao fundo. Susa foi escavada por Loftus (1851-52), pela Délégation en Perse sob de Morgan (1897-1912) e por Ghirshman (1946-1967) — e é o sítio que dá corpo ao palácio pressuposto pelo livro (§12).",
+   "passagem": "contexto histórico (Est 1,2-9; 2,3)",
+   "tecnica": "fotografia de sítio arqueológico",
+   "acervo": "Susa (Shush), Irã; fotografia de Pentocelo (domínio público)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

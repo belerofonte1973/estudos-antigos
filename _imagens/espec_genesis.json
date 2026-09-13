@@ -1,0 +1,72 @@
+{
+ "slug": "genesis",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Albrecht Dürer, Adam and Eve, 1504, Engraving.jpg",
+   "titulo": "Adão e Eva",
+   "alt": "Gravura em preto e branco com um homem e uma mulher nus ladeando uma árvore, com uma serpente enroscada no tronco",
+   "legenda": "Na gravura de Dürer (1504), Adão e Eva flanqueiam a árvore do conhecimento e a serpente se enrosca no tronco — a cena de Gn 3,1-7, que é o núcleo do debate do dossiê sobre a queda e sobre o que o relato atribui à desobediência. Dürer aplica ao corpo humano o cânone de proporções que aprendera com artistas italianos, e o texto da fonte frisa o que a imagem mostra: dois corpos na medida ideal, à espera do que perderão.",
+   "passagem": "Gn 3,1-7",
+   "tecnica": "gravura (buril) sobre papel",
+   "acervo": "The Morgan Library & Museum, Nova York (fonte: themorgan.org)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Bruegel, Tower of Babel (Kunsthistorisches Museum, Vienna).jpg",
+   "titulo": "A torre de Babel",
+   "alt": "Pintura panorâmica de uma torre em espiral em construção, com a cidade e o porto ao fundo",
+   "legenda": "Bruegel pinta a torre de Gn 11,1-9 como obra de engenharia colossal que cresce em espiral, com andaimes, guindastes e pedreiros, e um rei sendo recebido em primeiro plano. O relato explica a diversidade das línguas pela interrupção da obra; a pintura escolhe mostrar o trabalho, a técnica e a ambição de quem quer alcançar o céu — o que o texto deixa de lado.",
+   "passagem": "Gn 11,1-9",
+   "tecnica": "óleo sobre madeira",
+   "acervo": "Kunsthistorisches Museum, Viena; fotografia de Dudva (Wikimedia Commons)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Edward Hicks, American - Noah's Ark - Google Art Project.jpg",
+   "titulo": "A arca de Noé",
+   "alt": "Pintura em estilo popular com uma arca de madeira ao centro, animais em fila e um arco-íris no céu",
+   "legenda": "Edward Hicks, pintor autodidata quacre, pinta a entrada dos animais na arca (Gn 6,19-22) e repete na cena o arco-íris da aliança (Gn 9,12-17). O dossiê usa a obra porque ela mostra o dilúvio recebido como sinal de paz na América do século XIX, muito longe do texto mesopotâmico com que o relato de Gênesis dialoga.",
+   "passagem": "Gn 6,19-22; 9,12-17",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Google Arts & Culture (Google Cultural Institute)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Rembrandt Abraham's Sacrifice (Hermitage).jpg",
+   "titulo": "O sacrifício de Isaac",
+   "alt": "Pintura em que um homem idoso é detido por um anjo no instante em que ergue a faca sobre um jovem amarrado",
+   "legenda": "Rembrandt pinta o instante exato de Gn 22,10-12: o anjo detém a mão de Abraão quando a faca já está erguida e o carneiro aparece preso no mato. A obra pertence à fase em que o pintor abandona a teatralidade barroca e concentra a cena num só gesto — e é essa economia que interessa ao dossiê ao tratar do sacrifício de Isaac na arte europeia.",
+   "passagem": "Gn 22,1-19",
+   "tecnica": "óleo sobre tela",
+   "acervo": "The Hermitage, São Petersburgo",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:British Museum Flood Tablet 1.jpg",
+   "titulo": "A tábua do dilúvio (Gilgámesh XI)",
+   "alt": "Tábua de argila coberta de escrita cuneiforme, exposta em vitrine de museu",
+   "legenda": "A décima primeira tábua da epopeia de Gilgámesh, no British Museum (ME K 3375), narra o dilúvio, a arca de Utnapishtim e a soltura das aves — motivos que o relato de Gn 6-9 partilha com a literatura mesopotâmica. É o objeto central da seção de mitologia comparada do dossiê: permite comparar texto com texto, sem intermediários.",
+   "passagem": "Gn 6,13-22 (cf. tábua XI)",
+   "tecnica": "argila com inscrição cuneiforme (séc. VII a.C.)",
+   "acervo": "British Museum, Londres (ME K 3375); fotografia de Mike Peel, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ketef hinom scrolls.JPG",
+   "titulo": "Os rolinhos de prata de Ketef Hinnom",
+   "alt": "Dois pequenos rolos de prata enegrecidos, expostos sobre base de museu",
+   "legenda": "Achados em Ketef Hinnom, em Jerusalém, e expostos no Museu de Israel, são os mais antigos objetos com texto bíblico conhecidos: levam gravada em prata a bênção sacerdotal de Nm 6,24-26, com datação em torno do século VII-VI a.C. Para o dossiê de Gênesis, o achado documenta como a bênção e o nome divino circulavam em amuletos antes de qualquer canonização — a face material do que Gn 12,2-3 chama de bênção.",
+   "passagem": "contexto epigráfico (cf. Nm 6,24-26)",
+   "tecnica": "rolos de prata com inscrição (séc. VII-VI a.C.)",
+   "acervo": "Museu de Israel, Jerusalém; fotografia de Bachrach44, CC BY-SA 3.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

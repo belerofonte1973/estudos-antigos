@@ -1,0 +1,72 @@
+{
+ "slug": "esdras-2",
+ "_comentario": "Especificação editorial das figuras do dossiê de 2 Esdras / 4 Esdras (o apocalipse de Esdras). As quatro gravuras da série neerlandesa 'Visioenen van Ezra' (1585) são a única ilustração livre localizada das visões do livro. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py.",
+ "figuras": [
+  {
+   "arquivo": "File:Eerste visioen van Ezra de Zoon van God kroont de menigte, RP-P-1988-312-160.jpg",
+   "titulo": "Primeira visão de Esdras: o Filho de Deus coroa a multidão",
+   "alt": "Gravura em preto e branco com uma figura celeste coroando um grupo de pessoas diante de uma multidão",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1988-312-160), da série 'Visioenen van Ezra' (Visões de Esdras) impressa em 1585. A cena corresponde ao trecho em que o Filho de Deus coroa os que se mantiveram firmes (2Esd 2,42-48), na abertura do apocalipse atribuído a Esdras. As séries holandesas do século XVI são hoje a principal ilustração impressa desse texto, que ficou fora do cânon hebraico mas circulou amplamente nas Bíblias latinas.",
+   "passagem": "2Esd 2,42-48",
+   "tecnica": "gravura (série Visões de Esdras, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1988-312-160)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Derde visioen van Ezra de menigte vecht tegen de man uit de zee, RP-P-1988-312-162.jpg",
+   "titulo": "Terceira visão de Esdras: a multidão combate o homem que vem do mar",
+   "alt": "Gravura em preto e branco com uma multidão em armas diante de uma figura que emerge do mar",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1988-312-162), terceira peça da série 'Visões de Esdras' de 1585, com a visão do homem que sobe do mar e reúne a multidão dispersa (2Esd 13,1-13). Nessa figura, que não usa armas nem espada, a tradição cristã leu o anúncio do Messias, e é um dos textos em que o dossiê se apoia para tratar a expectativa messiânica no apocalipse de Esdras.",
+   "passagem": "2Esd 13,1-13",
+   "tecnica": "gravura (série Visões de Esdras, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1988-312-162)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tweede visioen van Ezra Ezra getroost door de engel, RP-P-1988-312-161.jpg",
+   "titulo": "Segunda visão de Esdras: Esdras consolado pelo anjo",
+   "alt": "Gravura em preto e branco com uma figura sentada, consolada por uma figura angélica",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1988-312-161), segunda peça da mesma série de 1585, com o vidente consolado e instruído pelo anjo que interpreta a sua visão. O livro é construído como diálogo: Esdras interroga Deus sobre a justiça e a demora do fim, e o anjo responde a cada objeção (2Esd 11-12). A gravura ilustra esse núcleo argumentativo, que fez do livro um dos textos apocalípticos mais lidos da Antiguidade tardia.",
+   "passagem": "2Esd 11-12",
+   "tecnica": "gravura (série Visões de Esdras, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1988-312-161)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ezra drinkt de beker van kennis en wijsheid, RP-P-1988-312-163.jpg",
+   "titulo": "Esdras bebe o cálice do conhecimento e da sabedoria",
+   "alt": "Gravura em preto e branco com uma figura bebendo de um cálice, entre outras figuras",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1988-312-163), última peça da série de 1585, com o episódio em que Esdras bebe o cálice e dita, nos quarenta dias seguintes, os noventa e quatro livros revelados (2Esd 14,38-40). É o trecho que explica a própria composição do livro e a sua autoridade, e a gravura o escolhe como encerramento da série — a revelação escrita que se transmite.",
+   "passagem": "2Esd 14,38-40",
+   "tecnica": "gravura (série Visões de Esdras, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1988-312-163)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Beginning of 2 (4) Esdras - Sixto-Clementine Vulgate (1592).jpg",
+   "titulo": "O início de 2 Esdras na Vulgata Sixto-Clementina",
+   "alt": "Página impressa em latim com o início de um texto bíblico apócrifo, em colunas",
+   "legenda": "Página da Vulgata Sixto-Clementina (1592) com o início de 2 Esdras — 4 Esdras na numeração da Vulgata —, na edição digitalizada pela Universidade de Bolonha. O livro não integra o cânon católico nem o protestante e aparece nas Bíblias latinas como apêndice, ao lado da Oração de Manassés e de 3 Esdras. A página documenta essa posição marginal e dupla numeração que o texto recebeu na transmissão impressa.",
+   "passagem": "2Esd (abertura do livro)",
+   "tecnica": "impresso tipográfico (1592)",
+   "acervo": "Universidade de Bolonha (reprodução digital da Vulgata Sixto-Clementina, 1592)",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Jerusalem Temple Warning Inscription fragment.jpg",
+   "titulo": "Fragmento da inscrição de advertência do Templo",
+   "alt": "Fotografia de uma laje de pedra com inscrição em grego, exposta em museu",
+   "legenda": "Fragmento, em grego, da inscrição que delimitava o recinto do Templo de Jerusalém e ameaçava de morte quem o ultrapassasse; é um dos dois fragmentos conservados da destruição de 70 d.C. O livro de 2 Esdras é uma resposta exatamente a essa catástrofe, com o lamento sobre Sião arrasada e a pergunta sobre a justiça de Deus (2Esd 10,20-24). O objeto é o testemunho material da ruína que o texto procura interpretar.",
+   "passagem": "2Esd 10,20-24",
+   "tecnica": "laje de pedra inscrita em grego",
+   "acervo": "Fragmento da inscrição de advertência do Templo de Jerusalém; fotografia de Andrey Zeigarnik, CC BY-SA 2.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

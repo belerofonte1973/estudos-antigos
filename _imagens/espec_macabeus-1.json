@@ -1,0 +1,72 @@
+{
+ "slug": "macabeus-1",
+ "_comentario": "Especificação editorial das figuras do dossiê de 1 Macabeus. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:145.Judas Maccabeus before the Army of Nicanor.jpg",
+   "titulo": "Judas Macabeu diante do exército de Nicanor",
+   "alt": "Gravura em preto e branco com um chefe armado e o seu grupo em armas diante de uma multidão de soldados com estandartes",
+   "legenda": "Gravura de Doré para 1 Macabeus 7,26-32: Judas e os seus homens enfrentam o exército de Nicanor, enviado por Demétrio. O episódio pertence à fase em que a revolta já é guerra entre potências, e a imagem fixa o que o livro repete em cada batalha — o número pequeno do lado que vence (1Mc 3,18-22).",
+   "passagem": "1Mc 7,26-32",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Schlacht bei Zama Gemälde H P Motte.jpg",
+   "titulo": "Elefantes de guerra em combate",
+   "alt": "Pintura histórica com elefantes de guerra com torres de combate avançando contra soldados de infantaria numa planície poeirenta",
+   "legenda": "Pintura de Henri-Paul Motte (1906) sobre a batalha de Zama (202 a.C.), com elefantes de guerra cartagineses. O dossiê a traz porque 1Macabeus descreve o mesmo dispositivo no exército selêucida — trinta e dois elefantes com torres e guias (1Mc 6,30-37) —, e a imagem documenta como o uso militar do animal foi representado, sem dizer nada sobre as batalhas do livro.",
+   "passagem": "1Mc 6,30-37",
+   "tecnica": "",
+   "acervo": "Reprodução de pintura histórica de 1906 (domínio público)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Augustin Hirschvogel, The Victory of Judas Maccabeus Over Niccanor, 1547, NGA 39368.jpg",
+   "titulo": "A vitória de Judas Macabeu sobre Nicanor",
+   "alt": "Água-forte em preto e branco com cena de combate entre dois grupos de guerreiros com lanças e espadas",
+   "legenda": "Água-forte de Augustin Hirschvogel, de 1547, sobre a vitória de Judas sobre Nicanor (1Mc 7,43-49) — o combate em que o próprio Nicanor morre e a sua cabeça é exposta. A peça pertence à recepção renascentista do livro, quando os Macabeus foram lidos como modelo de guerra justa e de resistência legítima.",
+   "passagem": "1Mc 7,43-49",
+   "tecnica": "água-forte",
+   "acervo": "National Gallery of Art, Washington (arquivo de acesso aberto doado ao Wikimedia Commons)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Judas de Makkabeeër Judas Machabeus (titel op object) Negen besten (serietitel), RP-P-1983-45-41.jpg",
+   "titulo": "Judas Macabeu entre os Nove Heróis",
+   "alt": "Gravura com a figura de um chefe antigo armado, inscrita num medalhão oval com ornamentos e inscrição em latim",
+   "legenda": "Gravura da série dos 'Nove Heróis' (*Negen besten*), na qual Judas Macabeu figura ao lado de Josué e de Davi entre os nove guerreiros exemplares da tradição medieval. A série mostra a fortuna do livro fora do cânon hebraico: os Macabeus foram recebidos como modelo de virtude militar na Europa cristã, séculos antes das gravuras de Doré.",
+   "passagem": "1Mc 3,1-9 (louvor a Judas)",
+   "tecnica": "gravura (prent)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1983-45-41)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Monnaie - Module A, Aké (Ptolémaïs), Phénicie, Antiochos IV Épiphane - btv1b85363372 (1 of 2).jpg",
+   "titulo": "Moeda de Antíoco IV Epifânio",
+   "alt": "Fotografia de uma moeda antiga em alto relevo, com efígie de rosto masculino barbado de um lado",
+   "legenda": "Moeda cunhada em Aké-Ptolemais, na Fenícia, sob a autoridade de Antíoco IV Epifânio (175-164 a.C.), o rei cujo edito está no centro do conflito de 1Macabeus 1,41-64. O objeto é o testemunho material direto do adversário do livro e interessa ao dossiê porque a crise macabaica é lida, hoje, no quadro da administração e da numismática selêucidas.",
+   "passagem": "1Mc 1,10-15.41-64",
+   "tecnica": "moeda (reprodução fotográfica)",
+   "acervo": "Bibliothèque nationale de France, Paris (coleção de moedas gregas, Gallica)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Bronze Coins of the Hasmonean Dynasty, 1st Century BC (43167994432).jpg",
+   "titulo": "Moedas de bronze da dinastia hasmoneia",
+   "alt": "Fotografia de moedas antigas de bronze dispostas lado a lado, com motivos vegetais e inscrições",
+   "legenda": "Moedas de bronze hasmoneias do século I a.C., no Museu de Israel. O dossiê registra nelas um dado preciso: as moedas da dinastia trazem apenas quatro nomes de governantes e símbolos anicônicos (§12) — e são o documento material da dinastia que saiu da revolta, não prova dos episódios narrados em 1Macabeus.",
+   "passagem": "contexto histórico (dinastia hasmoneia)",
+   "tecnica": "moedas de bronze (reprodução fotográfica)",
+   "acervo": "Museu de Israel, Jerusalém; fotografia de Gary Todd, CC0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

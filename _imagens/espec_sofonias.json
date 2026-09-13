@@ -1,0 +1,61 @@
+{
+ "slug": "sofonias",
+ "_comentario": "Especificação editorial das figuras do dossiê de Sofonias. 5 figuras: não foi encontrado material arqueológico livre específico do reinado de Josias (objecto para a seção 12) — ver relatório. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py.",
+ "figuras": [
+  {
+   "arquivo": "File:Sophonie (Zephaniah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
+   "titulo": "Sofonias",
+   "alt": "Prancha impressa com a figura do profeta Sofonias, na abertura do livro",
+   "legenda": "Prancha da reprodução impressa de 1904 (M. de Brunoff & Cie) das 400 pinturas compostas a partir dos desenhos de James Tissot. A ilustração acompanha a abertura do livro, que situa a profecia 'nos dias de Josias, filho de Amon, rei de Judá' (Sf 1,1). Sofonias anuncia o Dia do Senhor como juízo sobre Judá e sobre as nações, e termina com a promessa de um resto humilde que se abriga no nome do Senhor (Sf 3,11-13).",
+   "passagem": "Sf 1,1",
+   "tecnica": "reprodução impressa (M. de Brunoff & Cie, 1904)",
+   "acervo": "Reprodução impressa de M. de Brunoff & Cie (1904), a partir de desenhos de James Tissot; fotografia de Phillip Medhurst, CC BY-SA 4.0",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Fethiye Camii, parekklesion, dome, mosaics, Istanbul, Turkey - Zephaniah and Micah - MSBZ004 BF T F 007 D - Dumbarton Oaks.jpg",
+   "titulo": "Sofonias e Miqueias em mosaico da igreja de Cristo Pammakaristos",
+   "alt": "Mosaico bizantino com bustos de dois profetas, em cúpula de igreja, sobre fundo dourado",
+   "legenda": "Mosaico bizantino da cúpula do pareclésio da igreja de Cristo Pammakaristos (atual museu Fethiye), em Istambul, fotografado pela equipe do Byzantine Institute entre 1949 e 1963 e hoje no acervo Dumbarton Oaks. Sofonias aparece ao lado de Miqueias entre os profetas que a arte de Bizâncio reuniu nas abóbadas das igrejas. O documento registra a decoração da igreja antes das restaurações modernas.",
+   "passagem": "Sf 1,1",
+   "tecnica": "mosaico (arte bizantina)",
+   "acervo": "Igreja de Cristo Pammakaristos (museu Fethiye), Istambul; fotografia do Byzantine Institute, Dumbarton Oaks (CC0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Zephaniah from Yaroslavl (18 c, priv.coll).jpg",
+   "titulo": "Ícone do profeta Sofonias, de Iaroslavl",
+   "alt": "Ícone russo de formato alongado com a figura de um profeta segurando um rolo",
+   "legenda": "Ícone russo de Iaroslavl da segunda metade do século XVIII, procedente da fileira dos profetas de um iconóstase e pertencente a coleção particular. Os iconóstases russos organizavam os profetas do Antigo Testamento em torno da Virgem entronizada, cada um com o seu rolo com o versículo que o identificava. Sofonias, que anuncia o Dia do Senhor, entrava nessa fileira como uma das vozes do juízo escatológico.",
+   "passagem": "Sf 1,14-18",
+   "tecnica": "ícone (têmpera sobre madeira)",
+   "acervo": "Coleção particular; imagem de catálogo de leilão (MacDougall's)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Manasse, Amon en Josia Koningen van Juda (serietitel) Theatrum biblicum (..) (serietitel), RP-P-1904-3499.jpg",
+   "titulo": "Manassés, Amom e Josias, reis de Judá",
+   "alt": "Gravura em preto e branco com três reis em cenas separadas, com coroas e cetros",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-1904-3499), da série 'Theatrum biblicum' impressa em 1585 segundo desenho de Maarten van Heemskerck. As três cenas reúnem Manassés, Amom e Josias, os reis de Judá do fim do século VII a.C. O livro é datado dos dias de Josias (Sf 1,1), e a denúncia do culto aos astros e aos ídolos (Sf 1,4-6) responde exatamente ao que a reforma de Josias procurou extirpar (2Rs 23).",
+   "passagem": "Sf 1,1-6",
+   "tecnica": "gravura (série Theatrum biblicum, 1585)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-1904-3499); segundo desenho de Maarten van Heemskerck",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:VAM - Jagdrelief.jpg",
+   "titulo": "Relevo assírio de caça",
+   "alt": "Relevo em pedra com cena de caça, com animais e figuras humanas, exposto em museu",
+   "legenda": "Relevo assírio com cena de caça do século IX a.C., no Museu do Oriente Próximo Antigo, em Berlim. Sofonias anuncia a queda de Nínive — 'esta é a cidade alegre que vivia em segurança' (Sf 2,15) — e descreve o império assírio como o poder que devasta as nações. O relevo é a imagem mesma da soberania assíria que o profeta diz condenada, e a documentação material do império que dominou Judá no século VII a.C.",
+   "passagem": "Sf 2,13-15",
+   "tecnica": "relevo em pedra (século IX a.C.)",
+   "acervo": "Vorderasiatisches Museum (Museu do Oriente Próximo Antigo), Berlim; fotografia de Wolfgang Sauber, CC BY-SA 3.0",
+   "secao": "9",
+   "posicao": "fim"
+  }
+ ]
+}

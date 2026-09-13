@@ -1,0 +1,101 @@
+{
+ "slug": "habacuque",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 3,
+   "src": "/imagens/habacuque/03-o-profeta-habacuque-da-serie-profetas-e-sibilas.webp",
+   "arquivo_origem": "File:The Prophet Habakkuk, from Prophets and Sibyls MET DP835428.jpg",
+   "titulo": "O profeta Habacuque, da série 'Profetas e Sibilas'",
+   "legenda": "Prancha da série 'Profetas e Sibilas', gravada em Florença entre 1480 e 1490 e atribuída a Francesco Rosselli e Baccio Baldini, hoje no Metropolitan Museum of Art. Habacuque aparece com os atributos que o texto lhe deu — o cesto com o pão que ele leva a Daniel e a visão que espera. A série mostra a fortuna iconográfica do livro na Itália do Renascimento.",
+   "passagem": "Ha 2,1-4",
+   "artista": "Francesco Rosselli / Baccio Baldini",
+   "data": "1480–90",
+   "tecnica": "gravura (série Profetas e Sibilas)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (domínio público/CC0)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AThe_Prophet_Habakkuk%2C_from_Prophets_and_Sibyls_MET_DP835428.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 2659,
+   "altura_original": 3641,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Print; Prints",
+   "sha256": "190f10177566b6d7",
+   "bytes": 106952,
+   "largura_final": 950,
+   "altura_final": 1301
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/habacuque/05-relevo-de-ninive-com-cavalos-e-cavalaricos.webp",
+   "arquivo_origem": "File:Britishmuseumhorsesandgroomsreliefnineveh.jpg",
+   "titulo": "Relevo de Nínive com cavalos e cavalariços",
+   "legenda": "Relevo do Palácio Sudoeste de Nínive (cerca de 700-692 a.C.), com cavalos e cavalariços saindo do palácio de Senaqueribe, hoje no Museu Britânico (WA 124795). Habacuque descreve a cavalaria dos caldeus como 'mais velozes que leopardos e mais agudos que os lobos da noite' (Ha 1,8), e o relevo é o material mais próximo que documenta a criação de cavalos de guerra no Oriente Próximo dos séculos VIII-VII a.C.",
+   "passagem": "Ha 1,6-11",
+   "artista": "anônimo",
+   "data": "4 June 2010",
+   "tecnica": "relevo em pedra (Palácio Sudoeste de Nínive)",
+   "acervo": "The British Museum, Londres (WA 124795); fotografia de Ealdgyth, CC BY-SA 3.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ABritishmuseumhorsesandgroomsreliefnineveh.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 3.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 3501,
+   "altura_original": 2052,
+   "secao": "9",
+   "posicao": "fim",
+   "descricao_fonte": "Assyrian relief from Nineveh. Tag on exhibit states: \"Horses and grooms leaving Sennacherib's palace: Assyrian, about 700-692 BC. From Nineveh, South-West Palace, Room LI north, probably panels 37-38. WA 124795\". See BM database entry for more details",
+   "sha256": "6a12b87f2d6a3fbc",
+   "bytes": 107284,
+   "largura_final": 950,
+   "altura_final": 557
+  },
+  {
+   "ordem": 6,
+   "src": "/imagens/habacuque/06-fivela-relicario-com-habacuque-alimentando-daniel.webp",
+   "arquivo_origem": "File:MAN - Plaque boucle reliquaire Daniel & Habacuc VIe s.jpg",
+   "titulo": "Fivela-relicário com Habacuque alimentando Daniel",
+   "legenda": "Placa de fivela-relicário da segunda metade do século VI, conservada no Museu de Arqueologia Nacional de Saint-Germain-en-Laye, com Habacuque levando alimento a Daniel na cova dos leões. O episódio vem de Dn 14 (Bel e o Dragão), texto grego em que Habacuque é transportado por um anjo pelos cabelos até a cova. A peça documenta a circulação da figura do profeta fora do livro que leva o seu nome, na Antiguidade tardia.",
+   "passagem": "Ha 2,1-4 (cf. Dn 14,33-39)",
+   "artista": "Cangadoba",
+   "data": "2017-03-26 20:34:07",
+   "tecnica": "placa metálica em relevo (século VI)",
+   "acervo": "Musée d'Archéologie Nationale, Saint-Germain-en-Laye; fotografia de Cangadoba, CC BY-SA 4.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AMAN_-_Plaque_boucle_reliquaire_Daniel_%26_Habacuc_VIe_s.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 4.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 5472,
+   "altura_original": 3648,
+   "secao": "12",
+   "posicao": "fim",
+   "descricao_fonte": "From the National Archaeological Museum of Saint-Germain-en-Laye near Paris France - Belt buckle Reliquary showing Habakkuk feeding Daniel in the lion's pit - 2nd half of the 6th century",
+   "sha256": "d5459597e720f598",
+   "bytes": 104206,
+   "largura_final": 950,
+   "altura_final": 633
+  }
+ ],
+ "recusadas": [
+  [
+   "File:Zuccone Donatello OPA Florence.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:British (English) School - The Prophet Habakkuk - 1430496.24 - National Trust.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Habakkuk (Menologion of Basil II).jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

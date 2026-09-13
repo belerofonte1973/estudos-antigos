@@ -71,6 +71,32 @@ def secoes(texto: str) -> list[tuple[int, int, str]]:
     return achadas
 
 
+def achar_secao(linhas: list[str], fig: dict) -> tuple[int, str] | None:
+    """Acha a seção de destino de uma figura.
+
+    Os dossiês bíblicos têm seções numeradas (`## 6. Recepção`) e o número é
+    estável entre as gerações. Páginas de exceção (a introdução da biblioteca,
+    por exemplo) não são numeradas: para essas, o campo `secao_rotulo` da
+    especificação aponta o cabeçalho pelo texto.
+    """
+    numeradas = secoes("\n".join(linhas))
+    alvo = next((c for c in numeradas if c[0] == int(fig.get("secao") or 0)), None)
+    if alvo:
+        return alvo[1], f"seção {alvo[0]}"
+
+    rotulo = (fig.get("secao_rotulo") or "").strip().lower()
+    if rotulo:
+        for i, linha in enumerate(linhas):
+            if linha.startswith("## ") and rotulo in linha.lower():
+                return i, f"cabeçalho '{linha[3:40].strip()}'"
+
+    # último recurso: fim do documento, antes de qualquer anexo de bibliografia
+    for i, linha in enumerate(linhas):
+        if re.match(r"^##\s+(Bibliografia|Referências|ANEXO|Bibliografia-âncora)", linha, re.I):
+            return i, "fim do corpo (antes da bibliografia)"
+    return None
+
+
 def inserir(texto: str, figs: list[dict]) -> tuple[str, list[str]]:
     linhas = texto.split("\n")
     relatos = []
@@ -84,34 +110,40 @@ def inserir(texto: str, figs: list[dict]) -> tuple[str, list[str]]:
             elif fim_imports and linha.strip() and not linha.startswith("import "):
                 break
         if not fim_imports:
-            return texto, ["SEM bloco de imports: nada foi inserido (rode o validador)"]
-        linhas.insert(fim_imports, IMPORT_FIGURA)
-        relatos.append(f"import acrescentado na linha {fim_imports + 1}")
+            # dossiê sem nenhum import (a introdução da biblioteca, por exemplo):
+            # cria o bloco logo depois do fechamento do frontmatter
+            fecho = next((i for i, linha in enumerate(linhas) if linha.strip() == "---" and i > 0), None)
+            if fecho is None:
+                return texto, ["SEM frontmatter fechado: nada foi inserido"]
+            linhas[fecho + 1:fecho + 1] = ["", IMPORT_FIGURA, ""]
+            relatos.append(f"bloco de imports criado após o frontmatter (linha {fecho + 2})")
+        else:
+            linhas.insert(fim_imports, IMPORT_FIGURA)
+            relatos.append(f"import acrescentado na linha {fim_imports + 1}")
 
     # figuras, da última seção para a primeira (para não deslocar índices)
     for fig in sorted(figs, key=lambda f: -int(f.get("secao") or 0)):
         if fig["src"] in "\n".join(linhas):
             relatos.append(f"já presente (ignorada): {fig['src']}")
             continue
-        cabecalhos = secoes("\n".join(linhas))
-        alvo = next((c for c in cabecalhos if c[0] == int(fig.get("secao") or 0)), None)
-        if not alvo:
-            relatos.append(f"SEÇÃO {fig.get('secao')} não encontrada — figura não inserida: {fig['src']}")
+        achada = achar_secao(linhas, fig)
+        if not achada:
+            relatos.append(f"NÃO INSERIDA (seção {fig.get('secao')} / "
+                           f"'{fig.get('secao_rotulo','—')}' não encontrada): {fig['src']}")
             continue
-        _, i_cab, linha_cab = alvo
+        i_destino, descricao = achada
         if fig.get("posicao") == "inicio":
-            destino = i_cab + 1
+            destino = i_destino + 1
             while destino < len(linhas) and linhas[destino].strip() == "":
                 destino += 1
-            bloco_linhas = ["", bloco(fig), ""]
         else:
-            seguintes = [c[1] for c in cabecalhos if c[1] > i_cab]
+            numeradas = secoes("\n".join(linhas))
+            seguintes = [c[1] for c in numeradas if c[1] > i_destino]
             destino = seguintes[0] if seguintes else len(linhas)
-            while destino > i_cab and linhas[destino - 1].strip() == "":
+            while destino > i_destino and linhas[destino - 1].strip() == "":
                 destino -= 1
-            bloco_linhas = ["", bloco(fig), ""]
-        linhas[destino:destino] = bloco_linhas
-        relatos.append(f"seção {fig['secao']} ({linha_cab[:34].strip()}): + {fig['src']}")
+        linhas[destino:destino] = ["", bloco(fig), ""]
+        relatos.append(f"{descricao}: + {fig['src']}")
 
     return "\n".join(linhas), relatos
 

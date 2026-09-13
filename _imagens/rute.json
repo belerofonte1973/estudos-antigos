@@ -1,0 +1,75 @@
+{
+ "slug": "rute",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 1,
+   "src": "/imagens/rute/01-rute-no-campo-de-booz.webp",
+   "arquivo_origem": "File:Julius Schnorr von Carolsfeld- Ruth im Feld des Boaz.jpg",
+   "titulo": "Rute no campo de Booz",
+   "legenda": "Schnorr von Carolsfeld pintou em 1828 o encontro de Rute e Booz no campo (Rt 2,4-16): Rute colhendo espigas atrás dos ceifadores, Booz a observá-la. Os nazarenos liam o capítulo como idílio rural, e o dossiê usa a obra justamente para contrastar essa leitura com o que o texto diz — fome, estrangeiridade e pobreza.",
+   "passagem": "Rt 2,1-17",
+   "artista": "Julius Schnorr von Carolsfeld",
+   "data": "1828",
+   "tecnica": "óleo sobre tela",
+   "acervo": "National Gallery, Londres",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AJulius_Schnorr_von_Carolsfeld-_Ruth_im_Feld_des_Boaz.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 6000,
+   "altura_original": 5067,
+   "secao": "4",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "676dbc0450bb13a3",
+   "bytes": 70486,
+   "largura_final": 950,
+   "altura_final": 802
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/rute/03-rute-e-recebida-por-booz.webp",
+   "arquivo_origem": "File:Ruth, having gleaned barley in a field owned by Boaz (engraving by Picart).jpg",
+   "titulo": "Rute é recebida por Booz",
+   "legenda": "Gravura atribuída a B. Picart, do acervo da Wellcome Collection: Rute, depois de colher espigas no campo de Booz, é recebida por ele e come à mesa dos ceifadores (Rt 2,14). O dossiê usa a estampa porque mostra o episódio como cena de mesa — o que o resgate do capítulo 4 vai formalizar depois, entre o parente mais próximo e as testemunhas do povoado.",
+   "passagem": "Rt 2,14-23",
+   "artista": "Creator:B. Picart",
+   "data": "",
+   "tecnica": "gravura",
+   "acervo": "Wellcome Collection, Londres (imagem CC BY 4.0)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ARuth%2C_having_gleaned_barley_in_a_field_owned_by_Boaz_%28engraving_by_Picart%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY 4.0",
+   "licenca_url": "https://creativecommons.org/licenses/by/4.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 3777,
+   "altura_original": 2041,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Ruth, having gleaned barley in a field owned by Boaz, is given hospitality by him. Engraving attributed to B. Picart. Iconographic Collections",
+   "sha256": "98af67c33758c56e",
+   "bytes": 193034,
+   "largura_final": 950,
+   "altura_final": 514
+  }
+ ],
+ "recusadas": [
+  [
+   "File:William de Brailes - Top - Ruth Meets Boaz as she gleans (Ruth 2 -4-16) - Walters W10618R - Full Page.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:'Ruth and Naomi' by Jan Victors, 1653.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Philip Hermogenes Calderon - Ruth and Naomi - B2010.27.8 - Yale Center for British Art.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "slug": "macabeus-3",
+ "_comentario": "Especificação editorial das figuras do dossiê de 3 Macabeus. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:Twee engelen jagen de olifanten van Ptolemaeus Philopator weg, RP-P-OB-44.915.jpg",
+   "titulo": "Dois anjos expulsam os elefantes de Ptolomeu Filopator",
+   "alt": "Gravura em preto e branco com duas figuras aladas que afugentam elefantes conduzidos por soldados",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-OB-44.915), impressa em 1700. A cena é o desfecho do livro: depois de embebedar os elefantes para lançá-los contra os judeus reunidos no hipódromo, o rei Ptolomeu IV Filopator vê os animais voltarem-se contra o próprio exército, e o povo é salvo (3Mc 6,16-21). Nenhum outro livro bíblico tem os elefantes como instrumento de execução, e é essa a imagem que a gravura fixou.",
+   "passagem": "3Mc 6,16-21",
+   "tecnica": "gravura (1700)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-OB-44.915)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Koning Ptolemaeus Philopator krijgt een beroerte als straf voor zijn nieuwsgierigheid naar het Heilige der Heiligen, RP-P-OB-44.914.jpg",
+   "titulo": "Ptolomeu Filopator é ferido por Deus diante do santuário",
+   "alt": "Gravura em preto e branco com um rei que cai, atingido, diante da entrada de um templo",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-OB-44.914), de 1700, com o rei Ptolomeu IV Filopator ferido por Deus quando tenta entrar no Santo dos Santos de Jerusalém (3Mc 2,21-24). O episódio é o primeiro revés do rei no livro e estabelece o tema central: a pretensão de soberania sobre o santuário é o que precipita a perseguição e, mais adiante, a conversão do monarca.",
+   "passagem": "3Mc 2,21-24",
+   "tecnica": "gravura (1700)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-OB-44.914)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Schlacht bei Zama Gemälde H P Motte.jpg",
+   "titulo": "Elefantes de guerra em combate",
+   "alt": "Pintura histórica com elefantes de guerra com torres e soldados, em meio a uma batalha",
+   "legenda": "Pintura de Henri-Paul Motte (1906) com elefantes de guerra cartagineses na batalha de Zama (202 a.C.). A obra não ilustra o livro, mas documenta a instituição que 3 Macabeus supõe: o elefante de guerra como arma de choque dos exércitos helenísticos, embriagado e conduzido ao combate. É esse uso — e o seu fracasso — que os capítulos 5-6 do livro exploram como espetáculo público no hipódromo.",
+   "passagem": "3Mc 5,1-4",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Ilustração de 'Das Wissen des 20. Jahrhunderts' (Rheda, 1931)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tell el-Maskhutah Raphia Decree Stele.jpg",
+   "titulo": "Estela do decreto de Rafia",
+   "alt": "Estela de pedra com inscrição e relevo, reproduzida em publicação antiga em preto e branco",
+   "legenda": "Estela de calcário procedente de Tell el-Maskhuta (identificada por alguns estudiosos com a antiga Pitom), descoberta em 1923 e publicada por Gauthier e Sottas em 1925. O texto é o decreto de um sínodo sacerdotal em honra de Ptolomeu IV Filopator, o mesmo rei do livro, e comemora a vitória de Rafia (217 a.C.). A batalha é o pano de fundo do capítulo 1 de 3 Macabeus, quando o rei visita a região depois do triunfo.",
+   "passagem": "3Mc 1,1-5",
+   "tecnica": "estela de calcário inscrita (217 a.C.; fotografia de 1925)",
+   "acervo": "Publicação de H. Gauthier e H. Sottas, 'Un décret trilingue en l'honneur de Ptolémée IV' (1925)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Gold oktadrachm of Ptolemy IV Philopator MET DP138748.jpg",
+   "titulo": "Octadracma de ouro de Ptolomeu IV Filopator",
+   "alt": "Moeda de ouro com retrato de perfil, sobre fundo neutro",
+   "legenda": "Octadracma de ouro de Ptolomeu IV Filopator (221-204 a.C.), no Metropolitan Museum of Art, em Nova York. A moeda é o retrato contemporâneo do rei a quem 3 Macabeus atribui a perseguição aos judeus de Alexandria e o ataque ao templo. A numária ptolomaica é a principal documentação da administração e da propaganda dinástica do Egito helenístico no século em que o livro se situa.",
+   "passagem": "3Mc 1,1; 2,1-24",
+   "tecnica": "moeda de ouro (221-204 a.C.)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (CC0)",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Reliefs on the walls of the Temple of Arensnuphis depicting Ptolemy IV Philopator and Ptolemy V Epiphanes with Isis, Horus and other gods, Philae, Egypt (49812292913).jpg",
+   "titulo": "Ptolomeu IV em relevos do templo de Arensnuphis",
+   "alt": "Relevo egípcio em pedra com o rei diante de divindades, em templo antigo",
+   "legenda": "Relevos do templo de Arensnuphis, em Filas, no Egito, com Ptolomeu IV Filopator e Ptolomeu V Epifanes diante de Ísis, Hórus e outras divindades. O rei do livro aparece aqui na função que a ideologia ptolomaica lhe atribuía — mediador entre os deuses e o país —, e é essa pretensão de realeza sagrada que o capítulo 2 do livro questiona ao narrar a tentativa de entrada forçada no santuário de Jerusalém.",
+   "passagem": "3Mc 2,1-24",
+   "tecnica": "relevo em pedra (templo de Arensnuphis, Filas)",
+   "acervo": "Templo de Arensnuphis, Filas (Egito); fotografia de Carole Raddato, CC BY-SA 2.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

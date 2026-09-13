@@ -1,0 +1,72 @@
+{
+ "slug": "habacuque",
+ "_comentario": "Especificação editorial das figuras do dossiê de Habacuque. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:Zuccone Donatello OPA Florence.jpg",
+   "titulo": "O 'Zuccone', de Donatello (o profeta Habacuque)",
+   "alt": "Estátua de mármore de um homem calvo e de olhar intenso, em pé, em nicho de museu",
+   "legenda": "Estátua de mármore de Donatello conhecida como 'Zuccone' (o cabeça-de-abóbora), esculpida para o campanário de Florença e hoje no Museu da Obra do Duomo. A tradição identificou a figura com o profeta Habacuque — o profeta que fica de vigia na muralha esperando a resposta de Deus e recebe a sentença de que 'o justo viverá pela sua fé' (Ha 2,1-4), talvez o versículo do Antigo Testamento com maior fortuna na teologia cristã.",
+   "passagem": "Ha 2,1-4",
+   "tecnica": "escultura em mármore",
+   "acervo": "Museu da Obra do Duomo (Museo dell'Opera del Duomo), Florença; fotografia de Jastrow (domínio público)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:British (English) School - The Prophet Habakkuk - 1430496.24 - National Trust.jpg",
+   "titulo": "O profeta Habacuque",
+   "alt": "Pintura com a figura de um profeta barbado segurando um livro, sobre fundo escuro",
+   "legenda": "Pintura de escola inglesa (cerca de 1610-1615) pertencente ao National Trust e registrada na Art UK. Séries de profetas como esta decoravam igrejas e casas inglesas do século XVII, e Habacuque aparecia sempre com os sinais que o livro lhe deu: a visão, a sentença sobre o justo e a taça do juízo. A obra mostra como um dos livros menos lidos da Bíblia entrou na decoração devocional do protestantismo inglês.",
+   "passagem": "Ha 1,1-4; 2,1-4",
+   "tecnica": "",
+   "acervo": "National Trust (n.º 1430496); Art UK",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Prophet Habakkuk, from Prophets and Sibyls MET DP835428.jpg",
+   "titulo": "O profeta Habacuque, da série 'Profetas e Sibilas'",
+   "alt": "Gravura renascentista em preto e branco com a figura isolada do profeta Habacuque",
+   "legenda": "Prancha da série 'Profetas e Sibilas', gravada em Florença entre 1480 e 1490 e atribuída a Francesco Rosselli e Baccio Baldini, hoje no Metropolitan Museum of Art. Habacuque aparece com os atributos que o texto lhe deu — o cesto com o pão que ele leva a Daniel e a visão que espera. A série mostra a fortuna iconográfica do livro na Itália do Renascimento.",
+   "passagem": "Ha 2,1-4",
+   "tecnica": "gravura (série Profetas e Sibilas)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (domínio público/CC0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Habakkuk (Menologion of Basil II).jpg",
+   "titulo": "Habacuque no Menológio de Basílio II",
+   "alt": "Miniatura bizantina com a figura de um profeta, sobre fundo dourado",
+   "legenda": "Miniatura do Menológio de Basílio II, manuscrito de Constantinopla de 985 conservado na Biblioteca Vaticana (Vat. gr. 1613). O calendário litúrgico bizantino comemora os profetas como santos, e Habacuque entra nele ligado ao episódio de Bel e o Dragão (Dn 14), em que é transportado por um anjo para levar alimento a Daniel na cova dos leões. É a recepção do profeta na liturgia e na arte bizantinas.",
+   "passagem": "Ha 1,1",
+   "tecnica": "iluminura (manuscrito bizantino)",
+   "acervo": "Biblioteca Apostólica Vaticana (Vat. gr. 1613), Roma",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Britishmuseumhorsesandgroomsreliefnineveh.jpg",
+   "titulo": "Relevo de Nínive com cavalos e cavalariços",
+   "alt": "Relevo assírio em pedra com cavalos conduzidos por cavalariços, exposto em museu",
+   "legenda": "Relevo do Palácio Sudoeste de Nínive (cerca de 700-692 a.C.), com cavalos e cavalariços saindo do palácio de Senaqueribe, hoje no Museu Britânico (WA 124795). Habacuque descreve a cavalaria dos caldeus como 'mais velozes que leopardos e mais agudos que os lobos da noite' (Ha 1,8), e o relevo é o material mais próximo que documenta a criação de cavalos de guerra no Oriente Próximo dos séculos VIII-VII a.C.",
+   "passagem": "Ha 1,6-11",
+   "tecnica": "relevo em pedra (Palácio Sudoeste de Nínive)",
+   "acervo": "The British Museum, Londres (WA 124795); fotografia de Ealdgyth, CC BY-SA 3.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:MAN - Plaque boucle reliquaire Daniel & Habacuc VIe s.jpg",
+   "titulo": "Fivela-relicário com Habacuque alimentando Daniel",
+   "alt": "Placa metálica com decoração em relevo, em vitrine de museu",
+   "legenda": "Placa de fivela-relicário da segunda metade do século VI, conservada no Museu de Arqueologia Nacional de Saint-Germain-en-Laye, com Habacuque levando alimento a Daniel na cova dos leões. O episódio vem de Dn 14 (Bel e o Dragão), texto grego em que Habacuque é transportado por um anjo pelos cabelos até a cova. A peça documenta a circulação da figura do profeta fora do livro que leva o seu nome, na Antiguidade tardia.",
+   "passagem": "Ha 2,1-4 (cf. Dn 14,33-39)",
+   "tecnica": "placa metálica em relevo (século VI)",
+   "acervo": "Musée d'Archéologie Nationale, Saint-Germain-en-Laye; fotografia de Cangadoba, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

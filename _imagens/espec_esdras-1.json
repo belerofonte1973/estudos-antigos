@@ -1,0 +1,61 @@
+{
+ "slug": "esdras-1",
+ "_comentario": "Especificação editorial das figuras do dossiê de 1 Esdras (o Esdras grego, 3 Esdras na Vulgata). 5 figuras. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:Nicolaes Knüpfer - Zorovavel and Darius - Hermitage.jpg",
+   "titulo": "Zorobabel diante de Dario",
+   "alt": "Pintura a óleo com figuras em trajes orientais numa cena de corte, com um homem de pé diante de um rei",
+   "legenda": "Pintura de Nikolaus Knüpfer (depois de 1644) conservada no Museu Hermitage, em São Petersburgo, com o tema do concurso dos três jovens da guarda de Dario (1Esd 3-4). Cada um propõe uma sentença sobre o que é mais forte, e Zorobabel vence ao dizer que a verdade é mais forte que o vinho, o rei e as mulheres (1Esd 4,33-41). O episódio, ausente do livro canônico de Esdras, é a peça mais conhecida do Esdras grego.",
+   "passagem": "1Esd 3,1-4,63",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Museu Hermitage, São Petersburgo",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Zerubbabel voor koning Darius, RP-P-OB-45.155.jpg",
+   "titulo": "Zorobabel diante do rei Dario",
+   "alt": "Gravura em preto e branco com um homem de pé diante de um rei entronizado, numa sala de corte",
+   "legenda": "Gravura do Rijksmuseum (inv. RP-P-OB-45.155), impressa em 1704 com gravura de Jan Luyken. A cena é o mesmo concurso dos três jovens de 1Esd 3-4, em que Zorobabel responde que a verdade é a mais forte de todas as coisas. O episódio, que 1 Esdras acrescenta ao relato de Esdras 1-2, fixou o livro na tradição ocidental como a história do jovem sábio diante do imperador.",
+   "passagem": "1Esd 4,33-41",
+   "tecnica": "gravura (1704)",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-P-OB-45.155); gravura de Jan Luyken",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:109.Ezra Reads the Law to the People.jpg",
+   "titulo": "Esdras lê a Lei ao povo",
+   "alt": "Gravura em preto e branco com um homem em pé sobre uma plataforma, lendo um livro diante de uma multidão",
+   "legenda": "Gravura de Doré para a série Doré's English Bible (1866), sobre a leitura pública da Lei. O episódio é a grande assembleia de 1Esd 9,38-55 — paralelo de Neemias 8,1-12 —, quando Esdras lê o livro da Lei desde o amanhecer e os levitas traduzem e explicam a leitura ao povo. O livro de 1 Esdras termina exatamente nessa cena, com a ordenação da leitura e da interpretação.",
+   "passagem": "1Esd 9,38-55",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Cyrus Cylinder BM ME90920.jpg",
+   "titulo": "Cilindro de Ciro",
+   "alt": "Cilindro de argila coberto de escrita cuneiforme, exposto em vitrine de museu",
+   "legenda": "Cilindro de argila (539-530 a.C.), procedente da Babilônia, hoje no Museu Britânico, fotografado por Jastrow em 2007. O documento é a inscrição em que Ciro descreve a restauração dos santuários do império e a repatriação de populações, e é o texto extrabíblico mais próximo dos decretos de Ciro que abrem 1 Esdras (1Esd 2,1-8) e o livro canônico de Esdras. Comparar a inscrição persa com o decreto bíblico é o exercício clássico da crítica histórica sobre o retorno do exílio.",
+   "passagem": "1Esd 2,1-8",
+   "tecnica": "cilindro de argila com inscrição cuneiforme (539-530 a.C.)",
+   "acervo": "The British Museum, Londres; fotografia de Jastrow, CC BY 2.5",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Prayer of Manasseh and beginning of 1 (3) Esdras - Sixto-Clementine Vulgate (1592).jpg",
+   "titulo": "O início de 1 Esdras na Vulgata Sixto-Clementina",
+   "alt": "Página impressa em latim com o fim de um texto bíblico e o início de outro, em colunas",
+   "legenda": "Página da Vulgata Sixto-Clementina (1592) com o fim da Oração de Manassés e o início de 1 Esdras — chamado 3 Esdras na numeração da Vulgata —, na edição digitalizada pela Universidade de Bolonha. O livro, que os protestantes chamam de apócrifo, os católicos de deuterocanônico e as Igrejas ortodoxas incluem no cânon, aparece aqui na sua forma impressa oficial, com a numeração dupla que ainda hoje confunde os leitores.",
+   "passagem": "1Esd 1,1-8; 9,38-55",
+   "tecnica": "impresso tipográfico (1592)",
+   "acervo": "Universidade de Bolonha (reprodução digital da Vulgata Sixto-Clementina, 1592)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

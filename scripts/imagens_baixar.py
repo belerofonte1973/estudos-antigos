@@ -48,12 +48,14 @@ import io
 import json
 import pathlib
 import re
+import time
 import unicodedata
+import urllib.error
 import urllib.request
 
 from PIL import Image
 
-from commons_api import ficha as ficha_commons
+from commons_api import fichas
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 DESTINO_IMG = RAIZ / "public" / "imagens"
@@ -68,18 +70,52 @@ def apelido(texto: str, n: int) -> str:
     return f"{n:02d}-{t[:60].strip('-') or 'figura'}"
 
 
+def normalizar(titulo: str) -> str:
+    """Chave de comparação: o Commons devolve 'File:Foo bar.jpg' para 'File:Foo_bar.jpg'."""
+    return titulo.replace("_", " ").strip().lower()
+
+
+def baixar_arquivo(url: str, tentativas: int = 4) -> bytes | None:
+    """Baixa o arquivo com backoff.
+
+    O upload.wikimedia.org também devolve 429 quando o lote é grande (aconteceu
+    na produção dos 54 dossiês) — e sem repetição isso derrubava a especificação
+    inteira no meio, perdendo as figuras já baixadas.
+    """
+    for t in range(tentativas):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            return urllib.request.urlopen(req, timeout=120).read()
+        except urllib.error.HTTPError as e:  # noqa: PERF203
+            if e.code in (429, 500, 502, 503, 504):
+                time.sleep(3.0 * (t + 1) ** 2)   # 3s, 12s, 27s
+                continue
+            return None
+        except Exception:  # noqa: BLE001 — rede instável
+            time.sleep(3.0 * (t + 1))
+    return None
+
+
 def processar(spec: dict, largura: int, qualidade: int, formato: str, seco: bool) -> dict:
     slug = spec["slug"]
     pasta = DESTINO_IMG / slug
     manifestadas, recusadas = [], []
     ext = ".webp" if formato == "webp" else ".jpg"
 
+    # metadados em BLOCO: a API do Commons limita muito as chamadas individuais;
+    # `fichas()` busca até 40 títulos por requisição (e o resultado fica em cache)
+    pedidos = [f.get("arquivo", "").strip() for f in spec.get("figuras", []) if f.get("arquivo")]
+    catalogo: dict[str, dict] = {}
+    for i in range(0, len(pedidos), 40):
+        for ficha in fichas(pedidos[i:i + 40]):
+            catalogo[normalizar(ficha["arquivo"])] = ficha
+
     for i, fig in enumerate(spec.get("figuras", []), start=1):
         arquivo = fig.get("arquivo", "").strip()
         if not arquivo:
             recusadas.append((fig.get("titulo", f"figura {i}"), "sem campo 'arquivo'"))
             continue
-        ficha = ficha_commons(arquivo)
+        ficha = catalogo.get(normalizar(arquivo))
         if ficha is None:
             recusadas.append((arquivo, "arquivo não existe no Commons"))
             continue
@@ -114,15 +150,22 @@ def processar(spec: dict, largura: int, qualidade: int, formato: str, seco: bool
             "largura_original": ficha["largura_original"],
             "altura_original": ficha["altura_original"],
             "secao": str(fig.get("secao", "6")),
+            "secao_rotulo": fig.get("secao_rotulo", ""),
             "posicao": fig.get("posicao", "fim"),
             "descricao_fonte": ficha["descricao_fonte"],
         }
 
         if not seco:
             pasta.mkdir(parents=True, exist_ok=True)
-            req = urllib.request.Request(ficha["url_thumb"], headers={"User-Agent": UA})
-            bruto = urllib.request.urlopen(req, timeout=90).read()
-            im = Image.open(io.BytesIO(bruto))
+            bruto = baixar_arquivo(ficha["url_thumb"])
+            if bruto is None:
+                recusadas.append((arquivo, "falha ao baixar o arquivo (429/rede)"))
+                continue
+            try:
+                im = Image.open(io.BytesIO(bruto))
+            except Exception as e:  # noqa: BLE001
+                recusadas.append((arquivo, f"arquivo baixado não é imagem válida ({e})"))
+                continue
             if im.mode not in ("RGB", "L"):
                 im = im.convert("RGB")
             if im.width > largura:
@@ -147,8 +190,8 @@ def processar(spec: dict, largura: int, qualidade: int, formato: str, seco: bool
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--spec", required=True)
-    ap.add_argument("--largura", type=int, default=1300)
-    ap.add_argument("--qualidade", type=int, default=80)
+    ap.add_argument("--largura", type=int, default=950)
+    ap.add_argument("--qualidade", type=int, default=75)
     ap.add_argument("--formato", default="webp", choices=("webp", "jpeg"),
                     help="webp (padrão, ~40%% menor) ou jpeg")
     ap.add_argument("--seco", action="store_true")

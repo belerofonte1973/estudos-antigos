@@ -1,0 +1,61 @@
+{
+ "slug": "sumeria",
+ "_comentario": "Figuras do dossiê de contexto da Suméria (área oriente, 19 seções próprias). As seções são as do dossiê: 3 Organização Política, 6 Língua/Escrita/Literatura, 7 Religião e Cosmovisão, 9 Arte e Expressões Estéticas, 12 Vida Cotidiana e Cultura Material. Licença, autor, data e acervo são reconferidos na API pela sessão principal.",
+ "figuras": [
+  {
+   "arquivo": "File:Gudea of Lagash Girsu.jpg",
+   "titulo": "Gudea de Lagash",
+   "alt": "Estátua de pedra escura de um homem de cabeça raspada e manto com inscrição cuneiforme",
+   "legenda": "Gudea, <em>ensi</em> de Lagash (c. 2144-2124 a.C.), numa das estátuas dedicadas nos templos de Girsu — a série é a principal fonte figurativa sobre o governante sumério e sobre a sua função votiva. A inscrição no manto lista os templos que ele construiu, o que faz da peça documento administrativo e não apenas retrato oficial.",
+   "passagem": "c. 2144-2124 a.C.",
+   "tecnica": "estátua de diorito",
+   "acervo": "Musée du Louvre, Paris; fotografia de Jastrow (domínio público)",
+   "secao": "3",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:British Museum Flood Tablet.jpg",
+   "titulo": "A tabuleta do dilúvio (Gilgamesh XI)",
+   "alt": "Tabuleta de argila coberta de escrita cuneiforme, em vitrine de museu",
+   "legenda": "A tabuleta XI da epopeia de Gilgamesh, lida por George Smith em 1872: nela Utnapishtim conta como sobreviveu ao dilúvio, num relato que a literatura mesopotâmica já conhecia séculos antes de Gênesis. É a peça que transformou a comparação entre Bíblia e Mesopotâmia de especulação em filologia.",
+   "passagem": "texto de Gilgamesh, tabuleta XI",
+   "tecnica": "tabuleta de argila com escrita cuneiforme",
+   "acervo": "The British Museum, Londres (K.3375); fotografia de Andrew West (CC0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ziggurat of Ur Site in Nasiriyah 10.jpg",
+   "titulo": "O zigurate de Ur",
+   "alt": "Ruínas de um grande zigurate de tijolos, com escadaria monumental e muro de contenção",
+   "legenda": "O zigurate de Ur, erguido por Ur-Nammu (c. 2100 a.C.) e restaurado por Nabonido no século VI a.C.: a plataforma escalonada era a base do santuário de Nanna/Sin, e a sua estrutura de tijolos é o testemunho mais direto da religião monumental suméria. O edifício foi escavado por Leonard Woolley entre 1922 e 1934.",
+   "passagem": "c. 2100 a.C.",
+   "tecnica": "arquitetura de tijolos de barro cozido",
+   "acervo": "Sítio de Ur, Dhi Qar, Iraque; fotografia de Alli Khalil, CC BY-SA 4.0",
+   "secao": "7",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Standard of Ur - Peace Panel - Sumer.jpg",
+   "titulo": "O Estandarte de Ur, painel da paz",
+   "alt": "Painel de mosaico de conchas e lapis-lázuli com figuras em faixas: músicos, convivas e animais trazidos em procissão",
+   "legenda": "O painel \"da paz\" do Estandarte de Ur (c. 2550-2400 a.C.) mostra o banquete do governante com músicos e o gado trazido para a mesa; o outro lado retrata a guerra. Achado por Woolley no cemitério real de Ur, é a imagem mais conhecida da hierarquia social suméria — quem se senta, quem serve e quem é servido.",
+   "passagem": "c. 2550-2400 a.C.",
+   "tecnica": "mosaico de conchas, calcário vermelho e lápis-lazúli sobre madeira",
+   "acervo": "The British Museum, Londres; fotografia de Juan Carlos Fonseca Mata, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Sumerian Cuneiform Stone Tablet AO 3866.jpg",
+   "titulo": "Inscrição votiva em pedra",
+   "alt": "Fragmento de pedra clara com linhas de escrita cuneiforme",
+   "legenda": "Fragmento de inscrição votiva suméria em pedra (AO 3866): o texto é o que resta do que acompanhava uma oferta a uma divindade, gênero em que o achado registra quem ofereceu, a quem e por quê. A peça ilustra o tipo de documento que sustenta a história administrativa e religiosa do período — e o que se perde quando a pedra quebra.",
+   "passagem": "período dinástico antigo",
+   "tecnica": "inscrição cuneiforme em pedra",
+   "acervo": "Musée du Louvre, Paris (AO 3866); fotografia de Gary Todd (CC0)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

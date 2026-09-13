@@ -1,0 +1,72 @@
+{
+ "slug": "salmo-151",
+ "_comentario": "Especificação editorial das figuras do dossiê do Salmo 151. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "figuras": [
+  {
+   "arquivo": "File:David the Shepherd, Elizabeth Jane Gardner.jpg",
+   "titulo": "Davi pastor",
+   "alt": "Pintura com um jovem pastor em vestes simples, em campo aberto, com o rebanho ao fundo",
+   "legenda": "O Salmo 151 é uma autobiografia: o eleito conta que era o menor entre os irmãos, que apascentava o rebanho do pai e que as suas mãos fizeram o instrumento musical (vv. 1-3). Gardner pinta exatamente esse Davi — o pastor antes de qualquer vitória —, e a escolha do momento é a leitura que a §4.2 defende: o salmo não resume a crônica de Samuel, é uma reescrita em louvor cujo tema é a eleição, não a batalha. Por isso ele omite a funda e a pedra e comprime o combate ao encontro, à maldição e à decapitação.",
+   "passagem": "Sl 151,1-4 (cf. 1Sm 16,11-13)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "National Museum of Women in the Arts, Washington, D.C. (c. 1895)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Dura Synagogue WC3 David anointed by Samuel.jpg",
+   "titulo": "Davi ungido por Samuel em Dura-Europos",
+   "alt": "Pintura mural antiga com um homem derramando óleo sobre a cabeça de um jovem, diante de outras figuras",
+   "legenda": "Pintura mural da sinagoga de Dura-Europos (século III d.C.), painel WC3, com Samuel ungindo Davi: é a imagem mais antiga que se conhece do episódio, e ela corresponde ao centro do Salmo 151 — 'Ele enviou o seu mensageiro e me tomou de detrás do rebanho, e ungiu-me com o óleo da unção, e disse-me: sê rei do meu povo' (v. 4). O objeto é decisivo para a §4.2, porque a unção é justamente o ponto em que o salmo e 1Samuel 16,13 convergem, enquanto o resto da cena diverge: no salmo não há funda, não há pedra e Saul não é nomeado uma vez sequer.",
+   "passagem": "Sl 151,4 (cf. 1Sm 16,13)",
+   "tecnica": "pintura mural (Dura-Europos, séc. III)",
+   "acervo": "Sinagoga de Dura-Europos, painel WC3 (Coleção Gilman, Yale); imagem em domínio público",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Theodore Psalter page 191r Ps.151. 7-8 - David killing Goliath.jpg",
+   "titulo": "Davi mata Golias no Saltério de Teodoro",
+   "alt": "Iluminura bizantina com um jovem a golpear um gigante armado, junto de blocos de texto grego",
+   "legenda": "A página 191r do Saltério de Teodoro, cópia bizantina de 1066, traz a miniatura do Salmo 151 — a ficha do Commons identifica-a como 'Ps. 151, 7-8: Davi mata Golias'. É o testemunho visual de que o salmo fora do número não só foi copiado: foi ilustrado no Saltério grego de 151 salmos, o livro em que a Igreja ortodoxa o lê, e cujo verso 4 é cantado entre os versículos do Polyeleos na festa dos Arcanjos (§6). O que a imagem mostra é o versículo 7 na sua forma mais crua: o salmo não menciona a funda nem a pedra e comprime o combate à decapitação com a espada do próprio gigante.",
+   "passagem": "Sl 151,7 (cf. 1Sm 17,49-51)",
+   "tecnica": "iluminura sobre pergaminho (Bizâncio, 1066)",
+   "acervo": "Theodore Psalter, British Library, Londres (Add MS 19352, f. 191r)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:David with the Head of Goliath-Caravaggio (1610).jpg",
+   "titulo": "Davi com a cabeça de Golias",
+   "alt": "Pintura escura com um jovem segurando pela cabeça a cabeça cortada de um gigante barbado",
+   "legenda": "Caravaggio pinta o fim do combate singular que o Salmo 151 menciona num versículo: 'saí ao encontro do filisteu, e ele me amaldiçoou pelos seus ídolos, e eu tirei-lhe a espada e cortei-lhe a cabeça' (vv. 6-7). O quadro está na Galleria Borghese (inv. 455) e a tradição vê na cabeça do gigante o rosto do próprio pintor. É o motivo que a arte ocidental fixou como imagem do salmo — a cabeça e a espada, não a funda —, e o dossiê o cita na §6 ao lado do Davi de Donatello, no Bargello, e do de Bernini.",
+   "passagem": "Sl 151,6-7 (cf. 1Sm 17,51)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Galleria Borghese, Roma (inv. 455)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Alabaster Bas-relief of Lion hunt; Ashurbanipal thrusts spear into a leaping lion. Elamite attendant assists him. From the North Palace at Nineveh, Iraq, 7th C. BC.jpg",
+   "titulo": "Um rei assírio abate o leão",
+   "alt": "Relevo em alabastro mostrando um rei de barba longa a cravar uma lança num leão que salta contra ele",
+   "legenda": "Relevo do palácio norte de Nínive, do século VII a.C., com o rei assírio a cravar a lança no leão que salta. O objeto interessa à §9 por dois motivos: o ciclo dos salmos 151-155 inclui o 152 siríaco, em que Davi contende com o leão e o lobo que roubaram uma ovelha do seu rebanho, e 1Sm 17,34-37 mostra o pastor a gabar-se de ter arrancado a presa da boca do leão. O relevo dá a esse motivo pan-mediterrâneo do herói que vence o animal sozinho o seu paralelo no Antigo Oriente Próximo — o mesmo repertório do combate singular, que a §9 compara ao duelo de campeões da Ilíada sem postular dependência.",
+   "passagem": "Sl 151,6 (cf. Sl 152 siríaco; 1Sm 17,34-37)",
+   "tecnica": "relevo em alabastro (Nínive, séc. VII a.C.)",
+   "acervo": "Pergamon Museum, Berlim; fotografia de Gary Todd, CC0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tetragrammaton11Q5-1.jpg",
+   "titulo": "O tetragrama no rolo de Salmos de Qumran (11Q5)",
+   "alt": "Detalhe de rolo de pergaminho antigo com caracteres hebraicos em escrita paleo-hebraica destacados entre o texto",
+   "legenda": "O tetragrama escrito em paleo-hebraico no rolo 11Q5, o Grande Rolo de Salmos de Qumran — couro de menos de 1 mm, com 5 folhas cosidas e 34 colunas, datado paleograficamente entre 30 e 50 d.C. É nele que o Salmo 151 aparece em hebraico, na tríade final do rolo, e é esse detalhe paleográfico que a §12 registra como traço conservador de rolo sectário. O que o manuscrito prova é a existência e a idade do texto; a composição hebraica é anterior por inferência, não por medição.",
+   "passagem": "11Q5 (cf. §4.1 e §12)",
+   "tecnica": "pergaminho inscrito (Qumran, séc. I)",
+   "acervo": "Rolo 11Q5 de Qumran; imagem do arquivo digital dos Rolos do Mar Morto (Leon Levy Digital Library, Autoridade de Antiguidades de Israel)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

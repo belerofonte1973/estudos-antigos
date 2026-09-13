@@ -1,0 +1,72 @@
+{
+ "slug": "miqueias",
+ "_comentario": "Especificação editorial das figuras do dossiê de Miqueias. Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script.",
+ "figuras": [
+  {
+   "arquivo": "File:Initial U - An Angel before Micah - Google Art Project.jpg",
+   "titulo": "Um anjo diante de Miqueias (inicial iluminada)",
+   "alt": "Inicial iluminada em manuscrito medieval, com um anjo e a figura do profeta Miqueias",
+   "legenda": "Inicial iluminada de uma Bíblia do século XIII (cerca de 1270), cujo interior ilustra a abertura do livro: 'a palavra do Senhor que veio a Miqueias, de Moresete' (Mq 1,1). O iluminador acrescentou à cena detalhes que o texto não menciona — prática comum nos manuscritos bíblicos medievais. A imagem interessa ao dossiê como exemplo da recepção medieval do profeta.",
+   "passagem": "Mq 1,1",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Manuscrito do século XIII; digitalização do Google Arts & Culture",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:139.Micah Exhorts the Israelites to Repent.jpg",
+   "titulo": "Miqueias exorta Israel ao arrependimento",
+   "alt": "Gravura em preto e branco com uma figura profética dirigindo-se a um grupo de pessoas",
+   "legenda": "Gravura de Doré para a série Doré's English Bible (1866), que ilustra Mq 7,1-20: o lamento do profeta e a esperança final de que Deus lance 'todos os pecados nas profundezas do mar' (Mq 7,18-20). O capítulo fecha o livro com uma liturgia de arrependimento, depois das denúncias contra os grandes proprietários (Mq 2) e contra os chefes e profetas mercenários (Mq 3).",
+   "passagem": "Mq 7,1-20",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Jan van Eyck - The Ghent Altarpiece - Prophet Micheas - WGA07680.jpg",
+   "titulo": "O profeta Miqueias, no políptico de Gante",
+   "alt": "Detalhe de pintura flamenga com a figura de um profeta e faixa com inscrição, sobre fundo escuro",
+   "legenda": "Detalhe do retábulo de Gante, pintado por Jan van Eyck em 1432, com o profeta Miqueias entre as figuras que ladeiam a Anunciação no reverso fechado do políptico. Miqueias não é apenas o profeta do juízo sobre Samaria e Jerusalém: é dele o anúncio de que de Belém 'sairá aquele que há de governar Israel' (Mq 5,1), texto que a arte cristã leu como profecia messiânica.",
+   "passagem": "Mq 5,1-3",
+   "tecnica": "óleo sobre madeira (detalhe do retábulo)",
+   "acervo": "Catedral de São Bavão, Gante (Retábulo de Gante, 1432)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Issiah Wall RBP sunny jeh.jpg",
+   "titulo": "O muro com a inscrição das espadas transformadas em arados",
+   "alt": "Fotografia de um muro de pedra com uma inscrição bíblica em letras grandes, num parque urbano",
+   "legenda": "Fotografia do muro do parque Ralph Bunche, em Nova York, com a inscrição de Is 2,4: 'eles transformarão as suas espadas em arados'. O dito aparece quase palavra por palavra também em Mq 4,3-4, e a pedra colocada diante da sede das Nações Unidas é o exemplo mais visível da leitura moderna do oráculo como programa de paz entre os povos. É a recepção contemporânea do versículo mais citado do livro.",
+   "passagem": "Mq 4,3-4 (cf. Is 2,4)",
+   "tecnica": "fotografia",
+   "acervo": "Parque Ralph Bunche, Nova York; fotografia de Jim.henderson, CC0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Kudurru of Nabu-mutekkil (2).jpg",
+   "titulo": "Kudurru de Nabu-mutekkil",
+   "alt": "Pedra de formato alongado com relevos e inscrição cuneiforme, em vitrine de museu",
+   "legenda": "Kudurru (estela de demarcação de terras) de Nabu-mutekkil, datado de 760-748 a.C. e conservado no Museu de Belas Artes de Budapeste. Os kudurrus babilônicos registram a concessão de terras por escrito e eram depositados em santuários como garantia jurídica. Miqueias abre o livro condenando exatamente a apropriação da terra alheia — 'ai daqueles que planejam a iniquidade e cobiçam campos, e os roubam' (Mq 2,1-2) —, e o objeto é o documento do sistema de propriedade que o profeta ataca.",
+   "passagem": "Mq 2,1-5",
+   "tecnica": "pedra inscrita e esculpida (760-748 a.C.)",
+   "acervo": "Szépművészeti Múzeum (Museu de Belas Artes), Budapeste",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Tel Lachish 997009858361305171.jpg",
+   "titulo": "Escavações em Tel Láquis",
+   "alt": "Fotografia de um sítio arqueológico em escavação, com trincheiras e muros expostos",
+   "legenda": "Fotografia de Benno Rothenberg das escavações de Tel Láquis (1967), na Biblioteca Nacional de Israel. Miqueias menciona a cidade nos seus primeiros versículos — 'atrela o carro ao cavalo, moradora de Láquis' (Mq 1,13) —, e o sítio, destruído por Senaqueribe em 701 a.C., é um dos melhores documentos materiais da campanha assíria que está no fundo das denúncias do livro.",
+   "passagem": "Mq 1,13",
+   "tecnica": "fotografia",
+   "acervo": "Biblioteca Nacional de Israel, Jerusalém (fotografia de Benno Rothenberg, 1967, CC BY 4.0)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

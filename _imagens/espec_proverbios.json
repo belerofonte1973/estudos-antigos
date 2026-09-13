@@ -1,0 +1,61 @@
+{
+ "slug": "proverbios",
+ "_comentario": "Especificação editorial das figuras do dossiê de Provérbios. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:Holy Wisdom created home.jpg",
+   "titulo": "A Sabedoria construiu a sua casa",
+   "alt": "Ícone russo antigo com uma figura feminina alada sentada num trono entre colunas, dentro de uma casa, com santos de cada lado",
+   "legenda": "Ícone de Novgorod de 1548 (título tomado de Provérbios 9,1: 'a Sabedoria construiu a sua casa'), em que a Sabedoria aparece entronizada e alada. A imagem interessa ao dossiê porque é a recepção mais radical da figura de Pv 1-9: a *chokmah* personificada passa a ser representada como pessoa divina — passo que a exegese moderna discute como personificação poética, e não como hipóstase.",
+   "passagem": "Pv 9,1-6 (cf. 1,20-33; 8,1-36)",
+   "tecnica": "ícone (têmpera sobre madeira)",
+   "acervo": "Museu Nacional Russo, São Petersburgo (inv. 28830); imagem em domínio público",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Print, book-illustration (BM 1927,0614.285).jpg",
+   "titulo": "Salomão recolhe os Provérbios",
+   "alt": "Xilogravura antiga com um rei reclinado numa cama ao centro, um escriba escrevendo à esquerda e figuras de pé junto a uma porta",
+   "legenda": "Ilustração da Vulgata impressa por Jean Marion (c. 1520-21), atribuída a Hans Springinklee, com Salomão recolhendo os provérbios: o rei reclinado e o escriba que registra as sentenças. A cena traduz em imagem o que o próprio livro diz da sua formação — as coleções atribuídas a Salomão e, depois, as 'palavras dos sábios' reunidas pelos homens de Ezequias (Pv 25,1).",
+   "passagem": "Pv 1,1; 25,1",
+   "tecnica": "xilogravura (ilustração de livro impresso)",
+   "acervo": "British Museum, Londres (1927,0614.285)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Harvesting ants and trap-door spiders (Pl. IX) BHL6290773.jpg",
+   "titulo": "Formigas ceifadoras, prancha do século XIX",
+   "alt": "Prancha científica antiga com desenhos de formigas em tamanho aumentado, vistas de cima e de lado, com escala",
+   "legenda": "Prancha da obra de J. Traherne Moggridge sobre as formigas ceifadoras (1873), com o animal em tamanho aumentado. O dossiê a inclui pelo animal de Pv 6,6-8 — 'vai ter com a formiga, ó preguiçoso' —, o único insecto que o livro põe como mestre de sabedoria, e mostra como a observação naturalista posterior descreveu a mesma espécie que o provérbio invoca.",
+   "passagem": "Pv 6,6-11 (cf. 30,25)",
+   "tecnica": "gravura científica (prancha litográfica)",
+   "acervo": "Biodiversity Heritage Library (digitalização da obra de Moggridge, 1873)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Hieratic Ostracon with the beginning of \"The Wisdom of Amenemope\" MET LC-26 3 165 EGDP027774.jpg",
+   "titulo": "Óstraco com o início da Instrução de Amenemope",
+   "alt": "Fragmento de cerâmica com linhas de escrita hierática, fotografado sobre fundo neutro em museu",
+   "legenda": "Óstraco em escrita hierática com o começo da Instrução de Amenemope, uma das testemunhas do texto egípcio que a crítica põe em paralelo com Pv 22,17-23,11 desde o estudo de Adolf Erman (1924). O objeto é o comparando obrigatório do dossiê: a dependência ou a poligenia entre as duas coleções de sentenças é discutida a partir de documentos como este, e não de impressões de leitura.",
+   "passagem": "Pv 22,17-23,11",
+   "tecnica": "escrita hierática sobre óstraco (caco de cerâmica)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (26.3.165; doação do museu, acesso aberto)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Papyrus with the Instruction of Amenemope.jpg",
+   "titulo": "Papiro da Instrução de Amenemope (BM 10474)",
+   "alt": "Fotografia de um papiro com muitas linhas de escrita hierática, montado em moldura de museu",
+   "legenda": "Papiro copiado pelo escriba Senu, filho de Pemu, com a Instrução de Amenemope (Papiro BM 10474, do Terceiro Período Intermediário). O dossiê trata este objecto pelo lado material: o rolo tem cerca de 3,7 m por 250 mm, traz no verso um calendário de dias fastos e nefastos e foi adquirido em 1888 por E. A. Wallis Budge — e a datação da cópia não é a da composição, confusão frequente nos debates sobre quem copiou quem.",
+   "passagem": "contexto comparado (Pv 22,17-23,11)",
+   "tecnica": "papiro com escrita hierática",
+   "acervo": "British Museum, Londres (Papiro BM 10474)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

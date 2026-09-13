@@ -1,0 +1,72 @@
+{
+ "slug": "cronicas",
+ "_comentario": "Especificação editorial das figuras do dossiê de Crônicas. Só os textos (titulo, alt, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data e URL são reconferidos na API do Commons por scripts/imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados na API do Commons.",
+ "figuras": [
+  {
+   "arquivo": "File:Bodleian Library MS. Laud Misc. 752 folio 279v.jpg",
+   "titulo": "Davi, os músicos e a arca da aliança",
+   "alt": "Iluminura com um rei coroado tocando harpa entre músicos, e ao fundo homens que transportam a arca sobre varas",
+   "legenda": "Iluminura de um manuscrito inglês do fim do século XII: Davi, coroado, toca harpa rodeado de músicos, enquanto ao fundo os homens conduzem a arca da aliança. A cena corresponde a 1 Crônicas 15,25-29, a subida da arca a Jerusalém, e mostra o que o Cronista acrescenta a Samuel: o Davi organizador do culto, com os levitas e os turnos de músicos que o livro detalha no capítulo 25.",
+   "passagem": "1Cr 15,25-29; 25,1-8",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Bodleian Library, Oxford (MS. Laud Misc. 752, fol. 279v); digitalização das Bodleian Libraries, domínio público",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Inwijding van de tempel van Salomo en de ark van het verbond I Koningen VIII, vs. 1 Inwying van Salomons Tempel I Koningen VIII vs. 6 De Arke des Verbonds (titel op object), RP-P-1896-A-19368-1893.jpg",
+   "titulo": "A dedicação do templo e a entrada da arca",
+   "alt": "Gravura com multidão reunida no pátio de um grande templo, conduzindo a arca da aliança em procissão",
+   "legenda": "Gravura que ilustra dois versículos de 1 Reis 8 — a inauguração do templo de Salomão e a entrada da arca no santuário (1Rs 8,1.6) —, episódio que Crônicas narra em paralelo, com a oração de Salomão e a resposta do fogo (2Cr 5,2-14; 7,1-3). A escolha interessa ao dossiê porque é o templo de Jerusalém, e não a dinastia, o verdadeiro eixo da história contada pelo Cronista.",
+   "passagem": "2Cr 5,2-14 (paralelo de 1Rs 8,1-13)",
+   "tecnica": "gravura (ilustração de livro)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-1896-A-19368-1893)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:King David and musicians in the Charles the Bald Psalter.jpg",
+   "titulo": "Davi e os chefes dos músicos do templo",
+   "alt": "Iluminura carolíngia com um rei tocando instrumento de cordas ao centro e quatro músicos nos cantos da página, com instrumentos diversos",
+   "legenda": "Iluminura do Saltério de Carlos, o Calvo (século IX): Davi aparece com a lira e, nos cantos, com os músicos identificados na tradição como Asaf, Emã, Etã e Iditun. São exatamente os nomes que 1 Crônicas 25,1-6 apresenta como chefes dos turnos musicais do templo — a passagem em que o Cronista funda na autoridade de Davi o serviço litúrgico dos levitas.",
+   "passagem": "1Cr 25,1-6 (cf. 2Cr 29,25-26)",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Bibliothèque nationale de France, Paris (Manuscrits, Latin 1152); domínio público",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Nicola Malinconico, The Transport of the Ark of the Covenant, c. 1690, NGA 139326.jpg",
+   "titulo": "A condução da arca da aliança",
+   "alt": "Pintura com grande procissão numa paisagem, a arca levada sobre um carro e um cortejo numeroso com músicos e soldados",
+   "legenda": "Pintura de Nicola Malinconico, de cerca de 1690, sobre a condução da arca a Jerusalém (cf. 2Sm 6). O Cronista reescreve o episódio convocando todo o Israel e pondo a festa do povo em primeiro plano (1Cr 13,1-8) — uma das passagens em que a comparação com Samuel revela a teologia própria do livro.",
+   "passagem": "1Cr 13,1-8",
+   "tecnica": "",
+   "acervo": "National Gallery of Art, Washington (arquivo de acesso aberto doado ao Wikimedia Commons)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Eclectic Chronicle.jpg",
+   "titulo": "Crônica babilônica (tablete BM 27859)",
+   "alt": "Desenho a traço de um tablete cuneiforme com várias linhas de escrita, em página de livro antigo",
+   "legenda": "Desenho da crônica acádia conhecida como Crônica Eclética, publicado por L. W. King em 1907 a partir do tablete BM 27859. O objeto é um dos paralelos do dossiê: a Mesopotâmia também produziu crônicas que ordenam reinados num eixo único, e é essa família de textos — e não um modelo exclusivo — que ajuda a situar o gênero historiográfico do Cronista.",
+   "passagem": "2Cr 16,11 (cf. 1Cr 29,29-30)",
+   "tecnica": "desenho a traço de tablete cuneiforme",
+   "acervo": "Tablete BM 27859, British Museum, Londres; desenho de L. W. King, Chronicles Concerning Early Babylonian Kings, vol. II (1907)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:YHD coins.jpg",
+   "titulo": "Moedas de Yehud",
+   "alt": "Conjunto de pequenas moedas antigas dispostas lado a lado, com motivos vegetais e aves",
+   "legenda": "Moedas da província persa de Yehud, com lenda aramaica YHD, cunhadas a partir do século IV a.C. (§12 do dossiê). São o testemunho material mais direto da Yehud em que o Cronista escreve e documentam a economia da província e do templo — não os episódios narrados no livro.",
+   "passagem": "contexto histórico (Yehud persa, séc. IV a.C.)",
+   "tecnica": "moedas (reprodução fotográfica)",
+   "acervo": "Reprodução publicada em Michael Avi-Yonah (ed.), Sepher Yerushalayim, vol. I, Jerusalém, 1956 (domínio público)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

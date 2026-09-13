@@ -1,0 +1,61 @@
+{
+ "slug": "baruque",
+ "_comentario": "Figuras do dossiê de Baruque (Baruc 1-5 + Carta de Jeremias). Fecha a lacuna deixada pelo fan-out (o livro não entrou em nenhum lote). Licença, autor, data e acervo reconferidos na API na hora do download.",
+ "figuras": [
+  {
+   "arquivo": "File:Jehoiachin Ration Tablet.JPG",
+   "titulo": "A tabuleta de rações de Jeconias",
+   "alt": "Tabuleta de argila com escrita cuneiforme, em vitrine de museu",
+   "legenda": "Registro babilônico de rações entregues ao rei Jeconias (Joaquim) e aos seus durante o exílio — o mesmo soberano diante de quem, segundo Bar 1,3-9, o livro foi lido. A tabuleta documenta que o texto fala de gente identificada em arquivo administrativo de Babilônia, e não de um exílio genérico.",
+   "passagem": "Bar 1,1-14 (cf. 2 Rs 25,27-30)",
+   "tecnica": "tabuleta de argila com escrita cuneiforme",
+   "acervo": "Vorderasiatisches Museum, Berlim; fotografia de Scallaham, CC BY-SA 4.0",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Washington Allston - Jeremiah Dictating His Prophecy of the Destruction of Jerusalem to Baruch the Scribe - 1866.1 - Yale University Art Gallery.jpg",
+   "titulo": "Jeremias ditando a profecia a Baruc, o escriba",
+   "alt": "Pintura escura com um profeta idoso sentado à mesa e um jovem escriba inclinado sobre o pergaminho, à luz de uma lâmpada",
+   "legenda": "Washington Allston representa o momento que o livro de Jeremias descreve (Jr 36,4) e que a tradição atribui a Baruc: o ditado e a redação. É a cena que dá ao livro de Baruc a sua autoridade — o texto existe porque um escriba escreveu, e a arte religiosa fixou essa parceria como imagem da transmissão escrita.",
+   "passagem": "Jr 36,4-8 (cf. Bar 1,1)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Yale University Art Gallery (1866.1)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Baruch Writing Jeremiah's Prophecies (89467495).jpg",
+   "titulo": "Baruc escreve as profecias de Jeremias",
+   "alt": "Gravura em preto e branco: um escriba sentado escreve num rolo enquanto o profeta fala ao seu lado",
+   "legenda": "Gravura de Doré para a série da Bíblia inglesa (1866): o escriba no trabalho, sobre o rolo, com o profeta ao lado. O livro de Baruc é o testemunho de que a escrita profética foi obra de escribas profissionais — e é justamente essa função que a Carta de Jeremias (Bar 6) exerce ao instruir os exilados por escrito.",
+   "passagem": "Bar 1,1-8; carta em Bar 6",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ludlul bel nemeqi Ninive.jpg",
+   "titulo": "\"Ludlul bel nemeqi\" — o justo sofredor babilônico",
+   "alt": "Tabuleta de argila densamente inscrita, com fenda vertical, em exposição",
+   "legenda": "Tabuleta de Nínive com o poema acádico conhecido como \"Louvarei o senhor da sabedoria\", em que um justo atribulado narra o próprio sofrimento, reconhece o pecado e é restaurado. A comparação é direta com a oração penitencial de Bar 1,15-3,8 e com o poema sapiencial de Bar 3,9-4,4: a mesma forma de dizer o sofrimento e a mesma confissão de culpa.",
+   "passagem": "Bar 1,15-3,8 (paralelo do ANE)",
+   "tecnica": "tabuleta de argila com escrita cuneiforme",
+   "acervo": "The British Museum, Londres (K.3478); fotografia de Zunkir, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:ABC 05 Early Years of Nebuchadnezzar chronicle.jpg",
+   "titulo": "Crônica dos primeiros anos de Nabucodonosor",
+   "alt": "Tabuleta de argila com escrita cuneiforme, em imagem de catálogo",
+   "legenda": "A Crônica Babilônica ABC 5 registra, entre os anos 605 e 594 a.C., o cerco de Jerusalém e a submissão de Joaquim — o evento que abre o exílio de que Baruc 1 fala. É o ponto em que o dossiê pode dizer o que a epigrafia permite afirmar: a campanha e o tributo estão documentados fora da Bíblia; o conteúdo religioso do livro, não.",
+   "passagem": "contexto histórico de Bar 1,1-14",
+   "tecnica": "tabuleta de argila com escrita cuneiforme",
+   "acervo": "The British Museum, Londres (ABC 5); imagem de Jona Lendering (CC0)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

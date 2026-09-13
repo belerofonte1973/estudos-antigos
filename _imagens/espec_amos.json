@@ -1,0 +1,72 @@
+{
+ "slug": "amos",
+ "_comentario": "Especificação editorial das figuras do dossiê de Amos. Só os textos (titulo, alt, legenda, passagem, secao) e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Todos os File: abaixo foram confirmados pelo script (existem, licença utilizável, largura mínima).",
+ "figuras": [
+  {
+   "arquivo": "File:Amos (Amos 7 14-15) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
+   "titulo": "Amos diante de Amazias",
+   "alt": "Prancha impressa com a cena de Amos 7,14-15: o profeta pastor responde ao sacerdote de Betel",
+   "legenda": "Prancha da reprodução impressa de 1904 (M. de Brunoff & Cie) das 400 pinturas compostas a partir dos desenhos de James Tissot, aqui na cena de Am 7,14-15: Amos responde a Amazias, sacerdote de Betel, que 'não era profeta nem filho de profeta, mas pastor e cultivador de sicômoros'. O episódio é a única narrativa biográfica do livro e define a autoridade profética como chamado direto de Deus, e não como ofício herdado.",
+   "passagem": "Am 7,10-17",
+   "tecnica": "reprodução impressa (M. de Brunoff & Cie, 1904)",
+   "acervo": "Reprodução impressa de M. de Brunoff & Cie (1904), a partir de desenhos de James Tissot; fotografia de Phillip Medhurst, CC BY-SA 4.0",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Prophet Amos (89471482).jpg",
+   "titulo": "O profeta Amos",
+   "alt": "Gravura em preto e branco com a figura do profeta Amos, ilustração da abertura do livro",
+   "legenda": "Gravura de Gustave Doré para a edição polonesa da Bíblia impressa em Varsóvia em 1874 (exemplar da Biblioteca Nacional da Polônia). O livro abre com o anúncio do juízo sobre Damasco, Gaza, Tiro, Edom, Amom, Moab e também sobre Judá (Am 1-2), e a figura isolada do pastor de Tecoa foi a imagem que Doré escolheu para acompanhar essa abertura. As ilustrações de Doré fixaram no século XIX a imagem do profeta que este dossiê discute.",
+   "passagem": "Am 1,1-2",
+   "tecnica": "gravura (ilustração bíblica)",
+   "acervo": "Biblioteka Narodowa (Biblioteca Nacional da Polônia), Varsóvia",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Prophet Amos, from Prophets and Sibyls MET DP835438.jpg",
+   "titulo": "O profeta Amos, da série 'Profetas e Sibilas'",
+   "alt": "Gravura renascentista em preto e branco com a figura isolada do profeta Amos",
+   "legenda": "Prancha da série 'Profetas e Sibilas', gravada em Florença entre 1480 e 1490 e atribuída a Francesco Rosselli e Baccio Baldini, hoje no Metropolitan Museum of Art. É uma das primeiras representações impressas de Amos: cada profeta da série aparece isolado, com os atributos que a tradição lhe deu. O livro que anuncia o juízo correndo 'como as águas' (Am 5,24) entra assim na iconografia do Renascimento italiano.",
+   "passagem": "Am 5,21-24",
+   "tecnica": "gravura (série Profetas e Sibilas)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (domínio público/CC0)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:De profetieën van Amos, RP-T-1954-91.jpg",
+   "titulo": "As profecias de Amos",
+   "alt": "Desenho a giz vermelho, preto e branco sobre papel, com uma composição sobre as profecias de Amos",
+   "legenda": "Desenho a giz vermelho, preto e branco, executado segundo projeto de Jacob Jordaens e guardado no Rijksmuseum (inv. RP-T-1954-91). A folha interpreta o conjunto das profecias de Amos, entre elas as cinco visões dos capítulos 7 a 9 — o gafanhoto, o fogo devorador, o prumo, o cesto de frutos e o Senhor junto ao altar. O desenho documenta a recepção barroca do livro nos Países Baixos do século XVII.",
+   "passagem": "Am 7-9",
+   "tecnica": "desenho a giz vermelho, preto e branco sobre papel",
+   "acervo": "Rijksmuseum, Amsterdã (inv. RP-T-1954-91); segundo projeto de Jacob Jordaens",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Assyrian royal lion hunt.jpg",
+   "titulo": "A caçada real ao leão, do palácio de Nínive",
+   "alt": "Relevo em pedra com a caçada real ao leão, do Palácio Norte de Nínive, 645-635 a.C.",
+   "legenda": "Relevo do Palácio Norte de Nínive (sala C, painéis 25-28), esculpido entre 645 e 635 a.C., com a caçada real ao leão. O leão é animal central em Amos: é o rugido que dá nome à profecia (Am 3,8), o pastor que arranca da boca do leão duas pernas e uma orelha da ovelha (Am 3,12) e o perigo que surpreende quem não se prepara (Am 5,19). O relevo assírio é o melhor material figurativo para o animal e para a caça real no mundo em que o profeta falava.",
+   "passagem": "Am 3,4-8.12; 5,19",
+   "tecnica": "relevo em pedra (Palácio Norte de Nínive)",
+   "acervo": "Palácio Norte de Nínive, sala C, painéis 25-28 (645-635 a.C.)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Jordan Valley north of Lake Galilee. Excavations on ancient Hazor. LOC matpc.02825.jpg",
+   "titulo": "Escavações no sítio de Hazor",
+   "alt": "Fotografia em preto e branco de um sítio arqueológico escavado, com trincheiras e ruínas, na paisagem do vale do Jordão",
+   "legenda": "Fotografia da coleção de G. Eric e Edith Matson (1920), na Biblioteca do Congresso, com as escavações do sítio de Hazor ao norte do lago da Galileia. Am 1,1 situa a profecia 'dois anos antes do terremoto', e as camadas de destruição de Hazor — cidade arrasada no século XIII a.C. e de novo no século VIII a.C. — são o material com que a arqueologia discute a estratigrafia e os abalos sísmicos da região. A fotografia documenta o sítio tal como se apresentava na primeira metade do século XX.",
+   "passagem": "Am 1,1 (cf. 4,6-11)",
+   "tecnica": "fotografia (negativo em vidro)",
+   "acervo": "Library of Congress, Washington (G. Eric e Edith Matson Photograph Collection)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

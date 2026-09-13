@@ -1,0 +1,73 @@
+{
+ "slug": "jubileus",
+ "_comentario": "Especificação editorial das figuras do dossiê de Jubileus (Kufale). Só os textos e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons por imagens_baixar.py — e o que a API disser vence. Toda obra foi confirmada com scripts/imagens_buscar.py.",
+ "_material_escasso": "Jubileus não tem iconografia própria: não localizei obra de licença livre que represente a Festa das Semanas de Jub 6, o anjo da presença ditando o livro a Moisés, a circuncisão de Isaque (Jub 15) ou os rolos de Qumran do próprio livro (1Q17, 1Q18, 4Q216-224, 11Q12). As figuras abaixo cobrem o que o material disponível permite: a revelação no Sinai, a cadeia etíope de transmissão, o objeto mesopotâmico comparável (§9) e a base material hasmoneia (§12).",
+ "figuras": [
+  {
+   "arquivo": "File:Rembrandt - Moses with the Ten Commandments - Google Art Project.jpg",
+   "titulo": "Moisés com as Tábuas da Lei",
+   "alt": "Pintura em que Moisés ergue as duas tábuas da lei",
+   "legenda": "Jubileus não se apresenta como obra humana: é o anjo da presença que dita a Moisés, no Sinai, a Torá integral — a versão que o livro considera completa, contra o Gênesis abreviado (§4.1). Rembrandt fixa o gesto dessa entrega: as duas tábuas na mão do legislador. É a moldura de que a §4.2 depende, porque é no Sinai que o anjo revela o ano de 364 dias, a cronologia das semanas e dos jubileus e a Festa das Semanas que Noé celebra depois do dilúvio.",
+   "passagem": "Jub 1,1-4; 6,17-22 (cf. §4.1)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Rembrandt, 1659; digitalização da Google Arts & Culture (Google Art Project)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Sculpture of Moses with Tablets of the Law MET DP359501.jpg",
+   "titulo": "Moisés com as tábuas, escultura do século XII",
+   "alt": "Escultura em pedra de uma figura que segura duas tábuas",
+   "legenda": "Escultura francesa de cerca de 1170, hoje no Metropolitan Museum: Moisés com as tábuas da lei esculpido para ser visto dentro de uma igreja, quando o Ocidente já não lia Jubileus. A peça mostra como o tema chegou à arte medieval pela via canônica — e serve de contraponto ao que o dossiê argumenta na §4.3: a halakhá de Jubileus não coincide com a rabínica posterior nem com a leitura cristã, e é justamente esse desencontro que faz do livro uma peça-chave na reconstrução do pluralismo legal do Segundo Templo.",
+   "passagem": "Jub 1; 15; 16; 21 (cf. §4.3)",
+   "tecnica": "escultura (c. 1170)",
+   "acervo": "The Metropolitan Museum of Art, Nova York (doação do museu, acesso aberto)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ethiopian - Leaf from Gunda Gunde Gospels - Walters W8504V - Open Group.jpg",
+   "titulo": "Folha de evangelho etíope de Gunda Gunde",
+   "alt": "Página de manuscrito etíope com texto em ge'ez e iluminura",
+   "legenda": "Folha de um evangelho copiado por volta de 1540 no mosteiro de Gunda Gunde (Walters Art Museum, W.850). Não é um manuscrito de Jubileus — é o testemunho da oficina de escrita que transmitiu o livro: para o ge'ez o texto passou antes do século VI, e sem essa tradição Jubileus seria hoje uma obra reconstruída de fragmentos (§6). A peça documenta o canal que a §12 descreve como único completo, do qual dependem todas as traduções modernas.",
+   "passagem": "transmissão etíope (cf. §6 e §12)",
+   "tecnica": "",
+   "acervo": "Walters Art Museum, Baltimore (W.850)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Enuma Elish K.3473.jpg",
+   "titulo": "Tábua do Enūma Eliš",
+   "alt": "Fragmento de tábua de argila com escrita cuneiforme, sobre fundo neutro",
+   "legenda": "Fragmento de tábua do Enūma Eliš, o poema babilônico da criação, encontrado em Nínive na biblioteca de Assurbanípal (século VII a.C., tábua K.3473). O motivo das tábuas do céu de Jubileus tem aqui o seu ancestral preciso: as 'tábuas do destino' mesopotâmicas, que quem as possui governa a história. A diferença que a §9 sublinha é o que o livro faz com o empréstimo — trata a tábua como lei moral eterna, escrita antes da criação: o destino é desmitologizado e convertido em Torá.",
+   "passagem": "Jub 4,32; 30,20-22 (cf. §9)",
+   "tecnica": "tábua de argila inscrita em cuneiforme (séc. VII a.C.)",
+   "acervo": "Nínive, biblioteca de Assurbanípal (tábua K.3473); fotografia de Zunkir, CC BY-SA 4.0",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Alexander Jannaeus coin.JPG",
+   "titulo": "Prutah de Alexandre Janeu",
+   "alt": "Moeda de bronze antiga com cornucópias e inscrição em caracteres hebraicos antigos",
+   "legenda": "Prutah de bronze de Alexandre Janeu, com a inscrição 'Jônatas, sumo sacerdote, e o conselho dos judeus' e um par de cornucópias. A numismática hasmoneia é a espinha dorsal cronológica do período em que os manuscritos de Jubileus foram copiados, e é ela que a §12 usa para situar Qumran no seu quadro material — o assentamento, as cavernas e o acervo de textos calendáricos, com um relógio de sol entre os achados. A moeda não nomeia o autor de Jubileus, e o dossiê não pretende que nomeie.",
+   "passagem": "contexto hasmoneu (cf. §12)",
+   "tecnica": "moeda de bronze (período hasmoneu)",
+   "acervo": "Coleção Itamar Atzmon; fotografia de Atzmonit, CC BY-SA 4.0",
+   "secao": "12",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Genesis 1 Dead Sea Scroll.jpg",
+   "titulo": "Fragmento de Gênesis de Qumran (4Q7)",
+   "alt": "Fragmento de pergaminho escuro com texto hebraico antigo, montado sobre suporte",
+   "legenda": "O fragmento 4Q7 é um rolo de Gênesis de Qumran — não é um rolo de Jubileus, e o dossiê não os confunde. Ele entra porque a datação do livro depende da paleografia dos seus próprios catorze ou quinze rolos (1Q17, 1Q18, 2Q19, 2Q20, 3Q5, 4Q216-224, 11Q12), todos em hebraico, e porque entre os achados de Qumran está o material calendárico que documenta a querela do ano de 364 dias (§4.2 e §12). O fragmento mostra o estado material em que esse corpus chegou até nós.",
+   "passagem": "cf. §4.2 e §12",
+   "tecnica": "pergaminho inscrito (Qumran)",
+   "acervo": "Fragmento 4Q7 de Qumran; fotografia de KetefHinnomFan, CC0",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

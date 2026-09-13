@@ -1,0 +1,61 @@
+{
+ "slug": "oseias",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Profeet Hosea met zijn vrouw en kinderen, RP-P-OB-21.498(R).jpg",
+   "titulo": "O profeta Oseias com sua mulher e filhos",
+   "alt": "Gravura com um profeta junto a uma mulher e duas crianças, em cenário com colunas",
+   "legenda": "Gravura de 1530-1533 conservada no Rijksmuseum, com o profeta, a mulher e os filhos — os nomes que Os 1,2-9 carrega como sinais. O dossiê usa a estampa porque o casamento de Oseias com Gômer é apresentado no texto como ação simbólica: o profeta vive, na própria casa, o que anuncia sobre a relação entre Deus e o povo.",
+   "passagem": "Os 1,2-9",
+   "tecnica": "gravura (buril)",
+   "acervo": "Rijksmuseum, Amsterdã (RP-P-OB-21.498)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Gillis van Coninxloo - Mountain Landscape with River Valley and the Prophet Hosea - WGA05181.jpg",
+   "titulo": "Paisagem montanhosa com o profeta Oseias",
+   "alt": "Pintura de paisagem com montanhas, rio e pequenas figuras entre árvores",
+   "legenda": "Paisagem de Gillis van Coninxloo, do século XVI, com o profeta como figura pequena no meio do vale — a fórmula flamenga de colocar a cena bíblica dentro da natureza. O dossiê usa a pintura porque Oseias fala do deserto como lugar do encontro e da terra que responde ao povo (Os 2,16-25): a paisagem não é cenário, é argumento.",
+   "passagem": "Os 2,16-25",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Web Gallery of Art (imagem de referência)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Prophet Hosea in Augsburg Cathedral.jpg",
+   "titulo": "Oseias em vitral da catedral de Augsburgo",
+   "alt": "Vitral com uma figura de profeta com filactério, em moldura de chumbo e cores intensas",
+   "legenda": "Vitral do início do século XII na catedral de Augsburgo, com Oseias entre os profetas que ladeiam o coro — a série em que a Idade Média dispôs os doze profetas menores como testemunhas. O dossiê usa o vitral na seção de recepção porque mostra o livro lido dentro do edifício: o profeta do casamento e do deserto aparece, em vidro, sobre quem entra para rezar.",
+   "passagem": "Os 1-3 (recepção)",
+   "tecnica": "vitral (início do século XII)",
+   "acervo": "Catedral de Augsburgo, Alemanha; fotografia de Hans Bernhard (Schnobby), CC BY-SA 3.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Robe of the prophet Hosea by John Singer Sargent, study for Triumph of Religion mural in the Boston Public Library, installed 1895, oil on canvas - Fitchburg Art Museum - DSC08873.JPG",
+   "titulo": "O manto do profeta Oseias, de Sargent",
+   "alt": "Pintura de um manto ritual de cores vivas, pendurado, em fundo escuro",
+   "legenda": "Estudo a óleo de John Singer Sargent, feito em 1895 para o mural O triunfo da religião, na Biblioteca Pública de Boston, e hoje no Fitchburg Art Museum: o profeta reduzido às suas vestes. O dossiê usa a obra na seção de recepção porque o século XIX voltou a Oseias pelo viés do lamento e da perda — e o quadro mostra o profeta pelo que ele deixa atrás de si.",
+   "passagem": "Os 11,1-11 (recepção)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Fitchburg Art Museum, Massachusetts",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Ajrud.jpg",
+   "titulo": "A jarra de Kuntillet Ajrud",
+   "alt": "Fragmento de cerâmica pintada com figuras desenhadas em traços vermelhos e escuros",
+   "legenda": "Fragmento de jarra pintada encontrado em Kuntillet Ajrud, no Sinai, do século VIII a.C., com figuras e inscrições que mencionam o nome divino junto ao de sua Asherá. O dossiê usa o objeto na seção de comparação porque é evidência direta do ambiente religioso que Os 2,4-15 descreve e condena: o culto a Baal e à Asherá não era hipótese teológica do profeta, era prática documentada.",
+   "passagem": "contexto epigráfico (cf. Os 2,4-15)",
+   "tecnica": "cerâmica pintada (séc. VIII a.C.)",
+   "acervo": "Kuntillet Ajrud, Sinai (imagem de domínio público, Wikimedia Commons)",
+   "secao": "9",
+   "posicao": "fim"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "slug": "oseias",
+ "gerado_por": "scripts/imagens_baixar.py",
+ "formato": "webp",
+ "largura_max": 950,
+ "qualidade": 75,
+ "figuras": [
+  {
+   "ordem": 4,
+   "src": "/imagens/oseias/04-o-manto-do-profeta-oseias-de-sargent.webp",
+   "arquivo_origem": "File:Robe of the prophet Hosea by John Singer Sargent, study for Triumph of Religion mural in the Boston Public Library, installed 1895, oil on canvas - Fitchburg Art Museum - DSC08873.JPG",
+   "titulo": "O manto do profeta Oseias, de Sargent",
+   "legenda": "Estudo a óleo de John Singer Sargent, feito em 1895 para o mural O triunfo da religião, na Biblioteca Pública de Boston, e hoje no Fitchburg Art Museum: o profeta reduzido às suas vestes. O dossiê usa a obra na seção de recepção porque o século XIX voltou a Oseias pelo viés do lamento e da perda — e o quadro mostra o profeta pelo que ele deixa atrás de si.",
+   "passagem": "Os 11,1-11 (recepção)",
+   "artista": "Daderot",
+   "data": "2013-06-14 15:40:41",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Fitchburg Art Museum, Massachusetts",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ARobe_of_the_prophet_Hosea_by_John_Singer_Sargent%2C_study_for_Triumph_of_Religion_mural_in_the_Boston_Public_Library%2C_installed_1895%2C_oil_on_canvas_-_Fitchburg_Art_Museum_-_DSC08873.JPG",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 3158,
+   "altura_original": 5016,
+   "secao": "6",
+   "posicao": "fim",
+   "descricao_fonte": "Exhibit in the Fitchburg Art Museum, Fitchburg, Massachusetts, USA. This artwork is in the public domain because the artist died more than 70 years ago. Photography was permitted in the museum without restriction.",
+   "sha256": "c14f67644b7aa3d5",
+   "bytes": 93762,
+   "largura_final": 950,
+   "altura_final": 1509
+  }
+ ],
+ "recusadas": [
+  [
+   "File:Profeet Hosea met zijn vrouw en kinderen, RP-P-OB-21.498(R).jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Gillis van Coninxloo - Mountain Landscape with River Valley and the Prophet Hosea - WGA05181.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Prophet Hosea in Augsburg Cathedral.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ],
+  [
+   "File:Ajrud.jpg",
+   "falha ao baixar o arquivo (429/rede)"
+  ]
+ ]
+}

@@ -53,6 +53,7 @@ def comprimir(origem: pathlib.Path, largura: int, qualidade: int, teste: bool = 
         escritor.add_metadata({"/Title": titulo})
 
     destino = origem if not teste else origem.with_name("_teste_" + origem.name)
+    antes = origem.stat().st_size
     tmp = destino.with_name(destino.stem + ".tmp.pdf")
     with open(tmp, "wb") as fh:
         escritor.write(fh)
@@ -62,7 +63,7 @@ def comprimir(origem: pathlib.Path, largura: int, qualidade: int, teste: bool = 
     with open(destino, "wb") as fh:
         escritor2.write(fh)
     tmp.unlink(missing_ok=True)
-    return origem.stat().st_size, destino.stat().st_size, n
+    return antes, destino.stat().st_size, n
 
 
 def main() -> None:

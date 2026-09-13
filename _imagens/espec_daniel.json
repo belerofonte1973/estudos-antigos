@@ -1,0 +1,72 @@
+{
+ "slug": "daniel",
+ "_comentario": "Especificação editorial das figuras do dossiê. Só os textos (titulo, alt, legenda, passagem) e a chave do arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Sir Peter Paul Rubens - Daniel in the Lions' Den - Google Art Project.jpg",
+   "titulo": "Daniel na cova dos leões",
+   "alt": "Pintura com um homem pálido de braços erguidos no meio de leões, numa cova escura",
+   "legenda": "Rubens pinta, entre 1614 e 1616, o momento de Dn 6,17-24 em que Daniel é lançado na cova e os leões não o ferem — as mãos erguidas são a oração que o capítulo destaca. O dossiê usa a obra porque a cova dos leões é a cena que a arte europeia escolheu para figurar a fidelidade que sobrevive ao poder: o animal que deveria matar é o que testemunha a inocência.",
+   "passagem": "Dn 6,1-29",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Google Arts & Culture (Google Cultural Institute)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Rembrandt - Belshazzar's Feast - WGA19123.jpg",
+   "titulo": "O banquete de Baltasar",
+   "alt": "Pintura com uma mesa de banquete e convivas assustados diante de letras luminosas na parede",
+   "legenda": "Rembrandt representa Dn 5: no banquete de Baltasar, uma mão escreve na parede as palavras que Daniel lerá como sentença. O dossiê usa a cena porque ela é o exemplo máximo do tema do livro — os impérios têm prazo, e o texto o mede em letras que o rei não sabe ler.",
+   "passagem": "Dn 5,1-30",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Web Gallery of Art (imagem de referência)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:William Blake - Nebuchadnezzar (Tate Britain).jpg",
+   "titulo": "Nabucodonosor",
+   "alt": "Gravura colorida com uma figura nua e bestial de quatro apoios, de cabelos e unhas longos",
+   "legenda": "William Blake gravou em 1795, e retomou por volta de 1805, o rei de Dn 4,28-33 reduzido à condição de animal — comendo erva, com unhas como garras e cabelos como penas de águia. O dossiê usa a imagem porque ela exprime com força o que o capítulo diz sobre a soberania: o rei que se diz autor de sua própria grandeza perde a humanidade até reconhecê-la.",
+   "passagem": "Dn 4,1-34",
+   "tecnica": "gravura colorida em relevo",
+   "acervo": "Tate Britain, Londres",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Artemisia Gentileschi - Susanna and the Elders near a Balcony.jpg",
+   "titulo": "Susana e os velhos",
+   "alt": "Pintura com uma mulher que se cobre e se afasta de dois homens idosos que se aproximam",
+   "legenda": "Artemisia Gentileschi pinta, por volta de 1652, a cena de Dn 13, o capítulo grego de Susana: dois anciãos assediam Susana no jardim e, rejeitados, a acusam. O dossiê usa a obra porque ela mostra um dos textos deuterocanônicos ligados a Daniel e porque, na leitura moderna, a pintura põe o foco na mulher que resiste, e não nos acusadores.",
+   "passagem": "Dn 13,1-64 (Susana)",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Imagem de referência (domínio público, Wikimedia Commons)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Valcavado Beatus, fol. 199v Three Hebrew youths in the fiery furnace.jpg",
+   "titulo": "Os três jovens na fornalha",
+   "alt": "Iluminura de página inteira com figuras em compartimentos, entre chamas e instrumentos musicais",
+   "legenda": "Fólio 199v do Beato de Valcavado, copiado em 970: os três jovens de Dn 3,8-25 na fornalha, com músicos tocando diante de uma imagem a ser adorada. O dossiê usa a iluminura na seção de recepção porque o livro foi copiado e ilustrado nas margens da Europa medieval, e o tema dos jovens que recusam adorar a estátua é o mesmo que atravessa a arte dos mártires.",
+   "passagem": "Dn 3,1-30",
+   "tecnica": "iluminura sobre pergaminho (970)",
+   "acervo": "Beato de Valcavado, copiado por Oveco em 970 (fólio 199v)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Passing lion, brick panel from the Procession Way which ran from the Marduk temple to the Ishtar Gate and the Akitu Temple. Glazed terracotta, reign of Nebuchadrezzar II (605 BC–562 BC), Babylon (Iraq).Louvre Museum (12251455183).jpg",
+   "titulo": "Leão do caminho processional da Babilônia",
+   "alt": "Painel de tijolos vidrados azuis com um leão em relevo, em moldura de museu",
+   "legenda": "Painel de tijolos vidrados do caminho processional da Babilônia, do reinado de Nabucodonosor II, no Museu do Louvre: leões em série bordejavam a via pela qual passava a procissão do ano novo. O dossiê usa o objeto na seção de comparação porque a Babilônia de Dn 1-6 — a cidade, suas muralhas e seus deuses — tem endereço arqueológico.",
+   "passagem": "contexto histórico (cf. Dn 1,1-2; 4,30)",
+   "tecnica": "tijolos vidrados em relevo (séc. VI a.C.)",
+   "acervo": "Musée du Louvre, Paris; fotografia de Carole Raddato, CC BY-SA 2.0",
+   "secao": "9",
+   "posicao": "fim"
+  }
+ ]
+}

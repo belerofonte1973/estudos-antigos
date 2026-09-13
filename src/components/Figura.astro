@@ -1,0 +1,175 @@
+---
+/**
+ * FIGURA — obra de arte, objeto arqueológico ou imagem de época dentro do dossiê.
+ *
+ * Regra do acervo: só entra imagem em domínio público ou com licença que permita
+ * reuso (PDM/CC0/CC BY/CC BY-SA), sempre com a ficha completa — autor, data,
+ * técnica, acervo, fonte e licença. A legenda descreve o que se vê e remete à
+ * passagem; a ficha remete à fonte primária da imagem.
+ *
+ * Uso em MDX (import depois do `---`, junto dos outros, e antes da linha em branco):
+ *
+ *   import Figura from '../../../components/Figura.astro';
+ *
+ *   <Figura
+ *     src="/imagens/juizes/01-sansao-e-dalila.jpg"
+ *     alt="Sansão adormecido no colo de Dalila, enquanto um homem corta seus cabelos"
+ *     titulo="Sansão e Dalila"
+ *     legenda="Dalila faz Sansão dormir e manda cortar as sete tranças..."
+ *     passagem="Jz 16,4-22"
+ *     artista="Lucas Cranach, o Velho"
+ *     data="c. 1528-1530"
+ *     tecnica="óleo sobre madeira"
+ *     acervo="The Metropolitan Museum of Art, Nova York"
+ *     fonte="https://commons.wikimedia.org/wiki/File:..."
+ *     licenca="CC0 1.0"
+ *   />
+ */
+interface Props {
+	/** Caminho servido pelo site, sempre começando em /imagens/. */
+	src: string;
+	/** Descrição para leitores de tela e para o texto alternativo. */
+	alt: string;
+	/** Título curto da obra, ex.: "Sansão e Dalila". */
+	titulo: string;
+	/** O que se vê — uma ou duas frases, com a passagem bíblica citada. */
+	legenda: string;
+	/** Referência bíblica, ex.: "Jz 16,4-22". */
+	passagem?: string;
+	artista?: string;
+	data?: string;
+	tecnica?: string;
+	acervo?: string;
+	/** URL da fonte da imagem (página de onde ela veio, com a licença). */
+	fonte: string;
+	/** Rótulo da fonte, ex.: "Wikimedia Commons", "The Met (Open Access)". */
+	fonteRotulo?: string;
+	/** Licença, como consta na fonte, ex.: "Domínio público", "CC0 1.0". */
+	licenca: string;
+	/** Ocupa a largura total da coluna de texto. */
+	larga?: boolean;
+}
+
+const {
+	src,
+	alt,
+	titulo,
+	legenda,
+	passagem,
+	artista,
+	data,
+	tecnica,
+	acervo,
+	fonte,
+	fonteRotulo = 'Wikimedia Commons',
+	licenca,
+	larga = false,
+} = Astro.props;
+
+const ficha = [
+	artista && `${artista}`,
+	data && `${data}`,
+	tecnica && `${tecnica}`,
+	acervo && `${acervo}`,
+]
+	.filter(Boolean)
+	.join(' · ');
+---
+
+<figure class:list={['ea-figura', larga && 'ea-figura--larga']}>
+	<img src={src} alt={alt} loading="lazy" decoding="async" width="1400" />
+	<figcaption class="ea-figura__cap">
+		<span class="ea-figura__titulo">
+			{titulo}
+			{passagem && <span class="ea-figura__passagem"> · {passagem}</span>}
+		</span>
+		<span class="ea-figura__legenda" set:html={legenda} />
+		{ficha && <span class="ea-figura__ficha">{ficha}</span>}
+		<span class="ea-figura__credito">
+			Fonte: <a href={fonte} rel="noopener noreferrer" target="_blank">{fonteRotulo}</a>
+			{' · '}
+			Licença: {licenca}
+		</span>
+	</figcaption>
+</figure>
+
+<style>
+	.ea-figura {
+		margin: 1.9rem 0;
+		padding: 0;
+		background: var(--bg-warm);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		overflow: hidden;
+	}
+
+	.ea-figura img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 78vh;
+		object-fit: contain;
+		background: var(--bg);
+	}
+
+	.ea-figura--larga {
+		margin-inline: calc(-1 * var(--gutter, 0px));
+	}
+
+	.ea-figura__cap {
+		display: block;
+		padding: 0.75rem 1rem 0.85rem;
+		font-family: var(--font-ui);
+		font-size: 0.88rem;
+		line-height: 1.6;
+		border-top: 1px solid var(--border);
+	}
+
+	.ea-figura__titulo {
+		display: block;
+		font-weight: 600;
+		color: var(--ink);
+		margin-bottom: 0.15rem;
+	}
+
+	.ea-figura__passagem {
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--accent);
+		white-space: nowrap;
+	}
+
+	.ea-figura__legenda {
+		display: block;
+		color: var(--ink-2);
+	}
+
+	.ea-figura__legenda :global(em),
+	.ea-figura__legenda :global(i) {
+		font-style: italic;
+	}
+
+	.ea-figura__ficha {
+		display: block;
+		margin-top: 0.35rem;
+		font-size: 0.82rem;
+		color: var(--ink-3);
+	}
+
+	.ea-figura__credito {
+		display: block;
+		margin-top: 0.15rem;
+		font-size: 0.76rem;
+		color: var(--ink-3);
+	}
+
+	.ea-figura__credito a {
+		color: var(--ink-3);
+		border-bottom: 1px solid color-mix(in srgb, var(--ink-3) 45%, transparent);
+	}
+
+	.ea-figura__credito a:hover {
+		color: var(--accent);
+	}
+</style>

@@ -116,11 +116,27 @@ def main():
     faltam = sorted(refs - existentes)
     peso = sum(p.stat().st_size for p in (OUT / "fonts").glob("*.woff2")) // 1024
     print(f"  fonts/: {len(existentes)} arquivos ({peso} KB) · referenciados: {len(refs)} · faltando: {len(faltam)}")
+
+    # imagens: toda <img src="./imagens/..."> precisa existir no destino
+    imagens_ref, imagens_falta = set(), []
+    for nome in sorted(paginas):
+        for src in re.findall(r'<img[^>]+src="\./(imagens/[^"]+)"', (OUT / nome).read_text(encoding="utf-8")):
+            imagens_ref.add(src)
+            if not (OUT / src).exists():
+                imagens_falta.append(f"{nome} -> {src}")
+    peso_img = 0
+    if (OUT / "imagens").exists():
+        peso_img = sum(p.stat().st_size for p in (OUT / "imagens").rglob("*") if p.is_file()) // 1024
+    print(f"  imagens referenciadas: {len(imagens_ref)} · ausentes: {len(imagens_falta)} · "
+          f"peso em disco: {peso_img / 1024:.1f} MB")
+    if imagens_falta:
+        falhas.append(f"imagens ausentes: {imagens_falta[:5]}")
+    if refs - existentes:
+        falhas.append(f"fontes ausentes: {sorted(refs - existentes)}")
+
     com_import = [n for n in sorted(paginas) if "@import" in (OUT / n).read_text(encoding="utf-8")
                   or "fonts.googleapis" in (OUT / n).read_text(encoding="utf-8")]
     print(f"  páginas que ainda dependem de rede para fonte: {len(com_import)}")
-    if faltam:
-        falhas.append(f"fontes ausentes: {faltam}")
     if com_import:
         falhas.append(f"@import remoto em {com_import[:3]}")
 

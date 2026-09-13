@@ -1,0 +1,105 @@
+{
+ "slug": "juizes",
+ "_comentario": "Especificação editorial das figuras do dossiê de Juízes. Só os textos (titulo, legenda, passagem) e o campo arquivo são editoriais; licença, autor, data, acervo e URL são reconferidos na API do Commons em imagens_baixar.py — e o que a API disser vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Ilario Spolverini - Gideon in the camp of the Midianites.jpg",
+   "titulo": "Gideão no acampamento dos midianitas",
+   "alt": "Cena noturna com Gideão e um companheiro junto às tendas de um acampamento militar, sob luz de fogueiras",
+   "legenda": "A pintura de Spolverini escolhe o momento menos ilustrado do ciclo de Gideão: a descida noturna ao acampamento inimigo (Jz 7,9-15), quando ele ouve de um soldado o sonho do pão de cevada que rola até a tenda — sinal de que a batalha está decidida antes de começar. É o episódio que sustenta o tema central de Juízes: a vitória não vem do número.",
+   "passagem": "Jz 7,9-15",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Coleção particular; imagem de catálogo da Christie's",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Le sacrifice de la fille de Jephté - Antoine Coypel - MBA Dijon CA 263.jpg",
+   "titulo": "O voto de Jefté cumprido",
+   "alt": "Figura feminina saindo ao encontro de um homem armado, com tambores e mulheres festejando ao fundo",
+   "legenda": "Coypel pinta o instante em que a filha de Jefté sai ao encontro do pai vitorioso com tambores e danças (Jz 11,34) — o cumprimento forçado do voto feito às pressas em Jz 11,30-31. O texto não descreve o sacrifício, apenas o luto de duas mulheres por dois meses (Jz 11,37-40); a pintura faz o espectador encarar exatamente o que a narrativa deixa no silêncio.",
+   "passagem": "Jz 11,30-40",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Musée des Beaux-Arts de Dijon (inv. CA 263)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:060.Samson Slays a Lion.jpg",
+   "titulo": "Sansão despedaça o leão",
+   "alt": "Gravura em preto e branco: um homem domina um leão erguido contra ele, numa paisagem rochosa",
+   "legenda": "Gravura de Doré para Jz 14,5-6: o leão de Timna ataca Sansão no caminho das vinhas e o texto frisa a facilidade do ato — 'nada tinha nas mãos'. Doré constrói a cena como combate corpo a corpo, com o animal em posição de revide, e assim acentua o que o narrador sublinha: a força que o herói não pediu e de que se servirá sem saber.",
+   "passagem": "Jz 14,5-6",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Peter Paul Rubens - Samson and Delilah - Google Art Project.jpg",
+   "titulo": "Sansão e Dalila",
+   "alt": "Sansão adormecido no colo de uma mulher enquanto um homem corta seus cabelos, com figuras armadas observando à porta",
+   "legenda": "Rubens concentra numa só cena o que o texto distribui em dois atos: o sono e o corte da sétima trança (Jz 16,19) e a entrada dos filisteus (Jz 16,20-21). A luz recai sobre o corpo adormecido — a força que se retira sem que o herói perceba, e que o narrador anuncia ao dizer que Sansão 'não sabia' (Jz 16,20).",
+   "passagem": "Jz 16,4-22",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Digitalização: Google Art Project / Google Cultural Institute",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:The Prophetess Deborah Ordering Barak to Take Arms against Sisera MET DP801530.jpg",
+   "titulo": "A profetisa Débora ordena a Baraque que pegue em armas",
+   "alt": "Desenho com uma mulher sentada sob uma árvore dirigindo-se a um homem de pé, que segura uma lança",
+   "legenda": "Débora é a única figura de Juízes que julga, profetiza e manda outro ir à guerra. Solimena representa a ordem a Baraque (Jz 4,6-7) à sombra da palmeira que o texto liga ao nome dela (Jz 4,5) — e o detalhe importa: quem decide a batalha neste capítulo não é o general, e o cântico do capítulo 5 será proferido pela voz dela.",
+   "passagem": "Jz 4,4-10",
+   "tecnica": "desenho sobre papel",
+   "acervo": "The Metropolitan Museum of Art, Nova York (doação do museu, acesso aberto)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:053.Deborah Praises Jael.jpg",
+   "titulo": "Débora louva Jael",
+   "alt": "Gravura em preto e branco: uma mulher canta com os braços abertos diante de outra, num acampamento",
+   "legenda": "No cântico atribuído a Débora, a bênção recai sobre Jael, 'entre as mulheres da tenda' (Jz 5,24), por ter matado Sísera com a estaca e o martelo (Jz 5,25-27). Doré ilustra o momento do louvor, não o do assassinato: a homenagem fica visível e o ato, no intervalo entre a cena e o texto — como conversa o capítulo 5 com os fatos narrados no capítulo 4.",
+   "passagem": "Jz 5,24-27 (cf. 4,17-22)",
+   "tecnica": "xilogravura (série Doré's English Bible, 1866)",
+   "acervo": "Série Doré's English Bible (1866)",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Bigarny-Gedeón.jpg",
+   "titulo": "Gideão esculpido no coro da catedral de Toledo",
+   "alt": "Relevo em madeira dourada mostrando uma figura masculina barbada com armadura e espada, sob ornamento renascentista",
+   "legenda": "Gideão como herói armado, num relevo do espaldar da cadeira do coro alto da catedral de Toledo, esculpido por Felipe Bigarny no século XVI. A arte cristã europeia pôs Gideão entre os antecessores do Messias — leitura que interessa ao dossiê porque mostra o livro de Juízes recebido como espelho da autoridade legítima, três séculos antes das gravuras de Doré.",
+   "passagem": "Jz 6,11-24",
+   "tecnica": "relevo em madeira (séc. XVI)",
+   "acervo": "Catedral de Toledo, cadeira do coro alto (obra de Felipe Bigarny); fotografia de MarisaLR, CC BY-SA 4.0",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Baal Ugarit Louvre AO17329.jpg",
+   "titulo": "Estátua de Baal procedente de Ugarit",
+   "alt": "Estatueta de bronze de uma figura masculina de braço erguido, sobre pedestal de museu",
+   "legenda": "Baal de braço erguido, do sítio de Ugarit (séc. XIV-XII a.C.), hoje no Museu do Louvre. O objeto documenta a religião dos vizinhos do norte de Israel — e o livro de Juízes abre exatamente com a acusação de que os israelitas 'serviram aos baalins' (Jz 2,11-13). É com este material epigráfico e figurativo de Ugarit, e não com descrições posteriores, que a comparação se faz hoje.",
+   "passagem": "Jz 2,11-13",
+   "tecnica": "estatueta de bronze (séc. XIV-XII a.C.)",
+   "acervo": "Musée du Louvre, Paris (AO 17329); fotografia de Jastrow (domínio público)",
+   "secao": "9",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Merneptah Steli (cropped).jpg",
+   "titulo": "Estela de Merneptah",
+   "alt": "Estela de pedra com relevo e colunas de hieróglifos, exposta em museu",
+   "legenda": "A inscrição de Merneptah (c. 1208 a.C.) é o testemunho extra-bíblico mais antigo do nome 'Israel' como povo no país, e por isso delimita o quadro histórico em que a narrativa de Juízes se situa. A estela está no Museu Egípcio, no Cairo — e o que ela permite afirmar é a existência do nome no fim do século XIII a.C., não a de qualquer episódio do livro.",
+   "passagem": "contexto histórico (séc. XIII a.C.)",
+   "tecnica": "granito inscrito (c. 1208 a.C.)",
+   "acervo": "Museu Egípcio, Cairo; fotografia de 𐰇𐱅𐰚𐰤, CC BY-SA 4.0 (redimensionada para o site)",
+   "secao": "12",
+   "posicao": "fim"
+  }
+ ]
+}

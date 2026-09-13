@@ -154,6 +154,13 @@ def transformar(html, mapa, import_original=None, fontes_bloco=None):
             css = css.replace(import_original, fontes_bloco, 1)
         html = html.replace(f'<link rel="stylesheet" href="{href}">', f"<style>{css}</style>", 1)
 
+    # 2. imagens e demais recursos servidos pelo site (/imagens/...) -> ./imagens/...
+    html = re.sub(r'(src|href)="/(imagens/[^"]+)"', r'\1="./\2"', html)
+    html = html.replace("srcset=\"/imagens/", "srcset=\"./imagens/")
+    html = html.replace('href="/favicon.svg"', 'href="./favicon.svg"')
+    html = html.replace('src="/og-default.png"', 'src="./og-default.png"')
+    html = html.replace('src="/favicon.svg"', 'src="./favicon.svg"')
+
     # 2. links <a ...>
     def tratar_a(match):
         tag = match.group(0)
@@ -219,6 +226,15 @@ def main():
         origem = BUILD / extra
         if origem.exists():
             shutil.copy2(origem, destino / extra)
+
+    # imagens do site (public/imagens) entram na cópia autônoma
+    origem_img = RAIZ / "public" / "imagens"
+    n_img = 0
+    if origem_img.exists():
+        shutil.copytree(origem_img, destino / "imagens", dirs_exist_ok=True)
+        n_img = sum(1 for p in (destino / "imagens").rglob("*") if p.is_file())
+        peso_img = sum(p.stat().st_size for p in (destino / "imagens").rglob("*") if p.is_file())
+        print(f"imagens copiadas: {n_img} ({peso_img / 1024 / 1024:.1f} MB)")
 
     escritos.sort(key=lambda x: x[1])
     print(f"páginas escritas: {len(escritos)}")

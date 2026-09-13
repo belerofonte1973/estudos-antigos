@@ -6,17 +6,17 @@ Foi escrito para que a produção sobreviva à sessão que a começou.
 ## Estado
 
 A taxonomia (`src/taxonomia.ts`) declara **58 livros** em **4 cânones**. Deles,
-**33 entradas já têm dossiê** (29 dossiês cobrem 33 livros, porque Samuel, Reis,
+**38 entradas já têm dossiê** (34 dossiês cobrem 38 livros, porque Samuel, Reis,
 Crônicas e Esdras+Neemias são unidades canônicas: um dossiê cada, dois livros
-cada). Faltam 25 livros: sapienciais, deuterocanônicos, ortodoxos e etíopes.
+cada). Faltam 20 livros: os 8 deuterocanônicos, os 6 ortodoxos e os 6 etíopes.
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | **29** = 33 dos 58 livros (da Gênesis a Malaquias, sem os sapienciais) |
+| Biblioteca — dossiês bíblicos | **34** = 38 dos 58 livros (Gênesis a Malaquias, incluindo os Sapienciais) |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **101** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **111** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes:
 `python validar_dossie.py --todos` (forma, ANTES do build) ·
@@ -62,8 +62,11 @@ cronicas-2]`) · `esdras-neemias` (8.490 — um dossiê, `livros: [esdras, neemi
 Os três passaram o validador com 0 falhas e 0 avisos; build em 101 páginas.
 *(Os Históricos estão completos: Gênesis a Ester do bloco histórico, mais Rute.)*
 
-### Lote 4 — Sapienciais (5)
-`jo` · `salmos` · `proverbios` · `coelet` · `cantico`
+### Lote 4 — Sapienciais (5) — FEITO
+`jo` (8.417 palavras) · `salmos` (8.489) · `proverbios` (8.493) · `coelet` (8.490) ·
+`cantico` (8.499). Os cinco passaram o validador com 0 falhas e 0 avisos; build em
+111 páginas. *(O dossiê dos Salmos declara na §1 o recorte: trata o Saltério como
+obra, com salmos individuais analisados como exemplo — não 150 fichas.)*
 
 ### Lote 5 — Deuterocanônicos (8)
 `tobias` · `judite` · `sabedoria` · `eclesiastico` · `baruque` · `macabeus-1` ·
@@ -182,6 +185,16 @@ era do extrator. Corolários que valem para qualquer verificador novo:
   truncado. Foi o que produziu "autores 0/0/0/0" em dossiê que os tem.
 - Dossiê de contexto (`area: oriente`, `pre-historia`) e página de área têm
   forma própria: o validador os pula em vez de reprová-los.
+- **O validador não checava o VALOR do selo, e isso quebrou o build** (12/set/2026,
+  dossiê de Coélet): o redator escreveu `<SeloAcesso tipo="empréstimo" />` com
+  acento, quando a chave em `SELOS` é `emprestimo`. `\w+` em Python casa com
+  acento, o selo foi contado certinho e o arquivo passou com 0 falhas — o
+  componente só lança (`SeloAcesso: tipo desconhecido`) quando o Astro o
+  renderiza, com o `dist` já apagado. Corrigido: o validador agora lê a lista de
+  tipos válidos de `src/taxonomia.ts` (fonte única) e reprova qualquer valor
+  fora dela. **Lição geral: quem valida forma não valida vocabulário.** Todo
+  campo que alimenta um `throw` no componente precisa da sua lista de valores
+  legítimos no portão pré-build.
 
 ### Armadilha de arquivo parcial
 

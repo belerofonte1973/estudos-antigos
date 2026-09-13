@@ -35,6 +35,32 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent
 BIBLIOTECA = RAIZ / "src" / "content" / "biblioteca" / "biblia"
 
+
+def _selos_validos() -> set[str]:
+    """Os tipos que <SeloAcesso tipo="..."> aceita, lidos da taxonomia.
+
+    O componente faz `SELOS[tipo]` e LANÇA em tempo de render quando o tipo não
+    existe — então um selo escrito errado ('empréstimo' com acento, quando a
+    chave é 'emprestimo') ATRAVESSA todo este validador e só aparece quando o
+    `npm run build` roda. Aconteceu no dossiê de Coélet (12/set/2026): 0 falhas
+    aqui, build quebrado. A lista de tipos válidos é lida da fonte única
+    (`src/taxonomia.ts`), nunca copiada à mão.
+    """
+    try:
+        txt = (RAIZ / "src" / "taxonomia.ts").read_text(encoding="utf-8")
+    except OSError:
+        return set()
+    # O objeto termina em `} as const;`, e as chaves de primeiro nível são as
+    # únicas seguidas de `{` com UM tab de recuo — 'rotulo'/'descricao' (dois
+    # tabs) e as chaves de outros objetos não entram.
+    bloco = re.search(r"export const SELOS\s*=\s*\{(.*?)\n\}\s*(?:as const)?\s*;", txt, re.S)
+    if not bloco:
+        return set()
+    return set(re.findall(r"^\t(\w+):\s*\{", bloco.group(1), re.M))
+
+
+SELOS_VALIDOS = _selos_validos()
+
 # (número, [grafias aceitas para a seção]) — a comparação é case-insensitive.
 SECOES: list[tuple[str, list[str]]] = [
     ("1", ["lead e ficha"]),
@@ -259,6 +285,14 @@ def validar(caminho: Path) -> tuple[list[str], list[str], dict]:
         falhas.append(f"URL nua entre <> perto de: {corpo[m4.start():m4.start()+50]!r}")
     for m5 in re.finditer(r"\{[^}\n]{0,40}\}", corpo):
         falhas.append(f"'{'{'}' solto no texto: {m5.group(0)!r}")
+
+    # ---- selos: o tipo tem de existir em SELOS (senão o build quebra) --------
+    for m6 in re.finditer(r'<SeloAcesso\s+tipo="([^"]*)"', corpo):
+        if SELOS_VALIDOS and m6.group(1) not in SELOS_VALIDOS:
+            falhas.append(
+                f"selo com tipo inválido {m6.group(1)!r} — o build quebra; "
+                f"válidos: {sorted(SELOS_VALIDOS)}"
+            )
 
     return falhas, avisos, info
 

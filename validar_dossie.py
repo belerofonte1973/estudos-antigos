@@ -274,6 +274,25 @@ def validar(caminho: Path) -> tuple[list[str], list[str], dict]:
     else:
         avisos.append("falta a subseção 11.1 (comentaristas por esfera confessional)")
 
+    # ---- frontmatter: apóstrofo solto em aspas simples (QUEBRA O BUILD) -------
+    # Um 'description' com aspas simples contendo um apóstrofo NÃO escapado
+    # ('... em ge'ez ...') encerra a string YAML no meio — o Astro falha ao
+    # parsear o frontmatter e o `npm run build` morre. Aconteceu no dossiê de
+    # 3 Meqabyan (12/set/2026), depois do lote inteiro passar no validador.
+    # Escape válido em YAML: apóstrofo duplicado (ge''ez). Isto é FALHA (não
+    # aviso): o artefato não builda.
+    fm = texto.split("---", 2)[1] if texto.startswith("---") else ""
+    for flinha in fm.split("\n"):
+        if flinha.startswith(("title:", "description:")):
+            v = flinha.split(":", 1)[1].strip()
+            if v.startswith("'") and v.endswith("'"):
+                restante = re.sub(r"''", "", v[1:-1])
+                if "'" in restante:
+                    falhas.append(
+                        f"frontmatter com apóstrofo não escapado em aspas simples: "
+                        f"{flinha[:70]}... — o build quebra; use '' (duplicado)"
+                    )
+
     # ---- hierarquia de cabeçalhos -------------------------------------------
     # Só as 13 seções numeradas + a bibliografia podem ser H2; qualquer outro H2
     # (ex.: '## Vítima, comunidade e classificação: Girard e Mary Douglas') vira

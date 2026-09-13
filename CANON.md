@@ -6,17 +6,17 @@ Foi escrito para que a produção sobreviva à sessão que a começou.
 ## Estado
 
 A taxonomia (`src/taxonomia.ts`) declara **58 livros** em **4 cânones**. Deles,
-**52 entradas já têm dossiê** (48 dossiês cobrem 52 livros, porque Samuel, Reis,
+**58 entradas — TODAS** (54 dossiês cobrem os 58 livros, porque Samuel, Reis,
 Crônicas e Esdras+Neemias são unidades canônicas: um dossiê cada, dois livros
-cada). Faltam 6 livros: os etíopes.
+cada). **Faltam 0 — os 58 livros dos 4 cânones estão cobertos.**
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | **48** = 52 dos 58 livros (tudo até os ortodoxos) |
+| Biblioteca — dossiês bíblicos | **54** = **58 dos 58 livros — COMPLETO** |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **139** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **151** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes:
 `python validar_dossie.py --todos` (forma, ANTES do build) ·
@@ -88,8 +88,14 @@ Portal (flash-0731, reasoning high): os briefings de economia seguraram ~7,8k
 em uma passada — exceto o 2 Esdras (8.367, apocalipse de 16 capítulos com tabela
 tripartida e 7 visões) e a Oração de Manassés (7.982), ambos justificados.
 
-### Lote 7 — Etíopes (6)
-`enoque-1` · `jubileus` · `meqabyan-1` · `meqabyan-2` · `meqabyan-3` · `baruque-4`
+### Lote 7 — Etíopes (6) — FEITO
+`enoque-1` (7.790 palavras) · `jubileus` (7.786) · `meqabyan-1` (7.800) ·
+`meqabyan-2` (7.309) · `meqabyan-3` (7.596) · `baruque-4` (8.441). Os seis
+passaram com 0 falhas e 0 avisos; build em 151 páginas.
+*(Os três Meqabyan são os livros menos documentados da série: os dossiês
+declaram as lacunas com honestidade — [—]=51/34/28 — em vez de fabricar.
+Foi a instrução explícita do briefing e o melhor resultado possível.)*
+**OS 58 LIVROS DOS 4 CÂNONES TÊM DOSSIÊ — série fechada em 12/set/2026.**
 
 ## Forma do dossiê (obrigatória)
 

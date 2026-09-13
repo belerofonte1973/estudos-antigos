@@ -6,17 +6,17 @@ Foi escrito para que a produção sobreviva à sessão que a começou.
 ## Estado
 
 A taxonomia (`src/taxonomia.ts`) declara **58 livros** em **4 cânones**. Deles,
-**38 entradas já têm dossiê** (34 dossiês cobrem 38 livros, porque Samuel, Reis,
+**46 entradas já têm dossiê** (42 dossiês cobrem 46 livros, porque Samuel, Reis,
 Crônicas e Esdras+Neemias são unidades canônicas: um dossiê cada, dois livros
-cada). Faltam 20 livros: os 8 deuterocanônicos, os 6 ortodoxos e os 6 etíopes.
+cada). Faltam 12 livros: os 6 ortodoxos e os 6 etíopes.
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | **34** = 38 dos 58 livros (Gênesis a Malaquias, incluindo os Sapienciais) |
+| Biblioteca — dossiês bíblicos | **42** = 46 dos 58 livros (tudo até os deuterocanônicos) |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **111** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **127** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes:
 `python validar_dossie.py --todos` (forma, ANTES do build) ·
@@ -68,10 +68,15 @@ Os três passaram o validador com 0 falhas e 0 avisos; build em 101 páginas.
 111 páginas. *(O dossiê dos Salmos declara na §1 o recorte: trata o Saltério como
 obra, com salmos individuais analisados como exemplo — não 150 fichas.)*
 
-### Lote 5 — Deuterocanônicos (8)
-`tobias` · `judite` · `sabedoria` · `eclesiastico` · `baruque` · `macabeus-1` ·
-`macabeus-2` · `ester` (adições gregas, tratadas dentro do dossiê de Ester)
-*(Baruque inclui a Carta de Jeremias; o dossiê trata as duas.)*
+### Lote 5 — Deuterocanônicos (8) — FEITO
+`tobias` (8.495 palavras) · `judite` (8.843) · `ester` (8.474, adições gregas
+tratadas dentro) · `macabeus-1` (8.501) · `macabeus-2` (8.498) ·
+`sabedoria` (10.162 — acima do alvo; compressão despachada como tarefa própria) ·
+`eclesiastico` (8.480) · `baruque` (8.486, com a Carta de Jeremias). Os oito
+passaram com 0 falhas e 0 avisos; build em 127 páginas.
+*(O dossiê da Sabedoria chegou com 4 subseções em H2 e 4 títulos duplicados por
+reedição — resíduo corrigido à mão e o validador ganhou a checagem de hierarquia:
+só as 13 seções + bibliografia podem ser H2, e título duplicado é aviso.)*
 
 ### Lote 6 — Ortodoxos (5 + Oração)
 `esdras-1` · `esdras-2` · `macabeus-3` · `macabeus-4` · `oracao-manasses` ·

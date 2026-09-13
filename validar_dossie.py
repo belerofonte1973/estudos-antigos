@@ -274,6 +274,26 @@ def validar(caminho: Path) -> tuple[list[str], list[str], dict]:
     else:
         avisos.append("falta a subseção 11.1 (comentaristas por esfera confessional)")
 
+    # ---- hierarquia de cabeçalhos -------------------------------------------
+    # Só as 13 seções numeradas + a bibliografia podem ser H2; qualquer outro H2
+    # (ex.: '## Vítima, comunidade e classificação: Girard e Mary Douglas') vira
+    # seção de topo no sumário do site. E um título duplicado ('## X' E '### X')
+    # é resíduo de reedição do redator. Aconteceu no dossiê da Sabedoria
+    # (12/set/2026): 4 subseções em H2 + 4 títulos duplicados, tudo com o
+    # validador verde. Aqui é AVISO, não falha: a geração antiga (Pentateuco)
+    # tem H2 legítimos fora da forma (ex.: '## RELATÓRIO DE CONTAGEM').
+    h2s = re.findall(r"^## ([^\n]*)", corpo, re.M)
+    h2_ok = lambda h: bool(
+        re.match(r"^\d+\.", h)                        # '1. Lead e Ficha', '13. Lacunas...'
+        or re.search(r"bibliografia|referências|anexo|autores", h, re.I)
+    )
+    h2_estranhos = [h for h in h2s if not h2_ok(h)]
+    if h2_estranhos:
+        avisos.append(f"cabeçalhos H2 fora da forma (subseções deveriam ser ###): {h2_estranhos}")
+    h2_dups = sorted({h for h in h2s if h2s.count(h) > 1})
+    if h2_dups:
+        avisos.append(f"cabeçalho duplicado (reedição deixou duas versões): {h2_dups}")
+
     # ---- espanhol ----------------------------------------------------------
     for padrao, rotulo in ESPANHOL:
         for m3 in re.finditer(padrao, corpo):

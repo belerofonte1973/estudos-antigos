@@ -155,6 +155,32 @@ mantém o provedor com que nasceu.
 
 Configurado em `delegation.model` / `delegation.provider`.
 
+### Economia de tokens na delegação — decidido 12/set/2026
+
+Config de produção atual: `delegation.model` = `deepseek/deepseek-v4-flash-0731` ·
+`delegation.provider` = `nous` · `delegation.reasoning_effort` = `high` (alinhado ao
+`reasoning_overrides` do agente principal para este modelo; xhigh queimou tokens de
+raciocínio sem ganho proporcional).
+
+Por que trocou o provedor: os créditos do OpenRouter esgotaram com 8 subagentes em
+voo — HTTP 402, a reserva de requisições simultâneas estoura o saldo. Saldo medido
+na API (`/api/v1/credits`): 0,65 USD de 140 USD comprados. O Nous Portal roda a
+sessão principal há tempo e tem preço fixo.
+
+**A maior perda de tokens NÃO é o modelo: é o estouro do teto de palavras.** Medido
+na produção: Oséias 10.660 → 8.499 (duas reescritas), Jó 13.665 → 8.417, Cântico
+13.095 → 8.499. Cada passada de compressão re-envia o arquivo inteiro pelo wire.
+Regras de briefing desde o Lote 6:
+1. Alvo de palavras **7.200–7.800** — folga para nunca cruzar 8.500 (o teto real).
+2. Uma passada de escrita; quem passar de 9.000 comprime POR SEÇÃO com `patch`,
+   nunca reescreve o arquivo todo com `write_file`.
+3. UMA validação no fim (`python validar_dossie.py <slug>`); aviso de estilo não
+   exige correção.
+4. Pesquisa sem redundância: a forma e as fontes-âncora já estão no acervo.
+
+Métrica de controle do Lote 6 (flash/high no Portal) contra o padrão v4.1:
+`validar_dossie.py` + densidade das quatro camadas + custo em USD por lote.
+
 ## Fluxo de um lote
 
 1. Redator escreve o dossiê **completo** no caminho final

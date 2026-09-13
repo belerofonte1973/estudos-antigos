@@ -21,3 +21,6 @@ _camadas/
 
 # backups do inserir_selos.py (mecanismo de --reverter; ficam em disco, fora do versionamento)
 *.mdx.bak
+
+# HTML autônomo gerado a partir do build (artefato, não fonte)
+html-avulso/

@@ -248,9 +248,39 @@ ausente. Conferir antes de buildar: `ls src/content/biblioteca/biblia/_*.mdx`.
 ## Pendências que não são dossiê
 
 - Domínio próprio (hoje `estudos-antigos.netlify.app`).
-- Site **privado no Netlify** — não indexável. O usuário decidiu: sem pressa;
-  primeiro o conteúdo.
+- Site **privado no Netlify** — não indexável (confirmado: todas as rotas respondem 401).
+  O usuário decidiu: sem pressa; primeiro o conteúdo.
 - Imagem social por artigo (hoje uma só).
 - Busca interna (Pagefind como passo pós-build).
 - Artigos-porta para os dossiês que ainda não têm (Suméria e Pré-História não
   têm; os 9 bíblicos têm 7 no total).
+
+## Entregas fora do site (13/set/2026)
+
+Duas pastas geradas do build, ambas no `.gitignore` (artefato, não fonte):
+
+- `html-avulso/` — **cópia autônoma do site inteiro**: 151 páginas HTML num só
+  diretório, com CSS inline, fontes locais (`fonts/`, 4 `.woff2`), tema
+  claro/escuro funcional e **toda a navegação interna reapontada** para os
+  próprios arquivos (0 links quebrados, 0 links inertes). Os dossiês ficam com
+  nome curto (`juizes.html`); o índice do conjunto é `index.html`; a capa do
+  site é `inicio.html`. Abre por duplo clique, sem servidor e sem internet.
+- `html-avulso/pdf/` — **os 54 dossiês em PDF** (1.273 páginas, 63,5 MB), impressos
+  do HTML pelo Chrome headless (A4, tema claro, chrome de navegação oculto,
+  metadados de título por artigo). Preserva a tipografia e o layout do site.
+
+Scripts (versionados):
+
+    python scripts/gerar_html_avulso.py --limpar     # gera html-avulso/ do build
+    python scripts/conferir_html_avulso.py           # texto idêntico ao build, links, fontes, tema
+    python scripts/conferir_pdfs.py                  # páginas, seções, navegação, brancas, metadados
+
+Dois aprendizados que o verificador precisa respeitar (já implementados):
+1. **Duas gerações de dossiê coexistem** — a §13 varia ("Lacunas e Correções de
+   Atribuição", "LACUNAS", "LACUNAS DECLARADAS", "LACUNAS E INCERTEZAS",
+   "LACUNAS (estado da arte)") e a bibliografia tem quatro grafias. Verificador
+   que exige uma só reprova dossiê íntegro.
+2. No PDF, **a última página com poucas linhas é a nota final da bibliografia**
+   ("Selo [esgotado] não aparece aqui…"), não uma página vazia — em 4 dos 54
+   dossiês ela fica sozinha. Só página curta no MEIO do documento é defeito.
+

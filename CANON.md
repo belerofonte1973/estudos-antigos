@@ -6,17 +6,17 @@ Foi escrito para que a produção sobreviva à sessão que a começou.
 ## Estado
 
 A taxonomia (`src/taxonomia.ts`) declara **58 livros** em **4 cânones**. Deles,
-**46 entradas já têm dossiê** (42 dossiês cobrem 46 livros, porque Samuel, Reis,
+**52 entradas já têm dossiê** (48 dossiês cobrem 52 livros, porque Samuel, Reis,
 Crônicas e Esdras+Neemias são unidades canônicas: um dossiê cada, dois livros
-cada). Faltam 12 livros: os 6 ortodoxos e os 6 etíopes.
+cada). Faltam 6 livros: os etíopes.
 
 | Superfície | Hoje |
 |---|---|
-| Biblioteca — dossiês bíblicos | **42** = 46 dos 58 livros (tudo até os deuterocanônicos) |
+| Biblioteca — dossiês bíblicos | **48** = 52 dos 58 livros (tudo até os ortodoxos) |
 | Biblioteca — contexto | Suméria, Pré-História |
 | Revista — artigos | 13, todos do núcleo bíblico |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **127** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **139** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes:
 `python validar_dossie.py --todos` (forma, ANTES do build) ·
@@ -71,16 +71,22 @@ obra, com salmos individuais analisados como exemplo — não 150 fichas.)*
 ### Lote 5 — Deuterocanônicos (8) — FEITO
 `tobias` (8.495 palavras) · `judite` (8.843) · `ester` (8.474, adições gregas
 tratadas dentro) · `macabeus-1` (8.501) · `macabeus-2` (8.498) ·
-`sabedoria` (10.162 — acima do alvo; compressão despachada como tarefa própria) ·
+`sabedoria` (compressão própria posterior: 10.162 → 8.228, com a remoção de
+~860 palavras de 4 blocos DUPLICADOS que a re-edição tinha deixado, e correção
+de 6 H2 colados no parágrafo anterior) ·
 `eclesiastico` (8.480) · `baruque` (8.486, com a Carta de Jeremias). Os oito
 passaram com 0 falhas e 0 avisos; build em 127 páginas.
 *(O dossiê da Sabedoria chegou com 4 subseções em H2 e 4 títulos duplicados por
 reedição — resíduo corrigido à mão e o validador ganhou a checagem de hierarquia:
 só as 13 seções + bibliografia podem ser H2, e título duplicado é aviso.)*
 
-### Lote 6 — Ortodoxos (5 + Oração)
-`esdras-1` · `esdras-2` · `macabeus-3` · `macabeus-4` · `oracao-manasses` ·
-`salmo-151`
+### Lote 6 — Ortodoxos (5 + Oração) — FEITO
+`esdras-1` (7.794 palavras) · `esdras-2` (8.367) · `oracao-manasses` (7.982) ·
+`salmo-151` (7.798) · `macabeus-3` (7.796) · `macabeus-4` (7.792). Os seis
+passaram com 0 falhas e 0 avisos; build em 139 páginas. Primeiro lote no Nous
+Portal (flash-0731, reasoning high): os briefings de economia seguraram ~7,8k
+em uma passada — exceto o 2 Esdras (8.367, apocalipse de 16 capítulos com tabela
+tripartida e 7 visões) e a Oração de Manassés (7.982), ambos justificados.
 
 ### Lote 7 — Etíopes (6)
 `enoque-1` · `jubileus` · `meqabyan-1` · `meqabyan-2` · `meqabyan-3` · `baruque-4`

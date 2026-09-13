@@ -200,6 +200,7 @@ def transformar(html, mapa, import_original=None, fontes_bloco=None):
         "a{color:inherit!important;text-decoration:none!important}"
         "h1,h2,h3{break-after:avoid}"
         "figure,.ea-aside,.ea-card{break-inside:avoid}"
+        ".ea-figura img{max-height:160mm!important}"
         "tr{break-inside:avoid}thead{display:table-header-group}"
         "p,li{orphans:2;widows:2}"
         "</style>"
@@ -218,7 +219,16 @@ def main():
         sys.exit(f"Build não encontrado em {BUILD}\nRode 'npm run build' antes.")
 
     mapa = mapa_de_rotas()
+    # o --limpar NÃO pode apagar a pasta dos PDFs (artefato derivado do html);
+    # ela é guardada FORA da árvore do destino (senão o rmtree a apaga junto)
+    pdf_guardado = None
     if args.limpar and destino.exists():
+        pdf_dir = destino / "pdf"
+        if pdf_dir.exists():
+            pdf_guardado = destino.parent / f".{destino.name}_pdf_backup"
+            if pdf_guardado.exists():
+                shutil.rmtree(pdf_guardado)
+            pdf_dir.rename(pdf_guardado)
         shutil.rmtree(destino)
     destino.mkdir(parents=True, exist_ok=True)
 
@@ -253,6 +263,14 @@ def main():
         n_img = sum(1 for p in (destino / "imagens").rglob("*") if p.is_file())
         peso_img = sum(p.stat().st_size for p in (destino / "imagens").rglob("*") if p.is_file())
         print(f"imagens copiadas: {n_img} ({peso_img / 1024 / 1024:.1f} MB)")
+
+    # devolve a pasta dos PDFs ao lugar (guardada pelo --limpar)
+    if pdf_guardado and pdf_guardado.exists():
+        (destino / "pdf").mkdir(parents=True, exist_ok=True)
+        for p in pdf_guardado.iterdir():
+            (destino / "pdf" / p.name).write_bytes(p.read_bytes())
+        shutil.rmtree(pdf_guardado)
+        print(f"pdf/ preservado: {len(list((destino / 'pdf').glob('*.pdf')))} arquivos")
 
     escritos.sort(key=lambda x: x[1])
     print(f"páginas escritas: {len(escritos)}")

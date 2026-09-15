@@ -198,17 +198,80 @@ Regras de briefing desde o Lote 6:
 Métrica de controle do Lote 6 (flash/high no Portal) contra o padrão v4.1:
 `validar_dossie.py` + densidade das quatro camadas + custo em USD por lote.
 
+### Economia de tokens — medido no `state.db` em 14/set/2026
+
+Medição real (`session_model_usage`) das quatro sessões que produziram o acervo:
+
+    chamadas   entrada    cache_read   saída   raciocínio   US$ estimado
+      870       4,31M      181,0M      965k      491k          0,87
+                                              (sem cache seria US$ 7,56 — 9x)
+
+Leituras que mudaram o processo:
+- **98% do prompt vem do cache** (`cache_read` a US$ 0,01/M contra US$ 0,04/M de
+  entrada fresca). O custo é baixo porque o cache está vivo; quebrá-lo custa 9x.
+- O maior VOLUME não é o modelo, é o **prefixo reenviado a cada chamada**:
+  média de **117k a 255k tokens por chamada** nas sessões longas.
+- A skill `pesquisador-bibliografico` tem **142 kB ≈ 36 mil tokens** e era
+  carregada por cada subagente, em todos os turnos dele.
+
+Regras adicionais desde 14/set/2026 (somam-se às quatro de briefing acima):
+
+5. **Briefing aponta para `_briefings/nucleo-dossie.md` (~4,4 kB), não para a
+   skill.** O núcleo tem as 8 regras de conteúdo, o contrato de saída exato
+   (frontmatter, 13 seções, faixa de palavras) e o fecho. Só abrir uma
+   referência da skill quando a tarefa pedir além disso — e só a específica
+   (ex.: `book-verification-recipes.md` para conferir ISBN).
+6. **Sessão nova por lote.** Histórico acumulado é o que engorda o prefixo:
+   sessão de 588 mensagens reenviava ~250 kB em cada uma das 300 chamadas.
+   Commitar o lote e abrir sessão nova derruba o prefixo para dezenas de kB.
+7. **Blindar o cache:** não editar skill nem system prompt no meio do lote; não
+   trocar modelo/provider com subagente em voo; manter o estável (regras,
+   briefing) no início do contexto e o volátil no fim.
+8. **Saída de terminal no contexto também é prefixo.** `python scripts/status.py`
+   imprime o estado em ~10 linhas (o validador cru imprime 56 blocos) — use-o em
+   lugar de ler a saída inteira.
+9. Medir antes de opinar: `python ~/hermes-tools/relatorio_tokens.py --sessoes 5`
+   (relatório por sessão/modelo/tarefa, com % de cache e o custo "se sem cache").
+   `python scripts/status.py` = estado do acervo; `relatorio_tokens.py` = o que
+   custou.
+
+## Ferramentas de operação (14/set/2026)
+
+O que consultar antes de agir, em ordem de frequência:
+
+    python scripts/status.py                 # estado do acervo em ~10 linhas (o validador
+                                             #   roda junto; --rapido pula, --sem-rede não testa o site)
+    python scripts/briefing.py <slug>        # briefing de UM dossiê, pronto para o context da
+                                             #   delegação (núcleo + específico do livro) — não
+                                             #   compor briefing à mão nem carregar a skill inteira
+    python scripts/briefing.py --proximo     # livros da taxonomia ainda sem dossiê
+    python ~/hermes-tools/relatorio_tokens.py --sessoes 5
+                                             # tokens/custo por sessão, % de cache e custo
+                                             #   "se 100% sem cache" (lê o state.db do Hermes)
+
+Cadeia de figuras (só quando mexer em imagem): `baixar_pendentes.py --seco` →
+`baixar_pendentes.py` → `aplicar_figuras.py` → `npm run build` →
+`gerar_html_avulso.py --limpar` → `conferir_html_avulso.py` → reimprimir os PDFs
+afetados (Chrome headless) → `comprimir_pdf.py html-avulso/pdf` →
+`conferir_pdfs.py`.
+
 ## Fluxo de um lote
 
-1. Redator escreve o dossiê **completo** no caminho final
+1. **Briefing** do redator = `_briefings/nucleo-dossie.md` (lido do disco, ~4,4 kB)
+   + o que é específico do livro. **Não** mandar carregar a skill inteira
+   (`skill_view('pesquisador-bibliografico')` = ~36 mil tokens por subagente, em
+   cada turno dele). Referência da skill só quando a tarefa exigir algo além do
+   núcleo — e só a específica.
+2. Redator escreve o dossiê **completo** no caminho final
    (`src/content/biblioteca/biblia/<slug>.mdx`), seguindo a forma e as regras.
-2. Pai **verifica o artefato**, não o relatório:
+3. Pai **verifica o artefato**, não o relatório:
    `python validar_dossie.py <slug>` — frontmatter, treze seções, imports e a
    linha em branco do MDX, tamanho, marcadores, quatro camadas com autores
    nomeados, esferas confessionais, selos, ausência de espanhol, `<` ou `{`
    soltos. **Falha = não buildar.** Os avisos são para revisão, não bloqueiam.
-3. `npm run build` + `python verificar_site.py` + `python verificar_eixos.py`.
-4. Commit por lote.
+4. `npm run build` + `python verificar_site.py` + `python verificar_eixos.py`.
+5. Commit por lote — e **sessão nova para o lote seguinte** (o histórico
+   acumulado é o que engorda o prefixo reenviado em cada chamada).
 
 ### O que o validador aprendeu (não repetir)
 

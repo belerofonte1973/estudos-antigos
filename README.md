@@ -48,12 +48,20 @@ O mapa de produção (o que falta, em que lotes, com que regras) está em
 
 ```bash
 npm install
-npm run dev                # servidor local — http://localhost:4321
-npm run build              # build de produção em dist/
 
-python verificar_site.py   # verificação pós-build — SEMPRE após build
-python validar_dossie.py --todos   # valida a forma dos dossiês ANTES do build
-node scripts/gerar_og.mjs  # regenera public/og-default.png
+npm run dev                # edição ao vivo — http://localhost:4321 (recarrega ao salvar)
+npm run build              # build de produção em dist/ (astro build + pagefind)
+npm run build:somente      # só o astro build, sem reindexar a busca
+npm run busca:indexar      # refaz só o índice do Pagefind (dist/)
+npm run og                 # regera as 73 imagens sociais + og-default.png
+
+python validar_dossie.py --todos   # valida a FORMA dos dossiês — antes do build
+python verificar_site.py           # integridade pós-build — sempre após build
+python verificar_eixos.py          # modelo de eixos/cânones (67 checagens)
+python scripts/conferir_ordem.py   # colisão de `ordem` no mesmo grupo de exibição
+python scripts/conferir_og.py      # toda og:image do build existe, 1200x630, sem órfã
+
+netlify deploy --prod --dir dist   # publica (o dist vai pronto, sem build remoto)
 ```
 
 ### O que a verificação confere
@@ -106,6 +114,59 @@ src/
 importar `content.config.ts` de dentro de um componente — ele importa
 `astro:content` e as constantes chegam `undefined` (ciclo). Componentes importam
 de `taxonomia`.
+
+## Como editar uma página que já existe
+
+**O HTML do site não se edita.** `dist/` e `html-avulso/` são **saída do build**:
+estão no `.gitignore`, são apagados e regerados a cada `npm run build`, e qualquer
+edição neles se perde na próxima compilação. A fonte de tudo é `src/` — o texto em
+MDX/MD, a moldura em Astro.
+
+Onde está cada coisa, por ordem de frequência de uso:
+
+| O que você quer mudar | Arquivo |
+|---|---|
+| Texto de um dossiê (biblioteca) | `src/content/biblioteca/<área>/<slug>.mdx` — ex.: `biblia/genesis.mdx`, `pre-historia/pre-historia-humana.mdx` |
+| Texto de um artigo da revista | `src/content/artigos/<slug>.md` — ex.: `quem-escreveu-o-genesis.md` |
+| Uma passagem estudada | `src/content/passagens/<livro>/<referência>.mdx` |
+| Título, descrição, ordem, eixo, área de qualquer página de conteúdo | o **frontmatter** do próprio arquivo (entre os dois `---`) |
+| Texto de página institucional (Como pesquisar, Sobre, Contato) | `src/pages/como-pesquisar.mdx`, `src/pages/sobre/*.astro` |
+| Menu do topo, rodapé, marca | `src/components/Header.astro`, `Footer.astro` |
+| Cores, tipografia, espaçamentos (tokens) | `src/styles/global.css` (bloco `:root`) |
+| Rótulos de eixos, áreas e cânones; os 58 livros | `src/taxonomia.ts` |
+| Estrutura de uma página (blocos, sidebar, sumário) | `src/layouts/*.astro` |
+| Regras de URL, sitemap, plugins de markdown | `astro.config.mjs` |
+| A página de busca | `src/pages/busca.astro` |
+| Arquivos estáticos (favicon, imagens, `_tema_claro.html`) | `public/` |
+
+### O ciclo: editar → validar → construir → publicar
+
+```bash
+npm run dev                      # enquanto edita: http://localhost:4321 recarrega ao salvar
+python validar_dossie.py genesis # (dossiês) forma, PT-BR, seções, marcadores
+npm run build                    # astro build + índice da busca
+python verificar_site.py         # integridade do que saiu — exit 1 se houver falha
+netlify deploy --prod --dir dist # publica
+```
+
+Detalhes que evitam retrabalho:
+
+- **A busca só existe depois do build.** Em `npm run dev` a página `/busca/`
+  avisa que o índice não foi gerado — é esperado, não é defeito.
+- **Imagem social:** depois de mudar título ou criar página, rode `npm run og`
+  (e `python scripts/conferir_og.py` para conferir que toda `og:image` existe).
+- **`ordem` é a ordem dentro do mesmo grupo de exibição** (área, ou par
+  eixo×área). Repetir `ordem` em áreas diferentes é inofensivo; repetir na mesma
+  área deixa dois dossiês em ordem arbitrária — `scripts/conferir_ordem.py`
+  acusa.
+- **Edições em massa** (uma camada em 4 dossiês, um campo em 56) têm script
+  próprio, com `--seco`, backup e `--reverter`: `inserir_camadas.py`,
+  `inserir_confessional.py`, `inserir_selos.py`, `inserir_evangelica.py`. Use-os
+  em vez de `sed` — eles conhecem a forma do dossiê.
+- **Nunca editar `dist/` nem `html-avulso/`**; se algo precisa aparecer no site,
+  muda-se a fonte em `src/` ou em `public/`.
+- O `CANON.md` é o documento de decisões (o porquê); o `README.md` é o de uso
+  (o como). Mudança de regra de conteúdo entra nos dois.
 
 ## Como escrever um artigo da revista
 

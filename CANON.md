@@ -389,6 +389,16 @@ de esperar a cota abrir.
 - Domínio próprio (hoje `estudos-antigos.netlify.app`).
 - Site **privado no Netlify** — não indexável (confirmado: todas as rotas respondem 401).
   O usuário decidiu: sem pressa; primeiro o conteúdo.
+- **Deploy de produção em 15/set/2026, 03:49 UTC** (`deploy_id` `6aa8c008a9946d0559ee89df`,
+  `state: ready`, contexto `production`, 657 arquivos enviados/668 assets — o CLI só sobe o que
+  mudou de hash). O deploy anterior era de **09/set**: tudo o que foi feito entre 11 e 15/set
+  (figuras dos 56 dossiês, o 14.º artigo, a higiene do acervo, a busca e as 73 imagens sociais)
+  subiu de uma vez. Publicado com `netlify deploy --prod --dir dist` (dist pré-construído: o
+  índice do Pagefind e as imagens são gerados localmente e viajam prontos).
+  **Limitação registrada:** com o site privado, o conteúdo do deploy não é verificável de fora —
+  o que se confere é o manifesto (estado/contexto/data) e o `dist` local, que é exatamente o
+  árvore enviada e passa todos os portões. `netlify status` mostra o usuário autenticado e o
+  projeto vinculado (`siteId` `e6a7df66-1964-40f5-8869-5f209db515ab`).
 - **Artigo-porta de Pré-História — FEITO (15/set/2026).** `src/content/artigos/quando-comeca-a-historia-humana.md`
   ("Quando começa a história humana?", `eixo: contexto`, `area: pre-historia`, `dossie: pre-historia/pre-historia-humana`,
   23 fontes, todas do dossiê ou por ele verificadas). Com ele, **todo dossiê de contexto tem artigo-porta**: o plano de

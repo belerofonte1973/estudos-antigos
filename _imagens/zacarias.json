@@ -24,6 +24,7 @@
    "largura_original": 3015,
    "altura_original": 6289,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "ecb1399673986719",
@@ -50,12 +51,40 @@
    "largura_original": 2275,
    "altura_original": 1835,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Захария Серповидец, пророк, из 12 малых пророков Миниатюра Минология Василия II. Константинополь. 985 г. Ватиканская библиотека. Рим",
    "sha256": "7f377f98ebb40051",
    "bytes": 240508,
    "largura_final": 950,
    "altura_final": 766
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/zacarias/03-o-profeta-zacarias.webp",
+   "arquivo_origem": "File:Anonymous - Der Prophet Zacharias - GG 6372 - Kunsthistorisches Museum.jpg",
+   "titulo": "O profeta Zacarias",
+   "legenda": "Pintura da oficina de Corrado Giaquinto (cerca de 1750-1752) no Kunsthistorisches Museum, em Viena (inv. GG 6372). A composição barroca reúne o profeta e a figura angélica, eco das visões noturnas de Zacarias, em que o profeta é acompanhado por um anjo que explica cada cena (Zc 1,9.19; 2,2.7; 5,5; 6,4). É uma das raras pinturas de grande formato dedicadas exclusivamente a Zacarias.",
+   "passagem": "Zc 1,7-17",
+   "artista": "Workshop of Corrado Giaquinto",
+   "data": "between circa 1750 and circa 1752",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Kunsthistorisches Museum, Viena (inv. GG 6372)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AAnonymous_-_Der_Prophet_Zacharias_-_GG_6372_-_Kunsthistorisches_Museum.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1455,
+   "altura_original": 1152,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "642fa6a48300ab6d",
+   "bytes": 114360,
+   "largura_final": 950,
+   "altura_final": 752
   },
   {
    "ordem": 4,
@@ -76,6 +105,7 @@
    "largura_original": 926,
    "altura_original": 970,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "e2246e9937fdbae2",
@@ -102,6 +132,7 @@
    "largura_original": 9264,
    "altura_original": 6096,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Arch of Titus: South inner panel, close-up of relief showing spoils from the fall of Jerusalem - sack of Jerusalem, menorah, seven-branched candlestick, silver trumpet, temple treasure, Triumph in Rome, barrel vault, egg-and-dart, rosette, candelabra, tunic, entablature, bas-relief, high relief, panneggio bagnato",
    "sha256": "e8afced3cf0d8758",
@@ -110,10 +141,5 @@
    "altura_final": 625
   }
  ],
- "recusadas": [
-  [
-   "File:Anonymous - Der Prophet Zacharias - GG 6372 - Kunsthistorisches Museum.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

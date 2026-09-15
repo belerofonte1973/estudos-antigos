@@ -6,6 +6,33 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/obadias/01-obadias.webp",
+   "arquivo_origem": "File:Abdias (Obadiah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
+   "titulo": "Obadias",
+   "legenda": "Prancha da reprodução impressa de 1904 (M. de Brunoff & Cie) das 400 pinturas compostas a partir dos desenhos de James Tissot, na abertura de Ob 1. Com apenas vinte e um versículos, Obadias é o mais curto dos profetas e trata de um único tema: a queda de Edom e a violência que ele cometeu contra Jacó. A prancha abre o dossiê com a figura do vidente tal como o século XIX o imaginou.",
+   "passagem": "Ob 1,1-4",
+   "artista": "Phillip Medhurst",
+   "data": "1904",
+   "tecnica": "reprodução impressa (M. de Brunoff & Cie, 1904)",
+   "acervo": "Reprodução impressa de M. de Brunoff & Cie (1904), a partir de desenhos de James Tissot; fotografia de Phillip Medhurst, CC BY-SA 4.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AAbdias_%28Obadiah_1_1%29_%E2%80%A2_invenit_James_Tissot_%E2%80%A2_pinxit_Charles_Hoffbauer_%E2%80%A2_excudit_Maurice_de_Brunoff_apud_Philip_de_Vere_%E2%80%A2_praesentat_Phillip_Medhurst.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 4.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 1689,
+   "altura_original": 3775,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Printed reproduction M. de Brunoff & Cie, 1904: all 400 paintings were based on James Tissot's sketches; the first 200 were painted by him; the last were painted after his death in 1902 by other artists.",
+   "sha256": "cb440cd7c06e9993",
+   "bytes": 206726,
+   "largura_final": 950,
+   "altura_final": 2123
+  },
+  {
    "ordem": 2,
    "src": "/imagens/obadias/02-o-profeta-obadias-da-serie-profetas-e-sibilas.webp",
    "arquivo_origem": "File:The Prophet Obadiah, from Prophets and Sibyls MET DP835424.jpg",
@@ -24,6 +51,7 @@
    "largura_original": 2525,
    "altura_original": 3522,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Print; Prints",
    "sha256": "dacc9200e677cec8",
@@ -50,12 +78,40 @@
    "largura_original": 2508,
    "altura_original": 4072,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "ecb5f3a559c0f89e",
    "bytes": 332784,
    "largura_final": 950,
    "altura_final": 1542
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/obadias/04-obadias-no-menologio-de-basilio-ii.webp",
+   "arquivo_origem": "File:Prophet Obadiah (Menologion of Basil II).jpg",
+   "titulo": "Obadias no Menológio de Basílio II",
+   "legenda": "Miniatura do Menológio de Basílio II, manuscrito constantinopolitano de 985 conservado na Biblioteca Vaticana (Vat. gr. 1613). O menológio reúne, para cada dia do ano litúrgico, a memória de um santo — entre eles os profetas do Antigo Testamento, que a Igreja bizantina festejava como santos. Obadias entra assim na devoção cristã oriental muito antes de qualquer ilustração moderna do livro.",
+   "passagem": "Ob 1,1",
+   "artista": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )",
+   "data": "0985",
+   "tecnica": "iluminura (manuscrito bizantino)",
+   "acervo": "Biblioteca Apostólica Vaticana (Vat. gr. 1613), Roma",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AProphet_Obadiah_%28Menologion_of_Basil_II%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1075,
+   "altura_original": 770,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Константинополь. 985 г. Миниатюра Минология Василия II. Ватиканская библиотека. Рим.",
+   "sha256": "ca9af438126a6e98",
+   "bytes": 202680,
+   "largura_final": 950,
+   "altura_final": 680
   },
   {
    "ordem": 5,
@@ -76,6 +132,7 @@
    "largura_original": 3000,
    "altura_original": 4000,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Edomite clay goddess crowned with three horns. Horvat Qitmit (7th-6th BCE). Israel Museum, Jerusalem",
    "sha256": "6b31a7a301c53771",
@@ -102,6 +159,7 @@
    "largura_original": 2382,
    "altura_original": 1975,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "The Edomite ostracon from Ḥorvat 'Uzza is an inscription from Arad valley, dating to 6th century BCE. This picture was taken in Israel Museum.",
    "sha256": "777c430f49861b20",
@@ -110,14 +168,5 @@
    "altura_final": 788
   }
  ],
- "recusadas": [
-  [
-   "File:Abdias (Obadiah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Prophet Obadiah (Menologion of Basil II).jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

@@ -24,6 +24,7 @@
    "largura_original": 6430,
    "altura_original": 4622,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Elia en de profeten van Baäl. Geschiedenis van Elia (serietitel). Thesaurus sacrarum historiarum veteris testamenti (...) (serietitel) Objecttype: prent Serienummer: 4/4 Objectnummer: RP-P-1988-305 Catalogusreferentie: Mielke 26. Collectie Rijksmuseum-1(2). Opmerking: twee staten in de collectie van het Rijksmuseum Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228, verzamelaarsmerk, verso, gestempeld: Lugt 2760 Omschrijving: De Baälpriesters schreeuwen ",
    "sha256": "6c8211625bf3289a",
@@ -50,6 +51,7 @@
    "largura_original": 3269,
    "altura_original": 2138,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "1c140b9a8139194e",
@@ -76,6 +78,7 @@
    "largura_original": 2304,
    "altura_original": 3072,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Sixteenth century gravure of a reconstruction of the temple of Solomon (detail)",
    "sha256": "66214f16e220e72e",
@@ -102,12 +105,40 @@
    "largura_original": 3811,
    "altura_original": 1126,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Painting, cassone panel; Paintings",
    "sha256": "0e45640aa5976020",
    "bytes": 68908,
    "largura_final": 950,
    "altura_final": 281
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/reis/05-prisma-de-taylor-anais-de-senaqueribe.webp",
+   "arquivo_origem": "File:Taylor Prism-1.jpg",
+   "titulo": "Prisma de Taylor (anais de Senaqueribe)",
+   "legenda": "O prisma de Taylor, no British Museum, reúne os anais de Senaqueribe e o relato de sua campanha na região de Judá, com o cerco de Jerusalém e o tributo de Ezequias, sem que se mencione a tomada da cidade (cf. 2Rs 18-19). O dossiê o usa na seção de ciência: é o caso mais discutido de uma inscrição real que confirma um episódio do livro e, ao mesmo tempo, o conta de outro modo.",
+   "passagem": "contexto epigráfico (cf. 2Rs 18-19)",
+   "artista": "This image was produced by me, David Castor ( user:dcastor ). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you the right to use them in any way you like, without any kind of notification. This said, I would still appreciate to be mentioned as the originator whenever you think it complies well with your use of the picture. A message to me about how it has been used would also be welcome. You are obviously not required to respond to these wishes of mine, just in a friendly manner encouraged to. (All my photos are placed in Category:Images by David Castor or a subcategory thereof.)",
+   "data": "",
+   "tecnica": "argila inscrita (prisma, c. 691 a.C.)",
+   "acervo": "British Museum, Londres (prisma de Taylor); fotografia de David Castor",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ATaylor_Prism-1.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1060,
+   "altura_original": 2208,
+   "secao": "12",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "The Taylor Prism from the Neo-Assyrian empire tells the story of king Sennacherib's third campaign and includes descriptions of his conquests in Judah, some of which are described from another point of view in the old testament of the Bible.",
+   "sha256": "7c38cf011a748809",
+   "bytes": 228854,
+   "largura_final": 950,
+   "altura_final": 1979
   },
   {
    "ordem": 6,
@@ -128,6 +159,7 @@
    "largura_original": 2777,
    "altura_original": 1335,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "photo of a replica of the Siloam inscription.",
    "sha256": "5a76d64ad0c798d9",
@@ -136,10 +168,5 @@
    "altura_final": 457
   }
  ],
- "recusadas": [
-  [
-   "File:Taylor Prism-1.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

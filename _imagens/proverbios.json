@@ -24,12 +24,40 @@
    "largura_original": 2405,
    "altura_original": 3224,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "\"Wisdom hath builded her house\" (Премудрость созда Себе дом), Novgorod (1548). The title of this type of icon is from Proverbs 9:1 and refers to the identification of Christ the Logos with Divine Wisdom (Hagia Sophia). The highly allegoric composition is centered on the \"Feast of Wisdom\" of Ephesians 3:8-12 The image of the \"Power and Wisdom of GOD\" on the throne is surrounded by the ranks of the heavenly hierarchy. The Theotokos sits on a throne with Christ Immanuel. Divine Wisdom is depicted i",
    "sha256": "44def66e9e8824ca",
    "bytes": 342920,
    "largura_final": 950,
    "altura_final": 1274
+  },
+  {
+   "ordem": 2,
+   "src": "/imagens/proverbios/02-salomao-recolhe-os-proverbios.webp",
+   "arquivo_origem": "File:Print, book-illustration (BM 1927,0614.285).jpg",
+   "titulo": "Salomão recolhe os Provérbios",
+   "legenda": "Ilustração da Vulgata impressa por Jean Marion (c. 1520-21), atribuída a Hans Springinklee, com Salomão recolhendo os provérbios: o rei reclinado e o escriba que registra as sentenças. A cena traduz em imagem o que o próprio livro diz da sua formação — as coleções atribuídas a Salomão e, depois, as 'palavras dos sábios' reunidas pelos homens de Ezequias (Pv 25,1).",
+   "passagem": "Pv 1,1; 25,1",
+   "artista": "Attributed to: Hans Springinklee (Placed with Schön) Printed by: Jean Marion Published by: Anton Koberger",
+   "data": "between 1520 and 1521",
+   "tecnica": "xilogravura (ilustração de livro impresso)",
+   "acervo": "British Museum, Londres (1927,0614.285)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3APrint%2C_book-illustration_%28BM_1927%2C0614.285%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1152,
+   "altura_original": 782,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Solomon collecting the Proverbs; a king reclining on a bed at centre, a scribe writing at left, male figures standing in a doorway at right. Illustration to the Vulgate printed by Marion for Koberger in 1520-1. Woodcut",
+   "sha256": "ffe3a83e6daf1803",
+   "bytes": 250012,
+   "largura_final": 950,
+   "altura_final": 645
   },
   {
    "ordem": 3,
@@ -50,6 +78,7 @@
    "largura_original": 1952,
    "altura_original": 2482,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Harvesting ants and trap-door spiders. Notes and observations on their habits and dwellings. By J. Traherne Moggridge, F. L. S.",
    "sha256": "1acc620f4f3f112b",
@@ -76,6 +105,7 @@
    "largura_original": 4000,
    "altura_original": 2667,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "; Ostracon, hieratic",
    "sha256": "7885b9b75183d3b9",
@@ -102,6 +132,7 @@
    "largura_original": 2196,
    "altura_original": 1068,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Papyrus with the Instruction of Amenemope, copied by the scribe Senu, son of Pemu. The papyrus dates to the Third Intermediate Period (1077-664 BC). It was discovered at Thebes, and was purchased by the British Museum through Wallis Budge in 1888.",
    "sha256": "6971c78d49232233",
@@ -110,10 +141,5 @@
    "altura_final": 462
   }
  ],
- "recusadas": [
-  [
-   "File:Print, book-illustration (BM 1927,0614.285).jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

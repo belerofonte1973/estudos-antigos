@@ -24,6 +24,7 @@
    "largura_original": 2321,
    "altura_original": 2905,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Jonah Is Spewed Forth by the Whale (Jon. 2:1-11)",
    "sha256": "84fb9d22245e5913",
@@ -50,6 +51,7 @@
    "largura_original": 2620,
    "altura_original": 3508,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "d03e1d349fcae235",
@@ -76,12 +78,67 @@
    "largura_original": 4712,
    "altura_original": 4062,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Jona zit onder de wonderboomGeschiedenis van Jona (serietitel) Objecttype: prent Serienummer: 4/4 Objectnummer: RP-P-1904-3288 Catalogusreferentie: New Hollstein Dutch 78-2(2) New Hollstein Dutch 182Opmerking: Heemskerck Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228 Omschrijving: Jona zit op een rots boven de stad Nineve en spreekt met God. Deze laat een boom voor hem groeien, zodat Jona in de schaduw kan zitten. Vervaardiging Vervaardiger: prentmak",
    "sha256": "c4bbf9bc862aeac5",
    "bytes": 180314,
    "largura_final": 950,
    "altura_final": 819
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/jonas/04-jonas-debaixo-da-aboboreira.webp",
+   "arquivo_origem": "File:Maarten van Heemskerck (Heemskerk 1498-Haarlem 1574) - Jonah Under His Gourd - RCIN 405465 - Royal Collection.jpg",
+   "titulo": "Jonas debaixo da aboboreira",
+   "legenda": "Pintura de Maarten van Heemskerck (1561) da Royal Collection (inv. RCIN 405465), com o mesmo tema tratado diretamente pelo pintor: Jonas sentado fora da cidade, à espera de ver o que aconteceria a Nínive (Jn 4,5). A obra interessa ao dossiê porque mostra que o episódio da planta — e não o do peixe — era o que os pintores do século XVI consideravam o centro do livro.",
+   "passagem": "Jn 4,5-8",
+   "artista": "Maarten van Heemskerck",
+   "data": "1561",
+   "tecnica": "",
+   "acervo": "Royal Collection (inv. RCIN 405465)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AMaarten_van_Heemskerck_%28Heemskerk_1498-Haarlem_1574%29_-_Jonah_Under_His_Gourd_-_RCIN_405465_-_Royal_Collection.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1500,
+   "altura_original": 767,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "dc320245c2ab7aa9",
+   "bytes": 98490,
+   "largura_final": 950,
+   "altura_final": 486
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/jonas/05-relevo-do-palacio-de-ninive-com-soldados.webp",
+   "arquivo_origem": "File:VAM - Palastrelief Ninive 4.jpg",
+   "titulo": "Relevo do palácio de Nínive com soldados",
+   "legenda": "Relevo do palácio de Nínive (século VII a.C.), hoje no Museu do Oriente Próximo Antigo, em Berlim, com soldados em marcha. Nínive foi capital assíria sob Senaqueribe e Assurbanípal, e é a cidade cuja conversão e cuja queda o livro de Jonas discute. O relevo é o que resta da potência militar que assombrava Judá e que o profeta é enviado a pregar — o cenário histórico do livro.",
+   "passagem": "Jn 3,1-10",
+   "artista": "Wolfgang Sauber",
+   "data": "2012-04-05",
+   "tecnica": "relevo em pedra",
+   "acervo": "Vorderasiatisches Museum (Museu do Oriente Próximo Antigo), Berlim; fotografia de Wolfgang Sauber, CC BY-SA 3.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AVAM_-_Palastrelief_Ninive_4.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 3.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 1602,
+   "altura_original": 2448,
+   "secao": "9",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Museum of Ancient Near East ( Berlin ). Palace relief from Nineveh with soldiers ( 7th century BC ) - detail.",
+   "sha256": "2812ce82713f9cc9",
+   "bytes": 306460,
+   "largura_final": 950,
+   "altura_final": 1452
   },
   {
    "ordem": 6,
@@ -102,6 +159,7 @@
    "largura_original": 3016,
    "altura_original": 2236,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Jonah Under the Gourd Vine , 280-290 CE, marble, late Roman, Asia Minor, Cleveland Museum of Art",
    "sha256": "ebd4da76b83ad7b0",
@@ -110,14 +168,5 @@
    "altura_final": 704
   }
  ],
- "recusadas": [
-  [
-   "File:Maarten van Heemskerck (Heemskerk 1498-Haarlem 1574) - Jonah Under His Gourd - RCIN 405465 - Royal Collection.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:VAM - Palastrelief Ninive 4.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

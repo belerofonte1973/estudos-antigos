@@ -24,12 +24,40 @@
    "largura_original": 2322,
    "altura_original": 2921,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Prophet Jeremiah",
    "sha256": "507da06d62fcfe6b",
    "bytes": 405370,
    "largura_final": 950,
    "altura_final": 1195
+  },
+  {
+   "ordem": 2,
+   "src": "/imagens/jeremias/02-jeremias-retirado-da-cisterna.webp",
+   "arquivo_origem": "File:Jeremiah Lifted off the Cistern LACMA AC1998.151.1.5.jpg",
+   "titulo": "Jeremias retirado da cisterna",
+   "legenda": "Xilogravura colorida de Jost Amman, do século XVI, no LACMA, para Jr 38: Jeremias é jogado na cisterna e retirado com trapos sob as axilas a pedido de Ebede-Meleque, o eunuco estrangeiro (Jr 38,6-13). O dossiê usa a cena porque é o episódio que mede o custo do anúncio — o profeta é salvo por um de fora, e não pelos seus.",
+   "passagem": "Jr 38,1-13",
+   "artista": "Jost Amman (Switzerland, Zurich, active Germany, 1539-1591)",
+   "data": "16 th century",
+   "tecnica": "xilogravura colorida à mão",
+   "acervo": "Los Angeles County Museum of Art (LACMA, AC1998.151.1.5)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AJeremiah_Lifted_off_the_Cistern_LACMA_AC1998.151.1.5.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1242,
+   "altura_original": 2100,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Germany, 16th century Book: Biblia, Jeremiah 38 Prints; woodcuts Hand-colored woodcut Sheet: 14 1/8 x 8 1/8 in. (35.88 x 20.64 cm) irregular; image: 4 1/4 x 6 in. (10.8 x 15.24 cm) Gift of Connie and Ted Harris (AC1998.151.1.5) Prints and Drawings",
+   "sha256": "03dd3bce34fbe796",
+   "bytes": 497984,
+   "largura_final": 950,
+   "altura_final": 1606
   },
   {
    "ordem": 3,
@@ -50,6 +78,7 @@
    "largura_original": 3857,
    "altura_original": 4902,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "186cf3014d6f97d8",
@@ -76,6 +105,7 @@
    "largura_original": 2847,
    "altura_original": 3741,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Print; Prints",
    "sha256": "1901b121bdf64879",
@@ -102,6 +132,7 @@
    "largura_original": 2749,
    "altura_original": 3088,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Neo-Babylonian Chronicle for years 605-594 BCE. This is an official document which chronicles some events (during the years 605 to 595 BCE) in the reign of king Nebuchadnezzar II (r. 605-562 BCE). The cuneiform inscription highlights the conquest of Jerusalem and the surrender of Jehoiakim, king of Judah, in 597 BCE. Clay tablet, made c. 550-400 BCE. From Babylon, Iraq. British Museum.",
    "sha256": "eaf9a09d8955cd6c",
@@ -110,10 +141,5 @@
    "altura_final": 1067
   }
  ],
- "recusadas": [
-  [
-   "File:Jeremiah Lifted off the Cistern LACMA AC1998.151.1.5.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

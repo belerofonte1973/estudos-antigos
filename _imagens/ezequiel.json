@@ -33,6 +33,33 @@
    "altura_final": 1173
   },
   {
+   "ordem": 2,
+   "src": "/imagens/ezequiel/02-o-turbilhao-a-visao-de-ezequiel.webp",
+   "arquivo_origem": "File:William Blake Ezekiel's Vision ca 1803-5 Boston Museum.jpg",
+   "titulo": "O turbilhão: a visão de Ezequiel",
+   "legenda": "William Blake desenhou entre 1803 e 1805 O turbilhão: a visão dos querubins e das rodas com olhos, ilustração para Ez 1,4-28. O dossiê usa o desenho porque a visão do carro é o texto mais especulativo do livro, e Blake o leu como estrutura do cosmos — a mesma leitura que a mística judaica fez da merkavá.",
+   "passagem": "Ez 1,4-28",
+   "artista": "William Blake",
+   "data": "19 October 2012, 11:27:22",
+   "tecnica": "aquarela e têmpera sobre papel",
+   "acervo": "Museum of Fine Arts, Boston",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AWilliam_Blake_Ezekiel%27s_Vision_ca_1803-5_Boston_Museum.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1197,
+   "altura_original": 1600,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "The Whirlwind: Ezekiel's Vision of the Cherubim and Eyed Wheels (Illustration to the Old Testament, Ezekiel I 4–28) • about 1803–05 • William Blake, English, 1757–1827 DIMENSIONS Sheet: 39.4 x 29.5 cm (15 1/2 x 11 5/8 in.) MEDIUM OR TECHNIQUE Pen and watercolor over graphite on paper PROVENANCE Thomas Butts (1757-1845), England; sold 29 June, 1853, no. 125, Foster's; C.J. Strange; B. Quaritch, Boston; acquired 29 April 1890",
+   "sha256": "78130d9e2e923577",
+   "bytes": 224864,
+   "largura_final": 950,
+   "altura_final": 1270
+  },
+  {
    "ordem": 3,
    "src": "/imagens/ezequiel/03-ezequiel-na-capela-sistina.webp",
    "arquivo_origem": "File:Ezekiel by Michelangelo, restored - large.jpg",
@@ -85,16 +112,34 @@
    "bytes": 271106,
    "largura_final": 950,
    "altura_final": 1236
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/ezequiel/05-ezequiel-em-dura-europos.webp",
+   "arquivo_origem": "File:Ezekiel 2.jpeg",
+   "titulo": "Ezequiel em Dura Europos",
+   "legenda": "Painel NC I da sinagoga de Dura Europos (século III, Síria), com cenas do ciclo de Ezequiel — a destruição e a restauração da vida nacional. O dossiê usa o painel na seção de ciência porque ele mostra que a síntese de Ezequiel já estava pintada nas paredes de uma sinagoga antes de qualquer comentário medieval.",
+   "passagem": "Ez 37 (cf. painel NC I)",
+   "artista": "Dura Europos",
+   "data": "2013-04-11 20:11:19",
+   "tecnica": "pintura mural (século III)",
+   "acervo": "Sinagoga de Dura Europos, Síria (painel NC I)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AEzekiel_2.jpeg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1516,
+   "altura_original": 1116,
+   "secao": "12",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Panel nc I. Ezekiel, the destruction and restoration of national life, section B, scenes 1-2. Dura Europos synagogue wall painting, reflecting Hellenistic anthropology. See also: https://er.ceres.rub.de/index.php/ER/article/download/8440/7846",
+   "sha256": "f8a08bb284e16a4e",
+   "bytes": 179734,
+   "largura_final": 950,
+   "altura_final": 699
   }
  ],
- "recusadas": [
-  [
-   "File:William Blake Ezekiel's Vision ca 1803-5 Boston Museum.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Ezekiel 2.jpeg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

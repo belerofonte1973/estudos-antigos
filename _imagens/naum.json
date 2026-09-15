@@ -24,6 +24,7 @@
    "largura_original": 3096,
    "altura_original": 4000,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "dbf977d408e535d7",
@@ -50,12 +51,40 @@
    "largura_original": 9842,
    "altura_original": 7703,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "bc96c7ac6d3b5c4e",
    "bytes": 81186,
    "largura_final": 950,
    "altura_final": 744
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/naum/03-naum-no-menologio-de-basilio-ii.webp",
+   "arquivo_origem": "File:Nahum (Menologion of Basil II).jpg",
+   "titulo": "Naum no Menológio de Basílio II",
+   "legenda": "Miniatura do Menológio de Basílio II, manuscrito de Constantinopla de 985 conservado na Biblioteca Vaticana (Vat. gr. 1613). O menológio comemora os profetas como santos ao longo do calendário litúrgico da Igreja bizantina, e Naum aparece entre eles como o profeta ligado a Cafarnaum. É uma das mais antigas testemunhas conservadas da recepção litúrgica do livro no Oriente cristão.",
+   "passagem": "Na 1,1",
+   "artista": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )",
+   "data": "0985",
+   "tecnica": "iluminura (manuscrito bizantino)",
+   "acervo": "Biblioteca Apostólica Vaticana (Vat. gr. 1613), Roma",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ANahum_%28Menologion_of_Basil_II%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1062,
+   "altura_original": 755,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Константинополь. 985 г. Миниатюра Минология Василия II. Ватиканская библиотека. Рим.",
+   "sha256": "25859a2a0dffb95b",
+   "bytes": 197302,
+   "largura_final": 950,
+   "altura_final": 675
   },
   {
    "ordem": 4,
@@ -76,12 +105,40 @@
    "largura_original": 3708,
    "altura_original": 2413,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "6a31a44fd6e77dae",
    "bytes": 119588,
    "largura_final": 950,
    "altura_final": 618
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/naum/05-prisma-de-taylor-anais-de-senaqueribe.webp",
+   "arquivo_origem": "File:Taylor Prism-1.jpg",
+   "titulo": "Prisma de Taylor (anais de Senaqueribe)",
+   "legenda": "Prisma de argila com os anais de Senaqueribe, do início do século VII a.C., com a narrativa da terceira campanha do rei e das suas conquistas em Judá. É o documento de barro que conta o cerco de Jerusalém em 701 a.C. do ponto de vista do invasor — o mesmo episódio que os livros de Reis e Isaías narram do ponto de vista de Judá. A comparação entre as duas versões é o exercício clássico de leitura comparada do Antigo Oriente Próximo, e ilumina o horizonte histórico dos oráculos de Naum.",
+   "passagem": "Na 1,11-14 (contexto assírio)",
+   "artista": "This image was produced by me, David Castor ( user:dcastor ). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you the right to use them in any way you like, without any kind of notification. This said, I would still appreciate to be mentioned as the originator whenever you think it complies well with your use of the picture. A message to me about how it has been used would also be welcome. You are obviously not required to respond to these wishes of mine, just in a friendly manner encouraged to. (All my photos are placed in Category:Images by David Castor or a subcategory thereof.)",
+   "data": "",
+   "tecnica": "prisma de argila com inscrição cuneiforme",
+   "acervo": "Prisma de Taylor; fotografia de David Castor (domínio público)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ATaylor_Prism-1.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1060,
+   "altura_original": 2208,
+   "secao": "12",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "The Taylor Prism from the Neo-Assyrian empire tells the story of king Sennacherib's third campaign and includes descriptions of his conquests in Judah, some of which are described from another point of view in the old testament of the Bible.",
+   "sha256": "7c38cf011a748809",
+   "bytes": 228854,
+   "largura_final": 950,
+   "altura_final": 1979
   },
   {
    "ordem": 6,
@@ -102,6 +159,7 @@
    "largura_original": 2535,
    "altura_original": 2037,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Assyrian relief from Nineveh, now in the Pergamon Museum, Berlin. Alabaster relief, made about 650 BC. Tag accompaningy the exhibit states: \"This small sized representation which might depict a scene from Ashurbanipal (668-627 BC) campaign against the Elamite city Hamaru, shows an Assyrian chariot with charioteer and archer protected from enemy attack by shield bearers.\"",
    "sha256": "d706485fa6bfd0f7",
@@ -110,14 +168,5 @@
    "altura_final": 763
   }
  ],
- "recusadas": [
-  [
-   "File:Nahum (Menologion of Basil II).jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Taylor Prism-1.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

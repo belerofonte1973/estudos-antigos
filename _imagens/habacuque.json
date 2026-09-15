@@ -6,6 +6,60 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/habacuque/01-o-zuccone-de-donatello-o-profeta-habacuque.webp",
+   "arquivo_origem": "File:Zuccone Donatello OPA Florence.jpg",
+   "titulo": "O 'Zuccone', de Donatello (o profeta Habacuque)",
+   "legenda": "Estátua de mármore de Donatello conhecida como 'Zuccone' (o cabeça-de-abóbora), esculpida para o campanário de Florença e hoje no Museu da Obra do Duomo. A tradição identificou a figura com o profeta Habacuque — o profeta que fica de vigia na muralha esperando a resposta de Deus e recebe a sentença de que 'o justo viverá pela sua fé' (Ha 2,1-4), talvez o versículo do Antigo Testamento com maior fortuna na teologia cristã.",
+   "passagem": "Ha 2,1-4",
+   "artista": "anônimo",
+   "data": "",
+   "tecnica": "escultura em mármore",
+   "acervo": "Museu da Obra do Duomo (Museo dell'Opera del Duomo), Florença; fotografia de Jastrow (domínio público)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AZuccone_Donatello_OPA_Florence.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1000,
+   "altura_original": 2230,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "5a0cd4177344c097",
+   "bytes": 111598,
+   "largura_final": 950,
+   "altura_final": 2118
+  },
+  {
+   "ordem": 2,
+   "src": "/imagens/habacuque/02-o-profeta-habacuque.webp",
+   "arquivo_origem": "File:British (English) School - The Prophet Habakkuk - 1430496.24 - National Trust.jpg",
+   "titulo": "O profeta Habacuque",
+   "legenda": "Pintura de escola inglesa (cerca de 1610-1615) pertencente ao National Trust e registrada na Art UK. Séries de profetas como esta decoravam igrejas e casas inglesas do século XVII, e Habacuque aparecia sempre com os sinais que o livro lhe deu: a visão, a sentença sobre o justo e a taça do juízo. A obra mostra como um dos livros menos lidos da Bíblia entrou na decoração devocional do protestantismo inglês.",
+   "passagem": "Ha 1,1-4; 2,1-4",
+   "artista": "anonymous",
+   "data": "between circa 1610 and circa 1615",
+   "tecnica": "",
+   "acervo": "National Trust (n.º 1430496); Art UK",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ABritish_%28English%29_School_-_The_Prophet_Habakkuk_-_1430496.24_-_National_Trust.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1159,
+   "altura_original": 1200,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "51f0f1fbf121d8d7",
+   "bytes": 109154,
+   "largura_final": 950,
+   "altura_final": 984
+  },
+  {
    "ordem": 3,
    "src": "/imagens/habacuque/03-o-profeta-habacuque-da-serie-profetas-e-sibilas.webp",
    "arquivo_origem": "File:The Prophet Habakkuk, from Prophets and Sibyls MET DP835428.jpg",
@@ -24,12 +78,40 @@
    "largura_original": 2659,
    "altura_original": 3641,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Print; Prints",
    "sha256": "190f10177566b6d7",
    "bytes": 106952,
    "largura_final": 950,
    "altura_final": 1301
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/habacuque/04-habacuque-no-menologio-de-basilio-ii.webp",
+   "arquivo_origem": "File:Habakkuk (Menologion of Basil II).jpg",
+   "titulo": "Habacuque no Menológio de Basílio II",
+   "legenda": "Miniatura do Menológio de Basílio II, manuscrito de Constantinopla de 985 conservado na Biblioteca Vaticana (Vat. gr. 1613). O calendário litúrgico bizantino comemora os profetas como santos, e Habacuque entra nele ligado ao episódio de Bel e o Dragão (Dn 14), em que é transportado por um anjo para levar alimento a Daniel na cova dos leões. É a recepção do profeta na liturgia e na arte bizantinas.",
+   "passagem": "Ha 1,1",
+   "artista": "Authors of Menologion of Basil II (circa 985 AC, Constantinople), Byzantine manuscript illuminators [1] : Pantoleon with Georgios, Michael the Younger, Michael of Blachernae, Symeon, Symeon of Blachernae, Menas, and Nestor ( Online on Vatican site )",
+   "data": "0985",
+   "tecnica": "iluminura (manuscrito bizantino)",
+   "acervo": "Biblioteca Apostólica Vaticana (Vat. gr. 1613), Roma",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AHabakkuk_%28Menologion_of_Basil_II%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1071,
+   "altura_original": 755,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Константинополь. 985 г. Миниатюра Минология Василия II. Ватиканская библиотека. Рим.",
+   "sha256": "46cd4bdd25e36ce8",
+   "bytes": 209980,
+   "largura_final": 950,
+   "altura_final": 670
   },
   {
    "ordem": 5,
@@ -50,6 +132,7 @@
    "largura_original": 3501,
    "altura_original": 2052,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Assyrian relief from Nineveh. Tag on exhibit states: \"Horses and grooms leaving Sennacherib's palace: Assyrian, about 700-692 BC. From Nineveh, South-West Palace, Room LI north, probably panels 37-38. WA 124795\". See BM database entry for more details",
    "sha256": "6a12b87f2d6a3fbc",
@@ -76,6 +159,7 @@
    "largura_original": 5472,
    "altura_original": 3648,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "From the National Archaeological Museum of Saint-Germain-en-Laye near Paris France - Belt buckle Reliquary showing Habakkuk feeding Daniel in the lion's pit - 2nd half of the 6th century",
    "sha256": "d5459597e720f598",
@@ -84,18 +168,5 @@
    "altura_final": 633
   }
  ],
- "recusadas": [
-  [
-   "File:Zuccone Donatello OPA Florence.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:British (English) School - The Prophet Habakkuk - 1430496.24 - National Trust.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Habakkuk (Menologion of Basil II).jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

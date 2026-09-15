@@ -24,6 +24,7 @@
    "largura_original": 6348,
    "altura_original": 4717,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "b94a0a4281548bc9",
@@ -50,6 +51,7 @@
    "largura_original": 5906,
    "altura_original": 3921,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "The Siege and Destruction of Jerusalem by the Romans Under the Command of Titus",
    "sha256": "fdfa126369b463bb",
@@ -76,12 +78,40 @@
    "largura_original": 2919,
    "altura_original": 4112,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Siege and destruction of Jerusalem",
    "sha256": "c19fb9a5ca2f6062",
    "bytes": 279998,
    "largura_final": 950,
    "altura_final": 1338
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/lamentacoes/04-manuscrito-polifonico-das-lamentacoes.webp",
+   "arquivo_origem": "File:Carpentras lamentations.jpg",
+   "titulo": "Manuscrito polifônico das Lamentações",
+   "legenda": "Página de manuscrito com a música polifônica das Lamentações de Jeremias, atribuída a Carpentras e conservada em arquivo vaticano. O dossiê usa a página para mostrar que as Lamentações são um texto feito para ser entoado: a sua circulação medieval e moderna passa mais pela liturgia cantada do que pela pintura.",
+   "passagem": "Lm 1,1-2 (recepção litúrgica)",
+   "artista": "Unknown author Unknown author",
+   "data": "",
+   "tecnica": "manuscrito musical sobre pergaminho",
+   "acervo": "Arquivo do Vaticano (imagem de domínio público)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ACarpentras_lamentations.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1270,
+   "altura_original": 937,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Polyphonic setting of Lamentations of Jeremiah by Carpentras, from Vatican archive. From [1] .",
+   "sha256": "cb7651c2f037c7fc",
+   "bytes": 116352,
+   "largura_final": 950,
+   "altura_final": 701
   },
   {
    "ordem": 5,
@@ -102,6 +132,7 @@
    "largura_original": 1944,
    "altura_original": 2592,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Carrying off the Menorah and other spoils from the Temple in Jerusalem depicted on a relief on the Arch of Titus in the Forum Romanum.",
    "sha256": "0adaa33f08d363fa",
@@ -110,10 +141,5 @@
    "altura_final": 1267
   }
  ],
- "recusadas": [
-  [
-   "File:Carpentras lamentations.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

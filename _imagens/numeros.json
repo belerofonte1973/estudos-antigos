@@ -6,6 +6,33 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/numeros/01-o-retorno-dos-espias.webp",
+   "arquivo_origem": "File:Ebbinghaus The Spies Return.jpg",
+   "titulo": "O retorno dos espias",
+   "legenda": "Ilustração de Wilhelm Ebbinghaus para Nm 13,23-24: os espias voltam do vale de Escol com o cacho de uvas tão grande que precisa ser levado numa vara entre dois homens. O dossiê usa a cena porque ela é o argumento visual do capítulo — a terra é boa, e é o medo do povo, não a esterilidade da terra, que decide o rumo da narrativa.",
+   "passagem": "Nm 13,17-33",
+   "artista": "Wilhelm Ebbinghaus",
+   "data": "before 1908",
+   "tecnica": "gravura de livro (The Bible and Its Story, 1908)",
+   "acervo": "The Bible and Its Story (1908), vol. 2",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AEbbinghaus_The_Spies_Return.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1378,
+   "altura_original": 2068,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "The Spies Return, by Wilhelm Ebbinghaus, from The Bible and Its Story Taught by One Thousand Picture Lessons, vol. 2. edited by Charles F. Horne and Julius A. Bewer. 1908.",
+   "sha256": "88416eb0c432562e",
+   "bytes": 460448,
+   "largura_final": 950,
+   "altura_final": 1426
+  },
+  {
    "ordem": 2,
    "src": "/imagens/numeros/02-a-jumenta-de-balaao.webp",
    "arquivo_origem": "File:Rembrandt - L'Ânesse du prophète Balaam - J 95 - Musée Cognacq-Jay.jpg",
@@ -24,6 +51,7 @@
    "largura_original": 2201,
    "altura_original": 3000,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "0c78c5681c8f618e",
@@ -50,6 +78,7 @@
    "largura_original": 4659,
    "altura_original": 5100,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "4adac285a0411622",
@@ -76,6 +105,7 @@
    "largura_original": 2328,
    "altura_original": 2914,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "An Angel Appears to Balaam (Num 23:15-35)",
    "sha256": "64355b2220618842",
@@ -102,6 +132,7 @@
    "largura_original": 2172,
    "altura_original": 1861,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Transcription from Deir 'Alla inscription This is just the so-called \"Combination 1\", made up of a portion of the plaster fragments. The text, according to the Hebrew Wikipedia article is: [זנה .] ספר [. ב]לעם [. בר בע]ר . אש . חזה . אלהן [.] הא [.] ויאתו . אלוה . אלהן . בלילה [.ויאמרו . ל]ה כמשא . אל . ויאמרו ל[בלע]ם . בר בער . כה . יפעל [--]א אחראה . אש . ל[---------]עת ויקם . בלעם . מן . מחר[--------]ל . ימן . [----------]ה . ול יכ[ל . אכל . ויצ]ם [.] ובכ ה . יבכה . ויעל . עמה . אלוה . וי[אמר",
    "sha256": "399622e677a74f5d",
@@ -128,6 +159,7 @@
    "largura_original": 4032,
    "altura_original": 3024,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Archaeological Site 200 (\"Hathor Temple\"), Timna Valley, Israel: A major Late Bronze–Early Iron Age shrine, also known as the Midianite Shrine; standing stones (masseboth) and niches are cut into sandstone of the Solomon's Pillars Formation",
    "sha256": "a5e26dfe131a66f1",
@@ -136,10 +168,5 @@
    "altura_final": 712
   }
  ],
- "recusadas": [
-  [
-   "File:Ebbinghaus The Spies Return.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

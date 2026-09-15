@@ -6,6 +6,60 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/sabedoria/01-salomao-pede-a-sabedoria.webp",
+   "arquivo_origem": "File:Solomon prays for wisdom.jpg",
+   "titulo": "Salomão pede a sabedoria",
+   "legenda": "A cena é a oração de Salomão pela sabedoria, que a Sabedoria de Salomão reescreve em primeira pessoa: 'orei, e a prudência me foi dada' (Sb 7,7), e 'sendo eu um menino bem dotado, coube-me uma boa alma' (Sb 8,19-20). O dossiê compara esta oração com 1Rs 3, e é aí que a questão da antropologia grega — a alma que precede o corpo — entra no debate.",
+   "passagem": "Sb 7,7-14; 8,19-20 (cf. 1Rs 3,5-14)",
+   "artista": "anônimo",
+   "data": "",
+   "tecnica": "gravura",
+   "acervo": "Netherlands Institute for Art History (RKD, id. digital 2792)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ASolomon_prays_for_wisdom.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1885,
+   "altura_original": 2068,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "850793ef29a0e69b",
+   "bytes": 112284,
+   "largura_final": 950,
+   "altura_final": 1042
+  },
+  {
+   "ordem": 2,
+   "src": "/imagens/sabedoria/02-o-espirito-da-sabedoria.webp",
+   "arquivo_origem": "File:Spiritus Sapientiae (The Spirit of Wisdom) (BM 1937,0915.309).jpg",
+   "titulo": "O Espírito da Sabedoria",
+   "legenda": "Primeira prancha da série sobre o Espírito da Sabedoria, publicada por Adriaen Collaert a partir de composição de Jan van der Straet (c. 1595): Salomão julga as duas mães e manda dividir a criança (1Rs 3,16-28). A obra mostra a recepção do tema da sabedoria régia na gravura flamenga — o mesmo Salomão que o livro da Sabedoria põe a falar na primeira pessoa e cuja sabedoria Sb 7-9 descreve como dom.",
+   "passagem": "Sb 7,7-14 (cf. 1Rs 3,16-28)",
+   "artista": "After: Jan van der Straet Published by: Adriaen Collaert",
+   "data": "circa 1595",
+   "tecnica": "gravura",
+   "acervo": "British Museum, Londres (1937,0915.309)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ASpiritus_Sapientiae_%28The_Spirit_of_Wisdom%29_%28BM_1937%2C0915.309%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1600,
+   "altura_original": 1280,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Plate 1, The Spirit of Wisdom; King Solomon sits on his throne, to left; behind him stand soldiers and courtiers; to right, a soldier threatens to cut a living child in half, the genuine mother kneels and holds up her arms in protest; the other woman stands before a dead child; beyond other figures crowd around the chamber's entrance Engraving",
+   "sha256": "fdbc97206f587f94",
+   "bytes": 239144,
+   "largura_final": 950,
+   "altura_final": 760
+  },
+  {
    "ordem": 3,
    "src": "/imagens/sabedoria/03-a-sabedoria-no-teto-da-biblioteca-marciana.webp",
    "arquivo_origem": "File:(Venice) Biblioteca Nazionale Marciana - Interior - Wisdom by Titien.jpg",
@@ -24,12 +78,40 @@
    "largura_original": 5802,
    "altura_original": 5671,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "4d7fea3b01c36ca0",
    "bytes": 136626,
    "largura_final": 950,
    "altura_final": 929
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/sabedoria/04-salomao-e-a-rainha-de-saba.webp",
+   "arquivo_origem": "File:Illumination of Solomon and Sheba - Old Testament I LCCN2002723391.jpg",
+   "titulo": "Salomão e a rainha de Sabá",
+   "legenda": "Iluminura de 1452 com a rainha de Sabá diante de Salomão (1Rs 10,1-13), a visita em que a rainha vem 'provar com enigmas' a sabedoria do rei. A cena não está no livro da Sabedoria, mas é a matriz narrativa da fama sapiencial de Salomão que o livro pressupõe quando põe na boca dele o discurso sobre a sabedoria (§4.3).",
+   "passagem": "Sb 7-9 (cf. 1Rs 10,1-13)",
+   "artista": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+   "data": "1452",
+   "tecnica": "iluminura",
+   "acervo": "Library of Congress, Washington (divisão de Gravuras e Fotografias, LCCN 2002723391)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AIllumination_of_Solomon_and_Sheba_-_Old_Testament_I_LCCN2002723391.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1536,
+   "altura_original": 1315,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Title: Illumination of Solomon and Sheba - Old Testament I Abstract/medium: 1 print.",
+   "sha256": "a152b3921dfea7a1",
+   "bytes": 74378,
+   "largura_final": 950,
+   "altura_final": 813
   },
   {
    "ordem": 5,
@@ -50,6 +132,7 @@
    "largura_original": 3648,
    "altura_original": 5472,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Exhibit in the Musei Capitolini - Rome, Italy.",
    "sha256": "748512b75c25faf2",
@@ -76,6 +159,7 @@
    "largura_original": 3710,
    "altura_original": 2783,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Roman Theater In Alexandria",
    "sha256": "00a98c4bd4727ca1",
@@ -84,18 +168,5 @@
    "altura_final": 712
   }
  ],
- "recusadas": [
-  [
-   "File:Solomon prays for wisdom.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Spiritus Sapientiae (The Spirit of Wisdom) (BM 1937,0915.309).jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Illumination of Solomon and Sheba - Old Testament I LCCN2002723391.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

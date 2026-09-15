@@ -61,10 +61,22 @@ def rota_de(caminho_html):
     return "/" + rel
 
 
+def paginas_do_build():
+    """Páginas HTML do build que SÃO conteúdo.
+
+    `public/_*.html` são utilitárias do site vivo (ex.: `_tema_claro.html`, que
+    grava o tema claro no localStorage e redireciona) — não são artigo e não
+    entram na cópia autônoma. Sem esta guarda o gerador cria
+    `_tema_claro.html.html` e o verificador acusa duas faltas de sanidade que
+    não são defeito real de conteúdo.
+    """
+    return [p for p in sorted(BUILD.rglob("*.html")) if not p.name.startswith("_")]
+
+
 def mapa_de_rotas():
     """rota -> nome do arquivo de saída (plano, sem colisão)."""
     mapa = {}
-    for p in sorted(BUILD.rglob("*.html")):
+    for p in paginas_do_build():
         rota = rota_de(p)
         m = re.fullmatch(r"/biblioteca/biblia/([a-z0-9\-]+)/", rota)
         if m:
@@ -239,7 +251,7 @@ def main():
     print(f"destino: {destino}\n")
 
     escritos, problemas = [], []
-    for p in sorted(BUILD.rglob("*.html")):
+    for p in paginas_do_build():
         rota = rota_de(p)
         nome = mapa[rota]
         saida = transformar(p.read_text(encoding="utf-8"), mapa, import_original, fontes_bloco)

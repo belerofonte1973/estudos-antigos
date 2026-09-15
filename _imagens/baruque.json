@@ -33,6 +33,33 @@
    "altura_final": 699
   },
   {
+   "ordem": 2,
+   "src": "/imagens/baruque/02-jeremias-ditando-a-profecia-a-baruc-o-escriba.webp",
+   "arquivo_origem": "File:Washington Allston - Jeremiah Dictating His Prophecy of the Destruction of Jerusalem to Baruch the Scribe - 1866.1 - Yale University Art Gallery.jpg",
+   "titulo": "Jeremias ditando a profecia a Baruc, o escriba",
+   "legenda": "Washington Allston representa o momento que o livro de Jeremias descreve (Jr 36,4) e que a tradição atribui a Baruc: o ditado e a redação. É a cena que dá ao livro de Baruc a sua autoridade — o texto existe porque um escriba escreveu, e a arte religiosa fixou essa parceria como imagem da transmissão escrita.",
+   "passagem": "Jr 36,4-8 (cf. Bar 1,1)",
+   "artista": "Washington Allston",
+   "data": "1820",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Yale University Art Gallery (1866.1)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AWashington_Allston_-_Jeremiah_Dictating_His_Prophecy_of_the_Destruction_of_Jerusalem_to_Baruch_the_Scribe_-_1866.1_-_Yale_University_Art_Gallery.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1567,
+   "altura_original": 1920,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "b4d3f2388777e253",
+   "bytes": 23410,
+   "largura_final": 950,
+   "altura_final": 1164
+  },
+  {
    "ordem": 3,
    "src": "/imagens/baruque/03-baruc-escreve-as-profecias-de-jeremias.webp",
    "arquivo_origem": "File:Baruch Writing Jeremiah's Prophecies (89467495).jpg",
@@ -85,16 +112,34 @@
    "bytes": 121194,
    "largura_final": 950,
    "altura_final": 1666
+  },
+  {
+   "ordem": 5,
+   "src": "/imagens/baruque/05-cronica-dos-primeiros-anos-de-nabucodonosor.webp",
+   "arquivo_origem": "File:ABC 05 Early Years of Nebuchadnezzar chronicle.jpg",
+   "titulo": "Crônica dos primeiros anos de Nabucodonosor",
+   "legenda": "A Crônica Babilônica ABC 5 registra, entre os anos 605 e 594 a.C., o cerco de Jerusalém e a submissão de Joaquim — o evento que abre o exílio de que Baruc 1 fala. É o ponto em que o dossiê pode dizer o que a epigrafia permite afirmar: a campanha e o tributo estão documentados fora da Bíblia; o conteúdo religioso do livro, não.",
+   "passagem": "contexto histórico de Bar 1,1-14",
+   "artista": "Jona Lendering",
+   "data": "2020-03-11",
+   "tecnica": "tabuleta de argila com escrita cuneiforme",
+   "acervo": "The British Museum, Londres (ABC 5); imagem de Jona Lendering (CC0)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AABC_05_Early_Years_of_Nebuchadnezzar_chronicle.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1200,
+   "altura_original": 1566,
+   "secao": "12",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "ABC 05 ABC 05 Early Years of Nebuchadnezzar chronicle. Chronicle Concerning the Early Years of Nebuchadnezzar II (ca. 590 BCE). Also called \"Jerusalem Chronicle\".",
+   "sha256": "6694bfe65c7730d4",
+   "bytes": 102542,
+   "largura_final": 950,
+   "altura_final": 1240
   }
  ],
- "recusadas": [
-  [
-   "File:Washington Allston - Jeremiah Dictating His Prophecy of the Destruction of Jerusalem to Baruch the Scribe - 1866.1 - Yale University Art Gallery.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:ABC 05 Early Years of Nebuchadnezzar chronicle.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

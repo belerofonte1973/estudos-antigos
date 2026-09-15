@@ -6,6 +6,33 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/cronicas/01-davi-os-musicos-e-a-arca-da-alianca.webp",
+   "arquivo_origem": "File:Bodleian Library MS. Laud Misc. 752 folio 279v.jpg",
+   "titulo": "Davi, os músicos e a arca da aliança",
+   "legenda": "Iluminura de um manuscrito inglês do fim do século XII: Davi, coroado, toca harpa rodeado de músicos, enquanto ao fundo os homens conduzem a arca da aliança. A cena corresponde a 1 Crônicas 15,25-29, a subida da arca a Jerusalém, e mostra o que o Cronista acrescenta a Samuel: o Davi organizador do culto, com os levitas e os turnos de músicos que o livro detalha no capítulo 25.",
+   "passagem": "1Cr 15,25-29; 25,1-8",
+   "artista": "unknown artist, 12th century, end - 13th century, beginning, England",
+   "data": "12th century, end - 13th century, beginning",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Bodleian Library, Oxford (MS. Laud Misc. 752, fol. 279v); digitalização das Bodleian Libraries, domínio público",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ABodleian_Library_MS._Laud_Misc._752_folio_279v.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1526,
+   "altura_original": 2308,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Scene from I Chronicles; King David with harp and other musicians play while men carry the Ark of the Covenant in the background; Bodleian Library MS. Laud Misc. 752, folio 279v",
+   "sha256": "a7d3dca3b885ff57",
+   "bytes": 249112,
+   "largura_final": 950,
+   "altura_final": 1437
+  },
+  {
    "ordem": 2,
    "src": "/imagens/cronicas/02-a-dedicacao-do-templo-e-a-entrada-da-arca.webp",
    "arquivo_origem": "File:Inwijding van de tempel van Salomo en de ark van het verbond I Koningen VIII, vs. 1 Inwying van Salomons Tempel I Koningen VIII vs. 6 De Arke des Verbonds (titel op object), RP-P-1896-A-19368-1893.jpg",
@@ -141,10 +168,5 @@
    "altura_final": 794
   }
  ],
- "recusadas": [
-  [
-   "File:Bodleian Library MS. Laud Misc. 752 folio 279v.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

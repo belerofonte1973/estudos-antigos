@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Ativando tema claro…</title>
+<script>
+  // Gravador de tema claro (mesmo domínio => localStorage vale para o site todo).
+  // Criado em 2026-09-13; movido para public/ em 2026-09-14 (antes vivia só em
+  // dist/, que é gerado e apagado a cada build — a página sumia na primeira
+  // recompilação). Versionado aqui, sobrevive a todo build.
+  try {
+    localStorage.setItem('ea-theme', 'light');
+  } catch (e) {}
+  location.replace('/artigos/');
+</script>
+</head>
+<body>Ativando tema claro…</body>
+</html>

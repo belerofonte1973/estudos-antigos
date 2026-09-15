@@ -24,6 +24,7 @@
    "largura_original": 2334,
    "altura_original": 2887,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Job Speaks with His Friends (Job 2:1-13)",
    "sha256": "32d66a8a301cf6e0",
@@ -50,12 +51,40 @@
    "largura_original": 2385,
    "altura_original": 1801,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "83c10efbd9f316ae",
    "bytes": 202566,
    "largura_final": 950,
    "altura_final": 717
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/jo/03-jo-zombado-pelos-amigos.webp",
+   "arquivo_origem": "File:Folio 82r - Job Mocked by His Friends.jpg",
+   "titulo": "Jó zombado pelos amigos",
+   "legenda": "Iluminura do Livro de Horas conhecido como Les Très Riches Heures du duc de Berry (Musée Condé, Chantilly), fol. 82r, com Jó, a mulher e os três amigos. A cena mostra como o livro entrou no devocionário medieval: Jó não apenas como exemplo de paciência, mas como figura lida no ciclo das horas e do luto — recepção que o dossiê trata ao lembrar o uso do livro nos rituais de luto judaicos.",
+   "passagem": "Jó 2,11-13; 16,1-5",
+   "artista": "anônimo",
+   "data": "",
+   "tecnica": "iluminura sobre pergaminho",
+   "acervo": "Musée Condé, Chantilly (Les Très Riches Heures du duc de Berry, fol. 82r)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AFolio_82r_-_Job_Mocked_by_His_Friends.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1684,
+   "altura_original": 2400,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Les Très Riches Heures du duc de Berry, Folio 82r - Job Mocked by His Friends the Musée Condé, Chantilly. Job, sa feme et ses amis.",
+   "sha256": "a8c55352d205fdb1",
+   "bytes": 259518,
+   "largura_final": 950,
+   "altura_final": 1354
   },
   {
    "ordem": 4,
@@ -76,6 +105,7 @@
    "largura_original": 3133,
    "altura_original": 4000,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "",
    "sha256": "1651a479508fbb18",
@@ -102,6 +132,7 @@
    "largura_original": 2653,
    "altura_original": 4654,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Tablet of the Babylonian wisdom text Ludlul bēl nēmeqi , \"I praise the Lord of wisdom\", often nicknamed \"Monologue of the righteous sufferer\". Version of the 7th century BC. AD, Nineveh, \"Library of Ashurbanipal\". Fragments K 2518 + DT 358, deposit from the British Museum at the Louvre Museum.",
    "sha256": "4fde5e1a28962f5b",
@@ -128,6 +159,7 @@
    "largura_original": 2635,
    "altura_original": 2499,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "At the Egyptian Museum , 2022",
    "sha256": "06678840f38aac29",
@@ -136,10 +168,5 @@
    "altura_final": 901
   }
  ],
- "recusadas": [
-  [
-   "File:Folio 82r - Job Mocked by His Friends.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

@@ -114,6 +114,33 @@
    "altura_final": 946
   },
   {
+   "ordem": 5,
+   "src": "/imagens/amos/05-a-cacada-real-ao-leao-do-palacio-de-ninive.webp",
+   "arquivo_origem": "File:Assyrian royal lion hunt.jpg",
+   "titulo": "A caçada real ao leão, do palácio de Nínive",
+   "legenda": "Relevo do Palácio Norte de Nínive (sala C, painéis 25-28), esculpido entre 645 e 635 a.C., com a caçada real ao leão. O leão é animal central em Amos: é o rugido que dá nome à profecia (Am 3,8), o pastor que arranca da boca do leão duas pernas e uma orelha da ovelha (Am 3,12) e o perigo que surpreende quem não se prepara (Am 5,19). O relevo assírio é o melhor material figurativo para o animal e para a caça real no mundo em que o profeta falava.",
+   "passagem": "Am 3,4-8.12; 5,19",
+   "artista": "Unknown artist Unknown artist",
+   "data": "",
+   "tecnica": "relevo em pedra (Palácio Norte de Nínive)",
+   "acervo": "Palácio Norte de Nínive, sala C, painéis 25-28 (645-635 a.C.)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AAssyrian_royal_lion_hunt.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1600,
+   "altura_original": 1200,
+   "secao": "9",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Assyrian royal lion hunt ; North Palace of Nineveh (room C, panel 25-28) ; 645–635 BC.",
+   "sha256": "e07b028cb273960c",
+   "bytes": 93480,
+   "largura_final": 950,
+   "altura_final": 712
+  },
+  {
    "ordem": 6,
    "src": "/imagens/amos/06-escavacoes-no-sitio-de-hazor.webp",
    "arquivo_origem": "File:The Jordan Valley north of Lake Galilee. Excavations on ancient Hazor. LOC matpc.02825.jpg",
@@ -141,10 +168,5 @@
    "altura_final": 694
   }
  ],
- "recusadas": [
-  [
-   "File:Assyrian royal lion hunt.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

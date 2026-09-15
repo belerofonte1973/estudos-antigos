@@ -287,15 +287,23 @@ Ferramentas (versionadas):
    impressão (verificado contando os XObjects do PDF) — mas isso é observação,
    não garantia: conte-os sempre.
 
-**Pendência conhecida (13/set/2026):** o `upload.wikimedia.org` limitou o IP
-durante o lote grande (HTTP 429 intermitente) e **56 figuras ficaram fora**
-(260 de 315 especificadas). A recusa é de REDE, não de licença — está registrada
-em cada manifesto, e `scripts/baixar_pendentes.py` sabe re-tentá-la: basta rodar
-`python scripts/baixar_pendentes.py` quando a cota abrir, depois
-`python scripts/aplicar_figuras.py`, `npm run build`, regenerar `html-avulso/`
-e reimprimir os PDFs dos dossiês afetados. Os dossiês mais finos hoje: oseias (1),
-levitico, rute, sofonias, meqabyan-3 (2), baruque, ezequiel, habacuque, joel,
-jubileus, oracao-manasses, sabedoria (3).
+**Resolvido (14/set/2026):** as **315 figuras especificadas estão todas
+gravadas** (315 de 315, 0 recusadas, 0 recusadas de rede). O 429 do
+`upload.wikimedia.org` é limite por IP e derruba **thumb e original juntos**
+(medido: os dois devolvem 429 no mesmo minuto) — mas o cluster da wiki serve o
+**mesmo arquivo** por outro ponto de entrada, e foi isso que destravou:
+`https://commons.wikimedia.org/w/thumb.php?f=<arquivo>&w=<largura>` e
+`https://commons.wikimedia.org/wiki/Special:FilePath/<arquivo>?width=<largura>`
+(ambos medidos com HTTP 200 enquanto o CDN de mídia devolvia 429).
+
+`scripts/imagens_baixar.py` agora tem `urls_da_figura()` — a URL normal primeiro,
+as duas do cluster da wiki como plano B da mesma obra (licença continua sendo a
+que a API confirmou, nada muda no manifesto) — e `baixar_arquivo()` tenta cada
+candidata, respeitando `Retry-After`. Efeito medido: a segunda passada fechou
+24 especificações **sem uma única recusa** e em ~1/3 do tempo da primeira (que
+gastou o tempo em backoff contra o CDN limitado). Lição: 429 do Wikimedia é
+limite do host de mídia, não da obra — trocar de ponto de entrada resolve antes
+de esperar a cota abrir.
 
 ## Pendências que não são dossiê
 
@@ -307,7 +315,7 @@ jubileus, oracao-manasses, sabedoria (3).
 - Artigos-porta para os dossiês que ainda não têm (Suméria e Pré-História não
   têm; os 9 bíblicos têm 7 no total).
 
-## Entregas fora do site (13/set/2026)
+## Entregas fora do site (13/set/2026 · atualizado 14/set/2026)
 
 Duas pastas geradas do build, ambas no `.gitignore` (artefato, não fonte):
 
@@ -317,9 +325,21 @@ Duas pastas geradas do build, ambas no `.gitignore` (artefato, não fonte):
   próprios arquivos (0 links quebrados, 0 links inertes). Os dossiês ficam com
   nome curto (`juizes.html`); o índice do conjunto é `index.html`; a capa do
   site é `inicio.html`. Abre por duplo clique, sem servidor e sem internet.
-- `html-avulso/pdf/` — **os 54 dossiês em PDF** (1.273 páginas, 63,5 MB), impressos
-  do HTML pelo Chrome headless (A4, tema claro, chrome de navegação oculto,
-  metadados de título por artigo). Preserva a tipografia e o layout do site.
+  **Páginas `_*.html` do build ficam de fora** (`paginas_do_build()`): são
+  utilitárias do site vivo, não conteúdo — sem essa guarda o gerador produz
+  `_tema_claro.html.html` e o verificador acusa duas faltas que não são defeito.
+- `html-avulso/pdf/` — **os 54 dossiês em PDF** (1.327 páginas, 122,9 MB),
+  impressos do HTML pelo Chrome headless (A4, tema claro, chrome de navegação
+  oculto, metadados de título por artigo). Preserva a tipografia e o layout do
+  site. A cadeia depois de mexer em figuras: reimprimir só os dossiês afetados
+  (o `.pdf` antigo continua válido para os demais) →
+  `python scripts/comprimir_pdf.py html-avulso/pdf` (mediu 363,2 MB → 122,9 MB)
+  → `python scripts/conferir_pdfs.py` (**tudo verde**).
+
+Página utilitária do site: `public/_tema_claro.html` grava `ea-theme=light` no
+localStorage (mesmo domínio vale para todo o site) e redireciona para
+`/artigos/`. Ela morava só em `dist/` — que o build apaga — e sumiu na primeira
+recompilação; agora vive versionada em `public/`, então sobrevive a todo build.
 
 Scripts (versionados):
 

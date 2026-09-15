@@ -24,6 +24,7 @@
    "largura_original": 3031,
    "altura_original": 4611,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "In this Bible from the 1200s, an initial V introduces the Old Testament book of Micah. The scene inside the letter illustrates the following text: \"The word of the Lord that came to Micah the Morasthite . . .\" The illuminator added details not mentioned in the text to his representation of the scene, showing the prophet Micah in bed while an angel, its hand raised in a gesture of speech, delivers the \"word of the Lord\" represented by a scroll. Although he appears in bed, it is clear that Micah i",
    "sha256": "b0a4e739240e209d",
@@ -50,12 +51,40 @@
    "largura_original": 2673,
    "altura_original": 2131,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Micah Exhorts the Israelites to Repent (Micah 7:1-20)",
    "sha256": "cbff4a1b048d112d",
    "bytes": 270836,
    "largura_final": 950,
    "altura_final": 758
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/miqueias/03-o-profeta-miqueias-no-poliptico-de-gante.webp",
+   "arquivo_origem": "File:Jan van Eyck - The Ghent Altarpiece - Prophet Micheas - WGA07680.jpg",
+   "titulo": "O profeta Miqueias, no políptico de Gante",
+   "legenda": "Detalhe do retábulo de Gante, pintado por Jan van Eyck em 1432, com o profeta Miqueias entre as figuras que ladeiam a Anunciação no reverso fechado do políptico. Miqueias não é apenas o profeta do juízo sobre Samaria e Jerusalém: é dele o anúncio de que de Belém 'sairá aquele que há de governar Israel' (Mq 5,1), texto que a arte cristã leu como profecia messiânica.",
+   "passagem": "Mq 5,1-3",
+   "artista": "Jan van Eyck",
+   "data": "1432",
+   "tecnica": "óleo sobre madeira (detalhe do retábulo)",
+   "acervo": "Catedral de São Bavão, Gante (Retábulo de Gante, 1432)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AJan_van_Eyck_-_The_Ghent_Altarpiece_-_Prophet_Micheas_-_WGA07680.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1244,
+   "altura_original": 607,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "a75c5f035266a60d",
+   "bytes": 92714,
+   "largura_final": 950,
+   "altura_final": 464
   },
   {
    "ordem": 4,
@@ -76,6 +105,7 @@
    "largura_original": 2284,
    "altura_original": 2080,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Looking northeast from stairway top at inscription in Ralph Bunche Park on a sunny late midday.",
    "sha256": "d60f9d4247f71ba3",
@@ -102,6 +132,7 @@
    "largura_original": 4000,
    "altura_original": 3000,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Kudurru of Nabu-mutakkil",
    "sha256": "3c72c21bf2f52489",
@@ -128,6 +159,7 @@
    "largura_original": 2000,
    "altura_original": 1302,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Lakhish (Israel) PhotographsArchaeology Israel",
    "sha256": "61bf46f7e2459747",
@@ -136,10 +168,5 @@
    "altura_final": 618
   }
  ],
- "recusadas": [
-  [
-   "File:Jan van Eyck - The Ghent Altarpiece - Prophet Micheas - WGA07680.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

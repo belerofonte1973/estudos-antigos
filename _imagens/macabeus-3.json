@@ -24,6 +24,7 @@
    "largura_original": 6358,
    "altura_original": 4316,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Twee engelen jagen de olifanten van Ptolemaeus Philopator weg Objecttype: prent Objectnummer: RP-P-OB-44.915 Catalogusreferentie: Van Eeghen 26411(2). Opmerking: Twee staten bekend Opschriften / Merken: verzamelaarsmerk, verso midden onder, gestempeld: Lugt 2228 Omschrijving: Twee engelen verschijnen aan de hemel en jagen de dronken olifanten van Ptolemaeus Philopator weg, die op het punt stonden de Joodse bevolking te vertrappelen. De joden knielen en bidden tot God uit ",
    "sha256": "d17afbfa3a1082b6",
@@ -50,6 +51,7 @@
    "largura_original": 6300,
    "altura_original": 4306,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Koning Ptolemaeus Philopator krijgt een beroerte als straf voor zijn nieuwsgierigheid naar het Heilige der Heiligen Objecttype: prent Objectnummer: RP-P-OB-44.914 Catalogusreferentie: Van Eeghen 26401(2). Opmerking: Twee staten bekend Opschriften / Merken: verzamelaarsmerk, verso midden onder, gestempeld: Lugt 2228 Omschrijving: Het centrale plein van Jeruzalem met de tempel van Salomo . Wanneer koning Ptolemaeus Philopator het Heilige der Heiligen in de tempel tracht bin",
    "sha256": "7380eb394a3e640e",
@@ -76,12 +78,40 @@
    "largura_original": 3762,
    "altura_original": 2440,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Carthaginian war elephants engage Roman infantry at the Battle of Zama (202 BC).",
    "sha256": "c425257c473e025b",
    "bytes": 205792,
    "largura_final": 950,
    "altura_final": 616
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/macabeus-3/04-estela-do-decreto-de-rafia.webp",
+   "arquivo_origem": "File:Tell el-Maskhutah Raphia Decree Stele.jpg",
+   "titulo": "Estela do decreto de Rafia",
+   "legenda": "Estela de calcário procedente de Tell el-Maskhuta (identificada por alguns estudiosos com a antiga Pitom), descoberta em 1923 e publicada por Gauthier e Sottas em 1925. O texto é o decreto de um sínodo sacerdotal em honra de Ptolomeu IV Filopator, o mesmo rei do livro, e comemora a vitória de Rafia (217 a.C.). A batalha é o pano de fundo do capítulo 1 de 3 Macabeus, quando o rei visita a região depois do triunfo.",
+   "passagem": "3Mc 1,1-5",
+   "artista": "Henri Gauthier, Henri Sottas",
+   "data": "1925",
+   "tecnica": "estela de calcário inscrita (217 a.C.; fotografia de 1925)",
+   "acervo": "Publicação de H. Gauthier e H. Sottas, 'Un décret trilingue en l'honneur de Ptolémée IV' (1925)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ATell_el-Maskhutah_Raphia_Decree_Stele.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1466,
+   "altura_original": 1500,
+   "secao": "9",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Decree of a priestly synod in honor of Ptolemy IV Philopator (the Raphia Decree) 217 BCE Limestone stele from Tell el-Maskhutah (identified by some as ancient Pithom) discovered April 1923 during the gathering of sebakh. This photo from Gauthier and Sottas (1925) shows the front face of the stele with a winged solar disk in the lunettes and Ptolemy in a scene with several deities. The stele, like the Rosetta Stone, has three copies of the decree: the hieroglyphic inscription is on the front, the",
+   "sha256": "c5186e4dd9028689",
+   "bytes": 229526,
+   "largura_final": 950,
+   "altura_final": 972
   },
   {
    "ordem": 5,
@@ -102,6 +132,7 @@
    "largura_original": 3248,
    "altura_original": 3184,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Greek, Ptolemaic; Oktadrachm; Coins",
    "sha256": "36a487c02865ad17",
@@ -128,6 +159,7 @@
    "largura_original": 4928,
    "altura_original": 3264,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Reliefs on the walls of the Temple of Arensnuphis depicting Ptolemy IV Philopator and Ptolemy V Epiphanes with Isis, Horus and other gods, Philae, Egypt",
    "sha256": "5d91b559d884f012",
@@ -136,10 +168,5 @@
    "altura_final": 629
   }
  ],
- "recusadas": [
-  [
-   "File:Tell el-Maskhutah Raphia Decree Stele.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

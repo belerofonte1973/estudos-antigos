@@ -24,6 +24,7 @@
    "largura_original": 2296,
    "altura_original": 2868,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "The Martyrdom of Eleazar the Scribe (2 Масс. 6:18-31)",
    "sha256": "0f088bfe62a992c7",
@@ -50,12 +51,40 @@
    "largura_original": 2334,
    "altura_original": 2915,
    "secao": "4",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "The Courage of a Mother (2 Macc. 7:20-42)",
    "sha256": "43c4d30e0c01346d",
    "bytes": 439724,
    "largura_final": 950,
    "altura_final": 1187
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/macabeus-4/03-os-macabeus.webp",
+   "arquivo_origem": "File:Stattler-Machabeusze.jpg",
+   "titulo": "Os Macabeus",
+   "legenda": "Pintura de Wojciech Stattler (1842), um dos quadros históricos mais conhecidos da pintura polonesa do século XIX, com a mãe e os sete filhos. A obra pertence à recepção moderna do martírio tal como 4 Macabeus o formula: a mãe exortando os filhos a suportar, e o martírio lido como prova da liberdade interior do justo diante do tirano.",
+   "passagem": "4Mc 15-17 (cf. 2Mc 7,20-42)",
+   "artista": "Wojciech Stattler",
+   "data": "1842",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Reprodução em 'Od starożytności do współczesności — Malarstwo i rzeźba' (Varsóvia, 2006)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AStattler-Machabeusze.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1024,
+   "altura_original": 712,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "e0e3d3e8734eca31",
+   "bytes": 49444,
+   "largura_final": 950,
+   "altura_final": 661
   },
   {
    "ordem": 4,
@@ -76,6 +105,7 @@
    "largura_original": 2666,
    "altura_original": 3433,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Italian; Manuscript cutting from an antiphonary; Manuscripts and Illuminations",
    "sha256": "fc980c59f9cc6f2d",
@@ -102,22 +132,41 @@
    "largura_original": 3456,
    "altura_original": 2304,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Santa Maria Antiqua (Rome) - Interior",
    "sha256": "7d63f572ff1e2f31",
    "bytes": 121000,
    "largura_final": 950,
    "altura_final": 633
+  },
+  {
+   "ordem": 6,
+   "src": "/imagens/macabeus-4/06-os-macabeus-na-legenda-aurea-impressa-em-1497.webp",
+   "arquivo_origem": "File:Legendari di sancti istoriado uulgar, 1497 – (Maccabei) - BEIC IE4411198.jpg",
+   "titulo": "Os Macabeus na 'Legenda aurea' impressa em 1497",
+   "legenda": "Página da edição em língua vulgar da Legenda aurea impressa em 1497, no capítulo XLI, dedicado aos Macabeus. A coletânea de vidas de santos de Jacopo de Varazze inclui os sete irmãos, a mãe e Eleazar entre os mártires, e o incunábulo mostra como o episódio retomado por 4 Macabeus circulava como devoção popular antes de chegar às mãos dos humanistas.",
+   "passagem": "4Mc 8-18",
+   "artista": "anônimo",
+   "data": "",
+   "tecnica": "impresso tipográfico (incunábulo, 1497)",
+   "acervo": "Biblioteca Europeia de Informação e Cultura (BEIC), Milão",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ALegendari_di_sancti_istoriado_uulgar%2C_1497_%E2%80%93_%28Maccabei%29_-_BEIC_IE4411198.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 912,
+   "altura_original": 633,
+   "secao": "12",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Legenda aurea, 1497, cap. XLI – Maccabei",
+   "sha256": "2fef731d712796cf",
+   "bytes": 92376,
+   "largura_final": 950,
+   "altura_final": 659
   }
  ],
- "recusadas": [
-  [
-   "File:Stattler-Machabeusze.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Legendari di sancti istoriado uulgar, 1497 – (Maccabei) - BEIC IE4411198.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

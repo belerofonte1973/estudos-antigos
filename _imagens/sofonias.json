@@ -6,6 +6,87 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/sofonias/01-sofonias.webp",
+   "arquivo_origem": "File:Sophonie (Zephaniah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
+   "titulo": "Sofonias",
+   "legenda": "Prancha da reprodução impressa de 1904 (M. de Brunoff & Cie) das 400 pinturas compostas a partir dos desenhos de James Tissot. A ilustração acompanha a abertura do livro, que situa a profecia 'nos dias de Josias, filho de Amon, rei de Judá' (Sf 1,1). Sofonias anuncia o Dia do Senhor como juízo sobre Judá e sobre as nações, e termina com a promessa de um resto humilde que se abriga no nome do Senhor (Sf 3,11-13).",
+   "passagem": "Sf 1,1",
+   "artista": "Phillip Medhurst",
+   "data": "1904",
+   "tecnica": "reprodução impressa (M. de Brunoff & Cie, 1904)",
+   "acervo": "Reprodução impressa de M. de Brunoff & Cie (1904), a partir de desenhos de James Tissot; fotografia de Phillip Medhurst, CC BY-SA 4.0",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ASophonie_%28Zephaniah_1_1%29_%E2%80%A2_invenit_James_Tissot_%E2%80%A2_pinxit_Charles_Hoffbauer_%E2%80%A2_excudit_Maurice_de_Brunoff_apud_Philip_de_Vere_%E2%80%A2_praesentat_Phillip_Medhurst.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC BY-SA 4.0",
+   "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "grupo_licenca": "ATRIBUICAO",
+   "largura_original": 1812,
+   "altura_original": 3870,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Printed reproduction M. de Brunoff & Cie, 1904: all 400 paintings were based on James Tissot's sketches; the first 200 were painted by him; the last were painted after his death in 1902 by other artists.",
+   "sha256": "6475895ae9d59b96",
+   "bytes": 591634,
+   "largura_final": 950,
+   "altura_final": 2029
+  },
+  {
+   "ordem": 2,
+   "src": "/imagens/sofonias/02-sofonias-e-miqueias-em-mosaico-da-igreja-de-cristo-pammakari.webp",
+   "arquivo_origem": "File:Fethiye Camii, parekklesion, dome, mosaics, Istanbul, Turkey - Zephaniah and Micah - MSBZ004 BF T F 007 D - Dumbarton Oaks.jpg",
+   "titulo": "Sofonias e Miqueias em mosaico da igreja de Cristo Pammakaristos",
+   "legenda": "Mosaico bizantino da cúpula do pareclésio da igreja de Cristo Pammakaristos (atual museu Fethiye), em Istambul, fotografado pela equipe do Byzantine Institute entre 1949 e 1963 e hoje no acervo Dumbarton Oaks. Sofonias aparece ao lado de Miqueias entre os profetas que a arte de Bizâncio reuniu nas abóbadas das igrejas. O documento registra a decoração da igreja antes das restaurações modernas.",
+   "passagem": "Sf 1,1",
+   "artista": "Byzantine Institute staff",
+   "data": "between 1949 and 1963",
+   "tecnica": "mosaico (arte bizantina)",
+   "acervo": "Igreja de Cristo Pammakaristos (museu Fethiye), Istambul; fotografia do Byzantine Institute, Dumbarton Oaks (CC0)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AFethiye_Camii%2C_parekklesion%2C_dome%2C_mosaics%2C_Istanbul%2C_Turkey_-_Zephaniah_and_Micah_-_MSBZ004_BF_T_F_007_D_-_Dumbarton_Oaks.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "CC0",
+   "licenca_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1042,
+   "altura_original": 1500,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "",
+   "sha256": "35d36b02bddd7dd3",
+   "bytes": 437738,
+   "largura_final": 950,
+   "altura_final": 1368
+  },
+  {
+   "ordem": 3,
+   "src": "/imagens/sofonias/03-icone-do-profeta-sofonias-de-iaroslavl.webp",
+   "arquivo_origem": "File:Zephaniah from Yaroslavl (18 c, priv.coll).jpg",
+   "titulo": "Ícone do profeta Sofonias, de Iaroslavl",
+   "legenda": "Ícone russo de Iaroslavl da segunda metade do século XVIII, procedente da fileira dos profetas de um iconóstase e pertencente a coleção particular. Os iconóstases russos organizavam os profetas do Antigo Testamento em torno da Virgem entronizada, cada um com o seu rolo com o versículo que o identificava. Sofonias, que anuncia o Dia do Senhor, entrava nessa fileira como uma das vozes do juízo escatológico.",
+   "passagem": "Sf 1,14-18",
+   "artista": "Anonymous Russian icon painter (before 1917) Public domain image (according to PD-Russia-expired )",
+   "data": "18 th century",
+   "tecnica": "ícone (têmpera sobre madeira)",
+   "acervo": "Coleção particular; imagem de catálogo de leilão (MacDougall's)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AZephaniah_from_Yaroslavl_%2818_c%2C_priv.coll%29.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1018,
+   "altura_original": 1967,
+   "secao": "6",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "THE PROPHET SAFONIY 12,000-15,000 GBP YAROSLAVL, SECOND HALF OF THE 18TH CENTURY. 89 by 46 cm. The icon comes from the Prophets' row of a church iconostasis which often had an icon of the Mother of God enthroned in the centre and the Old Testament prophets, whose preaching and visions foretold events in the Gospels, bowed towards her in devotion. The prophet Sofoniy (also known as Sophonias and Zephaniah) is one of the most mysterious of the Old Testament prophets. No information on his life exi",
+   "sha256": "b9c110d69b0975fe",
+   "bytes": 271992,
+   "largura_final": 950,
+   "altura_final": 1836
+  },
+  {
    "ordem": 4,
    "src": "/imagens/sofonias/04-manasses-amom-e-josias-reis-de-juda.webp",
    "arquivo_origem": "File:Manasse, Amon en Josia Koningen van Juda (serietitel) Theatrum biblicum (..) (serietitel), RP-P-1904-3499.jpg",
@@ -24,6 +105,7 @@
    "largura_original": 7134,
    "altura_original": 5818,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Manasse, Amon en Josia. Koningen van Juda (serietitel). Theatrum biblicum (...) (serietitel) Objecttype: prent Serienummer: 6/8 Objectnummer: RP-P-1904-3499 Catalogusreferentie: Mielke 39-2(2) Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228 Omschrijving: De koningen Manasse, Amon en Josia. Op de achtergrond enkele belangrijke gebeurtenissen uit hun leven. Links op de achtergrond zit koning Manasse in zijn strijdwagen. Midden op de achtergrond de moord",
    "sha256": "57eb8dcb60e79617",
@@ -50,6 +132,7 @@
    "largura_original": 2560,
    "altura_original": 1712,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Museum of Ancient Near East ( Berlin ). Relief with hunting scene ( 9th century BC ).",
    "sha256": "cd39fbe8301398ae",
@@ -58,18 +141,5 @@
    "altura_final": 635
   }
  ],
- "recusadas": [
-  [
-   "File:Sophonie (Zephaniah 1 1) • invenit James Tissot • pinxit Charles Hoffbauer • excudit Maurice de Brunoff apud Philip de Vere • praesentat Phillip Medhurst.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Fethiye Camii, parekklesion, dome, mosaics, Istanbul, Turkey - Zephaniah and Micah - MSBZ004 BF T F 007 D - Dumbarton Oaks.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Zephaniah from Yaroslavl (18 c, priv.coll).jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

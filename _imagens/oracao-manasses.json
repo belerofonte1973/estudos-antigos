@@ -6,6 +6,33 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/oracao-manasses/01-manasses-acorrentado.webp",
+   "arquivo_origem": "File:Manasses in Vinculis.png",
+   "titulo": "Manassés acorrentado",
+   "legenda": "Gravura de Bernard Picart (1733), de uma série de ilustrações bíblicas, com o cativeiro do rei Manassés levado a Babilônia pelos chefes do exército assírio (2Cr 33,11). Segundo o relato, é na prisão que ele se humilha, ora e é restaurado no trono — e é essa oração que o texto grego da Oração de Manassés lhe põe na boca. A imagem abre o dossiê com a cena que o livro supõe.",
+   "passagem": "2Cr 33,11-13 (cf. Oração de Manassés)",
+   "artista": "Bernard Picart",
+   "data": "1733",
+   "tecnica": "gravura (1733)",
+   "acervo": "Ilustrações bíblicas de Bernard Picart (1733)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AManasses_in_Vinculis.png",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1280,
+   "altura_original": 1792,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "\"Manasses in Vinculis\" It is a depiction of the imprisonment of King Manasseh, painted by Bernard Picart.",
+   "sha256": "9fe9d1223301ed81",
+   "bytes": 35188,
+   "largura_final": 950,
+   "altura_final": 1330
+  },
+  {
    "ordem": 2,
    "src": "/imagens/oracao-manasses/02-manasses-como-pecador-arrependido.webp",
    "arquivo_origem": "File:Manasse als berouwvolle zondaar Acht berouwvolle zondaars uit het Oude en Nieuwe Testament (serietitel), RP-P-1877-A-345.jpg",
@@ -24,6 +51,7 @@
    "largura_original": 4784,
    "altura_original": 6252,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Manasse als berouwvolle zondaar. Acht berouwvolle zondaars uit het Oude en Nieuwe Testament (serietitel). Objecttype: prent Serienummer: 2/8 Objectnummer: RP-P-1877-A-345 Catalogusreferentie: New Hollstein Dutch 16-2(2) Omschrijving: Manasse, gekluisterd aan hals, handen en voeten nabij een brug. Voor hem ligt een kroon - een verwijzing naar zijn koningschap. Op de achtergrond een scène uit het leven van Manasse: twee mannen worden over een brug geboeid weggevoerd door ee",
    "sha256": "68ed9b39a427640b",
@@ -50,12 +78,40 @@
    "largura_original": 7134,
    "altura_original": 5818,
    "secao": "6",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Manasse, Amon en Josia. Koningen van Juda (serietitel). Theatrum biblicum (...) (serietitel) Objecttype: prent Serienummer: 6/8 Objectnummer: RP-P-1904-3499 Catalogusreferentie: Mielke 39-2(2) Opschriften / Merken: verzamelaarsmerk, verso, gestempeld: Lugt 2228 Omschrijving: De koningen Manasse, Amon en Josia. Op de achtergrond enkele belangrijke gebeurtenissen uit hun leven. Links op de achtergrond zit koning Manasse in zijn strijdwagen. Midden op de achtergrond de moord",
    "sha256": "57eb8dcb60e79617",
    "bytes": 116342,
    "largura_final": 950,
    "altura_final": 775
+  },
+  {
+   "ordem": 4,
+   "src": "/imagens/oracao-manasses/04-relevo-de-assaradao-e-de-sua-mae-naqi-a.webp",
+   "arquivo_origem": "File:Relief Esarhaddon Louvre AO20185.jpg",
+   "titulo": "Relevo de Assaradão e de sua mãe Naqi'a",
+   "legenda": "Relevo em bronze originalmente dourado, de cerca de 681-669 a.C., no Museu do Louvre (AO 20185), com o rei assírio Assaradão e sua mãe Naqi'a-Zakutu no templo de Marduk, comemorando a restauração da Babilônia. Assaradão é o rei a quem a cronologia costuma associar a deportação de Manassés (2Cr 33,11), e o relevo documenta a prática imperial de impor vassalos e de deslocar reis submetidos — o contexto em que o cativeiro de Manassés se compreende.",
+   "passagem": "2Cr 33,11 (contexto assírio)",
+   "artista": "Unknown artist Unknown artist",
+   "data": "7th century BC",
+   "tecnica": "relevo em bronze (681-669 a.C.)",
+   "acervo": "Musée du Louvre, Paris (AO 20185); fotografia de Jastrow (2006)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ARelief_Esarhaddon_Louvre_AO20185.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1860,
+   "altura_original": 1960,
+   "secao": "9",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "King Esarhaddon of Assyria and his mother Naqi'a-Zakutu in the temple of Marduk. Relief commemorating the restoration of Babylon by Esarhaddon. Bronze (originally gold-plated), ca. 681-669 BC.",
+   "sha256": "9d33755c737d24d4",
+   "bytes": 204362,
+   "largura_final": 950,
+   "altura_final": 1001
   },
   {
    "ordem": 5,
@@ -76,26 +132,41 @@
    "largura_original": 2000,
    "altura_original": 1325,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Prayer of Manasseh and beginning of 1 (3) Esdras - Sixto-Clementine Vulgate (1592)",
    "sha256": "12eb6e5739b5d051",
    "bytes": 82650,
    "largura_final": 950,
    "altura_final": 629
+  },
+  {
+   "ordem": 6,
+   "src": "/imagens/oracao-manasses/06-a-oracao-de-manasses-na-biblia-de-carlos-xii.webp",
+   "arquivo_origem": "File:Charles XII Bible (1709) - The Prayer of Azariah and Song of the Three Holy Children and Prayer of Manassee.jpg",
+   "titulo": "A Oração de Manassés na Bíblia de Carlos XII",
+   "legenda": "Página da Bíblia de Carlos XII (1709), edição sueca que reúne a Oração de Azarias, o Cântico dos Três Jovens e a Oração de Manassés. O impresso documenta a transmissão dos textos deuterocanônicos nas Bíblias luteranas oficiais, onde a Oração de Manassés permaneceu como apêndice ao fim do Antigo Testamento — a outra grande tradição de transmissão do texto, ao lado da Vulgata.",
+   "passagem": "Oração de Manassés (transmissão do texto)",
+   "artista": "anônimo",
+   "data": "1709",
+   "tecnica": "impresso tipográfico (1709)",
+   "acervo": "Exemplar fotografado em catálogo de leilão (Bíblia de Carlos XII, 1709)",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3ACharles_XII_Bible_%281709%29_-_The_Prayer_of_Azariah_and_Song_of_the_Three_Holy_Children_and_Prayer_of_Manassee.jpg",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1278,
+   "altura_original": 960,
+   "secao": "12",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "Charles XII Bible (1709) - Prayer of Manassee",
+   "sha256": "5d2f9d37be5d2dfa",
+   "bytes": 155448,
+   "largura_final": 950,
+   "altura_final": 714
   }
  ],
- "recusadas": [
-  [
-   "File:Manasses in Vinculis.png",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Relief Esarhaddon Louvre AO20185.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ],
-  [
-   "File:Charles XII Bible (1709) - The Prayer of Azariah and Song of the Three Holy Children and Prayer of Manassee.jpg",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

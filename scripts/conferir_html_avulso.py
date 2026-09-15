@@ -17,7 +17,7 @@ import pathlib
 import re
 import sys
 
-from gerar_html_avulso import BUILD, DESTINO_PADRAO, mapa_de_rotas, rota_de
+from gerar_html_avulso import BUILD, DESTINO_PADRAO, mapa_de_rotas, paginas_do_build, rota_de
 
 OUT = pathlib.Path(DESTINO_PADRAO)
 AVISO_RE = re.compile(r"Cópia autônoma do site Estudos Antigos.*?do topo\.", re.S)
@@ -43,7 +43,7 @@ def main():
 
     print("=== 1. INTEGRIDADE DO TEXTO (build x cópia autônoma) ===")
     identicos, divergentes = 0, []
-    for p in sorted(BUILD.rglob("*.html")):
+    for p in paginas_do_build():
         nome = mapa[rota_de(p)]
         a = texto(p)
         b = texto(OUT / nome)

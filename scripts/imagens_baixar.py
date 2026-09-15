@@ -51,6 +51,7 @@ import re
 import time
 import unicodedata
 import urllib.error
+import urllib.parse
 import urllib.request
 
 from PIL import Image
@@ -75,24 +76,46 @@ def normalizar(titulo: str) -> str:
     return titulo.replace("_", " ").strip().lower()
 
 
-def baixar_arquivo(url: str, tentativas: int = 4) -> bytes | None:
-    """Baixa o arquivo com backoff.
+def urls_da_figura(ficha: dict, largura: int) -> list[str]:
+    """URLs candidatas do binário, em ordem de preferência.
 
-    O upload.wikimedia.org também devolve 429 quando o lote é grande (aconteceu
-    na produção dos 54 dossiês) — e sem repetição isso derrubava a especificação
-    inteira no meio, perdendo as figuras já baixadas.
+    O `upload.wikimedia.org` limita por IP e devolve 429 em lote; o cluster da
+    wiki (thumb.php) e o Special:FilePath servem o MESMO arquivo, com a mesma
+    licença já confirmada pela API, por outro ponto de entrada. Por isso a
+    primeira URL é a normal e as outras duas são o plano B da mesma obra.
     """
+    candidatas = [ficha.get("url_thumb") or ficha.get("url_original") or ""]
+    nome = (ficha.get("arquivo") or "").replace("File:", "").replace(" ", "_")
+    if nome:
+        q = urllib.parse.quote(nome)
+        candidatas.append(f"https://commons.wikimedia.org/w/thumb.php?f={q}&w={largura}")
+        candidatas.append(f"https://commons.wikimedia.org/wiki/Special:FilePath/{q}?width={largura}")
+    return [u for u in candidatas if u]
+
+
+def baixar_arquivo(urls: str | list[str], tentativas: int = 3) -> bytes | None:
+    """Baixa o arquivo, tentando cada URL candidata com backoff.
+
+    O upload.wikimedia.org devolve 429 quando o lote é grande (aconteceu na
+    produção dos 54 dossiês) e o mesmo limite derruba thumb e original juntos —
+    daí as URLs alternativas do cluster da wiki (ver `urls_da_figura`). Um erro
+    definitivo numa URL (403/404) passa para a próxima em vez de desistir.
+    """
+    if isinstance(urls, str):
+        urls = [urls]
     for t in range(tentativas):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            return urllib.request.urlopen(req, timeout=120).read()
-        except urllib.error.HTTPError as e:  # noqa: PERF203
-            if e.code in (429, 500, 502, 503, 504):
-                time.sleep(3.0 * (t + 1) ** 2)   # 3s, 12s, 27s
-                continue
-            return None
-        except Exception:  # noqa: BLE001 — rede instável
-            time.sleep(3.0 * (t + 1))
+        for url in urls:
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA})
+                return urllib.request.urlopen(req, timeout=120).read()
+            except urllib.error.HTTPError as e:
+                if e.code in (429, 500, 502, 503, 504):
+                    espera = (e.headers.get("Retry-After") if e.headers else None) or ""
+                    time.sleep(min(float(espera), 20.0) if espera.strip().isdigit() else 2.0 * (t + 1))
+                    continue
+                continue          # URL não serve; tenta a candidata seguinte
+            except Exception:     # noqa: BLE001 — rede instável
+                time.sleep(2.0 * (t + 1))
     return None
 
 
@@ -157,7 +180,7 @@ def processar(spec: dict, largura: int, qualidade: int, formato: str, seco: bool
 
         if not seco:
             pasta.mkdir(parents=True, exist_ok=True)
-            bruto = baixar_arquivo(ficha["url_thumb"])
+            bruto = baixar_arquivo(urls_da_figura(ficha, largura))
             if bruto is None:
                 recusadas.append((arquivo, "falha ao baixar o arquivo (429/rede)"))
                 continue

@@ -6,6 +6,33 @@
  "qualidade": 75,
  "figuras": [
   {
+   "ordem": 1,
+   "src": "/imagens/meqabyan-3/01-a-queda-de-lucifer.webp",
+   "arquivo_origem": "File:A Queda de Lúcifer (séc. XVI) - Fernão Gomes (MNAA).png",
+   "titulo": "A queda de Lúcifer",
+   "legenda": "Desenho do século XVI de Fernão Gomes, no Museu Nacional de Arte Antiga, em Lisboa: a queda do anjo soberbo. 3 Meqabyan abre com esse motivo, mas com uma razão própria — o Diabo diz ter recebido de Deus permissão para levar consigo os que enganou (1,16), e a sua queda vem da recusa de curvar-se a Adão (1,15) —, e o cap. 4 explica que Deus criou Adão 'no teu lugar' para que o louvor não diminuísse (4,8). A §9 mostra que a mesma narrativa atravessa a Caverna dos Tesouros, a Vida de Adão e Eva e o Corão: o livro é membro de uma família ecumênica, não invenção isolada.",
+   "passagem": "3 Meq 1,15-16; 4,8 (cf. §4.2-4.3 e §9)",
+   "artista": "Fernão Gomes",
+   "data": "16 th century",
+   "tecnica": "desenho",
+   "acervo": "Museu Nacional de Arte Antiga, Lisboa",
+   "fonte": "https://commons.wikimedia.org/wiki/File%3AA_Queda_de_L%C3%BAcifer_%28s%C3%A9c._XVI%29_-_Fern%C3%A3o_Gomes_%28MNAA%29.png",
+   "fonte_rotulo": "Wikimedia Commons",
+   "licenca": "Public domain",
+   "licenca_url": "",
+   "grupo_licenca": "LIVRE",
+   "largura_original": 1107,
+   "altura_original": 1543,
+   "secao": "4",
+   "secao_rotulo": "",
+   "posicao": "fim",
+   "descricao_fonte": "The Fall of Lucifer , 16th-century, drawing by Fernão Gomes. In the collections of the National Museum of Ancient Art ( Museu Nacional de Arte Antiga ), Lisbon, Portugal.",
+   "sha256": "0aa86895aa4cb265",
+   "bytes": 88828,
+   "largura_final": 950,
+   "altura_final": 1324
+  },
+  {
    "ordem": 2,
    "src": "/imagens/meqabyan-3/02-jo-maltratado-por-sua-mulher-e-por-sata.webp",
    "arquivo_origem": "File:Geseling van Christus, geseling van de zeven broers en Job door zijn vrouw en Satan mishandeld, RP-P-BI-6315F.jpg",
@@ -24,6 +51,7 @@
    "largura_original": 6236,
    "altura_original": 4450,
    "secao": "9",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "Identificatie Titel(s): Geseling van Christus, geseling van de zeven broers en Job door zijn vrouw en Satan mishandeld Objecttype: prent boekillustratie Objectnummer: RP-P-BI-6315. F Catalogusreferentie: Hollstein Dutch 41. Hollstein Dutch 91-c en d. Steinbart 94. Steinbart 25-d Omschrijving: Bovenste deel van een blad uit een Bilbia Pauperum. Gedrukt van meerdere blokken. Links de geseling van de zeven broers, in het midden de geseling van Christus, rechts Job zittend op steen, door zijn vrouw ",
    "sha256": "fdcf23a9b238c4e0",
@@ -50,6 +78,7 @@
    "largura_original": 3108,
    "altura_original": 1608,
    "secao": "12",
+   "secao_rotulo": "",
    "posicao": "fim",
    "descricao_fonte": "African art in the Art Institute of Chicago",
    "sha256": "226945bfb093d67c",
@@ -58,10 +87,5 @@
    "altura_final": 491
   }
  ],
- "recusadas": [
-  [
-   "File:A Queda de Lúcifer (séc. XVI) - Fernão Gomes (MNAA).png",
-   "falha ao baixar o arquivo (429/rede)"
-  ]
- ]
+ "recusadas": []
 }

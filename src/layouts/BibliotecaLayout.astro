@@ -71,7 +71,7 @@ const grupos = nav.reduce<Record<string, NavItem[]>>((acc, item) => {
 }, {});
 Object.values(grupos).forEach((g) => g.sort((a, b) => a.ordem - b.ordem));
 
-const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const site = Astro.site ?? new URL('https://altaculturapopular.online');
 const url = new URL(Astro.url.pathname, site).href;
 
 const jsonLd = [

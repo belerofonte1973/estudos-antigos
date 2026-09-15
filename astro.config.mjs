@@ -16,8 +16,11 @@ import remarkLinguasAntigas from './src/plugins/remark-linguas-antigas.mjs';
 // schema.org e imagem social por artigo.
 // ---------------------------------------------------------------------------
 
-// Trocar por domínio próprio quando existir, ex.: 'https://estudosantigos.com.br'
-export const SITE = 'https://estudos-antigos.netlify.app';
+// Domínio próprio desde 15/set/2026. Trocar aqui muda canonical, sitemap, RSS
+// e as URLs de imagem social de todo o site de uma vez — os `Astro.site ??
+// 'https://…'` espalhados nos componentes são só fallback para quando este
+// campo não está definido.
+export const SITE = 'https://altaculturapopular.online';
 
 export default defineConfig({
 	site: SITE,

@@ -11,7 +11,7 @@ export async function GET(context: APIContext) {
 		title: 'Estudos Antigos — Revista',
 		description:
 			'Perguntas sobre Antiguidade Bíblica, Clássica e Medieval, cada uma respondida com citação de fonte rastreável.',
-		site: context.site ?? 'https://estudos-antigos.netlify.app',
+		site: context.site ?? 'https://altaculturapopular.online',
 		items: artigos.map((a) => ({
 			title: a.data.titulo,
 			description: a.data.descricao,

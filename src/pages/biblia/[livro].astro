@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 
 const { slug, meta, passagens, dossie, artigos } = Astro.props;
 
-const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const site = Astro.site ?? new URL('https://altaculturapopular.online');
 const url = new URL(`/biblia/${slug}/`, site).href;
 
 const descricao = dossie

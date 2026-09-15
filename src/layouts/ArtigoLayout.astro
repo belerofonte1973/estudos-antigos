@@ -36,7 +36,7 @@ const atualizadoFmt = d.atualizado
 const palavras = (artigo.body ?? '').split(/\s+/).length;
 const minutos = Math.max(1, Math.round(palavras / 210));
 
-const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const site = Astro.site ?? new URL('https://altaculturapopular.online');
 const url = new URL(Astro.url.pathname, site).href;
 
 const jsonLd = [

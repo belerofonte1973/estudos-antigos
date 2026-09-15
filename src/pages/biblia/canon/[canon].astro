@@ -24,7 +24,7 @@ const dossies = await getCollection('biblioteca');
 const artigos = await getCollection('artigos');
 const passagens = await getCollection('passagens');
 
-const site = Astro.site ?? new URL('https://estudos-antigos.netlify.app');
+const site = Astro.site ?? new URL('https://altaculturapopular.online');
 const url = new URL(`/biblia/canon/${id}/`, site).href;
 
 const doCanon = livrosDoCanon(id as never);

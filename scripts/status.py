@@ -29,7 +29,7 @@ import urllib.request
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 BIBLIA = RAIZ / "src" / "content" / "biblioteca" / "biblia"
 IMAGENS = RAIZ / "public" / "imagens"
-SITE = "https://estudos-antigos.netlify.app/"
+SITE = "https://altaculturapopular.online/"
 LINHA = "=" * 66
 
 

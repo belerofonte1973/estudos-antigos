@@ -399,6 +399,15 @@ de esperar a cota abrir.
   o que se confere é o manifesto (estado/contexto/data) e o `dist` local, que é exatamente o
   árvore enviada e passa todos os portões. `netlify status` mostra o usuário autenticado e o
   projeto vinculado (`siteId` `e6a7df66-1964-40f5-8869-5f209db515ab`).
+- **Privacidade: decisão do usuário em 15/set/2026 — segue privado, também no domínio próprio.**
+  O mecanismo está ligado em **todos os contextos** (`password_context: all`, `sso_login: true`,
+  `sso_login_context: all` no site): a URL `netlify.app` **e** `altaculturapopular.online`
+  respondem 401, o índice de busca e as 73 imagens sociais sobem junto mas ficam atrás da
+  parede, e nada é indexável por buscador. Consequência assumida: eu não consigo verificar o
+  conteúdo publicado de fora — a verificação continua sendo o `dist` local + o manifesto do
+  deploy. Reabrir/abrir ao público é um clique no Netlify (e, no dia em que for, vale reemitir
+  sitemap e conferir robots: hoje não há `robots.txt`, o que é irrelevante enquanto o site
+  responde 401).
 - **Artigo-porta de Pré-História — FEITO (15/set/2026).** `src/content/artigos/quando-comeca-a-historia-humana.md`
   ("Quando começa a história humana?", `eixo: contexto`, `area: pre-historia`, `dossie: pre-historia/pre-historia-humana`,
   23 fontes, todas do dossiê ou por ele verificadas). Com ele, **todo dossiê de contexto tem artigo-porta**: o plano de

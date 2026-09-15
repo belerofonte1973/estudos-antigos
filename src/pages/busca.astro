@@ -1,0 +1,460 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+
+/**
+ * Busca interna — Pagefind, índice gerado no passo pós-build
+ * (`npm run build` roda `astro build && pagefind --site dist`).
+ *
+ * O índice vive em `/pagefind/` e é carregado no navegador por import dinâmico.
+ * Duas consequências que a página declara em vez de esconder:
+ *  1. `astro dev` não gera índice — em desenvolvimento a busca avisa que só
+ *     funciona depois do build.
+ *  2. A cópia autônoma (`html-avulso/`) roda em `file://`, onde o `fetch()`
+ *     dos fragmentos do Pagefind é bloqueado pelo navegador — a página diz
+ *     isso e aponta o índice da própria cópia.
+ */
+---
+
+<BaseLayout
+	title="Busca"
+	description="Busca interna no acervo: dossiês da biblioteca e perguntas da revista, com trecho de contexto e tipo do documento."
+	noindex={true}
+	pfTipo="Busca"
+>
+	<header class="cabeca">
+		<p class="eyebrow">Busca</p>
+		<h1>Buscar no acervo</h1>
+		<p class="lede">
+			Índice completo dos <strong>dossiês da biblioteca</strong> e das <strong>perguntas da revista</strong>.
+			A busca devolve o trecho onde o termo aparece, e a seção exata dentro do dossiê.
+			Pressione <kbd>/</kbd> em qualquer página para cair direto no campo.
+		</p>
+	</header>
+
+	<form class="busca" role="search" id="ea-busca-form" action="/busca/" method="get">
+		<label class="busca__label" for="ea-busca">Termo de busca</label>
+		<div class="busca__campo">
+			<span class="busca__icone" aria-hidden="true"><Icon name="search" size={18} /></span>
+			<input
+				id="ea-busca"
+				type="search"
+				name="q"
+				placeholder="Ex.: hipótese documentária, Neolítico, Qumran, himeneu…"
+				autocomplete="off"
+				spellcheck="false"
+				enterkeyhint="search"
+			/>
+			<button type="submit" id="ea-busca-btn">Buscar</button>
+		</div>
+	</form>
+
+	<p class="aviso" id="ea-aviso">
+		A busca roda <strong>no seu navegador</strong>, sobre o índice gerado no build do site.
+		Se esta mensagem não desaparecer, o índice não foi carregado: ele é produzido por
+		<code>npm run build</code> (<code>pagefind --site dist</code>) e <strong>não funciona na cópia
+		autônoma aberta por <code>file://</code></strong> — ali, use o índice da própria cópia.
+	</p>
+
+	<section class="resultados" id="ea-resultados" aria-live="polite" aria-label="Resultados da busca"></section>
+
+	<aside class="rodape-busca">
+		<p>
+			O índice cobre o texto integral dos dossiês e das perguntas — cabeçalho, índice lateral e
+			rodapé ficam de fora por construção (<code>data-pagefind-body</code>). Em dúvida sobre o
+			método das páginas, veja <a href="/como-pesquisar/">como pesquisamos</a>.
+		</p>
+	</aside>
+</BaseLayout>
+
+<style>
+	.cabeca {
+		padding-top: 2.6rem;
+		max-width: 70ch;
+	}
+	.cabeca h1 {
+		margin-bottom: 0.7rem;
+	}
+	.cabeca .lede {
+		color: var(--ink-2);
+	}
+	.cabeca kbd {
+		font-family: var(--font-mono);
+		font-size: 0.82em;
+		padding: 0.1em 0.42em;
+		border: 1px solid var(--border-strong);
+		border-bottom-width: 2px;
+		border-radius: 5px;
+		background: var(--bg-sunken);
+	}
+
+	.busca {
+		margin: 1.8rem 0 0;
+		max-width: 70ch;
+	}
+	.busca__label {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+	.busca__campo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: var(--bg-raised);
+		border: 1px solid var(--border-strong);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-card);
+		padding: 0.35rem 0.4rem 0.35rem 0.8rem;
+		transition: border-color 0.18s ease, box-shadow 0.18s ease;
+	}
+	.busca__campo:focus-within {
+		border-color: var(--accent);
+		box-shadow: var(--shadow-lg);
+	}
+	.busca__icone {
+		display: inline-flex;
+		color: var(--ink-3);
+		flex-shrink: 0;
+	}
+	.busca__campo input {
+		flex: 1;
+		border: 0;
+		background: none;
+		font: inherit;
+		font-size: 1.02rem;
+		color: var(--ink);
+		padding: 0.55rem 0;
+		outline: none;
+		min-width: 0;
+	}
+	.busca__campo input::placeholder {
+		color: var(--ink-3);
+	}
+	.busca__campo button {
+		flex-shrink: 0;
+		font: inherit;
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--accent-ink);
+		background: var(--accent);
+		border: 0;
+		border-radius: var(--radius-sm);
+		padding: 0.55rem 1.1rem;
+		cursor: pointer;
+		transition: background 0.18s ease;
+	}
+	.busca__campo button:hover {
+		background: var(--accent-strong);
+	}
+
+	.aviso {
+		max-width: 70ch;
+		margin: 1.4rem 0 0;
+		padding: 0.9rem 1.1rem;
+		border-left: 3px solid var(--warn);
+		background: var(--bg-sunken);
+		border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+		font-size: 0.92rem;
+		color: var(--ink-2);
+	}
+	.aviso a {
+		color: var(--accent);
+	}
+
+	.resultados {
+		margin-top: 2rem;
+		max-width: 78ch;
+	}
+	.contagem {
+		font-size: 0.86rem;
+		color: var(--ink-3);
+		margin: 0 0 1.2rem;
+	}
+	.hit {
+		padding: 1.15rem 0 1.25rem;
+		border-top: 1px solid var(--border);
+	}
+	.hit__topo {
+		display: flex;
+		align-items: baseline;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+		margin-bottom: 0.4rem;
+	}
+	.hit__tipo {
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.9px;
+		text-transform: uppercase;
+		color: var(--accent);
+		background: var(--accent-soft);
+		border-radius: var(--radius-pill);
+		padding: 0.18rem 0.6rem;
+		flex-shrink: 0;
+	}
+	.hit__titulo {
+		font-size: 1.06rem;
+		font-weight: 650;
+		letter-spacing: -0.2px;
+	}
+	.hit__trecho {
+		font-size: 0.92rem;
+		line-height: 1.65;
+		color: var(--ink-2);
+		margin: 0.3rem 0 0;
+	}
+	.hit__trecho mark,
+	.hit__secao mark {
+		background: var(--accent-soft);
+		color: var(--accent-strong);
+		font-weight: 600;
+		padding: 0 0.12em;
+		border-radius: 3px;
+	}
+	.hit__secoes {
+		list-style: none;
+		margin: 0.7rem 0 0;
+		padding: 0;
+		display: grid;
+		gap: 0.55rem;
+	}
+	.hit__secao {
+		padding-left: 0.9rem;
+		border-left: 2px solid var(--border);
+	}
+	.hit__secao a {
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+	.hit__secao p {
+		font-size: 0.88rem;
+		line-height: 1.6;
+		color: var(--ink-2);
+		margin: 0.15rem 0 0;
+	}
+	.hit__mais {
+		margin-top: 0.7rem;
+		background: none;
+		border: 0;
+		padding: 0;
+		font: inherit;
+		font-size: 0.86rem;
+		font-weight: 600;
+		color: var(--accent);
+		cursor: pointer;
+	}
+	.vazio {
+		padding: 2rem 0;
+		color: var(--ink-2);
+	}
+	.vazio strong {
+		color: var(--ink);
+	}
+	.carregando {
+		padding: 1.6rem 0;
+		color: var(--ink-3);
+		font-size: 0.92rem;
+	}
+
+	.rodape-busca {
+		margin-top: 3rem;
+		max-width: 70ch;
+		font-size: 0.88rem;
+		color: var(--ink-3);
+		border-top: 1px solid var(--border);
+		padding-top: 1.2rem;
+	}
+	.rodape-busca code {
+		font-family: var(--font-mono);
+		font-size: 0.86em;
+		background: var(--bg-sunken);
+		padding: 0.1em 0.35em;
+		border-radius: 4px;
+	}
+</style>
+
+<script>
+	// ---------------------------------------------------------------------
+	// Busca: Pagefind via API JavaScript.
+	//
+	// O `@vite-ignore` no import é obrigatório: sem ele o Vite tenta resolver
+	// `/pagefind/pagefind.js` no build, não encontra (o índice só existe depois
+	// do `pagefind --site dist`) e a página quebra.
+	// ---------------------------------------------------------------------
+	type Hit = {
+		url: string;
+		excerpt: string;
+		plain_excerpt: string;
+		meta: Record<string, string>;
+		sub_results?: { url: string; title: string; excerpt: string }[];
+	};
+
+	const form = document.getElementById('ea-busca-form') as HTMLFormElement | null;
+	const input = document.getElementById('ea-busca') as HTMLInputElement | null;
+	const alvo = document.getElementById('ea-resultados');
+	const aviso = document.getElementById('ea-aviso');
+	const botao = document.getElementById('ea-busca-btn') as HTMLButtonElement | null;
+	if (!form || !input || !alvo || !aviso) throw new Error('busca: markup ausente');
+
+	const escapar = (s: string) =>
+		s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+	const mostrarAviso = (html: string) => {
+		aviso.innerHTML = html;
+		aviso.hidden = false;
+	};
+	const esconderAviso = () => {
+		aviso.hidden = true;
+	};
+
+	let pagefind: any = null;
+	let indisponivel = false;
+
+	async function carregar() {
+		if (pagefind || indisponivel) return pagefind;
+		if (location.protocol === 'file:') {
+			indisponivel = true;
+			mostrarAviso(
+				'Esta é a <strong>cópia autônoma</strong> do site, aberta direto do disco: o navegador bloqueia ' +
+					'a leitura dos fragmentos de índice em <code>file://</code>. A busca funciona no site publicado — ' +
+					'aqui, use o <a href="index.html">índice da cópia</a>.'
+			);
+			return null;
+		}
+		try {
+			pagefind = await import(/* @vite-ignore */ '/pagefind/pagefind.js');
+			await pagefind.options({
+				// Dossiês são longos (7–12 mil palavras) e artigos, curtos. O padrão do
+				// Pagefind favorece páginas curtas; baixar um pouco o pageLength evita
+				// que uma pergunta de revista esconda o dossiê que a sustenta.
+				ranking: { pageLength: 0.6 },
+			});
+			esconderAviso();
+			return pagefind;
+		} catch (e) {
+			indisponivel = true;
+			mostrarAviso(
+				'O índice de busca não foi encontrado. Ele é gerado no passo pós-build ' +
+					'(<code>npm run build</code> roda <code>pagefind --site dist</code>) — ' +
+					'em <code>astro dev</code> a busca ainda não existe.'
+			);
+			return null;
+		}
+	}
+
+	function hitHTML(hit: Hit, expandido: boolean): string {
+		const tipo = hit.meta?.tipo ? escapar(hit.meta.tipo) : 'Página';
+		const titulo = hit.meta?.title ? escapar(hit.meta.title) : hit.url;
+		const secoes = hit.sub_results ?? [];
+		const visiveis = expandido ? secoes : secoes.slice(0, 2);
+		const restantes = secoes.length - visiveis.length;
+
+		const lista = visiveis
+			.map(
+				(s) => `
+			<li class="hit__secao">
+				<a href="${s.url}">${escapar(s.title)}</a>
+				<p>${s.excerpt}</p>
+			</li>`
+			)
+			.join('');
+
+		return `
+		<article class="hit">
+			<div class="hit__topo">
+				<span class="hit__tipo">${tipo}</span>
+				<a class="hit__titulo" href="${hit.url}">${titulo}</a>
+			</div>
+			${secoes.length === 0 ? `<p class="hit__trecho">${hit.excerpt}</p>` : ''}
+			${lista ? `<ul class="hit__secoes">${lista}</ul>` : ''}
+			${
+				restantes > 0
+					? `<button class="hit__mais" type="button">+ ${restantes} ${restantes === 1 ? 'seção' : 'seções'} neste documento</button>`
+					: ''
+			}
+		</article>`;
+	}
+
+	async function buscar(termo: string) {
+		const q = termo.trim();
+		if (!q) {
+			alvo.innerHTML = '';
+			return;
+		}
+		const pf = await carregar();
+		if (!pf) return;
+
+		const busca = await pf.debouncedSearch(q);
+		if (busca === null) return; // uma busca mais recente assumiu
+
+		const total = busca.results.length;
+		if (total === 0) {
+			alvo.innerHTML = `<div class="vazio"><strong>Nada encontrado para “${escapar(q)}”.</strong>
+			<p>Tente o termo em português, sem acento (a busca indexa acentos, mas tolera a ausência) — ou procure
+			pelo nome do livro, do autor ou do sítio arqueológico.</p></div>`;
+			return;
+		}
+
+		alvo.innerHTML = `<p class="contagem">${total} ${total === 1 ? 'documento' : 'documentos'} · mostrando os ${Math.min(total, 12)} mais relevantes</p>`;
+		const carregados = (await Promise.all(
+			busca.results.slice(0, 12).map((r: { data: () => Promise<Hit> }) => r.data())
+		)) as Hit[];
+		alvo.insertAdjacentHTML('beforeend', carregados.map((h: Hit) => hitHTML(h, false)).join(''));
+
+		alvo.querySelectorAll('.hit__mais').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const hit = (btn as HTMLElement).closest('.hit') as HTMLElement | null;
+				if (!hit) return;
+				const idx = Array.from(alvo.querySelectorAll('.hit')).indexOf(hit);
+				hit.outerHTML = hitHTML(carregados[idx], true);
+			});
+		});
+	}
+
+	// --- ligação com a URL (?q=) e com o teclado --------------------------
+	const params = new URLSearchParams(location.search);
+	const inicial = params.get('q') ?? '';
+	if (inicial) {
+		input.value = inicial;
+		void buscar(inicial);
+	}
+
+	let t: number | undefined;
+	input.addEventListener('input', () => {
+		window.clearTimeout(t);
+		t = window.setTimeout(() => void buscar(input.value), 180);
+	});
+
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		const q = input.value.trim();
+		const url = q ? `/busca/?q=${encodeURIComponent(q)}` : '/busca/';
+		history.replaceState(null, '', url);
+		void buscar(q);
+	});
+
+	document.addEventListener('keydown', (e) => {
+		const digitando = /^(INPUT|TEXTAREA|SELECT)$/.test((e.target as HTMLElement)?.tagName ?? '');
+		if (e.key === '/' && !digitando) {
+			e.preventDefault();
+			input.focus();
+			input.select();
+		}
+		if (e.key === 'Escape' && document.activeElement === input) {
+			input.value = '';
+			alvo.innerHTML = '';
+			history.replaceState(null, '', '/busca/');
+		}
+		if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+			e.preventDefault();
+			input.focus();
+		}
+	});
+
+	// Aquece as dependências do Pagefind quando o campo ganha foco.
+	input.addEventListener('focus', () => void carregar(), { once: true });
+	if (botao) botao.setAttribute('aria-label', 'Buscar');
+</script>

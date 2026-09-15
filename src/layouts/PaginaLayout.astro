@@ -12,7 +12,7 @@ interface Props {
 const { title, description, eyebrow = 'Institucional', crumbs } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} width="narrow">
+<BaseLayout title={title} description={description} width="narrow" pfTipo="Página">
 	<article class="ea-pagina">
 		<Breadcrumbs items={crumbs ?? [{ href: '/', label: 'Início' }, { label: title }]} />
 		<p class="eyebrow">{eyebrow}</p>

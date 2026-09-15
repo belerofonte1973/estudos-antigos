@@ -11,10 +11,18 @@ interface Props {
 	publishedTime?: string;
 	modifiedTime?: string;
 	image?: string;
+	/** Texto alternativo da imagem social (acompanha `image`). */
+	imageAlt?: string;
 	jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 	noindex?: boolean;
 	area?: string;
 	tags?: string[];
+	/**
+	 * Rótulo de tipo indexado pelo Pagefind (`data-pagefind-meta`): "Dossiê",
+	 * "Artigo", "Hub". Vive aqui porque é o `<main>` que delimita o que a busca
+	 * indexa — sidebar, cabeçalho e rodapé ficam fora por construção.
+	 */
+	pfTipo?: string;
 	/** Largura do conteúdo: 'wide' para grades, 'narrow' para leitura. */
 	width?: 'wide' | 'narrow';
 	class?: string;
@@ -27,13 +35,27 @@ const {
 	publishedTime,
 	modifiedTime,
 	image,
+	imageAlt,
 	jsonLd,
 	noindex = false,
 	area,
 	tags = [],
+	pfTipo,
 	width = 'wide',
 	class: cls = '',
 } = Astro.props;
+
+/**
+ * O que entra no índice de busca.
+ *
+ * Marcar `data-pagefind-body` em toda página indexaria também o que é
+ * navegação: home, hubs de eixo, hubs de cânon, o índice da biblioteca e a
+ * própria página de busca apareceriam como resultado, competindo com o
+ * conteúdo. A regra é explícita: só entra quem declara `pfTipo` (Dossiê,
+ * Artigo, Passagem, Página) — e quem pediu `noindex` fica fora até do índice
+ * local, pelo mesmo motivo.
+ */
+const indexavel = Boolean(pfTipo) && !noindex;
 ---
 
 <!doctype html>
@@ -61,6 +83,7 @@ const {
 			publishedTime={publishedTime}
 			modifiedTime={modifiedTime}
 			image={image}
+			imageAlt={imageAlt}
 			jsonLd={jsonLd}
 			noindex={noindex}
 			area={area}
@@ -73,7 +96,13 @@ const {
 
 		<Header />
 
-		<main id="conteudo" class={cls}>
+		<main
+			id="conteudo"
+			class={cls}
+			data-pagefind-body={indexavel ? '' : undefined}
+			data-pagefind-ignore={indexavel ? undefined : ''}
+			data-pagefind-meta={pfTipo && indexavel ? `tipo:${pfTipo}` : undefined}
+		>
 			<div class={width === 'narrow' ? 'wrap-narrow' : 'wrap'}>
 				<slot />
 			</div>

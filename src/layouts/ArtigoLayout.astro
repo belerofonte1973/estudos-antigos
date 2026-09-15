@@ -101,9 +101,12 @@ const jsonLd = [
 	type="article"
 	publishedTime={d.data.toISOString()}
 	modifiedTime={(d.atualizado ?? d.data).toISOString()}
+	image={`/og/revista-${artigo.id}.png`}
+	imageAlt={`${d.titulo} — Estudos Antigos`}
 	jsonLd={jsonLd}
 	area={areaLabel}
 	tags={d.tags}
+	pfTipo="Artigo"
 >
 	<article class="ea-article">
 		<header class="ea-article__head">

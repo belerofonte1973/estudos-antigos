@@ -109,12 +109,15 @@ const jsonLd = [
 	description={description}
 	type="article"
 	modifiedTime={atualizado?.toISOString()}
+	image={`/og/${currentId.replace(/\//g, '-')}.png`}
+	imageAlt={`${title} — Estudos Antigos`}
 	jsonLd={jsonLd}
 	area={areaLabel}
+	pfTipo="Dossiê"
 >
 	<div class="ea-lib">
 		<!-- ---------- Índice lateral ---------- -->
-		<aside class="ea-lib__nav" aria-label="Índice da biblioteca">
+		<aside class="ea-lib__nav" aria-label="Índice da biblioteca" data-pagefind-ignore>
 			<p class="ea-lib__nav-title">Biblioteca</p>
 			{
 				Object.entries(grupos).map(([areaKey, itens]) => (

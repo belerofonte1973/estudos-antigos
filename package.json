@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
+    "build:somente": "astro build",
+    "busca:indexar": "pagefind --site dist",
+    "og": "node scripts/gerar_og.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -16,5 +19,8 @@
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.2.10",
     "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.2"
   }
 }

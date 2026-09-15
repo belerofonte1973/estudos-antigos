@@ -18,7 +18,7 @@ const items = headings.filter((h) => h.depth >= 2 && h.depth <= maxDepth);
 
 {
 	items.length > 2 && (
-		<nav class="ea-toc" aria-label="Índice da página">
+		<nav class="ea-toc" aria-label="Índice da página" data-pagefind-ignore>
 			<p class="ea-toc__title">{title}</p>
 			<ul>
 				{items.map((h) => (

@@ -16,14 +16,18 @@ cada). **Faltam 0 — os 58 livros dos 4 cânones estão cobertos.**
 | Biblioteca — contexto | Suméria, Pré-História — **ambos com artigo-porta** |
 | Revista — artigos | **14** = 12 do núcleo bíblico + Suméria (oriente) + Pré-História (contexto) |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **152** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Busca interna | **Pagefind**, 78 páginas indexadas (dossiês + artigos + passagem + páginas) |
+| Imagem social | **73 geradas** (uma por dossiê e por artigo) + `og-default.png` de fallback |
+| Páginas | **154** no build · **153** na cópia autônoma |
 
-Portões, todos verdes (medidos em 14/set/2026, depois da higiene — ver abaixo):
+Portões, todos verdes (medidos em 15/set/2026):
+`npm run build` = `astro build && pagefind --site dist` (a busca é passo pós-build) ·
 `python validar_dossie.py --todos` (forma, ANTES do build) → **56 arquivos · 0 falhas · 0 avisos** ·
 `python verificar_site.py` (integridade, exit 1) ·
 `python verificar_eixos.py` (modelo, 67 checagens, exit 1) ·
 `python verificar_camadas.py` (9 dossiês × 4 camadas) ·
 `python scripts/conferir_ordem.py` (ordem única por área e por (eixo, área)) ·
+`python scripts/conferir_og.py` (toda `og:image` do build existe, 1200x630, sem órfã) ·
 `python scripts/conferir_html_avulso.py` e `python scripts/conferir_pdfs.py` (cadeia de artefatos).
 
 
@@ -385,9 +389,6 @@ de esperar a cota abrir.
 - Domínio próprio (hoje `estudos-antigos.netlify.app`).
 - Site **privado no Netlify** — não indexável (confirmado: todas as rotas respondem 401).
   O usuário decidiu: sem pressa; primeiro o conteúdo.
-- Imagem social por artigo (hoje uma só, `public/og-default.png`; o `scripts/gerar_og.mjs`
-  gera **apenas** a padrão — falta o gerador por dossiê).
-- Busca interna (Pagefind como passo pós-build) — ausente do `package.json` e do `astro.config.mjs`.
 - **Artigo-porta de Pré-História — FEITO (15/set/2026).** `src/content/artigos/quando-comeca-a-historia-humana.md`
   ("Quando começa a história humana?", `eixo: contexto`, `area: pre-historia`, `dossie: pre-historia/pre-historia-humana`,
   23 fontes, todas do dossiê ou por ele verificadas). Com ele, **todo dossiê de contexto tem artigo-porta**: o plano de
@@ -395,6 +396,66 @@ de esperar a cota abrir.
   de entrada automaticamente (o `[...slug].astro` já monta `entrada` a partir do campo `dossie`).
 - **Pré-História também sem PDF nem figuras** (`html-avulso/pdf/`: 54 PDFs = os dossiês com manifesto de figuras),
   como Suméria — não é falha, é o recorte do plano.
+- **Busca interna — FEITA (15/set/2026).** Pagefind como passo pós-build; ver a seção abaixo.
+- **Imagem social por dossiê e por artigo — FEITA (15/set/2026).** Ver a seção abaixo.
+
+## Busca interna e imagem social — 15/set/2026
+
+### Busca (Pagefind)
+
+`npm run build` = `astro build && pagefind --site dist` (índice em `dist/pagefind/`, ~3,8 MB;
+`npm run busca:indexar` reindexa sem reconstruir). Página própria em `/busca/`, com API JS do
+Pagefind, não a UI pronta dele — o site tem tipografia e tokens próprios, e a UI padrão traria
+um segundo sistema visual.
+
+Decisões que ficaram presas a uma regra, não a um ajuste manual:
+
+- **Escopo do índice é explícito.** `data-pagefind-body` fica no `<main>` do `BaseLayout`, mas
+  só indexa quem declara `pfTipo` (`Dossiê`, `Artigo`, `Passagem`, `Página`) — e quem pede
+  `noindex` fica fora até do índice local. Sem isso, home, hubs de eixo, hubs de cânon, o índice
+  da biblioteca e a própria página de busca entrariam como resultado e competiriam com o conteúdo.
+  Resultado medido: **78 páginas indexadas** (59 dossiês + 14 artigos + 1 passagem + 4 páginas),
+  33 mil palavras — contra as 153 que a primeira passada indexou.
+- **Sidebar, índice lateral e TOC ficam de fora** (`data-pagefind-ignore`): senão cada dossiê
+  indexaria os títulos de todos os outros.
+- **O `tipo` viaja como `data-pagefind-meta`** e aparece como etiqueta em cada resultado —
+  conferido no índice: 59 `Dossiê`, 14 `Artigo`, 1 `Passagem`, 4 `Página`.
+- **Ranking ajustado ao acervo:** `pageLength: 0.6`. O padrão do Pagefind (0,75) favorece páginas
+  curtas; aqui os dossiês têm 7–12 mil palavras e as perguntas da revista, ~1,2 mil — sem o ajuste,
+  uma pergunta curta esconderia o dossiê que a sustenta.
+- **Três estados declarados na própria página**, em vez de caixa morta: índice carregado (a nota
+  some), `astro dev` sem índice, e cópia autônoma aberta por `file://` (o navegador bloqueia o
+  `fetch` dos fragmentos). A nota é **visível por padrão** e só o JS a esconde — assim quem abre
+  a cópia offline, onde o script foi removido, lê a explicação em vez de encarar um campo inerte.
+- **Página de serviço, não de conteúdo:** `noindex` e fora do sitemap (`astro.config.mjs`).
+
+Verificação feita nesta sessão (sem depender de clique): os fragmentos do índice são **gzip**, então
+o conteúdo foi lido direto — `Qumran` em 40 fragmentos, `Gilgamesh` em 9, `hipótese documentária` em 9,
+`Neolítico` em 3, `Neandertal` em 2, `Jebel Irhoud` em 2; 78 URLs distintas e os quatro valores de
+`tipo` na contagem exata. A UI foi conferida no build (ids do DOM, import de `/pagefind/pagefind.js`
+preservado no chunk com `@vite-ignore`, script como módulo) — a passada de clique fica para quem
+abrir `http://localhost:8801/busca/` com o servidor local ligado.
+
+### Imagem social por documento
+
+`npm run og` (`scripts/gerar_og.mjs`) gera **73 imagens 1200x630** — `public/og/<area>-<slug>.png`
+por dossiê e `public/og/revista-<slug>.png` por artigo — mais o `og-default.png` de fallback.
+Cada uma leva o eyebrow do recorte (`Biblioteca · Pré-História`), o título sem o sufixo
+"— Artigo Enciclopédico" e a marca. **0,94 MB no total** (PNG com paleta; sem paleta seriam ~5x).
+
+O caminho é montado em dois lugares que não se conhecem — os layouts (`BibliotecaLayout` a partir do
+id; `ArtigoLayout` a partir do slug) e o gerador (a partir do frontmatter). É exatamente o tipo de par
+que quebra em silêncio no cartão social, e por isso virou portão: `python scripts/conferir_og.py`
+confere que toda `og:image` do build aponta para arquivo existente, que as 73 estão em 1200x630
+(lido do IHDR, sem dependência) e que não há órfã.
+
+### Cópia autônoma: scripts do build
+
+O gerador da cópia (`scripts/gerar_html_avulso.py`) já inlineava o CSS; agora **remove os scripts de
+módulo do build** (`<script type="module" src="/_astro/...">`) e deixa um comentário no lugar. Foi o
+que a busca exigiu: em `file://` o índice do Pagefind não carrega de qualquer forma, e sem essa regra
+o `conferir_html_avulso.py` acusava `busca.html: referencia /_astro/` — o portão funcionando como
+devia.
 
 ## Higiene do acervo — 14/set/2026
 
@@ -433,7 +494,7 @@ colisão de `ordem`. O que foi feito, e por quê:
 
 Duas pastas geradas do build, ambas no `.gitignore` (artefato, não fonte):
 
-- `html-avulso/` — **cópia autônoma do site inteiro**: 151 páginas HTML num só
+- `html-avulso/` — **cópia autônoma do site inteiro**: 153 páginas HTML num só
   diretório, com CSS inline, fontes locais (`fonts/`, 4 `.woff2`), tema
   claro/escuro funcional e **toda a navegação interna reapontada** para os
   próprios arquivos (0 links quebrados, 0 links inertes). Os dossiês ficam com
@@ -442,7 +503,10 @@ Duas pastas geradas do build, ambas no `.gitignore` (artefato, não fonte):
   **Páginas `_*.html` do build ficam de fora** (`paginas_do_build()`): são
   utilitárias do site vivo, não conteúdo — sem essa guarda o gerador produz
   `_tema_claro.html.html` e o verificador acusa duas faltas que não são defeito.
-- `html-avulso/pdf/` — **os 54 dossiês em PDF** (1.327 páginas, 122,9 MB),
+  **Scripts de módulo do build são removidos** (`<script type="module" src="/_astro/...">`):
+  a busca interna depende de rede e não funcionaria em `file://` de qualquer forma; a
+  página fica com a nota visível que explica onde ela funciona.
+- `html-avulso/pdf/` — **os 54 dossiês em PDF** (1.330 páginas, 123,0 MB),
   impressos do HTML pelo Chrome headless (A4, tema claro, chrome de navegação
   oculto, metadados de título por artigo). Preserva a tipografia e o layout do
   site. A cadeia depois de mexer em figuras: reimprimir só os dossiês afetados

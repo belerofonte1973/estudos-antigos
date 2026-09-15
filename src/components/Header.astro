@@ -61,6 +61,15 @@ const isActive = (href: string) =>
 				))
 			}
 			<a
+				href="/busca/"
+				class="ea-nav__icon"
+				title="Buscar no acervo (tecla /)"
+				aria-label="Buscar no acervo"
+				aria-current={isActive('/busca/') ? 'page' : undefined}
+			>
+				<Icon name="search" size={17} />
+			</a>
+			<a
 				href="/rss.xml"
 				class="ea-nav__icon"
 				title="Assinar o feed RSS"

@@ -25,7 +25,9 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap({
-			filter: (page) => !page.includes('/404'),
+			// A busca é página de serviço, não conteúdo: fica fora do sitemap e
+			// leva `noindex` (ver `src/pages/busca.astro`).
+			filter: (page) => !page.includes('/404') && !page.includes('/busca'),
 		}),
 	],
 	markdown: {

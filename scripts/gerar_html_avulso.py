@@ -166,6 +166,23 @@ def transformar(html, mapa, import_original=None, fontes_bloco=None):
             css = css.replace(import_original, fontes_bloco, 1)
         html = html.replace(f'<link rel="stylesheet" href="{href}">', f"<style>{css}</style>", 1)
 
+    # 1b. scripts externos do build (/_astro/*.js): a cópia autônoma não os tem,
+    #     e não faria sentido copiá-los — quem depende de rede (a busca interna,
+    #     que carrega o índice do Pagefind por fetch) não funciona em file:// de
+    #     qualquer forma. Removidos, a página fica com a nota visível que explica
+    #     onde a busca funciona; era o caso do `busca.html`, único módulo externo.
+    def remover_modulo(match):
+        return (
+            "<!-- script do build removido na cópia autônoma: "
+            "a busca interna precisa do site publicado -->"
+        )
+
+    html = re.sub(
+        r'<script[^>]*type="module"[^>]*src="/_astro/[^"]*"[^>]*>\s*</script>',
+        remover_modulo,
+        html,
+    )
+
     # 2. imagens e demais recursos servidos pelo site (/imagens/...) -> ./imagens/...
     html = re.sub(r'(src|href)="/(imagens/[^"]+)"', r'\1="./\2"', html)
     html = html.replace("srcset=\"/imagens/", "srcset=\"./imagens/")

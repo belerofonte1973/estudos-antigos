@@ -14,14 +14,18 @@ cada). **Faltam 0 — os 58 livros dos 4 cânones estão cobertos.**
 |---|---|
 | Biblioteca — dossiês bíblicos | **54** = **58 dos 58 livros — COMPLETO** |
 | Biblioteca — contexto | Suméria, Pré-História |
-| Revista — artigos | 13, todos do núcleo bíblico |
+| Revista — artigos | 13 = 12 do núcleo bíblico + **Suméria** (contexto) |
 | Passagens | 1 (Gênesis 6–9) |
 | Páginas | **151** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
-Portões, todos verdes:
-`python validar_dossie.py --todos` (forma, ANTES do build) ·
+Portões, todos verdes (medidos em 14/set/2026, depois da higiene — ver abaixo):
+`python validar_dossie.py --todos` (forma, ANTES do build) → **56 arquivos · 0 falhas · 0 avisos** ·
 `python verificar_site.py` (integridade, exit 1) ·
-`python verificar_eixos.py` (modelo, 67 checagens, exit 1).
+`python verificar_eixos.py` (modelo, 67 checagens, exit 1) ·
+`python verificar_camadas.py` (9 dossiês × 4 camadas) ·
+`python scripts/conferir_ordem.py` (ordem única por área e por (eixo, área)) ·
+`python scripts/conferir_html_avulso.py` e `python scripts/conferir_pdfs.py` (cadeia de artefatos).
+
 
 ## Os cânones, e por que estão no site
 
@@ -182,7 +186,7 @@ Configurado em `delegation.model` / `delegation.provider`.
 
 ### Economia de tokens na delegação — decidido 12/set/2026
 
-Config de produção atual: `delegation.model` = `deepseek/deepseek-v4-flash-0731` ·
+Config de produção atual: `delegation.model` = `qwen/qwen3.7-flash` ·
 `delegation.provider` = `nous` · `delegation.reasoning_effort` = `high` (alinhado ao
 `reasoning_overrides` do agente principal para este modelo; xhigh queimou tokens de
 raciocínio sem ganho proporcional).
@@ -381,10 +385,46 @@ de esperar a cota abrir.
 - Domínio próprio (hoje `estudos-antigos.netlify.app`).
 - Site **privado no Netlify** — não indexável (confirmado: todas as rotas respondem 401).
   O usuário decidiu: sem pressa; primeiro o conteúdo.
-- Imagem social por artigo (hoje uma só).
-- Busca interna (Pagefind como passo pós-build).
-- Artigos-porta para os dossiês que ainda não têm (Suméria e Pré-História não
-  têm; os 9 bíblicos têm 7 no total).
+- Imagem social por artigo (hoje uma só, `public/og-default.png`; o `scripts/gerar_og.mjs`
+  gera **apenas** a padrão — falta o gerador por dossiê).
+- Busca interna (Pagefind como passo pós-build) — ausente do `package.json` e do `astro.config.mjs`.
+- **Artigo-porta de Pré-História.** Corrigido o registro anterior: **Suméria já tem** artigo
+  (`src/content/artigos/quem-foram-os-sumerios.md`, desde 11/set, `dossie: biblia/sumeria`);
+  a revista tem 13 artigos = 12 do núcleo bíblico + Suméria. Falta só o de Pré-História
+  (`biblioteca/pre-historia/pre-historia-humana`), que é o último buraco de conteúdo do plano.
+
+## Higiene do acervo — 14/set/2026
+
+Estado dos portões ao fim: **56 arquivos · 0 falhas · 0 avisos** (era 0/6), e nenhuma
+colisão de `ordem`. O que foi feito, e por quê:
+
+1. **Esfera evangélica declarada em 4 dossiês de 1ª geração** (`genesis`, `exodo`,
+   `deuteronomio`, `samuel`). O aviso `11.1 sem as esferas: ['evangélic']` tinha causa
+   única: nesses quatro a esfera evangélica estava **diluída dentro da protestante**.
+   Agora ela entra com **critério escrito** — séries críticas e expositivas de editoras
+   e linhas evangélicas (WBC, NICOT, NAC, TOTC/BST, NIVAC, EBC, NIBC, Apollos) —, com as
+   obras **conferidas na sessão** (Open Library e catálogo de editora/livraria) e as
+   contagens corrigidas: cada nome conta **uma única vez**, na esfera a que pertence
+   (Wenham e Waltke migraram para a evangélica em Gênesis; Durham e Prior em Êxodo;
+   Craigie, McConville e Christensen em Deuteronômio; Bergen e Baldwin em Samuel).
+   A esfera evangélica **não** é monolítica: onde os títulos divergem entre si (composição,
+   datação, uso da hipótese documentária), a divergência fica declarada.
+   Inserção versionada e reversível: `python inserir_evangelica.py --seco` (dry-run),
+   `inserir_evangelica.py` (aplica, com backup por dossiê) e `--reverter` (restaura);
+   a regra da esfera ficou escrita no briefing `_briefings/nucleo-dossie.md` §5, para
+   o próximo dossiê nascer com ela separada.
+2. **`ordem` com invariante explícita.** O que quebra a exibição não é `ordem` repetida em
+   qualquer lugar, e sim **dentro do mesmo grupo de exibição** (área, e par eixo×área) —
+   é assim que `[area].astro`, o índice lateral do `BibliotecaLayout` e o `EixoHub` ordenam.
+   Corrigido: `samuel` 8 → **9** (colidia com `rute` na mesma área; 1 Samuel = 9 na
+   taxonomia), `reis` 10 → **11** (regra do primeiro livro da unidade, já seguida por
+   `cronicas` 13 e `esdras-neemias` 15) e `sumeria` 6 → **0** (colidia com `josue`; `0` é
+   o valor convencional do dossiê de abertura de cada área). A invariante virou portão:
+   `python scripts/conferir_ordem.py` (exit 1 em colisão).
+3. **`numeros`**: o H2 solto `RELATÓRIO DE CONTAGEM` virou `## ANEXO — RELATÓRIO DE
+   CONTAGEM`: o bloco é legítimo, o que faltava era declará-lo anexo, como o validador
+   exige das seções de topo.
+4. **`exodo`**: `description` de 173 → 143 chars (o Google trunca em ~160).
 
 ## Entregas fora do site (13/set/2026 · atualizado 14/set/2026)
 

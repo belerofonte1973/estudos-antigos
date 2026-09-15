@@ -42,6 +42,15 @@ de menos de 120 palavras.
 Cinco esferas: judaica, católica, ortodoxa, protestante histórica, evangélica.
 Faltar a evangélica é o aviso mais comum do acervo.
 
+A esfera **evangélica é própria, não diluída na protestante histórica**: a
+protestante fica com a Reforma e o devocional clássico (Lutero, Calvino, Henry,
+Keil–Delitzsch); a evangélica fica com as **séries críticas e expositivas** de
+editoras e linhas evangélicas (WBC, NICOT, NAC, TOTC/BST, NIVAC, EBC, NIBC,
+Apollos), com ano e editora no registro. Um autor conta **uma única vez**, na
+esfera a que pertence, e a contagem no fim da subseção diz onde. Obras só entram
+com ano/editora conferidos — na dúvida, `[W]`, e o texto diz que não foi
+reconferido.
+
 ## 6. Bibliografia-âncora com selo de acesso por obra
 
 `[livre]` · `[empréstimo]` (`emprestimo`, sem acento, na chave do componente) ·

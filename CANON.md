@@ -127,7 +127,15 @@ livro: <slug>       # ou livros: [a, b] para unidade canônica
 ---
 ```
 
-## Regras de conteúdo (skill `pesquisador-bibliografico` v5.8)
+## Regras de conteúdo (skill `pesquisador-bibliografico` v5.9)
+
+Desde 14/set/2026 a skill se divide em **núcleo** (SKILL.md, 31 kB: disciplina,
+workflow, modelo, calibração, verificação) e **references por tópico**, abertas
+sob demanda (era um único arquivo de 142 kB, carregado inteiro em todo uso). Para
+os dossiês deste acervo, o briefing do redator é
+`_briefings/nucleo-dossie.md` via `scripts/briefing.py <slug>` — as oito regras
+abaixo são o que ele precisa, e a skill só é aberta além disso quando a tarefa
+pedir (ex.: `references/book-verification-recipes.md` para conferir ISBN).
 
 1. **Regra Zero.** Nunca inventar autor, título, ano, DOI, página. Não achou,
    escreve "não encontrei fonte verificada para X".

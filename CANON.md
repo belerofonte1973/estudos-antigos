@@ -13,10 +13,10 @@ cada). **Faltam 0 — os 58 livros dos 4 cânones estão cobertos.**
 | Superfície | Hoje |
 |---|---|
 | Biblioteca — dossiês bíblicos | **54** = **58 dos 58 livros — COMPLETO** |
-| Biblioteca — contexto | Suméria, Pré-História |
-| Revista — artigos | 13 = 12 do núcleo bíblico + **Suméria** (contexto) |
+| Biblioteca — contexto | Suméria, Pré-História — **ambos com artigo-porta** |
+| Revista — artigos | **14** = 12 do núcleo bíblico + Suméria (oriente) + Pré-História (contexto) |
 | Passagens | 1 (Gênesis 6–9) |
-| Páginas | **151** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
+| Páginas | **152** (hub do núcleo, 4 hubs de cânon, hubs de livro, revista, biblioteca) |
 
 Portões, todos verdes (medidos em 14/set/2026, depois da higiene — ver abaixo):
 `python validar_dossie.py --todos` (forma, ANTES do build) → **56 arquivos · 0 falhas · 0 avisos** ·
@@ -388,10 +388,13 @@ de esperar a cota abrir.
 - Imagem social por artigo (hoje uma só, `public/og-default.png`; o `scripts/gerar_og.mjs`
   gera **apenas** a padrão — falta o gerador por dossiê).
 - Busca interna (Pagefind como passo pós-build) — ausente do `package.json` e do `astro.config.mjs`.
-- **Artigo-porta de Pré-História.** Corrigido o registro anterior: **Suméria já tem** artigo
-  (`src/content/artigos/quem-foram-os-sumerios.md`, desde 11/set, `dossie: biblia/sumeria`);
-  a revista tem 13 artigos = 12 do núcleo bíblico + Suméria. Falta só o de Pré-História
-  (`biblioteca/pre-historia/pre-historia-humana`), que é o último buraco de conteúdo do plano.
+- **Artigo-porta de Pré-História — FEITO (15/set/2026).** `src/content/artigos/quando-comeca-a-historia-humana.md`
+  ("Quando começa a história humana?", `eixo: contexto`, `area: pre-historia`, `dossie: pre-historia/pre-historia-humana`,
+  23 fontes, todas do dossiê ou por ele verificadas). Com ele, **todo dossiê de contexto tem artigo-porta**: o plano de
+  conteúdo da revista está fechado (14 artigos = 12 bíblicos + Suméria + Pré-História). O dossiê passou a exibir o link
+  de entrada automaticamente (o `[...slug].astro` já monta `entrada` a partir do campo `dossie`).
+- **Pré-História também sem PDF nem figuras** (`html-avulso/pdf/`: 54 PDFs = os dossiês com manifesto de figuras),
+  como Suméria — não é falha, é o recorte do plano.
 
 ## Higiene do acervo — 14/set/2026
 

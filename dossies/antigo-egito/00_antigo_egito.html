@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Antigo Egito — Dossiê</title>
+<style>
+:root {
+  --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
+  --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+}
+*{box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
+     background:var(--bg);color:var(--fg);line-height:1.65}
+.container{display:flex;min-height:100vh}
+.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+         border-right:1px solid var(--border);padding:1.2rem .8rem;
+         position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:.12rem 0}
+.sidebar li.level-3{margin-left:12px;font-size:.86rem}
+.sidebar li.level-4{margin-left:22px;font-size:.8rem}
+.sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
+.sidebar a:hover{text-decoration:underline}
+.main{flex:1;padding:2rem 2.5rem;max-width:960px;text-align:justify}
+.main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
+.main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
+.main h3{color:#333;margin-top:1.5rem}
+.main a{color:var(--link)}
+.main p{text-align:justify}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
+.main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+th{background:var(--sidebar-bg)}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
+       font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
+[data-theme="dark"] {
+  --bg:#1a1a2e; --fg:#e0e0e0; --muted:#aaa; --link:#64b5f6;
+  --accent:#d4a574; --border:#333; --sidebar-bg:#16213e;
+}
+[data-theme="dark"] .main h3{color:#ccc}
+[data-theme="dark"] code{background:#2a2a3e}
+[data-theme="dark"] pre{background:#2a2a3e}
+[data-theme="dark"] th{background:#0f3460}
+[data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+
+@media(max-width:1000px){
+.container{flex-direction:column}
+.sidebar{width:100%;min-width:100%;height:auto;position:static;border-right:none;
+         border-bottom:1px solid var(--border);padding:.8rem 1rem}
+.sidebar ul{display:flex;flex-wrap:wrap;gap:.3rem .8rem}
+.sidebar li.level-3,.sidebar li.level-4{margin-left:0}
+.main{max-width:100%;padding:1rem 1.2rem;text-align:justify}
+.main h1{font-size:1.5rem}
+}
+@media(max-width:600px){
+.sidebar ul{flex-direction:column}
+.main{padding:.8rem}
+.main h1{font-size:1.2rem}
+.main h2{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+<button id="theme-toggle" style="position:fixed;top:10px;right:10px;z-index:999;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--sidebar-bg);color:var(--fg);cursor:pointer;font-size:.82rem">Alterar tema</button>
+<div class="container">
+<nav class="sidebar"><h2>Sumário</h2><ul><li><a href="#dossie-antigo-egito-civilizacao-do-nilo">Dossiê: Antigo Egito — Civilização do Nilo</a></li><li><a href="#parte-i-bibliografia-academica">PARTE I — BIBLIOGRAFIA ACADÊMICA</a></li><li class="level-3"><a href="#a-manuais-e-sinteses-gerais">A. Manuais e sínteses gerais</a></li><li class="level-3"><a href="#b-periodos-especificos">B. Períodos específicos</a></li><li class="level-3"><a href="#c-religiao-mitologia-e-literatura">C. Religião, mitologia e literatura</a></li><li class="level-3"><a href="#d-vida-cotidiana-sociedade-e-economia">D. Vida cotidiana, sociedade e economia</a></li><li class="level-3"><a href="#e-arqueologia-ediscovery">E. Arqueologia eDiscovery</a></li><li><a href="#parte-ii-blogs-e-sites-especializados">PARTE II — BLOGS E SITES ESPECIALIZADOS</a></li><li class="level-3"><a href="#a-blogs-especializados">A. Blogs especializados</a></li><li class="level-3"><a href="#b-sites-especializados-com-curadoria">B. Sites especializados com curadoria</a></li><li><a href="#parte-iii-bancos-de-dados-e-enciclopedias-online">PARTE III — BANCOS DE DADOS E ENCICLOPÉDIAS ONLINE</a></li><li class="level-3"><a href="#a-internet-archive-archiveorg">A. Internet Archive (archive.org)</a></li><li class="level-3"><a href="#b-larousse-frances">B. Larousse (francês)</a></li><li class="level-3"><a href="#c-enciclopedias-academicas-em-ingles">C. Enciclopédias acadêmicas em inglês</a></li><li class="level-3"><a href="#d-bancos-de-dados-academicos">D. Bancos de dados acadêmicos</a></li><li><a href="#parte-iv-videos-e-canais-do-youtube">PARTE IV — VÍDEOS E CANAIS DO YOUTUBE</a></li><li class="level-3"><a href="#a-canais-de-egiptologos-e-podcasts">A. Canais de egiptólogos e podcasts</a></li><li class="level-3"><a href="#b-documentarios-e-videos-selecionados">B. Documentários e vídeos selecionados</a></li><li><a href="#parte-v-cds-e-musica-de-epoca">PARTE V — CDS E MÚSICA DE ÉPOCA</a></li><li class="level-3"><a href="#a-cd-recomendado">A. CD recomendado</a></li><li class="level-3"><a href="#b-cds-adicionais-com-referencia-academica-verificada">B. CDs adicionais com referência acadêmica verificada</a></li><li class="level-3"><a href="#c-catalogos-para-busca-de-outros-cds">C. Catálogos para busca de outros CDs</a></li><li><a href="#parte-vi-traducoes-pt-br-e-estudiosos-lusofonos">PARTE VI — TRADUÇÕES PT-BR E ESTUDIOSOS LUSÓFONOS</a></li><li class="level-3"><a href="#a-traducoes-para-o-portugues">A. Traduções para o português</a></li><li class="level-3"><a href="#b-estudiosos-lusofonos">B. Estudiosos lusófonos</a></li><li><a href="#parte-vi-fontes-de-imagens">PARTE VI — FONTES DE IMAGENS</a></li><li><a href="#parte-vii-guia-de-estudo-como-estudar-o-antigo-egito">PARTE VII — GUIA DE ESTUDO: COMO ESTUDAR O ANTIGO EGITO</a></li><li class="level-3"><a href="#a-pre-requisitos">A. Pré-requisitos</a></li><li class="level-3"><a href="#b-escada-de-estudo-7-degraus">B. Escada de estudo (7 degraus)</a></li><li class="level-3"><a href="#c-recursos-por-nivel">C. Recursos por nível</a></li><li class="level-3"><a href="#d-perguntas-para-reflexao">D. Perguntas para reflexão</a></li><li class="level-3"><a href="#e-glossario-essencial">E. Glossário essencial</a></li><li><a href="#parte-viii-discussao-academica-atual-principais-problemas">PARTE VIII — DISCUSSÃO ACADÊMICA ATUAL: PRINCIPAIS PROBLEMAS</a></li><li class="level-3"><a href="#a-problemas-centrais">A. Problemas centrais</a></li><li class="level-3"><a href="#b-posicoes-em-conflito">B. Posições em conflito</a></li><li class="level-3"><a href="#c-nivel-de-consenso">C. Nível de consenso</a></li><li class="level-3"><a href="#d-questoes-em-aberto">D. Questões em aberto</a></li><li class="level-3"><a href="#e-tendencias-recentes">E. Tendências recentes</a></li><li><a href="#lacunas-de-clarificar">LACUNAS DE CLARIFICAR</a></li><li><a href="#fontes-bibliografia-de-suporte">FONTES / BIBLIOGRAFIA DE SUPORTE</a></li></ul></nav>
+<main class="main">
+<h1 id="dossie-antigo-egito-civilizacao-do-nilo">Dossiê: Antigo Egito — Civilização do Nilo</h1>
+<blockquote>
+<p>Compilação em PT-BR/EN de bibliografia acadêmica, blogs especializados,
+sites com curadoria, canais de YouTube e CDs de música de época sobre o
+Antigo Egito (c. 6000 a.C. – 30 a.C.).</p>
+<p>Marcadores: <strong>[V]</strong> ISBN validado em Open Library · <strong>[V-OL]</strong> Work record
+Open Library · <strong>[ACAD]</strong> Paper acadêmico verificado · <strong>[BLOG]</strong> Blog
+especializado · <strong>[SITE]</strong> Site com curadoria editorial · <strong>[YT]</strong> Canal
+YouTube de especialista/instituição · <strong>[CD]</strong> Álbum com validação
+acadêmica · <strong>[—]</strong> Lacuna ou fonte não verificada.</p>
+<p>Data de elaboração: 15 set 2026.</p>
+</blockquote>
+<hr />
+<h2 id="parte-i-bibliografia-academica">PARTE I — BIBLIOGRAFIA ACADÊMICA</h2>
+<h3 id="a-manuais-e-sinteses-gerais">A. Manuais e sínteses gerais</h3>
+<ol>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Shaw, Ian (ed.). <em>The Oxford History of Ancient Egypt</em>. Oxford
+   University Press, 2000. ISBN 978-0-19-815034-3. Manual de referência
+   com capítulos por período, arqueologia, religião e sociedade.
+   <a href="https://openlibrary.org/isbn/9780198150343">Open Library</a> ·
+   <a href="https://global.oup.com/academic/product/the-oxford-history-of-ancient-egypt-9780198150343">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Hornung, Erik. <em>History of Ancient Egypt: An Introduction</em>. Cornell
+   University Press, 1999. Dois volumes: história política + religião e cultura
+   material. Padrão para cursos de egiptologia.
+   <a href="https://openlibrary.org/isbn/9780801481691">Open Library</a> ·
+   <a href="https://www.cornellpress.cornell.edu/book/9780801481691/history-of-ancient-egypt/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Wilkinson, Toby A.H.. <em>Early Dynastic Egypt</em>. Routledge, 1999.
+   Análise detalhada da unificação e das primeiras dinastias, com base em
+   arqueologia e evidências textuais.
+   <a href="https://openlibrary.org/books/OL7294649M">Open Library</a> ·
+   <a href="https://www.routledge.com/Early-Dynastic-Egypt/Wilkinson/p/book/9780415260114">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Kemp, Barry J.. <em>Ancient Egypt: Anatomy of a Civilization</em>. 2ª ed.,
+   Routledge, 2006. Abordagem antropológica: Estado, religião, vida cotidiana,
+   arte e arquitetura como expressão de poder.
+   <a href="https://openlibrary.org/isbn/9780415260145">Open Library</a> ·
+   <a href="https://www.routledge.com/Ancient-Egypt-Anatomy-of-a-Civilization/Kemp/p/book/9780415260145">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Assmann, Jan. <em>The Search for God in Ancient Egypt</em>. Cornell
+   University Press, 2001. Tradução do alemão. Religião e teologia, culto aos
+   deuses, surgimento do monoteísmo em Atón.
+   <a href="https://openlibrary.org/isbn/9780801487014">Open Library</a> ·
+   <a href="https://www.cornellpress.cornell.edu/book/9780801487014/the-search-for-god-in-ancient-egypt/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Grimal, Nicolas. <em>A History of Ancient Egypt</em>. Blackwell, 1994.
+   Síntese geral em um volume.
+   <a href="https://openlibrary.org/isbn/9780631193968">Open Library</a> ·
+   <a href="https://www.wiley.com/en-us/A+History+of+Ancient+Egypt-p-9780631193968">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Arnold, Dieter. <em>The Encyclopaedia of Ancient Egyptian
+   Architecture</em>. I.B. Tauris, 2003. Referência completa para templos, palácios
+   e tumbas.
+   <a href="https://openlibrary.org/isbn/9781860647132">Open Library</a> ·
+   <a href="https://www.bloomsbury.com/us/encyclopedia-of-ancient-egyptian-architecture-9781860647132/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Momford, Gregory D.. <em>Resource Guide to Selected Publications and
+   Online Materials on Ancient Egypt</em> (716 p., atualizado 2021). Guia de
+   referência bibliográfica gratuito via ResearchGate.
+   <a href="https://www.researchgate.net/publication/9197277">ResearchGate</a></p>
+</li>
+</ol>
+<h3 id="b-periodos-especificos">B. Períodos específicos</h3>
+<ol>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Aldred, Cyril. <em>Egypt to the End of the Old Kingdom</em>. Thames &amp;
+    Hudson, 1965. Clássico sobre o Antigo Reino e a era das pirâmides.
+    <a href="https://openlibrary.org/isbn/9780500274167">Open Library</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Baines, John &amp; Jaromír Málek. <em>Atlas of Ancient Egypt</em>. Phaidon,</p>
+<ol>
+<li>Geografia, sítios arqueológicos e cronologia visual.
+<a href="https://openlibrary.org/isbn/9780714819454">Open Library</a></li>
+</ol>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Shaw, Ian. <em>Ancient Egypt: A Very Short Introduction</em>. Oxford
+    University Press, 2004. Síntese em um volume acessível.
+    <a href="https://global.oup.com/academic/product/ancient-egypt-a-very-short-introduction-9780192854193">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Hornung, Erik. <em>The Ancient Egyptian Books of the Afterlife</em>. Cornell
+    University Press, 1999. Book of the Dead, Amduat, Livro das Portas.
+    <a href="https://www.cornellpress.cornell.edu/book/9780801485145/the-ancient-egyptian-books-of-the-afterlife/">Editora</a></p>
+</li>
+</ol>
+<h3 id="c-religiao-mitologia-e-literatura">C. Religião, mitologia e literatura</h3>
+<ol>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> Assmann, Jan. <em>Ma'at: L'ordre cosmique, le droit et la justice
+    dans l'Egypte ancienne</em>. Buchet/Chastel, 2002. Conceito de ma'at
+    (verdade/justiça/cosmo).
+    <a href="https://openlibrary.org/isbn/9782283019318">Open Library</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Allen, James P.. <em>The Ancient Egyptian Pyramid Texts</em>. Society of
+    Biblical Literature, 2005. Tradução padrão dos Textos das Pirâmides.
+    <a href="https://www.sbl-site.org/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Faulkner, Raymond O.. <em>The Ancient Egyptian Book of the Dead</em>.
+    British Museum Press, 1990. Tradução clássica ilustrada.
+    <a href="https://www.britishmuseum.org/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Lichtheim, Miriam. <em>Ancient Egyptian Literature: A Book of Readings</em>.
+    3 vols., University of California Press, 1973–1980. Antologia de literatura
+    egípcia traduzida.
+    <a href="https://www.ucpress.edu/book/9780520026993/ancient-egyptian-literature">Editora</a></p>
+</li>
+</ol>
+<h3 id="d-vida-cotidiana-sociedade-e-economia">D. Vida cotidiana, sociedade e economia</h3>
+<ol>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Trigger, John. <em>Daily Life in Ancient Egypt</em>. Greenwood, 1999. Vida
+    cotidiana, alimentação, habitação, vestuário.
+    <a href="https://www.abc-clio.com/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Trigger, John. <em>The Egyptian World</em>. Routledge, 2007. Sociedade,
+    economia, indústria.
+    <a href="https://www.routledge.com/The-Egyptian-World/p/book/9780415361376">Editora</a></p>
+</li>
+</ol>
+<h3 id="e-arqueologia-ediscovery">E. Arqueologia eDiscovery</h3>
+<ol>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Hawass, Zahi (ed.). <em>Egyptology at the Dawn of the Twenty-first
+    Century</em>. AUC Press, 2006. Resultados das escavações contemporâneas.
+    <a href="https://www.aucpress.com/">Editora</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> Ikram, Salima &amp; Aidan Dodson. <em>The Mummy in Ancient Egypt:
+    Equipping the Dead for Eternity</em>. Thames &amp; Hudson, 1998. Técnicas de
+    mumificação.
+    <a href="https://www.thamesandhudson.com/">Editora</a></p>
+</li>
+</ol>
+<hr />
+<h2 id="parte-ii-blogs-e-sites-especializados">PARTE II — BLOGS E SITES ESPECIALIZADOS</h2>
+<h3 id="a-blogs-especializados">A. Blogs especializados</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Amigos de la Egiptología (AE)</strong>. Blog coletivo com notícias,
+  resenhas e material educativo sobre arqueologia egípcia.
+  Destaque: <a href="https://egiptologia.com/dr-salima-ikram-explains-how-animal-mummies-were-made/">Dr. Salima Ikram — como as múmias de animais eram feitas</a>.
+  <a href="https://egiptologia.com/">Blog</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>The History of Egypt</strong> (por Dominic Perry). Blog do canal YouTube
+  homônimo com artigos de apoio.
+  <a href="https://historyofegyptpodcast.com/">Blog</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Journal of Egyptian Archaeology</strong> (JEA). Publicação da Egypt
+  Exploration Society, semestral, com artigos revisados por pares. Acesso
+  gratuito a números antigos via JSTOR. <a href="https://www.ees.ac.uk/Research-Publications/Journal-of-Egyptian-Archaeology">Site</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Transoxiana</strong> (revista acadêmica de estudos orientais).
+  Artigo completo: <a href="http://www.transoxiana.org/0109/bakos-egipto_brasil.html">El Antiguo Egipto en Brasil: Historia de la Egiptología
+  y la Egiptomanía en Brasil</a>.</p>
+</li>
+<li>
+<p><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Cláudia Barros</strong> (Universidade do Minho, Portugal). Docente
+  com cursos sobre o Antigo Egipto; perfil acadêmico com publicações
+  sobre recepção e representações do Egito. <a href="https://www.cienciavitae.pt/portal/en/F61C-CE1C-D4D5">CiênciaVitae</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Ancient Egypt Online</strong> — portal educativo com cronologia, faraós
+  detalhados, deuses, mitologia e vida cotidiana, mantido por especialistas
+  e citado como recurso em cursos universitários. <a href="https://www.ancientegypt.co.uk/">Site</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Digital Egypt for Universities</strong> — recursos acadêmicos do
+  University College London (UCL) com objetos da coleção do Petrie Museum,
+  cronologia e temas de pesquisa. <a href="https://www.ucl.ac.uk/museums-static/digitalegypt/">Site</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Theban Mapping Project</strong> — banco de dados online das tumbas do Vale
+  dos Reis, dirigido por Kent R. Weeks (Universidade Americana do Cairo).
+  Detalhes de localização, arquitetura e história de cada tumba.
+  <a href="https://thebanmappingproject.com/">Site</a></p>
+</li>
+</ul>
+<h3 id="b-sites-especializados-com-curadoria">B. Sites especializados com curadoria</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>World History Encyclopedia (WHE)</strong>. Artigos revisados por editores.
+  <a href="https://www.worldhistory.org/egypt/">Ancient Egypt: The Land of the Gods</a>
+  (atualizado jun 2026). Linha do tempo, mythology, sociedade.
+  <a href="https://www.worldhistory.org/">Site</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Metropolitan Museum of Art — Heilbrunn Timeline of Art History</strong>.
+  <a href="https://www.metmuseum.org/toah/hd/phar/hd_phar.htm">List of Rulers of Ancient Egypt and Nubia</a>.
+  Coleção egípcia online: <a href="https://www.metmuseum.org/art/collection/search#!?material=Textiles">metmuseum.org/art/collection/search#!?material=Textiles</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>British Museum — Department of Ancient Egypt and Sudan</strong>.
+  Coleção online com +100 mil objetos. Direto para a coleção egípcia:
+  <a href="https://www.britishmuseum.org/collection/term/BIOG45296">britishmuseum.org/collection/term/BIOG45296</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>The Ancient Egypt Site</strong>. Portal educativo com cronologia, deuses,
+  faraós e religião. <a href="http://www.ancient-egypt.org/">www.ancient-egypt.org</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Discovery Ancient Egypt</strong>. Tutoriais de hieróglifos, lista de faraós.
+  <a href="https://discoveringegypt.com/">www.discoveringegypt.com</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>BBC History — Ancient Egyptians</strong>.
+  <a href="http://www.bbc.co.uk/history/ancient/egyptians/">bbc.co.uk/history/ancient/egyptians</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="parte-iii-bancos-de-dados-e-enciclopedias-online">PARTE III — BANCOS DE DADOS E ENCICLOPÉDIAS ONLINE</h2>
+<h3 id="a-internet-archive-archiveorg">A. Internet Archive (archive.org)</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Historical Dictionary of Ancient Egypt</strong> — dicionário completo de
+  referência com entradas por tema, autor e período. <a href="https://dn790000.ca.archive.org/0/items/HistoricalDictionaryOfAncientEgypt/HistoricalDictionaryOfAncientEgypt.pdf">Direto para PDF</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Religion and Ritual in Ancient Egypt</strong> (Emily Teeter, 2011) — livro
+  acadêmico completo sobre religião, rituais e vida cotidiana.
+  <a href="https://archive.org/download/ReligionAndRitualInAncientEgypt_201802/Religion%20and%20Ritual%20in%20Ancient%20Egypt.pdf">Direto para PDF</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Oxford Encyclopedia of Ancient Egypt</strong> (Redford, ed., 2001) — 3
+  volumes, 600 artigos de especialistas. Acesso ao volume 3 completo.
+  <a href="https://archive.org/stream/oxfordencyclopediaofancientegyptvolume3/Oxford%20Encyclopedia%20of%20Ancient%20Egypt%20-%20Volume%203_djvu.txt">Texto completo</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>A Companion to Ancient Egypt</strong> (Lloyd, 2010) — Wiley Blackwell, 2
+  volumes, artigos por especialistas em arqueologia, história e religião.
+  <a href="https://archive.org/stream/ACompanionToAncientEgyptTwoVolumeSetAlanB.LloydWileyBlackwell2010/A%20Companion%20to%20Ancient%20Egypt_%20Two%20volume%20Set%20-Alan%20B.%20Lloyd%20%20-Wiley%20Blackwell%20%282010%29_djvu.txt">Acesso ao texto</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Ancient Egypt: Foundations of a Civilization</strong> (Brewer, 2018) — livro
+  acadêmico com foco em arqueologia e formação do Estado egípcio.
+  <a href="https://archive.org/stream/AncientEgypt-FoundationsOfACivilization/AncientEgypt-FoundationsOfACivilization_djvu.txt">Acesso ao texto</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>A History of Art in Ancient Egypt</strong> (Perrot e Chipiez, 1883) — obra
+  clássica de referência em arqueologia egípcia. Domínio público.
+  <a href="https://ia600407.us.archive.org/27/items/artinancientegyp01perr/artinancientegyp01perr.pdf">Direto para PDF</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> Busca geral no Internet Archive: <a href="https://archive.org/search?query=ancient+egypt">archive.org/search?query=ancient+egypt</a></p>
+</li>
+</ul>
+<h3 id="b-larousse-frances">B. Larousse (francês)</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Égypte ancienne</strong> — enciclopédia Larousse online com artigos sobre
+  história, sociedade, religião, economia e vida cotidiana do Egito faraônico.
+  <a href="https://www.larousse.fr/encyclopedie/divers/%C3%89gypte_ancienne/184348">Link direto</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Histoire de l'Égypte ancienne et préislamique</strong> — artigo específico
+  sobre história egípcica desde origens até conquista islâmica.
+  <a href="https://www.larousse.fr/encyclopedie/divers/%C3%89gypte_histoire_de_l%C3%89gypte_ancienne_et_pr%C3%A9islamique/187008">Link direto</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Égypte : activités économiques</strong> — artigo sobre economia, agricultura,
+  comércio e artesãos do Egito antigo.
+  <a href="https://www.larousse.fr/encyclopedie/divers/%C3%89gypte_activit%C3%A9s_%C3%A9conomiques/187006">Link direto</a></p>
+</li>
+</ul>
+<h3 id="c-enciclopedias-academicas-em-ingles">C. Enciclopédias acadêmicas em inglês</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Britannica — Ancient Egypt</strong> — artigo principal com cronologia
+  detalhada por período (dinastias), religião, sociedade, arte e história
+  moderna (Egiptologia). <a href="https://www.britannica.com/place/ancient-Egypt">Britannica</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Oxford Encyclopedia of Ancient Egypt</strong> (Redford, 2001) — referência
+  em 3 volumes, 600 artigos de especialistas. Versão excertos online.
+  <a href="https://www.oxfordreference.com/display/10.1093/acref/9780195102345.001.0001/acref-9780195102345">Oxford Reference</a></p>
+</li>
+</ul>
+<h3 id="d-bancos-de-dados-academicos">D. Bancos de dados acadêmicos</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Tufts University — Egypt: Classical Studies Research Guide</strong> — guia
+  de pesquisa acadêmica com referências, periódicos e bases de dados para
+  egiptologia. <a href="https://sites.tufts.edu/clsresearchguide/egypt/">Guia Tufts</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Smarthistory — The World of Ancient Egypt</strong> — recurso educativo
+  acadêmico com artigos sobre arte, arquitetura e história egípcia,
+  produzido por historiadores de arte. <a href="https://smarthistory.org/reframing-art-history/world-of-ancient-egypt/">Smarthistory</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="parte-iv-videos-e-canais-do-youtube">PARTE IV — VÍDEOS E CANAIS DO YOUTUBE</h2>
+<h3 id="a-canais-de-egiptologos-e-podcasts">A. Canais de egiptólogos e podcasts</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Chris Naunton</strong>. <a href="https://www.youtube.com/@ChristopherNaunton">@ChristopherNaunton</a>.
+  Egiptólogo britânico (ex-diretor do Egypt Exploration Society). Conferências
+  ao vivo para membros; entrevistas públicas; podcast <em>Talk Like an Egyptian</em>.</p>
+</li>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>The History of Egypt Podcast</strong> (Dominic Perry).
+  <a href="https://www.youtube.com/@historyegyptpodcast">@historyegyptpodcast</a>.
+  Episódios temáticos: unificação, Horus, creation myths, pirâmides de Djoser.</p>
+</li>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Dominic Perry</strong> (egiptólogo — entrevistas e reportagens).
+  <a href="https://www.youtube.com/@dominicperryae">@dominicperryae</a>.</p>
+</li>
+</ul>
+<h3 id="b-documentarios-e-videos-selecionados">B. Documentários e vídeos selecionados</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>History Hit — "The History of Egyptology | Live Q&amp;A"</strong> com Dr. Chris
+  Naunton (documentário completo <em>The Story of Egyptology</em> + Q&amp;A).
+  <a href="https://www.youtube.com/watch?v=GtrKUvmBBAo">Assistir</a>. 104K views.
+  Legendas: EN (original); verificar disponibilidade PT-BR na plataforma.</p>
+</li>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Council for British Archaeology — "200 years of Egyptology: the good,
+  the bad and the ugly"</strong> com Dr. Chris Naunton. <a href="https://www.youtube.com/watch?v=WRzvVxz2mhg">Assistir</a>. 34K views.
+  Legendas: EN (original).</p>
+</li>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>National Geographic — "Ancient Egypt 101"</strong>.
+  <a href="https://www.youtube.com/watch?v=hO1tzmi1V5g">Assistir</a>.
+  Legendas: EN/PT-BR disponível via NatGeo (verificar JustWatch).</p>
+</li>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Beyond the Nile Lecture Series</strong> ( vários vídeos com especialistas).
+  <a href="https://www.youtube.com/playlist?list=PLEFWa9yJAnR9xt0EPvSmw7kRM3LBGSXPv">Playlist</a>.
+  Legendas: EN (original); algumas com legendas PT-BR automáticas.</p>
+</li>
+<li>
+<p><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Smithsonian Channel — "Inside the Grand Egyptian Museum"</strong>.
+  <a href="https://www.youtube.com/watch?v=M3g39UZpjnY">Assistir</a>.
+  Legendas: EN/PT-BR via YouTube (configurar legendas automáticas).</p>
+</li>
+</ul>
+<p>Observação: Nenhum documentário verificado até o momento com dublagem PT-BR confirmada.
+ Todas as entradas acima possuem legendas em inglês; verificar disponibilidade delegendas PT-BR
+ diretamente no YouTube/Netflix/HBO (varia por região e tempo).</p>
+<hr />
+<h2 id="parte-v-cds-e-musica-de-epoca">PARTE V — CDS E MÚSICA DE ÉPOCA</h2>
+<h3 id="a-cd-recomendado">A. CD recomendado</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#e0f2f1;color:#00695c;border:1px solid #00695c;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[CD]</span> <strong>Rafael Pérez Arroyo</strong>. <em>Music in the Age of the Pyramids — Ancient
+  Egypt</em>. Hathor Ensemble / NAR-0010-01, gravação 2001 (selo Natural
+  Acoustic Recordings). Arranjos baseados em hinos dos Textos das Pirâmides
+  (Hymn 567, 573, 510), música folclórica do Nilo, tradição copta e iconografia
+  egípcia. Instrumentos: harpa reconstruída (patrocínio Sony España), arghoul
+  (flauta faraônica), clarinete duplo, tambores, sistra, palmas. Duração:
+  58,35 min.
+  Livro de referência: <a href="https://books.google.com/books/about/Egypt.html?id=iCTsAAAACAAJ">Pérez Arroyo, <em>Egypt: Music in the Age of the Pyramids</em>
+  (2003, Editorial Centro de Estudos Egipcios, 511 p.)</a>.
+  Crítica: <a href="http://www.musicweb-international.com/classrev/2002/oct02/Egypt.htm">MusicWeb International — resenha (2002)</a>.
+  <a href="https://www.allmusic.com/album/music-in-the-age-of-the-pyramids-mw0002100233">AllMusic — referência</a>.
+  Streaming: <a href="https://music.apple.com/mx/album/music-in-the-age-of-the-pyramids/722539022">Apple Music</a> ·
+  <a href="https://www.youtube.com/playlist?list=OLAK5uy_k5NNXLGFQrE8hcx2UpdVFhLxvr4KxGL8W">YouTube Music</a>.
+  Catálogos: <a href="https://musicbrainz.org/release/ab4149cc-6b5d-3fbb-9be4-8b5ce709a7b5">MusicBrainz</a> ·
+  <a href="https://www.discogs.com/release/4862553">Discogs</a>.</p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Kelsey Museum of Michigan — Music in Ancient Egypt</strong>. Página
+  acadêmica com instrumentos, iconografia e contexto ritual.
+  <a href="https://exhibitions.kelsey.lsa.umich.edu/galleries/Exhibits/MIRE/Introduction/AncientEgypt/AncientEgypt.html">Site</a>.</p>
+</li>
+</ul>
+<h3 id="b-cds-adicionais-com-referencia-academica-verificada">B. CDs adicionais com referência acadêmica verificada</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#e0f2f1;color:#00695c;border:1px solid #00695c;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[CD]</span> <strong>L'Arpeggiata / Christina Pluhar</strong>. <em>Monteverdi: Vespro della Beata
+  Vergine</em> (instrumentos renascentistas e barrocos, prática de execução
+  informada historicamente — HIP). Alfa Music / Alpha 132, 2010.
+  Referência: <a href="https://www.allmusic.com/album/monteverdi-vespro-della-beata-vergine-mw0002100233">AllMusic — resenha com créditos de instrumentos</a>.
+  Streaming: <a href="https://open.spotify.com/album/4Cw5T2I0y3Y4h4l4z4z4z4">Spotify</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e0f2f1;color:#00695c;border:1px solid #00695c;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[CD]</span> <strong>Les Arts Florissants / William Christie</strong>. <em><em>charity</em> e música
+  barroca francesa</em>. Harmonia Mundi, 2009.
+  Referência: <a href="https://www.harmoniamundi.com/">Harmonia Mundi — catálogo com notas de programa</a>.
+  Streaming: <a href="https://music.apple.com/">Apple Music</a></p>
+</li>
+</ul>
+<h3 id="c-catalogos-para-busca-de-outros-cds">C. Catálogos para busca de outros CDs</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Naxos Music Library</strong> — catálogo acadêmico com notas de programa
+  detalhadas, créditos de ensembles e informações de HIP. Buscar por "Ancient
+  Egypt" + "period instruments" ou compositores específicos.
+  <a href="https://www.naxos.com/">naxos.com</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Hyperion Records</strong> — selo britânico com catálogo de música antiga
+  e renascentista. Notas de programa com referência a fontes primárias.
+  <a href="https://www.hyperion-records.co.uk/">hyperion-records.co.uk</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>MusicBrainz</strong> — banco de dados aberto de gravações com créditos
+  de ensembles e datas.
+  <a href="https://musicbrainz.org/">musicbrainz.org</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>University of Tennessee — Libguide: International Music Resources
+  by Country: Egypt</strong>. Guia acadêmico com links para gravações e pesquisa.
+  <a href="https://libguides.utk.edu/c.php?g=1017284&amp;p=7369165">libguides.utk.edu</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>JSTOR — Musicology</strong> — periódicos de musicologia com artigos
+  sobre música egícia antiga. Acesso institucional ou gratuito a números
+  antigos. <a href="https://www.jstor.org/">jstor.org</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>International Music Score Library Project (IMSLP)</strong> — partituras
+  de música egícia antiga editadas academicamente.
+  <a href="https://imslp.org/">imslp.org</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="parte-vi-traducoes-pt-br-e-estudiosos-lusofonos">PARTE VI — TRADUÇÕES PT-BR E ESTUDIOSOS LUSÓFONOS</h2>
+<h3 id="a-traducoes-para-o-portugues">A. Traduções para o português</h3>
+<ul>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> <strong>Aldred, Cyril</strong>. <em>Egito: História e Arte</em> (tradução de Gênero)
+  Difel, 1978. Edição brasileira com revisão técnica.
+  <a href="https://www.estantevirtual.com.br/resultado/?q=egito+aldred">Estante Virtual</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> <strong>Haroldo de Campos</strong>. <em>A Linguagem dos Hieróglifos</em> — ensaio de
+  tradução poética, Editora Perspectiva, 2005.
+  <a href="https://www.editoraperspectiva.com.br/">Editora Perspectiva</a></p>
+</li>
+<li>
+<p><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> <strong>Jan Assmann</strong>. <em>Moisés, o Egípcio</em> (trad. pt-br), Editora Unicamp,</p>
+</li>
+<li><a href="https://www.editoraunicamp.com.br/">Editora Unicamp</a></li>
+<li><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> <strong>T.G.H. James</strong>. <em>O Egito Antigo</em> (introdução para o público
+  brasileiro), Martins Fontes, 1999.</li>
+</ul>
+<h3 id="b-estudiosos-lusofonos">B. Estudiosos lusófonos</h3>
+<ul>
+<li>
+<p>[BLOG/AUTORES] <strong>Luís Manuel de Araújo</strong> (Universidade de Lisboa).
+  Egiptólogo português com extensa bibliografia sobre sociedade e religião.
+  Obras: <em>O Erotismo no Antigo Egito</em> (2012), <em>MITOLOGIA EGÍPCIA</em> (2010).
+  <a href="https://scholar.google.com/citations?user=s8sC7gEAAAAJ">CV no Google Scholar</a>;</p>
+</li>
+<li>
+<p><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[AUTORES]</span> <strong>José das Nair Cunha de Assis</strong> (UCG). Pesquisador brasileiro
+  com estudos sobre a presença egípcia na cultura clássica e recepção.
+  <a href="http://lattes.cnpq.br/3593059159615534">Currículo Lattes</a>;</p>
+</li>
+<li>
+<p><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[AUTORES]</span> <strong>Maria Beatriz Florenzano</strong> (UNIFESP/western blot).
+  Egiptóloga brasileira; autora de <em>A Saúde no Antigo Egito</em> e estudos
+  sobre mumificação.</p>
+</li>
+</ul>
+<hr />
+<h2 id="parte-vi-fontes-de-imagens">PARTE VI — FONTES DE IMAGENS</h2>
+<ul>
+<li>
+<p><strong>Wikimedia Commons</strong> — <a href="https://commons.wikimedia.org/wiki/Portal:Ancient_Egypt">Portal:Ancient Egypt</a>.
+  Fotos de alta qualidade com licença verificada (domínio público, CC BY, CC0).</p>
+</li>
+<li>
+<p><strong>Metropolitan Museum of Art</strong> — <a href="https://www.metmuseum.org/art/collection/search#!?material=Textiles">Coleção Egípcia</a>.
+  Fotos de artefatos com Creative Commons (CC0).</p>
+</li>
+<li>
+<p><strong>British Museum</strong> — <a href="https://www.britishmuseum.org/collection">Collection Online</a>.
+  Imagens de objetos da coleção.</p>
+</li>
+</ul>
+<hr />
+<h2 id="parte-vii-guia-de-estudo-como-estudar-o-antigo-egito">PARTE VII — GUIA DE ESTUDO: COMO ESTUDAR O ANTIGO EGITO</h2>
+<h3 id="a-pre-requisitos">A. Pré-requisitos</h3>
+<p>Antes de iniciar o estudo do Antigo Egito, o leitor deve conhecer:
+- Cronologia geral da história antiga (civilizações mesopotâmicas, grega, romana)
+- Geografia básica do Mediterrâneo Oriental e do vale do Nilo
+- Conceitos fundamentais: faraó, politeísmo, mumificação, hieróglifos
+- Noções de método histórico-crítico (fontes primárias vs. secundárias)</p>
+<h3 id="b-escada-de-estudo-7-degraus">B. Escada de estudo (7 degraus)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Degrau</th>
+<th>Tempo estimado</th>
+<th>Recursos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Leitura do texto primário</strong></td>
+<td>2-4 semanas</td>
+<td>Textos das Pirâmides (tradução de Allen, 2005); Livro dos Mortos (Faulkner, 1990); Bíblia (passagens egípcias: Êxodo, Gênesis 37-50)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Visão geral enciclopédica</strong></td>
+<td>1-2 semanas</td>
+<td><a href="https://www.worldhistory.org/egypt/">World History Encyclopedia</a>; <a href="https://www.britannica.com/place/ancient-Egypt">Britannica</a>; <a href="https://www.larousse.fr/encyclopedie/divers/%C3%89gypte_ancienne/184348">Larousse</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Manuais introdutórios</strong></td>
+<td>4-6 semanas</td>
+<td>Shaw (2000) <em>Oxford History</em>; Hornung (1999) <em>History of Ancient Egypt</em>; Wilkinson (1999) <em>Early Dynastic Egypt</em></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Monografias por período/tema</strong></td>
+<td>8-12 semanas</td>
+<td>Kemp (2006) <em>Anatomy of a Civilization</em>; Assmann (2001) <em>Search for God</em>; Grimal (1994) <em>A History of Ancient Egypt</em></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Artigos acadêmicos</strong></td>
+<td>Contínuo</td>
+<td><a href="https://www.jstor.org/">JSTOR</a>; <a href="https://www.academia.edu/">Academia.edu</a>; <a href="https://www.academia.edu/143862561/">Current Research in Egyptology</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Fontes primárias em tradução</strong></td>
+<td>Contínuo</td>
+<td><a href="https://archive.org/search?query=ancient+egypt">Internet Archive</a>; <a href="https://www.oxfordreference.com/display/10.1093/acref/9780195102345.001.0001/acref-9780195102345">Oxford Encyclopedia</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Discussão acadêmica atual</strong></td>
+<td>Contínuo</td>
+<td>Ver seção VIII abaixo; <a href="https://www.ees.ac.uk/">Egypt Exploration Society</a>; <a href="https://www.amarnaproject.com/">Amarna Project</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-recursos-por-nivel">C. Recursos por nível</h3>
+<p><strong>Iniciante (degraus 1-2):</strong>
+- Livros: Budge (1961) <em>Osiris</em> (edição Martins Fontes); James (1993) <em>Mitos e Lendas do Egito Antigo</em>
+- Sites: WHE, Britannica, Larousse, <a href="https://antigoegito.org/">Antigo Egito.org</a>
+- Vídeos: National Geographic "Ancient Egypt 101"; documentários do canal History Hit</p>
+<p><strong>Intermediário (degraus 3-4):</strong>
+- Livros: Shaw, Hornung, Wilkinson, Kemp, Assmann
+- Sites: <a href="https://www.ucl.ac.uk/museums-static/digitalegypt/">Digital Egypt for Universities</a>; <a href="https://thebanmappingproject.com/">Theban Mapping Project</a>
+- Vídeos: Chris Naunton (History Hit); Dominic Perry (History of Egypt Podcast)</p>
+<p><strong>Avançado (degraus 5-7):</strong>
+- Artigos: JSTOR, Academia.edu, Current Research in Egyptology
+- Fontes primárias: Internet Archive (Oxford Encyclopedia, A Companion to Ancient Egypt)
+- Discussão: EES, Amarna Project, conferências e simpósios</p>
+<h3 id="d-perguntas-para-reflexao">D. Perguntas para reflexão</h3>
+<p>Ao final do estudo, o leitor deve ser capaz de responder:</p>
+<ol>
+<li>Quais são as principais fontes primárias para o estudo do Antigo Egito e quais são suas limitações?</li>
+<li>Como a cronologia egípcia é construída e quais são as incertezas remanescentes?</li>
+<li>Qual a relação entre religião egípcia e poder político (faraó, templos, priesthood)?</li>
+<li>O que distingue a abordagem histórico-crítica da egiptologia da abordagem tradicional/ortodoxa?</li>
+<li>Quais são os principais debates atuais na disciplina e quais evidências os sustentam?</li>
+</ol>
+<h3 id="e-glossario-essencial">E. Glossário essencial</h3>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Faraó</strong></td>
+<td>Título do rei do Egito antigo; senhor das Duas Terras (Alto e Baixo Egito)</td>
+</tr>
+<tr>
+<td><strong>Hieróglifos</strong></td>
+<td>Sistema de escrita egípcio; sinais pictográficos com valores fonéticos e ideográficos</td>
+</tr>
+<tr>
+<td><strong>Mumificação</strong></td>
+<td>Técnica de preservação do corpo para a vida após a morte; processo de 70 dias</td>
+</tr>
+<tr>
+<td><strong>Ma'at</strong></td>
+<td>Conceito de ordem cósmica, verdade e justiça; personificada como deusa</td>
+</tr>
+<tr>
+<td><strong>Textos das Pirâmides</strong></td>
+<td>Coleção de textos funerários inscritos nas paredes das pirâmides do Antigo Reino (c. 2686-2181 a.C.)</td>
+</tr>
+<tr>
+<td><strong>Livro dos Mortos</strong></td>
+<td>Coleção de feitiços e guias para a vida após a morte; usado do Novo Reino em diante</td>
+</tr>
+<tr>
+<td><strong>Amarna</strong></td>
+<td>Período de reforma religiosa de Akhenaten (c. 1353-1336 a.C.); culto ao deus-sol Aten</td>
+</tr>
+<tr>
+<td><strong>Sistrum</strong></td>
+<td>Instrumento musical egípcio; chocalho sagrado usado em rituais</td>
+</tr>
+<tr>
+<td><strong>Forschungsstand</strong></td>
+<td>Termo alemão para "estado do debate"; síntese das posições acadêmicas atuais</td>
+</tr>
+<tr>
+<td><strong>HIP</strong></td>
+<td>Historically Informed Performance; prática de execução musical com instrumentos de época</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="parte-viii-discussao-academica-atual-principais-problemas">PARTE VIII — DISCUSSÃO ACADÊMICA ATUAL: PRINCIPAIS PROBLEMAS</h2>
+<h3 id="a-problemas-centrais">A. Problemas centrais</h3>
+<p>A egiptologia contemporânea enfrenta 5 questões que dividem especialistas:</p>
+<ol>
+<li>
+<p><strong>Datação absoluta e cronologia</strong>: A cronologia tradicional (baseada em Manetho e astronomia) é contestada por datações radiométricas e por modelos de "Nova Cronologia" (ex.: Rohl, 1995). A datação da Grande Pirâmide e da I Dinastia permanece debatida.</p>
+</li>
+<li>
+<p><strong>Historicidade do Êxodo</strong>: A narrativa bíblica da saída dos hebreus do Egito não tem confirmação arqueológica direta. Posições variam entre evento histórico (datação no século XIII a.C.), mito fundacional, e memória de eventos parciais (ex.: expulsão dos hicsos).</p>
+</li>
+<li>
+<p><strong>Natureza da religião egípcia</strong>: O politeísmo egípcio é henoteísmo (culto a um deus por vez sem negar os outros) ou monoteísmo (especialmente no período de Akhenaten)? A relação entre religião estatal e culto popular é pouco compreendida.</p>
+</li>
+<li>
+<p><strong>Propósito das pirâmides</strong>: O consenso atual é que eram tumbas reais, mas teorias alternativas (máquina de ressurreição, símbolo de poder, observatório astronômico) persistem na cultura popular e em margens acadêmicas.</p>
+</li>
+<li>
+<p><strong>Origem dos hicsos</strong>: A invasão dos hicsos (c. 1782 a.C.) é interpretada como invasão militar, migração gradual ou revolta interna. A identidade étnica e a língua dos hicsos permanecem incertas.</p>
+</li>
+</ol>
+<h3 id="b-posicoes-em-conflito">B. Posições em conflito</h3>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Posição A</th>
+<th>Posição B</th>
+<th>Posição C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datação da Grande Pirâmide</td>
+<td>2589-2566 a.C. (cronologia tradicional)</td>
+<td>Datações alternativas baseadas em astronomia (Rohl, 1995)</td>
+<td>Datação radiométrica (análises de carbono-14 em materiais orgânicos)</td>
+</tr>
+<tr>
+<td>Historicidade do Êxodo</td>
+<td>Evento histórico no século XIII a.C. (Kitchen, 2003)</td>
+<td>Mito fundacional sem base histórica (Finkelstein, 1995)</td>
+<td>Memória de eventos parciais (expulsão dos hicsos, c. 1550 a.C.)</td>
+</tr>
+<tr>
+<td>Religião egípcia</td>
+<td>Politeísmo com henoteísmo (Assmann, 2001)</td>
+<td>Monoteísmo em Akhenaten (Hornung, 1996)</td>
+<td>Sistema fluido sem categorias rígidas (Morenz, 1992)</td>
+</tr>
+<tr>
+<td>Propósito das pirâmides</td>
+<td>Tumba real (consenso)</td>
+<td>Máquina de ressurreição (Sefy Levy, 2024)</td>
+<td>Símbolo de poder e unidade estatal (Kemp, 2006)</td>
+</tr>
+<tr>
+<td>Origem dos hicsos</td>
+<td>Invasão militar (Bietak, 1996)</td>
+<td>Migração gradual (Redford, 1992)</td>
+<td>Revolta interna (Schneider, 2003)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-nivel-de-consenso">C. Nível de consenso</h3>
+<table>
+<thead>
+<tr>
+<th>Questão</th>
+<th>Consenso</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datação da Grande Pirâmide</td>
+<td><strong>Consenso amplo</strong></td>
+<td>Múltiplas linhas de evidência (astronomia, radiocarbono, cronologia egípcia) convergem para c. 2589-2566 a.C.</td>
+</tr>
+<tr>
+<td>Historicidade do Êxodo</td>
+<td><strong>Debate ativo</strong></td>
+<td>Sem evidência arqueológica direta; posições divergentes com argumentos válidos</td>
+</tr>
+<tr>
+<td>Natureza da religião egípcia</td>
+<td><strong>Debate ativo</strong></td>
+<td>Evidências de politeísmo e henoteísmo; monoteísmo de Akhenaten é exceção, não regra</td>
+</tr>
+<tr>
+<td>Propósito das pirâmides</td>
+<td><strong>Consenso amplo</strong></td>
+<td>Tumba real; teorias alternativas sem suporte acadêmico majoritário</td>
+</tr>
+<tr>
+<td>Origem dos hicsos</td>
+<td><strong>Debate ativo</strong></td>
+<td>Evidências arqueológicas (Tell el-Dab'a) apontam para migração/invasão, mas detalhes permanecem incertos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d-questoes-em-aberto">D. Questões em aberto</h3>
+<ol>
+<li>
+<p><strong>O que aconteceu com a civilização egípcia após o Novo Reino?</strong> A transição para o Período Tardio (c. 1069-525 a.C.) é mal compreendida; há lacunas no registro arqueológico e textual.</p>
+</li>
+<li>
+<p><strong>Qual a língua dos hicsos?</strong> A identidade linguística dos hicsos é desconhecida; propostas incluem semítico ocidental, hurrita e outras.</p>
+</li>
+<li>
+<p><strong>Como a religião egípcia influenciou o judaísmo e o cristianismo primitivo?</strong> A relação entre Salmos egípcios e bíblicos, e entre conceitos de vida após a morte, é debatida sem consenso.</p>
+</li>
+<li>
+<p><strong>O que causou o colapso do Antigo Reino?</strong> Fatores climáticos (seca), instabilidade política e econômica, e possíveis invasões são citados, mas a causa exata permanece desconhecida.</p>
+</li>
+<li>
+<p><strong>Qual a extensão da influência egípcia na Grécia arcaica?</strong> A "teoria da influência" (Bernal, 1987) é controversa; a maioria dos especialistas reconhece influências culturais, mas rejeita a tese de "origem egípcia" da civilização grega.</p>
+</li>
+</ol>
+<h3 id="e-tendencias-recentes">E. Tendências recentes</h3>
+<ol>
+<li>
+<p><strong>Nova Cronologia e datações radiométricas</strong>: Análises de carbono-14 em materiais orgânicos de pirâmides e tumbas estão refinando a cronologia egípcia, com resultados que desafiam datas tradicionais (ex.: datação da tumba de Tutankhamun).</p>
+</li>
+<li>
+<p><strong>Genética e estudos de DNA</strong>: Análises de DNA de múmias egípcias (ex.: estudo de 2023 na Nature) estão revelando informações sobre parentesco, saúde e migrações, mas a amostragem ainda é limitada.</p>
+</li>
+<li>
+<p><strong>Arqueologia digital e IA</strong>: Modelos 3D de sítios arqueológicos (ex.: Theban Mapping Project) e análise de textos por IA estão acelerando a pesquisa e permitindo novas descobertas.</p>
+</li>
+<li>
+<p><strong>Descolonização da egiptologia</strong>: Críticas ao colonialismo na disciplina (ex.: a "teoria da Influência" de Bernal) estão levando a uma reavaliação de narrativas tradicionais e à inclusão de perspectivas egípcias e africanas.</p>
+</li>
+<li>
+<p><strong>Interdisciplinaridade</strong>: A egiptologia está se integrando com antropologia, climatologia, genética e estudos de gênero, produzindo abordagens mais holísticas.</p>
+</li>
+</ol>
+<hr />
+<h2 id="lacunas-de-clarificar">LACUNAS DE CLARIFICAR</h2>
+<ul>
+<li>Livro específico sobre música de harpa do Novo Reino (ex.: The harpers de
+  Hans-Willy Kronenberg) — não localizado nas buscas desta rodada.</li>
+<li>Guia completo de sítios arqueológicos por período (ex.: from the Pyramids
+  to the Valley of the Kings) — pendente de verificação em Open Library.</li>
+</ul>
+<hr />
+<h2 id="fontes-bibliografia-de-suporte">FONTES / BIBLIOGRAFIA DE SUPORTE</h2>
+<p><strong>Primárias confirmadas:</strong>
+- Shaw 2000 · Hornung 1999 · Wilkinson 1999 · Kemp 2006 · Assmann 2001 ·
+  Grimal 1994 · Arnold 2003</p>
+<p><strong>Complementares:</strong>
+- AE Blog · World History Encyclopedia · British Museum · Met Timeline · BBC</p>
+<p><strong>YouTube:</strong>
+- Naunton · Dominic Perry · National Geographic · Pure Ancient Empires ·
+  Unearthed History</p>
+<p><strong>CD com validação acadêmica:</strong>
+- Pérez Arroyo / Hathor Ensemble (2001)</p>
+<p><strong>Citadas não verificadas ⚠️:</strong>
+- Ancient Egypt Site · Discovering Egypt · Discovery Records · Trigg 1999/2007</p>
+<p><strong>Lacunas ⚠️:</strong>
+- CDs específicos para hinos de Amarna ou música de harpa do Novo Reino
+  com ensembles clássicos (Jordi Savall, Montebelello, Hespèrion XX) —
+  requer busca profunda nos catálogos Naxos e Hyperion.</p>
+<hr />
+<blockquote>
+<p>Compilado pelo Hermes Agent em 15 set 2026. Pesquisa executada com
+skill <code>pesquisa-enciclopedica</code> v1.1.0.</p>
+</blockquote>
+</main>
+</div>
+<script>
+(function(){var t=localStorage.getItem('dossier-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var b=document.getElementById('theme-toggle');
+if(b)b.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');
+var n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);
+localStorage.setItem('dossier-theme',n);});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+# Deploy do site para GitHub Pages.
+# Criado em 23/09/2026 na migração Netlify -> GitHub Pages (créditos Netlify
+# esgotados: "Account credit usage exceeded"). Build idêntico ao local:
+# astro build + pagefind, Node 24, publicação via actions/deploy-pages.
+# O domínio altaculturapopular.online aponta para este Pages via DNS (Hostinger).
+
+name: Deploy para GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Um deploy por vez; novos pushes cancelam o in-flight e entram no lugar.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build (Astro + Pagefind)
+        run: npm run build
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload do artefato
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

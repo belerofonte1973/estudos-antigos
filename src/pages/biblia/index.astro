@@ -22,7 +22,13 @@ const livros = Object.entries(LIVROS)
 		slug,
 		...meta,
 		passagens: passagens.filter((p) => p.data.livro === slug),
-		dossie: dossies.find((d) => d.id === `biblia/${slug}`),
+		/* Dossiê próprio OU dossiê de unidade canônica que cobre este livro
+		   (ex.: `samuel` cobre samuel-1 e samuel-2 via frontmatter `livros`).
+		   Mesmo critério de [livro].astro getStaticPaths — sem isto o card do
+		   livro fica "em preparação" com o hub publicado. */
+		dossie: dossies.find(
+			(d) => d.id === `biblia/${slug}` || d.data.livros.includes(slug)
+		),
 		artigos: artigos.filter((a) => a.data.livro === slug),
 	}))
 	.sort((a, b) => a.ordem - b.ordem);

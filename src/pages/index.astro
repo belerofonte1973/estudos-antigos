@@ -21,7 +21,13 @@ const livros = Object.entries(LIVROS)
 		slug,
 		...meta,
 		passagens: passagens.filter((p) => p.data.livro === slug).length,
-		dossie: dossies.some((d) => d.id === `biblia/${slug}`),
+		/* Dossiê próprio OU dossiê de unidade canônica que cobre este livro
+		   (ex.: `samuel` cobre samuel-1 e samuel-2 via frontmatter `livros`).
+		   Sem isto o botão do livro nasce morto ("em preparação") apesar de o
+		   hub existir — o mesmo critério de [livro].astro getStaticPaths. */
+		dossie: dossies.some(
+			(d) => d.id === `biblia/${slug}` || d.data.livros.includes(slug)
+		),
 	}))
 	.sort((a, b) => a.ordem - b.ordem);
 

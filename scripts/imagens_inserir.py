@@ -151,11 +151,12 @@ def inserir(texto: str, figs: list[dict]) -> tuple[str, list[str]]:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug", required=True)
+    ap.add_argument("--area", default="biblia")
     ap.add_argument("--seco", action="store_true")
     ap.add_argument("--reverter", action="store_true")
     args = ap.parse_args()
 
-    mdx = CONTENT / f"{args.slug}.mdx"
+    mdx = CONTENT.parent / args.area / f"{args.slug}.mdx"
     bak = mdx.with_suffix(".mdx.bak")
     if not mdx.exists():
         sys.exit(f"dossiê não existe: {mdx}")

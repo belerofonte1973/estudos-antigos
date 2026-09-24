@@ -1,0 +1,171 @@
+!! Australopithecus: API do Commons não respondeu após 4 tentativas: HTTP Error 429: Too Many Requests
+### human evolution diagram — 9
+   [LIVR] 1077x424 Public domain      anônimo                Darwin-chart.PNG
+   [ATRI] 844x557 CC BY-SA 4.0       Mooseluva12            Evolution of Human GRAMD1B.jpg
+   [ATRI] 2245x1587 CC BY-SA 3.0       Chakazul               Human Running Adaptations.png
+   [ATRI] 1647x1248 CC BY 2.0          Becker1999 from Grove  March for Science, Washington, DC (33367678774).jpg
+   [ATRI] 1333x1820 CC BY-SA 4.0       Bioanthropologist1     March of progress.jpg
+   [ATRI] 1058x794 CC BY-SA 4.0       Salsero35              March of progress parody.png
+### hominin family tree — 0
+### Jebel Irhoud — 6
+   [ATRI] 2048x1360 CC BY-SA 2.0       Ryan Somma from Occoqu Homo Sapiens 160,000 Years Old (4697753017).jpg
+   [ATRI] 2456x3680 CC BY-SA 4.0       Neanderthal-Museum, Me Homo sapiens sapiens (Fundort Jebel Irhoud Marokko).jpg
+   [ATRI] 1453x1546 CC BY-SA 4.0       Jonathan Chen          Jebel Irhoud-1 NMNH.jpg
+   [ATRI] 1360x2048 CC BY-SA 2.0       Ryan Somma from Occoqu Jebel Irhoud 1-Homo Sapiens.jpg
+   [ATRI] 2048x1360 CC BY-SA 2.0       Ryan Somma from Occoqu Jebel Irhoud 1. Homo Sapiens.jpg
+   [ATRI] 1879x3033 CC BY-SA 4.0       Bioanthropologist1     Modern H. sapiens.jpg
+### Neanderthal reconstruction — 10
+   [ATRI] 3000x4000 CC BY-SA 4.0       Abraham                20230711 Neanderthal Homo neanderthalensis Silesian Zoological Garden Chorzów Poland 01.jpg
+   [ATRI] 4000x3000 CC BY-SA 4.0       Abraham                20230711 Neanderthal Homo neanderthalensis Silesian Zoological Garden Chorzów Poland 02.jpg
+   [ATRI] 3247x2321 CC BY-SA 4.0       Neanderthal-Museum, Me Australopithecus sediba (Fundort Malapa).jpg
+   [ATRI] 3227x2456 CC BY-SA 4.0       Neanderthal Museum     Homo-erectus Turkana-Boy (Ausschnitt) Fundort Nariokotome, Kenia, Rekonstruktion im Neanderthal Museum.jpg
+   [ATRI] 4896x3264 CC BY-SA 2.0       Werner Ustorf ]        Homo erectus reconstruction, Natural History Museum, London.jpg
+   [ATRI] 2056x3088 CC BY-SA 4.0       Daniela Hitzemann (pho Homo sapiens sapiens, Oase, Rumänien (Daniela Hitzemann).jpg
+### Denisovan skull — 2
+   [ATRI] 909x987 CC BY 4.0          Fu et al. (2025)       Homo longi holotype.jpg
+   [ATRI] 1387x3229 CC BY-SA 4.0       Bioanthropologist1     Neanderthals.jpg
+### Oldowan tools — 10
+   [ATRI] 1400x717 CC BY-SA 2.0       David R. Braun         Bokol Dora Stone Tool.jpg
+   [LIVR] 1024x576 CC0                Nemigo                 Chopping Tool Río do Pozo O Val Narón.jpg
+   [ATRI] 1484x1123 CC BY-SA 4.0       Dan.palcu              Namorotukunan infographic Oldowan timeline.jpg
+   [LIVR] 1209x804 Public domain      Me                     Oldowan Chopper Stone Tool Sketch.jpeg
+   [ATRI] 3496x4656 CC BY-SA 4.0       Rachid Hamatou         Oldowan Core or Chopper — Early Stone Tool Technology.jpg
+   [LIVR] 1195x169 CC0                Archaeomoonwalker      Oldowan Culture.png
+### Acheulean hand axe — 12
+   [ATRI] 3456x2592 CC BY-SA 2.0       Adrian S Pye           Acheulean-mousterian cordate hand-axe - geograph.org.uk - 6946234.jpg
+   [ATRI] 3496x4656 CC BY-SA 4.0       Rachid Hamatou         Acheulean Flint Hand Axe — Prehistoric Stone Tool on Display.jpg
+   [ATRI] 3957x5649 CC BY-SA 4.0       Osama Shukir Muhammed  Acheulean hand-axe from Egypt. Found on a hill top plateau, 1400 feet above sea level, 9 miles NNW of the city of Naqada, Egypt. Paleolithic. The Petrie Museum of Egyptian Archaeology, London.jpg
+   [LIVR] 2117x2632 Public domain      Daderot                Acheulean hand axe, c. 450,000 years before present, stone - Canterbury Museum - Christchurch, NZ - DSC02244.jpg
+   [ATRI] 1410x580 CC BY-SA 2.0       The Portable Antiquiti Acheulean hand axe (FindID 73844).jpg
+   [ATRI] 1269x1024 CC BY-SA 4.0       Loctus Borg            Acheulean handaxe.png
+### Mousterian tools — 13
+   [ATRI] 3884x2791 CC BY 4.0          Adrien de Mortillet an Illustration of stone tools belonging to the Middle Palaeolithic (sometimes called 'Mousterian') industries.jpg
+   [LIVR] 6000x4000 CC0                Gary Todd              Mousterian Culture and Late Stone Age Stone Tools. Notch for sharpening wood, and denticulate for sawing wood and bone. Rosh En Mor and En Aqev. 250,000-22,000 BP. Israel.jpg
+   [ATRI] 2309x1665 CC BY-SA 3.0       Guérin Nicolas         Mousterian tool (University of Zurich).JPG
+   [ATRI] 1944x2592 CC BY-SA 3.0       Guérin Nicolas ( messa Mousterian tool 1 form Syria (University of Zurich).JPG
+   [ATRI] 5336x3557 CC BY-SA 4.0       Zde                    Stone industrie, Mousterian, Welcome to the Neandertals, Brno, 187906.jpg
+   [ATRI] 3119x1897 CC BY-SA 4.0       Osama Shukir Muhammed  Stone tool, Mousterian period, c. 50,000 BCE, from the paleolithic cave of Hazar Merd, Iraq. Sulaymaniyah Museum, Iraq.jpg
+### Venus figurine Paleolithic — 11
+   [ATRI] 3673x2872 CC BY 4.0          anônimo                A female Paleolithic figurine, Venus of Willendorf Wellcome M0000440.jpg
+   [LIVR] 4000x3000 CC0                Александр Сигачёв      Paleolithic female figurines in the Timiryazev Museum.jpg
+   [LIVR] 1254x1254 Public domain      https://chatgpt.com/   Paleolitic Venus Logo AI.png
+   [LIVR] 7494x4640 CC0                Александр Сигачёв      Timiryazev Museum - Paleolithic female figurines - 2026-03 - p03.jpg
+   [ATRI] 3537x2358 CC BY-SA 4.0       Zde                    Upper Paleolithic art, Venus from Tursak, calcite, Anthropos, Brno, 187941.jpg
+   [ATRI] 5157x3438 CC BY-SA 4.0       Zde                    Upper Paleolithic art, extremely stylized sculpture, Anthropos, Brno, 187944.jpg
+### Lascaux cave painting — 12
+   [LIVR] 1088x718 Public domain      DaBler                 Cave painting, Anthropos (2).jpeg
+   [LIVR] 1775x1744 Public domain      HTO                    Lascaux, Megaloceros.jpg
+   [LIVR] 1924x1841 Public domain      HTO                    Lascaux, horse.JPG
+   [LIVR] 1133x2816 Public domain      HTO                    Lascaux, replica 01.JPG
+   [LIVR] 2365x2112 Public domain      HTO                    Lascaux, replica 02.JPG
+   [LIVR] 2816x2112 Public domain      HTO                    Lascaux, replica 03.JPG
+### Chauvet cave — 11
+   [ATRI] 2736x2712 CC BY-SA 2.0       Thomas T. from somewhe Chauvet´s cave horses.jpg
+   [LIVR] 1366x768 Public domain      Unknown author Unknown Deer Chauvet Cave.jpg
+   [ATRI] 2736x2712 CC BY-SA 2.0       Thomas T.              Etologic horse study, Chauvet cave.jpg
+   [ATRI] 2000x3000 CC BY-SA 4.0       Thilo Parg             Hoehle Cave Grotte Chauvet.jpg
+   [LIVR] 1366x768 Public domain      Unknown author Unknown Lions group Chauvet Cave.jpg
+   [LIVR] 2015x1721 Public domain      HTO                    Lions painting, Chauvet Cave (museum replica).jpg
+### Altamira cave bison — 12
+   [LIVR] 2816x2112 Public domain      HTO                    Altamira, bison, museum.JPG
+   [LIVR] 2816x2112 Public domain      HTO                    Altamira, bison, museum 02.JPG
+   [LIVR] 2816x2112 Public domain      HTO                    Altamira, bison, museum 03.JPG
+   [LIVR] 1024x648 Public domain      unknown prehistoric ar Altamira, bison.jpg
+   [LIVR] 2034x1090 Public domain      José-Manuel Benito     Altamira-3.png
+   [ATRI] 3648x2432 CC BY-SA 2.0       Thomas Quine           Altamira bisons.jpg
+### Cueva de las Manos — 11
+   [ATRI] 800x600 CC BY-SA 2.0       Diego Tirira from Quit AR Cueva de las Manos 0702 077 (17215554505).jpg
+   [ATRI] 800x600 CC BY-SA 2.0       Diego Tirira from Quit AR Cueva de las Manos 0702 085 (17214992791).jpg
+   [ATRI] 2816x2112 CC BY-SA 3.0       Maxima20               Cueva de las Manos-Santa Cruz-Argentina.JPG
+   [ATRI] 4000x2248 CC BY-SA 2.0       Pablo A. Gimenez from  Cueva de las Manos (6811931046).jpg
+   [ATRI] 1800x2400 CC BY 3.0          Hiroki Ogawa           Cueva de las Manos Argentina - panoramio (2).jpg
+   [ATRI] 2400x1200 CC BY 3.0          Hiroki Ogawa           Cueva de las Manos Argentina - panoramio (3).jpg
+### prehistoric human migration map — 6
+   [ATRI] 7752x4688 CC BY-SA 4.0       Wikiuser1314           Geographical distribution of human major genetic ancestral components.jpg!! Neolithic Revolution: API do Commons não respondeu após 4 tentativas: HTTP Error 429: Too Many Requests
+!! Turkana Boy: API do Commons não respondeu após 4 tentativas: HTTP Error 429: Too Many Requests
+
+   [ATRI] 3640x3072 CC BY-SA 4.0       ABCEdit                Migration map of Y-DNA haplogroups in East Asia.png
+   [ATRI] 1386x1080 CC BY-SA 4.0       ABCEditer              Migration related to haplogroup N & O (Y-DNA) in East Asia.png
+   [ATRI] 889x635 CC BY-SA 3.0       anônimo                World map of prehistoric human migrations.jpg
+   [ATRI] 2888x2312 CC BY-SA 4.0       ABCEdit, Liao Qin      Y-DNA haplogroup migration in East Asia map.png
+   [ATRI] 2888x2312 CC BY-SA 4.0       ABCEdit                Y-DNA haplogroup migration map in East Asia.png
+### Out of Africa — 12
+   [LIVR] 5988x5025 Public domain      Solomon Boulton / Jean 1794 Boulton and Anville Wall Map of Africa (most important 18th cntry map of Africa) - Geographicus - Africa2-boulton-1794.jpg
+   [ATRI] 2517x3627 CC BY-SA 3.0       African_Grey_Parrot,_p African Grey Parrot, peeking out from under its wing - edit.jpg
+   [ATRI] 944x840 CC BY-SA 3.0       Gianreali              Out of Africa I and II hypothesis.jpg
+   [ATRI] 3280x3079 CC BY-SA 4.0       Scotwriter21           Out of Africa SW01.jpg
+   [ATRI] 4697x3079 CC BY-SA 4.0       Scotwriter21           Out of Africa SW02.jpg
+   [ATRI] 3483x2194 CC BY-SA 4.0       Scotwriter21           Out of Africa SW03.jpg
+### Jericho tower — 14
+   [ATRI] 3000x4000 CC BY-SA 3.0       Deror_avi              Jericho Neolitic Tower P1190749.JPG
+   [ATRI] 3000x4000 CC BY-SA 3.0       Deror_avi              Jericho Neolitic Tower P1190750.JPG
+   [ATRI] 4000x3000 CC BY-SA 3.0       Deror_avi              Jericho Neolitic Tower P1190751.JPG
+   [ATRI] 4000x3000 CC BY-SA 3.0       Deror_avi              Jericho Neolitic Tower P1190752.JPG
+   [ATRI] 4000x3000 CC BY-SA 3.0       Deror_avi              Jericho Neolitic Tower P1190753.JPG
+   [ATRI] 4000x3000 CC BY-SA 3.0       Deror_avi              Jericho Neolitic Tower P1190754.JPG
+### Catalhoyuk — 14
+   [ATRI] 1680x3648 CC BY-SA 4.0       Murat Özsoy 1958       Çatalhöyük, 7400 BC, Konya, Turkey - UNESCO World Heritage Site, 02.jpg
+   [ATRI] 2605x1555 CC BY-SA 4.0       Murat Özsoy 1958       Çatalhöyük, 7400 BC, Konya, Turkey - UNESCO World Heritage Site, 03.jpg
+   [ATRI] 3278x1510 CC BY-SA 4.0       Murat Özsoy 1958       Çatalhöyük, 7400 BC, Konya, Turkey - UNESCO World Heritage Site, 05.jpg
+   [ATRI] 5120x2368 CC BY-SA 4.0       Murat Özsoy 1958       Çatalhöyük, 7400 BC, Konya, Turkey - UNESCO World Heritage Site, 06.jpg
+   [ATRI] 4686x2368 CC BY-SA 4.0       Murat Özsoy 1958       Çatalhöyük, 7400 BC, Konya, Turkey - UNESCO World Heritage Site, 07.jpg
+   [ATRI] 3648x1680 CC BY-SA 4.0       Murat Özsoy 1958       Çatalhöyük, 7400 BC, Konya, Turkey - UNESCO World Heritage Site, 08.jpg
+### Gobekli Tepe — 13
+   [ATRI] 4160x2340 CC BY-SA 4.0       Immanuelle             Gobekli Tepe 1.jpg
+   [ATRI] 4160x2340 CC BY-SA 4.0       Immanuelle             Gobekli Tepe 3.jpg
+   [ATRI] 4160x2340 CC BY-SA 4.0       Immanuelle             Gobekli Tepe 5.jpg
+   [ATRI] 2340x4160 CC BY-SA 4.0       Immanuelle             Gobekli Tepe 6.jpg
+   [ATRI] 4160x2340 CC BY-SA 4.0       Immanuelle             Gobekli Tepe 7.jpg
+   [ATRI] 4288x2848 CC BY-SA 3.0       Teomancimit            Göbekli Tepe, Urfa.jpg
+### Stonehenge — 14
+   [ATRI] 5167x2990 CC BY-SA 4.0       Diego Delso            Stonehenge, Condado de Wiltshire, Inglaterra, 2014-08-12, DD 08.JPG
+   [ATRI] 5406x2379 CC BY-SA 4.0       Diego Delso            Stonehenge, Condado de Wiltshire, Inglaterra, 2014-08-12, DD 09.JPG
+   [ATRI] 4849x2058 CC BY-SA 4.0       Diego Delso            Stonehenge, Condado de Wiltshire, Inglaterra, 2014-08-12, DD 10.JPG
+   [ATRI] 4956x2439 CC BY-SA 4.0       Diego Delso            Stonehenge, Condado de Wiltshire, Inglaterra, 2014-08-12, DD 11.JPG
+   [ATRI] 5616x2442 CC BY-SA 4.0       Diego Delso            Stonehenge, Condado de Wiltshire, Inglaterra, 2014-08-12, DD 12.JPG
+   [ATRI] 5226x2798 CC BY-SA 4.0       Diego Delso            Stonehenge, Condado de Wiltshire, Inglaterra, 2014-08-12, DD 13.JPG
+### Carnac stones — 13
+   [ATRI] 2016x4480 CC BY-SA 4.0       IndigoBeluga           Alignement de Carnac.jpg
+   [ATRI] 3264x2448 CC BY-SA 4.0       Vanbasten 23           Alignements de Carnac.JPG
+   [ATRI] 9207x2640 CC BY-SA 3.0       JLPC                   Carnac 56 Alignement du Ménec 2013.JPG
+   [LIVR] 1024x748 Public domain      Philippe Tassier       Carnac alignements vue aérienne 2012.0010.11.jpg
+   [ATRI] 5736x1684 CC BY-SA 4.0       Photograph by Mike Pee Carnac stones 2004 10.jpg
+   [ATRI] 2048x1536 CC BY-SA 3.0       -- Pinpin 17:43, 1 Aug France-Carnac-Alignement de Kermario.jpg
+### Newgrange — 11
+   [ATRI] 5184x3888 CC BY-SA 4.0       O'Dea                  Corbelled ceiling of Newgrange passage tomb.jpg
+   [ATRI] 2040x3048 CC BY 2.0          jemartin03             Entrance to Newgrange passage tomb.jpg
+   [ATRI] 1024x768 CC BY-SA 2.0       Graham Hogg            Entrance to the Newgrange Passage Tomb - geograph.org.uk - 2857137.jpg
+   [ATRI] 3264x2448 CC BY-SA 4.0       Tjp finn               Irelands history.jpg
+   [ATRI] 3455x2319 CC BY-SA 2.0       Stanley Howe           Newgrange Passage Tomb, County Meath - geograph.org.uk - 6518022.jpg
+   [ATRI] 1024x768 CC BY-SA 2.0       Graham Hogg            Newgrange Passage Tomb - geograph.org.uk - 2857133.jpg
+### megalithic tomb — 6
+   [ATRI] 5887x3925 CC BY-SA 4.0       Superbass              2018-04-29-Dolmen Oppagne-8545.jpg
+   [ATRI] 4608x3456 CC BY 4.0          Stefan Ahlswede        Großsteingrab Westerweyhe.jpg
+   [ATRI] 1753x2337 CC BY-SA 2.0       Neil Theasby           Megalithic Tomb, Duntryleague (geograph 2544297).jpg
+   [ATRI] 4128x2322 CC BY-SA 4.0       MadhuVottery1          Megalithic Tombs-Rakasaguhalu.jpg
+   [ATRI] 2664x1568 CC BY 3.0          Michael Gäbler         Megalithic grave Harhoog in Keitum, Sylt, Germany.jpg
+   [ATRI] 1752x1196 CC BY-SA 2.0       Frédéric Vincent       Stonehenge back wide.jpg
+### prehistoric woman — 5
+   [LIVR] 1716x1142 Public domain      Rudolf Cronau          016-LIFE AMONG PREHISTORIC CAVE-DWELLERS.jpg
+   [ATRI] 1710x1617 CC BY-SA 4.0       Fährtenleser           Old Neanderthal woman figure.jpg
+   [ATRI] 1484x1600 CC BY-SA 3.0       Peter van der Sluijs   Portrait of a woman in prehistoric costume.jpg
+   [ATRI] 3264x4896 CC BY-SA 4.0       Ethan Doyle White      Reconstructed Face of the Shepperton Woman in the Museum of London.jpg
+   [ATRI] 3259x4286 CC BY-SA 4.0       Ethan Doyle White      Skeleton of the Shepperton Woman in the Museum of London.jpg
+### hunter gatherer — 12
+   [LIVR] 2058x2728 CC0                Rowyn flowerdew        Eastern Hunter-Gatherer EHG Oleniy Ostrov culture, Vasylivka. Kunda culture. Butovo culture.jpg
+   [ATRI] 1821x1168 CC BY-SA 3.0       Jbuket                 Eastern Hunter Gatherer.jpg
+   [ATRI] 1821x1168 CC BY-SA 3.0       Jbuket                 Eastern Hunter Gatherer (brown background).jpg
+   [LIVR] 1080x876 CC0                Joastzerttu            Hunter gatherers in modern India.jpg
+   [LIVR] 1539x1165 Public domain      Pierre Barrère         Kalina hunter gatherer.jpg
+   [ATRI] 958x636 CC BY-SA 4.0       JMGRACIA100            Living on the rainforest.jpg
+### Laetoli footprints — 11
+   [ATRI] 4420x4420 CC BY-SA 4.0       Chartep                Laetoli-Olduvai-Eyasi.jpg
+   [ATRI] 1280x960 CC BY-SA 3.0       Alyssamf               Laetoli Footprint.jpg
+   [ATRI] 4000x3000 CC BY-SA 3.0       Rept0n1x               Laetoli footprint trackway, Wrexham Museum.JPG
+   [ATRI] 1511x1885 CC BY 2.5          Raichlen DA, Gordon AD Laetoli footprints.png
+   [ATRI] 1076x1159 CC BY 4.0          Fidelis T Masao, Elgid Laetoli footprints S1 and S2.jpg
+   [ATRI] 2672x1164 CC BY-SA 3.0       Momotarou2012          Laetoli footprints replica.jpg
+### Lucy Australopithecus — 13
+   [ATRI] 3000x4000 CC BY-SA 4.0       Lamminiaz              "Lucy" Australopithecus.jpg
+   [LIVR] 3240x4320 CC0                Daderot                Australopithecus afarensis (Lucy) cast - Naturmuseum Senckenberg - DSC02089.JPG
+   [ATRI] 4785x3185 CC BY-SA 4.0       Neanderthal-Museum, Me Australopithecus afarensis („Lucy") Rekonstruktion mit Mädchen.jpg

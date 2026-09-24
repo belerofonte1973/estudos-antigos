@@ -1,6 +1,7 @@
 ---
 title: 'Pré-História da Humanidade — Dossiê Enciclopédico'
 description: 'Dossiê consolidado sobre a pré-história humana: evolução hominina, fósseis, paleogenômica, Neolítico, arte rupestre e audiovisual. Com rastreabilidade acadêmica ([V]/[W]/[—]).'
+respostaRapida: 'Não existe uma data única: "história humana" tem três definições, e cada uma tem a sua. O Homo sapiens anatomicamente moderno é mais antigo que 300 mil anos — os fósseis de Jebel Irhoud, no Marrocos, foram datados em 315 ± 34 mil anos (Richter et al., 2017; Hublin et al., 2017). O comportamento simbólico tem evidência de cerca de 100 mil anos na África do Sul (Henshilwood et al., 2011), e se foi revolução ou acúmulo gradual é debate aberto (McBrearty & Brooks, 2000). A agricultura começa há cerca de 12 mil anos no Crescente Fértil (Zeder, 2008), e o sedentarismo natufiano é alguns milhares de anos anterior a ela (Bar-Yosef, 1998).'
 area: pre-historia
 ordem: 0
 eixo: contexto
@@ -10,6 +11,7 @@ import Card from '../../../components/Card.astro';
 import CardGrid from '../../../components/CardGrid.astro';
 import Aside from '../../../components/Aside.astro';
 import LinkButton from '../../../components/LinkButton.astro';
+import Figura from '../../../components/Figura.astro';
 
 <Aside type="note" title="Rastreabilidade acadêmica">
 Cada afirmação factual desta página carrega citação inline `(Autor, Ano)` + marcador **[V]** (fonte verificada) · **[W]** (provável) · **[—]** (lacuna). Protocolo de Retroverificação v5.1 da skill pesquisador-bibliografico. Nenhuma página inventada — "p." só quando verificada.
@@ -17,9 +19,17 @@ Cada afirmação factual desta página carrega citação inline `(Autor, Ano)` +
 
 ---
 
-# PARTE I — PALEOANTROPOLOGIA E FÓSSEIS
+## Resumo: três marcos, três datas
 
-## 1. ORIGEM E PERIODIZAÇÃO
+A pergunta "quando começa a história humana" não tem uma data, tem três. Não por falta de dados, mas porque cada definição usa um marco diferente:
+
+| Marco | Data aproximada | Evidência âncora |
+|---|---|---|
+| **Homo sapiens anatômico** | 315 ± 34 mil anos | Jebel Irhoud, Marrocos (Richter et al., 2017; Hublin et al., 2017) |
+| **Primeiros símbolos** | c. 100 mil anos | oficina de ocre de Blombos, África do Sul (Henshilwood et al., 2011) |
+| **Agricultura e aldeia** | c. 12 mil anos | Crescente Fértil, início do Holoceno (Childe, 1936; Zeder, 2008) |
+
+Guarde as três: quase toda discussão pública sobre "quando surgiu o humano" é uma briga entre esses marcos, sem que os interlocutores digam qual estão usando. O exame completo — fósseis, métodos de datação, paleogenômica, arte rupestre e Neolítico — segue abaixo.
 
 ### 1.1. Surgimento dos humanos (tribo Hominini)
 
@@ -70,6 +80,20 @@ O registro mais antigo do gênero é a **mandíbula de Ledi-Geraru (LD 350-1)**,
 
 ---
 
+<Figura
+	src="/imagens/pre-historia/01-a-marcha-do-progresso-caricatura.webp"
+	alt="A marcha do progresso (caricatura)"
+	titulo="A marcha do progresso (caricatura)"
+	legenda="A icônica (e enganosa) 'Marcha do Progressos': a evolução não foi uma escada linear de 'menos' a 'mais' humano, mas uma ramificação — e o gênero Homo conviveu com outros hominínios por centenas de milhares de anos."
+	artista="Bioanthropologist1"
+	data="2026-01-17"
+	tecnica="caricatura"
+	acervo="Domínio público (ícone da cultura popular)"
+	fonte="https://commons.wikimedia.org/wiki/File%3AMarch_of_progress.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
+
 ## 2. HOMO ERECTUS
 
 ### 2.1. Origem
@@ -81,6 +105,20 @@ A distinção entre ***H. erectus* africano ("ergaster")** e os *H. erectus* asi
 ### 2.2. Dispersão "Out of Africa I"
 
 A primeira saída documentada de hominínios do gênero *Homo* para fora da África é o registro de **Dmanisi, Geórgia**: fósseis e líticos datados entre **1,85 e 1,77 Ma** (Ferring et al., 2011, *PNAS* [V]; Lordkipanidze et al., 2013, *Science* 342, 326–331 [V]). O crânio **D4500/D2600** (2013) completou o primeiro crânio adulto inteiro do Paleolítico Inferior e demonstrou enorme variação morfológica na população de Dmanisi — usada por Lordkipanidze et al. (2013) para argumentar que boa parte da variação "específica" do início de *Homo* cabe dentro de uma única espécie (Lordkipanidze et al., 2013 [V]). Dmanisi é, portanto, o exemplo mais antigo e bem datado da expansão para a Eurásia (Lordkipanidze et al., 2013 [V]).
+
+<Figura
+	src="/imagens/pre-historia/02-replica-de-lucy-australopithecus-afarensis.webp"
+	alt="Réplica de 'Lucy' (Australopithecus afarensis)"
+	titulo="Réplica de 'Lucy' (Australopithecus afarensis)"
+	legenda="Réplica do esqueleto de 'Lucy' (AL 288-1), fêmea de ~3,2 Ma de Hadar, Etiópia: ~40% do esqueleto preservado, bipedia inequívoca e capacidade craniana de ~400 cm³. A espécie documenta a coexistência de locomoção bípede com cérebro pequeno."
+	artista="Daderot"
+	data="2012-07-21 07:51:37"
+	tecnica="réplica de gesso/resina"
+	acervo="Naturmuseum Senckenberg, Frankfurt; foto de Daderot (CC0)"
+	fonte="https://commons.wikimedia.org/wiki/File%3AAustralopithecus_afarensis_%28Lucy%29_cast_-_Naturmuseum_Senckenberg_-_DSC02089.JPG"
+	licenca="CC0"
+/>
+
 
 No leste e sudeste asiático, *H. erectus* alcança Java (Mojokerto, c. 1,5–1,3 Ma [W]; Sangiran [W]) e a China (Zhoukoudian, "homem de Pequim", c. 770–400 ka [W]); os fósseis javaneses tardios (Ngandong) podem ter sobrevivido até c. 110–100 ka (Rizal et al., 2020 [W]). A coexistência tardia de *H. erectus* asiático com os primeiros *H. sapiens* é um dos pontos ainda mal resolvidos [—].
 
@@ -103,6 +141,20 @@ O domínio precoce do fogo é central para explicar a expansão de *H. erectus* 
 
 ---
 
+<Figura
+	src="/imagens/pre-historia/03-reconstrucao-do-menino-de-turkana-homo-erectus.webp"
+	alt="Reconstrução do 'Menino de Turkana' (Homo erectus)"
+	titulo="Reconstrução do 'Menino de Turkana' (Homo erectus)"
+	legenda="Reconstrução do 'Menino de Turkana' (KNM-WT 15000, Nariokotome, Quênia, ~1,6 Ma): esqueleto quase completo de um adolescente com estatura moderna (~1,6 m), membros inferiores longos e capacidade craniana crescente. Documenta o Homo erectus como o primeiro hominínio com proporções corporais essencialmente modernas."
+	artista="Neanderthal Museum"
+	data="2020"
+	tecnica="reconstrução em resina/poliuretano"
+	acervo="Neanderthal Museum, Mettringen, Alemanha"
+	fonte="https://commons.wikimedia.org/wiki/File%3AHomo-erectus_Turkana-Boy_%28Ausschnitt%29_Fundort_Nariokotome%2C_Kenia%2C_Rekonstruktion_im_Neanderthal_Museum.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
+
 ## 3. HOMO SAPIENS
 
 ### 3.1. Origem africana ("Out of Africa II")
@@ -114,6 +166,20 @@ A hipótese dominante é a da **origem africana recente**: *H. sapiens* emerge n
 - **Jebel Irhoud (Marrocos, Norte da África):** novos fósseis (crânios, mandíbulas, dentes) escavados a partir de 2004, datados por termoluminescência em **315 ± 34 ka** (Richter et al., 2017, *Nature* 546, 293–296 [V]); descritos por **Jean-Jacques Hublin** et al. (2017, *Nature* 546, 289–292 [V]) como a fase mais antiga do clado *H. sapiens*: **rosto moderno, crânio ainda arcaico** — um mosaico que indica que os traços modernos se montaram gradualmente e **em toda a África** (origem "pan-africana"; Hublin et al., 2017 [V]; Richter et al., 2017 [V]).
 - **Omo I (Etiópia, leste da África):** até recentemente o fóssil mais antigo de *H. sapiens* do leste da África, datado por Ar/Ar em **195 ± 5 ka** (McDougall et al., 2005, *Nature* [V]). Em 2022, correlação de tefra (cinzas vulcânicas) com uma grande erupção re-datou os sedimentos que recobrem os fósseis, elevando a idade mínima de Omo I para **c. 233 ± 22 ka** (Vidal et al., 2022, *Nature* 601, 179–183 [V]; Cambridge University press release, 2022 [V]).
 - **Herto (Bouri, Etiópia):** três crânios de adultos e uma criança, datados em **160–154 ka** e atribuídos a *Homo sapiens idaltu*, descritos por **Tim White** et al. (2003, *Nature* 423, 742–747 [V]); morfologia "proto-moderna" em transição (White et al., 2003 [V]).
+
+<Figura
+	src="/imagens/pre-historia/04-biface-acheulense.webp"
+	alt="Biface acheulense"
+	titulo="Biface acheulense"
+	legenda="Biface acheulense (~450 mil anos), no Canterbury Museum de Christchurch: machado de mão simétrico, lascado em ambas as faces, a tecnologia mais duradoura da história humana (~1,7 Ma de persistência). O biface associa planejamento, simetria bilateral e padrão mental compartilhado entre grupos de Homo erectus e heidelbergensis."
+	artista="Daderot"
+	data="2024-10-19 19:09:51"
+	tecnica="pedra lascada (sílex)"
+	acervo="Canterbury Museum, Christchurch, Nova Zelândia; foto de Daderot (domínio público)"
+	fonte="https://commons.wikimedia.org/wiki/File%3AAcheulean_hand_axe%2C_c._450%2C000_years_before_present%2C_stone_-_Canterbury_Museum_-_Christchurch%2C_NZ_-_DSC02244.jpg"
+	licenca="Public domain"
+/>
+
 - **Outros africanos antigos:** Florisbad (África do Sul, c. **259 ± 35 ka**, Grün et al., 1996 [W]); crânio de Kabwe (~300 ka, classificação disputada entre *H. heidelbergensis* e *H. sapiens* arcaico [W]); Ngaloba/LH18 (Tanzânia, c. 490–300 ka [—]).
 
 **Interpretação atual:** a antiga data de Jebel Irhoud (315 ka) somada à re-datada Omo I (~233 ka) sustenta que a anatomia moderna é **mais antiga que 300 mil anos** e que a origem foi **pan-africana** — não um único ponto no leste da África (Hublin et al., 2017 [V]; Vidal et al., 2022 [V]; Stringer & Galway-Witham, 2017 [V]).
@@ -140,6 +206,20 @@ A paleogenética transformou o debate "substituição total vs. continuidade mul
 
 ---
 
+<Figura
+	src="/imagens/pre-historia/05-cranio-de-jebel-irhoud-homo-sapiens.webp"
+	alt="Crânio de Jebel Irhoud (Homo sapiens)"
+	titulo="Crânio de Jebel Irhoud (Homo sapiens)"
+	legenda="O crânio de Jebel Irhoud (Marrocos), datado em 315 ± 34 ka: a combinação de rosto moderno com crânio ainda alongado sustentou a origem 'pan-africana' do Homo sapiens — traços modernos se montaram gradualmente em toda a África, não num único ponto oriental. Cf. Richter et al. 2017; Hublin et al. 2017."
+	artista="Neanderthal-Museum, Mettmann"
+	data="2016-12-02 15:34:06"
+	tecnica="fóssil (calcário, terra rossica)"
+	acervo="Neanderthal Museum, Mettringen, Alemanha"
+	fonte="https://commons.wikimedia.org/wiki/File%3AHomo_sapiens_sapiens_%28Fundort_Jebel_Irhoud_Marokko%29.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
+
 ## 4. PALEOLÍTICO SUPERIOR
 
 ### 4.1. Arte rupestre (Chauvet, Lascaux, Altamira)
@@ -150,6 +230,34 @@ A paleogenética transformou o debate "substituição total vs. continuidade mul
 - **Outros marcos:** arte móvel de Vogelherd (Alemanha, c. 40 ka; "Vênus" e figuras de marfim do Jura Suábio) [W]; gravuras de ar livre do Vale do Côa (Portugal) [W].
 
 ### 4.2. Simbolismo e "comportamento moderno" na África (Middle Stone Age)
+
+<Figura
+	src="/imagens/pre-historia/07-mapa-das-dispersoes-out-of-africa-i-e-ii.webp"
+	alt="Mapa das dispersões 'Out of Africa' I e II"
+	titulo="Mapa das dispersões 'Out of Africa' I e II"
+	legenda="Esquema das duas grandes dispersões: Out of Africa I (Homo erectus, a partir de ~1,85 Ma, Dmanisi) e Out of Africa II (Homo sapiens, a partir de ~60–50 ka, rota costeira). As setas representam consenso amplo — sítios como Misliya sugeriram saídas anteriores, ainda disputadas."
+	artista="Scotwriter21"
+	data="2017-11-17"
+	tecnica="infográfico digital"
+	acervo="Ilustração de Scotwriter21 (Wikimedia Commons)"
+	fonte="https://commons.wikimedia.org/wiki/File%3AOut_of_Africa_SW01.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/06-reconstrucao-de-neandertal.webp"
+	alt="Reconstrução de neandertal"
+	titulo="Reconstrução de neandertal"
+	legenda="Reconstrução de Homo neanderthalensis (Silesian Zoological Garden, Chorzów): o ramo-irmão do H. sapiens, adaptado ao frio, com caixa torácica larga e esqueleto robusto. O genoma mostra que não fomos substituição total — carregamos 1–4% de ancestralidade neandertal fora da África (Green et al. 2010)."
+	artista="Abraham"
+	data="2023-07-11 11:59:44"
+	tecnica="reconstrução em resina/fibra de vidro"
+	acervo="Silesian Zoological Garden, Chorzów, Polônia; foto de Abraham"
+	fonte="https://commons.wikimedia.org/wiki/File%3A20230711_Neanderthal_Homo_neanderthalensis_Silesian_Zoological_Garden_Chorz%C3%B3w_Poland_01.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
 
 Antes e paralelamente à arte europeia, o registro africano documenta símbolos **muito mais antigos**:
 
@@ -165,6 +273,20 @@ O "pacote" do comportamento moderno inclui: tecnologia laminar e microlítica, a
 
 ---
 
+<Figura
+	src="/imagens/pre-historia/08-painel-dos-leoes-da-caverna-chauvet.webp"
+	alt="Painel dos leões da caverna Chauvet"
+	titulo="Painel dos leões da caverna Chauvet"
+	legenda="Painel dos leões de Chauvet (Ardèche, França), pintado há 37–33,5 mil anos cal AP (Quiles et al. 2016): uma das cenas de caça mais antigas e elaboradas do mundo. A 'arte madura' na Aurignacence sustenta que o comportamento simbólico figurativo estava consolidado antes da expansão europeia."
+	artista="Unknown author Unknown author"
+	data="About 30,000 to 32,000 years ago"
+	tecnica="pigmento vegetal (carvão) sobre calcário"
+	acervo="Caverna de Chauvet-Pont d'Ardèche, França (Patrimônio UNESCO); foto de domínio público"
+	fonte="https://commons.wikimedia.org/wiki/File%3ALions_group_Chauvet_Cave.jpg"
+	licenca="Public domain"
+/>
+
+
 ## 5. CONTROVÉRSIAS ATUAIS
 
 ### 5.1. Origem africana vs. modelo multirregional
@@ -175,6 +297,48 @@ O "pacote" do comportamento moderno inclui: tecnologia laminar e microlítica, a
 - **Questão aberta:** a cronologia de emergência (315 ka vs. 233 ka; 160 ka vs. 195 ka) e o "standstill" arábico (100–55 ka) são disputados [—].
 
 ### 5.2. Quando surgiu o comportamento simbólico?
+
+<Figura
+	src="/imagens/pre-historia/11-pegadas-de-laetoli-replica.webp"
+	alt="Pegadas de Laetoli (réplica)"
+	titulo="Pegadas de Laetoli (réplica)"
+	legenda="Réplica das pegadas de Laetoli (Tanzânia, 3,66 Ma): o registro mais antigo de locomoção bípeda, atribuído a Australopithecus afarensis. As marcas documentam um andar moderno no calcanhar e no dedão — e um dos conjuntos preserva um trio, lido como o mais antigo 'grupo familiar' do registro fóssil."
+	artista="Momotarou2012"
+	data="2013-02-16"
+	tecnica="réplica de gesso a partir do molde do sítio original"
+	acervo="Réplica exposta em museu; original nas proximidades de Olduvai (Tanzânia); foto de Momotarou2012"
+	fonte="https://commons.wikimedia.org/wiki/File%3ALaetoli_footprints_replica.jpg"
+	licenca="CC BY-SA 3.0"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/10-bisoes-policromicos-de-altamira.webp"
+	alt="Bisões policrômicos de Altamira"
+	titulo="Bisões policrômicos de Altamira"
+	legenda="Os bisões policrômicos do 'Teto das Mãos' de Altamira (Cantábria, Espanha), do Magdalenense (~14,5–13 mil anos): mestres dos pigmentos e incorporação das saliências da rocha no volume dos animais. Datações U-séries de crostas de calcita mostram que parte da arte do norte da Espanha é anterior a 35 ka (Pike et al. 2012)."
+	artista="HTO"
+	data="2009-05-22"
+	tecnica="pigmentos minerais (óxidos de ferro, carvão) sobre calcário"
+	acervo="Caverna de Altamira, Espanha (Patrimônio UNESCO); foto de HTO (domínio público)"
+	fonte="https://commons.wikimedia.org/wiki/File%3AAltamira%2C_bison%2C_museum.JPG"
+	licenca="Public domain"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/09-cavalo-chines-de-lascaux.webp"
+	alt="Cavalo chinês de Lascaux"
+	titulo="Cavalo chinês de Lascaux"
+	legenda="O 'cavalo Chinês' de Lascaux (Dordogne, França), do início do Magdalenense (~17–22 mil anos): uma das ~600 figuras do 'Salão dos Touros' e da 'Galeria dos Cavalos'. A caverna é o exemplo mais difundido da arte do Paleolítico Superior europeu — e, hoje, fechada ao público para conservação."
+	artista="HTO"
+	data="2009-05-22"
+	tecnica="pigmentos minerais (óxidos de ferro e manganês) sobre calcário"
+	acervo="Caverna de Lascaux, Montignac, França (Patrimônio UNESCO); foto de HTO (domínio público)"
+	fonte="https://commons.wikimedia.org/wiki/File%3ALascaux%2C_horse.JPG"
+	licenca="Public domain"
+/>
+
 
 - **Modelo da "revolução humana" (explosão tardia, c. 50–40 ka):** associado a Richard Klein (Klein, 1995; 2009, *The Human Career* [W]) e parcialmente a Mellars (2006) — mudança cognitiva súbita coincidente com a expansão *H. sapiens* para a Eurásia (Klein, 2009 [W]).
 - **Modelo gradual africano ("a revolução que não houve"):** McBrearty & Brooks (2000, *JHE* 39, 453–563 [V]) mostraram que os traços "modernos" (lâminas, pigmento, osso trabalhado, ornamentos, pesca, comércio) aparecem **separados no tempo e no espaço na África desde c. 300 ka**, sem um "big bang" comportamental; a origem de *H. sapiens* é associada ao MSA (250–300 ka) (McBrearty & Brooks, 2000 [V]).
@@ -292,6 +456,20 @@ O "pacote" do comportamento moderno inclui: tecnologia laminar e microlítica, a
 
 ---
 
+<Figura
+	src="/imagens/pre-historia/12-a-torre-neolitica-de-jerico.webp"
+	alt="A torre neolítica de Jericó"
+	titulo="A torre neolítica de Jericó"
+	legenda="A torre neolítica de Jericó (Tell es-Sultan, Cisjordânia), de cerca de 8.300 a.C.: estrutura circular de pedra com escada interna, a mais antiga torre de alvenaria conhecida. O monumento precede a agricultura plenamente estabelecida e sustenta que a complexidade arquitetônica pode ter precedido o sedentarismo."
+	artista="Deror_avi"
+	data="2012-12-05 12:15:50"
+	tecnica="alvenaria de pedra (calária e argila)"
+	acervo="Tell es-Sultan (antiga Jericó), Cisjordânia; foto de Deror avi"
+	fonte="https://commons.wikimedia.org/wiki/File%3AJericho_Neolitic_Tower_P1190749.JPG"
+	licenca="CC BY-SA 3.0"
+/>
+
+
 ## 1. DNA antigo (aDNA): técnica, limitações e primeiros genomas
 
 **Origem da técnica.** O campo nasceu com a clonagem de DNA de múmia egípcia de ~2.400 anos, provando que fragmentos de DNA humano sobrevivem por milênios em tecidos (Pääbo, 1985, *Nature*) [V]. A era genômica exigiu (i) extração a partir de pó de osso, (ii) bibliotecas adaptadas a fragmentos curtos e desaminados e (iii) sequenciamento profundo de molécula única. A biblioteca que permitiu o primeiro genoma arcaico de alta cobertura (~30×) foi publicada com o genoma denisovano (Meyer et al., 2012, *Science*) [V]. Avanço metodológico posterior: recuperação de DNA hominínio de **sedimentos de caverna** sem restos esqueléticos, por enriquecimento de mtDNA — DNA neandertal em oito camadas de quatro cavernas e DNA denisovano em camada pleistocênica profunda de Denissova (Slon et al., 2017, *Science*) [V].
@@ -303,6 +481,76 @@ O "pacote" do comportamento moderno inclui: tecnologia laminar e microlítica, a
 
 **Primeiros genomas humanos antigos.**
 - **2010 — primeiro genoma humano antigo completo**: cabelo paleo-esquimó Saqqaq da Groenlândia, ~4.000 anos, 20× de profundidade, 79% do genoma recuperado (Rasmussen et al., 2010, *Nature*) [V].
+
+<Figura
+	src="/imagens/pre-historia/17-coboda-de-newgrange.webp"
+	alt="Cóboda de Newgrange"
+	titulo="Cóboda de Newgrange"
+	legenda="Cóboda da passagem de Newgrange (Condado de Meath, Irlanda, ~3.200 a.C.): cúpula de pedras sobrepostas, impermeável há cinco milênios, com o 'caixão de luz' que ilumina a câmara no solstício de inverno. Prova de que a arquitetura funerária neolítica combinava engenharia e astronomia."
+	artista="O'Dea"
+	data="2019-08-12 11:58:09"
+	tecnica="alvenaria de pedra seca (cóbova)"
+	acervo="Newgrange, Brú na Bóinne, Irlanda (Patrimônio UNESCO); foto de O'Dea"
+	fonte="https://commons.wikimedia.org/wiki/File%3ACorbelled_ceiling_of_Newgrange_passage_tomb.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/16-alinhamentos-de-carnac-vista-aerea.webp"
+	alt="Alinhamentos de Carnac (vista aérea)"
+	titulo="Alinhamentos de Carnac (vista aérea)"
+	legenda="Os alinhamentos de Carnac (Bretanha, França, ~4.500–3.300 a.C.), em vista aérea: milhares de menires dispostos em fileiras quilométricas, o maior conjunto megalítico do mundo. A função segue em debate — mas a escala logística é inegável."
+	artista="Philippe Tassier"
+	data="2015-03-10 14:21:55"
+	tecnica="menhires de granito erguidos"
+	acervo="Carnac, Morbihan, França (Patrimônio UNESCO); foto aérea de Philippe Tassier (domínio público)"
+	fonte="https://commons.wikimedia.org/wiki/File%3ACarnac_alignements_vue_a%C3%A9rienne_2012.0010.11.jpg"
+	licenca="Public domain"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/15-stonehenge-ao-nascer-do-sol.webp"
+	alt="Stonehenge ao nascer do sol"
+	titulo="Stonehenge ao nascer do sol"
+	legenda="Stonehenge (Wiltshire, Inglaterra), cerca de 2.500 a.C. (fase final): anel de trilithons de sarsen com vergas encaixadas, alinhado ao solstício de verão. É o megálitico mais célebre e o monumento mais sofisticado do ponto de vista astronômico e logístico na Europa neolítica."
+	artista="Diego Delso"
+	data="2014-08-12 15:15:45"
+	tecnica="alvenaria megalítica (sarsen e 'pedras azuis')"
+	acervo="Stonehenge, Amesbury, Inglaterra (Patrimônio UNESCO); foto de Diego Delso"
+	fonte="https://commons.wikimedia.org/wiki/File%3AStonehenge%2C_Condado_de_Wiltshire%2C_Inglaterra%2C_2014-08-12%2C_DD_08.JPG"
+	licenca="CC BY-SA 4.0"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/14-pilares-monumentais-de-gobekli-tepe.webp"
+	alt="Pilares monumentais de Göbekli Tepe"
+	titulo="Pilares monumentais de Göbekli Tepe"
+	legenda="Os pilares em T de Göbekli Tepe (Urfa, Turquia, ~9.600 a.C.): megálito erguido por caçadores-coletores, antes da agricultura, com relevos de raposas, aves e serpentes. O sítio inverte a tese de que o templo segue a aldeia — aqui, o monumento coletivo pode ter precedido o sedentarismo."
+	artista="Teomancimit"
+	data="2011-09-06"
+	tecnica="calcário entalhado à mão"
+	acervo="Göbekli Tepe, Urfa, Turquia (Patrimônio UNESCO); foto de Teomancimit"
+	fonte="https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe%2C_Urfa.jpg"
+	licenca="CC BY-SA 3.0"
+/>
+
+
+<Figura
+	src="/imagens/pre-historia/13-catalhoyuk-vista-aerea-das-casas.webp"
+	alt="Çatalhöyük: vista aérea das casas"
+	titulo="Çatalhöyük: vista aérea das casas"
+	legenda="Vista aérea de Çatalhöyük (Anatólia, ~7.400 a.C.): aglomerado neolítico de casas justapostas de tijolo de barro, acessadas pelo telhado e sem ruas. O sítio é o exemplo mais antigo de urbanismo denso — uma 'proto-cidade' de 5.000–8.000 habitantes que dispensava o carro e o arado."
+	artista="Murat Özsoy 1958"
+	data="2019-11-27"
+	tecnica="tijolos de barro (adobe), argamassa de cal"
+	acervo="Çatalhöyük, Konya, Turquia (Patrimônio UNESCO); foto de Murat Özsoy"
+	fonte="https://commons.wikimedia.org/wiki/File%3A%C3%87atalh%C3%B6y%C3%BCk%2C_7400_BC%2C_Konya%2C_Turkey_-_UNESCO_World_Heritage_Site%2C_02.jpg"
+	licenca="CC BY-SA 4.0"
+/>
+
 - **2010 — rascunho do genoma neandertal**: >4 bilhões de nucleotídeos de três indivíduos (Green et al., 2010, *Science*) [V].
 - **2010 — genoma de arcaico denisovano (~1,9×)**: da falange da Caverna Denissova (Reich et al., 2010, *Nature*) [V].
 - **2012 — denisovano de alta cobertura (30×)** (Meyer et al., 2012) [V].

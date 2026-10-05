@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Educação Liberal — Dossiê Enciclopédico</title>
+<style>
+:root {
+  --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
+  --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+}
+*{box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
+     background:var(--bg);color:var(--fg);line-height:1.65}
+.container{display:flex;min-height:100vh}
+.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+         border-right:1px solid var(--border);padding:1.2rem .8rem;
+         position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:.12rem 0}
+.sidebar li.level-3{margin-left:12px;font-size:.86rem}
+.sidebar li.level-4{margin-left:22px;font-size:.8rem}
+.sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
+.sidebar a:hover{text-decoration:underline}
+.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
+.main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
+.main h3{color:#333;margin-top:1.5rem}
+.main a{color:var(--link)}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
+.main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+th{background:var(--sidebar-bg)}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
+       font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
+[data-theme="dark"] {
+  --bg:#1a1a2e; --fg:#e0e0e0; --muted:#aaa; --link:#64b5f6;
+  --accent:#d4a574; --border:#333; --sidebar-bg:#16213e;
+}
+[data-theme="dark"] .main h3{color:#ccc}
+[data-theme="dark"] code{background:#2a2a3e}
+[data-theme="dark"] pre{background:#2a2a3e}
+[data-theme="dark"] th{background:#0f3460}
+[data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+</style>
+</head>
+<body>
+<button id="theme-toggle" style="position:fixed;top:10px;right:10px;z-index:999;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--sidebar-bg);color:var(--fg);cursor:pointer;font-size:.82rem">Alterar tema</button>
+<div class="container">
+<nav class="sidebar"><h2>Sumário</h2><ul><li><a href="#educacao-liberal-dossie-enciclopedico">Educação Liberal — Dossiê Enciclopédico</a></li><li><a href="#1-lead">1. Lead</a></li><li><a href="#2-ficha-tecnica">2. Ficha técnica</a></li><li><a href="#3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</a></li><li class="level-3"><a href="#31-a-paideia-grega-a-educacao-como-formacao-do-homem">3.1 A paideia grega: a educação como formação do homem</a></li><li class="level-3"><a href="#32-as-artes-liberales-em-roma-trivium-e-quadrivium">3.2 As artes liberales em Roma: trivium e quadrivium</a></li><li class="level-3"><a href="#33-o-medievo-e-o-renascimento-universidade-e-humanismo">3.3 O medievo e o Renascimento: universidade e humanismo</a></li><li class="level-3"><a href="#34-da-educacao-do-cavalheiro-ao-liberal-arts-college">3.4 Da educação do cavalheiro ao liberal arts college</a></li><li class="level-3"><a href="#35-o-seculo-xx-hutchins-great-books-e-as-crises">3.5 O século XX: Hutchins, Great Books e as crises</a></li><li><a href="#4-defesas-classicas-da-educacao-liberal">4. Defesas clássicas da educação liberal</a></li><li><a href="#5-as-grandes-criticas">5. As grandes críticas</a></li><li class="level-3"><a href="#51-critica-pela-esquerda-elitismo-e-reproducao-de-classe">5.1 Crítica pela esquerda: elitismo e reprodução de classe</a></li><li class="level-3"><a href="#52-critica-pela-direita-relativismo-e-perda-do-canone">5.2 Crítica pela direita: relativismo e perda do cânone</a></li><li class="level-3"><a href="#53-critica-pragmatica-custo-retorno-e-empregabilidade">5.3 Crítica pragmática: custo, retorno e empregabilidade</a></li><li class="level-3"><a href="#54-critica-interna-a-educacao-liberal-contra-si-mesma">5.4 Crítica interna: a educação liberal contra si mesma</a></li><li><a href="#6-o-debate-contemporaneo-1990-2026">6. O debate contemporâneo (1990-2026)</a></li><li class="level-3"><a href="#61-o-retorno-de-nussbaum-e-a-virada-democratica">6.1 O retorno de Nussbaum e a virada democrática</a></li><li class="level-3"><a href="#62-a-defesa-popular-zakaria-e-montas">6.2 A defesa popular: Zakaria e Montás</a></li><li class="level-3"><a href="#63-a-era-da-coddling-e-do-safetyism">6.3 A era da coddling e do safetyism</a></li><li class="level-3"><a href="#64-respostas-empiricas-e-institucionais">6.4 Respostas empíricas e institucionais</a></li><li class="level-3"><a href="#65-a-europa-e-o-sul-global">6.5 A Europa e o Sul Global</a></li><li><a href="#7-a-educacao-liberal-no-brasil-e-no-mundo-lusofono">7. A educação liberal no Brasil e no mundo lusófono</a></li><li class="level-3"><a href="#71-a-tradicao-traduzida">7.1 A tradição traduzida</a></li><li class="level-3"><a href="#72-o-debate-brasileiro-contemporaneo">7.2 O debate brasileiro contemporâneo</a></li><li class="level-3"><a href="#73-traducoes-disponiveis-em-portugues">7.3 Traduções disponíveis em português</a></li><li><a href="#8-estudos-e-comentarios-de-referencia">8. Estudos e comentários de referência</a></li><li><a href="#9-sites-e-instituicoes-especializadas">9. Sites e instituições especializadas</a></li><li class="level-3"><a href="#91-associacoes-e-consorcios">9.1 Associações e consórcios</a></li><li class="level-3"><a href="#92-instituicoes-com-curriculo-de-grandes-livros">9.2 Instituições com currículo de Grandes Livros</a></li><li class="level-3"><a href="#93-enciclopedias-e-verbetes-de-referencia">9.3 Enciclopédias e verbetes de referência</a></li><li class="level-3"><a href="#94-cursos-abertos-e-plataformas-de-conteudo">9.4 Cursos abertos e plataformas de conteúdo</a></li><li class="level-3"><a href="#95-instituicoes-e-centros-lusofonos">9.5 Instituições e centros lusófonos</a></li><li><a href="#10-blogs-e-plataformas-de-ensaio">10. Blogs e plataformas de ensaio</a></li><li class="level-3"><a href="#101-ensaios-de-referencia-com-autoria-e-data-verificadas">10.1 Ensaios de referência (com autoria e data verificadas)</a></li><li class="level-3"><a href="#102-revistas-e-plataformas-de-ensaio">10.2 Revistas e plataformas de ensaio</a></li><li class="level-3"><a href="#103-blogs-brasileiros-e-lusofonos">10.3 Blogs brasileiros e lusófonos</a></li><li class="level-3"><a href="#104-blogs-de-educacao-classica-em-ingles">10.4 Blogs de educação clássica em inglês</a></li><li><a href="#11-videos-canais-de-youtube-e-audiovisual">11. Vídeos, canais de YouTube e audiovisual</a></li><li class="level-3"><a href="#111-canais-de-colleges-de-grandes-livros-o-nucleo-mais-denso">11.1 Canais de colleges de Grandes Livros (o núcleo mais denso)</a></li><li class="level-3"><a href="#112-palestras-de-academicos-autores-verificados">11.2 Palestras de acadêmicos (autores verificados)</a></li><li class="level-3"><a href="#113-instituicoes-e-canais-de-humanidades">11.3 Instituições e canais de humanidades</a></li><li class="level-3"><a href="#114-canais-e-videos-em-portugues">11.4 Canais e vídeos em português</a></li><li><a href="#12-documentarios-filmes-e-podcasts">12. Documentários, filmes e podcasts</a></li><li class="level-3"><a href="#121-documentarios">12.1 Documentários</a></li><li class="level-3"><a href="#122-filmes-de-ficcao">12.2 Filmes de ficção</a></li><li class="level-3"><a href="#123-podcasts">12.3 Podcasts</a></li><li><a href="#13-estado-do-debate-forschungsstand">13. Estado do debate (Forschungsstand)</a></li><li><a href="#14-guia-de-estudo">14. Guia de estudo</a></li><li class="level-3"><a href="#141-pre-requisitos">14.1 Pré-requisitos</a></li><li class="level-3"><a href="#142-escada-de-estudo-7-degraus">14.2 Escada de estudo (7 degraus)</a></li><li class="level-3"><a href="#143-recursos-por-nivel">14.3 Recursos por nível</a></li><li class="level-3"><a href="#144-perguntas-para-reflexao">14.4 Perguntas para reflexão</a></li><li class="level-3"><a href="#145-glossario-essencial">14.5 Glossário essencial</a></li><li><a href="#15-glossario">15. Glossário</a></li><li><a href="#16-bibliografia-comentada">16. Bibliografia comentada</a></li><li class="level-3"><a href="#161-fontes-primarias-confirmadas">16.1 Fontes primárias confirmadas</a></li><li class="level-3"><a href="#162-fontes-secundarias-confirmadas">16.2 Fontes secundárias confirmadas</a></li><li class="level-3"><a href="#163-artigos-academicos-recentes-selecao-todos-com-doi-conferido">16.3 Artigos acadêmicos recentes (seleção, todos com DOI conferido)</a></li><li class="level-3"><a href="#164-producao-lusofona-artigos-e-livros">16.4 Produção lusófona (artigos e livros)</a></li><li class="level-3"><a href="#165-citadas-mas-nao-verificadas">16.5 Citadas mas não verificadas</a></li><li><a href="#17-notas-e-referencias">17. Notas e referências</a></li><li><a href="#18-links-e-recursos">18. Links e recursos</a></li><li><a href="#19-metadados">19. Metadados</a></li><li><a href="#20-nota-metodologica">20. Nota metodológica</a></li></ul></nav>
+<main class="main">
+<h1 id="educacao-liberal-dossie-enciclopedico">Educação Liberal — Dossiê Enciclopédico</h1>
+<blockquote>
+<p><strong>Última revisão</strong>: 5 de outubro de 2026 · <strong>Idioma</strong>: português brasileiro
+<strong>Método</strong>: pesquisa bibliográfica verificada (Regra Zero: nenhuma fonte inventada) com retroverificação acadêmica; cada obra foi conferida em Open Library, Crossref, Internet Archive, página oficial de editora ou SciELO. Marcadores <code>[V]</code>/<code>[ACAD]</code>/<code>[SITE]</code>/<code>[YT]</code> seguem o contrato de saída (ver Nota Metodológica, seção 20).</p>
+</blockquote>
+<hr />
+<h2 id="1-lead">1. Lead</h2>
+<p>A <strong>educação liberal</strong> (<em>liberal education</em>; também <em>artes liberais</em>, <em>liberal arts</em>) é a tradição educacional que forma a pessoa livre pela aquisição de conhecimento geral e de capacidades intelectuais amplas, em contraste com a formação profissional, vocacional ou técnica — esta é a definição canônica do verbete "Liberal arts" da <em>Encyclopaedia Britannica</em> (Britannica, 2026). O termo remonta à distinção romana entre as <em>artes liberales</em> — os estudos dignos de uma pessoa livre — e as <em>artes mechanicae</em> ou <em>serviles</em>, próprias de quem trabalha com as mãos (Encyclopedia.com, 2011; Oxford Classical Dictionary, 2026). No mundo grego, o equivalente é a <em>paideia</em> (παιδεία): a formação integral do cidadão pelo conteúdo — música, poesia, ginástica, matemática, filosofia — e não por técnicas (Jaeger, 1959; Marrou, 1965).</p>
+<p>A história do conceito atravessa mais de dois milênios: da <em>paideia</em> ateniense (Isócrates, Platão, Aristóteles) ao currículo das sete artes liberais fixado na Antiguidade tardia por Martianus Capella e transmitido ao medievo por Cassiodoro e Boécio; do humanismo renascentista ao <em>liberal arts college</em> americano do século XIX; das reformas de Hutchins e Adler no século XX ao grande debate contemporâneo sobre o valor das humanidades na era do ensino de massas e da automação (Kimball, 1986; Roth, 2014; Delbanco, 2013).</p>
+<p>O debate contemporâneo é um dos mais acirrados da filosofia da educação. De um lado, defensoras como Martha Nussbaum sustentam que as humanidades são condição da democracia — formam o cidadão capaz de pensar criticamente, imaginar o outro e julgar prioridades coletivas (Nussbaum, 1997; 2010). Do outro, críticos de direita e de esquerda denunciam a educação liberal como elitismo disfarçado, currículo desconectado do trabalho ou refúgio de privilégio (Bloom, 1987; Labaree, 2006; Deresiewicz, 2014). Entre os dois, uma bibliografia empírica crescente tenta medir o que a educação liberal de fato produz (Arum e Courant, 2026; <em>The Evidence Liberal Arts Needs</em>, 2021).</p>
+<p>Este dossiê apresenta: (a) o contexto histórico e conceitual da educação liberal; (b) as defesas clássicas e as críticas; (c) o estado do debate acadêmico atual; (d) a produção em língua portuguesa; (e) um catálogo multimídia verificado (sites, blogs, YouTube, documentários, podcasts); (f) bibliografia comentada com links de acesso em cada entrada; e (g) um guia de estudo para o leitor autodidata.</p>
+<h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conceito</strong></td>
+<td>Educação liberal (<em>liberal education</em>), artes liberais</td>
+</tr>
+<tr>
+<td><strong>Termo grego</strong></td>
+<td><em>paideia</em> (παιδεία) — formação do homem livre</td>
+</tr>
+<tr>
+<td><strong>Termo latino</strong></td>
+<td><em>artes liberales</em> — estudos dignos do homem livre</td>
+</tr>
+<tr>
+<td><strong>Núcleo canônico</strong></td>
+<td>Sete artes: gramática, dialética, retórica (trivium); geometria, aritmética, música, astronomia (quadrivium)</td>
+</tr>
+<tr>
+<td><strong>Fonte que fixa as sete</strong></td>
+<td>Martianus Capella, <em>De nuptiis Philologiae et Mercurii</em> (séc. V d.C.)</td>
+</tr>
+<tr>
+<td><strong>Transmissão medieval</strong></td>
+<td>Cassiodoro, <em>Institutiones</em>; Boécio; escolas monásticas e universidades</td>
+</tr>
+<tr>
+<td><strong>Período formativo moderno</strong></td>
+<td>Humanismo renascentista → <em>liberal arts college</em> (EUA, séc. XIX)</td>
+</tr>
+<tr>
+<td><strong>Momento de virada</strong></td>
+<td>Newman, <em>The Idea of a University</em> (1852); Hutchins e Adler (1930-40); Bloom (1987)</td>
+</tr>
+<tr>
+<td><strong>Debate atual</strong></td>
+<td>Valor das humanidades; currículo comum vs. especialização; retorno econômico; cidadania democrática (1990-2026)</td>
+</tr>
+<tr>
+<td><strong>Confusão a evitar</strong></td>
+<td>Educação liberal ≠ liberalismo econômico (ver Glossário, seção 17)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</h2>
+<h3 id="31-a-paideia-grega-a-educacao-como-formacao-do-homem">3.1 A <em>paideia</em> grega: a educação como formação do homem</h3>
+<p>A educação liberal nasce na Grécia clássica como <em>paideia</em>: não a escolarização de crianças, mas a formação do conjunto do homem — corpo, caráter e intelecto — para a vida na <em>polis</em> (Jaeger, 1959; Marrou, 1965). Werner Jaeger, em sua obra de três volumes, fixou <em>paideia</em> como categoria histórica interpretativa: a reconstrução do espírito grego, da época arcaica a Platão e Aristóteles, mostra que o grego entendia a educação como o processo pelo qual a comunidade forma o seu tipo ideal de homem (Jaeger, 1959). Marrou complementa: a <em>paideia</em> grega não era "escola" em sentido moderno — era formação pelo conteúdo — música, poesia, ginástica, filosofia — e não por técnicas ou ofícios (Marrou, 1965).</p>
+<p>Duas concepções rivais definiram o campo já na Atenas do século IV a.C. De um lado, <strong>Isócrates</strong> e a tradição retórica: a formação do cidadão pelo uso prático da palavra e pelo cultivo do juízo, sem reduzir-se a uma técnica especializada (Isócrates, ed. Loeb, 1945; Marrou, 1965). De outro, <strong>Platão</strong> e depois <strong>Aristóteles</strong>, para quem a educação é inseparável da filosofia e da política: nos livros VIII e IX da <em>Política</em>, Aristóteles fixa o currículo da educação livre — gramática, música, ginástica, desenho — como condição da função cívica, distinguindo-a da formação <em>banausica</em>, própria do trabalho servil (Aristóteles, ed. Loeb, 1921). A <em>SEP — Civic Education</em> sublinha a diferença: a <em>paideia</em> clássica é preparação do cidadão que abrange toda uma cultura e toda uma vida, enquanto a educação cívica moderna é instrução deliberada e setorial nas escolas (SEP, 2018).</p>
+<h3 id="32-as-artes-liberales-em-roma-trivium-e-quadrivium">3.2 As <em>artes liberales</em> em Roma: trivium e quadrivium</h3>
+<p>Em Roma, o ideal grego foi traduzido em currículo e em vocabulário. <strong>Cícero</strong>, no <em>De oratore</em> e no <em>De officiis</em>, faz da formação do orador uma formação moral e cultural completa — o orador ideal é também um homem bom —, criando a ponte entre a <em>paideia</em> grega e a educação romana (Cícero, ed. Loeb, 1942; Cícero, <em>Os deveres</em>, trad. Bassetto, 2025). <strong>Quintiliano</strong>, na <em>Institutio oratoria</em> (c. 95 d.C.), escreve o tratado de pedagogia mais influente da Antiguidade: o orador é o "homem bom, hábil em falar" (<em>vir bonus dicendi peritus</em>), e a formação começa na infância, com um verdadeiro currículo de educação geral antes da especialização (Quintiliano, ed. Loeb, 1970; trad. Bassetto, 2015).</p>
+<p>O vocabulário das <em>artes liberales</em> aparece na filosofia romana — Sêneca usa a expressão para os estudos dignos do homem livre —, mas é na Antiguidade tardia que o cânone se fecha. <strong>Martianus Capella</strong>, no <em>De nuptiis Philologiae et Mercurii</em> (séc. V), fixa o número sete e a nomenclatura das artes: gramática, dialética, retórica, geometria, aritmética, música e astronomia, distribuídas entre <em>trivium</em> (o caminho das palavras: gramática, dialética, retórica) e <em>quadrivium</em> (o caminho dos números: as quatro matemáticas) (Martianus Capella, ed. Belles Lettres, 2003; Britannica, 2026). <strong>Cassiodoro</strong>, no mosteiro de Vivarium, traduz o cânone em programa institucional: as <em>Institutiones</em> distinguem <em>litterae humanae</em> e <em>litterae divinae</em> e explicam a apropriação cristã das sete artes como propedêutica da leitura das Escrituras (Cassiodoro, ed. Liverpool, 2004; Britannica, 2026).</p>
+<h3 id="33-o-medievo-e-o-renascimento-universidade-e-humanismo">3.3 O medievo e o Renascimento: universidade e humanismo</h3>
+<p>A universidade medieval (sécs. XII-XIII) herdou o esquema: as sete artes liberais formaram o tronco comum (<em>trivium</em> no bacharelado em artes, <em>quadrivium</em> na sequência) sobre o qual se erguiam as faculdades superiores — teologia, direito e medicina (Marrou, 1965; Britannica, 2026). O <em>Encyclopedia.com</em> (2011) registra que foi nesse quadro que "artes liberais" passou a designar, por mais de mil anos, o conjunto canônico de estudos gerais pré-profissionais.</p>
+<p>No Renascimento, o humanismo cívico (Petrarca, Salutati, Bruni) reorienta as artes para os <em>studia humanitatis</em> — gramática, retórica, poesia, história e filosofia moral —, isto é, para a formação do cidadão ativo e do homem público (IEP, <em>Renaissance Philosophy</em>, 2019). A <em>SEP — Humanism, Civic</em> localiza nesse movimento a origem da ligação moderna entre educação humanística e republicanismo: formar livres exige formar cidadãos (SEP, 2018). É essa tradição que o <em>liberal arts college</em> americano vai institucionalizar.</p>
+<h3 id="34-da-educacao-do-cavalheiro-ao-liberal-arts-college">3.4 Da educação do cavalheiro ao <em>liberal arts college</em></h3>
+<p>No mundo de língua inglesa, a educação liberal moderna nasce como educação do cavalheiro. <strong>John Locke</strong>, em <em>Some Thoughts Concerning Education</em> (1693), formula o ideal: a formação intelectual precede e excede a formação profissional — educa-se o homem, não o ofício (Locke, ed. Clarendon, 1989). No século XIX o ideal se institucionaliza de dois modos. Na Inglaterra, <strong>John Henry Newman</strong>, nas <em>Discourses</em> de Dublin (1852), funda a teologia da educação liberal: o conhecimento é fim em si mesmo, "ilumina a mente" sem ser diretamente útil; a universidade existe para produzir o "hábito filosófico da mente", não para a utilidade imediata (Newman, ed. Clarendon, 1976). Newman é explicitamente anti-integralista: recusa as ciências experimentais no currículo universitário — posição que se tornou a peça mais contestada da obra.</p>
+<p>No mesmo período, <strong>John Stuart Mill</strong>, como reitor da Universidade de St Andrews, formula o ideal vitoriano do treinamento liberal: o conhecimento dos fatos, o conhecimento dos princípios da ciência e — o ponto decisivo — o treinamento da mente, que não é conteúdo, mas método: ensinar a mente a usar as próprias faculdades (Mill, <em>Inaugural Address</em>, 1867). <strong>Matthew Arnold</strong>, em <em>Culture and Anarchy</em> (1869), completa o vocabulário: cultura é o estudo do que é excelente, em contraste com a instrução utilitária (Arnold, 1869).</p>
+<p>Nos Estados Unidos, o <em>liberal arts college</em> oitocentista (Yale, Princeton, Amherst, Williams) generaliza o modelo de educação geral: quatro anos de estudos gerais antes da especialização, com forte componente moral e religioso (Delbanco, 2013; Roth, 2014). Michael S. Roth mostra que a matriz intelectual do modelo é o transcendentalismo americano — Emerson e Thoreau —, para quem o college é um projeto de formação da pessoa inteira, não de qualificação profissional (Roth, 2014).</p>
+<h3 id="35-o-seculo-xx-hutchins-great-books-e-as-crises">3.5 O século XX: Hutchins, Great Books e as crises</h3>
+<p>O século XX trouxe a massificação do ensino superior e, com ela, a primeira grande crise de identidade da educação liberal. <strong>Robert Maynard Hutchins</strong>, reitor da Universidade de Chicago, publica em 1936 <em>The Higher Learning in America</em>, o diagnóstico mais influente do século: a universidade americana abandonou o cultivo da mente para servir ao treinamento vocacional (Hutchins, 1936; Hutchins, 1933). Com <strong>Mortimer Adler</strong>, Hutchins funda o movimento <em>Great Books</em>: a educação liberal é a leitura dialogada dos grandes livros da tradição ocidental, do que nasce a <em>Great Books Foundation</em> (1947) e, em 1937, o currículo integral de St. John's College (Great Books Foundation, 2026; St. John's College, 2026). Adler sistematiza o programa democrático do movimento no <em>Paideia Proposal</em> (1982): <em>paideia</em> para todos, não para elites — a mesma educação geral para cada criança (Adler, 1982; Byrnes, 1983).</p>
+<p>No mesmo período, <strong>Mark Van Doren</strong> (<em>Liberal Education</em>, 1943) fixa a distinção que percorre todo o debate: a educação liberal é a educação pela escolha, "o que o homem faz quando não está sendo treinado para coisa alguma" (Van Doren, 1943). <strong>Dorothy Sayers</strong>, em <em>The Lost Tools of Learning</em> (1947), devolve o <em>trivium</em> ao debate público: se a educação é um processo mental — aprender a aprender — e não acúmulo de informação, então o método (gramática, dialética, retórica) importa mais que a matéria (Sayers, 1947). <strong>C. S. Lewis</strong>, em <em>The Abolition of Man</em> (1943), formula o contra-argumento moral: uma educação que só fornece os meios do fazer, sem formar o juízo de valor, não liberta — substitui pessoas por objetos (Lewis, 1943). E <strong>Michael Oakeshott</strong>, nos ensaios reunidos em <em>The Voice of Liberal Learning</em> (1989), dá à tradição sua formulação filosófica mais completa do século: a educação liberal não é preparação para nada — é participação na "conversa da humanidade", o mundo herdado de processos e significados em que o aprendiz é convidado a entrar (Oakeshott, 1989; SEP, <em>Michael Oakeshott</em>).</p>
+<h2 id="4-defesas-classicas-da-educacao-liberal">4. Defesas clássicas da educação liberal</h2>
+<p>As defesas canônicas do conceito podem ser agrupadas em quatro famílias de argumento, todas presentes desde a Antiguidade:</p>
+<table>
+<thead>
+<tr>
+<th>Família de argumento</th>
+<th>Tese central</th>
+<th>Representantes</th>
+<th>Fonte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Formação do homem livre</strong></td>
+<td>A educação digna do livre é a do todo humano; a técnica é servil (<em>banausica</em>)</td>
+<td>Aristóteles, <em>Política</em> VIII-IX; Cícero; Quintiliano</td>
+<td>(Aristóteles, 1921; Quintiliano, 1970)</td>
+</tr>
+<tr>
+<td><strong>Conhecimento como fim</strong></td>
+<td>O saber "ilumina a mente" sem utilidade imediata; a mente formada serve a qualquer fim</td>
+<td>Newman, 1852; Mill, 1867; Brust, 2021</td>
+<td>(Newman, 1976; Mill, 1867)</td>
+</tr>
+<tr>
+<td><strong>Método sobre conteúdo</strong></td>
+<td>O que permanece é o treinamento da mente — aprender a aprender</td>
+<td>Mill, 1867; Van Doren, 1943; Sayers, 1947</td>
+<td>(Van Doren, 1943)</td>
+</tr>
+<tr>
+<td><strong>Cidadania democrática</strong></td>
+<td>As humanidades formam o cidadão crítico da democracia</td>
+<td>Nussbaum, 1997; 2010; Taylor, 2025; Love, 2024</td>
+<td>(Nussbaum, 2010; Taylor, 2025)</td>
+</tr>
+</tbody>
+</table>
+<p>A leitura recomendada do núcleo defensivo clássico: Newman (1852) para o argumento institucional; Mill (1867) para o argumento pedagógico (a mente como faculdade a treinar); Arnold (1869) para o argumento cultural (a excelência como finalidade); Oakeshott (1989) para a formulação filosófica mais sofisticada; e Van Doren (1943) para a formulação mais citável.</p>
+<h2 id="5-as-grandes-criticas">5. As grandes críticas</h2>
+<h3 id="51-critica-pela-esquerda-elitismo-e-reproducao-de-classe">5.1 Crítica pela esquerda: elitismo e reprodução de classe</h3>
+<p>A crítica mais antiga e mais constante é a social: a educação liberal sempre foi, na prática, privilégio de quem podia prescindir do trabalho manual — o Oxford Classical Dictionary registra o vínculo histórico entre <em>artes liberales</em> e status de cidadão livre e proprietário (OCD, 2026). No debate contemporâneo, <strong>David Labaree</strong> formula a versão estrutural: escolas e universidades que competem por reputação reproduzem sistematicamente a desigualdade de classe — a "educação liberal" vira moeda de distinção social (Labaree, 2006). <strong>Marlene Ribeiro</strong> (2025) reconstitui, em português, a trajetória do conceito do século XVII ao XX e mostra que suas linhas resultam da passagem do modo feudal ao capitalista, contendo contradições e conflitos de interesse estruturais (Ribeiro, 2025). No Brasil, a tradição formulou a crítica já nos anos 1980: <strong>Casemiro dos Reis Filho</strong>, em <em>A educação e a ilusão liberal</em> (1981), analisa as origens do ensino público paulista e denuncia a "ilusão liberal" como ideologia política da Primeira República (Reis Filho, 1981).</p>
+<h3 id="52-critica-pela-direita-relativismo-e-perda-do-canone">5.2 Crítica pela direita: relativismo e perda do cânone</h3>
+<p><strong>Allan Bloom</strong>, em <em>The Closing of the American Mind</em> (1987), abre a guerra cultural de finais do século XX pelo flanco conservador: o relativismo dos anos 1960 fechou a mente americana — a universidade abandonou o cânone, a verdade e a filosofia, trocando-as por ideologia e "abertura" vazia (Bloom, 1987). Bloom acusa precisamente a desconexão entre humanidades e história e defende a restauração do cânone ocidental. A crítica foi retomada na década seguinte por <strong>Bruce Kimball</strong> (1986), que reconstruiu a história do campo americano como tensão permanente entre "oradores" (formação prática do cidadão) e "filósofos" (formação teórica em busca da verdade) — as duas almas da educação liberal (Kimball, 1986). <strong>Velvet Favretto</strong> (2018) e <strong>Bradley Green</strong> (2023) representam a vertente atual do argumento em ensaios públicos: o pós-modernismo erodiu a liberdade intelectual; a recuperação das artes liberais exige recuperar uma concepção de verdade (Favretto, 2018; Green, 2023).</p>
+<h3 id="53-critica-pragmatica-custo-retorno-e-empregabilidade">5.3 Crítica pragmática: custo, retorno e empregabilidade</h3>
+<p>A terceira família de críticas é econômica e empírica: a educação liberal custa caro e não prepara para o mercado — ou, mais sofisticadamente, o seu valor de mercado é incerto e mal medido. <strong>William Deresiewicz</strong>, formado pela elite que critica, descreve o <em>liberal arts college</em> contemporâneo como fábrica de "ovelhas excelentes": estudantes ansiosos, conformistas e sem vida interior, treinados para credenciais (Deresiewicz, 2014). <strong>Harry Lewis</strong>, ex-decano de Harvard, diagnostica a substituição da missão humanística por gestão, métricas e doações (H. Lewis, 2006). O documentário <em>Ivory Tower</em> (2014) traduz a crítica em imagem: a universidade americana converteu a formação em dívida (Rossi, 2014). A resposta empírica mais recente é o estudo de <strong>Richard Arum e Paul Courant</strong>, <em>The Liberal Arts Advantage</em> (2026), que tenta medir o retorno de longo prazo dos diplomados em artes liberais (Arum e Courant, 2026).</p>
+<h3 id="54-critica-interna-a-educacao-liberal-contra-si-mesma">5.4 Crítica interna: a educação liberal contra si mesma</h3>
+<p>Há ainda a crítica que vem de dentro da própria tradição humanista. <strong>Stanley Fish</strong> sustenta que as artes liberais "não precisam de justificação": seu valor é a prática da leitura e da escrita crítica, e qualquer tentativa de justificá-las pragmaticamente (inclusive civicamente) as corrompe (Fish, 2008; Fish, 2011). <strong>Stefan Collini</strong> desmonta o diagnóstico de "dano": o problema não é que as humanidades sejam inúteis, é que a universidade esqueceu o próprio propósito (Collini, 2012). A crítica filosófica mais radical vem de <strong>Nietzsche</strong>, lido contra o ideal: a formação que só reproduz convenções produz o "último homem" (Choi, 2016). E a vertente decolonial recente acusa a "educação cidadã global liberal" de imperialismo cultural: <strong>Nathan Liu</strong> (2026) distingue duas versões da educação global liberal e argumenta contra ambas (Liu, 2026); <strong>Leping Mou</strong> (2025) mostra, pela lente confuciana, a falsa universalidade do modelo grego transplantado para a Ásia (Mou, 2025).</p>
+<h2 id="6-o-debate-contemporaneo-1990-2026">6. O debate contemporâneo (1990-2026)</h2>
+<h3 id="61-o-retorno-de-nussbaum-e-a-virada-democratica">6.1 O retorno de Nussbaum e a virada democrática</h3>
+<p><strong>Martha Nussbaum</strong> lidera a virada do debate nos anos 1990. Em <em>Cultivating Humanity</em> (1997), defende que os EUA herdaram a <em>paideia</em> grega, mas a misturaram ao treinamento profissional; propõe o "ciclo socrático" — exame crítico de si e do outro, imaginação narrativa e cidadania mundial — como método generalizável (Nussbaum, 1997). Em <em>Not for Profit</em> (2010), o argumento fica explícito: a democracia precisa de cidadãos capazes de julgar prioridades coletivas, e nenhum mercado fornece a linguagem do bem comum; reduzir a educação ao PIB é um "câncer silencioso" que corrói as democracias (Nussbaum, 2010). <strong>Bob Pepperman Taylor</strong> (2025) atualiza a linha normativa em chave rawlsiana: o conhecimento é um bem de primeira ordem e o currículo comum é questão institucional — a polarização contemporânea torna a tarefa urgente (Taylor, 2025).</p>
+<h3 id="62-a-defesa-popular-zakaria-e-montas">6.2 A defesa popular: Zakaria e Montás</h3>
+<p><strong>Fareed Zakaria</strong>, em <em>In Defense of a Liberal Education</em> (2015), leva a defesa ao grande público: o conhecimento não pode ser medido por produtividade imediata; as humanidades ensinam a escrever, pensar, comunicar e aprender — as habilidades que a economia da inovação mais premia; STEM e artes liberais são um "casal de poder", não rivais (Zakaria, 2015; Zakaria, 2015, Big Think). <strong>Roosevelt Montás</strong>, diretor do núcleo comum (Core Curriculum) de Columbia, acrescenta a dimensão da justiça social: <em>Rescuing Socrates</em> (2021) é a memória intelectual de um imigrante latino-americano para quem os Grandes Livros foram instrumento de ascensão e libertação — democratizar os clássicos é democratizar o poder (Montás, 2021; Montás, 2022).</p>
+<h3 id="63-a-era-da-coddling-e-do-safetyism">6.3 A era da <em>coddling</em> e do <em>safetyism</em></h3>
+<p><strong>Greg Lukianoff e Jonathan Haidt</strong> mudam o terreno em 2018 com <em>The Coddling of the American Mind</em>: o problema das universidades americanas deixou de ser a "mente fechada" de Bloom para ser a "mente mimada" — a cultura do <em>safetyism</em>, dos avisos-gatilho e da evitação do desconforto intelectual, que impede a formação do caráter e da resiliência epistêmica (Lukianoff e Haidt, 2018). O livro reacende o debate sobre o que a universidade deve exigir dos estudantes e sobre o papel do atrito intelectual na formação liberal.</p>
+<h3 id="64-respostas-empiricas-e-institucionais">6.4 Respostas empíricas e institucionais</h3>
+<p>O campo respondeu com pesquisa aplicada. <em>The Evidence Liberal Arts Needs</em> (MIT Press, 2021, org. Richard Detweiler) reúne a evidência disponível sobre os efeitos da educação liberal e enfrenta diretamente a pergunta "o que ela produz?" (Detweiler, 2021). <strong>Arum e Courant</strong> (2026) estudam o retorno de longo prazo dos egressos. <strong>David Breneman</strong> mapeia a tipologia institucional dos <em>liberal arts colleges</em> — dependência de doações, governança, modelos econômicos (Breneman, 2010). E o artigo de <strong>Caitlin Brust</strong> (2021) responde à objeção de que "aprender pelo aprender" é elitista: mostra como a aprendizagem desinteressada pode ser articulada em sistemas educacionais reais (Brust, 2021). No plano da evidência psicológica, <strong>Daniela Dumitru</strong> (2019) tenta medir a contribuição das artes e humanidades para o pensamento crítico (Dumitru, 2019).</p>
+<h3 id="65-a-europa-e-o-sul-global">6.5 A Europa e o Sul Global</h3>
+<p><strong>Peter Kelly</strong> (2020) situa o debate na Europa pós-giro populista: a "elite liberal" virou alvo político, e a defesa da educação liberal mudou de natureza — tornou-se também autodefesa democrática (Kelly, 2020). <strong>Yan e Morris</strong> (2024) documentam a vida e a morte dos <em>Liberal Studies</em> de Hong Kong após a transferência de soberania — evidência de como fatores políticos locais reconfiguram um currículo (Yan e Morris, 2024). <strong>Sae Shimauchi e Akiyoshi Yonezawa</strong> (2024) mostram que "liberal arts education" significa coisas distintas no Japão e na Coreia do Sul (Shimauchi e Yonezawa, 2024). E <strong>Christopher Love</strong> (2024) enfrenta a objeção clássica de que a educação liberal pura é incompatível com a formação cívica: distingue a "educação liberal pura" — temporariamente liberada das preocupações utilitárias — e mostra como preservar seu espírito sem abandonar a cidadania (Love, 2024). <strong>Gregory McBrayer</strong> (2024) argumenta que as leis de educação cívica chegam tarde demais: a formação do cidadão precisa começar na educação elementar e média (McBrayer, 2024).</p>
+<h2 id="7-a-educacao-liberal-no-brasil-e-no-mundo-lusofono">7. A educação liberal no Brasil e no mundo lusófono</h2>
+<h3 id="71-a-tradicao-traduzida">7.1 A tradição traduzida</h3>
+<p>A recepção brasileira da educação liberal é antiga e específica. No período colonial, os colégios jesuíticos praticaram as artes liberais — <strong>Amarilio Ferreira Jr. e Marisa Bittar</strong> (2012) demonstram documentalmente a imbricação entre artes liberais e ofícios mecânicos na pedagogia da Companhia de Jesus no Brasil, mostrando que as duas esferas eram complementares na formação colonial (Ferreira Jr. e Bittar, 2012). No século XX, a mediação principal foi católica: <strong>Jacques Maritain</strong>, em <em>Education at the Cross-Roads</em>, traduzido no Brasil como <em>Rumos da Educação</em> (Agir, 1968), critica simultaneamente a "educação clássica" e a "educação nova" e defende o humanismo integral — o texto se tornou o principal mapa do debate brasileiro (Maritain, 1968; Oliveira e de Campos, 2018). <strong>Terezinha Oliveira e Névio de Campos</strong> (2018) estudam exatamente essa "educação liberal em Jacques Maritain" e sua interlocução com a Escola Nova (Oliveira e de Campos, 2018).</p>
+<h3 id="72-o-debate-brasileiro-contemporaneo">7.2 O debate brasileiro contemporâneo</h3>
+<p>A produção acadêmica brasileira recente é crítica e sociológica. <strong>Benedicto Silva</strong> (1968), já nos anos 1960, contrastava a concepção clássica — formação da humanidade, virtudes intelectuais e morais, bons cidadãos — com o treinamento vocacional (Silva, 1968). <strong>Hans-Georg Flickinger</strong> (2023) analisa a dinâmica contraditória da formação na sociedade (neo)liberal: o princípio de liberdade convive com a racionalidade econômica do capital, que faz da pessoa elemento funcional (Flickinger, 2023). <strong>Vicente Zatti</strong> (2023) retoma o vocabulário clássico — a educação "desinteressada" que visa ao homem enquanto homem — para contrastá-lo com a educação profissional e tecnológica contemporânea (Zatti, 2023). A coletânea <em>Trivium e quadrivium: as artes liberais na Idade Média</em> (coord. Lênia Mongelli, Ibis, 1999) é o principal volume brasileiro sobre a história do tema (Mongelli, 1999).</p>
+<h3 id="73-traducoes-disponiveis-em-portugues">7.3 Traduções disponíveis em português</h3>
+<table>
+<thead>
+<tr>
+<th>Obra</th>
+<th>Tradução / edição PT</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aristóteles, <em>Política</em></td>
+<td>Martins Fontes, trad. Roberto Leal Ferreira</td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>Quintiliano, <em>Instituição oratória</em> (4 tomos)</td>
+<td>Editora da Unicamp, trad. Bruno Fregni Bassetto, 2015</td>
+<td>[V-ED]</td>
+</tr>
+<tr>
+<td>Cícero, <em>Os deveres</em></td>
+<td>Editora da Unicamp/EDUFU, trad. Bruno Fregni Bassetto, 2025</td>
+<td>[V-ED]</td>
+</tr>
+<tr>
+<td>Jaeger, <em>Paideia</em> (3 vols.)</td>
+<td>Martins Fontes, trad. Artur M. Paro (1ª ed. 1966)</td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>Marrou, <em>História da Educação na Antiguidade</em></td>
+<td>Kírion, trad. Mário Leônidas Casanova, 2017</td>
+<td>[V-ED]</td>
+</tr>
+<tr>
+<td>Maritain, <em>Rumos da Educação</em></td>
+<td>Agir, 1968 (trad. Abadia de N. S. das Graças)</td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>Newman, <em>A Idéia de uma Universidade</em></td>
+<td>Ecclesiae, 2020 (+ antologia EDUSC, 2001)</td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>C. S. Lewis, <em>A Abolição do Homem</em></td>
+<td>Martins Fontes; Thomas Nelson Brasil, 2017</td>
+<td>[V-WP]</td>
+</tr>
+<tr>
+<td>Bloom, <em>O declínio da cultura ocidental</em></td>
+<td>Best Seller, 1989, trad. João Alves dos Santos</td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>Nussbaum, <em>Sem Fins Lucrativos</em></td>
+<td>WMF Martins Fontes, 2015, trad. Fernando Santos</td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>Lukianoff &amp; Haidt, <em>The Coddling of the American Mind</em></td>
+<td>PT-PT: Guerra &amp; Paz, <em>A infantilização da mente moderna</em></td>
+<td>[W]</td>
+</tr>
+<tr>
+<td>Arnold, <em>Culture and Anarchy</em></td>
+<td>Sem tradução conhecida</td>
+<td>[—]</td>
+</tr>
+<tr>
+<td>Zakaria, <em>In Defense of a Liberal Education</em></td>
+<td>Sem tradução conhecida</td>
+<td>[—]</td>
+</tr>
+<tr>
+<td>Oakeshott, <em>The Voice of Liberal Learning</em></td>
+<td>Sem tradução conhecida</td>
+<td>[—]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-estudos-e-comentarios-de-referencia">8. Estudos e comentários de referência</h2>
+<p>Resumo detalhado das obras que o leitor deve conhecer para dominar o campo (conteúdo, abordagem e valor de cada uma):</p>
+<p><strong>Jaeger, <em>Paideia</em> (1933-1947; trad. BR 1966)</strong> — Três volumes que reconstroem a formação do espírito grego, da época arcaica a Platão e Aristóteles. Abordagem: história das ideias educacionais como história da cultura. Valor: a obra que fixou <em>paideia</em> como categoria interpretativa — referência obrigatória de qualquer histórico do conceito (Jaeger, 1959).</p>
+<p><strong>Marrou, <em>Histoire de l'éducation dans l'Antiquité</em> (1948; trad. BR Kírion, 2017)</strong> — Síntese historiográfica da Grécia arcaica a Justiniano. Tese central: a <em>paideia</em> é formação do todo humano pelo conteúdo, não por técnicas. Cobre o colégio, o trivium/quadrivium e o nascimento da universidade medieval. Valor: a porta de entrada mais segura para o período, agora disponível em português (Marrou, 1965).</p>
+<p><strong>Newman, <em>The Idea of a University</em> (1852)</strong> — Nove discursos sobre a natureza da universidade. Tese: o conhecimento é fim em si mesmo; a mente formada filosoficamente serve a qualquer fim; a universidade não existe para a utilidade. Abordagem: teologia e filosofia da educação. Valor: texto fundador do argumento institucional; também a peça mais contestada (Newman, 1976).</p>
+<p><strong>Hutchins, <em>The Higher Learning in America</em> (1936)</strong> — Diagnóstico da massificação: a universidade trocou o cultivo da mente pelo treinamento vocacional. Propõe a metafísica como núcleo do currículo comum. Valor: origem do movimento Great Books e de todo o debate curricular do século XX (Hutchins, 1936).</p>
+<p><strong>Oakeshott, <em>The Voice of Liberal Learning</em> (1989)</strong> — Coletânea dos ensaios sobre educação. Tese: a educação é entrada na "conversa da humanidade" — um mundo herdado de significados em que não se entra para se preparar, mas para participar. Valor: a formulação filosófica mais completa do liberal learning no século XX (Oakeshott, 1989).</p>
+<p><strong>Kimball, <em>Orators &amp; Philosophers</em> (1986)</strong> — História institucional de cem anos de educação liberal americana. Tese: o campo oscila entre dois ideais — a formação do orador-cidadão (Isócrates) e a formação do filósofo (Platão). Valor: o mapa estrutural do debate, indispensável para situar qualquer posição (Kimball, 1986).</p>
+<p><strong>Bloom, <em>The Closing of the American Mind</em> (1987)</strong> — Ensaio de intervenção best-seller. Tese: o relativismo dos anos 1960 fechou a mente americana; a universidade abandonou o cânone e a razão. Abordagem: crítica cultural com base na experiência docente. Valor: o livro que reabriu a guerra cultural e transformou o debate público (Bloom, 1987).</p>
+<p><strong>Nussbaum, <em>Cultivating Humanity</em> (1997) e <em>Not for Profit</em> (2010)</strong> — A defesa democrática da educação liberal. Tese: as humanidades formam o cidadão crítico (ciclo socrático, imaginação narrativa, cidadania mundial); sem elas, a democracia morre de inanição. Valor: a referência normativa do campo desde os anos 1990; <em>Not for Profit</em> traduzido no Brasil como <em>Sem Fins Lucrativos</em> (Nussbaum, 1997; 2010).</p>
+<p><strong>Zakaria, <em>In Defense of a Liberal Education</em> (2015)</strong> — Defesa popular e econômica: as humanidades ensinam as habilidades que a economia da inovação premia; STEM + artes liberais são complementares. Valor: o argumento mais acessível para o leitor não especializado (Zakaria, 2015).</p>
+<p><strong>Delbanco, <em>College: What It Was, Is, and Should Be</em> (2013)</strong> — História afetiva do college americano. Tese: a instituição é uma comunidade de formação, não um mercado de credenciais; o college é o "lugar habitado" da democracia. Abordagem: história institucional + ensaio. Valor: o contraponto histórico às narrativas puramente econômicas (Delbanco, 2013).</p>
+<p><strong>Montás, <em>Rescuing Socrates</em> (2021)</strong> — Memória intelectual de um imigrante dominicano formado em Columbia. Tese: os Grandes Livros são instrumento de libertação e justiça social — democratizar o cânone é democratizar o poder. Valor: a ponte entre a tradição e a questão da inclusão (Montás, 2021).</p>
+<p><strong>Deresiewicz, <em>Excellent Sheep</em> (2014) e Lukianoff &amp; Haidt, <em>The Coddling of the American Mind</em> (2018)</strong> — As duas críticas de dentro que definiram a última década: a primeira sobre a elite ansiosa e conformista; a segunda sobre o <em>safetyism</em> que impede a formação do caráter. Valor: leitura obrigatória para entender o debate 2014-2026 (Deresiewicz, 2014; Lukianoff e Haidt, 2018).</p>
+<p><strong>Roth, <em>Beyond the University</em> (2014) e Collini, <em>What Are Universities For?</em> (2012)</strong> — Histórias intelectuais complementares: Roth reconstrói a matriz transcendentalista (Emerson, Thoreau) do college americano; Collini reconstrói o ethos de investigação da universidade europeia e o propósito perdido. Valor: o melhor antídoto contra as narrativas declinistas simplistas (Roth, 2014; Collini, 2012).</p>
+<p><strong>Apfeld e Coman, <em>A Liberal Education</em> (2024) e Taylor, <em>Liberal Education and Democracy</em> (2025)</strong> — O estado da arte normativo: o primeiro reconstrói o conceito em teoria do espaço público; o segundo, em chave rawlsiana, contra a polarização. Valor: os pontos de chegada mais atuais da linha filosófica (Apfeld e Coman, 2024; Taylor, 2025).</p>
+<h2 id="9-sites-e-instituicoes-especializadas">9. Sites e instituições especializadas</h2>
+<h3 id="91-associacoes-e-consorcios">9.1 Associações e consórcios</h3>
+<ul>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>AAC&amp;U — Association of American Colleges and Universities</strong> (<a href="https://www.aacu.org/">aacu.org</a>). Associação de colleges e universidades norte-americanas; mantém a iniciativa <strong>LEAP</strong> (Liberal Education and America's Promise) e o catálogo de <em>high-impact practices</em>. Principal máquina institucional de definição e defesa da educação liberal nos EUA.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>American Council of Trustees and Alumni (ACTA)</strong> (<a href="https://www.goacta.org/">goacta.org</a>). Organização dedicada a liberdade acadêmica, excelência e transparência; produz o relatório <strong>What Will They Learn?</strong> e o programa <em>Oases of Excellence</em>, que defendem currículos de artes liberais contra a especialização utilitária. Posição adversarial à AAC&amp;U — ler os dois lados do debate institucional.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Great Books Foundation</strong> (<a href="https://www.greatbooks.org/">greatbooks.org</a> · <a href="https://www.greatbooks.org/nonprofit-organization/history/">história</a>). Fundada em 1947 por <strong>Robert Maynard Hutchins</strong> e <strong>Mortimer J. Adler</strong> na Universidade de Chicago; forma professores no método <strong>Shared Inquiry</strong> e publica materiais de leitura e discussão. A continuidade institucional mais direta do movimento Great Books.</li>
+</ul>
+<h3 id="92-instituicoes-com-curriculo-de-grandes-livros">9.2 Instituições com currículo de Grandes Livros</h3>
+<ul>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>St. John's College</strong> (Annapolis e Santa Fe) — <a href="https://www.sjc.edu/academic-programs">programa acadêmico</a> · <a href="https://www.sjc.edu/academic-programs/undergraduate/great-books-reading-list">lista de leitura Great Books</a>. Faculdade de artes liberais fundada em 1696; adotou o currículo de Grandes Livros em <strong>1937</strong>, sem cursos de especialização — apenas leitura e seminários. O modelo mais puro de educação liberal em existência.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Hillsdale College — Classical Liberal Arts Core</strong> (<a href="https://www.hillsdale.edu/academics/classical-liberal-arts-core/">hillsdale.edu</a>). Núcleo de cursos de cerca de dois anos, comum a todos os estudantes, cobrindo humanidades, ciências naturais e ciências sociais.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Lyceum Institute</strong> (<a href="https://lyceum.institute/">lyceum.institute</a>). Instituto americano de educação liberal online, organizado em torno de língua, trivium, filosofia e pesquisa, com tutoria por escrito.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Paideia Institute for Humanistic Study</strong> (<a href="https://www.paideiainstitute.org/">paideiainstitute.org</a> · <a href="https://www.paideiainstitute.org/about">about</a>). Organização sem fins lucrativos dedicada às humanidades clássicas; cursos síncronos de latim e grego antigo.</li>
+</ul>
+<h3 id="93-enciclopedias-e-verbetes-de-referencia">9.3 Enciclopédias e verbetes de referência</h3>
+<ul>
+<li><span class="badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #6a1b9a;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[ACAD]</span> <strong>Stanford Encyclopedia of Philosophy — "Philosophy of Education"</strong> (<a href="https://plato.stanford.edu/entries/education-philosophy/">plato.stanford.edu</a>). Verbete com pares anônimos publicado em 11 fev. 2025; cobre o debate currículo comum vs. currículos diferenciados — o núcleo filosófico da questão da educação liberal.</li>
+<li><span class="badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #6a1b9a;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[ACAD]</span> <strong>Internet Encyclopedia of Philosophy</strong> (<a href="https://iep.utm.edu/">iep.utm.edu</a>). Enciclopédia aberta escrita por profissionais (ISSN 2161-0002). Não há verbete IEP específico para "liberal education" — o equivalente mais próximo é "Renaissance Philosophy".</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Encyclopaedia Britannica — "Liberal arts"</strong> (<a href="https://www.britannica.com/topic/liberal-arts">britannica.com/topic/liberal-arts</a>). Verbete canônico: define artes liberais como currículo de conhecimento geral em contraste com o profissionalizante, e lista como figuras-chave Cassiodoro, Martianus Capella e Mortimer Adler.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Encyclopedia.com — "Liberal Arts"</strong> (<a href="https://www.encyclopedia.com/social-sciences-and-law/education/education-terms-and-concepts/liberal-arts">verbete</a>). Verbete do <em>New Dictionary of the History of Ideas</em> sobre a genealogia do conceito, da Roma tardia ao uso moderno.</li>
+</ul>
+<h3 id="94-cursos-abertos-e-plataformas-de-conteudo">9.4 Cursos abertos e plataformas de conteúdo</h3>
+<ul>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Open Yale Courses</strong> (<a href="https://oyc.yale.edu/courses">oyc.yale.edu/courses</a>). Aulas completas em vídeo de cursos de Yale, com syllabi, leituras e provas.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>HarvardX — Classical Works XSeries</strong> (<a href="https://www.edx.org/xseries/harvardx-classical-works">edx.org/xseries/harvardx-classical-works</a>). Série de 5 cursos (14 semanas) sobre obras clássicas, incluindo "Shakespeare's Life and Work". Pago, com pré-visualização gratuita.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Idler Academy</strong> (<a href="https://www.idler.co.uk/academy/">idler.co.uk/academy</a>). Rede independente de cursos online de filosofia, humanidades e artes (mais de 85 cursos), associada à revista <em>Idler</em>.</li>
+</ul>
+<h3 id="95-instituicoes-e-centros-lusofonos">9.5 Instituições e centros lusófonos</h3>
+<ul>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Instituto CPFL — Café Filosófico</strong> (<a href="https://institutocpfl.org.br/cafe-filosofico/">institutocpfl.org.br/cafe-filosofico</a>). Programa de TV e encontros quinzenais do Instituto CPFL (Campinas), exibido pela TV Cultura desde 2003. A experiência brasileira mais próxima da filosofia pública organizada.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Centro de Estudos Clássicos da Universidade de Lisboa — eClassica</strong> (<a href="https://centroclassicos.letras.ulisboa.pt/eclassica/">centroclassicos.letras.ulisboa.pt/eclassica</a>). Revista anual com revisão por pares de estudos clássicos — referência lusófona para a helenística e a latina.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Boletim de Estudos Clássicos</strong> (<a href="https://impactum-journals.uc.pt/">impactum-journals.uc.pt</a>). Publicação da Associação Portuguesa de Estudos Clássicos (Universidade de Coimbra).</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Revista Discurso — Departamento de Filosofia da USP</strong> (<a href="https://filosofia.fflch.usp.br/publicacoes/discurso">filosofia.fflch.usp.br/publicacoes/discurso</a>). Órgão oficial do Departamento de Filosofia da USP, criado em 1970.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Jornal da USP — Ciências Humanas</strong> (<a href="https://jornal.usp.br/editorias/ciencias/ciencias-humanas/">jornal.usp.br/editorias/ciencias/ciencias-humanas</a>). Divulgação institucional da pesquisa em humanidades.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Revista Educação (COREESP)</strong> (<a href="https://revistaeducacao.com.br/">revistaeducacao.com.br</a>). Publicação independente sobre políticas e teoria educacionais no Brasil.</li>
+</ul>
+<h2 id="10-blogs-e-plataformas-de-ensaio">10. Blogs e plataformas de ensaio</h2>
+<h3 id="101-ensaios-de-referencia-com-autoria-e-data-verificadas">10.1 Ensaios de referência (com autoria e data verificadas)</h3>
+<ul>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>John Taylor</strong>, <a href="https://aeon.co/essays/can-school-today-teach-anything-more-than-how-to-pass-exams">“The examined life: Can school today teach anything more than how to pass exams?”</a>. <em>Aeon</em>, 6 out. 2016. Defende a sala em círculo e o método socrático como alternativa ao ensino por prova.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>C. D. C. Reeve</strong>, <a href="https://aeon.co/essays/for-aristotle-education-is-what-equips-us-for-a-better-life">“The well-educated person: For Aristotle, education is what equips us for a better life”</a>. <em>Aeon</em>, 23 set. 2019. Argumento aristotélico: a educação é para a vida inteira, não para a vida profissional.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>David Bakhurst</strong>, <a href="https://aeon.co/essays/education-should-matter-to-philosophy-what-took-so-long">“Philosophy's blindspot: Education should matter to philosophy”</a>. <em>Aeon</em>, 6 jan. 2023. A filosofia deve tratar a educação como objeto prático de primeira ordem.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Bradley G. Green</strong>, <a href="https://theimaginativeconservative.org/2023/05/recovery-liberal-arts-bradley-green.html">“On the Recovery of the Liberal Arts”</a>. <em>The Imaginative Conservative</em>, 21 maio 2023. A recuperação das artes liberais ligada a uma concepção cristã de verdade.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Velvet Favretto</strong>, <a href="https://quillette.com/2018/05/21/postmodernism-decline-liberal-arts/">“Postmodernism and the Decline of the Liberal Arts”</a>. <em>Quillette</em>, 21 maio 2018. O pós-modernismo como erosão da liberdade intelectual.</li>
+</ul>
+<h3 id="102-revistas-e-plataformas-de-ensaio">10.2 Revistas e plataformas de ensaio</h3>
+<ul>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>The Hedgehog Review</strong> (<a href="https://hedgehogreview.com/">hedgehogreview.com</a>). Revista trimestral do <em>Institute for Advanced Studies in Culture</em> da Universidade da Virgínia — "reflexões críticas sobre a cultura contemporânea".</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>The Point Magazine</strong> (<a href="https://thepointmag.com/">thepointmag.com</a>). Revista de filosofia sobre a vida cotidiana, ligada ao <em>Committee on Social Thought</em> de Chicago.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Public Discourse</strong> (<a href="https://www.thepublicdiscourse.com/">thepublicdiscourse.com</a>). Revista online do <em>Witherspoon Institute</em> (Princeton), fundada em 2008; foco na fundação moral de sociedades livres.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>The Imaginative Conservative</strong> (<a href="https://theimaginativeconservative.org/">theimaginativeconservative.org</a> · <a href="https://theimaginativeconservative.org/category/education/">categoria Educação</a>). Cultura, artes, liberal learning e fé, fundada em 2010 por Bradley J. Birzer.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>First Things</strong> (<a href="https://firstthings.com/">firstthings.com</a>). Revista do <em>Institute on Religion and Public Life</em> (1989, Richard John Neuhaus); filosofia pública confessional.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>American Purpose</strong> (<a href="https://americanpurpose.com/">americanpurpose.com</a>). Revista fundada em out. 2020, presidida por Francis Fukuyama; ensaios sobre humanidades e cultura.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Project Syndicate</strong> (<a href="https://www.project-syndicate.org/">project-syndicate.org</a>). Agência internacional de comentários de mais de 80 países, com seção de educação.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Aeon</strong> (<a href="https://aeon.co/">aeon.co</a> · <a href="https://aeon.co/society/education">seção Educação</a>). Ensaios e vídeos sobre filosofia, história de ideias e ética, sem fins lucrativos.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>IAI TV — International Academy of Ideas</strong> (<a href="https://iai.tv/">iai.tv</a> · <a href="https://iai.tv/education">seção Educação</a>). Biblioteca com mais de 3.000 vídeos e artigos de pensadores.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Chronicle of Higher Education</strong> (<a href="https://www.chronicle.com/">chronicle.com</a>) · <strong>Inside Higher Ed</strong> (<a href="https://www.insidehighered.com/news">insidehighered.com</a>) · <strong>Times Higher Education</strong> (<a href="https://www.timeshighereducation.com/">timeshighereducation.com</a>) — a imprensa especializada do debate sobre o futuro das artes liberais (paywall parcial).</li>
+</ul>
+<h3 id="103-blogs-brasileiros-e-lusofonos">10.3 Blogs brasileiros e lusófonos</h3>
+<ul>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Fábio Gonçalves</strong>, <a href="https://blog.literaturaclassica.com.br/cultura/educar-com-os-classicos-ainda-e-possivel-parte-2-4/">“Educar com os clássicos: ainda é possível? — Parte 2/4”</a>. <em>Blog Literatura Clássica</em>, 30 jun. 2025. Série em quatro partes sobre como o método clássico de ensino da língua consolidou-se no mundo helenístico e virou a base das artes liberais — a melhor síntese em português da cadeia entre helenismo, trivium e artes liberais.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Gessica</strong>, <a href="https://vias-classicas.com/blog/leituras-e-conversas-inteligentes/">“Leituras e conversas inteligentes”</a>. <em>Vias Clássicas</em>, 15 out. 2023 (atualizado mar. 2026). A leitura-diálogo como método de formação.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Bruno Philippe</strong>, <a href="https://www.academuslab.com.br/post/educa%C3%A7%C3%A3o-cl%C3%A1ssica-conhe%C3%A7a-a-hist%C3%B3ria-do-trivium">“Educação Clássica: Conheça a História do Trivium”</a>. <em>Academuslab — Reflexões Clássicas em Filosofia, Literatura e Educação</em>. Graduado em Filosofia pela UFMG, professor de Filosofia.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Portal Educação Clássica</strong> (<a href="https://www.educacaoclassica.com/">educacaoclassica.com</a>). Fundado em 2018 por Barbara Lores e Marcos Vieira (Academia Dulcis Domus); define a educação clássica como "o cultivo da sabedoria e da virtude... por meio das sete artes liberais". O polo cristão confessional da educação clássica brasileira.</li>
+<li><span class="badge" style="background:#eceff1;color:#37474f;border:1px solid #37474f;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[SITE]</span> <strong>Instituto Liberal</strong> (<a href="https://www.institutoliberal.org.br/category/blog/">institutoliberal.org.br</a>). Atenção: trata de liberalismo econômico, não de educação liberal no sentido das artes liberais — útil apenas para o contraste conceitual.</li>
+</ul>
+<h3 id="104-blogs-de-educacao-classica-em-ingles">10.4 Blogs de educação clássica em inglês</h3>
+<ul>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Farnam Street</strong>, <a href="https://fs.blog/great-books/">“The Great Books”</a>. Blog de Shane Parrish, 30 out. 2013 (atual. 2019). Lista comentada dos livros que constroem uma base de conhecimento.</li>
+<li><span class="badge" style="background:#fff3e0;color:#e65100;border:1px solid #e65100;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[BLOG]</span> <strong>Scholé Sisters</strong> (<a href="https://scholesisters.com/">scholesisters.com</a> · <a href="https://scholesisters.com/podcast/">podcast</a>). Blog e podcast de educação clássica cristã desde 2014 (Sarah Mackenzie, <em>Teaching from Rest</em>).</li>
+</ul>
+<h2 id="11-videos-canais-de-youtube-e-audiovisual">11. Vídeos, canais de YouTube e audiovisual</h2>
+<blockquote>
+<p>Todos os títulos, canais e datas foram verificados diretamente no YouTube (oEmbed + metadados); a indicação de legenda PT-BR aparece apenas onde confirmada.</p>
+</blockquote>
+<h3 id="111-canais-de-colleges-de-grandes-livros-o-nucleo-mais-denso">11.1 Canais de colleges de Grandes Livros (o núcleo mais denso)</h3>
+<ul>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@stjohnscollege">@St. John's College</a></strong> — a instituição de currículo de Grandes Livros publica seus próprios seminários. Destaques:</li>
+<li>Roosevelt Montás, <a href="https://www.youtube.com/watch?v=AsU5LcTiZlI">“Great Books Education: Two Millennia of Corrupting Youth &amp; Challenging Authority”</a> (16 abr. 2022). <strong>Legenda PT-BR automática.</strong></li>
+<li><a href="https://www.youtube.com/watch?v=lM7A0uaY4nE">“Liberal Education and St. John's College”</a> (21 nov. 2014). <strong>Legenda PT-BR automática.</strong></li>
+<li><a href="https://www.youtube.com/watch?v=-74gld3t69w">“Tutors Talk (&amp; Read) Books: Andy Kingston, Santa Fe”</a>. O seminário em ato. <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@theramsaycentreforwesternc623">@theramsaycentreforwesternc623</a></strong> — The Ramsay Centre for Western Civilisation (Austrália), série "Great Books of the Western Canon":</li>
+<li>Roosevelt Montás, <a href="https://www.youtube.com/watch?v=MYyDzmI6ZDE">“The Liberal Arts: why they matter more than ever”</a> (17 out. 2022). <strong>Legenda PT-BR automática.</strong></li>
+<li><a href="https://www.youtube.com/watch?v=cgTN4PLBcRM">“Shakespeare's Macbeth | Video 5”</a> (8 jul. 2020). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@PaideiaMedia">@PaideiaMedia</a></strong> — Paideia Institute; aulas em grego antigo:</li>
+<li>Joanna Thornhill, <a href="https://www.youtube.com/watch?v=Mrt9WZI4QqE">“Happiness in Leisure | Lecture in ANCIENT GREEK”</a> (29 abr. 2026). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@Threadways">@Threadways</a></strong> — Dr. Jon Sozek, playlist <a href="https://www.youtube.com/watch?v=1YScxuOVRxo">“The Trivium”</a>: <a href="https://www.youtube.com/watch?v=1YScxuOVRxo">"The liberal arts (The Trivium, Part 1)"</a> (16 mar. 2023) — "as artes liberais são as artes que liberam". <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@southwesternuniversity">@southwesternuniversity</a></strong> — <a href="https://www.youtube.com/watch?v=-wkKbwRZCns">“What is Paideia?”</a> (11 ago. 2021). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@NYUADInstitute">@NYUADInstitute</a></strong> — <a href="https://www.youtube.com/watch?v=tfwOMszbXb0">“The Case for Liberal Education”</a> (5 fev. 2016). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@hillsdalecollege">@hillsdalecollege</a></strong> — <a href="https://www.youtube.com/watch?v=kLetN_B4qPQ">“What is the Core Curriculum?”</a> (9 ago. 2019). <strong>Legenda PT-BR automática.</strong></li>
+</ul>
+<h3 id="112-palestras-de-academicos-autores-verificados">11.2 Palestras de acadêmicos (autores verificados)</h3>
+<ul>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Martha Nussbaum</strong> — duas conferências, ambas com <strong>legenda PT-BR automática</strong>: <a href="https://www.youtube.com/watch?v=A_IR1ClD3Ns">“Humanistic Education &amp; Global Justice”</a> (Hebrew University, 19 set. 2010) e <a href="https://www.youtube.com/watch?v=nu1vVS0ZvfM">“Education in the global context”</a> (ISS, 28 jun. 2013).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Anthony Kronman</strong> (Yale Law) — três conferências com <strong>legenda PT-BR automática</strong>: <a href="https://www.youtube.com/watch?v=BOVXUPp4_mo">“Why Colleges and Universities Have Given Up on the Meaning of Life”</a>; <a href="https://www.youtube.com/watch?v=bqU9wAcEZBA">“The Assault on American Excellence”</a>; e o debate com Andrew Delbanco <a href="https://www.youtube.com/watch?v=bh75m3zfEQc">“Does Wisdom Have a Role in the 21st Century University?”</a> (Baylor, 17 jun. 2021).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Roosevelt Montás</strong> (Columbia) — quatro conferências com <strong>legenda PT-BR automática</strong>: <a href="https://www.youtube.com/watch?v=6pI1tezkQQo">“Democratizing the Great Books”</a> (American University, 22 abr. 2021); <a href="https://www.youtube.com/watch?v=3RJjBgNVVpk">“What Does the Declaration of Independence Declare?”</a> (Moynihan Center, 30 jun. 2026); <a href="https://www.youtube.com/watch?v=ci9bQxni3TI">TEDx TeachersCollege</a> (18 ago. 2013); e <a href="https://www.youtube.com/watch?v=n9Pc_pWjthY">charla em espanhol</a> (Universidad Adolfo Ibáñez, 17 jun. 2016).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Fareed Zakaria</strong> — <a href="https://www.youtube.com/watch?v=Kr2ZroxiZP4">“STEM and the Liberal Arts Were a Power Couple”</a> (Big Think, 27 abr. 2015) e <a href="https://www.youtube.com/watch?v=Ye3RBajmBYw">“The Value of Liberal Education” em conversa com Leon Botstein</a> (CUNY, 14 dez. 2015). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Elizabeth Corey</strong> (Baylor, especialista em Oakeshott) — <a href="https://www.youtube.com/watch?v=D3hGKsN4bIk">“Oakeshott on Liberal Education”</a> (ISI, 21 set. 2021) e <a href="https://www.youtube.com/watch?v=iG73lps5jjk">“The Voice of Liberal Learning”</a>. <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong>Stanley Fish</strong> — <a href="https://www.youtube.com/watch?v=HqKsAMBEGG8">“Liberal Arts Ed. Needs No Justification”</a> (FORA.tv, 7 set. 2011). <strong>Legenda PT-BR automática.</strong> O contraponto mais provocador da lista.</li>
+</ul>
+<h3 id="113-instituicoes-e-canais-de-humanidades">11.3 Instituições e canais de humanidades</h3>
+<ul>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@WirelessPhilosophy">@WirelessPhilosophy</a></strong> — projeto apoiado por Yale, Stanford, Oxford e MIT; <a href="https://www.youtube.com/watch?v=VFPBf1AZOQg">“The Good Life: Aristotle”</a> (8 set. 2015). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@theschooloflifetv">@theschooloflifetv</a></strong> — fundado por Alain de Botton; <a href="https://www.youtube.com/watch?v=HndV87XpkWg">“What's Education For?”</a> (13 mai. 2015), <strong>legenda PT-BR oficial</strong>; <a href="https://www.youtube.com/watch?v=-Egxm5QuW9o">“Success at School vs Success in Life”</a> (18 jul. 2016).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@academyofideas">@academyofideas</a></strong> — <a href="https://www.youtube.com/watch?v=pScJa4ZbYo0">“The Benefits of Reading Great Books”</a> (29 mar. 2019). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@dartmouth">@dartmouth</a></strong> — <a href="https://www.youtube.com/watch?v=KBc3nMi1D3k">“The Liberal Arts at Dartmouth: What Lies Ahead?”</a> (20 set. 2013). <strong>Legenda PT-BR automática.</strong></li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@UofGArtsHums">@UofGArtsHums</a></strong> — University of Glasgow: <a href="https://www.youtube.com/watch?v=dMfRhc8zSPs">“Studying Liberal Arts at the University of Glasgow”</a> (24 abr. 2026). <strong>Legenda PT-BR automática.</strong> Perspectiva europeia.</li>
+</ul>
+<h3 id="114-canais-e-videos-em-portugues">11.4 Canais e vídeos em português</h3>
+<ul>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@cafefilosofico_cpfl">@cafefilosofico_cpfl</a></strong> — Café Filosófico CPFL: centenas de encontros gravados com especialistas, em português (ex.: <a href="https://www.youtube.com/watch?v=6K2srG9lhX0">Clóvis de Barros Filho</a>, 30 jan. 2025).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@sociedadedosleitores">@sociedadedosleitores</a></strong> — <a href="https://www.youtube.com/watch?v=dnzX5uhy8f4">“RESUMO ILUSTRADO: EDUCAÇÃO LIBERAL — TRIVIUM E QUADRIVIUM”</a> (14 jun. 2021). Síntese visual do tema em português.</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@osgrandeslivrosdacivilizac2615">@osgrandeslivrosdacivilizac2615</a></strong> — <a href="https://www.youtube.com/watch?v=Juu3ggoOItM">“O que é a Educação Liberal?”</a> (26 jun. 2019).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@CaioCaldeira">@CaioCaldeira</a></strong> — <a href="https://www.youtube.com/watch?v=WxlHK5hGmak">“O QUE É TRIVIUM E QUADRIVIUM? | ARTES LIBERAIS | EDUCAÇÃO CLÁSSICA”</a> (9 abr. 2020).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@culturaperene4558">@culturaperene4558</a></strong> — Prof. José Monir Nasser, <a href="https://www.youtube.com/watch?v=AA_cBJstPdw">“Paidéia — Introdução”</a> (15 dez. 2021).</li>
+<li><span class="badge" style="background:#ffebee;color:#c62828;border:1px solid #c62828;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[YT]</span> <strong><a href="https://www.youtube.com/@istonaoefilosofia">@istonaoefilosofia</a></strong> — Prof. Vitor Lima, <a href="https://www.youtube.com/watch?v=Q09AzB1vaQQ">“Pré-socráticos | Filosofia Antiga | Aula 01”</a>, curso de história da filosofia em português.</li>
+</ul>
+<h2 id="12-documentarios-filmes-e-podcasts">12. Documentários, filmes e podcasts</h2>
+<h3 id="121-documentarios">12.1 Documentários</h3>
+<ul>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[DOC]</span> <strong>Young Plato</strong> — Neasa Ní Chianáin e Declan McGrath, 2021, Irlanda/UK/França/Bélgica. <a href="https://youngplato.com/">Site oficial</a>. Um diretor de escola primária em Belfast ensina filosofia a crianças de uma comunidade operária, invocando Platão — o cerne da paideia em ato. Somente EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[DOC]</span> <strong>Ivory Tower</strong> — Andrew Rossi, CNN Films, 2014, 97 min. <a href="https://www.cnn.com/shows/ivory-tower">Página CNN</a>. O custo da universidade e a finalidade do curso superior nos EUA. Somente EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[DOC]</span> <strong>Ensino de Filosofia: em defesa do pensamento crítico</strong> — Diego Felipe Souza e Vladimir Santafé, Brasil, 2020, 44 min, <strong>em português</strong>. <a href="https://www.pressenza.com/pt-pt/2020/10/ensino-de-filosofia-em-defesa-do-pensamento-critico/">Ficha (Pressenza)</a>. O debate sobre o ensino de filosofia após a Reforma do Ensino Médio — único documentário brasileiro verificado sobre o tema.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[DOC]</span> <strong>Civilisations</strong> — BBC Two, com Simon Sebag Montefiore. <a href="https://www.bbc.co.uk/programmes/p05xxp5j">Página BBC</a>. A cultura visual humana como contrapeso humanista.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[DOC]</span> <strong>Fry's Planet Word — Babel</strong> — BBC Two, Stephen Fry, 2010. <a href="https://www.bbc.co.uk/programmes/b015d4qz">Página BBC</a>. A linguagem como base do trivium.</li>
+</ul>
+<h3 id="122-filmes-de-ficcao">12.2 Filmes de ficção</h3>
+<ul>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[FILME]</span> <strong>The History Boys</strong> — Richard Eyre, 2006, baseado na peça de Alan Bennett. <a href="https://www.imdb.com/title/tt0464049/">IMDb</a>. O conflito entre o linguisticamente útil e o culturalmente formador. Legendado PT-BR.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[FILME]</span> <strong>The Emperor's Club</strong> — Michael Hoffman, 2002. <a href="https://www.imdb.com/title/tt0283530/">IMDb</a>. O seminário socrático em forma de filme. Dublado PT-BR disponível.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[FILME]</span> <strong>Ágora</strong> — Alejandro Amenábar, 2009. <a href="https://www.imdb.com/title/tt1186830/">IMDb</a>. Hipátia de Alexandria e a destruição da paideia. Dublado PT-BR disponível.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[FILME]</span> <strong>Socrates</strong> — Roberto Rossellini, 1971. <a href="https://en.wikipedia.org/wiki/Socrates_(1971_film)">Verbete na Wikipédia</a>. Os últimos dias de Sócrates — complemento para o método socrático.</li>
+</ul>
+<h3 id="123-podcasts">12.3 Podcasts</h3>
+<ul>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>Magnus Podcast: Conversations from the Catacombs of Liberal Education</strong> — Albertus Magnus Institute. <a href="https://podcasts.apple.com/us/podcast/magnus-podcast-conversations-from-the-catacombs/id1475793300">Apple Podcasts</a>. Conversas ancoradas na tradição clássica. EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>Online Great Books</strong> — Scott Hambrick. <a href="https://www.podchaser.com/podcasts/online-great-books-podcast-662637">Podchaser</a>. "Os grandes livros, as grandes ideias e o processo da educação liberal". EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>Books and a Balance</strong> — St. John's College. <a href="https://podcasts.apple.com/us/podcast/books-and-a-balance/id1587171682">Apple Podcasts</a>. "A educação é para a liberdade; fazer seres humanos livres por meio de livros". EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>The TAC Podcast</strong> ("Great Books &amp; First Principles") — Thomas Aquinas College. <a href="https://podcasts.apple.com/us/podcast/the-tac-podcast/id1880435715">Apple Podcasts</a>. EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>History of Philosophy Without Any Gaps</strong> — Peter Adamson (LMU Munique / King's College London). <a href="https://historyofphilosophy.net/">Site oficial</a>. A história da filosofia "sem lacunas". EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>Philosophy Bites</strong> — David Edmonds e Nigel Warburton. <a href="https://podcasts.apple.com/us/podcast/philosophy-bites/id257042117">Apple Podcasts</a>. EN.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>Palestras Filosóficas — Nova Acrópole</strong> — <a href="https://podcasts.apple.com/br/podcast/palestras-filos%C3%B3ficas-nova-acr%C3%B3pole/id1391999987">Apple Podcasts (BR)</a>. Em português.</li>
+<li><span class="badge" style="background:#f0f0f0;color:#555;border:1px solid #555;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[PODCAST]</span> <strong>Filosofia em Meia Hora</strong> — <a href="https://podcasts.apple.com/us/podcast/filosofia-em-meia-hora/id1782319165">Apple Podcasts</a>. Resumos e debates em português.</li>
+</ul>
+<h2 id="13-estado-do-debate-forschungsstand">13. Estado do debate (Forschungsstand)</h2>
+<p>Quatro problemas centrais dividem o campo hoje; para cada um, as posições são apresentadas em paralelo, sem arbitragem:</p>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Posições em conflito</th>
+<th>Nível de consenso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Currículo comum vs. autonomia</strong></td>
+<td>Educação liberal exige núcleo comum obrigatório (Hutchins, 1936; Adler, 1982; Taylor, 2025) vs. a escola deve maximizar a autonomia do estudante (Levinson, 2002; SEP, 2025)</td>
+<td>Debate ativo</td>
+</tr>
+<tr>
+<td><strong>Valor intrínseco vs. valor instrumental</strong></td>
+<td>O conhecimento vale por si (Newman, 1852; Van Doren, 1943; Brust, 2021) vs. o valor deve ser demonstrado empiricamente (Arum e Courant, 2026; Dumitru, 2019; Detweiler, 2021)</td>
+<td>Debate ativo</td>
+</tr>
+<tr>
+<td><strong>Cânone: restauração vs. desconstrução</strong></td>
+<td>Restaurar o cânone ocidental (Bloom, 1987; Green, 2023) vs. o cânone reproduz exclusões (Mou, 2025; Liu, 2026; Labaree, 2006)</td>
+<td>Debate ativo (guerra cultural)</td>
+</tr>
+<tr>
+<td><strong>Elitismo vs. democratização</strong></td>
+<td>A educação liberal é privilégio de classe (Labaree, 2006; Ribeiro, 2025) vs. os Grandes Livros democratizam o poder (Montás, 2021; Adler, 1982)</td>
+<td>Debate ativo</td>
+</tr>
+<tr>
+<td><strong>Segurança afetiva vs. atrito intelectual</strong></td>
+<td>A universidade deve proteger estudantes de dano (cultura do <em>safetyism</em>) vs. o atrito intelectual é constitutivo da formação (Lukianoff e Haidt, 2018)</td>
+<td>Debate ativo (2018-)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consensos amplos</strong>: (a) a educação liberal tem origem na <em>paideia</em> grega e nas sete artes romanas (Jaeger, 1959; Marrou, 1965; Britannica, 2026); (b) a educação liberal é distinta da formação profissional/vocacional (Britannica, 2026; Van Doren, 1943); (c) as matrículas em humanidades caem nos EUA desde a crise de 2008 e o debate sobre o valor do diploma se intensificou (Kelly, 2020; Delbanco, 2013).</p>
+<p><strong>Questões em aberto</strong>: (a) o retorno econômico de longo prazo da educação liberal — as evidências de Arum e Courant (2026) são as primeiras sistemáticas; (b) se a "educação liberal pura" é compatível com a formação cívica (Love, 2024; Liu, 2026); (c) a transposição do modelo ocidental para Ásia, África e América Latina (Mou, 2025; Shimauchi e Yonezawa, 2024).</p>
+<p><strong>Tendências recentes (2020-2026)</strong>: virada empírica (estudos de retorno e de pensamento crítico); politização do debate na Europa (Kelly, 2020); programas asiáticos de "liberal arts" como política nacional (Yoon, 2020; Cheon, 2021); e o ressurgimento do currículo de Grandes Livros em iniciativas privadas e confessionais (Montás, 2021; Wells, 2016).</p>
+<h2 id="14-guia-de-estudo">14. Guia de estudo</h2>
+<h3 id="141-pre-requisitos">14.1 Pré-requisitos</h3>
+<ul>
+<li>Noção de história antiga (Grécia e Roma) e da universidade medieval — o capítulo 1 do Marrou (Kírion, 2017) cobre ambos.</li>
+<li>Vocabulário básico de filosofia (ver Glossário, seção 17).</li>
+<li>Conhecimento de inglês de leitura para a maior parte da bibliografia contemporânea (parte já traduzida — ver seção 7.3).</li>
+</ul>
+<h3 id="142-escada-de-estudo-7-degraus">14.2 Escada de estudo (7 degraus)</h3>
+<ol>
+<li><strong>Definir o conceito</strong> (1-2 dias): verbete <em>Liberal arts</em> da Britannica (<a href="https://www.britannica.com/topic/liberal-arts">link</a>) + SEP <em>Philosophy of Education</em> (<a href="https://plato.stanford.edu/entries/education-philosophy/">link</a>).</li>
+<li><strong>A origem grega</strong> (1 semana): Jaeger, <em>Paideia</em> vol. 1 (trad. BR, Martins Fontes) e/ou Marrou, <em>História da Educação na Antiguidade</em> (Kírion).</li>
+<li><strong>O currículo medieval</strong> (2-3 dias): Martianus Capella e Cassiodoro (contexto no Britannica e na coletânea de Mongelli, 1999).</li>
+<li><strong>Os fundadores modernos</strong> (1-2 semanas): Newman, <em>A Idéia de uma Universidade</em> (Ecclesiae, 2020); Mill, <em>Inaugural Address</em> (<a href="https://archive.org/details/inauguraladdres01millgoog">PDF no Internet Archive</a>); Arnold (sem tradução — ler trechos em inglês).</li>
+<li><strong>O século XX</strong> (1 semana): Hutchins (1936); Van Doren (1943); Sayers (1947); Oakeshott (1989).</li>
+<li><strong>O debate contemporâneo</strong> (2-4 semanas): Bloom (1987) → Nussbaum (1997; 2010, <em>Sem Fins Lucrativos</em> em PT) → Zakaria (2015) → Montás (2021) → Lukianoff e Haidt (2018) → Deresiewicz (2014).</li>
+<li><strong>A evidência e o futuro</strong> (1 semana): Detweiler (2021); Arum e Courant (2026); artigos recentes [ACAD] da seção 8.</li>
+</ol>
+<h3 id="143-recursos-por-nivel">14.3 Recursos por nível</h3>
+<table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Recursos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iniciante</td>
+<td>Britannica; YouTube: <a href="https://www.youtube.com/watch?v=HndV87XpkWg">“What's Education For?”</a> (School of Life); <a href="https://www.youtube.com/watch?v=Juu3ggoOItM">“O que é a Educação Liberal?”</a>; TEDx Montás</td>
+</tr>
+<tr>
+<td>Intermediário</td>
+<td>SEP; Marrou; Newman; Nussbaum (<em>Sem Fins Lucrativos</em>); Aeon (Taylor, Reeve, Bakhurst); palestras de Montás e Zakaria</td>
+</tr>
+<tr>
+<td>Avançado</td>
+<td>Jaeger; Oakeshott; Kimball; Bloom; artigos [ACAD] 2015-2026 (DOI na seção 8); podcast History of Philosophy Without Any Gaps</td>
+</tr>
+</tbody>
+</table>
+<h3 id="144-perguntas-para-reflexao">14.4 Perguntas para reflexão</h3>
+<ol>
+<li>O que distingue a formação do homem livre da formação do trabalhador? Essa distinção sobrevive à democracia moderna?</li>
+<li>A educação liberal pode ser justificada pelo mercado (Zakaria) sem perder sua alma (Fish)?</li>
+<li>O currículo de Grandes Livros é elitista ou democratizante (Bloom vs. Montás)?</li>
+<li>A universidade deve proteger os estudantes do desconforto ou expô-los a ele (Lukianoff e Haidt)?</li>
+<li>Como a tradição brasileira (Maritain, Reis Filho, Flickinger) reposiciona o debate anglo-americano?</li>
+</ol>
+<h3 id="145-glossario-essencial">14.5 Glossário essencial</h3>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>paideia</em> (παιδεία)</td>
+<td>Formação integral do cidadão na Grécia clássica</td>
+</tr>
+<tr>
+<td><em>artes liberales</em></td>
+<td>Estudos dignos do homem livre, em oposição às artes mecânicas</td>
+</tr>
+<tr>
+<td><em>trivium</em></td>
+<td>Gramática, dialética, retórica — as artes da palavra</td>
+</tr>
+<tr>
+<td><em>quadrivium</em></td>
+<td>Aritmética, geometria, música, astronomia — as artes do número</td>
+</tr>
+<tr>
+<td><em>banausic</em></td>
+<td>Próprio do trabalho servil/manual, na terminologia aristotélica</td>
+</tr>
+<tr>
+<td><em>vir bonus</em></td>
+<td>O "homem bom" que a retórica de Quintiliano forma</td>
+</tr>
+<tr>
+<td><em>studia humanitatis</em></td>
+<td>O programa humanista renascentista: gramática, retórica, poesia, história, filosofia moral</td>
+</tr>
+<tr>
+<td>Great Books</td>
+<td>O cânone dos "grandes livros" da tradição ocidental (St. John's, 1937; Great Books Foundation, 1947)</td>
+</tr>
+<tr>
+<td><em>liberal arts college</em></td>
+<td>Instituição superior dedicada à educação geral antes da especialização</td>
+</tr>
+<tr>
+<td><em>safetyism</em></td>
+<td>Cultura de segurança afetiva que evita o desconforto intelectual (Lukianoff e Haidt, 2018)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="15-glossario">15. Glossário</h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+<th>Referência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>paideia</em> (παιδεία)</td>
+<td>Formação integral do homem grego para a vida na <em>polis</em>; fixada como categoria histórica por Jaeger</td>
+<td>Jaeger, 1959; Marrou, 1965</td>
+</tr>
+<tr>
+<td><em>artes liberales</em></td>
+<td>Os estudos dignos do homem livre — o trivium e o quadrivium</td>
+<td>Britannica, 2026; Encyclopedia.com, 2011</td>
+</tr>
+<tr>
+<td><em>artes mechanicae</em></td>
+<td>As artes do trabalho manual, excluídas do currículo liberal na Antiguidade</td>
+<td>Encyclopedia.com, 2011</td>
+</tr>
+<tr>
+<td><em>trivium</em></td>
+<td>Gramática, dialética (lógica), retórica</td>
+<td>Martianus Capella, 2003; Britannica, 2026</td>
+</tr>
+<tr>
+<td><em>quadrivium</em></td>
+<td>Aritmética, geometria, música, astronomia</td>
+<td>Martianus Capella, 2003; Britannica, 2026</td>
+</tr>
+<tr>
+<td>Educação liberal</td>
+<td>Formação pela aquisição de conhecimento geral e capacidades amplas, vs. formação profissional</td>
+<td>Britannica, 2026</td>
+</tr>
+<tr>
+<td><em>liberal arts college</em></td>
+<td>Instituição superior de educação geral (EUA, séc. XIX)</td>
+<td>Delbanco, 2013; Roth, 2014</td>
+</tr>
+<tr>
+<td>Grandes Livros (Great Books)</td>
+<td>Cânone ocidental lido em seminário; movimento de Hutchins e Adler</td>
+<td>Hutchins, 1936; Adler, 1982</td>
+</tr>
+<tr>
+<td>Ciclo socrático</td>
+<td>Método de Nussbaum: exame crítico, imaginação narrativa, cidadania mundial</td>
+<td>Nussbaum, 1997</td>
+</tr>
+<tr>
+<td><em>Bildung</em></td>
+<td>O equivalente alemão: formação cultural do indivíduo</td>
+<td>Choi, 2016</td>
+</tr>
+<tr>
+<td>Educação liberal ≠ liberalismo</td>
+<td>A educação liberal é tradição pedagógica antiga; o liberalismo, doutrina política/econômica moderna — não confundir</td>
+<td>(distinção metodológica deste dossiê)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-bibliografia-comentada">16. Bibliografia comentada</h2>
+<h3 id="161-fontes-primarias-confirmadas">16.1 Fontes primárias confirmadas</h3>
+<ul>
+<li><strong>ARISTÓTELES</strong>, <em>Política</em> (Loeb, 1921) — [V] ISBN 9780198242109 · <a href="https://openlibrary.org/isbn/9780198242109">Open Library</a></li>
+<li><strong>CÍCERO</strong>, <em>De oratore</em> (Loeb, 1942) — [V] ISBN 9780674993839 · <a href="https://openlibrary.org/isbn/9780674993839">Open Library</a></li>
+<li><strong>CÍCERO</strong>, <em>Os deveres</em> (trad. Bruno Fregni Bassetto, Unicamp/EDUFU, 2025) — [V-ED] ISBN 9788526817920 · <a href="https://loja.editoraunicamp.com.br/filosofia/os-deveres-772/p">Editora da Unicamp</a></li>
+<li><strong>QUINTILIANO</strong>, <em>Institutio oratoria</em> (Loeb, 1970) — [V] ISBN 9780198146551 · <a href="https://openlibrary.org/isbn/9780198146551">Open Library</a> · trad. BR: <em>Instituição oratória</em> (Unicamp, 2015) [V-ED]</li>
+<li><strong>MARTIANUS CAPELLA</strong>, <em>De nuptiis Philologiae et Mercurii</em> (Belles Lettres, 2003) — [V] ISBN 9782251014333 · <a href="https://openlibrary.org/isbn/9782251014333">Open Library</a></li>
+<li><strong>CASSIODORO</strong>, <em>Institutions of Divine and Secular Learning</em> (Liverpool UP, 2004) — [V] ISBN 9780853239987 · <a href="https://openlibrary.org/isbn/9780853239987">Open Library</a></li>
+<li><strong>ISÓCRATES</strong>, <em>Isocrates</em> (Loeb, 1945) — [V] ISBN 9780674994119 · <a href="https://openlibrary.org/isbn/9780674994119">Open Library</a></li>
+<li><strong>LOCKE</strong>, <em>Some Thoughts Concerning Education</em> (Clarendon, 1989; orig. 1693) — [V] ISBN 9780198245827 · <a href="https://openlibrary.org/isbn/9780198245827">Open Library</a></li>
+<li><strong>MILL</strong>, <em>Inaugural Address at St Andrews</em> (1867) — [DIGITAL] · <a href="https://archive.org/details/inauguraladdres01millgoog">Internet Archive</a></li>
+<li><strong>NEWMAN</strong>, <em>The Idea of a University</em> (Clarendon, 1976; orig. 1852) — [V] ISBN 9780198118961 · <a href="https://openlibrary.org/isbn/9780198118961">Open Library</a> · <a href="https://www.newmanreader.org/works/idea/">texto integral</a></li>
+<li><strong>ARNOLD</strong>, <em>Culture and Anarchy</em> (John Murray, 1869) — [HIST] · <a href="https://openlibrary.org/works/OL1336695W">Open Library</a> · <a href="https://archive.org/details/cultureanarchyes00arno">Internet Archive</a></li>
+<li><strong>VAN DOREN</strong>, <em>Liberal Education</em> (Henry Holt, 1943) — [HIST] · <a href="https://openlibrary.org/works/OL5260491W">Open Library</a></li>
+<li><strong>OAKESHOTT</strong>, <em>The Voice of Liberal Learning</em> (Yale UP, 1989) — [V] ISBN 9780300043440 · <a href="https://openlibrary.org/isbn/9780300043440">Open Library</a></li>
+<li><strong>SAYERS</strong>, <em>The Lost Tools of Learning</em> (1947; reed. 2016/2017) — [V] ISBN 9781520144771 · <a href="https://openlibrary.org/isbn/9781520144771">Open Library</a></li>
+<li><strong>LEWIS, C. S.</strong>, <em>The Abolition of Man</em> (1943) — [V] ISBN 9780805420470 · <a href="https://openlibrary.org/isbn/9780805420470">Open Library</a> · trad. BR [V-WP]</li>
+<li><strong>HUTCHINS</strong>, <em>The Higher Learning in America</em> (Yale, 1936) — [V] ISBN 9780313207136 · <a href="https://openlibrary.org/isbn/9780313207136">Open Library</a></li>
+<li><strong>ADLER</strong>, <em>The Paideia Proposal</em> (Scribner, 1982; Touchstone 1998) — [V] ISBN 9780684841885 · <a href="https://openlibrary.org/isbn/9780684841885">Open Library</a></li>
+<li><strong>BLOOM</strong>, <em>The Closing of the American Mind</em> (Simon &amp; Schuster, 1987) — [V] ISBN 9780671479909 · <a href="https://openlibrary.org/isbn/9780671479909">Open Library</a> · trad. BR: <em>O declínio da cultura ocidental</em> (Best Seller, 1989) [W]</li>
+<li><strong>NUSSBAUM</strong>, <em>Cultivating Humanity</em> (Harvard UP, 1997) — [V] ISBN 9780674179486 · <a href="https://openlibrary.org/isbn/9780674179486">Open Library</a></li>
+<li><strong>NUSSBAUM</strong>, <em>Not for Profit</em> (Princeton UP, 2010) — [V] ISBN 9780691140643 · <a href="https://openlibrary.org/isbn/9780691140643">Open Library</a> · trad. BR: <em>Sem Fins Lucrativos</em> (WMF, 2015) [W]</li>
+<li><strong>KRONMAN</strong>, <em>Education's End</em> (Yale UP, 2007) — [V] ISBN 9780300138580 · <a href="https://openlibrary.org/isbn/9780300138580">Open Library</a></li>
+<li><strong>ZAKARIA</strong>, <em>In Defense of a Liberal Education</em> (Norton, 2015) — [V] ISBN 9780393247688 · <a href="https://openlibrary.org/isbn/9780393247688">Open Library</a></li>
+<li><strong>DELBANCO</strong>, <em>College: What It Was, Is, and Should Be</em> (Princeton, 2013) — [V] ISBN 9781400846054 · <a href="https://openlibrary.org/isbn/9781400846054">Open Library</a></li>
+<li><strong>MONTÁS</strong>, <em>Rescuing Socrates</em> (Princeton, 2021) — [V] ISBN 9780691200392 · <a href="https://openlibrary.org/isbn/9780691200392">Open Library</a></li>
+<li><strong>DERESIEWICZ</strong>, <em>Excellent Sheep</em> (Free Press, 2014) — [V] ISBN 9781476702711 · <a href="https://openlibrary.org/isbn/9781476702711">Open Library</a></li>
+<li><strong>LUKIANOFF e HAIDT</strong>, <em>The Coddling of the American Mind</em> (Penguin, 2018) — [V] ISBN 9780735224896 · <a href="https://openlibrary.org/isbn/9780735224896">Open Library</a></li>
+<li><strong>FISH</strong>, <em>Save the World on Your Own Time</em> (Oxford UP, 2008) — [V] ISBN 9780195369021 · <a href="https://openlibrary.org/isbn/9780195369021">Open Library</a></li>
+<li><strong>H. R. LEWIS</strong>, <em>Excellence Without a Soul</em> (PublicAffairs, 2006) — [V] ISBN 9781586483937 · <a href="https://openlibrary.org/isbn/9781586483937">Open Library</a></li>
+<li><strong>COLLINI</strong>, <em>What Are Universities For?</em> (Penguin, 2012) — [V] ISBN 9780141970370 · <a href="https://openlibrary.org/isbn/9780141970370">Open Library</a></li>
+<li><strong>ROTH</strong>, <em>Beyond the University</em> (Yale UP, 2014) — [V] ISBN 9780300175516 · <a href="https://openlibrary.org/isbn/9780300175516">Open Library</a></li>
+<li><strong>APFELD e COMAN</strong>, <em>A Liberal Education</em> (Cambridge UP, 2024) — [V] ISBN 9781009424783 · <a href="https://openlibrary.org/isbn/9781009424783">Open Library</a></li>
+</ul>
+<h3 id="162-fontes-secundarias-confirmadas">16.2 Fontes secundárias confirmadas</h3>
+<ul>
+<li><strong>JAEGER</strong>, <em>Paideia</em> (De Gruyter, 1959) — [V] ISBN 9783111208879 · <a href="https://openlibrary.org/isbn/9783111208879">Open Library</a> · <a href="https://archive.org/details/paideiaidealsofg0001jaeg">Internet Archive</a></li>
+<li><strong>MARROU</strong>, <em>Histoire de l'éducation dans l'Antiquité</em> (Seuil, 1965) — [V] ISBN 9782020026703 · <a href="https://openlibrary.org/isbn/9782020026703">Open Library</a> · trad. BR: Kírion, 2017 [V-ED] · <a href="https://kirion.com.br/historia-da-educacao-na-antiguidade">Kírion</a></li>
+<li><strong>KIMBALL</strong>, <em>Orators &amp; Philosophers</em> (College Board, 1986) — [V] ISBN 9780807727904 · <a href="https://openlibrary.org/isbn/9780807727904">Open Library</a></li>
+<li><strong>NUSSBAUM (org.)</strong>, <em>Rethinking Liberal Education</em> (Oxford UP, 1996) — [V] ISBN 9780195097726 · <a href="https://openlibrary.org/isbn/9780195097726">Open Library</a></li>
+<li><strong>LEVINSON (org.)</strong>, <em>The Demands of Liberal Education</em> (Oxford UP, 2002) — [V-DOI] 10.1093/0199250448.001.0001 · <a href="https://doi.org/10.1093/0199250448.001.0001">Crossref</a></li>
+<li><strong>BRENEMAN</strong>, <em>Liberal Arts Colleges</em> (Rowman &amp; Littlefield, 2010) — [V-DOI] 10.5771/9780815717140 · <a href="https://doi.org/10.5771/9780815717140">Crossref</a></li>
+<li><strong>LABAREE</strong>, <em>Education, Markets, and the Public Good</em> (Routledge, 2006) — [V] ISBN 9780415369954 · <a href="https://openlibrary.org/isbn/9780415369954">Open Library</a></li>
+<li><strong>DETWEILER (org.)</strong>, <em>The Evidence Liberal Arts Needs</em> (MIT Press, 2021) — [V-DOI] 10.7551/mitpress/13954.001.0001 · <a href="https://doi.org/10.7551/mitpress/13954.001.0001">Crossref</a></li>
+<li><strong>TAYLOR</strong>, <em>Liberal Education and Democracy</em> (Notre Dame, 2025) — [V-DOI] 10.2307/jj.21299956 · <a href="https://doi.org/10.2307/jj.21299956">Crossref</a></li>
+<li><strong>ARUM e COURANT</strong>, <em>The Liberal Arts Advantage</em> (Chicago, 2026) — [V-DOI] 10.7208/chicago/9780226854618.001.0001 · <a href="https://doi.org/10.7208/chicago/9780226854618.001.0001">Crossref</a></li>
+<li><strong>REIS FILHO</strong>, <em>A educação e a ilusão liberal</em> (Cortez, 1981) — [V-OL] ISBN 9788585701116 · <a href="https://openlibrary.org/isbn/9788585701116">Open Library</a></li>
+<li><strong>MONGELLI (coord.)</strong>, <em>Trivium e quadrivium</em> (Ibis, 1999) — [W] · <a href="https://repositorio.usp.br/item/001350169">USP</a></li>
+<li><strong>MARITAIN</strong>, <em>Rumos da Educação</em> (Agir, 1968) — [W] · <a href="https://www.maritain.org.br/obras">Instituto Jacques Maritain</a></li>
+</ul>
+<h3 id="163-artigos-academicos-recentes-selecao-todos-com-doi-conferido">16.3 Artigos acadêmicos recentes (seleção, todos com DOI conferido)</h3>
+<ul>
+<li><strong>LOVE, C. W.</strong>, "A direct approach to civic formation that preserves the spirit of pure liberal education", <em>Journal of Philosophy of Education</em> 58(4), 2024 — [ACAD] <a href="https://doi.org/10.1093/jopedu/qhae025">DOI 10.1093/jopedu/qhae025</a></li>
+<li><strong>MCBRAYER, G. A.</strong>, "The Problem of Civic and Liberal Education", <em>Laws</em> 13(6), 2024 — [ACAD] <a href="https://doi.org/10.3390/laws13060075">DOI 10.3390/laws13060075</a></li>
+<li><strong>KELLY, P.</strong>, "Liberal education in turbulent times", <em>London Review of Education</em> 18(1), 2020 — [ACAD] <a href="https://doi.org/10.18546/lre.18.1.03">DOI 10.18546/lre.18.1.03</a></li>
+<li><strong>MOU, L.</strong>, "Liberal arts education through a Confucian lens", <em>Studies in Higher Education</em> 51(6), 2025 — [ACAD] <a href="https://doi.org/10.1080/03075079.2025.2499955">DOI 10.1080/03075079.2025.2499955</a></li>
+<li><strong>YAN e MORRIS</strong>, "The life and death of Liberal Studies", <em>Journal of Curriculum Studies</em> 57(4), 2024 — [ACAD] <a href="https://doi.org/10.1080/00220272.2024.2425638">DOI 10.1080/00220272.2024.2425638</a></li>
+<li><strong>LIU, N.</strong>, "The Case Against Liberal Global Citizenship Education", <em>Studies in Philosophy and Education</em>, 2026 — [ACAD] <a href="https://doi.org/10.1007/s11217-026-10103-1">DOI 10.1007/s11217-026-10103-1</a></li>
+<li><strong>DUMITRU, D.</strong>, "Creating meaning. The importance of Arts, Humanities and Culture for critical thinking development", <em>Studies in Higher Education</em> 44(5), 2019 — [ACAD] <a href="https://doi.org/10.1080/03075079.2019.1586345">DOI 10.1080/03075079.2019.1586345</a></li>
+<li><strong>CHOI, S.-Y.</strong>, "Friedrich Nietzsche's critique on the education of liberal arts", <em>The Journal of General Education</em> 4, 2016 — [ACAD] <a href="https://doi.org/10.24173/jge.2016.12.4.51">DOI 10.24173/jge.2016.12.4.51</a></li>
+<li><strong>BRUST, C.</strong>, "Reimagining 'Learning for Its Own Sake' in Liberal Education", <em>Philosophy of Education</em> 77(1), 2021 — [ACAD] <a href="https://doi.org/10.47925/77.1.150">DOI 10.47925/77.1.150</a></li>
+<li><strong>HUTCHINS</strong>, "The Higher Learning in America", <em>JHE</em> 4(1), 1933 — [ACAD] <a href="https://doi.org/10.1080/00221546.1933.11779109">DOI 10.1080/00221546.1933.11779109</a></li>
+</ul>
+<h3 id="164-producao-lusofona-artigos-e-livros">16.4 Produção lusófona (artigos e livros)</h3>
+<ul>
+<li><strong>OLIVEIRA e DE CAMPOS</strong>, "Educação liberal em Jacques Maritain", <em>Educação Unisinos</em> 22(3), 2018 — [ACAD] <a href="https://doi.org/10.4013/edu.2018.223.02">DOI 10.4013/edu.2018.223.02</a> · <a href="http://educa.fcc.org.br/scielo.php?script=sci_arttext&amp;pid=S2177-62102018000300245">SciELO</a></li>
+<li><strong>RIBEIRO, M.</strong>, "Trajetória da concepção de educação liberal: alguns traçados", <em>Cadernos de Educação</em> 9, 2025 — [ACAD] <a href="https://doi.org/10.46846/caduc.vi09.29036">DOI 10.46846/caduc.vi09.29036</a> · <a href="https://periodicos.ufpel.edu.br/index.php/caduc/article/view/29036">UFPel</a></li>
+<li><strong>FERREIRA JR. e BITTAR</strong>, "Artes liberais e ofícios mecânicos nos colégios jesuíticos do Brasil colonial", <em>Revista Brasileira de Educação</em> 17(51), 2012 — [ACAD] <a href="https://doi.org/10.1590/S1413-24782012000300012">DOI 10.1590/S1413-24782012000300012</a> · <a href="https://www.scielo.br/j/rbedu/a/7Y3phsmDjDYH7Z878n9FPJj/?format=html&amp;lang=pt">SciELO</a></li>
+<li><strong>ZATTI, V.</strong>, "Educação profissional e tecnológica: espaço-tempo de formação humana?", <em>Educação &amp; Sociedade</em> 44, 2023 — [ACAD] <a href="https://doi.org/10.1590/es.270599">DOI 10.1590/es.270599</a> · <a href="https://www.scielo.br/j/es/a/NwbDjZ6YzK6FFvtgNxpL8RC/?format=html&amp;lang=pt">SciELO</a></li>
+<li><strong>FLICKINGER, H.-G.</strong>, "A dinâmica contraditória da formação na atual sociedade liberal", <em>Educação &amp; Sociedade</em> 44, 2023 — [ACAD] <a href="https://doi.org/10.1590/es.273538">DOI 10.1590/es.273538</a></li>
+<li><strong>SILVA, B.</strong>, "O verdadeiro sentido da educação liberal", <em>Curriculum</em> 7(13), 1968 (FGV) — [W] · <a href="https://periodicos.fgv.br/curriculum/article/view/61754">FGV</a></li>
+</ul>
+<h3 id="165-citadas-mas-nao-verificadas">16.5 Citadas mas não verificadas</h3>
+<ul>
+<li><strong>OAKESHOTT</strong>, <em>Education and its Methods</em> (1957) — não confirmada em quatro catálogos; usar <em>The Voice of Liberal Learning</em> (1989).</li>
+<li><strong>MARLOVICH</strong>, <em>The Recovery of Liberal Education</em> (1991) — sem registro verificável.</li>
+<li><strong>BOYER</strong>, <em>The College Bound</em> (1965) — sem ISBN verificável.</li>
+<li><strong>LABAREE</strong>, <em>The End of Inequality</em> (2005) — substituída por <em>Education, Markets, and the Public Good</em> (2006).</li>
+<li><strong>ADLER e VAN DOREN</strong>, <em>How to Read a Book</em> — obra real (trad. BR <em>Como Ler um Livro</em>, É Realizações), mas sem ISBN validado no Open Library.</li>
+<li>Tradução PT-PT de <em>The Coddling of the American Mind</em> (Guerra &amp; Paz) — confirmada apenas por resenhas de imprensa.</li>
+<li>Verbete OCD específico sobre artes liberais — acesso restrito; apenas "Freedom in the ancient world" localizado.</li>
+</ul>
+<h2 id="17-notas-e-referencias">17. Notas e referências</h2>
+<ol>
+<li><strong>Contrato de rastreabilidade</strong>: cada afirmação factual do texto traz citação inline (Autor, Ano) remetendo às obras da bibliografia (seção 16), onde ISBN/DOI e link de acesso permitem verificação direta. Onde a página exata <em>(p. X)</em> não pôde ser conferida na fonte, a citação registra autor-ano sem página — nunca se inventa página (Regra Zero).</li>
+<li><strong>Fontes enciclopédicas</strong>: Britannica, "Liberal arts" (atual. 07/ago/2026); SEP, "Philosophy of Education" (2025), "Civic Education" (2018), "Michael Oakeshott", "Humanism, Civic"; IEP, "Renaissance Philosophy"; Encyclopedia.com, "Liberal Arts" (2011).</li>
+<li><strong>Convenção de títulos</strong>: títulos e autores em forma original; traduções PT-BR indicadas com editora e ano (seção 7.3).</li>
+<li><strong>Verificação multimídia</strong>: todos os vídeos confirmados via oEmbed/yt-dlp; legendas PT-BR indicadas apenas onde confirmadas (seção 11); 134 de 146 links do catálogo multimídia retornaram HTTP 2xx na checagem final.</li>
+</ol>
+<h2 id="18-links-e-recursos">18. Links e recursos</h2>
+<ul>
+<li><a href="https://www.sjc.edu/academic-programs/undergraduate/great-books-reading-list">St. John's College — lista de leitura Great Books</a></li>
+<li><a href="https://www.newmanreader.org/works/idea/">Newman Reader — The Idea of a University (texto integral)</a></li>
+<li><a href="https://archive.org/details/inauguraladdres01millgoog">Internet Archive — Mill, Inaugural Address (1867)</a></li>
+<li><a href="https://archive.org/details/paideiaidealsofg0001jaeg">Internet Archive — Jaeger, Paideia (3 vols., 1954)</a></li>
+<li><a href="https://www.greatbooks.org/nonprofit-organization/history/">Great Books Foundation — história</a></li>
+<li><a href="https://plato.stanford.edu/entries/education-philosophy/">SEP — Philosophy of Education</a></li>
+<li><a href="https://www.britannica.com/topic/liberal-arts">Britannica — Liberal arts</a></li>
+<li><a href="https://www.aacu.org/">AAC&amp;U — LEAP</a></li>
+<li><a href="https://kirion.com.br/historia-da-educacao-na-antiguidade">Kírion — Marrou em português</a></li>
+<li><a href="https://editoraunicamp.com.br/catalogo/?id=1455">Editora da Unicamp — Quintiliano, Instituição oratória</a></li>
+</ul>
+<h2 id="19-metadados">19. Metadados</h2>
+<ul>
+<li><strong>Título</strong>: Educação Liberal — Dossiê Enciclopédico</li>
+<li><strong>Última revisão</strong>: 5 de outubro de 2026</li>
+<li><strong>Idioma</strong>: PT-BR (títulos/autores em forma original)</li>
+<li><strong>Método</strong>: subagentes de pesquisa paralelos (bibliografia + multimídia) com verificação por endpoint autorizado (Open Library, Crossref, Internet Archive, editoras, SciELO, yt-dlp/oEmbed); consolidação com spot-check das entradas PT-BR; retroverificação acadêmica com citações inline</li>
+<li><strong>Fontes do dossiê</strong>: <code>_sub_a_bibliografia.md</code> (613 linhas, 96 entradas, 78 ISBN validados) e <code>_sub_b_multimidia.md</code> (315 linhas, 134/146 links OK)</li>
+</ul>
+<h2 id="20-nota-metodologica">20. Nota metodológica</h2>
+<p><strong>Contrato de saída (marcadores)</strong>: <code>[V]</code> ISBN validado no Open Library · <code>[V-OL]</code> work record com language=por · <code>[V-WP]</code> Wikipédia PT confirma (OL 404) · <code>[V-ED]</code> página oficial da editora · <code>[V-DOI]</code> Crossref com DOI e ISBN · <code>[ACAD]</code> artigo com DOI conferido · <code>[W]</code> citado em catálogo/resenha sem ISBN validado · <code>[HIST]</code> edição pré-1980 sem ISBN · <code>[DIGITAL]</code> domínio público · <code>[NV]</code> ISBN testado 404 sem outra confirmação · <code>[—]</code> lacuna declarada.</p>
+<p><strong>Regra Zero</strong>: nenhuma entrada foi incluída com base em memória. Quando os catálogos divergem, a divergência é registrada (ex.: subtítulo de Kimball 1986). Dois itens do briefing foram corrigidos pela fonte: o prenome de Montás (Roosevelt, não Carlos) e o de Roth (Michael S., não David); a obra "Education and its Methods" de Oakeshott (1957) não existe nos catálogos — a obra verificável é <em>The Voice of Liberal Learning</em> (1989).</p>
+<p><strong>Limitações</strong>: (a) páginas exatas de citações <em>(p. X)</em> não foram conferidas nos livros — citações usam (Autor, Ano); (b) o verbete do OCD sobre artes liberais é de acesso restrito; (c) nº de páginas e capas de algumas traduções BR dependem de ficha de catálogo [W]; (d) o IEP e a SEP não têm verbete dedicado a "liberal education" — usados os verbetes equivalentes.</p>
+</main>
+</div>
+<script>
+(function(){var t=localStorage.getItem('dossier-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var b=document.getElementById('theme-toggle');
+if(b)b.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');
+var n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);
+localStorage.setItem('dossier-theme',n);});})();
+</script>
+</body>
+</html>

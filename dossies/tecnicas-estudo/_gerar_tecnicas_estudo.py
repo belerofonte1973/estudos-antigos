@@ -71,18 +71,16 @@ def extract_toc(html_body: str) -> List[Tuple[int, str, str]]:
 
 
 def apply_badges(html: str) -> str:
-    """Substitui [X] dentro de <li> por badge colorido.
+    """Substitui TODOS os marcadores [X] no HTML por badges coloridos.
 
-    O markdown gera 4 variantes:
-      <li><strong>[X]</strong>          (ul com bold)
-      <li>[X]                          (ul sem bold)
-      <li><p><strong>[X]</strong>      (ol com bold)
-      <li><p>[X]                      (ol sem bold)
-    Uma única regex com 2 grupos captura todas."""
-    pat = re.compile(
-        r'(<li[^>]*>(?:\s*<p[^>]*>)?)\s*(?:<strong>)?(\[[A-Z\-—]+\])(?:</strong>)?'
+    Opera sobre o HTML inteiro (parágrafos, tabelas, cabeçalhos, listas)
+    em uma única passada.  re.sub não re-processa o texto de substituição,
+    portanto badges já inseridos não são afetados."""
+    return re.sub(
+        r'\[[A-Z\-—]+\]',
+        lambda m: badge_html(m.group(0)),
+        html,
     )
-    return pat.sub(lambda m: m.group(1) + badge_html(m.group(2)), html)
 
 
 class DossierPDF(FPDF):

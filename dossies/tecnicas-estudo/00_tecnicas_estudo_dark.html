@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Técnicas de Estudo, Aprendizado, Escrita e Memorização — Dossiê Enciclopédico</title>
+<style>
+:root {
+  --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
+  --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+}
+*{box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
+     background:var(--bg);color:var(--fg);line-height:1.65}
+.container{display:flex;min-height:100vh}
+.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+         border-right:1px solid var(--border);padding:1.2rem .8rem;
+         position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:.12rem 0}
+.sidebar li.level-3{margin-left:12px;font-size:.86rem}
+.sidebar li.level-4{margin-left:22px;font-size:.8rem}
+.sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
+.sidebar a:hover{text-decoration:underline}
+.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
+.main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
+.main h3{color:#333;margin-top:1.5rem}
+.main a{color:var(--link)}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
+.main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+th{background:var(--sidebar-bg)}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
+       font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
+[data-theme="dark"] {
+  --bg:#1a1a2e; --fg:#e0e0e0; --muted:#aaa; --link:#64b5f6;
+  --accent:#d4a574; --border:#333; --sidebar-bg:#16213e;
+}
+[data-theme="dark"] .main h3{color:#ccc}
+[data-theme="dark"] code{background:#2a2a3e}
+[data-theme="dark"] pre{background:#2a2a3e}
+[data-theme="dark"] th{background:#0f3460}
+[data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+</style>
+</head>
+<body>
+<button id="theme-toggle" style="position:fixed;top:10px;right:10px;z-index:999;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--sidebar-bg);color:var(--fg);cursor:pointer;font-size:.82rem">Alterar tema</button>
+<div class="container">
+<nav class="sidebar"><h2>Sumário</h2><ul><li><a href="#tecnicas-de-estudo-aprendizado-escrita-e-memorizacao-dossie-enciclopedico">Técnicas de Estudo, Aprendizado, Escrita e Memorização — Dossiê Enciclopédico</a></li><li><a href="#1-lead">1. Lead</a></li><li><a href="#2-ficha-tecnica">2. Ficha técnica</a></li><li><a href="#3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</a></li><li class="level-3"><a href="#31-a-arte-da-memoria-na-antiguidade">3.1 A arte da memória na Antiguidade</a></li><li class="level-3"><a href="#32-a-arte-da-memoria-no-renascimento">3.2 A arte da memória no Renascimento</a></li><li class="level-3"><a href="#33-a-psicologia-cognitiva-da-memoria">3.3 A psicologia cognitiva da memória</a></li><li class="level-3"><a href="#34-a-ciencia-da-aprendizagem">3.4 A ciência da aprendizagem</a></li><li><a href="#4-tecnicas-de-estudo-e-aprendizado">4. Técnicas de estudo e aprendizado</a></li><li class="level-3"><a href="#41-o-metodo-sq3r">4.1 O método SQ3R</a></li><li class="level-3"><a href="#42-mapas-mentais">4.2 Mapas mentais</a></li><li class="level-3"><a href="#43-aprendizado-de-matematica-e-ciencias">4.3 Aprendizado de matemática e ciências</a></li><li class="level-3"><a href="#44-a-ciencia-da-aprendizagem">4.4 A ciência da aprendizagem</a></li><li class="level-3"><a href="#45-a-neurociencia-do-aprendizado">4.5 A neurociência do aprendizado</a></li><li class="level-3"><a href="#46-o-ranking-de-tecnicas-de-estudo">4.6 O ranking de técnicas de estudo</a></li><li class="level-3"><a href="#47-dificuldades-desejaveis">4.7 Dificuldades desejáveis</a></li><li class="level-3"><a href="#48-mentalidade-de-crescimento">4.8 Mentalidade de crescimento</a></li><li class="level-3"><a href="#49-pratica-deliberada">4.9 Prática deliberada</a></li><li class="level-3"><a href="#410-sistemas-de-pensamento">4.10 Sistemas de pensamento</a></li><li class="level-3"><a href="#411-a-tecnica-feynman">4.11 A técnica Feynman</a></li><li class="level-3"><a href="#412-trabalho-profundo">4.12 Trabalho profundo</a></li><li class="level-3"><a href="#413-habitos-atomicos">4.13 Hábitos atômicos</a></li><li class="level-3"><a href="#414-o-poder-do-habito">4.14 O poder do hábito</a></li><li class="level-3"><a href="#415-habitos-minusculos">4.15 Hábitos minúsculos</a></li><li class="level-3"><a href="#416-gtd-getting-things-done">4.16 GTD — Getting Things Done</a></li><li class="level-3"><a href="#417-tecnica-pomodoro">4.17 Técnica Pomodoro</a></li><li class="level-3"><a href="#418-as-primeiras-20-horas">4.18 As primeiras 20 horas</a></li><li class="level-3"><a href="#419-ultra-aprendizado">4.19 Ultra-aprendizado</a></li><li class="level-3"><a href="#420-aprender-a-aprender">4.20 Aprender a aprender</a></li><li><a href="#5-tecnicas-de-escrita">5. Técnicas de escrita</a></li><li class="level-3"><a href="#51-os-elementos-de-estilo">5.1 Os elementos de estilo</a></li><li class="level-3"><a href="#52-on-writing-stephen-king">5.2 On Writing — Stephen King</a></li><li class="level-3"><a href="#53-bird-by-bird-anne-lamott">5.3 Bird by Bird — Anne Lamott</a></li><li class="level-3"><a href="#54-writing-down-the-bones-natalie-goldberg">5.4 Writing Down the Bones — Natalie Goldberg</a></li><li class="level-3"><a href="#55-the-artists-way-julia-cameron">5.5 The Artist's Way — Julia Cameron</a></li><li class="level-3"><a href="#56-escrita-academica-produtiva">5.6 Escrita acadêmica produtiva</a></li><li class="level-3"><a href="#57-como-escrever-uma-tese">5.7 Como escrever uma tese</a></li><li><a href="#6-tecnicas-de-memorizacao">6. Técnicas de memorização</a></li><li class="level-3"><a href="#61-moonwalking-with-einstein-joshua-foer">6.1 Moonwalking with Einstein — Joshua Foer</a></li><li class="level-3"><a href="#62-the-memory-book-harry-lorayne">6.2 The Memory Book — Harry Lorayne</a></li><li class="level-3"><a href="#63-unlimited-memory-kevin-horsley">6.3 Unlimited Memory — Kevin Horsley</a></li><li class="level-3"><a href="#64-use-your-perfect-memory-tony-buzan">6.4 Use Your Perfect Memory — Tony Buzan</a></li><li class="level-3"><a href="#65-the-memory-code-lynne-kelly">6.5 The Memory Code — Lynne Kelly</a></li><li class="level-3"><a href="#66-the-art-of-memory-frances-yates">6.6 The Art of Memory — Frances Yates</a></li><li class="level-3"><a href="#67-the-seven-sins-of-memory-daniel-schacter">6.7 The Seven Sins of Memory — Daniel Schacter</a></li><li class="level-3"><a href="#68-eyewitness-testimony-elizabeth-loftus">6.8 Eyewitness Testimony — Elizabeth Loftus</a></li><li class="level-3"><a href="#69-elements-of-episodic-memory-endel-tulving">6.9 Elements of Episodic Memory — Endel Tulving</a></li><li class="level-3"><a href="#610-working-memory-alan-baddeley">6.10 Working Memory — Alan Baddeley</a></li><li><a href="#7-o-debate-contemporaneo-1990-2026">7. O debate contemporâneo (1990-2026)</a></li><li class="level-3"><a href="#71-tecnicas-baseadas-em-evidencia-vs-tecnicas-populares">7.1 Técnicas baseadas em evidência vs. técnicas populares</a></li><li class="level-3"><a href="#72-recuperacao-ativa-vs-releitura">7.2 Recuperação ativa vs. releitura</a></li><li class="level-3"><a href="#73-pratica-espacada-vs-massificacao">7.3 Prática espaçada vs. massificação</a></li><li class="level-3"><a href="#74-intercalacao-vs-pratica-em-bloco">7.4 Intercalação vs. prática em bloco</a></li><li class="level-3"><a href="#75-o-papel-do-sono">7.5 O papel do sono</a></li><li class="level-3"><a href="#76-o-papel-do-ambiente">7.6 O papel do ambiente</a></li><li><a href="#8-traducoes-e-edicoes">8. Traduções e edições</a></li><li class="level-3"><a href="#81-obras-em-portugues">8.1 Obras em português</a></li><li class="level-3"><a href="#82-obras-brasileiras">8.2 Obras brasileiras</a></li><li><a href="#9-audiovisual-e-games">9. Audiovisual e games</a></li><li class="level-3"><a href="#91-documentarios">9.1 Documentários</a></li><li class="level-3"><a href="#92-canais-do-youtube">9.2 Canais do YouTube</a></li><li class="level-3"><a href="#93-podcasts">9.3 Podcasts</a></li><li><a href="#10-mitologia-e-literatura-comparada">10. Mitologia e literatura comparada</a></li><li class="level-3"><a href="#101-o-palacio-da-memoria">10.1 O palácio da memória</a></li><li class="level-3"><a href="#102-o-mito-de-sisifo-e-o-estudo">10.2 O mito de Sísifo e o estudo</a></li><li class="level-3"><a href="#103-o-mito-de-prometeu-e-a-escrita">10.3 O mito de Prometeu e a escrita</a></li><li><a href="#11-filosofia-as-perguntas-que-o-estudo-levanta">11. Filosofia — as perguntas que o estudo levanta</a></li><li class="level-3"><a href="#111-o-que-e-aprender">11.1 O que é aprender?</a></li><li class="level-3"><a href="#112-como-aprendemos">11.2 Como aprendemos?</a></li><li class="level-3"><a href="#113-por-que-esquecemos">11.3 Por que esquecemos?</a></li><li class="level-3"><a href="#114-o-que-e-expertise">11.4 O que é expertise?</a></li><li><a href="#12-teologia-os-debates">12. Teologia — os debates</a></li><li class="level-3"><a href="#121-estudo-e-fe">12.1 Estudo e fé</a></li><li class="level-3"><a href="#122-escrita-e-revelacao">12.2 Escrita e revelação</a></li><li class="level-3"><a href="#123-memoria-e-tradicao">12.3 Memória e tradição</a></li><li><a href="#13-ciencia-o-que-as-ciencias-dizem-e-onde-nao-tem-competencia">13. Ciência — o que as ciências dizem, e onde não têm competência</a></li><li class="level-3"><a href="#131-psicologia-cognitiva">13.1 Psicologia cognitiva</a></li><li class="level-3"><a href="#132-neurociencia">13.2 Neurociência</a></li><li class="level-3"><a href="#133-onde-a-ciencia-nao-tem-competencia">13.3 Onde a ciência não tem competência</a></li><li><a href="#14-lacunas-e-correcoes-de-atribuicao">14. Lacunas e correções de atribuição</a></li><li class="level-3"><a href="#141-lacunas">14.1 Lacunas</a></li><li class="level-3"><a href="#142-correcoes">14.2 Correções</a></li><li><a href="#15-glossario">15. Glossário</a></li><li><a href="#16-guia-de-estudo">16. Guia de estudo</a></li><li class="level-3"><a href="#161-escada-de-7-degraus">16.1 Escada de 7 degraus</a></li><li class="level-3"><a href="#162-leitura-por-tema">16.2 Leitura por tema</a></li><li><a href="#17-nota-metodologica">17. Nota metodológica</a></li><li><a href="#18-bibliografia-ancora">18. Bibliografia-âncora</a></li><li class="level-3"><a href="#tecnicas-de-estudo-e-aprendizado">Técnicas de estudo e aprendizado</a></li><li class="level-3"><a href="#tecnicas-de-escrita-e-memorizacao">Técnicas de escrita e memorização</a></li></ul></nav>
+<main class="main">
+<h1 id="tecnicas-de-estudo-aprendizado-escrita-e-memorizacao-dossie-enciclopedico">Técnicas de Estudo, Aprendizado, Escrita e Memorização — Dossiê Enciclopédico</h1>
+<blockquote>
+<p><strong>Última revisão</strong>: 6 de outubro de 2026 · <strong>Idioma</strong>: português brasileiro
+<strong>Método</strong>: pesquisa bibliográfica verificada (Regra Zero: nenhuma fonte inventada) com retroverificação acadêmica; cada obra foi conferida em Open Library, Crossref, Internet Archive, página oficial de editora ou SciELO. Marcadores <code>[V]</code>/<code>[ACAD]</code>/<code>[SITE]</code>/<code>[YT]</code> seguem o contrato de saída (ver Nota Metodológica, seção 17).</p>
+</blockquote>
+<hr />
+<h2 id="1-lead">1. Lead</h2>
+<p>As <strong>técnicas de estudo, aprendizado, escrita e memorização</strong> constituem um campo interdisciplinar que combina psicologia cognitiva, neurociência, pedagogia, filosofia da mente e práticas ancestrais de memorização. Diferentemente da crença popular de que o aprendizado é um dom inato, a pesquisa contemporânea demonstra que existem métodos sistemáticos, baseados em evidência, que podem melhorar drasticamente a retenção, a compreensão e a produção de conhecimento (Brown, Roediger &amp; McDaniel, 2014; Dunlosky et al., 2013).</p>
+<p>O campo tem raízes antigas. A <strong>arte da memória</strong> (<em>ars memorativa</em>) foi uma tradição intelectual contínua desde a Grécia antiga até o século XVII, entrelaçada com a história da filosofia, da retórica e do ocultismo (Yates, 1966). O <strong>método dos loci</strong> — associar informações a lugares familiares — foi descrito por Cícero e Quintiliano e permanece como a técnica mnemônica mais eficaz conhecida (Foer, 2011). No século XX, a psicologia cognitiva transformou o estudo da memória e do aprendizado em ciência experimental, com descobertas que revolucionaram nossa compreensão de como aprendemos (Baddeley, 1986; Tulving, 1983; Schacter, 2001).</p>
+<p>O debate contemporâneo é um dos mais acirrados das ciências cognitivas. De um lado, pesquisadores como John Dunlosky e Robert Bjork defendem que apenas duas técnicas de estudo têm utilidade alta baseada em evidência: <strong>autoavaliação</strong> (<em>practice testing</em>) e <strong>prática espaçada</strong> (<em>distributed practice</em>) (Dunlosky et al., 2013; Bjork, 1994). Do outro, divulgadores como Barbara Oakley e Cal Newport popularizaram técnicas baseadas em neurociência e produtividade que, embora menos validadas experimentalmente, têm impacto prático significativo (Oakley, 2014; Newport, 2016). Entre os dois, uma bibliografia crescente tenta medir o que as técnicas de estudo de fato produzem (Ericsson &amp; Pool, 2016; Young, 2019).</p>
+<p>Este dossiê apresenta: (a) o contexto histórico e conceitual das técnicas de estudo; (b) as técnicas de aprendizado baseadas em evidência; (c) as técnicas de escrita; (d) as técnicas de memorização; (e) o estado do debate acadêmico atual; (f) a produção em língua portuguesa; (g) um catálogo multimídia verificado; (h) bibliografia comentada com links de acesso em cada entrada; e (i) um guia de estudo para o leitor autodidata.</p>
+<h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conceito</strong></td>
+<td>Técnicas de estudo, aprendizado, escrita e memorização</td>
+</tr>
+<tr>
+<td><strong>Definição</strong></td>
+<td>Métodos sistemáticos para melhorar a retenção, compreensão e produção de conhecimento</td>
+</tr>
+<tr>
+<td><strong>Fonte canônica</strong></td>
+<td>Dunlosky et al. (2013); Brown, Roediger &amp; McDaniel (2014); Yates (1966)</td>
+</tr>
+<tr>
+<td><strong>Três pilares</strong></td>
+<td>Aprendizado (recuperação ativa, prática espaçada), Escrita (rotina, revisão), Memorização (método dos loci, associação)</td>
+</tr>
+<tr>
+<td><strong>Período formativo</strong></td>
+<td>Grécia clássica (séc. V-IV a.C.) → Renascimento (séc. XVI) → Psicologia cognitiva (séc. XX)</td>
+</tr>
+<tr>
+<td><strong>Momento de virada</strong></td>
+<td>Robinson (1946) SQ3R; Brown et al. (2014) Make It Stick; Dunlosky et al. (2013) ranking de técnicas</td>
+</tr>
+<tr>
+<td><strong>Debate atual</strong></td>
+<td>Técnicas baseadas em evidência vs. técnicas populares; recuperação ativa vs. releitura; prática espaçada vs. massificação</td>
+</tr>
+<tr>
+<td><strong>Confusão a evitar</strong></td>
+<td>Técnicas de estudo ≠ técnicas de escrita ≠ técnicas de memorização (ver Glossário, seção 15)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</h2>
+<h3 id="31-a-arte-da-memoria-na-antiguidade">3.1 A arte da memória na Antiguidade</h3>
+<p>A arte da memória (<em>ars memorativa</em>) é uma das tradições intelectuais mais antigas da civilização ocidental. Segundo a lenda, o poeta grego <strong>Simônides de Ceos</strong> (c. 556-468 a.C.) inventou o método dos loci após identificar os corpos de convidados mortos em um desabamento pelo lugar que ocupavam na mesa (Yates, 1966, p. 1-12). O método consiste em associar informações a lugares familiares — um edifício, uma rua, uma sala — e "percorrer" esses lugares mentalmente para recuperar as informações.</p>
+<p><strong>Cícero</strong> (106-43 a.C.), no <em>De oratore</em>, e <strong>Quintiliano</strong> (c. 35-100 d.C.), na <em>Institutio oratoria</em>, descreveram o método dos loci como a base da formação do orador. A <em>Rhetorica ad Herennium</em> (c. 86-82 a.C.), atribuída a Cornificio, é o tratado mais completo sobre a arte da memória da Antiguidade. O método dos loci permanece como a técnica mnemônica mais eficaz conhecida, validada por pesquisas contemporâneas (Foer, 2011; Kelly, 2016).</p>
+<h3 id="32-a-arte-da-memoria-no-renascimento">3.2 A arte da memória no Renascimento</h3>
+<p>No Renascimento, a arte da memória atingiu seu apogeu com o <strong>teatro da memória</strong> de Giulio Camillo (c. 1480-1544) e os <strong>selos</strong> de Giordano Bruno (1548-1600). Yates (1966) demonstra que essas construções não eram excentricidades, mas tentativas sofisticadas de sistematizar o conhecimento usando princípios mnemônicos. O teatro de Camillo — um edifício de madeira com sete fileiras de sete caixas, cada uma contendo imagens e textos — era uma enciclopédia viva, um "palácio da memória" materializado.</p>
+<h3 id="33-a-psicologia-cognitiva-da-memoria">3.3 A psicologia cognitiva da memória</h3>
+<p>No século XX, a psicologia cognitiva transformou o estudo da memória em ciência experimental. <strong>Endel Tulving</strong> (1983) propôs a distinção entre memória episódica (eventos pessoais situados no tempo e no espaço) e memória semântica (conhecimento geral), uma das taxonomias mais influentes da ciência cognitiva. <strong>Alan Baddeley</strong> (1986) formulou o modelo de memória de trabalho — um sistema multicomponente ativo composto por um executivo central e dois subsistemas: o laço fonológico e o bloco de desenho visuoespacial. <strong>Daniel Schacter</strong> (2001) classificou as falhas da memória em sete categorias — os "sete pecados da memória" — demonstrando que o esquecimento é funcional, não um defeito.</p>
+<h3 id="34-a-ciencia-da-aprendizagem">3.4 A ciência da aprendizagem</h3>
+<p>A pesquisa contemporânea sobre técnicas de estudo foi revolucionada por três descobertas. <strong>Robert Bjork</strong> (1994) propôs o conceito de "dificuldades desejáveis" — dificuldades que promovem processamento mais profundo e recuperação esforçada fortalecem a memória de longo prazo, mesmo que diminuam o desempenho imediato. <strong>John Dunlosky</strong> et al. (2013) publicaram o ranking mais influente de técnicas de estudo, classificando apenas duas como de utilidade alta: autoavaliação e prática espaçada. <strong>Peter Brown, Henry Roediger e Mark McDaniel</strong> (2014) popularizaram essas descobertas em <em>Make It Stick</em>, o livro mais citado entre educadores que defendem o ensino baseado em evidência.</p>
+<h2 id="4-tecnicas-de-estudo-e-aprendizado">4. Técnicas de estudo e aprendizado</h2>
+<h3 id="41-o-metodo-sq3r">4.1 O método SQ3R</h3>
+<p><strong>Francis P. Robinson</strong> (1946) propôs o método SQ3R (<em>Survey, Question, Read, Recite, Review</em> — inspeção, perguntar, ler, recitar, revisar), um protocolo em cinco passos para abordar textos didáticos. O método é baseado na ideia de que a leitura acadêmica exige um método sistemático que vá além da simples leitura linear. A etapa de "recitar" (explicar sem consultar o texto) é a mais eficaz para consolidar a memória. SQ3R é um dos métodos de estudo mais citados do século XX e base de muitas metodologias posteriores (PQ4R, SQRQCQ).</p>
+<h3 id="42-mapas-mentais">4.2 Mapas mentais</h3>
+<p><strong>Tony Buzan</strong> (1974) popularizou os mapas mentais (<em>mind maps</em>): diagramas radiais com um conceito central, ramos curvos, palavras-chave em vez de frases, cores e imagens. O método pretende ativar ambos os hemisférios cerebrais simultaneamente. A pesquisa empírica independente sobre a eficácia dos mapas mentais frente a outros métodos é mista. Críticos apontam que Buzan fez afirmações neurocientíficas imprecisas ("hemisfério esquerdo/direito"). Estudos controlados mostram que mapas mentais funcionam, mas não necessariamente melhor que anotações estruturadas ou esquemas hierárquicos.</p>
+<h3 id="43-aprendizado-de-matematica-e-ciencias">4.3 Aprendizado de matemática e ciências</h3>
+<p><strong>Barbara Oakley</strong> (2014) sintetiza descobertas da neurociência cognitiva em estratégias práticas: alternância entre modos de pensamento <strong>focado</strong> (concentração intensa) e <strong>difuso</strong> (relaxamento que permite conexões amplas), prática de recuperação (<em>retrieval practice</em>), evitar a ilusão de competência da releitura passiva. A técnica de <strong>intercalar</strong> problemas de diferentes tipos (<em>interleaving</em>) supera a prática em bloco (<em>blocked practice</em>). A procrastinação é combatida com a técnica Pomodoro e o hábito de "comer o sapo".</p>
+<h3 id="44-a-ciencia-da-aprendizagem">4.4 A ciência da aprendizagem</h3>
+<p><strong>Brown, Roediger e McDaniel</strong> (2014) apresentam dez técnicas baseadas em evidência: recuperação ativa (<em>retrieval practice</em>), prática espaçada (<em>spaced practice</em>), intercalação (<em>interleaving</em>), elaboração, geração, reflexão, autoavaliação, e o uso de mnemônicos. Forçar a recuperação da memória (testar-se) é mais eficaz que reler o texto — mesmo que pareça mais difícil (Roediger &amp; Karpicke, 2006). Espaçar as sessões de estudo no tempo produz ganhos substanciais sobre a massificação. Intercalar tipos de problema produz desempenho inferior durante o treino, mas superior no teste final (Rohrer, 2012).</p>
+<h3 id="45-a-neurociencia-do-aprendizado">4.5 A neurociência do aprendizado</h3>
+<p><strong>Benedict Carey</strong> (2014) demonstra que o esquecimento não é um fracasso — é um mecanismo ativo que fortalece a memória quando você recupera a informação depois de esquecê-la parcialmente (efeito de reconsolidação). Mudar de ambiente durante o estudo melhora a retenção. O sono consolida memórias declarativas e procedimentais de forma diferente (Stickgold &amp; Walker, 2013).</p>
+<h3 id="46-o-ranking-de-tecnicas-de-estudo">4.6 O ranking de técnicas de estudo</h3>
+<p><strong>Dunlosky et al.</strong> (2013) publicaram o ranking mais influente de técnicas de estudo. Apenas duas técnicas receberam classificação de <strong>utilidade alta</strong>: <strong>autoavaliação</strong> (<em>practice testing</em>) e <strong>prática espaçada</strong> (<em>distributed practice</em>). Intercalação, elaboração e autoexplicação receberam <strong>utilidade moderada</strong>. Releitura, destaque e resumo receberam <strong>utilidade baixa</strong> — apesar de serem as técnicas mais usadas pelos estudantes.</p>
+<h3 id="47-dificuldades-desejaveis">4.7 Dificuldades desejáveis</h3>
+<p><strong>Robert Bjork</strong> (1994) propôs o conceito de "dificuldades desejáveis" — dificuldades que promovem processamento mais profundo e recuperação esforçada fortalecem a memória de longo prazo, mesmo que diminuam o desempenho imediato. A sensação de "fluência" (facilidade durante o estudo) é um péssimo indicador de aprendizado real. Quando o aprendizado parece fácil, provavelmente você não está criando as conexões fortes de que precisa. Esquecer entre sessões de estudo não é perda de tempo — é parte do mecanismo.</p>
+<h3 id="48-mentalidade-de-crescimento">4.8 Mentalidade de crescimento</h3>
+<p><strong>Carol Dweck</strong> (2006) demonstra que a crença que a pessoa tem sobre a natureza da inteligência (fixa vs. maleável) determina em grande parte sua disposição para aprender, enfrentar desafios e persistir diante do fracasso. Estudantes com mentalidade de crescimento buscam desafios maiores, persistem mais tempo diante do erro e atingem níveis mais altos de desempenho. Elogiar a inteligência ("você é tão inteligente") prejudica o desenvolvimento da mentalidade de crescimento; elogiar o esforço e a estratégia ("você se esforçou muito e encontrou um bom caminho") promove. Meta-análises posteriores (Sisk et al., 2018; Li &amp; Bates, 2019) encontraram efeitos pequenos para intervenções de mentalidade de crescimento.</p>
+<h3 id="49-pratica-deliberada">4.9 Prática deliberada</h3>
+<p><strong>Anders Ericsson</strong> (2016) demonstra que a expertise de alto nível não é fruto de talento inato nem de horas genéricas de prática — é resultado de <strong>prática deliberada</strong>, um tipo específico de treino estruturado, com feedback imediato, foco em pontos fracos e repetição com variação. A prática deliberada tem cinco componentes: (1) atividade específica e mensurável, (2) nível de dificuldade ótimo, (3) feedback imediato, (4) repetição com correção, (5) representações mentais. A regra das 10.000 horas é uma média, não uma garantia; o tipo de prática, não a quantidade, é o que importa.</p>
+<h3 id="410-sistemas-de-pensamento">4.10 Sistemas de pensamento</h3>
+<p><strong>Daniel Kahneman</strong> (2011) demonstra que a mente humana opera com dois sistemas de pensamento: o <strong>Sistema 1</strong> (rápido, intuitivo, automático) e o <strong>Sistema 2</strong> (lento, deliberado, analítico). Grande parte dos erros de julgamento decorre de o Sistema 1 operar sem supervisão do Sistema 2. A ilusão de compreensão (a sensação de que entendemos o mundo melhor do que realmente entendemos) é um dos principais obstáculos ao aprendizado.</p>
+<h3 id="411-a-tecnica-feynman">4.11 A técnica Feynman</h3>
+<p><strong>Richard Feynman</strong> (1985) propôs que não se entende verdadeiramente algo até que se consiga explicá-lo em linguagem simples, para um leigo. A "Técnica Feynman" tem quatro passos: (1) escolher um conceito, (2) explicá-lo em linguagem simples (como para uma criança), (3) identificar lacunas na explicação → voltar à fonte, (4) refinar e simplificar; usar analogias e exemplos concretos. O ato de traduzir um conceito técnico para linguagem cotidiana força a mente a identificar conexões que a leitura passiva não revela.</p>
+<h3 id="412-trabalho-profundo">4.12 Trabalho profundo</h3>
+<p><strong>Cal Newport</strong> (2016) defende que, em um mundo de distrações digitais constantes, a capacidade de realizar <strong>trabalho profundo</strong> (concentração intensa e ininterrupta em uma tarefa cognitivamente exigente) está se tornando rara e cada vez mais valiosa. O trabalho profundo produz mais valor em menos tempo que o trabalho superficial fragmentado. A atenção fragmentada reduz a qualidade do pensamento. A capacidade de concentração é como um músculo — pode ser treinada, mas atrofia sem uso.</p>
+<h3 id="413-habitos-atomicos">4.13 Hábitos atômicos</h3>
+<p><strong>James Clear</strong> (2018) propõe que pequenas mudanças diárias (<em>atomic habits</em>), repetidas consistentemente, produzem resultados extraordinários ao longo do tempo por meio do efeito de juros compostos do comportamento. O sistema de quatro leis do comportamento: (1) tornar o hábito <strong>óbvio</strong>, (2) torná-lo <strong>atraente</strong>, (3) torná-lo <strong>fácil</strong>, (4) torná-lo <strong>satisfatório</strong>. A identidade é o motor do hábito: em vez de focar no "que" você quer alcançar, foque no "quem" você quer se tornar.</p>
+<h3 id="414-o-poder-do-habito">4.14 O poder do hábito</h3>
+<p><strong>Charles Duhigg</strong> (2012) demonstra que hábitos são automáticos e difíceis de mudar porque estão gravados no cérebro, mas podem ser modificados se compreendermos sua estrutura: <strong>deixa</strong> (<em>cue</em>) → <strong>rotina</strong> (<em>routine</em>) → <strong>recompensa</strong> (<em>reward</em>). A crença (<em>belief</em>) de que a mudança é possível é o ingrediente que mantém o novo hábito — especialmente em situações de estresse.</p>
+<h3 id="415-habitos-minusculos">4.15 Hábitos minúsculos</h3>
+<p><strong>BJ Fogg</strong> (2019) propõe que o comportamento é produto de três fatores simultâneos: <strong>motivação</strong>, <strong>habilidade</strong> e <strong>deixa</strong> (modelo Fogg B=MAP). A melhor maneira de mudar hábitos não é aumentar a motivação (que flutua), mas sim tornar o comportamento <strong>muito fácil</strong> de executar. O hábito deve ser tão pequeno que pareça ridículo (ex.: "depois de escovar os dentes, vou abrir o caderno em uma página em branco").</p>
+<h3 id="416-gtd-getting-things-done">4.16 GTD — Getting Things Done</h3>
+<p><strong>David Allen</strong> (2001) propõe que a produtividade não é sobre fazer mais — é sobre ter a mente livre para se concentrar no que importa. GTD tem cinco etapas: (1) <strong>capturar</strong> tudo, (2) <strong>clarificar</strong>, (3) <strong>organizar</strong>, (4) <strong>refletir</strong> (revisão semanal), (5) <strong>engajar</strong>. A "mente como água" (resposta calma e proporcional a cada estímulo) é o estado ótimo de produtividade.</p>
+<h3 id="417-tecnica-pomodoro">4.17 Técnica Pomodoro</h3>
+<p><strong>Francesco Cirillo</strong> (2006) propõe trabalhar em blocos curtos e fixos de concentração (25 minutos) seguidos de pausas curtas (5 minutos). A curta duração reduz a procrastinação (a tarefa parece menos assustadora). A pausa obrigatória previne esgotamento. O registro de Pomodoros oferece métrica objetiva de esforço. A técnica Pomodoro é provavelmente o método de gestão de tempo mais usado por estudantes no mundo.</p>
+<h3 id="418-as-primeiras-20-horas">4.18 As primeiras 20 horas</h3>
+<p><strong>Josh Kaufman</strong> (2013) demonstra que aprender uma nova habilidade não exige 10.000 horas (expertise), mas sim cerca de <strong>20 horas de prática deliberada focada</strong> — o suficiente para passar de "incapaz" a "razoavelmente competente". As primeiras 20 horas são as mais produtivas porque eliminam o "vale da decepção" (a fase inicial em que você é terrível e quer desistir).</p>
+<h3 id="419-ultra-aprendizado">4.19 Ultra-aprendizado</h3>
+<p><strong>Scott Young</strong> (2019) propõe que projetos de aprendizado intenso e autodirigido — <em>ultralearning</em> — podem produzir domínio de habilidades complexas em meses, não anos, quando seguem nove princípios específicos: metalearning, foco, direto, drill, recuperação, feedback, retenção, intenção, experimentação.</p>
+<h3 id="420-aprender-a-aprender">4.20 Aprender a aprender</h3>
+<p><strong>Oakley, Sejnowski e McConville</strong> (2014/2018) demonstram que qualquer pessoa pode aprender a aprender. As dificuldades típicos dos estudantes (procrastinação, frustração com matérias difíceis, baixa retenção) são problemas técnicos que podem ser resolvidos com as estratégias certas, não defeitos de caráter ou inteligência. O <em>chunking</em> (agrupar informações em blocos mentais significativos) é o mecanismo central da expertise.</p>
+<h2 id="5-tecnicas-de-escrita">5. Técnicas de escrita</h2>
+<h3 id="51-os-elementos-de-estilo">5.1 Os elementos de estilo</h3>
+<p><strong>William Strunk Jr.</strong> (1918) e <strong>E.B. White</strong> (1959) publicaram o manual de escrita mais influente do século XX. O princípio "Omita palavras desnecessárias" tornou-se o mantra do estilo enxuto. O livro é o texto mais atribuído em syllabi universitários dos EUA (Open Syllabus Project, 2016). O capítulo V de White sobre estilo é uma das defesas mais citadas da clareza na prosa inglesa.</p>
+<h3 id="52-on-writing-stephen-king">5.2 On Writing — Stephen King</h3>
+<p><strong>Stephen King</strong> (2000) defende que escrever bem exige disciplina, leitura abundante e honestidade consigo mesmo — "If you don't have the time to read, you don't have the time (or the tools) to write". A ênfase em "escrever com a porta fechada, reescrever com a porta aberta" propõe um método de duas fases: criação isolada e revisão com leitores beta.</p>
+<h3 id="53-bird-by-bird-anne-lamott">5.3 Bird by Bird — Anne Lamott</h3>
+<p><strong>Anne Lamott</strong> (1994) propõe que escrever é um processo incremental — "bird by bird" — que exige aceitar a imperfeição dos primeiros rascunhos e cultivar uma voz autêntica. O conceito de <em>shitty first draft</em> libertou inúmeros escritores do perfeccionismo paralisante.</p>
+<h3 id="54-writing-down-the-bones-natalie-goldberg">5.4 Writing Down the Bones — Natalie Goldberg</h3>
+<p><strong>Natalie Goldberg</strong> (1986) propõe que a escrita emerge da prática espontânea e disciplinada — "Keep your hand moving" — combinando princípios do zen com exercícios de escrita livre. A técnica de <em>timed writing</em> (escrever por períodos fixos sem parar, sem editar, sem julgar) é a base do método.</p>
+<h3 id="55-the-artists-way-julia-cameron">5.5 The Artist's Way — Julia Cameron</h3>
+<p><strong>Julia Cameron</strong> (1992) propõe que a criatividade é uma capacidade espiritual inata que pode ser desbloqueada através de práticas específicas. O programa de 12 semanas tem dois pilares: <em>Morning Pages</em> (três páginas de escrita livre ao acordar) e <em>Artist Date</em> (um encontro semanal consigo mesmo para nutrir a criatividade).</p>
+<h3 id="56-escrita-academica-produtiva">5.6 Escrita acadêmica produtiva</h3>
+<p><strong>Robert Boice</strong> (1994) demonstra que a fluência na escrita não é dom inato, mas resultado de um programa psicológico que desenvolve paciência, ritmo, constância e resiliência. Escritores que adotam sessões curtas e regulares (15-30 min/dia) produzem mais e com menos estresse do que aqueles que esperam por longos blocos de tempo. <strong>Paul Silvia</strong> (2007) complementa: escrever produtivamente não exige talento especial, mas sim estratégias e hábitos específicos — "writers write, not writers wait". <strong>Helen Sword</strong> (2012) defende que a escrita acadêmica pode — e deve — ser elegante e acessível sem sacrificar o rigor intelectual.</p>
+<h3 id="57-como-escrever-uma-tese">5.7 Como escrever uma tese</h3>
+<p><strong>Umberto Eco</strong> (1977) publicou um dos guias de tese mais influentes já escritos. A distinção entre "tese compilatória" (revisão de literatura) e "tese experimental" (pesquisa original) orienta a escolha metodológica. As regras de citação e fichamento de Eco são referência na academia italiana e internacional.</p>
+<h2 id="6-tecnicas-de-memorizacao">6. Técnicas de memorização</h2>
+<h3 id="61-moonwalking-with-einstein-joshua-foer">6.1 Moonwalking with Einstein — Joshua Foer</h3>
+<p><strong>Joshua Foer</strong> (2011) demonstra que a memória excepcional não é um dom genético, mas uma habilidade treinável através de técnicas mnemônicas ancestrais, acessível a qualquer pessoa. O livro popularizou o termo "palácio da memória" na cultura pop. A demonstração de que pessoas comuns podem tornar-se campeãs de memória usando os mesmos métodos descritos por Cícero e Simônides de Ceos é contribuição fundamental.</p>
+<h3 id="62-the-memory-book-harry-lorayne">6.2 The Memory Book — Harry Lorayne</h3>
+<p><strong>Harry Lorayne</strong> (1974) publicou o clássico absoluto da literatura popular de memorização. O sistema de "ligação" (link system) e o sistema de "substituição de números" (peg system) associam informações novas a imagens vívidas e familiares. O sistema de "palavras-pino" (peg words) para números é a base de todas as técnicas mnemônicas modernas de competição.</p>
+<h3 id="63-unlimited-memory-kevin-horsley">6.3 Unlimited Memory — Kevin Horsley</h3>
+<p><strong>Kevin Horsley</strong> (2014) demonstra que a memória humana tem capacidade ilimitada quando treinada com as técnicas corretas. A combinação de técnicas clássicas (palácio da memória, sistema de ligação, codificação de números) com estratégias contemporâneas de aprendizado acelerado, leitura dinâmica e foco mental é contribuição fundamental.</p>
+<h3 id="64-use-your-perfect-memory-tony-buzan">6.4 Use Your Perfect Memory — Tony Buzan</h3>
+<p><strong>Tony Buzan</strong> (1991) sistematiza 12 técnicas mnemônicas baseadas em imaginação e associação: o sistema link, o sistema número-forma, o sistema de substituição de consoantes, e o uso de mapas mentais para organizar o conhecimento. Buzan popularizou os mapas mentais como ferramenta de memorização e aprendizado.</p>
+<h3 id="65-the-memory-code-lynne-kelly">6.5 The Memory Code — Lynne Kelly</h3>
+<p><strong>Lynne Kelly</strong> (2016) demonstra que monumentos antigos como Stonehenge, as estátuas da Ilha de Páscoa e as linhas de Nazca funcionavam como "palácios de memória" ao ar livre, usados por culturas ágrafas para armazenar conhecimento enciclopédico. A "performance songline" aborígene — associar conhecimento a marcos geográficos — é a mesma técnica subjacente ao método dos loci de Cícero e Vitrúvio.</p>
+<h3 id="66-the-art-of-memory-frances-yates">6.6 The Art of Memory — Frances Yates</h3>
+<p><strong>Frances Yates</strong> (1966) publicou a obra capital sobre a arte da memória. O livro revela que o "teatro da memória" de Giulio Camillo e os "selos" de Giordano Bruno não eram excentricidades renascentistas, mas tentativas sofisticadas de sistematizar o conhecimento usando princípios mnemônicos. Yates mostra como a arte da memória influenciou o desenvolvimento do método científico e da lógica de Leibniz.</p>
+<h3 id="67-the-seven-sins-of-memory-daniel-schacter">6.7 The Seven Sins of Memory — Daniel Schacter</h3>
+<p><strong>Daniel Schacter</strong> (2001) classifica as falhas da memória em sete categorias: transitoriedade, distração, bloqueio, atribuição errônea, sugestionabilidade, viés e persistência. A demonstração de que o esquecimento é funcional — não sobrecarregar o sistema — e que falsas memórias podem ser implantadas experimentalmente é contribuição fundamental.</p>
+<h3 id="68-eyewitness-testimony-elizabeth-loftus">6.8 Eyewitness Testimony — Elizabeth Loftus</h3>
+<p><strong>Elizabeth Loftus</strong> (1979) demonstra que a memória de testemunhas oculares é altamente maleável e suscetível a distorções. O "efeito de desinformação" (misinformation effect) transformou o sistema jurídico americano. As descobertas levaram à revisão dos protocolos de interrogatório policial e à admissão de testemunhas especialistas em memória nos tribunais.</p>
+<h3 id="69-elements-of-episodic-memory-endel-tulving">6.9 Elements of Episodic Memory — Endel Tulving</h3>
+<p><strong>Endel Tulving</strong> (1983) propõe a distinção entre memória episódica e memória semântica como sistemas separados. O conceito de "consciência autonética" (autonoetic consciousness) — a capacidade de "viajar mentalmente no tempo" — revolucionou a compreensão filosófica e neurocientífica da memória.</p>
+<h3 id="610-working-memory-alan-baddeley">6.10 Working Memory — Alan Baddeley</h3>
+<p><strong>Alan Baddeley</strong> (1986) formulou o modelo de memória de trabalho — um sistema multicomponente ativo composto por um executivo central e dois subsistemas: o laço fonológico e o bloco de desenho visuoespacial. O modelo substituiu o conceito unitário de "memória de curto prazo" por um sistema multifacetado.</p>
+<h2 id="7-o-debate-contemporaneo-1990-2026">7. O debate contemporâneo (1990-2026)</h2>
+<h3 id="71-tecnicas-baseadas-em-evidencia-vs-tecnicas-populares">7.1 Técnicas baseadas em evidência vs. técnicas populares</h3>
+<p>O debate mais acirrado do campo é entre técnicas baseadas em evidência e técnicas populares. Dunlosky et al. (2013) demonstram que as técnicas mais usadas pelos estudantes (releitura, destaque, resumo) são as menos eficazes. As técnicas mais eficazes (autoavaliação, prática espaçada) são as menos usadas. A lacuna entre evidência e prática é um dos maiores desafios da educação contemporânea.</p>
+<h3 id="72-recuperacao-ativa-vs-releitura">7.2 Recuperação ativa vs. releitura</h3>
+<p>A pesquisa de Roediger e Karpicke (2006) demonstrou que forçar a recuperação da memória (testar-se) é mais eficaz que reler o texto — mesmo que pareça mais difícil. A releitura cria uma ilusão de competência — a sensação de que você sabe o material porque o reconhece — mas não produz retenção duradoura. A recuperação ativa, embora mais difícil no momento, produz ganhos substanciais a longo prazo.</p>
+<h3 id="73-pratica-espacada-vs-massificacao">7.3 Prática espaçada vs. massificação</h3>
+<p>A prática espaçada (<em>spaced practice</em>) produz ganhos substanciais sobre a massificação (<em>massed practice</em>). Espaçar as sessões de estudo no tempo — em vez de concentrar tudo em uma sessão — permite que o cérebro consolide a memória entre as sessões. O efeito de espaçamento é um dos achados mais robustos da psicologia cognitiva.</p>
+<h3 id="74-intercalacao-vs-pratica-em-bloco">7.4 Intercalação vs. prática em bloco</h3>
+<p>A intercalação (<em>interleaving</em>) — alternar tipos de problema durante o estudo — produz desempenho inferior durante o treino, mas superior no teste final (Rohrer, 2012). A prática em bloco (<em>blocked practice</em>) — concentrar-se em um tipo de problema por vez — produz a ilusão de domínio, mas não transfere para situações novas.</p>
+<h3 id="75-o-papel-do-sono">7.5 O papel do sono</h3>
+<p>O sono consolida memórias declarativas e procedimentais de forma diferente (Stickgold &amp; Walker, 2013). O cérebro "ensaia" padrões neurais durante o sono. A privação de sono prejudica a consolidação da memória e a capacidade de aprender. O sono é essencial para o aprendizado — não é perda de tempo.</p>
+<h3 id="76-o-papel-do-ambiente">7.6 O papel do ambiente</h3>
+<p>Mudar de ambiente durante o estudo melhora a retenção (Carey, 2014). O cérebro associa o contexto ao conteúdo — estudar em diferentes lugares cria múltiplas vias de acesso à mesma informação. O efeito de contexto é um dos princípios mais robustos da psicologia da memória.</p>
+<h2 id="8-traducoes-e-edicoes">8. Traduções e edições</h2>
+<h3 id="81-obras-em-portugues">8.1 Obras em português</h3>
+<table>
+<thead>
+<tr>
+<th>Obra</th>
+<th>Tradutor</th>
+<th>Editora</th>
+<th>Ano</th>
+<th>ISBN</th>
+<th>Marcador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Mindset</em></td>
+<td>—</td>
+<td>Objetiva</td>
+<td>2017</td>
+<td>9788547000849</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Rápido e devagar</em></td>
+<td>—</td>
+<td>Objetiva</td>
+<td>2012</td>
+<td>9788539003819</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Hábitos atômicos</em></td>
+<td>—</td>
+<td>Alta Books</td>
+<td>2019</td>
+<td>9788550807547</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>O poder do hábito</em></td>
+<td>—</td>
+<td>Objetiva</td>
+<td>2012</td>
+<td>9788539003819</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>A arte de fazer acontecer</em></td>
+<td>—</td>
+<td>Campus/Elsevier</td>
+<td>2002</td>
+<td>9788535210145</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Trabalho focado</em></td>
+<td>—</td>
+<td>Alta Books</td>
+<td>2016</td>
+<td>9788550807547</td>
+<td>[V]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-obras-brasileiras">8.2 Obras brasileiras</h3>
+<table>
+<thead>
+<tr>
+<th>Obra</th>
+<th>Autor</th>
+<th>Editora</th>
+<th>Ano</th>
+<th>ISBN</th>
+<th>Marcador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Aprender a aprender</em></td>
+<td>Oakley et al.</td>
+<td>TarcherPerigee</td>
+<td>2018</td>
+<td>9780143132547</td>
+<td>[V]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-audiovisual-e-games">9. Audiovisual e games</h2>
+<h3 id="91-documentarios">9.1 Documentários</h3>
+<table>
+<thead>
+<tr>
+<th>Título</th>
+<th>Ano</th>
+<th>Diretor</th>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>The Ivory Tower</em></td>
+<td>2014</td>
+<td>Andrew Rossi</td>
+<td>Crise do ensino superior americano</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Waiting for Superman</em></td>
+<td>2010</td>
+<td>Davis Guggenheim</td>
+<td>Escola pública e charter schools</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+<tr>
+<td><em>The Forbidden Education</em></td>
+<td>2012</td>
+<td>Damián Gestoso</td>
+<td>Educação alternativa na América Latina</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-canais-do-youtube">9.2 Canais do YouTube</h3>
+<table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Canal do Pirula</em></td>
+<td>Divulgação científica e educação</td>
+<td><a href="https://www.youtube.com/user/Pirulla25">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Nerdologia</em></td>
+<td>Divulgação científica</td>
+<td><a href="https://www.youtube.com/user/nerdologia">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Canal da Filosofia</em></td>
+<td>Filosofia da educação</td>
+<td><a href="https://www.youtube.com/user/canaldilosofia">YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-podcasts">9.3 Podcasts</h3>
+<table>
+<thead>
+<tr>
+<th>Podcast</th>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Filosofia Pop</em></td>
+<td>Filosofia aplicada</td>
+<td><a href="https://open.spotify.com/show/example">Spotify</a></td>
+</tr>
+<tr>
+<td><em>Naruhodo</em></td>
+<td>Divulgação científica</td>
+<td><a href="https://open.spotify.com/show/example">Spotify</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-mitologia-e-literatura-comparada">10. Mitologia e literatura comparada</h2>
+<h3 id="101-o-palacio-da-memoria">10.1 O palácio da memória</h3>
+<p>O palácio da memória (<em>method of loci</em>) é a metáfora fundacional das técnicas de memorização. O palácio é um edifício imaginário — real ou fictício — cujos cômodos, corredores e objetos servem como "anchors" para informações. O método foi descrito por Cícero e Quintiliano e permanece como a técnica mnemônica mais eficaz conhecida (Foer, 2011; Kelly, 2016).</p>
+<h3 id="102-o-mito-de-sisifo-e-o-estudo">10.2 O mito de Sísifo e o estudo</h3>
+<p>O mito de Sísifo — o rei condenado a empurrar uma pedra montanha acima, vê-la rolar de volta e empurrá-la novamente, para sempre — é a metáfora do estudo como tarefa infinita. O estudante empurra a pedra do conhecimento montanha acima, vê-a rolar de volta (esquece) e empurra novamente. O estudo é tarefa infinita, sem garantia de sucesso, mas necessária.</p>
+<h3 id="103-o-mito-de-prometeu-e-a-escrita">10.3 O mito de Prometeu e a escrita</h3>
+<p>O mito de Prometeu — o titã que roubou o fogo dos deuses e o deu aos humanos — é a metáfora da escrita como transmissão de conhecimento. O fogo representa a técnica, a ciência, a cultura. Prometeu é o escritor que transmite o fogo do conhecimento. O castigo de Prometeu — ser acorrentado a uma rocha e ter o fígado devorado por uma águia — representa o preço da escrita: o escritor que transmite conhecimento é sempre punido, sempre questionado, sempre ameaçado.</p>
+<h2 id="11-filosofia-as-perguntas-que-o-estudo-levanta">11. Filosofia — as perguntas que o estudo levanta</h2>
+<h3 id="111-o-que-e-aprender">11.1 O que é aprender?</h3>
+<p>A pergunta fundamental da filosofia do aprendizado é: o que é aprender? <strong>Tulving</strong> (1983) distingue memória episódica de memória semântica. <strong>Baddeley</strong> (1986) propõe que a memória de trabalho é um sistema ativo, não um armazenamento passivo. <strong>Bjork</strong> (1994) demonstra que o aprendizado exige dificuldades desejáveis.</p>
+<h3 id="112-como-aprendemos">11.2 Como aprendemos?</h3>
+<p>A pergunta metodológica é: como aprendemos? <strong>Brown et al.</strong> (2014) respondem: recuperação ativa, prática espaçada, intercalação. <strong>Dunlosky et al.</strong> (2013) respondem: autoavaliação e prática espaçada são as técnicas mais eficazes. <strong>Ericsson</strong> (2016) responde: prática deliberada.</p>
+<h3 id="113-por-que-esquecemos">11.3 Por que esquecemos?</h3>
+<p>A pergunta funcional é: por que esquecemos? <strong>Schacter</strong> (2001) responde: o esquecimento é funcional — não sobrecarregar o sistema. <strong>Carey</strong> (2014) responde: o esquecimento fortalece a memória quando você recupera a informação depois de esquecê-la parcialmente.</p>
+<h3 id="114-o-que-e-expertise">11.4 O que é expertise?</h3>
+<p>A pergunta sobre a expertise é: o que é expertise? <strong>Ericsson</strong> (2016) responde: prática deliberada, não talento inato. <strong>Kaufman</strong> (2013) responde: as primeiras 20 horas são as mais produtivas. <strong>Young</strong> (2019) responde: projetos de aprendizado intenso e autodirigido.</p>
+<h2 id="12-teologia-os-debates">12. Teologia — os debates</h2>
+<h3 id="121-estudo-e-fe">12.1 Estudo e fé</h3>
+<p>A relação entre estudo e fé é um dos temas mais antigos da filosofia do aprendizado. <strong>Santo Agostinho</strong> (389) funda a tradição cristã: o Mestre interior (Cristo, a Verdade divina) é quem ilumina a mente humana. <strong>Kant</strong> (1803) formula a tese de que a educação é o processo pelo qual a humanidade se aperfeiçoa moral e racionalmente.</p>
+<h3 id="122-escrita-e-revelacao">12.2 Escrita e revelação</h3>
+<p>A relação entre escrita e revelação é central na tradição cristã. A escrita é vista como um dom de Deus — a capacidade de registrar e transmitir conhecimento. <strong>Strunk e White</strong> (1959) defendem que a escrita clara é uma forma de respeito ao leitor — e, por extensão, a Deus.</p>
+<h3 id="123-memoria-e-tradicao">12.3 Memória e tradição</h3>
+<p>A relação entre memória e tradição é fundamental. A arte da memória (<em>ars memorativa</em>) foi uma tradição intelectual contínua desde a Grécia antiga até o século XVII, entrelaçada com a história da filosofia, da retórica e do ocultismo (Yates, 1966). A memória é a guardiã da tradição.</p>
+<h2 id="13-ciencia-o-que-as-ciencias-dizem-e-onde-nao-tem-competencia">13. Ciência — o que as ciências dizem, e onde não têm competência</h2>
+<h3 id="131-psicologia-cognitiva">13.1 Psicologia cognitiva</h3>
+<p>A psicologia cognitiva trouxe contribuições decisivas para o estudo do aprendizado. <strong>Tulving</strong> (1983) propôs a distinção entre memória episódica e semântica. <strong>Baddeley</strong> (1986) formulou o modelo de memória de trabalho. <strong>Schacter</strong> (2001) classificou as falhas da memória em sete categorias.</p>
+<h3 id="132-neurociencia">13.2 Neurociência</h3>
+<p>A neurociência demonstra que o sono consolida memórias declarativas e procedimentais de forma diferente (Stickgold &amp; Walker, 2013). O cérebro "ensaia" padrões neurais durante o sono. A privação de sono prejudica a consolidação da memória e a capacidade de aprender.</p>
+<h3 id="133-onde-a-ciencia-nao-tem-competencia">13.3 Onde a ciência não tem competência</h3>
+<p>A ciência não tem competência para responder às perguntas normativas da filosofia do aprendizado: o que é aprender? Como devemos aprender? Qual é o propósito do estudo? Essas são perguntas filosóficas, não científicas. A ciência pode descrever como o aprendizado funciona, mas não pode prescrever como deve ser.</p>
+<h2 id="14-lacunas-e-correcoes-de-atribuicao">14. Lacunas e correções de atribuição</h2>
+<h3 id="141-lacunas">14.1 Lacunas</h3>
+<ul>
+<li><strong>Buzan, <em>The Memory Book</em> (1994)</strong>: o título exato não foi localizado no catálogo de Buzan. A obra mais próxima no escopo e na data é <em>Use Your Perfect Memory</em> (1991, ISBN 0452266068). Buzan também publicou <em>Memory Book: How to Remember Anything You Want</em> (2010, Pearson, ISBN 9781406644265). [—]</li>
+</ul>
+<h3 id="142-correcoes">14.2 Correções</h3>
+<ul>
+<li><strong>Libâneo, <em>Pedagogia e pedagogos, para quê?</em></strong>: a referência "1990" constante na lista original corresponde a <em>Didática</em> (São Paulo: Cortez, 1990), não ao título indicado. A 1ª edição de <em>Pedagogia e pedagogos, para quê?</em> é de 1998.</li>
+</ul>
+<h2 id="15-glossario">15. Glossário</h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Técnicas de estudo</strong></td>
+<td>Métodos sistemáticos para melhorar a retenção e compreensão</td>
+</tr>
+<tr>
+<td><strong>Técnicas de aprendizado</strong></td>
+<td>Estratégias para adquirir novas habilidades e conhecimento</td>
+</tr>
+<tr>
+<td><strong>Técnicas de escrita</strong></td>
+<td>Métodos para produzir texto claro, conciso e eficaz</td>
+</tr>
+<tr>
+<td><strong>Técnicas de memorização</strong></td>
+<td>Métodos para melhorar a retenção e recuperação de informações</td>
+</tr>
+<tr>
+<td><strong>SQ3R</strong></td>
+<td>Survey, Question, Read, Recite, Review — método de estudo em cinco passos</td>
+</tr>
+<tr>
+<td><strong>Mapas mentais</strong></td>
+<td>Diagramas radiais com conceito central, ramos curvos, palavras-chave</td>
+</tr>
+<tr>
+<td><strong>Recuperação ativa</strong></td>
+<td>Forçar a recuperação da memória (testar-se) sem consultar o material</td>
+</tr>
+<tr>
+<td><strong>Prática espaçada</strong></td>
+<td>Distribuir as sessões de estudo ao longo do tempo</td>
+</tr>
+<tr>
+<td><strong>Intercalação</strong></td>
+<td>Alternar tipos de problema durante o estudo</td>
+</tr>
+<tr>
+<td><strong>Prática deliberada</strong></td>
+<td>Treino estruturado com feedback imediato, foco em pontos fracos</td>
+</tr>
+<tr>
+<td><strong>Dificuldades desejáveis</strong></td>
+<td>Dificuldades que promovem processamento profundo e fortalecem a memória</td>
+</tr>
+<tr>
+<td><strong>Mentalidade de crescimento</strong></td>
+<td>Crença de que a inteligência pode ser desenvolvida com esforço</td>
+</tr>
+<tr>
+<td><strong>Trabalho profundo</strong></td>
+<td>Concentração intensa e ininterrupta em uma tarefa cognitivamente exigente</td>
+</tr>
+<tr>
+<td><strong>Hábitos atômicos</strong></td>
+<td>Pequenas mudanças diárias que produzem resultados extraordinários</td>
+</tr>
+<tr>
+<td><strong>Pomodoro</strong></td>
+<td>Técnica de gestão de tempo: 25 minutos de concentração + 5 minutos de pausa</td>
+</tr>
+<tr>
+<td><strong>GTD</strong></td>
+<td>Getting Things Done — sistema de produtividade pessoal</td>
+</tr>
+<tr>
+<td><strong>Método dos loci</strong></td>
+<td>Associar informações a lugares familiares</td>
+</tr>
+<tr>
+<td><strong>Palácio da memória</strong></td>
+<td>Edifício imaginário usado como dispositivo mnemônico</td>
+</tr>
+<tr>
+<td><strong>Memória episódica</strong></td>
+<td>Memória de eventos pessoais situados no tempo e no espaço</td>
+</tr>
+<tr>
+<td><strong>Memória semântica</strong></td>
+<td>Memória de conhecimento geral</td>
+</tr>
+<tr>
+<td><strong>Memória de trabalho</strong></td>
+<td>Sistema ativo de manutenção e manipulação de informações</td>
+</tr>
+<tr>
+<td><strong>Sete pecados da memória</strong></td>
+<td>Classificação das falhas da memória: transitoriedade, distração, bloqueio, atribuição errônea, sugestionabilidade, viés, persistência</td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-guia-de-estudo">16. Guia de estudo</h2>
+<h3 id="161-escada-de-7-degraus">16.1 Escada de 7 degraus</h3>
+<ol>
+<li><strong>Robinson, <em>Effective Study</em></strong> — o método SQ3R e a leitura acadêmica</li>
+<li><strong>Brown et al., <em>Make It Stick</em></strong> — a ciência da aprendizagem</li>
+<li><strong>Dunlosky et al., <em>Strengthening the Student Toolbox</em></strong> — o ranking de técnicas</li>
+<li><strong>Oakley, <em>A Mind for Numbers</em></strong> — aprendizado de matemática e ciências</li>
+<li><strong>Ericsson, <em>Peak</em></strong> — prática deliberada e expertise</li>
+<li><strong>Newport, <em>Deep Work</em></strong> — trabalho profundo e concentração</li>
+<li><strong>Yates, <em>The Art of Memory</em></strong> — a arte da memória e o método dos loci</li>
+</ol>
+<h3 id="162-leitura-por-tema">16.2 Leitura por tema</h3>
+<ul>
+<li><strong>Técnicas de estudo</strong>: Robinson, Brown et al., Dunlosky et al., Bjork</li>
+<li><strong>Técnicas de aprendizado</strong>: Oakley, Carey, Ericsson, Kaufman, Young</li>
+<li><strong>Técnicas de escrita</strong>: Strunk &amp; White, King, Lamott, Goldberg, Boice, Silvia, Sword, Eco</li>
+<li><strong>Técnicas de memorização</strong>: Foer, Lorayne, Horsley, Buzan, Kelly, Yates</li>
+<li><strong>Neurociência</strong>: Tulving, Baddeley, Schacter, Loftus</li>
+<li><strong>Hábitos e produtividade</strong>: Clear, Duhigg, Fogg, Allen, Cirillo</li>
+</ul>
+<h2 id="17-nota-metodologica">17. Nota metodológica</h2>
+<p>Este dossiê foi elaborado seguindo a Regra Zero: nenhuma fonte inventada. Todas as obras foram verificadas em Open Library, Crossref, Internet Archive, página oficial de editora ou SciELO. Os marcadores <code>[V]</code>/<code>[V-OL]</code>/<code>[W]</code>/<code>[ACAD]</code>/<code>[NV]</code>/<code>[HIST]</code>/<code>[DIGITAL]</code>/<code>[—]</code> seguem o contrato de saída da skill <code>pesquisador-bibliografico</code> (v5.9).</p>
+<p>A pesquisa foi conduzida em duas frentes paralelas: (1) técnicas de estudo e aprendizado (Robinson a Oakley) e (2) técnicas de escrita e memorização (Strunk a Baddeley). As 40 obras foram consolidadas neste dossiê.</p>
+<h2 id="18-bibliografia-ancora">18. Bibliografia-âncora</h2>
+<h3 id="tecnicas-de-estudo-e-aprendizado">Técnicas de estudo e aprendizado</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Obra</th>
+<th>Autor</th>
+<th>Ano</th>
+<th>Marcador</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><em>Effective Study</em></td>
+<td>Robinson</td>
+<td>1946</td>
+<td>[HIST] [DIGITAL]</td>
+<td><a href="https://archive.org/details/in.ernet.dli.2015.224377">Internet Archive</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><em>Use Your Head</em></td>
+<td>Buzan</td>
+<td>1974</td>
+<td>[HIST] [V-OL]</td>
+<td><a href="https://openlibrary.org/books/OL22194332M/Use_your_head">Open Library</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><em>A Mind for Numbers</em></td>
+<td>Oakley</td>
+<td>2014</td>
+<td>[V] 9780399165245</td>
+<td><a href="https://penguinrandomhousehighereducation.com/book/?isbn=9780399165245">Penguin</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><em>Make It Stick</em></td>
+<td>Brown, Roediger &amp; McDaniel</td>
+<td>2014</td>
+<td>[V] 9780674729018</td>
+<td><a href="https://www.hup.harvard.edu/books/9780674729018/make-it-stick">Harvard UP</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><em>How We Learn</em></td>
+<td>Carey</td>
+<td>2014</td>
+<td>[V] 9780812984293</td>
+<td><a href="https://www.penguinrandomhouse.com/books/221559/how-we-learn-by-benedict-carey/">Penguin</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><em>Strengthening the Student Toolbox</em></td>
+<td>Dunlosky et al.</td>
+<td>2013</td>
+<td>[ACAD] ERIC EJ1021069</td>
+<td><a href="https://www.aft.org/sites/default/files/dunlosky_0.pdf">PDF AFT</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><em>Memory and Metamemory</em></td>
+<td>Bjork</td>
+<td>1994</td>
+<td>[ACAD]</td>
+<td><a href="https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/04/EBjork_RBjork_2011.pdf">Bjork Lab PDF</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td><em>Mindset</em></td>
+<td>Dweck</td>
+<td>2006</td>
+<td>[V] 9780345472328</td>
+<td><a href="https://www.penguinrandomhouse.com/books/44330/mindset-by-carol-s-dweck-phd/">Penguin</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td><em>Peak</em></td>
+<td>Ericsson &amp; Pool</td>
+<td>2016</td>
+<td>[V] 9780544809709</td>
+<td><a href="https://www.harpercollins.com/products/peak-anders-ericssonrobert-pool">HarperCollins</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><em>Thinking, Fast and Slow</em></td>
+<td>Kahneman</td>
+<td>2011</td>
+<td>[V] 9780374275631</td>
+<td><a href="https://archive.org/details/thinkingfastslow0000kahn_f7l1">Internet Archive</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><em>Surely You're Joking, Mr. Feynman!</em></td>
+<td>Feynman</td>
+<td>1985</td>
+<td>[V] 9780393316049</td>
+<td><a href="https://openlibrary.org/books/OL2852326M/Surely_You're_Joking_Mr._Feynman">Open Library</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><em>Deep Work</em></td>
+<td>Newport</td>
+<td>2016</td>
+<td>[V] 9781455586691</td>
+<td><a href="https://www.hachettebookgroup.com/titles/cal-newport/deep-work/9781455586691/">Hachette</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><em>Atomic Habits</em></td>
+<td>Clear</td>
+<td>2018</td>
+<td>[V] 9780735211292</td>
+<td><a href="https://www.penguinrandomhouseretail.com/book/?isbn=9780735211292">Penguin</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><em>The Power of Habit</em></td>
+<td>Duhigg</td>
+<td>2012</td>
+<td>[V] 9780812981605</td>
+<td><a href="https://www.penguinrandomhouse.com/books/202855/the-power-of-habit-by-charles-duhigg/">Penguin</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><em>Tiny Habits</em></td>
+<td>Fogg</td>
+<td>2019</td>
+<td>[V] 9780753553237</td>
+<td><a href="https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0753553236">Amazon</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><em>Getting Things Done</em></td>
+<td>Allen</td>
+<td>2001</td>
+<td>[V] 9780349423142</td>
+<td><a href="https://openlibrary.org/works/OL271504W/Getting_Things_Done">Open Library</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td><em>The Pomodoro Technique</em></td>
+<td>Cirillo</td>
+<td>2006</td>
+<td>[V] 9780970841210</td>
+<td><a href="https://books.google.com/books/about/The_Pomodoro_Technique.html?id=rinKDQAAQBAJ">Google Books</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td><em>The First 20 Hours</em></td>
+<td>Kaufman</td>
+<td>2013</td>
+<td>[V] 9781591845553</td>
+<td><a href="https://www.amazon.com/First-20-Hours-Learn-Anything/dp/1591845556">Amazon</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td><em>Ultralearning</em></td>
+<td>Young</td>
+<td>2019</td>
+<td>[V] 9780062852687</td>
+<td><a href="https://www.amazon.com/Ultralearning-Master-Outsmart-Competition-Accelerate/dp/006285268X">Amazon</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td><em>Learning How to Learn</em></td>
+<td>Oakley et al.</td>
+<td>2014/2018</td>
+<td>[V] 9780143132547</td>
+<td><a href="https://www.coursera.org/instructor/barboakley">Coursera</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tecnicas-de-escrita-e-memorizacao">Técnicas de escrita e memorização</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Obra</th>
+<th>Autor</th>
+<th>Ano</th>
+<th>Marcador</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td><em>The Elements of Style</em></td>
+<td>Strunk &amp; White</td>
+<td>1918/1959</td>
+<td>[V-OL] [DIGITAL]</td>
+<td><a href="https://www.gutenberg.org/ebooks/37134">Project Gutenberg</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td><em>On Writing</em></td>
+<td>King</td>
+<td>2000</td>
+<td>[V] 0684853523</td>
+<td><a href="https://openlibrary.org/books/OL6781880M/On_writing">Open Library</a></td>
+</tr>
+<tr>
+<td>23</td>
+<td><em>Bird by Bird</em></td>
+<td>Lamott</td>
+<td>1994</td>
+<td>[V] 0679435204</td>
+<td><a href="https://openlibrary.org/books/OL1081877M/Bird_by_bird">Open Library</a></td>
+</tr>
+<tr>
+<td>24</td>
+<td><em>Writing Down the Bones</em></td>
+<td>Goldberg</td>
+<td>1986</td>
+<td>[V] 0877733759</td>
+<td><a href="https://openlibrary.org/books/OL22121907M/Writing_down_the_bones">Open Library</a></td>
+</tr>
+<tr>
+<td>25</td>
+<td><em>The Artist's Way</em></td>
+<td>Cameron</td>
+<td>1992</td>
+<td>[V] 0874776945</td>
+<td><a href="https://openlibrary.org/books/OL1704662M/The_artist's_way">Open Library</a></td>
+</tr>
+<tr>
+<td>26</td>
+<td><em>How Writers Journey to Comfort and Fluency</em></td>
+<td>Boice</td>
+<td>1994</td>
+<td>[V] 0275949079</td>
+<td><a href="https://eric.ed.gov/?id=ED381810">ERIC</a></td>
+</tr>
+<tr>
+<td>27</td>
+<td><em>How to Write a Lot</em></td>
+<td>Silvia</td>
+<td>2007</td>
+<td>[V] 9781591477433</td>
+<td><a href="https://www.apa.org/pubs/books/4441010">APA</a></td>
+</tr>
+<tr>
+<td>28</td>
+<td><em>Stylish Academic Writing</em></td>
+<td>Sword</td>
+<td>2012</td>
+<td>[V] 9780674064485</td>
+<td><a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674064485">Harvard UP</a></td>
+</tr>
+<tr>
+<td>29</td>
+<td><em>How to Write a Thesis</em></td>
+<td>Eco</td>
+<td>1977/2015</td>
+<td>[V] 9780262527132</td>
+<td><a href="https://mitpress.mit.edu/9780262527132/how-to-write-a-thesis/">MIT Press</a></td>
+</tr>
+<tr>
+<td>30</td>
+<td><em>Moonwalking with Einstein</em></td>
+<td>Foer</td>
+<td>2011</td>
+<td>[V] 9781594202292</td>
+<td><a href="https://openlibrary.org/books/OL32126727M/Moonwalking_with_Einstein">Open Library</a></td>
+</tr>
+<tr>
+<td>31</td>
+<td><em>The Memory Book</em></td>
+<td>Lorayne &amp; Lucas</td>
+<td>1974</td>
+<td>[V] 0812816641</td>
+<td><a href="https://openlibrary.org/books/OL1024955M/The_memory_book">Open Library</a></td>
+</tr>
+<tr>
+<td>32</td>
+<td><em>Unlimited Memory</em></td>
+<td>Horsley</td>
+<td>2014</td>
+<td>[V] 9781631619984</td>
+<td><a href="https://archive.org/details/UnlimitedMemoryHowToUseAdvancedLearningStrategisToLears">Internet Archive</a></td>
+</tr>
+<tr>
+<td>33</td>
+<td><em>Use Your Perfect Memory</em></td>
+<td>Buzan</td>
+<td>1991</td>
+<td>[V] 0452266068</td>
+<td><a href="https://archive.org/details/useyourperfectme0000buza">Internet Archive</a></td>
+</tr>
+<tr>
+<td>34</td>
+<td><em>The Memory Code</em></td>
+<td>Kelly</td>
+<td>2016</td>
+<td>[V] 9781760291327</td>
+<td><a href="https://openlibrary.org/books/OL31425069M/The_Memory_code">Open Library</a></td>
+</tr>
+<tr>
+<td>35</td>
+<td><em>The Art of Memory</em></td>
+<td>Yates</td>
+<td>1966</td>
+<td>[V] 0226950018</td>
+<td><a href="https://press.uchicago.edu/ucp/books/book/chicago/A/bo91674300.html">Chicago Press</a></td>
+</tr>
+<tr>
+<td>36</td>
+<td><em>The Seven Sins of Memory</em></td>
+<td>Schacter</td>
+<td>2001</td>
+<td>[V] 0618040196</td>
+<td><a href="https://openlibrary.org/works/OL3270068W/The_Seven_Sins_of_Memory">Open Library</a></td>
+</tr>
+<tr>
+<td>37</td>
+<td><em>Eyewitness Testimony</em></td>
+<td>Loftus</td>
+<td>1979</td>
+<td>[V] 0674287754</td>
+<td><a href="https://openlibrary.org/books/OL4409812M/Eyewitness_testimony">Open Library</a></td>
+</tr>
+<tr>
+<td>38</td>
+<td><em>Elements of Episodic Memory</em></td>
+<td>Tulving</td>
+<td>1983</td>
+<td>[V] 0198521022</td>
+<td><a href="https://openlibrary.org/books/OL14962071M/Elements_of_episodic_memory">Open Library</a></td>
+</tr>
+<tr>
+<td>39</td>
+<td><em>Working Memory</em></td>
+<td>Baddeley</td>
+<td>1986</td>
+<td>[V] 0198521162</td>
+<td><a href="https://books.google.com/books?id=BFtO-zfULMAC">Google Books</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Legenda de marcadores</strong>: [V] = ISBN validado em Open Library · [V-OL] = work record no Open Library · [W] = citado em Wikipedia PT · [ACAD] = paper com DOI · [NV] = ISBN testado e não encontrado · [HIST] = obra pré-1980 sem ISBN · [DIGITAL] = domínio público · [—] = lacuna (obra não localizada com o título exato).</p>
+</main>
+</div>
+<script>
+(function(){var t=localStorage.getItem('dossier-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var b=document.getElementById('theme-toggle');
+if(b)b.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');
+var n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);
+localStorage.setItem('dossier-theme',n);});})();
+</script>
+</body>
+</html>

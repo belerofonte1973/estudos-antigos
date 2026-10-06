@@ -1,0 +1,40 @@
+{
+  "slug": "tecnicas-estudo",
+  "figuras": [
+    {
+      "arquivo": "File:Brain memory.JPG",
+      "titulo": "Cérebro e memória",
+      "legenda": "Ilustração do cérebro humano destacando as regiões associadas à memória",
+      "secao": "6",
+      "posicao": "fim"
+    },
+    {
+      "arquivo": "File:Über das Gedächtnis. Untersuchungen zur experimentellen Psychologie, Fig 4.png",
+      "titulo": "Curva do esquecimento de Ebbinghaus",
+      "legenda": "Gráfico mostrando a perda de retenção ao longo do tempo com e sem revisão espaçada",
+      "secao": "4",
+      "posicao": "fim"
+    },
+    {
+      "arquivo": "File:Brain regions in memory formation updated.jpg",
+      "titulo": "Regiões cerebrais da memória",
+      "legenda": "Diagrama das regiões cerebrais envolvidas na formação da memória",
+      "secao": "6",
+      "posicao": "fim"
+    },
+    {
+      "arquivo": "File:Electrical Brain Waves Linked to Memory (32445992637).png",
+      "titulo": "Ondas cerebrais e memória",
+      "legenda": "Imagem de eletroencefalograma mostrando padrões de atividade neural ligados à memória",
+      "secao": "13",
+      "posicao": "fim"
+    },
+    {
+      "arquivo": "File:Carl Christoffer Gjörwell d.y. - Fantasy View of Haga Palace Drawn from Memory on the Frigate Gripen Outside Livorno, 30 August 1794 - NMH 89-2017 - Nationalmuseum.jpg",
+      "titulo": "Palácio Haga desenhado de memória",
+      "legenda": "Ilustração histórica do método dos loci — palácio desenhado de memória em 1794",
+      "secao": "10",
+      "posicao": "fim"
+    }
+  ]
+}

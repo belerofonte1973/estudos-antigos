@@ -1,0 +1,57 @@
+[
+  {
+    "arquivo": "01-brain-memory.jpg",
+    "descricao": "Ilustração do cérebro humano destacando as regiões associadas à memória (hipocampo, córtex pré-frontal, amígdala)",
+    "secao": "6. Técnicas de memorização",
+    "licenca": "CC0",
+    "autor": "Illustration made by me (NIH)",
+    "ano": "2014",
+    "url": "https://commons.wikimedia.org/wiki/File:Brain_memory.JPG",
+    "origem": "Wikimedia Commons",
+    "uso": "Ilustrar as bases neurais da memória discutidas na seção de técnicas de memorização"
+  },
+  {
+    "arquivo": "02-ebbinghaus-forgetting-curve.png",
+    "descricao": "Curva do esquecimento de Ebbinghaus — gráfico mostrando a perda de retenção ao longo do tempo com e sem revisão espaçada",
+    "secao": "4. Técnicas de estudo e aprendizado",
+    "licenca": "Public domain",
+    "autor": "Hermann Ebbinghaus",
+    "ano": "1885",
+    "url": "https://commons.wikimedia.org/wiki/File:Über_das_Gedächtnis._Untersuchungen_zur_experimentellen_Psychologie,_Fig_4.png",
+    "origem": "Wikimedia Commons",
+    "uso": "Ilustrar o efeito de espaçamento e a curva do esquecimento"
+  },
+  {
+    "arquivo": "03-brain-regions-memory.jpg",
+    "descricao": "Regiões cerebrais envolvidas na formação da memória — diagrama com hipocampo, córtex e outras áreas",
+    "secao": "6. Técnicas de memorização",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "Bernstein0275",
+    "ano": "2021",
+    "url": "https://commons.wikimedia.org/wiki/File:Brain_regions_in_memory_formation_updated.jpg",
+    "origem": "Wikimedia Commons",
+    "uso": "Complementar a ilustração das bases neurais da memória"
+  },
+  {
+    "arquivo": "04-electrical-brain-waves-memory.png",
+    "descricao": "Ondas cerebrais elétricas ligadas à memória — imagem de eletroencefalograma mostrando padrões de atividade neural",
+    "secao": "13. Ciência — o que as ciências dizem",
+    "licenca": "CC0",
+    "autor": "NIH Image Gallery",
+    "ano": "2019",
+    "url": "https://commons.wikimedia.org/wiki/File:Electrical_Brain_Waves_Linked_to_Memory_(32445992637).png",
+    "origem": "Wikimedia Commons",
+    "uso": "Ilustrar a neurociência da memória e o papel do sono na consolidação"
+  },
+  {
+    "arquivo": "05-haga-palace-memory.jpg",
+    "descricao": "Palácio Haga desenhado de memória em 1794 — ilustração histórica do método dos loci",
+    "secao": "10. Mitologia e literatura comparada",
+    "licenca": "Public domain",
+    "autor": "Carl Christoffer Gjörwell",
+    "ano": "1794",
+    "url": "https://commons.wikimedia.org/wiki/File:Carl_Christoffer_Gjörwell_d.y._-_Fantasy_View_of_Haga_Palace_Drawn_from_Memory_on_the_Frigate_Gripen_Outside_Livorno,_30_August_1794_-_NMH_89-2017_-_Nationalmuseum.jpg",
+    "origem": "Wikimedia Commons",
+    "uso": "Ilustrar o conceito de palácio da memória e o método dos loci"
+  }
+]

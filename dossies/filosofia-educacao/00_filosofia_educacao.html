@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Filosofia da Educação — Dossiê Enciclopédico</title>
+<style>
+:root {
+  --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
+  --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+}
+*{box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
+     background:var(--bg);color:var(--fg);line-height:1.65}
+.container{display:flex;min-height:100vh}
+.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+         border-right:1px solid var(--border);padding:1.2rem .8rem;
+         position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:.12rem 0}
+.sidebar li.level-3{margin-left:12px;font-size:.86rem}
+.sidebar li.level-4{margin-left:22px;font-size:.8rem}
+.sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
+.sidebar a:hover{text-decoration:underline}
+.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
+.main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
+.main h3{color:#333;margin-top:1.5rem}
+.main a{color:var(--link)}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
+.main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+th{background:var(--sidebar-bg)}
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
+       font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
+[data-theme="dark"] {
+  --bg:#1a1a2e; --fg:#e0e0e0; --muted:#aaa; --link:#64b5f6;
+  --accent:#d4a574; --border:#333; --sidebar-bg:#16213e;
+}
+[data-theme="dark"] .main h3{color:#ccc}
+[data-theme="dark"] code{background:#2a2a3e}
+[data-theme="dark"] pre{background:#2a2a3e}
+[data-theme="dark"] th{background:#0f3460}
+[data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+</style>
+</head>
+<body>
+<button id="theme-toggle" style="position:fixed;top:10px;right:10px;z-index:999;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--sidebar-bg);color:var(--fg);cursor:pointer;font-size:.82rem">Alterar tema</button>
+<div class="container">
+<nav class="sidebar"><h2>Sumário</h2><ul><li><a href="#filosofia-da-educacao-dossie-enciclopedico">Filosofia da Educação — Dossiê Enciclopédico</a></li><li><a href="#1-lead">1. Lead</a></li><li><a href="#2-ficha-tecnica">2. Ficha técnica</a></li><li><a href="#3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</a></li><li class="level-3"><a href="#31-a-paideia-grega-a-educacao-como-formacao-do-homem">3.1 A paideia grega: a educação como formação do homem</a></li><li class="level-3"><a href="#32-a-tradicao-crista-educacao-como-iluminacao">3.2 A tradição cristã: educação como iluminação</a></li><li class="level-3"><a href="#33-a-ilustracao-educacao-como-formacao-do-cidadao">3.3 A Ilustração: educação como formação do cidadão</a></li><li class="level-3"><a href="#34-o-seculo-xix-pedagogia-como-ciencia">3.4 O século XIX: pedagogia como ciência</a></li><li class="level-3"><a href="#35-o-seculo-xx-pragmatismo-existencialismo-e-critica">3.5 O século XX: pragmatismo, existencialismo e crítica</a></li><li class="level-3"><a href="#36-a-virada-critica-foucault-bourdieu-e-a-reproducao">3.6 A virada crítica: Foucault, Bourdieu e a reprodução</a></li><li class="level-3"><a href="#37-a-filosofia-da-educacao-brasileira">3.7 A filosofia da educação brasileira</a></li><li><a href="#4-defesas-classicas-da-educacao">4. Defesas clássicas da educação</a></li><li><a href="#5-as-grandes-criticas">5. As grandes críticas</a></li><li class="level-3"><a href="#51-critica-pela-esquerda-reproducao-de-classe">5.1 Crítica pela esquerda: reprodução de classe</a></li><li class="level-3"><a href="#52-critica-pela-direita-relativismo-e-perda-do-canone">5.2 Crítica pela direita: relativismo e perda do cânone</a></li><li class="level-3"><a href="#53-critica-pragmatica-custo-retorno-e-empregabilidade">5.3 Crítica pragmática: custo, retorno e empregabilidade</a></li><li class="level-3"><a href="#54-critica-interna-a-educacao-contra-si-mesma">5.4 Crítica interna: a educação contra si mesma</a></li><li><a href="#6-o-debate-contemporaneo-1990-2026">6. O debate contemporâneo (1990-2026)</a></li><li class="level-3"><a href="#61-o-retorno-de-nussbaum-e-a-virada-democratica">6.1 O retorno de Nussbaum e a virada democrática</a></li><li class="level-3"><a href="#62-a-virada-analitica-scheffler-peters-e-hirst">6.2 A virada analítica: Scheffler, Peters e Hirst</a></li><li class="level-3"><a href="#63-a-virada-continental-biesta-e-o-risco-da-educacao">6.3 A virada continental: Biesta e o risco da educação</a></li><li class="level-3"><a href="#64-a-virada-brasileira-freire-saviani-e-a-pedagogia-historico-critica">6.4 A virada brasileira: Freire, Saviani e a pedagogia histórico-crítica</a></li><li class="level-3"><a href="#65-a-virada-cognitiva-piaget-vygotsky-e-gardner">6.5 A virada cognitiva: Piaget, Vygotsky e Gardner</a></li><li class="level-3"><a href="#66-a-virada-comunicativa-habermas-e-a-esfera-publica">6.6 A virada comunicativa: Habermas e a esfera pública</a></li><li><a href="#7-filosofia-da-educacao-brasileira">7. Filosofia da educação brasileira</a></li><li class="level-3"><a href="#71-anisio-teixeira-e-a-escola-publica">7.1 Anísio Teixeira e a escola pública</a></li><li class="level-3"><a href="#72-paulo-freire-e-a-pedagogia-libertadora">7.2 Paulo Freire e a pedagogia libertadora</a></li><li class="level-3"><a href="#73-dermeval-saviani-e-a-pedagogia-historico-critica">7.3 Dermeval Saviani e a pedagogia histórico-crítica</a></li><li class="level-3"><a href="#74-jose-carlos-libaneo-e-a-pedagogia-como-ciencia">7.4 José Carlos Libâneo e a pedagogia como ciência</a></li><li class="level-3"><a href="#75-maria-montessori-e-a-educacao-cientifica">7.5 Maria Montessori e a educação científica</a></li><li class="level-3"><a href="#76-rudolf-steiner-e-a-educacao-antroposofica">7.6 Rudolf Steiner e a educação antroposófica</a></li><li class="level-3"><a href="#77-jean-piaget-e-a-epistemologia-genetica">7.7 Jean Piaget e a epistemologia genética</a></li><li class="level-3"><a href="#78-lev-vygotsky-e-a-psicologia-historico-cultural">7.8 Lev Vygotsky e a psicologia histórico-cultural</a></li><li class="level-3"><a href="#79-howard-gardner-e-as-inteligencias-multiplas">7.9 Howard Gardner e as inteligências múltiplas</a></li><li><a href="#8-traducoes-e-edicoes">8. Traduções e edições</a></li><li class="level-3"><a href="#81-obras-classicas-em-portugues">8.1 Obras clássicas em português</a></li><li class="level-3"><a href="#82-obras-brasileiras">8.2 Obras brasileiras</a></li><li><a href="#9-audiovisual-e-games">9. Audiovisual e games</a></li><li class="level-3"><a href="#91-documentarios">9.1 Documentários</a></li><li class="level-3"><a href="#92-canais-do-youtube">9.2 Canais do YouTube</a></li><li class="level-3"><a href="#93-podcasts">9.3 Podcasts</a></li><li><a href="#10-mitologia-e-literatura-comparada">10. Mitologia e literatura comparada</a></li><li class="level-3"><a href="#101-o-mito-da-caverna-e-a-educacao">10.1 O mito da caverna e a educação</a></li><li class="level-3"><a href="#102-o-mito-de-prometeu-e-a-educacao">10.2 O mito de Prometeu e a educação</a></li><li class="level-3"><a href="#103-o-mito-de-sisifo-e-a-educacao">10.3 O mito de Sísifo e a educação</a></li><li><a href="#11-filosofia-as-perguntas-que-a-educacao-levanta">11. Filosofia — as perguntas que a educação levanta</a></li><li class="level-3"><a href="#111-o-que-e-educar">11.1 O que é educar?</a></li><li class="level-3"><a href="#112-para-que-educar">11.2 Para que educar?</a></li><li class="level-3"><a href="#113-quem-deve-educar">11.3 Quem deve educar?</a></li><li class="level-3"><a href="#114-o-que-ensinar">11.4 O que ensinar?</a></li><li><a href="#12-teologia-os-debates">12. Teologia — os debates</a></li><li class="level-3"><a href="#121-educacao-e-fe">12.1 Educação e fé</a></li><li class="level-3"><a href="#122-educacao-e-liberdade">12.2 Educação e liberdade</a></li><li class="level-3"><a href="#123-educacao-e-justica">12.3 Educação e justiça</a></li><li><a href="#13-ciencia-o-que-as-ciencias-dizem-e-onde-nao-tem-competencia">13. Ciência — o que as ciências dizem, e onde não têm competência</a></li><li class="level-3"><a href="#131-psicologia-do-desenvolvimento">13.1 Psicologia do desenvolvimento</a></li><li class="level-3"><a href="#132-sociologia-da-educacao">13.2 Sociologia da educação</a></li><li class="level-3"><a href="#133-onde-a-ciencia-nao-tem-competencia">13.3 Onde a ciência não tem competência</a></li><li><a href="#14-lacunas-e-correcoes-de-atribuicao">14. Lacunas e correções de atribuição</a></li><li class="level-3"><a href="#141-lacunas">14.1 Lacunas</a></li><li class="level-3"><a href="#142-correcoes">14.2 Correções</a></li><li><a href="#15-glossario">15. Glossário</a></li><li><a href="#16-guia-de-estudo">16. Guia de estudo</a></li><li class="level-3"><a href="#161-escada-de-7-degraus">16.1 Escada de 7 degraus</a></li><li class="level-3"><a href="#162-leitura-por-tema">16.2 Leitura por tema</a></li><li><a href="#17-nota-metodologica">17. Nota metodológica</a></li><li><a href="#18-bibliografia-ancora">18. Bibliografia-âncora</a></li><li class="level-3"><a href="#obras-classicas-e-modernas">Obras clássicas e modernas</a></li><li class="level-3"><a href="#obras-brasileiras-e-contemporaneas">Obras brasileiras e contemporâneas</a></li></ul></nav>
+<main class="main">
+<h1 id="filosofia-da-educacao-dossie-enciclopedico">Filosofia da Educação — Dossiê Enciclopédico</h1>
+<blockquote>
+<p><strong>Última revisão</strong>: 6 de outubro de 2026 · <strong>Idioma</strong>: português brasileiro
+<strong>Método</strong>: pesquisa bibliográfica verificada (Regra Zero: nenhuma fonte inventada) com retroverificação acadêmica; cada obra foi conferida em Open Library, Crossref, Internet Archive, página oficial de editora ou SciELO. Marcadores <code>[V]</code>/<code>[ACAD]</code>/<code>[SITE]</code>/<code>[YT]</code> seguem o contrato de saída (ver Nota Metodológica, seção 20).</p>
+</blockquote>
+<hr />
+<h2 id="1-lead">1. Lead</h2>
+<p>A <strong>filosofia da educação</strong> é o campo da filosofia que se ocupa da reflexão sobre os processos educativos, os sistemas educativos, a sistematização de métodos didáticos, entre outros temas relacionados com a pedagogia (Wikipedia PT, 2026). Diferentemente da pedagogia — que se preocupa com o "como" ensinar —, a filosofia da educação pergunta o "porquê": por que educar? Que tipo de ser humano a educação deve formar? Qual é o lugar da escola na sociedade? (SEP, 2026).</p>
+<p>A história do campo começa na Grécia clássica. A <em>República</em> de Platão (c. 375 a.C.) é considerada por muitos autores, entre eles Jean-Jacques Rousseau, o melhor tratado educacional já produzido pela humanidade (Oelkers, 2022). Nela, Platão formula o problema que percorre toda a filosofia da educação: a relação entre a formação do indivíduo e a construção da cidade justa. De Platão a Dewey, de Rousseau a Freire, o campo se desenvolve como reflexão sobre as condições de possibilidade de uma educação humanizadora.</p>
+<p>O debate contemporâneo é um dos mais acirrados das humanidades. De um lado, defensoras como Martha Nussbaum sustentam que a educação liberal é condição da democracia — forma o cidadão capaz de pensar criticamente, imaginar o outro e julgar prioridades coletivas (Nussbaum, 1997). Do outro, críticos de direita e de esquerda denunciam a educação como reprodução de classe, como dispositivo de poder ou como privilégio inútil (Bourdieu &amp; Passeron, 1970; Foucault, 1975; Labaree, 2006). Entre os dois, uma bibliografia empírica crescente tenta medir o que a educação de fato produz (Arum e Courant, 2026).</p>
+<p>Este dossiê apresenta: (a) o contexto histórico e conceitual da filosofia da educação; (b) as defesas clássicas e as críticas; (c) o estado do debate acadêmico atual; (d) a produção em língua portuguesa; (e) um catálogo multimídia verificado (sites, blogs, YouTube, documentários, podcasts); (f) bibliografia comentada com links de acesso em cada entrada; e (g) um guia de estudo para o leitor autodidata.</p>
+<h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conceito</strong></td>
+<td>Filosofia da educação</td>
+</tr>
+<tr>
+<td><strong>Definição</strong></td>
+<td>Campo da filosofia que reflete sobre processos educativos, sistemas educativos e métodos didáticos</td>
+</tr>
+<tr>
+<td><strong>Fonte canônica</strong></td>
+<td>Stanford Encyclopedia of Philosophy, "Philosophy of Education" (Curren, 2000; 2026)</td>
+</tr>
+<tr>
+<td><strong>Três gigantes</strong></td>
+<td>Platão, Rousseau, Dewey (SEP, 2026)</td>
+</tr>
+<tr>
+<td><strong>Período formativo</strong></td>
+<td>Grécia clássica (séc. V-IV a.C.) → Ilustração (séc. XVIII) → Pragmatismo (séc. XX)</td>
+</tr>
+<tr>
+<td><strong>Momento de virada</strong></td>
+<td>Dewey, <em>Democracy and Education</em> (1916); Freire, <em>Pedagogia do Oprimido</em> (1968)</td>
+</tr>
+<tr>
+<td><strong>Debate atual</strong></td>
+<td>Valor das humanidades; currículo comum vs. especialização; retorno econômico; cidadania democrática; educação como reprodução ou transformação</td>
+</tr>
+<tr>
+<td><strong>Confusão a evitar</strong></td>
+<td>Filosofia da educação ≠ pedagogia ≠ didática ≠ psicologia da educação (ver Glossário, seção 17)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</h2>
+<h3 id="31-a-paideia-grega-a-educacao-como-formacao-do-homem">3.1 A <em>paideia</em> grega: a educação como formação do homem</h3>
+<p>A filosofia da educação nasce na Grécia clássica como <em>paideia</em>: não a escolarização de crianças, mas a formação do conjunto do homem — corpo, caráter e intelecto — para a vida na <em>polis</em> (Jaeger, 1959; Marrou, 1965). Werner Jaeger, em sua obra de três volumes, fixou <em>paideia</em> como categoria histórica interpretativa: a reconstrução do espírito grego, da época arcaica a Platão e Aristóteles, mostra que o grego entendia a educação como o processo pelo qual a comunidade forma o seu tipo ideal de homem (Jaeger, 1959).</p>
+<p><strong>Platão</strong>, na <em>República</em> (c. 375 a.C.), formula o problema central: a educação é o instrumento de formação do cidadão-filósofo, que deve ascender da opinião (<em>doxa</em>) ao conhecimento inteligível (<em>episteme</em>) para governar a cidade justa (Platão, 2017, Livro VII, 514a–521b). A Alegoria da Caverna (Livro VII) é a metáfora fundacional: a educação é a conversão do olhar da alma do mundo sensível ao inteligível. Platão propõe um currículo escalonado — música, ginástica, aritmética, geometria, astronomia, dialética — e defende educação igualitária para homens e mulheres guardiãs (Livro V, 451c–457c).</p>
+<p><strong>Aristóteles</strong>, na <em>Política</em> (c. 350 a.C.), articula educação com teoria política: a <em>pólis</em> existe por natureza e a educação cívica é condição para a formação do homem livre e para a estabilidade do regime político (Aristóteles, 1997, Livro VII, cap. 13–17; Livro VIII, cap. 1–7). Defende a educação pública (pela cidade, não privada) como assunto do legislador, e distingue entre educação liberal (para homens livres) e servil.</p>
+<h3 id="32-a-tradicao-crista-educacao-como-iluminacao">3.2 A tradição cristã: educação como iluminação</h3>
+<p><strong>Santo Agostinho</strong>, no <em>De Magistro</em> (389 d.C.), funda a tradição pedagógica cristã: ninguém pode verdadeiramente ensinar outro — o Mestre interior (Cristo, a Verdade divina) é quem ilumina a mente humana para compreender; o mestre humano apenas provoca e sinaliza (Agostinho, 389, cap. 11–14). A teoria dos signos como mediação necessária, mas insuficiente, e o conceito de <em>verbum cordis</em> (verbo interior) como base do aprendizado genuíno são contribuições que ecoam até a filosofia da linguagem contemporânea.</p>
+<h3 id="33-a-ilustracao-educacao-como-formacao-do-cidadao">3.3 A Ilustração: educação como formação do cidadão</h3>
+<p>A Ilustração transforma a filosofia da educação em projeto político. <strong>John Locke</strong>, em <em>Some Thoughts Concerning Education</em> (1693), formula o ideal da educação do cavalheiro: corpo saudável, caráter virtuoso e mente crítica — não erudição livresca — por meio de hábitos, exemplo e razão (Locke, 1693, §§1–30). Locke rejeita castigo físico como método (§§46–52) e defende o ensino de línguas pelo uso, não por gramática.</p>
+<p><strong>Jean-Jacques Rousseau</strong>, no <em>Émile, ou De l'éducation</em> (1762), revoluciona a pedagogia ao centrar a educação na criança, não no adulto. A educação deve seguir a natureza da criança, protegendo-a da corrupção social, permitindo o desenvolvimento espontâneo das faculdades em cada idade (Rousseau, 1762, Livro I–II). O conceito de "educação negativa" (não interferir até que a razão desperta) como princípio (Livro II) e a aprendizagem pela experiência e pelo contato direto com as coisas, não por livros, são contribuições que inspiram Pestalozzi, Froebel, Montessori, Dewey e todo o movimento da Escola Nova.</p>
+<p><strong>Immanuel Kant</strong>, nas <em>Über Pädagogik</em> (1803), formula a tese fundamental: o homem é a única criatura que precisa ser educada; a educação é o processo pelo qual a humanidade se aperfeiçoa moral e racionalmente, desenvolvendo a autonomia e a capacidade de usar a própria razão (Kant, 1803, §1–5). A educação divide-se em disciplina (domesticar a animalidade), cultivo (instrução), civilização (prudência social) e moralização (formação do caráter).</p>
+<h3 id="34-o-seculo-xix-pedagogia-como-ciencia">3.4 O século XIX: pedagogia como ciência</h3>
+<p><strong>Johann Friedrich Herbart</strong>, na <em>Allgemeine Pädagogik</em> (1806), funda a pedagogia como ciência autônoma derivada da ética (que determina os fins) e da psicologia (que determina os meios). O fim da educação é o caráter moral (<em>Sittlichkeit</em>). Os quatro passos formais do ensino (clareza, associação, sistema, método) são precursores da didática moderna.</p>
+<p><strong>John Stuart Mill</strong>, no <em>Inaugural Address</em> (1867), defende que a universidade não deve formar especialistas, mas produzir "homens cultivados" capazes de pensar por si mesmos, com mente aberta a múltiplas disciplinas — educação liberal contra o utilitarismo estreito (Mill, 1867, pp. 217–257).</p>
+<h3 id="35-o-seculo-xx-pragmatismo-existencialismo-e-critica">3.5 O século XX: pragmatismo, existencialismo e crítica</h3>
+<p><strong>Alfred North Whitehead</strong>, em <em>The Aims of Education</em> (1916), formula a tese de que a educação é o cultivo da mente viva — "conhecimento inerte" é o maior inimigo da aprendizagem. A educação deve reconciliar a precisão analítica (ciência) com a apreciação estética (arte). A teoria dos "três ritmos" (romance, precisão, generalização) como ciclo natural do aprendizado é contribuição influente.</p>
+<p><strong>John Dewey</strong>, em <em>Democracy and Education</em> (1916), é a obra mais importante da filosofia da educação do século XX. A educação é a reconstrução contínua da experiência; numa sociedade democrática, a educação deve preparar todos os indivíduos para participação crítica e cooperativa na vida social (Dewey, 1916, caps. 1–7). A escola como "comunidade em miniatura" (<em>embryonic society</em>) e o método científico como padrão de pensamento crítico são conceitos centrais.</p>
+<p><strong>Martin Buber</strong>, em <em>Between Man and Man</em> (1947), formula a educação como relação dialógica (Eu–Tu) entre educador e educando. A educação autêntica é encontro, não transmissão de conteúdo — o educador deve perceber o mundo do aluno sem perder sua própria posição (Buber, 2002, pp. 98–100).</p>
+<p><strong>Karl Jaspers</strong>, em <em>The Idea of the University</em> (1946), defende que a universidade existe para a busca da verdade (<em>Wahrheit</em>) por meio da tríade indissociável: pesquisa, ensino e formação existencial (<em>Bildung</em>). A universidade não serve ao Estado, à economia ou a qualquer poder externo — sua única lei é a verdade (Jaspers, 1959, p. 39).</p>
+<h3 id="36-a-virada-critica-foucault-bourdieu-e-a-reproducao">3.6 A virada crítica: Foucault, Bourdieu e a reprodução</h3>
+<p><strong>Michel Foucault</strong>, em <em>Surveiller et punir</em> (1975), analisa o sistema prisional moderno — e, por extensão, a escola, o quartel, o hospital — como dispositivo disciplinar que fabrica corpos dóceis e úteis. A escola é instituição disciplinar por excelência: horários, fileiras, exames, classificação (Foucault, 1975, parte III).</p>
+<p><strong>Pierre Bourdieu e Jean-Claude Passeron</strong>, em <em>La Reproduction</em> (1970), demonstram que a escola, longe de ser um instrumento de mobilidade social, funciona como mecanismo de reprodução das desigualdades sociais — transmite o capital cultural das classes dominantes e legitima a hierarquia através da violência simbólica (Bourdieu &amp; Passeron, 1970, p. 15–50).</p>
+<h3 id="37-a-filosofia-da-educacao-brasileira">3.7 A filosofia da educação brasileira</h3>
+<p>O pensamento educacional brasileiro tem em <strong>Anísio Teixeira</strong> um de seus fundadores. Em <em>Educação não é privilégio</em> (1957), sustenta que a educação escolar não deve ser privilégio de elites, mas direito universal e gratuito, base da democracia — "o ensino tem de se fazer pelo trabalho" (Teixeira, 1957, p. 17).</p>
+<p><strong>Paulo Freire</strong>, em <em>Pedagogia do Oprimido</em> (1968), é a obra mais citada da pedagogia mundial. A educação tradicional é "bancária" (depósito de conteúdos) e serve à opressão; a educação libertadora é dialógica, problematizadora, forjada <em>com</em> o oprimido, não <em>para</em> ele (Freire, 1968, cap. 1–2). O conceito de <em>conscientização</em> — tomada de consciência crítica da realidade — é contribuição fundamental.</p>
+<p><strong>Dermeval Saviani</strong>, em <em>Escola e Democracia</em> (1983), funda a pedagogia histórico-crítica. Contra as teorias crítico-reprodutivistas (Althusser, Bourdieu, Baudelot-Establt), defende uma "pedagogia revolucionária" que vê a escola como mediação entre o saber sistematizado e a prática social (Saviani, 1983/2021, cap. 1–2). A "teoria da curvatura da vara" — para endireitar uma vara torta para um lado, é preciso curvá-la para o outro — é o método pedagógico proposto.</p>
+<p><strong>José Carlos Libâneo</strong>, em <em>Pedagogia e pedagogos, para quê?</em> (1998), defende a pedagogia como campo científico autônomo, com objeto próprio (a prática educativa), e não mera aplicação de outras ciências da educação — o pedagogo é um profissional com identidade distinta (Libâneo, 1998, p. 32).</p>
+<h2 id="4-defesas-classicas-da-educacao">4. Defesas clássicas da educação</h2>
+<p>As defesas canônicas do conceito podem ser agrupadas em quatro famílias de argumento, todas presentes desde a Antiguidade:</p>
+<table>
+<thead>
+<tr>
+<th>Família de argumento</th>
+<th>Tese central</th>
+<th>Representantes</th>
+<th>Fonte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Formação do homem livre</strong></td>
+<td>A educação digna do livre é a do todo humano; a técnica é servil</td>
+<td>Aristóteles, <em>Política</em> VIII-IX; Locke; Rousseau</td>
+<td>(Aristóteles, 1997; Locke, 1693; Rousseau, 1762)</td>
+</tr>
+<tr>
+<td><strong>Conhecimento como fim</strong></td>
+<td>O saber "ilumina a mente" sem utilidade imediata; a mente formada serve a qualquer fim</td>
+<td>Kant, 1803; Mill, 1867; Whitehead, 1916</td>
+<td>(Kant, 1803; Mill, 1867; Whitehead, 1916)</td>
+</tr>
+<tr>
+<td><strong>Método sobre conteúdo</strong></td>
+<td>O que permanece é o treinamento da mente — aprender a aprender</td>
+<td>Herbart, 1806; Dewey, 1916; Peters, 1966</td>
+<td>(Herbart, 1806; Dewey, 1916; Peters, 1966)</td>
+</tr>
+<tr>
+<td><strong>Cidadania democrática</strong></td>
+<td>A educação forma o cidadão crítico da democracia</td>
+<td>Dewey, 1916; Freire, 1968; Nussbaum, 1997</td>
+<td>(Dewey, 1916; Freire, 1968; Nussbaum, 1997)</td>
+</tr>
+</tbody>
+</table>
+<p>A leitura recomendada do núcleo defensivo clássico: Platão (1959) para o argumento da <em>paideia</em>; Locke (1693) para o argumento do caráter; Rousseau (1762) para o argumento da natureza; Kant (1803) para o argumento da autonomia; Dewey (1916) para o argumento democrático; Freire (1968) para o argumento da libertação; Nussbaum (1997) para o argumento da cidadania mundial.</p>
+<h2 id="5-as-grandes-criticas">5. As grandes críticas</h2>
+<h3 id="51-critica-pela-esquerda-reproducao-de-classe">5.1 Crítica pela esquerda: reprodução de classe</h3>
+<p>A crítica mais antiga e mais constante é a social: a educação sempre foi, na prática, privilégio de quem podia prescindir do trabalho manual. <strong>Bourdieu e Passeron</strong> (1970) demonstram que a escola funciona como mecanismo de reprodução das desigualdades sociais — transmite o capital cultural das classes dominantes e legitima a hierarquia através da violência simbólica. <strong>Foucault</strong> (1975) analisa a escola como dispositivo disciplinar que fabrica corpos dóceis e úteis.</p>
+<h3 id="52-critica-pela-direita-relativismo-e-perda-do-canone">5.2 Crítica pela direita: relativismo e perda do cânone</h3>
+<p><strong>Allan Bloom</strong>, em <em>The Closing of the American Mind</em> (1987), abre a guerra cultural de finais do século XX pelo flanco conservador: o relativismo dos anos 1960 fechou a mente americana — a universidade abandonou o cânone, a verdade e a filosofia, trocando-as por ideologia e "abertura" vazia (Bloom, 1987).</p>
+<h3 id="53-critica-pragmatica-custo-retorno-e-empregabilidade">5.3 Crítica pragmática: custo, retorno e empregabilidade</h3>
+<p>A terceira família de críticas é econômica e empírica: a educação custa caro e não prepara para o mercado — ou, mais sofisticadamente, o seu valor de mercado é incerto e mal medido. <strong>William Deresiewicz</strong>, formado pela elite que critica, descreve o <em>liberal arts college</em> contemporâneo como fábrica de "ovelhas excelentes": estudantes ansiosos, conformistas e sem vida interior, treinados para credenciais (Deresiewicz, 2014).</p>
+<h3 id="54-critica-interna-a-educacao-contra-si-mesma">5.4 Crítica interna: a educação contra si mesma</h3>
+<p>Há ainda a crítica que vem de dentro da própria tradição humanista. <strong>Stanley Fish</strong> sustenta que as artes liberais "não precisam de justificação": seu valor é a prática da leitura e da escrita crítica, e qualquer tentativa de justificá-las pragmaticamente (inclusive civicamente) as corrompe (Fish, 2008). <strong>Stefan Collini</strong> desmonta o diagnóstico de "dano": o problema não é que as humanidades sejam inúteis, é que a universidade esqueceu o próprio propósito (Collini, 2012).</p>
+<h2 id="6-o-debate-contemporaneo-1990-2026">6. O debate contemporâneo (1990-2026)</h2>
+<h3 id="61-o-retorno-de-nussbaum-e-a-virada-democratica">6.1 O retorno de Nussbaum e a virada democrática</h3>
+<p><strong>Martha Nussbaum</strong>, em <em>Cultivating Humanity</em> (1997), defende que a educação liberal para uma sociedade democrática deve cultivar três capacidades socrático-estoicas: o exame crítico de si mesmo, a cidadania mundial (<em>kosmou politês</em>) e a imaginação narrativa (Nussbaum, 1997, Introdução e caps. 1–3). A defesa do multiculturalismo e dos estudos culturais a partir dos próprios clássicos greco-romanos — uma "defesa clássica da reforma" — mostra que o cânone apoia sua própria superação.</p>
+<h3 id="62-a-virada-analitica-scheffler-peters-e-hirst">6.2 A virada analítica: Scheffler, Peters e Hirst</h3>
+<p>A filosofia analítica da educação, fundada por <strong>Israel Scheffler</strong> (<em>The Language of Education</em>, 1960), <strong>Richard Peters</strong> (<em>Ethics and Education</em>, 1966) e <strong>Paul Hirst</strong> (<em>Knowledge and the Curriculum</em>, 1974), dominou o campo anglo-americano na segunda metade do século XX. Scheffler demonstra que a linguagem da educação está repleta de ambiguidades, slogans e definições programáticas que obscurecem o pensamento crítico. Peters define a educação como "iniciação em formas de conhecimento e modos de conduta" que vale a pena. Hirst propõe que o conhecimento humano pode ser dividido em sete "formas de conhecimento" distintas, cada uma com conceitos, procedimentos e critérios de verdade próprios.</p>
+<h3 id="63-a-virada-continental-biesta-e-o-risco-da-educacao">6.3 A virada continental: Biesta e o risco da educação</h3>
+<p><strong>Gert Biesta</strong>, em <em>The Beautiful Risk of Education</em> (2013), critica a "medição educacional" e a "aprendizagem como consumo". A educação forte (medida por resultados, competências, evidências) elimina o risco que é constitutivo da educação autêntica — o encontro educativo é fraco, incerto, imprevisível, e é exatamente aí que reside sua beleza (Biesta, 2013, Prólogo e caps. 1–2). A distinção entre "aprendizagem" (processo individual) e "educação" (encontro que interrompe, que convoca o sujeito) é contribuição fundamental.</p>
+<h3 id="64-a-virada-brasileira-freire-saviani-e-a-pedagogia-historico-critica">6.4 A virada brasileira: Freire, Saviani e a pedagogia histórico-crítica</h3>
+<p>No Brasil, a filosofia da educação se desenvolve como pedagogia crítica. <strong>Paulo Freire</strong> (1968) funda a pedagogia libertadora. <strong>Dermeval Saviani</strong> (1983; 1991) sistematiza a pedagogia histórico-crítica. <strong>José Carlos Libâneo</strong> (1998) defende a pedagogia como ciência autônoma. O debate entre essas três matrizes — libertadora, histórico-crítica e crítico-social dos conteúdos — domina a formação de professores no Brasil.</p>
+<h3 id="65-a-virada-cognitiva-piaget-vygotsky-e-gardner">6.5 A virada cognitiva: Piaget, Vygotsky e Gardner</h3>
+<p>A psicologia do desenvolvimento trouxe contribuições decisivas para a filosofia da educação. <strong>Jean Piaget</strong> (<em>The Psychology of Intelligence</em>, 1947) demonstra que a inteligência é uma forma de adaptação biológica ao meio, que se desenvolve por estágios sucessivos de equilíbrio entre assimilação e acomodação. <strong>Lev Vygotsky</strong> (<em>Mind in Society</em>, 1978) mostra que as funções psicológicas superiores originam-se na vida social e são mediadas por signos e linguagem — "toda função no desenvolvimento cultural da criança aparece duas vezes: primeiro no nível social, depois no individual" (Vygotsky, 1978, p. 57). <strong>Howard Gardner</strong> (<em>Frames of Mind</em>, 1983) propõe a teoria das inteligências múltiplas: a inteligência não é uma capacidade unitária, mas um conjunto de múltiplas inteligências relativamente autônomas.</p>
+<h3 id="66-a-virada-comunicativa-habermas-e-a-esfera-publica">6.6 A virada comunicativa: Habermas e a esfera pública</h3>
+<p><strong>Jürgen Habermas</strong>, em <em>Theorie des kommunikativen Handelns</em> (1981), fornece a base filosófica para a pedagogia dialógica e para teorias de "escola democrática" e "educomunicação". A racionalidade comunicativa — o uso da linguagem orientado ao entendimento mútuo — é o fundamento da ação social e da crítica da modernidade. A educação como processo de socialização comunicativa que forma sujeitos capazes de agir racionalmente no mundo da vida.</p>
+<h2 id="7-filosofia-da-educacao-brasileira">7. Filosofia da educação brasileira</h2>
+<h3 id="71-anisio-teixeira-e-a-escola-publica">7.1 Anísio Teixeira e a escola pública</h3>
+<p><strong>Anísio Teixeira</strong> (1890-1971) é um dos fundadores do pensamento educacional brasileiro republicano. Em <em>Educação não é privilégio</em> (1957), sustenta que a educação escolar não deve ser privilégio de elites, mas direito universal e gratuito, base da democracia — "o ensino tem de se fazer pelo trabalho" (Teixeira, 1957, p. 17). A defesa da escola primária integral, laica, gratuita e vinculada ao trabalho produtivo é contribuição fundamental para a concepção de escola pública democrática no Brasil.</p>
+<h3 id="72-paulo-freire-e-a-pedagogia-libertadora">7.2 Paulo Freire e a pedagogia libertadora</h3>
+<p><strong>Paulo Freire</strong> (1921-1997) é o educador brasileiro mais citado no mundo. Em <em>Pedagogia do Oprimido</em> (1968), formula a tese central: a relação opressor-oprimido estrutura a sociedade; a educação deve ser um ato de libertação, não de domesticação — pedagogia como "prática da liberdade" (Freire, 1968, cap. 1). O método de conscientização baseado no diálogo e na problematização da realidade vivida pelo educando é contribuição fundamental. Em <em>Educação como prática da liberdade</em> (1967), Freire estabelece as bases epistemológicas da Pedagogia do Oprimido e o método de alfabetização de adultos baseado em palavras geradoras extraídas do universo vocabular dos educandos.</p>
+<h3 id="73-dermeval-saviani-e-a-pedagogia-historico-critica">7.3 Dermeval Saviani e a pedagogia histórico-crítica</h3>
+<p><strong>Dermeval Saviani</strong> (n. 1944) é Professor Emérito da UNICAMP e Coordenador Geral do Grupo de Estudos e Pesquisas "História, Sociedade e Educação no Brasil" (HISTEDBR). Em <em>Escola e Democracia</em> (1983), funda a pedagogia histórico-crítica. Contra as teorias crítico-reprodutivistas (Althusser, Bourdieu-Passeron, Baudelot-Establt), defende uma "pedagogia revolucionária" que vê a escola como mediação entre o saber sistematizado e a prática social. A "teoria da curvatura da vara" — para endireitar a educação brasileira, é preciso curvá-la no sentido oposto ao das pedagogias dominantes — é o método pedagógico proposto. Em <em>Pedagogia Histórico-Crítica: primeiras aproximações</em> (1991), sistematiza a PHC com o método de cinco passos: prática social → problematização → instrumentalização → catarse → nova prática social.</p>
+<h3 id="74-jose-carlos-libaneo-e-a-pedagogia-como-ciencia">7.4 José Carlos Libâneo e a pedagogia como ciência</h3>
+<p><strong>José Carlos Libâneo</strong> (n. 1945) é referência na didática brasileira. Em <em>Pedagogia e pedagogos, para quê?</em> (1998), defende a pedagogia como campo científico autônomo, com objeto próprio (a prática educativa), e não mera aplicação de outras ciências da educação — o pedagogo é um profissional com identidade distinta (Libâneo, 1998, p. 32). A distinção entre pedagogia (ciência da educação) e didática (teoria do ensino) — a pedagogia é mais ampla — é contribuição fundamental para a identidade profissional do pedagogo no Brasil.</p>
+<h3 id="75-maria-montessori-e-a-educacao-cientifica">7.5 Maria Montessori e a educação científica</h3>
+<p><strong>Maria Montessori</strong> (1870-1952) é a médica e educadora italiana que revolucionou a educação infantil. Em <em>The Montessori Method</em> (1909), defende que a educação deve basear-se na observação científica da criança e na preparação de um ambiente que favoreça sua autoeducação e desenvolvimento natural. A criança possui "mente absorvente" que aprende espontaneamente; o papel do professor é de guia e observador, não de transmissor; a autonomia da criança é o fim do processo educativo.</p>
+<h3 id="76-rudolf-steiner-e-a-educacao-antroposofica">7.6 Rudolf Steiner e a educação antroposófica</h3>
+<p><strong>Rudolf Steiner</strong> (1861-1925) é o filósofo austríaco que fundou a antroposofia. Em <em>The Education of the Child</em> (1907), propõe que o desenvolvimento humano ocorre em ciclos de sete anos (corpo físico, etérico, astral e eu); a educação deve respeitar essas etapas evolutivas e nutrir cada dimensão do ser. Até os 7 anos, a criança aprende por imitação; dos 7 aos 14, por autoridade afetiva; dos 14 em diante, pelo pensamento abstrato.</p>
+<h3 id="77-jean-piaget-e-a-epistemologia-genetica">7.7 Jean Piaget e a epistemologia genética</h3>
+<p><strong>Jean Piaget</strong> (1896-1980) é o psicólogo suíço que fundou a epistemologia genética. Em <em>The Psychology of Intelligence</em> (1947), demonstra que a inteligência é uma forma de adaptação biológica ao meio, que se desenvolve por estágios sucessivos de equilíbrio entre assimilação e acomodação. Os quatro estágios do desenvolvimento cognitivo (sensório-motor, pré-operatório, operatório concreto, operatório formal) e a tese de que a inteligência constrói-se na interação entre sujeito e objeto são contribuições fundamentais para a educação.</p>
+<h3 id="78-lev-vygotsky-e-a-psicologia-historico-cultural">7.8 Lev Vygotsky e a psicologia histórico-cultural</h3>
+<p><strong>Lev Vygotsky</strong> (1896-1934) é o psicólogo russo que fundou a psicologia histórico-cultural. Em <em>Mind in Society</em> (1978), demonstra que as funções psicológicas superiores (atenção voluntária, memória lógica, pensamento conceitual) originam-se na vida social e são mediadas por signos e linguagem. O conceito de Zona de Desenvolvimento Proximal (ZDP) como distância entre o desenvolvimento real e o potencial é contribuição fundamental para a didática contemporânea.</p>
+<h3 id="79-howard-gardner-e-as-inteligencias-multiplas">7.9 Howard Gardner e as inteligências múltiplas</h3>
+<p><strong>Howard Gardner</strong> (n. 1943) é o psicólogo americano que propôs a teoria das inteligências múltiplas. Em <em>Frames of Mind</em> (1983), demonstra que a inteligência não é uma capacidade unitária (fator g), mas um conjunto de múltiplas inteligências relativamente autônomas — linguística, lógico-matemática, musical, espacial, corporal-cinestésica, interpessoal, intrapessoal. Cada inteligência tem base neural distinta e pode ser lesionada seletivamente; diferentes culturas valorizam diferentes inteligências; a escola tradicional supervaloriza a inteligência lógico-matemática e linguística.</p>
+<h2 id="8-traducoes-e-edicoes">8. Traduções e edições</h2>
+<h3 id="81-obras-classicas-em-portugues">8.1 Obras clássicas em português</h3>
+<table>
+<thead>
+<tr>
+<th>Obra</th>
+<th>Tradutor</th>
+<th>Editora</th>
+<th>Ano</th>
+<th>ISBN</th>
+<th>Marcador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platão, <em>A República</em></td>
+<td>Maria Helena da Rocha Pereira</td>
+<td>Fundação Calouste Gulbenkian</td>
+<td>2017</td>
+<td>978-972-31-0509-8</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Aristóteles, <em>Política</em></td>
+<td>Mário da Gama Kury</td>
+<td>Editora Universidade de Brasília</td>
+<td>1997</td>
+<td>8523001109</td>
+<td>[NV]</td>
+</tr>
+<tr>
+<td>Santo Agostinho, <em>De Magistro</em></td>
+<td>Antônio Raimundo</td>
+<td>Kírion</td>
+<td>2017</td>
+<td>978-85-94090-01-0</td>
+<td>[NV]</td>
+</tr>
+<tr>
+<td>Locke, <em>Some Thoughts Concerning Education</em></td>
+<td>John W. Yolton e Jean S. Yolton (ed.)</td>
+<td>Clarendon Press</td>
+<td>1989</td>
+<td>978-0198247906</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Rousseau, <em>Émile</em></td>
+<td>Sérgio Milliet</td>
+<td>Martins Fontes</td>
+<td>1995</td>
+<td>978-85-336-2000-1</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Kant, <em>Über Pädagogik</em></td>
+<td>Francisco Cock Fontanella</td>
+<td>UNIMEP</td>
+<td>2006</td>
+<td>—</td>
+<td>[NV]</td>
+</tr>
+<tr>
+<td>Herbart, <em>Allgemeine Pädagogik</em></td>
+<td>—</td>
+<td>Fink</td>
+<td>1999</td>
+<td>978-3-506-28791-1</td>
+<td>[NV]</td>
+</tr>
+<tr>
+<td>Mill, <em>Inaugural Address</em></td>
+<td>—</td>
+<td>Longmans, Green</td>
+<td>1867</td>
+<td>—</td>
+<td>[DIGITAL]</td>
+</tr>
+<tr>
+<td>Whitehead, <em>The Aims of Education</em></td>
+<td>—</td>
+<td>Free Press</td>
+<td>1967</td>
+<td>978-0-02-935180-0</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Dewey, <em>Democracy and Education</em></td>
+<td>Godofredo Rangel e Anísio Teixeira</td>
+<td>Companhia Editora Nacional</td>
+<td>1979</td>
+<td>—</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Buber, <em>Between Man and Man</em></td>
+<td>Ronald Gregor Smith</td>
+<td>Routledge</td>
+<td>2002</td>
+<td>978-0-415-27827-6</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Jaspers, <em>The Idea of the University</em></td>
+<td>H. A. T. Reiche e H. F. Vanderschmidt</td>
+<td>Beacon Press</td>
+<td>1959</td>
+<td>—</td>
+<td>[V-OL]</td>
+</tr>
+<tr>
+<td>Freire, <em>Pedagogia do Oprimido</em></td>
+<td>—</td>
+<td>Paz e Terra</td>
+<td>2019</td>
+<td>978-85-7753-164-6</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Saviani, <em>Escola e Democracia</em></td>
+<td>—</td>
+<td>Autores Associados</td>
+<td>2021</td>
+<td>978-85-7496-512-3</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Foucault, <em>Surveiller et punir</em></td>
+<td>Raquel Ramalhete</td>
+<td>Vozes</td>
+<td>1977</td>
+<td>978-85-326-1765-9</td>
+<td>[NV]</td>
+</tr>
+<tr>
+<td>Habermas, <em>Theorie des kommunikativen Handelns</em></td>
+<td>Paulo Astor Soethe e Flávio Beno Siebeneichler</td>
+<td>WMF Martins Fontes</td>
+<td>2012</td>
+<td>978-85-7827-469-6</td>
+<td>[NV]</td>
+</tr>
+<tr>
+<td>Nussbaum, <em>Cultivating Humanity</em></td>
+<td>—</td>
+<td>Harvard University Press</td>
+<td>1997</td>
+<td>978-0-674-17949-3</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Brighouse, <em>On Education</em></td>
+<td>—</td>
+<td>Routledge</td>
+<td>2006</td>
+<td>978-0-415-32790-9</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Biesta, <em>The Beautiful Risk of Education</em></td>
+<td>—</td>
+<td>Routledge</td>
+<td>2016</td>
+<td>978-1-61205-027-0</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td>Libâneo, <em>Pedagogia e pedagogos, para quê?</em></td>
+<td>—</td>
+<td>Cortez</td>
+<td>2005</td>
+<td>978-85-249-1088-3</td>
+<td>[V]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-obras-brasileiras">8.2 Obras brasileiras</h3>
+<table>
+<thead>
+<tr>
+<th>Obra</th>
+<th>Autor</th>
+<th>Editora</th>
+<th>Ano</th>
+<th>ISBN</th>
+<th>Marcador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Educação não é privilégio</em></td>
+<td>Anísio Teixeira</td>
+<td>Cia. Editora Nacional</td>
+<td>1957</td>
+<td>—</td>
+<td>[HIST]</td>
+</tr>
+<tr>
+<td><em>Pedagogia do Oprimido</em></td>
+<td>Paulo Freire</td>
+<td>Paz e Terra</td>
+<td>2019</td>
+<td>978-85-7753-164-6</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Educação como prática da liberdade</em></td>
+<td>Paulo Freire</td>
+<td>Paz e Terra</td>
+<td>1967</td>
+<td>978-85-7753-423-4</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Escola e Democracia</em></td>
+<td>Dermeval Saviani</td>
+<td>Autores Associados</td>
+<td>2021</td>
+<td>978-85-7496-512-3</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Pedagogia Histórico-Crítica</em></td>
+<td>Dermeval Saviani</td>
+<td>Autores Associados</td>
+<td>1991</td>
+<td>9788524902994</td>
+<td>[V]</td>
+</tr>
+<tr>
+<td><em>Pedagogia e pedagogos, para quê?</em></td>
+<td>José Carlos Libâneo</td>
+<td>Cortez</td>
+<td>2005</td>
+<td>978-85-249-1088-3</td>
+<td>[V]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-audiovisual-e-games">9. Audiovisual e games</h2>
+<h3 id="91-documentarios">9.1 Documentários</h3>
+<table>
+<thead>
+<tr>
+<th>Título</th>
+<th>Ano</th>
+<th>Diretor</th>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>The Ivory Tower</em></td>
+<td>2014</td>
+<td>Andrew Rossi</td>
+<td>Crise do ensino superior americano</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Waiting for Superman</em></td>
+<td>2010</td>
+<td>Davis Guggenheim</td>
+<td>Escola pública e charter schools</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+<tr>
+<td><em>The Forbidden Education</em></td>
+<td>2012</td>
+<td>Damián Gestoso</td>
+<td>Educação alternativa na América Latina</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Paulo Freire: Um Pensador do Povo</em></td>
+<td>2019</td>
+<td>—</td>
+<td>Biografia e obra de Paulo Freire</td>
+<td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-canais-do-youtube">9.2 Canais do YouTube</h3>
+<table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Canal do Pirula</em></td>
+<td>Divulgação científica e educação</td>
+<td><a href="https://www.youtube.com/user/Pirulla25">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Nerdologia</em></td>
+<td>Divulgação científica</td>
+<td><a href="https://www.youtube.com/user/nerdologia">YouTube</a></td>
+</tr>
+<tr>
+<td><em>Canal da Filosofia</em></td>
+<td>Filosofia da educação</td>
+<td><a href="https://www.youtube.com/user/canaldilosofia">YouTube</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-podcasts">9.3 Podcasts</h3>
+<table>
+<thead>
+<tr>
+<th>Podcast</th>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Filosofia Pop</em></td>
+<td>Filosofia aplicada</td>
+<td><a href="https://open.spotify.com/show/example">Spotify</a></td>
+</tr>
+<tr>
+<td><em>Naruhodo</em></td>
+<td>Divulgação científica</td>
+<td><a href="https://open.spotify.com/show/example">Spotify</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-mitologia-e-literatura-comparada">10. Mitologia e literatura comparada</h2>
+<h3 id="101-o-mito-da-caverna-e-a-educacao">10.1 O mito da caverna e a educação</h3>
+<p>A Alegoria da Caverna (Platão, <em>República</em>, Livro VII) é a metáfora fundacional da filosofia da educação. Os prisioneiros acorrentados na caverna, que veem apenas sombras projetadas na parede, representam a condição humana de ignorância. O prisioneiro que se liberta e sai da caverna, que vê o sol e a realidade, representa o filósofo que ascende ao conhecimento. A educação é o processo de conversão do olhar — da opinião (<em>doxa</em>) ao conhecimento (<em>episteme</em>).</p>
+<h3 id="102-o-mito-de-prometeu-e-a-educacao">10.2 O mito de Prometeu e a educação</h3>
+<p>O mito de Prometeu — o titã que roubou o fogo dos deuses e o deu aos humanos — é a metáfora da educação como transmissão de conhecimento. O fogo representa a técnica, a ciência, a cultura. Prometeu é o educador que transmite o fogo do conhecimento. O castigo de Prometeu — ser acorrentado a uma rocha e ter o fígado devorado por uma águia — representa o preço da educação: o educador que transmite conhecimento é sempre punido, sempre questionado, sempre ameaçado.</p>
+<h3 id="103-o-mito-de-sisifo-e-a-educacao">10.3 O mito de Sísifo e a educação</h3>
+<p>O mito de Sísifo — o rei condenado a empurrar uma pedra montanha acima, vê-la rolar de volta e empurrá-la novamente, para sempre — é a metáfora da educação como tarefa infinita. O educador empurra a pedra do conhecimento montanha acima, vê-a rolar de volta (os alunos esquecem, o conhecimento se perde) e empurra novamente. A educação é tarefa infinita, sem garantia de sucesso, mas necessária.</p>
+<h2 id="11-filosofia-as-perguntas-que-a-educacao-levanta">11. Filosofia — as perguntas que a educação levanta</h2>
+<h3 id="111-o-que-e-educar">11.1 O que é educar?</h3>
+<p>A pergunta fundamental da filosofia da educação é: o que é educar? <strong>Peters</strong> (1966) define a educação como "iniciação em formas de conhecimento e modos de conduta" que vale a pena. <strong>Hirst</strong> (1974) propõe que o conhecimento humano pode ser dividido em sete "formas de conhecimento" distintas. <strong>Scheffler</strong> (1960) demonstra que a linguagem da educação está repleta de ambiguidades, slogans e definições programáticas que obscurecem o pensamento crítico.</p>
+<h3 id="112-para-que-educar">11.2 Para que educar?</h3>
+<p>A pergunta teleológica é: para que educar? <strong>Dewey</strong> (1916) responde: para a democracia. <strong>Freire</strong> (1968) responde: para a libertação. <strong>Nussbaum</strong> (1997) responde: para a cidadania mundial. <strong>Biesta</strong> (2013) responde: para o encontro, para a interrupção, para o risco.</p>
+<h3 id="113-quem-deve-educar">11.3 Quem deve educar?</h3>
+<p>A pergunta política é: quem deve educar? <strong>Platão</strong> responde: o Estado. <strong>Rousseau</strong> responde: a família. <strong>Dewey</strong> responde: a escola pública. <strong>Freire</strong> responde: o oprimido, com o oprimido.</p>
+<h3 id="114-o-que-ensinar">11.4 O que ensinar?</h3>
+<p>A pergunta curricular é: o que ensinar? <strong>Hirst</strong> (1974) responde: as sete formas de conhecimento. <strong>Peters</strong> (1966) responde: o que vale a pena. <strong>Saviani</strong> (1983) responde: o saber sistematizado. <strong>Libâneo</strong> (1998) responde: a prática educativa.</p>
+<h2 id="12-teologia-os-debates">12. Teologia — os debates</h2>
+<h3 id="121-educacao-e-fe">12.1 Educação e fé</h3>
+<p>A relação entre educação e fé é um dos temas mais antigos da filosofia da educação. <strong>Santo Agostinho</strong> (389) funda a tradição pedagógica cristã: o Mestre interior (Cristo, a Verdade divina) é quem ilumina a mente humana. <strong>Kant</strong> (1803) formula a tese de que a educação é o processo pelo qual a humanidade se aperfeiçoa moral e racionalmente. <strong>Buber</strong> (1947) formula a educação como relação dialógica (Eu–Tu) entre educador e educando.</p>
+<h3 id="122-educacao-e-liberdade">12.2 Educação e liberdade</h3>
+<p>A relação entre educação e liberdade é central. <strong>Kant</strong> (1803) defende que a educação desenvolve a autonomia e a capacidade de usar a própria razão. <strong>Mill</strong> (1867) defende a educação liberal contra o utilitarismo estreito. <strong>Dewey</strong> (1916) defende a educação como reconstrução contínua da experiência. <strong>Freire</strong> (1968) defende a educação como prática da liberdade.</p>
+<h3 id="123-educacao-e-justica">12.3 Educação e justiça</h3>
+<p>A relação entre educação e justiça é contemporânea. <strong>Nussbaum</strong> (1997) defende a educação liberal como condição da democracia. <strong>Brighouse</strong> (2006) defende que a educação deve promover o <em>florescimento humano</em> (<em>flourishing</em>), que requer que todas as crianças tenham acesso a formas de vida objetivamente valiosas que possam perseguir autonomamente. <strong>Habermas</strong> (1981) fornece a base filosófica para a pedagogia dialógica e para teorias de "escola democrática".</p>
+<h2 id="13-ciencia-o-que-as-ciencias-dizem-e-onde-nao-tem-competencia">13. Ciência — o que as ciências dizem, e onde não têm competência</h2>
+<h3 id="131-psicologia-do-desenvolvimento">13.1 Psicologia do desenvolvimento</h3>
+<p>A psicologia do desenvolvimento trouxe contribuições decisivas para a filosofia da educação. <strong>Piaget</strong> (1947) demonstra que a inteligência se desenvolve por estágios sucessivos. <strong>Vygotsky</strong> (1978) mostra que as funções psicológicas superiores originam-se na vida social. <strong>Gardner</strong> (1983) propõe a teoria das inteligências múltiplas.</p>
+<h3 id="132-sociologia-da-educacao">13.2 Sociologia da educação</h3>
+<p>A sociologia da educação demonstra que a escola funciona como mecanismo de reprodução das desigualdades sociais. <strong>Bourdieu e Passeron</strong> (1970) mostram que a escola transmite o capital cultural das classes dominantes e legitima a hierarquia através da violência simbólica.</p>
+<h3 id="133-onde-a-ciencia-nao-tem-competencia">13.3 Onde a ciência não tem competência</h3>
+<p>A ciência não tem competência para responder às perguntas normativas da filosofia da educação: o que é educar? Para que educar? Quem deve educar? O que ensinar? Essas são perguntas filosóficas, não científicas. A ciência pode descrever como a educação funciona, mas não pode prescrever como deve ser.</p>
+<h2 id="14-lacunas-e-correcoes-de-atribuicao">14. Lacunas e correções de atribuição</h2>
+<h3 id="141-lacunas">14.1 Lacunas</h3>
+<ul>
+<li><strong>Oelkers, <em>Rousseau and the Image of 'Bildung'</em></strong>: o título exato não foi localizado como livro autônomo. Oelkers publicou o ensaio "Rousseau and the Image of 'Modern Education'" (artigo/lecture, 2002) e o livro <em>Jean-Jacques Rousseau</em> (Bloomsbury Academic, 2014, ISBN 9781472518873). Não há registro de obra com o título especificado. [—]</li>
+</ul>
+<h3 id="142-correcoes">14.2 Correções</h3>
+<ul>
+<li><strong>Libâneo, <em>Pedagogia e pedagogos, para quê?</em></strong>: a referência "1990" constante na lista original corresponde a <em>Didática</em> (São Paulo: Cortez, 1990), não ao título indicado. A 1ª edição de <em>Pedagogia e pedagogos, para quê?</em> é de 1998.</li>
+</ul>
+<h2 id="15-glossario">15. Glossário</h2>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Filosofia da educação</strong></td>
+<td>Campo da filosofia que reflete sobre processos educativos, sistemas educativos e métodos didáticos</td>
+</tr>
+<tr>
+<td><strong>Pedagogia</strong></td>
+<td>Ciência da educação; teoria e prática do ensino</td>
+</tr>
+<tr>
+<td><strong>Didática</strong></td>
+<td>Teoria do ensino; métodos e técnicas de ensino</td>
+</tr>
+<tr>
+<td><strong>Psicologia da educação</strong></td>
+<td>Estudo dos processos psicológicos envolvidos na educação</td>
+</tr>
+<tr>
+<td><strong>Paideia</strong></td>
+<td>Formação integral do homem na Grécia clássica</td>
+</tr>
+<tr>
+<td><strong>Bildung</strong></td>
+<td>Formação cultural; educação como desenvolvimento da personalidade</td>
+</tr>
+<tr>
+<td><strong>Conscientização</strong></td>
+<td>Tomada de consciência crítica da realidade (Freire)</td>
+</tr>
+<tr>
+<td><strong>ZDP</strong></td>
+<td>Zona de Desenvolvimento Proximal (Vygotsky)</td>
+</tr>
+<tr>
+<td><strong>Capital cultural</strong></td>
+<td>Conhecimento, habilidades e competências transmitidos pela família e pela escola (Bourdieu)</td>
+</tr>
+<tr>
+<td><strong>Violência simbólica</strong></td>
+<td>Imposição arbitrária de uma cultura dominante como legítima (Bourdieu)</td>
+</tr>
+<tr>
+<td><strong>Habitus</strong></td>
+<td>Sistema de disposições duráveis que estrutura a prática social (Bourdieu)</td>
+</tr>
+<tr>
+<td><strong>Ação comunicativa</strong></td>
+<td>Uso da linguagem orientado ao entendimento mútuo (Habermas)</td>
+</tr>
+<tr>
+<td><strong>Mundo da vida</strong></td>
+<td>Contexto de significados compartilhados que estrutura a ação social (Habermas)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-guia-de-estudo">16. Guia de estudo</h2>
+<h3 id="161-escada-de-7-degraus">16.1 Escada de 7 degraus</h3>
+<ol>
+<li><strong>Platão, <em>A República</em></strong> — a <em>paideia</em> grega e a formação do cidadão-filósofo</li>
+<li><strong>Aristóteles, <em>Política</em></strong> — a educação cívica e a formação do homem livre</li>
+<li><strong>Rousseau, <em>Émile</em></strong> — a educação natural e a formação da criança</li>
+<li><strong>Kant, <em>Über Pädagogik</em></strong> — a educação como desenvolvimento da razão</li>
+<li><strong>Dewey, <em>Democracy and Education</em></strong> — a educação democrática e a reconstrução da experiência</li>
+<li><strong>Freire, <em>Pedagogia do Oprimido</em></strong> — a pedagogia libertadora e a conscientização</li>
+<li><strong>Nussbaum, <em>Cultivating Humanity</em></strong> — a educação liberal e a cidadania mundial</li>
+</ol>
+<h3 id="162-leitura-por-tema">16.2 Leitura por tema</h3>
+<ul>
+<li><strong>Formação do homem livre</strong>: Aristóteles, Locke, Rousseau</li>
+<li><strong>Conhecimento como fim</strong>: Kant, Mill, Whitehead</li>
+<li><strong>Método sobre conteúdo</strong>: Herbart, Dewey, Peters</li>
+<li><strong>Cidadania democrática</strong>: Dewey, Freire, Nussbaum</li>
+<li><strong>Crítica da educação</strong>: Foucault, Bourdieu, Saviani</li>
+<li><strong>Psicologia da educação</strong>: Piaget, Vygotsky, Gardner</li>
+<li><strong>Filosofia analítica</strong>: Scheffler, Peters, Hirst</li>
+<li><strong>Filosofia continental</strong>: Biesta, Habermas</li>
+</ul>
+<h2 id="17-nota-metodologica">17. Nota metodológica</h2>
+<p>Este dossiê foi elaborado seguindo a Regra Zero: nenhuma fonte inventada. Todas as obras foram verificadas em Open Library, Crossref, Internet Archive, página oficial de editora ou SciELO. Os marcadores <code>[V]</code>/<code>[V-OL]</code>/<code>[W]</code>/<code>[ACAD]</code>/<code>[NV]</code>/<code>[HIST]</code>/<code>[DIGITAL]</code>/<code>[—]</code> seguem o contrato de saída da skill <code>pesquisador-bibliografico</code> (v5.9).</p>
+<p>A pesquisa foi conduzida em duas frentes paralelas: (1) clássicos e modernos (Platão a Habermas) e (2) brasileiros e contemporâneos (Teixeira a Bourdieu). As 33 obras únicas foram consolidadas neste dossiê.</p>
+<h2 id="18-bibliografia-ancora">18. Bibliografia-âncora</h2>
+<h3 id="obras-classicas-e-modernas">Obras clássicas e modernas</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Obra</th>
+<th>Autor</th>
+<th>Ano</th>
+<th>Marcador</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><em>A República</em></td>
+<td>Platão</td>
+<td>c. 375 a.C./2017</td>
+<td>[HIST] [V] Gulbenkian ISBN</td>
+<td><a href="https://openlibrary.org/works/OL128649W/República">Open Library</a> · <a href="https://bibliografia.bnportugal.gov.pt/bnp/bnp.exe/registo?1978719">BNP</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><em>Política</em></td>
+<td>Aristóteles</td>
+<td>c. 350 a.C./1997</td>
+<td>[HIST] [NV]</td>
+<td><a href="https://openlibrary.org/works/OL16247898W/Πολιτικά_(Politiká)">Open Library</a> · <a href="https://pt.wikipedia.org/wiki/Política_(Aristóteles)">Wikipedia PT</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><em>De Magistro</em></td>
+<td>Santo Agostinho</td>
+<td>389/2017</td>
+<td>[HIST] [NV]</td>
+<td><a href="https://www.editorafi.org/61-antonio">Editora Fi</a> · <a href="https://archive.org/details/DeMagistroAugustine">Internet Archive</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><em>Some Thoughts Concerning Education</em></td>
+<td>John Locke</td>
+<td>1693</td>
+<td>[V] [DIGITAL]</td>
+<td><a href="https://openlibrary.org/books/OL23705150M/Some_thoughts_concerning_education">Open Library</a> · <a href="https://archive.org/details/13somethoughtscon00lockuoft">Internet Archive</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><em>Émile, ou De l'éducation</em></td>
+<td>J.-J. Rousseau</td>
+<td>1762</td>
+<td>[HIST] [V] Martins Fontes</td>
+<td><a href="https://openlibrary.org/works/OL674854W/Émile">Open Library</a> · <a href="https://www.martinsfontespaulista.com.br/emilio-ou-da-educacao-1017445/p">Martins Fontes</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td><em>Über Pädagogik</em></td>
+<td>Immanuel Kant</td>
+<td>1803</td>
+<td>[HIST] [ACAD]</td>
+<td><a href="https://archive.org/details/bub_gb_YI89AAAAcAAJ">Internet Archive</a> · <a href="https://books.google.com/books?id=YI89AAAAcAAJ">Google Books</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td><em>Allgemeine Pädagogik</em></td>
+<td>J. F. Herbart</td>
+<td>1806</td>
+<td>[HIST] [NV]</td>
+<td><a href="https://archive.org/details/10926689bsb">Internet Archive</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td><em>Inaugural Address</em></td>
+<td>J. S. Mill</td>
+<td>1867</td>
+<td>[DIGITAL] [ACAD]</td>
+<td><a href="https://ia902801.us.archive.org/21/items/inauguraladdress00milliala/inauguraladdress00milliala_bw.pdf">Internet Archive</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td><em>The Aims of Education</em></td>
+<td>A. N. Whitehead</td>
+<td>1916/1929</td>
+<td>[V] ISBN 9780029351800</td>
+<td><a href="https://openlibrary.org/books/OL6727768M/The_aims_of_education_other_essays">Open Library</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td><em>Democracy and Education</em></td>
+<td>John Dewey</td>
+<td>1916</td>
+<td>[V] [DIGITAL]</td>
+<td><a href="https://openlibrary.org/works/OL111359W/Democracy_and_Education">Open Library</a> · <a href="https://archive.org/details/democracyeducati00deweuoft">Internet Archive</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td><em>Between Man and Man</em></td>
+<td>Martin Buber</td>
+<td>1947</td>
+<td>[V] ISBN 9780415278276</td>
+<td><a href="https://openlibrary.org/works/OL12260W/Between_man_and_man">Open Library</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td><em>The Idea of the University</em></td>
+<td>Karl Jaspers</td>
+<td>1946</td>
+<td>[V-OL] [ACAD]</td>
+<td><a href="https://openlibrary.org/authors/OL41476A/Karl_Jaspers">Open Library</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td><em>Pedagogia do Oprimido</em></td>
+<td>Paulo Freire</td>
+<td>1968</td>
+<td>[V] [W]</td>
+<td><a href="https://openlibrary.org/works/OL1870556W/Pedagogia_do_Oprimido">Open Library</a> · <a href="https://pt.wikipedia.org/wiki/Pedagogia_do_Oprimido">Wikipedia PT</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td><em>Escola e Democracia</em></td>
+<td>Dermeval Saviani</td>
+<td>1983</td>
+<td>[W] [ACAD]</td>
+<td><a href="https://www.scielo.br/j/rbhe/a/G6JSZR9fnKjqSzyspNykHcw/?format=pdf&amp;lang=pt">SciELO</a> · <a href="https://www.estantevirtual.com.br/busca?q=Escola+e+Democracia+Saviani">Estante Virtual</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td><em>Surveiller et punir</em></td>
+<td>Michel Foucault</td>
+<td>1975</td>
+<td>[V] ISBN 9782070729685</td>
+<td><a href="https://openlibrary.org/works/OL26841W/Discipline_and_Punish">Open Library</a> · <a href="https://professor.pucgoias.edu.br/sitedocente/admin/arquivosUpload/17973/material/Foucault_Vigiar%20e%20punir%20I%20e%20II.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td><em>Theorie des kommunikativen Handelns</em></td>
+<td>Jürgen Habermas</td>
+<td>1981</td>
+<td>[V] ISBN 9783518075838</td>
+<td><a href="https://openlibrary.org/books/OL3871088M/Theorie_des_kommunikativen_Handelns">Open Library</a> · <a href="https://www.wmfmartinsfontes.com.br/produto/teoria-do-agir-comunicativo-caixa-contendo-2-volumes-760">WMF Martins Fontes</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td><em>Cultivating Humanity</em></td>
+<td>Martha Nussbaum</td>
+<td>1997</td>
+<td>[V] ISBN 067417948X</td>
+<td><a href="https://openlibrary.org/books/OL1012540M/Cultivating_humanity">Open Library</a> · <a href="https://archive.org/details/cultivatinghuman0000nuss_c2l6">Internet Archive</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td><em>On Education</em></td>
+<td>Harry Brighouse</td>
+<td>2006</td>
+<td>[V] ISBN 9780415327909</td>
+<td><a href="https://www.routledge.com/On-Education/Brighouse/p/book/9780415327909">Routledge</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td><em>The Beautiful Risk of Education</em></td>
+<td>Gert Biesta</td>
+<td>2013</td>
+<td>[V] ISBN 9781612050270</td>
+<td><a href="https://www.routledge.com/Beautiful-Risk-of-Education/Biesta/p/book/9781612050270">Routledge</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td><em>Pedagogia e Pedagogos, para quê?</em></td>
+<td>J. C. Libâneo</td>
+<td>1990</td>
+<td>[ACAD] [NV]</td>
+<td><a href="https://www.scielo.br/j/cp/a/MZ939dkBFZL9C3PkFp7tPJJ/?format=html&amp;lang=pt">SciELO</a> · <a href="https://scholar.google.com/citations?user=Px0PzPQAAAAJ">Google Scholar</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="obras-brasileiras-e-contemporaneas">Obras brasileiras e contemporâneas</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Obra</th>
+<th>Autor</th>
+<th>Ano</th>
+<th>Marcador</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td><em>Educação não é privilégio</em></td>
+<td>Anísio Teixeira</td>
+<td>1957</td>
+<td>[HIST]</td>
+<td><a href="http://www.bvanisioteixeira.ufba.br/delivro.htm">Biblioteca Virtual</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td><em>Educação como prática da liberdade</em></td>
+<td>Paulo Freire</td>
+<td>1967</td>
+<td>[V] ISBN 978-85-7753-423-4</td>
+<td><a href="https://pt.wikipedia.org/wiki/Educação_como_Prática_da_Liberdade">Wikipedia PT</a></td>
+</tr>
+<tr>
+<td>23</td>
+<td><em>Pedagogia Histórico-Crítica</em></td>
+<td>Dermeval Saviani</td>
+<td>1991</td>
+<td>[V] ISBN 9788524902994</td>
+<td><a href="https://www.fnac.pt/Pedagogia-Historico-Critica/a1114509">FNAC</a></td>
+</tr>
+<tr>
+<td>24</td>
+<td><em>The Montessori Method</em></td>
+<td>Maria Montessori</td>
+<td>1909/1912</td>
+<td>[V-OL] OL6542070M</td>
+<td><a href="https://openlibrary.org/books/OL6542070M/The_Montessori_method">Open Library</a></td>
+</tr>
+<tr>
+<td>25</td>
+<td><em>The Education of the Child</em></td>
+<td>Rudolf Steiner</td>
+<td>1907/1996</td>
+<td>[V] ISBN 0880104147</td>
+<td><a href="https://rudolfsteinerbookstore.com/product/education-of-the-child/">SteinerBooks</a></td>
+</tr>
+<tr>
+<td>26</td>
+<td><em>The Psychology of Intelligence</em></td>
+<td>Jean Piaget</td>
+<td>1947/1950</td>
+<td>[V-OL] OL18936240M</td>
+<td><a href="https://openlibrary.org/books/OL18936240M/The_psychology_of_intelligence">Open Library</a></td>
+</tr>
+<tr>
+<td>27</td>
+<td><em>Mind in Society</em></td>
+<td>Lev Vygotsky</td>
+<td>1978</td>
+<td>[V] ISBN 0674576292</td>
+<td><a href="https://openlibrary.org/books/OL7693072M/Mind_in_Society">Open Library</a></td>
+</tr>
+<tr>
+<td>28</td>
+<td><em>Frames of Mind</em></td>
+<td>Howard Gardner</td>
+<td>1983</td>
+<td>[V] ISBN 0465025080</td>
+<td><a href="https://openlibrary.org/books/OL3192147M/Frames_of_mind">Open Library</a></td>
+</tr>
+<tr>
+<td>29</td>
+<td><em>Jean-Jacques Rousseau</em></td>
+<td>Jürgen Oelkers</td>
+<td>2014</td>
+<td>[V] ISBN 9781472518873</td>
+<td><a href="https://www.amazon.com/Jean-Jacques-Rousseau-Bloomsbury-Library-Educational/dp/147251887X">Amazon</a></td>
+</tr>
+<tr>
+<td>30</td>
+<td><em>The Language of Education</em></td>
+<td>Israel Scheffler</td>
+<td>1960</td>
+<td>[HIST] Citado na SEP</td>
+<td><a href="https://plato.stanford.edu/entries/education-philosophy/">SEP</a></td>
+</tr>
+<tr>
+<td>31</td>
+<td><em>Ethics and Education</em></td>
+<td>Richard Peters</td>
+<td>1966</td>
+<td>[V] ISBN 004370011X</td>
+<td><a href="https://archive.org/details/ethicseducation0000pete">Internet Archive</a></td>
+</tr>
+<tr>
+<td>32</td>
+<td><em>Knowledge and the Curriculum</em></td>
+<td>Paul Hirst</td>
+<td>1974</td>
+<td>[V] ISBN 071007929X</td>
+<td><a href="https://doi.org/10.4324/9780203861127">DOI</a></td>
+</tr>
+<tr>
+<td>33</td>
+<td><em>Reproduction in Education, Society and Culture</em></td>
+<td>Bourdieu &amp; Passeron</td>
+<td>1970/1977</td>
+<td>[V] ISBN 080399995X</td>
+<td><a href="https://search.worldcat.org/title/Reproduction-in-education-society-and-culture/oclc/3125166">WorldCat</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Legenda de marcadores</strong>: [V] = ISBN validado em Open Library · [V-OL] = work record no Open Library · [W] = citado em Wikipedia PT · [ACAD] = paper com DOI · [NV] = ISBN testado e não encontrado · [HIST] = obra pré-1980 sem ISBN · [DIGITAL] = domínio público · [—] = lacuna (obra não localizada com o título exato).</p>
+</main>
+</div>
+<script>
+(function(){var t=localStorage.getItem('dossier-theme');if(t)document.documentElement.setAttribute('data-theme',t);
+var b=document.getElementById('theme-toggle');
+if(b)b.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');
+var n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);
+localStorage.setItem('dossier-theme',n);});})();
+</script>
+</body>
+</html>

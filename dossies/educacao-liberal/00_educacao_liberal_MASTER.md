@@ -141,7 +141,7 @@ A produção acadêmica brasileira recente é crítica e sociológica. **Benedic
 | C. S. Lewis, *A Abolição do Homem* | Martins Fontes; Thomas Nelson Brasil, 2017 | [V-WP] |
 | Bloom, *O declínio da cultura ocidental* | Best Seller, 1989, trad. João Alves dos Santos | [W] |
 | Nussbaum, *Sem Fins Lucrativos* | WMF Martins Fontes, 2015, trad. Fernando Santos | [W] |
-| Lukianoff & Haidt, *The Coddling of the American Mind* | PT-PT: Guerra & Paz, *A infantilização da mente moderna* | [W] |
+| Lukianoff & Haidt, *The Coddling of the American Mind* | PT-PT: Guerra & Paz, *A infantilização da mente moderna* | [V-ED] |
 | Arnold, *Culture and Anarchy* | Sem tradução conhecida | [—] |
 | Zakaria, *In Defense of a Liberal Education* | Sem tradução conhecida | [—] |
 | Oakeshott, *The Voice of Liberal Learning* | Sem tradução conhecida | [—] |
@@ -295,7 +295,6 @@ Resumo detalhado das obras que o leitor deve conhecer para dominar o campo (cont
 - **[YT]** **[@osgrandeslivrosdacivilizac2615](https://www.youtube.com/@osgrandeslivrosdacivilizac2615)** — [“O que é a Educação Liberal?”](https://www.youtube.com/watch?v=Juu3ggoOItM) (26 jun. 2019).
 - **[YT]** **[@CaioCaldeira](https://www.youtube.com/@CaioCaldeira)** — [“O QUE É TRIVIUM E QUADRIVIUM? | ARTES LIBERAIS | EDUCAÇÃO CLÁSSICA”](https://www.youtube.com/watch?v=WxlHK5hGmak) (9 abr. 2020).
 - **[YT]** **[@culturaperene4558](https://www.youtube.com/@culturaperene4558)** — Prof. José Monir Nasser, [“Paidéia — Introdução”](https://www.youtube.com/watch?v=AA_cBJstPdw) (15 dez. 2021).
-- **[YT]** **[@istonaoefilosofia](https://www.youtube.com/@istonaoefilosofia)** — Prof. Vitor Lima, [“Pré-socráticos | Filosofia Antiga | Aula 01”](https://www.youtube.com/watch?v=Q09AzB1vaQQ), curso de história da filosofia em português.
 
 ## 12. Documentários, filmes e podcasts
 
@@ -377,21 +376,6 @@ Quatro problemas centrais dividem o campo hoje; para cada um, as posições são
 4. A universidade deve proteger os estudantes do desconforto ou expô-los a ele (Lukianoff e Haidt)?
 5. Como a tradição brasileira (Maritain, Reis Filho, Flickinger) reposiciona o debate anglo-americano?
 
-### 14.5 Glossário essencial
-
-| Termo | Definição |
-|---|---|
-| *paideia* (παιδεία) | Formação integral do cidadão na Grécia clássica |
-| *artes liberales* | Estudos dignos do homem livre, em oposição às artes mecânicas |
-| *trivium* | Gramática, dialética, retórica — as artes da palavra |
-| *quadrivium* | Aritmética, geometria, música, astronomia — as artes do número |
-| *banausic* | Próprio do trabalho servil/manual, na terminologia aristotélica |
-| *vir bonus* | O "homem bom" que a retórica de Quintiliano forma |
-| *studia humanitatis* | O programa humanista renascentista: gramática, retórica, poesia, história, filosofia moral |
-| Great Books | O cânone dos "grandes livros" da tradição ocidental (St. John's, 1937; Great Books Foundation, 1947) |
-| *liberal arts college* | Instituição superior dedicada à educação geral antes da especialização |
-| *safetyism* | Cultura de segurança afetiva que evita o desconforto intelectual (Lukianoff e Haidt, 2018) |
-
 ## 15. Glossário
 
 | Termo | Definição | Referência |
@@ -429,6 +413,7 @@ Quatro problemas centrais dividem o campo hoje; para cada um, as posições são
 - **LEWIS, C. S.**, *The Abolition of Man* (1943) — [V] ISBN 9780805420470 · [Open Library](https://openlibrary.org/isbn/9780805420470) · trad. BR [V-WP]
 - **HUTCHINS**, *The Higher Learning in America* (Yale, 1936) — [V] ISBN 9780313207136 · [Open Library](https://openlibrary.org/isbn/9780313207136)
 - **ADLER**, *The Paideia Proposal* (Scribner, 1982; Touchstone 1998) — [V] ISBN 9780684841885 · [Open Library](https://openlibrary.org/isbn/9780684841885)
+- **ADLER e VAN DOREN**, *How to Read a Book* (Simon & Schuster, 1940; rev. 1972) — [V] ISBN 9780671212094 · [Open Library](https://openlibrary.org/books/OL5300355M/How_to_Read_a_Book) · trad. BR: *Como Ler um Livro* (É Realizações) [W]
 - **BLOOM**, *The Closing of the American Mind* (Simon & Schuster, 1987) — [V] ISBN 9780671479909 · [Open Library](https://openlibrary.org/isbn/9780671479909) · trad. BR: *O declínio da cultura ocidental* (Best Seller, 1989) [W]
 - **NUSSBAUM**, *Cultivating Humanity* (Harvard UP, 1997) — [V] ISBN 9780674179486 · [Open Library](https://openlibrary.org/isbn/9780674179486)
 - **NUSSBAUM**, *Not for Profit* (Princeton UP, 2010) — [V] ISBN 9780691140643 · [Open Library](https://openlibrary.org/isbn/9780691140643) · trad. BR: *Sem Fins Lucrativos* (WMF, 2015) [W]
@@ -487,9 +472,7 @@ Quatro problemas centrais dividem o campo hoje; para cada um, as posições são
 - **OAKESHOTT**, *Education and its Methods* (1957) — não confirmada em quatro catálogos; usar *The Voice of Liberal Learning* (1989).
 - **MARLOVICH**, *The Recovery of Liberal Education* (1991) — sem registro verificável.
 - **BOYER**, *The College Bound* (1965) — sem ISBN verificável.
-- **LABAREE**, *The End of Inequality* (2005) — substituída por *Education, Markets, and the Public Good* (2006).
-- **ADLER e VAN DOREN**, *How to Read a Book* — obra real (trad. BR *Como Ler um Livro*, É Realizações), mas sem ISBN validado no Open Library.
-- Tradução PT-PT de *The Coddling of the American Mind* (Guerra & Paz) — confirmada apenas por resenhas de imprensa.
+- **LABAREE**, *The End of Inequality* (2005) — não localizada no site oficial do autor; usar *Education, Markets, and the Public Good* (2006).
 - Verbete OCD específico sobre artes liberais — acesso restrito; apenas "Freedom in the ancient world" localizado.
 
 ## 17. Notas e referências

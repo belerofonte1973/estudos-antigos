@@ -1,0 +1,113 @@
+{
+  "slug": "mitologia-comparada",
+  "figuras": [
+    {
+      "arquivo": "File:Friedrich Max-Müller, negative, 1883 (by Alexander Bassano; NPG x96551).png",
+      "titulo": "Max Müller (c. 1880)",
+      "legenda": "Retrato de estúdio do filólogo e orientalista Friedrich Max Müller, fundador dos estudos comparados da religião e da mitologia. Müller foi o primeiro a sistematizar o método comparativo aplicado aos mitos indo-europeus e cunhou o conceito de \"mitologia comparada\" como ciência.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "carte de visite fotográfica em albumina"
+    },
+    {
+      "arquivo": "File:Sir James George Frazer (1854–1941).jpg",
+      "titulo": "James George Frazer (1933)",
+      "legenda": "Retrato de Sir James George Frazer, antropólogo social escocês autor de <em>O Ramo de Ouro</em> (The Golden Bough, 1890), obra monumental de mitologia comparada que investiga padrões comuns de magia, religião e mitos de deuses que morrem e ressuscitam em diversas culturas.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "fotografia em preto e branco"
+    },
+    {
+      "arquivo": "File:Claude Lévi-Strauss (1973).jpg",
+      "titulo": "Claude Lévi-Strauss (1973)",
+      "legenda": "Lévi-Strauss recebendo o Prêmio Erasmus no Tropenmuseum (Amsterdam). Antropólogo e etnólogo francês, fundador do estruturalismo aplicado à mitologia. Sua obra <em>Mitológicas</em> (Mythologiques, 1964–1971) analisou sistematicamente centenas de mitos indígenas das Américas, revelando estruturas binárias universais no pensamento mítico.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "fotografia jornalística em preto e branco"
+    },
+    {
+      "arquivo": "File:Joseph Campbell at Feathered Pipe Ranch, Montana (cropped).jpg",
+      "titulo": "Joseph Campbell (década de 1970)",
+      "legenda": "Joseph Campbell no Feathered Pipe Ranch, Montana. Mitólogo e escritor americano, autor de <em>O Herói de Mil Faces</em> (The Hero with a Thousand Faces, 1949), no qual formulou a teoria da \"jornada do herói\" (monomito), um padrão narrativo universal que identificou em mitologias de todo o mundo.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "fotografia colorida"
+    },
+    {
+      "arquivo": "File:Victor Ion Popa - Mircea Eliade, Cuvântul 1933-11-06.png",
+      "titulo": "Mircea Eliade (1965)",
+      "legenda": "Mircea Eliade, historiador das religiões romano-americano. Autor de <em>O Sagrado e o Profano</em> e <em>Tratado de História das Religiões</em>, Eliade desenvolveu a morfologia do sagrado, analisando estruturas comuns como o mito do eterno retorno, a hierofania e os símbolos transversais (axis mundi, centro do mundo) presentes em todas as tradições religiosas e mitológicas.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "fotografia em preto e branco"
+    },
+    {
+      "arquivo": "File:Map of the PIE (proto-indo-european) mythological cosmos, PIE mythology.png",
+      "titulo": "Mapa do Cosmos Mitológico Proto-Indo-Europeu",
+      "legenda": "Mapa do cosmos mitológico proto-indo-europeu (PIE), representando a cosmovisão reconstruída dos indo-europeus pré-históricos. O diagrama ilustra a estrutura de três níveis (céu, terra, submundo), as divindades associadas a cada esfera (<em>Dyeus Pater, Pltvi Mātēr, Perkwunos, H₂eusōs, Divó Nepōt, etc.</em>) e as relações entre mitos solares, deuses da tempestade, deusas-mãe e o submundo. Fundamenta o estudo da difusão de motivos mitológicos nas tradições grega, romana, germânica, eslava, indiana e persa.",
+      "secao": "6",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "diagrama digital (infografia)"
+    },
+    {
+      "arquivo": "File:British Museum Flood Tablet.jpg",
+      "titulo": "Tábua do Dilúvio da Epopeia de Gilgamesh",
+      "legenda": "Tablete XI da Epopeia de Gilgamesh em acádio, conhecido como a \"Tábua do Dilúvio\" (Flood Tablet). Narra o mito do dilúvio universal através da história de Utnapishtim, o herói mesopotâmico que sobreviveu ao grande dilúvio construindo uma embarcação por instrução divina. Este mito possui paralelos diretos com o dilúvio bíblico (Noé), o dilúvio hindu (Matsya), o dilúvio grego (Deucalião) e outras tradições, constituindo uma das evidências mais citadas na mitologia comparada para a difusão de motivos narrativos entre culturas.",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "tablete de argila com escrita cuneiforme"
+    },
+    {
+      "arquivo": "File:Gustave Doré - The Holy Bible - Plate I, The Deluge.jpg",
+      "titulo": "O Dilúvio (Gustave Doré)",
+      "legenda": "Gravura de Gustave Doré retratando o Dilúvio bíblico (Gênesis 7–8). A cena mostra a humanidade perecendo nas águas enquanto a arca de Noé emerge ao fundo. Na mitologia comparada, a narrativa do dilúvio é um dos motivos mais universais, presente nas tradições mesopotâmica (Gilgamesh), hebraica, grega (Deucalião), hindu (Matsya), chinesa (Nuwa), maia (Hunahpú) e dezenas de outras culturas.",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "gravura em madeira (xilogravura)"
+    },
+    {
+      "arquivo": "File:Jan Cossiers - Prometeo trayendo el fuego, 1637.jpg",
+      "titulo": "Prometeu Trazendo o Fogo",
+      "legenda": "Prometeu, o titã grego que roubou o fogo dos deuses para entregá-lo à humanidade. Na mitologia comparada, Prometeu é o paradigma do \"herói civilizador\" — figura que rouba ou adquire um bem divino (fogo, conhecimento, tecnologia) para beneficiar a humanidade, sofrendo castigo eterno. Este motivo encontra paralelos em figures como Maui (Polinésia, que roubou o fogo e os ossos dos peixes), o corvo dos mitos siberianos que roubou o fogo, e Quetzalcóatl (Mesoamérica, que roubou o fogo dos deuses ou ensinou artes e agricultura).",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "óleo sobre tela"
+    },
+    {
+      "arquivo": "File:Babylonian and Assyrian creation myth. Wellcome M0005955.jpg",
+      "titulo": "Mito de Criação Babilônico-Assírio",
+      "legenda": "Ilustração do mito de criação babilônico-assírio, provavelmente representando a <em>Enuma Elish</em>, o poema épico da criação mesopotâmica. O mito narra o combate primordial entre Marduk e Tiamat (o dragão do caos aquático), do qual surge o cosmos ordenado. Este mito de criação através do combate ao caos (Chaoskampf) possui paralelos diretos com o mito hebraico (YHWH vs. Leviatã), o hitita (Teshub vs. Illuyanka), o nórdico (Thor vs. Jörmungandr) e o grego (Zeus vs. Tifão).",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "litografia / ilustração impressa"
+    },
+    {
+      "arquivo": "File:BD Weighing of the Heart.jpg",
+      "titulo": "A Pesagem do Coração (Livro dos Mortos Egípcio)",
+      "legenda": "A cerimônia da \"Pesagem do Coração\" (Psicostasia) do Papiro de Ani. O deus Anúbis (cabeça de chacal) pesa o coração do falecido contra a pena de Maat (verdade/justiça), enquanto Thoth (cabeça de íbis) registra o resultado e o monstro Ammit aguarda para devorar os indignos. Este motivo do \"julgamento dos mortos\" com pesagem das ações encontra paralelos notáveis no mito grego (Minos, Éaco e Radamanto julgando as almas), no zoroastrismo (Ponte Chinvat), no cristianismo medieval (pesagem das almas por São Miguel), na tradição islâmica (balança das boas ações) e nas concepções xamânicas de julgamento pós-morte.",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "pintura sobre papiro (iluminura)"
+    },
+    {
+      "arquivo": "File:MA D447 Stone relief at Chichen Itza showing Kukulkan-Quetzalcoatl.jpg",
+      "titulo": "Quetzalcóatl, a Serpente Emplumada (Relevo Maia)",
+      "legenda": "Relevo em pedra de Chichén Itzá representando Kukulkán/Quetzalcóatl, a \"Serpente Emplumada\". Quetzalcóatl é o herói civilizador mesoamericano por excelência — ensinou agricultura, leis, artes e calendário ao povo, e depois partiu prometendo retornar. Na mitologia comparada, paraleliza-se a Prometeu (doador de civilização), a Odin (que sacrificou a si mesmo pelo conhecimento), a Tiki (Polinésia), e aos heróis culturais das tradições xamânicas siberianas. O motivo da serpente como símbolo de sabedoria e renovação é um arquétipo universal (Uroboros, Nāga, serpente de Asclépio).",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "relevo em pedra calcária"
+    }
+  ]
+}

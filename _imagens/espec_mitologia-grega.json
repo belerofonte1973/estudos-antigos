@@ -1,0 +1,95 @@
+{
+  "slug": "mitologia-grega",
+  "figuras": [
+    {
+      "arquivo": "File:Exekias - ABV 145 13 - Achilleus and Aias playing - Kastor and Polydeukes - Vaticano MV-MGE 344 - 01.jpg",
+      "titulo": "Aquiles e Ájax Jogando Dados (Exéquias)",
+      "legenda": "Ânfora ática de figuras negras tipo A, pintada e assinada por Exéquias (Exekias), ca. 540–530 a.C. Lado A: Aquiles (Ἀχιλλεύς, <em>Achilleús</em>) e Ájax (<em>Αἴας</em>, <em>Aías</em>) sentados, jogando um jogo de tabuleiro, com as inscrições ΤΕΣΑΡΑ (quatro) e ΤΡΙΑ (três) saindo de suas bocas — um dos vasos mais célebres da cerâmica grega. Lado B: Castor e Pólux conduzindo cavalos com seus pais Leda e Tindareu. Encontrado em Vulci. Assinado por Exéquias na borda da boca: (ΕΧΣΕ)ΚΙΑΣ ΕΓΡΑΦΣΕ ΚΑΠΟΙΕΣΕ ΜΕ (\"Exéquias o desenhou e fez\"). Altura: 42 cm.",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "cerâmica"
+    },
+    {
+      "arquivo": "File:Odysseus Sirens BM E440.jpg",
+      "titulo": "Odisseu e as Sereias (Pintor das Sereias)",
+      "legenda": "Stamnos ático de figuras vermelhas atribuído ao Pintor das Sereias (Siren Painter), ca. 480–470 a.C. Odisseu (Ὀδυσσεύς, <em>Odysseús</em>) amarrado ao mastro de seu navio enquanto as Sereias (Σειρῆνες, <em>Seirênes</em>) voam ao redor, tentando atraí-lo com seu canto. Cena do <em>Canto XII</em> da <em>Odisseia</em> de Homero. Proveniente de Vulci, Etrúria.",
+      "secao": "7",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "cerâmica"
+    },
+    {
+      "arquivo": "File:Roman - Copy of the Aphrodite of Knidos - Walters 2398.jpg",
+      "titulo": "Afrodite de Cnido (cópia romana após Praxíteles)",
+      "legenda": "Cópia romana em mármore do século II d.C. após o original de Praxíteles (Πραξιτέλης), ca. 364 a.C. Afrodite (Ἀφροδίτη, <em>Aphrodítē</em>), deusa do amor e da beleza, em pé, com a mão direita cobrindo o púbis (o chamado \"gesto de pudor\" ou <em>Venus Pudica</em>). Estátua inspirada na famosa Afrodite de Cnido, a primeira representação feminina nua em escala monumental da arte grega.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "mármore"
+    },
+    {
+      "arquivo": "File:NAMA 129 Athena Varvakeion 2.JPG",
+      "titulo": "Athena Varvakeion (cópia da Athena Partenos de Fídias)",
+      "legenda": "Réplica romana em pequena escala da estátua criselefantina de Athena Partenos (Ἀθηνᾶ Παρθένος, \"A Virgem\"), feita por Fídias (Φειδίας) para o Partenon em 447 a.C. A deusa usa um peplos, a égide com a cabeça da Górgona (Γοργών, <em>Gorgṓn</em>) no centro, e um capacete coríntio. Na mão direita estendida segura uma Niké (Νίκη, Vitória) alada; a mão esquerda apoiava-se no escudo com a serpente Erichtônio. Encontrada em Atenas, perto da escola Varvakeion (daí o nome), em 1888. Altura: ~1 m (o original tinha cerca de 12× este tamanho).",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "mármore pentélico"
+    },
+    {
+      "arquivo": "File:Parthenon from south.jpg",
+      "titulo": "Partenon (fotografia do lado sul)",
+      "legenda": "Vista do Partenon (Παρθενών, <em>Parthenṓn</em>) pelo lado sul, ao entardecer. O templo dórico dedicado a Athena Partenos no topo da Acrópole de Atenas, construído sob a supervisão de Fídias e dos arquitetos Ictino e Calícrates. Considerado a mais importante edificação sobrevivente da Grécia Clássica e símbolo máximo da democracia ateniense e da civilização grega.",
+      "secao": "10",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "fotografia digital"
+    },
+    {
+      "arquivo": "File:Sanglier erymanthe-metope est 1-temple zeus olympie.jpg",
+      "titulo": "Templo de Zeus em Olímpia — Métopa (Trabalhos de Héracles)",
+      "legenda": "Relevo em mármore de Paros (métopa do templo) representando um dos Doze Trabalhos de Héracles (Ἡρακλῆς, <em>Hēraklês</em>). O templo, construído em estilo dórico pelo arquiteto Libon de Élis, abrigava a estátua criselefantina colossal de Zeus, esculpida por Fídias e considerada uma das Sete Maravilhas do Mundo Antigo.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "relevo em mármore"
+    },
+    {
+      "arquivo": "File:Estatua de Zeus en Olimpia.jpg",
+      "titulo": "Reconstrução da Estátua de Zeus em Olímpia",
+      "legenda": "Reconstrução moderna da Estátua de Zeus em Olímpia (Δίας Ὀλύμπιος, <em>Días Olýmpios</em>), obra original de Fídias. Zeus entronizado, com o cetro na mão esquerda e uma Niké alada na mão direita, a cabeça coroada com ramos de oliveira. A estátua original, de 12,4 m de altura, era revestida de ouro e marfim e ficava no Templo de Zeus em Olímpia — uma das Sete Maravilhas do Mundo Antigo.",
+      "secao": "5",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "escultura (reconstrução)"
+    },
+    {
+      "arquivo": "File:Sandro Botticelli - La nascita di Venere - Google Art Project.jpg",
+      "titulo": "O Nascimento de Vênus (Sandro Botticelli)",
+      "legenda": "<em>La nascita di Venere</em> de Sandro Botticelli (1445–1510), ca. 1484–1486. Representa a deusa Vênus (Afrodite / Ἀφροδίτη) emergindo do mar como uma mulher adulta sobre uma concha, à sua esquerda o deus-vento Zéfiro (Ζέφυρος) abraça a ninfa Clóris, e à sua direita uma Hora (Ὥρα) — identificada como a Primavera — estende um manto florido para cobri-la. A obra é inspirada no hino homérico a Afrodite e no poema <em>Giostra</em> de Angelo Poliziano. Um dos ícones máximos do Renascimento. Dimensões: 172,5 × 278,5 cm.",
+      "secao": "10",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "têmpera sobre tela"
+    },
+    {
+      "arquivo": "File:\"School of Athens\" by Raphael, Raphael Rooms, Vatican Museum (48466167851).jpg",
+      "titulo": "A Escola de Atenas (Rafael Sanzio)",
+      "legenda": "<em>La Scuola di Atene</em> de Rafael Sanzio (Raffaello Sanzio da Urbino, 1483–1520), 1509–1511. Afresco monumental na Stanza della Segnatura. Representa uma assembleia ideal de filósofos, cientistas e matemáticos da Antiguidade Clássica em torno de Platão (Πλάτων, apontando para o céu, segurando o <em>Timeu</em>) e Aristóteles (Ἀριστοτέλης, apontando para a terra, segurando a <em>Ética</em>). Inclui figuras como Sócrates, Pitágoras, Euclides, Diógenes, Ptolomeu e, possivelmente, o próprio Rafael (no canto direito). Embora não represente um mito diretamente, a obra celebra o pensamento filosófico grego que moldou a mitologia e a cultura clássica. Dimensões: 770 cm na base.",
+      "secao": "10",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "afresco"
+    },
+    {
+      "arquivo": "File:Rembrandt, pallade atena, 1657 ca.jpg",
+      "titulo": "Palas Atena (Rembrandt)",
+      "legenda": "<em>Palas Atena</em> (Παλλάς Ἀθηνᾶ, <em>Pallás Athēnâ</em>) de Rembrandt Harmenszoon van Rijn (1606–1669), ca. 1655–1657. A deusa da sabedoria, da guerra estratégica e das artes é representada com armadura, capacete emplumado, escudo com a cabeça da Górgona (Górgoneion / Γοργόνειον) e uma lança. A composição de Rembrandt reflete a influência da iconografia clássica e do maneirismo renascentista, mesclada com a técnica barroca de claro-escuro (<em>chiaroscuro</em>). Dimensões: 118 × 91 cm.",
+      "secao": "10",
+      "posicao": "fim",
+      "fonte_rotulo": "Wikimedia Commons",
+      "tecnica": "óleo sobre tela"
+    }
+  ]
+}

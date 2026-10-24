@@ -8,12 +8,17 @@
 :root {
   --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
   --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+  --sidebar-w:280px; --main-max:960px;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
-     background:var(--bg);color:var(--fg);line-height:1.65}
+     background:var(--bg);color:var(--fg);line-height:1.65;
+     overflow-wrap:break-word;word-wrap:break-word}
+img{max-width:100%;height:auto}
 .container{display:flex;min-height:100vh}
-.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);flex:0 0 var(--sidebar-w);
+         background:var(--sidebar-bg);
          border-right:1px solid var(--border);padding:1.2rem .8rem;
          position:sticky;top:0;height:100vh;overflow-y:auto}
 .sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
@@ -23,16 +28,20 @@ body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
 .sidebar li.level-4{margin-left:22px;font-size:.8rem}
 .sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
 .sidebar a:hover{text-decoration:underline}
-.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main{flex:1 1 auto;min-width:0;padding:2rem 2.5rem;max-width:var(--main-max);
+      overflow-wrap:break-word;word-wrap:break-word}
 .main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
 .main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
 .main h3{color:#333;margin-top:1.5rem}
 .main a{color:var(--link)}
-.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em;
+           overflow-wrap:anywhere;word-break:break-word}
 .main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
 .main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
-table{border-collapse:collapse;width:100%;margin:1rem 0}
-th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;max-width:100%}
+table{border-collapse:collapse;width:100%;max-width:100%;margin:0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;
+      overflow-wrap:anywhere;word-break:break-word}
 th{background:var(--sidebar-bg)}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
        font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
@@ -45,6 +54,12 @@ th{background:var(--sidebar-bg)}
 [data-theme="dark"] pre{background:#2a2a3e}
 [data-theme="dark"] th{background:#0f3460}
 [data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+@media (max-width:760px){
+.container{flex-direction:column}
+.sidebar{position:static;width:100%;min-width:0;flex:0 0 auto;height:auto;max-height:none;
+         border-right:0;border-bottom:1px solid var(--border)}
+.main{max-width:none;padding:1.5rem 1.25rem}
+}
 </style>
 </head>
 <body>
@@ -64,7 +79,7 @@ th{background:var(--sidebar-bg)}
 <p>O debate contemporâneo é um dos mais acirrados das humanidades. De um lado, defensoras como Martha Nussbaum sustentam que a educação liberal é condição da democracia — forma o cidadão capaz de pensar criticamente, imaginar o outro e julgar prioridades coletivas (Nussbaum, 1997). Do outro, críticos de direita e de esquerda denunciam a educação como reprodução de classe, como dispositivo de poder ou como privilégio inútil (Bourdieu &amp; Passeron, 1970; Foucault, 1975; Labaree, 2006). Entre os dois, uma bibliografia empírica crescente tenta medir o que a educação de fato produz (Arum e Courant, 2026).</p>
 <p>Este dossiê apresenta: (a) o contexto histórico e conceitual da filosofia da educação; (b) as defesas clássicas e as críticas; (c) o estado do debate acadêmico atual; (d) a produção em língua portuguesa; (e) um catálogo multimídia verificado (sites, blogs, YouTube, documentários, podcasts); (f) bibliografia comentada com links de acesso em cada entrada; e (g) um guia de estudo para o leitor autodidata.</p>
 <h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Campo</th>
@@ -105,7 +120,7 @@ th{background:var(--sidebar-bg)}
 <td>Filosofia da educação ≠ pedagogia ≠ didática ≠ psicologia da educação (ver Glossário, seção 17)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</h2>
 <h3 id="31-a-paideia-grega-a-educacao-como-formacao-do-homem">3.1 A <em>paideia</em> grega: a educação como formação do homem</h3>
 <p>A filosofia da educação nasce na Grécia clássica como <em>paideia</em>: não a escolarização de crianças, mas a formação do conjunto do homem — corpo, caráter e intelecto — para a vida na <em>polis</em> (Jaeger, 1959; Marrou, 1965). Werner Jaeger, em sua obra de três volumes, fixou <em>paideia</em> como categoria histórica interpretativa: a reconstrução do espírito grego, da época arcaica a Platão e Aristóteles, mostra que o grego entendia a educação como o processo pelo qual a comunidade forma o seu tipo ideal de homem (Jaeger, 1959).</p>
@@ -135,7 +150,7 @@ th{background:var(--sidebar-bg)}
 <p><strong>José Carlos Libâneo</strong>, em <em>Pedagogia e pedagogos, para quê?</em> (1998), defende a pedagogia como campo científico autônomo, com objeto próprio (a prática educativa), e não mera aplicação de outras ciências da educação — o pedagogo é um profissional com identidade distinta (Libâneo, 1998, p. 32).</p>
 <h2 id="4-defesas-classicas-da-educacao">4. Defesas clássicas da educação</h2>
 <p>As defesas canônicas do conceito podem ser agrupadas em quatro famílias de argumento, todas presentes desde a Antiguidade:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Família de argumento</th>
@@ -170,7 +185,7 @@ th{background:var(--sidebar-bg)}
 <td>(Dewey, 1916; Freire, 1968; Nussbaum, 1997)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>A leitura recomendada do núcleo defensivo clássico: Platão (1959) para o argumento da <em>paideia</em>; Locke (1693) para o argumento do caráter; Rousseau (1762) para o argumento da natureza; Kant (1803) para o argumento da autonomia; Dewey (1916) para o argumento democrático; Freire (1968) para o argumento da libertação; Nussbaum (1997) para o argumento da cidadania mundial.</p>
 <h2 id="5-as-grandes-criticas">5. As grandes críticas</h2>
 <h3 id="51-critica-pela-esquerda-reproducao-de-classe">5.1 Crítica pela esquerda: reprodução de classe</h3>
@@ -215,7 +230,7 @@ th{background:var(--sidebar-bg)}
 <p><strong>Howard Gardner</strong> (n. 1943) é o psicólogo americano que propôs a teoria das inteligências múltiplas. Em <em>Frames of Mind</em> (1983), demonstra que a inteligência não é uma capacidade unitária (fator g), mas um conjunto de múltiplas inteligências relativamente autônomas — linguística, lógico-matemática, musical, espacial, corporal-cinestésica, interpessoal, intrapessoal. Cada inteligência tem base neural distinta e pode ser lesionada seletivamente; diferentes culturas valorizam diferentes inteligências; a escola tradicional supervaloriza a inteligência lógico-matemática e linguística.</p>
 <h2 id="8-traducoes-e-edicoes">8. Traduções e edições</h2>
 <h3 id="81-obras-classicas-em-portugues">8.1 Obras clássicas em português</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Obra</th>
@@ -388,9 +403,9 @@ th{background:var(--sidebar-bg)}
 <td>[V]</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="82-obras-brasileiras">8.2 Obras brasileiras</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Obra</th>
@@ -451,10 +466,10 @@ th{background:var(--sidebar-bg)}
 <td>[V]</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="9-audiovisual-e-games">9. Audiovisual e games</h2>
 <h3 id="91-documentarios">9.1 Documentários</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Título</th>
@@ -494,9 +509,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.youtube.com/watch?v=example">YouTube</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="92-canais-do-youtube">9.2 Canais do YouTube</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Canal</th>
@@ -521,9 +536,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.youtube.com/user/canaldilosofia">YouTube</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="93-podcasts">9.3 Podcasts</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Podcast</th>
@@ -543,7 +558,7 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://open.spotify.com/show/example">Spotify</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="10-mitologia-e-literatura-comparada">10. Mitologia e literatura comparada</h2>
 <h3 id="101-o-mito-da-caverna-e-a-educacao">10.1 O mito da caverna e a educação</h3>
 <p>A Alegoria da Caverna (Platão, <em>República</em>, Livro VII) é a metáfora fundacional da filosofia da educação. Os prisioneiros acorrentados na caverna, que veem apenas sombras projetadas na parede, representam a condição humana de ignorância. O prisioneiro que se liberta e sai da caverna, que vê o sol e a realidade, representa o filósofo que ascende ao conhecimento. A educação é o processo de conversão do olhar — da opinião (<em>doxa</em>) ao conhecimento (<em>episteme</em>).</p>
@@ -584,7 +599,7 @@ th{background:var(--sidebar-bg)}
 <li><strong>Libâneo, <em>Pedagogia e pedagogos, para quê?</em></strong>: a referência "1990" constante na lista original corresponde a <em>Didática</em> (São Paulo: Cortez, 1990), não ao título indicado. A 1ª edição de <em>Pedagogia e pedagogos, para quê?</em> é de 1998.</li>
 </ul>
 <h2 id="15-glossario">15. Glossário</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Termo</th>
@@ -645,7 +660,7 @@ th{background:var(--sidebar-bg)}
 <td>Contexto de significados compartilhados que estrutura a ação social (Habermas)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="16-guia-de-estudo">16. Guia de estudo</h2>
 <h3 id="161-escada-de-7-degraus">16.1 Escada de 7 degraus</h3>
 <ol>
@@ -673,7 +688,7 @@ th{background:var(--sidebar-bg)}
 <p>A pesquisa foi conduzida em duas frentes paralelas: (1) clássicos e modernos (Platão a Habermas) e (2) brasileiros e contemporâneos (Teixeira a Bourdieu). As 33 obras únicas foram consolidadas neste dossiê.</p>
 <h2 id="18-bibliografia-ancora">18. Bibliografia-âncora</h2>
 <h3 id="obras-classicas-e-modernas">Obras clássicas e modernas</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -846,9 +861,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.scielo.br/j/cp/a/MZ939dkBFZL9C3PkFp7tPJJ/?format=html&amp;lang=pt">SciELO</a> · <a href="https://scholar.google.com/citations?user=Px0PzPQAAAAJ">Google Scholar</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="obras-brasileiras-e-contemporaneas">Obras brasileiras e contemporâneas</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -965,7 +980,7 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://search.worldcat.org/title/Reproduction-in-education-society-and-culture/oclc/3125166">WorldCat</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <p><strong>Legenda de marcadores</strong>: [V] = ISBN validado em Open Library · [V-OL] = work record no Open Library · [W] = citado em Wikipedia PT · [ACAD] = paper com DOI · [NV] = ISBN testado e não encontrado · [HIST] = obra pré-1980 sem ISBN · [DIGITAL] = domínio público · [—] = lacuna (obra não localizada com o título exato).</p>
 </main>

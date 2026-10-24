@@ -18,7 +18,7 @@ from PIL import Image
 from pypdf import PdfWriter, PdfReader
 
 
-INPUT = Path(r"C:/Users/music/estudos-antigos/dossies/educacao-liberal/00_educacao_liberal_MASTER.md")
+INPUT = Path(r"C:/Users/music/estudos-antigos-repo/dossies/educacao-liberal/00_educacao_liberal_MASTER.md")
 OUTDIR = INPUT.parent
 TITLE = "Educação Liberal — Dossiê Enciclopédico"
 FONT_R = r"C:/Windows/Fonts/arial.ttf"
@@ -187,12 +187,17 @@ CSS = """
 :root {
   --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
   --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+  --sidebar-w:280px; --main-max:960px;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
-     background:var(--bg);color:var(--fg);line-height:1.65}
+     background:var(--bg);color:var(--fg);line-height:1.65;
+     overflow-wrap:break-word;word-wrap:break-word}
+img{max-width:100%;height:auto}
 .container{display:flex;min-height:100vh}
-.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);flex:0 0 var(--sidebar-w);
+         background:var(--sidebar-bg);
          border-right:1px solid var(--border);padding:1.2rem .8rem;
          position:sticky;top:0;height:100vh;overflow-y:auto}
 .sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
@@ -202,16 +207,20 @@ body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
 .sidebar li.level-4{margin-left:22px;font-size:.8rem}
 .sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
 .sidebar a:hover{text-decoration:underline}
-.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main{flex:1 1 auto;min-width:0;padding:2rem 2.5rem;max-width:var(--main-max);
+      overflow-wrap:break-word;word-wrap:break-word}
 .main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
 .main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
 .main h3{color:#333;margin-top:1.5rem}
 .main a{color:var(--link)}
-.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em;
+           overflow-wrap:anywhere;word-break:break-word}
 .main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
 .main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
-table{border-collapse:collapse;width:100%;margin:1rem 0}
-th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;max-width:100%}
+table{border-collapse:collapse;width:100%;max-width:100%;margin:0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;
+      overflow-wrap:anywhere;word-break:break-word}
 th{background:var(--sidebar-bg)}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
        font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
@@ -224,6 +233,12 @@ th{background:var(--sidebar-bg)}
 [data-theme="dark"] pre{background:#2a2a3e}
 [data-theme="dark"] th{background:#0f3460}
 [data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+@media (max-width:760px){
+.container{flex-direction:column}
+.sidebar{position:static;width:100%;min-width:0;flex:0 0 auto;height:auto;max-height:none;
+         border-right:0;border-bottom:1px solid var(--border)}
+.main{max-width:none;padding:1.5rem 1.25rem}
+}
 """
 
 JS = """<script>
@@ -277,6 +292,9 @@ def main():
     md_lines = md_text.splitlines()
     html_body = markdown.markdown(md_text, extensions=["tables", "fenced_code", "toc"])
     html_body = apply_badges(html_body)
+    # Envolve tabelas em conteiner com rolagem horizontal (evita transbordo com fontes grandes)
+    html_body = re.sub(r'(<table[^>]*>.*?</table>)',
+                       r'<div class="table-wrap">\1</div>', html_body, flags=re.S)
     toc = extract_toc(html_body)
 
     # TOC sidebar

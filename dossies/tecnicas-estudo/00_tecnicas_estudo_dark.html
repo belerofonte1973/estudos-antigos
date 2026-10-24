@@ -8,12 +8,17 @@
 :root {
   --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
   --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+  --sidebar-w:280px; --main-max:960px;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
-     background:var(--bg);color:var(--fg);line-height:1.65}
+     background:var(--bg);color:var(--fg);line-height:1.65;
+     overflow-wrap:break-word;word-wrap:break-word}
+img{max-width:100%;height:auto}
 .container{display:flex;min-height:100vh}
-.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);flex:0 0 var(--sidebar-w);
+         background:var(--sidebar-bg);
          border-right:1px solid var(--border);padding:1.2rem .8rem;
          position:sticky;top:0;height:100vh;overflow-y:auto}
 .sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
@@ -23,16 +28,20 @@ body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
 .sidebar li.level-4{margin-left:22px;font-size:.8rem}
 .sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
 .sidebar a:hover{text-decoration:underline}
-.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main{flex:1 1 auto;min-width:0;padding:2rem 2.5rem;max-width:var(--main-max);
+      overflow-wrap:break-word;word-wrap:break-word}
 .main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
 .main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
 .main h3{color:#333;margin-top:1.5rem}
 .main a{color:var(--link)}
-.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em;
+           overflow-wrap:anywhere;word-break:break-word}
 .main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
 .main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
-table{border-collapse:collapse;width:100%;margin:1rem 0}
-th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;max-width:100%}
+table{border-collapse:collapse;width:100%;max-width:100%;margin:0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;
+      overflow-wrap:anywhere;word-break:break-word}
 th{background:var(--sidebar-bg)}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
        font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
@@ -45,6 +54,12 @@ th{background:var(--sidebar-bg)}
 [data-theme="dark"] pre{background:#2a2a3e}
 [data-theme="dark"] th{background:#0f3460}
 [data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+@media (max-width:760px){
+.container{flex-direction:column}
+.sidebar{position:static;width:100%;min-width:0;flex:0 0 auto;height:auto;max-height:none;
+         border-right:0;border-bottom:1px solid var(--border)}
+.main{max-width:none;padding:1.5rem 1.25rem}
+}
 </style>
 </head>
 <body>
@@ -68,7 +83,7 @@ th{background:var(--sidebar-bg)}
 <p><strong>Fig. 1 — Ars Memoriæ, de Robert Fludd (1619).</strong> Gravura do tratado <em>De praeternaturali utriusque mundi</em> de Robert Fludd, representação do teatro da memória renascentista. O edifício imaginário com fileiras de câmaras e imagens simbólicas materializa a tentativa de sistematizar o conhecimento usando associações mnemônicas — mesma lógica subjacente ao método dos loci descrito por Cícero. Cf. §§ 3 e 6. <em>Ficha: Robert Fludd. Licença: Public domain; fonte: <a href="https://commons.wikimedia.org/wiki/File:Ars_Memori%C3%A6.jpg">Wikimedia Commons</a>.</em></p>
 <hr />
 <h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Campo</th>
@@ -109,7 +124,7 @@ th{background:var(--sidebar-bg)}
 <td>Técnicas de estudo ≠ técnicas de escrita ≠ técnicas de memorização (ver Glossário, seção 15)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</h2>
 <h3 id="31-a-arte-da-memoria-na-antiguidade">3.1 A arte da memória na Antiguidade</h3>
 <p>A arte da memória (<em>ars memorativa</em>) é uma das tradições intelectuais mais antigas da civilização ocidental. Segundo a lenda, o poeta grego <strong>Simônides de Ceos</strong> (c. 556–468 a.C.) inventou o método dos loci após identificar os corpos de convidados mortos em um desabamento pelo lugar que ocupavam na mesa (Yates, 1966, p. 1–12). O método consiste em associar informações a lugares familiares — um edifício, uma rua, uma sala — e "percorrer" esses lugares mentalmente para recuperar as informações. A eficácia do método reside em explorar a capacidade inata do cérebro humano para navegação espacial: regiões do hipocampo que evoluíram para orientação geográfica são recrutadas para armazenar informações abstratas, um fenômeno que pesquisas contemporâneas de neuroimagem confirmam (Kelly, 2016; Foer, 2011).</p>
@@ -228,7 +243,7 @@ th{background:var(--sidebar-bg)}
 <hr />
 <h2 id="8-traducoes-e-edicoes">8. Traduções e edições</h2>
 <h3 id="81-obras-traduzidas-para-o-portugues-lista-completa">8.1 Obras traduzidas para o português (lista completa)</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -633,9 +648,9 @@ th{background:var(--sidebar-bg)}
 <td><span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="82-obras-brasileiras-e-cursos-em-portugues">8.2 Obras brasileiras e cursos em português</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Obra/Curso</th>
@@ -752,10 +767,10 @@ th{background:var(--sidebar-bg)}
 <td><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V]</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="9-audiovisual-e-games">9. Audiovisual e games</h2>
 <h3 id="91-documentarios">9.1 Documentários</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Título</th>
@@ -788,9 +803,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.youtube.com/watch?v=yE2z_RyHhX0">YouTube</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="92-canais-do-youtube">9.2 Canais do YouTube</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Canal</th>
@@ -820,9 +835,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.coursera.org/learn/aprender">Coursera</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="93-podcasts">9.3 Podcasts</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Podcast</th>
@@ -847,7 +862,7 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://open.spotify.com/show/6rN2AncjvhlX3Bt9BVakAa">Spotify</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="10-mitologia-e-literatura-comparada">10. Mitologia e literatura comparada</h2>
 <h3 id="101-o-palacio-da-memoria">10.1 O palácio da memória</h3>
 <p>O palácio da memória (<em>method of loci</em>) é a metáfora fundacional das técnicas de memorização. O palácio é um edifício imaginário — real ou fictício — cujos cômodos, corredores e objetos servem como "âncoras" para informações. O método foi descrito por Cícero no <em>De oratore</em> e por Quintiliano na <em>Institutio oratoria</em> e permanece como a técnica mnemônica mais eficaz conhecida (Foer, 2011; Kelly, 2016). O que torna o palácio da memória uma metáfora tão poderosa é que ele vincula o conhecimento abstrato à experiência concreta do espaço: o cérebro humano evoluiu para navegar ambientes tridimensionais, e a técnica sequestra essa capacidade inata para o armazenamento de informações arbitrárias. Pesquisas de neuroimagem (Maguire et al., 2003) mostram que os campeões de memória ativam as mesmas regiões do hipocampo e do córtex retrosplenial ao memorizar — regiões associadas à navegação espacial — em vez de regiões associadas à memória semântica. O palácio não é apenas uma metáfora literária: é a base neural da técnica mais eficaz de memorização conhecida.</p>
@@ -916,7 +931,7 @@ th{background:var(--sidebar-bg)}
 </li>
 </ul>
 <h2 id="15-glossario">15. Glossário</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Termo</th>
@@ -1033,7 +1048,7 @@ th{background:var(--sidebar-bg)}
 <td>Comportamento mínimo (menos de 30 segundos) que desencadeia uma rotina maior</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="16-guia-de-estudo">16. Guia de estudo</h2>
 <h3 id="161-escada-de-7-degraus-ordem-recomendada-de-leitura">16.1 Escada de 7 degraus (ordem recomendada de leitura)</h3>
 <ol>
@@ -1046,7 +1061,7 @@ th{background:var(--sidebar-bg)}
 <li><strong>Yates, <em>The Art of Memory</em></strong> — a arte da memória e o método dos loci; contexto histórico e filosófico</li>
 </ol>
 <h3 id="162-cronograma-de-estudo-sugerido-12-semanas">16.2 Cronograma de estudo sugerido (12 semanas)</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Semana</th>
@@ -1129,7 +1144,7 @@ th{background:var(--sidebar-bg)}
 <td>Consolidar o sistema pessoal de estudo; escrever uma síntese</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="163-leitura-por-tema">16.3 Leitura por tema</h3>
 <ul>
 <li><strong>Técnicas de estudo</strong>: Robinson, Brown et al., Dunlosky et al., Bjork</li>
@@ -1179,7 +1194,7 @@ th{background:var(--sidebar-bg)}
 <h3 id="173-limitacoes">17.3 Limitações</h3>
 <p>Este dossiê tem limitações que devem ser explicitadas: (1) <strong>viés linguístico</strong>: a pesquisa foi conduzida em português e inglês, excluindo literatura em outros idiomas (francês, alemão, italiano, espanhol, japonês) que pode conter contribuições relevantes perdidas neste levantamento; (2) <strong>viés de disponibilidade</strong>: as fontes verificadas (Open Library, Internet Archive, SciELO, Crossref) têm cobertura desigual — obras de editoras independentes, auto-publicadas ou de países fora do eixo EUA-Europa podem estar sub-representadas; (3) <strong>data de verificação</strong>: as verificações foram realizadas em outubro de 2026; edições posteriores ou novas traduções podem não estar capturadas; (4) <strong>generalização</strong>: as técnicas classificadas como "mais eficazes" por Dunlosky et al. (2013) foram testadas principalmente em contextos experimentais controlados com estudantes universitários americanos — a generalização para outros contextos (estudantes do ensino fundamental, profissionais autodidatas, culturas não ocidentais) deve ser feita com cautela.</p>
 <h3 id="174-marcadores">17.4 Marcadores</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Marcador</th>
@@ -1212,10 +1227,10 @@ th{background:var(--sidebar-bg)}
 <td>Lacuna: informação não localizada com as ferramentas disponíveis</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="18-bibliografia-ancora">18. Bibliografia-âncora</h2>
 <h3 id="tecnicas-de-estudo-e-aprendizado">Técnicas de estudo e aprendizado</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1388,9 +1403,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.coursera.org/instructor/barboakley">Coursera</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="tecnicas-de-escrita-e-memorizacao">Técnicas de escrita e memorização</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1555,12 +1570,12 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://books.google.com/books?id=BFtO-zfULMAC">Google Books</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2 id="19-ferramentas-e-aplicativos">19. Ferramentas e aplicativos</h2>
 <p>As ferramentas abaixo são recursos digitais que auxiliam a implementação das técnicas descritas neste dossiê. Nenhuma ferramenta substitui o conhecimento dos princípios — uma ferramenta mal usada é pior que nenhuma ferramenta. As recomendações baseiam-se em relatos de uso documentados, não em validação experimental controlada.</p>
 <h3 id="191-flashcards-e-repeticao-espacada">19.1 Flashcards e repetição espaçada</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Ferramenta</th>
@@ -1589,9 +1604,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.remnote.com/">RemNote</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="192-mapas-mentais-e-diagramas">19.2 Mapas mentais e diagramas</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Ferramenta</th>
@@ -1620,9 +1635,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://miro.com/">Miro</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="193-gestao-de-tempo-e-foco">19.3 Gestão de tempo e foco</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Ferramenta</th>
@@ -1657,9 +1672,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://getcoldturkey.com/">Cold Turkey</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="194-organizacao-e-notas">19.4 Organização e notas</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Ferramenta</th>
@@ -1694,9 +1709,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://keep.google.com/">Google Keep</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="195-escrita-e-referencias">19.5 Escrita e referências</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Ferramenta</th>
@@ -1731,9 +1746,9 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.grammarly.com/">Grammarly</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="196-cursos-online">19.6 Cursos online</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Plataforma</th>
@@ -1756,7 +1771,7 @@ th{background:var(--sidebar-bg)}
 <td><a href="https://www.khanacademy.org/">Khan Academy</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2 id="legenda-de-marcadores">Legenda de marcadores</h2>
 <p><span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V]</span> = ISBN validado em Open Library · <span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[V-OL]</span> = work record no Open Library · <span class="badge" style="background:#e3f2fd;color:#1565c0;border:1px solid #1565c0;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[W]</span> = citado em Wikipedia PT · <span class="badge" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #6a1b9a;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[ACAD]</span> = paper com DOI · <span class="badge" style="background:#ffebee;color:#b71c1c;border:1px solid #b71c1c;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[NV]</span> = ISBN testado e não encontrado · <span class="badge" style="background:#efebe9;color:#4e342e;border:1px solid #4e342e;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[HIST]</span> = obra pré-1980 sem ISBN · <span class="badge" style="background:#e8f5e9;color:#2e7d32;border:1px solid #2e7d32;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[DIGITAL]</span> = domínio público · <span class="badge" style="background:#f5f5f5;color:#757575;border:1px solid #757575;padding:2px 7px;border-radius:4px;font-size:0.72rem;font-weight:700;margin-right:5px;transform:translateY(-1px);display:inline-block">[—]</span> = lacuna (obra não localizada com o título exato).</p>

@@ -8,12 +8,17 @@
 :root {
   --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
   --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+  --sidebar-w:280px; --main-max:960px;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
-     background:var(--bg);color:var(--fg);line-height:1.65}
+     background:var(--bg);color:var(--fg);line-height:1.65;
+     overflow-wrap:break-word;word-wrap:break-word}
+img{max-width:100%;height:auto}
 .container{display:flex;min-height:100vh}
-.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);flex:0 0 var(--sidebar-w);
+         background:var(--sidebar-bg);
          border-right:1px solid var(--border);padding:1.2rem .8rem;
          position:sticky;top:0;height:100vh;overflow-y:auto}
 .sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
@@ -23,16 +28,20 @@ body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
 .sidebar li.level-4{margin-left:22px;font-size:.8rem}
 .sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
 .sidebar a:hover{text-decoration:underline}
-.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main{flex:1 1 auto;min-width:0;padding:2rem 2.5rem;max-width:var(--main-max);
+      overflow-wrap:break-word;word-wrap:break-word}
 .main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
 .main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
 .main h3{color:#333;margin-top:1.5rem}
 .main a{color:var(--link)}
-.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em;
+           overflow-wrap:anywhere;word-break:break-word}
 .main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
 .main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
-table{border-collapse:collapse;width:100%;margin:1rem 0}
-th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;max-width:100%}
+table{border-collapse:collapse;width:100%;max-width:100%;margin:0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;
+      overflow-wrap:anywhere;word-break:break-word}
 th{background:var(--sidebar-bg)}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
        font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
@@ -45,6 +54,12 @@ th{background:var(--sidebar-bg)}
 [data-theme="dark"] pre{background:#2a2a3e}
 [data-theme="dark"] th{background:#0f3460}
 [data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+@media (max-width:760px){
+.container{flex-direction:column}
+.sidebar{position:static;width:100%;min-width:0;flex:0 0 auto;height:auto;max-height:none;
+         border-right:0;border-bottom:1px solid var(--border)}
+.main{max-width:none;padding:1.5rem 1.25rem}
+}
 </style>
 </head>
 <body>
@@ -64,7 +79,7 @@ th{background:var(--sidebar-bg)}
 <p>O movimento cresceu de três escolas fundadoras para mais de 400-500 escolas membros da ACCS e mais de 40 mil alunos (ACCS, 2026 [INST] — a própria ACCS registra a cifra de 400+ e 500+ em páginas diferentes da mesma fonte, discrepância não arbitrada). No Brasil, o fenômeno é recente e notavelmente apoiado por tradução: o núcleo doutrinário do movimento já está publicado em português — <em>A Tradição das Artes Liberais</em> (Clark e Jain, Kírion, 2021), <em>A Mente Bem Treinada</em> (Bauer, Liber), <em>Educação clássica e educação domiciliar</em> (Wilson, Monergismo, 2017), <em>Desejando o reino</em> (Smith, Vida Nova, 2018) e <em>Didascalicon</em> bilíngue (Kírion/CEDET, 2018) (Clark e Jain, 2021 [V-ED]; Wilson, 2017 [V-ED]; Smith, 2018 [V-ED]; Hugo de São Vítor, 2018 [V-ED]).</p>
 <p>O campo é objeto de debate acadêmico crescente: estudos empíricos medem o desempenho das escolas clássicas cristãs (Vaughan, 2019), historiadores da educação criticam a leitura anacrônica do <em>trivium</em> (Littlejohn e Evans, 2006; Ellis, 2023), filósofos da educação cristã propõem alternativas (Smith, 2009), e a crítica pública documenta controvérsias envolvendo o principal fundador (Herdt, 2026; WNG, 2021). Este dossiê apresenta: história do movimento, fundamentos filosóficos, método, autores, evidência empírica, críticas e controvérsias (em paralelo, sem arbitrar), a produção em português, catálogo multimídia verificado, bibliografia comentada com links, e guia de estudo.</p>
 <h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Campo</th>
@@ -113,7 +128,7 @@ th{background:var(--sidebar-bg)}
 <td>Educação clássica cristã ≠ educação clássica laica (Great Hearts) ≠ ensino religioso tradicional</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="3-contexto-historico-e-teologico">3. Contexto histórico e teológico</h2>
 <h3 id="31-patristica-agostinho-e-a-pedagogia-da-graca">3.1 Patrística: Agostinho e a pedagogia da graça</h3>
 <p>A matriz teológica do movimento está no <em>De doctrina christiana</em> (c. 397) de Agostinho de Hipona, no qual a educação cristã é definida não como domínio de disciplinas, mas como transformação do crente: gramática e retórica ficam a serviço da exegese bíblica (Agostinho, c. 397 [HIST]). O ponto estrutural é o de <em>De doctrina christiana</em> III, 10: todo mestre humano é apenas instrumento — quem ensina é Deus (Agostinho, c. 397). Dessa assimetria deriva a convicção, repetida em Classical Conversations e na tradição Logos, de que a capacidade de pensar não pode ser ensinada, apenas despertada (Sub-A, 2026). Werner Jaeger forneceu a hipótese historiográfica que sustenta o movimento: em <em>Early Christianity and Greek Paideia</em> (1961), argumenta que o cristianismo primitivo <em>adotou</em> a paideia grega em vez de destruí-la — exatamente a continuidade que a CCE se apresenta como restaurando; a validade dessa tese é o eixo do debate acadêmico atual sobre o movimento (Jaeger, 1961; Ellis, 2023; Herdt, 2026).</p>
@@ -132,7 +147,7 @@ th{background:var(--sidebar-bg)}
 <p>No plano comunitário, o <strong>Portal Educação Clássica</strong> (fundado em 2018 por Barbara Lores e Marcos Viana; ligado à Academia Dulcis Domus) declara mais de 500 famílias em 180 cidades brasileiras e mais de 20 no exterior, com cursos, materiais e o podcast <em>#PodClássica</em> (Portal Educação Clássica, 2026 [W]). O tema institucionalizou-se em especializações lato sensu (Faculdade Serra da Mesa; Faculdade Internacional Cidade Viva — cujo projeto pedagógico inclui o <em>Didascalicon</em> na bibliografia) (Sub-A, 2026 [W]). A produção acadêmica brasileira documenta a chegada efetiva do método: dissertação sobre o ensino de violino em escola clássica cristã confessional (Almeida, UFPB, 2024 — "o eixo de entrada não foi a gramática e a retórica, foi a música", confirmando a centralidade do <em>quadrivium</em>), reconstrução histórica do <em>trivium</em> medieval (Silva, UFSCar, 2017), estudos da <em>Ratio Studiorum</em> (Correia, UFPB, 2018; Lira Filho, UFC), aplicação do método ao ensino de química (Fontoura, UNIFESSPA, 2018) e reflexão sobre a paideia cristã colonial (Lima da Silva, UNISO) (Almeida, 2024 [V-ACAD]; Silva, 2017 [V-ACAD]; Correia, 2018 [V-ACAD]; Fontoura, 2018 [V-ACAD]; Lima da Silva, s/d [ACAD]).</p>
 <h2 id="4-fundamentos-as-artes-liberais-em-cosmovisao-crista">4. Fundamentos: as artes liberais em cosmovisão cristã</h2>
 <p>Quatro famílias de fundamentação convivem no campo:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Família</th>
@@ -167,13 +182,13 @@ th{background:var(--sidebar-bg)}
 <td>(Hicks, 1981 [V])</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Clark e Jain</strong> (2014) é a obra doutrinária mais rigorosa: argumentam contra a leitura instrumental do <em>trivium</em> e a favor da formação dos afetos como fim — a distinção entre educação tradicional e moderna (Clark e Jain, 2014; trad. BR 2021). <strong>Rushdoony</strong> formula a versão mais dura do argumento confessional: "a filosofia do currículo cristão" é discipulado da cosmovisão, e o subtítulo da edição brasileira resume a tese — "o currículo de artes liberais significa literalmente aquele curso que treina estudantes na arte da liberdade" (Rushdoony, 1981 [V-ED]). <strong>Smith</strong> (2009) critica o eixo currículo-conteúdo em favor do eixo desejo-liturgia, recuperando Agostinho e Calvino: em vez de perguntar "o que ensinar", pergunta "o que amar" (Smith, 2009). <strong>Hicks</strong> (1981), anterior ao boom, derivou o currículo da natureza e finalidade humanas — "em 1981 defensável; hoje letra morta sob o peso do Estado" (Hicks, 1981 [V]; Sub-A, 2026). <strong>Caldecott</strong> (2012) acrescenta a beleza como via de conhecimento e a vocação como categoria teológica (Caldecott, 2012 [W], ISBN não validado).</p>
 <h2 id="5-o-metodo-do-trivium-e-a-heranca-de-dorothy-sayers">5. O método do trivium e a herança de Dorothy Sayers</h2>
 <p>O motor metodológico do movimento é o ensaio <em>The Lost Tools of Learning</em> (1947) de Dorothy Sayers: o <em>trivium</em> medieval é transformado em <strong>esquema de desenvolvimento infantil</strong> — a criança nasce na gramática (fase da memorização), passa pela dialética (fase do questionamento) e chega à retórica (fase da expressão persuasiva) (Sayers, 1947 [V]). Wilson adota o esquema como sequência curricular na sala de aula cristã (Wilson, 1991), os Bluedorn o detalham como engenharia curricular completa em <em>Teaching the Trivium</em> — 637 páginas definindo os estudos triviais, os do quadrivium e os eletivos por áreas e séries (Bluedorn, 2001 [V]; trad. BR Monergismo, 2 vols. [V-ED]) — e Bauer o converte em programa de doze anos para o homeschooling (Bauer, 1999/2016 [V]).</p>
 <p>A crítica mais forte ao método, porém, foi formulada <strong>dentro do movimento</strong>: Littlejohn e Evans (<em>Wisdom and Eloquence</em>, 2006) observam que o movimento exagerou o <em>trivium</em> em detrimento do <em>quadrivium</em>, e que o <em>trivium</em> medieval "não era um modelo pedagógico, mas três assuntos relativos à linguagem, aos quais se deviam acrescentar quatro relativos à matemática" — o registro do ICHER formula: "a descrição do trivium por Sayers, por toda a sua criatividade, é historicamente imprecisa" (Littlejohn e Evans, 2006 [W]; Gaither, 2013 [W]). Hugo de São Vítor, oito séculos antes, já organizava as sete artes por objeto de estudo, não por estágio de desenvolvimento (Hugo de São Vítor, c. 1120). Jessica Richardi documenta ainda que a recepção americana de Sayers foi seletiva: "nem ortodoxa nem iluminada", a autora do ensaio foi recortada pela retórica do movimento (Richardi, 2023 [ACAD]).</p>
 <h2 id="6-principais-autores-e-obras">6. Principais autores e obras</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Autor</th>
@@ -283,7 +298,7 @@ th{background:var(--sidebar-bg)}
 <td>[V] 9780989702867</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="7-evidencia-empirica">7. Evidência empírica</h2>
 <p>O campo ultrapassou a fase de panfleto: há pesquisa indexada medindo o fenômeno. <strong>Christy Anne Vaughan</strong> (2019), no único estudo empírico de desempenho localizado, compara escores médios do PSAT entre escolas clássicas cristãs e escolas cristãs não-clássicas (<em>Journal of Research on Christian Education</em> 28(4), pp. 286-308) (Vaughan, 2019 [ACAD] DOI 10.1080/10656219.2019.1704326). <strong>Miller e Beazley</strong> (2018) descrevem como a formação espiritual opera numa escola clássica concreta, com o argumento de que o movimento define seu objetivo em termos de formação de caráter — "formar moralmente reto" — e não de desempenho acadêmico (Miller e Beazley, 2018 [ACAD] DOI 10.1177/1939790918796834). <strong>Wilhelm e Firmin</strong> (2008) fornecem a linha de base sobre educação de caráter no contexto cristão (Wilhelm e Firmin, 2008 [ACAD] DOI 10.1080/10656210802433384). A ressalva metodológica registrada na bibliografia: a alegação recorrente de que o método "produz melhores resultados" permanece largamente não testada; o estudo de Vaughan é a exceção, e suas comparações são de escores de admissão, não de formação (Sub-A, 2026).</p>
 <h2 id="8-criticas-e-controversias">8. Críticas e controvérsias</h2>
@@ -306,7 +321,7 @@ th{background:var(--sidebar-bg)}
 <li><strong>Divergência numérica registrada</strong>: a ACCS declara "mais de 500" escolas (seção de missão) e "mais de 400" (FAQ) — inconsistência interna não arbitrada (ACCS, 2026 [INST]).</li>
 </ul>
 <h2 id="9-estado-do-debate-forschungsstand">9. Estado do debate (Forschungsstand)</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Problema</th>
@@ -341,12 +356,12 @@ th{background:var(--sidebar-bg)}
 <td>Debate ativo</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Consensos amplos</strong>: (a) a genealogia histórica (Agostinho → medievo → jesuítas → Reforma) é documentada e aceita nas grandes linhas (Jaeger, 1961; Marrou, 1965); (b) o movimento é confessional por autodeclaração (ACCS, 2026); (c) o <em>quadrivium</em> foi historicamente subestimado pelo movimento (Leithart, 2008; Littlejohn e Evans, 2006; Clark e Jain, 2014).</p>
 <p><strong>Lacunas declaradas</strong>: (a) nenhuma dissertação brasileira sobre o <em>trivium</em> de Sayers como método — "o método mais influente da educação brasileira nunca foi objeto de dissertação" (Sub-A, 2026); (b) falta de estudo histórico específico sobre a pedagogia da graça agostiniana como estrutura do movimento (Sub-A, 2026 [—]); (c) sem ISSN verificável para o periódico <em>Classis</em>; (d) ISBNs das editoras pequenas do movimento (CAP, Classical Conversations, Angelico, Baker) não indexados no Open Library.</p>
 <p><strong>Tendências recentes (2020-2026)</strong>: "Geração 4" do quadrivium (ACCS); crítica acadêmica nominalizada (Herdt, 2026; Ellis, 2023; Richardi, 2023); tradução sistemática do núcleo do movimento no Brasil (Kírion, Monergismo, Liber, Vida Nova, 2017-2021); institucionalização acadêmica brasileira (dissertações UFPB/UFSCar/UFC, especializações lato sensu).</p>
 <h2 id="10-traducoes-em-portugues-quadro-verificado">10. Traduções em português (quadro verificado)</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Obra original</th>
@@ -463,7 +478,7 @@ th{background:var(--sidebar-bg)}
 <td>[V-WP] (do dossiê irmão)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Sem tradução conhecida</strong> [—]: <em>Of Education</em> (Milton), <em>Ratio Studiorum</em> integral, <em>Norms and Nobility</em> (Hicks), <em>The Core</em> (Bortins), <em>Wisdom and Eloquence</em> (Littlejohn e Evans), <em>Beauty in the Word</em> (Caldecott), <em>An Introduction to Classical Education</em> (Perrin), <em>Old Western Culture</em> (Callihan).</p>
 <h2 id="11-sites-e-instituicoes-especializadas">11. Sites e instituições especializadas</h2>
 <h3 id="111-associacao-central-e-formacao-de-professores">11.1 Associação central e formação de professores</h3>
@@ -613,7 +628,7 @@ th{background:var(--sidebar-bg)}
 <li><strong>A crítica e a evidência</strong> (1 semana): Herdt (2026, DOI na seção 18); Vaughan (2019); Littlejohn e Evans (2006); e a seção de controvérsias acima — ler os dois lados.</li>
 </ol>
 <h3 id="163-recursos-por-nivel">16.3 Recursos por nível</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Nível</th>
@@ -634,7 +649,7 @@ th{background:var(--sidebar-bg)}
 <td>Agostinho, Hugo de São Vítor, Ratio Studiorum; Smith; Rushdoony; artigos [ACAD] (Herdt, Ellis, Richardi, Vaughan); periódico <em>Classis</em></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="164-perguntas-para-reflexao">16.4 Perguntas para reflexão</h3>
 <ol>
 <li>O <em>trivium</em> de Sayers é uma transposição legítima ou uma invenção anacrônica (Littlejohn e Evans vs. Wilson)?</li>
@@ -644,7 +659,7 @@ th{background:var(--sidebar-bg)}
 <li>A tradução brasileira do movimento (Kírion, Monergismo) é restauração ou adaptação? Como o confronto com a BNCC reconfigura o método?</li>
 </ol>
 <h3 id="165-glossario-essencial">16.5 Glossário essencial</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Termo</th>
@@ -693,9 +708,9 @@ th{background:var(--sidebar-bg)}
 <td>Base Nacional Comum Curricular — o marco regulatório que o movimento brasileiro confronta</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="17-glossario">17. Glossário</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Termo</th>
@@ -760,7 +775,7 @@ th{background:var(--sidebar-bg)}
 <td>ACCS, 2026 [INST]</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="18-bibliografia-comentada">18. Bibliografia comentada</h2>
 <h3 id="181-primarias-confirmadas">18.1 Primárias confirmadas</h3>
 <ul>

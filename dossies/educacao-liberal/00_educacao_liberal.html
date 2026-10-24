@@ -8,12 +8,17 @@
 :root {
   --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#1565c0;
   --accent:#6b4423; --border:#ddd; --sidebar-bg:#fafafa;
+  --sidebar-w:280px; --main-max:960px;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
-     background:var(--bg);color:var(--fg);line-height:1.65}
+     background:var(--bg);color:var(--fg);line-height:1.65;
+     overflow-wrap:break-word;word-wrap:break-word}
+img{max-width:100%;height:auto}
 .container{display:flex;min-height:100vh}
-.sidebar{width:280px;min-width:280px;background:var(--sidebar-bg);
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);flex:0 0 var(--sidebar-w);
+         background:var(--sidebar-bg);
          border-right:1px solid var(--border);padding:1.2rem .8rem;
          position:sticky;top:0;height:100vh;overflow-y:auto}
 .sidebar h2{font-size:.9rem;margin:0 0 .5rem;color:var(--accent)}
@@ -23,16 +28,20 @@ body{font-family:Georgia,'Times New Roman',serif;margin:0;padding:0;
 .sidebar li.level-4{margin-left:22px;font-size:.8rem}
 .sidebar a{color:var(--link);text-decoration:none;font-size:.86rem}
 .sidebar a:hover{text-decoration:underline}
-.main{flex:1;padding:2rem 2.5rem;max-width:960px}
+.main{flex:1 1 auto;min-width:0;padding:2rem 2.5rem;max-width:var(--main-max);
+      overflow-wrap:break-word;word-wrap:break-word}
 .main h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.4rem}
 .main h2{color:var(--accent);margin-top:2rem;border-bottom:1px solid var(--border);padding-bottom:.3rem}
 .main h3{color:#333;margin-top:1.5rem}
 .main a{color:var(--link)}
-.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em}
+.main code{background:#f4f4f4;padding:1px 5px;border-radius:3px;font-size:.9em;
+           overflow-wrap:anywhere;word-break:break-word}
 .main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
 .main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
-table{border-collapse:collapse;width:100%;margin:1rem 0}
-th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;max-width:100%}
+table{border-collapse:collapse;width:100%;max-width:100%;margin:0}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;
+      overflow-wrap:anywhere;word-break:break-word}
 th{background:var(--sidebar-bg)}
 .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:.72rem;
        font-weight:700;border:1px solid;margin-right:5px;vertical-align:middle}
@@ -45,6 +54,12 @@ th{background:var(--sidebar-bg)}
 [data-theme="dark"] pre{background:#2a2a3e}
 [data-theme="dark"] th{background:#0f3460}
 [data-theme="dark"] blockquote{color:#aaa;border-left-color:var(--accent)}
+@media (max-width:760px){
+.container{flex-direction:column}
+.sidebar{position:static;width:100%;min-width:0;flex:0 0 auto;height:auto;max-height:none;
+         border-right:0;border-bottom:1px solid var(--border)}
+.main{max-width:none;padding:1.5rem 1.25rem}
+}
 </style>
 </head>
 <body>
@@ -64,7 +79,7 @@ th{background:var(--sidebar-bg)}
 <p>O debate contemporâneo é um dos mais acirrados da filosofia da educação. De um lado, defensoras como Martha Nussbaum sustentam que as humanidades são condição da democracia — formam o cidadão capaz de pensar criticamente, imaginar o outro e julgar prioridades coletivas (Nussbaum, 1997; 2010). Do outro, críticos de direita e de esquerda denunciam a educação liberal como elitismo disfarçado, currículo desconectado do trabalho ou refúgio de privilégio (Bloom, 1987; Labaree, 2006; Deresiewicz, 2014). Entre os dois, uma bibliografia empírica crescente tenta medir o que a educação liberal de fato produz (Arum e Courant, 2026; <em>The Evidence Liberal Arts Needs</em>, 2021).</p>
 <p>Este dossiê apresenta: (a) o contexto histórico e conceitual da educação liberal; (b) as defesas clássicas e as críticas; (c) o estado do debate acadêmico atual; (d) a produção em língua portuguesa; (e) um catálogo multimídia verificado (sites, blogs, YouTube, documentários, podcasts); (f) bibliografia comentada com links de acesso em cada entrada; e (g) um guia de estudo para o leitor autodidata.</p>
 <h2 id="2-ficha-tecnica">2. Ficha técnica</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Campo</th>
@@ -113,7 +128,7 @@ th{background:var(--sidebar-bg)}
 <td>Educação liberal ≠ liberalismo econômico (ver Glossário, seção 17)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="3-contexto-historico-e-conceitual">3. Contexto histórico e conceitual</h2>
 <h3 id="31-a-paideia-grega-a-educacao-como-formacao-do-homem">3.1 A <em>paideia</em> grega: a educação como formação do homem</h3>
 <p>A educação liberal nasce na Grécia clássica como <em>paideia</em>: não a escolarização de crianças, mas a formação do conjunto do homem — corpo, caráter e intelecto — para a vida na <em>polis</em> (Jaeger, 1959; Marrou, 1965). Werner Jaeger, em sua obra de três volumes, fixou <em>paideia</em> como categoria histórica interpretativa: a reconstrução do espírito grego, da época arcaica a Platão e Aristóteles, mostra que o grego entendia a educação como o processo pelo qual a comunidade forma o seu tipo ideal de homem (Jaeger, 1959). Marrou complementa: a <em>paideia</em> grega não era "escola" em sentido moderno — era formação pelo conteúdo — música, poesia, ginástica, filosofia — e não por técnicas ou ofícios (Marrou, 1965).</p>
@@ -133,7 +148,7 @@ th{background:var(--sidebar-bg)}
 <p>No mesmo período, <strong>Mark Van Doren</strong> (<em>Liberal Education</em>, 1943) fixa a distinção que percorre todo o debate: a educação liberal é a educação pela escolha, "o que o homem faz quando não está sendo treinado para coisa alguma" (Van Doren, 1943). <strong>Dorothy Sayers</strong>, em <em>The Lost Tools of Learning</em> (1947), devolve o <em>trivium</em> ao debate público: se a educação é um processo mental — aprender a aprender — e não acúmulo de informação, então o método (gramática, dialética, retórica) importa mais que a matéria (Sayers, 1947). <strong>C. S. Lewis</strong>, em <em>The Abolition of Man</em> (1943), formula o contra-argumento moral: uma educação que só fornece os meios do fazer, sem formar o juízo de valor, não liberta — substitui pessoas por objetos (Lewis, 1943). E <strong>Michael Oakeshott</strong>, nos ensaios reunidos em <em>The Voice of Liberal Learning</em> (1989), dá à tradição sua formulação filosófica mais completa do século: a educação liberal não é preparação para nada — é participação na "conversa da humanidade", o mundo herdado de processos e significados em que o aprendiz é convidado a entrar (Oakeshott, 1989; SEP, <em>Michael Oakeshott</em>).</p>
 <h2 id="4-defesas-classicas-da-educacao-liberal">4. Defesas clássicas da educação liberal</h2>
 <p>As defesas canônicas do conceito podem ser agrupadas em quatro famílias de argumento, todas presentes desde a Antiguidade:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Família de argumento</th>
@@ -168,7 +183,7 @@ th{background:var(--sidebar-bg)}
 <td>(Nussbaum, 2010; Taylor, 2025)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>A leitura recomendada do núcleo defensivo clássico: Newman (1852) para o argumento institucional; Mill (1867) para o argumento pedagógico (a mente como faculdade a treinar); Arnold (1869) para o argumento cultural (a excelência como finalidade); Oakeshott (1989) para a formulação filosófica mais sofisticada; e Van Doren (1943) para a formulação mais citável.</p>
 <h2 id="5-as-grandes-criticas">5. As grandes críticas</h2>
 <h3 id="51-critica-pela-esquerda-elitismo-e-reproducao-de-classe">5.1 Crítica pela esquerda: elitismo e reprodução de classe</h3>
@@ -196,7 +211,7 @@ th{background:var(--sidebar-bg)}
 <h3 id="72-o-debate-brasileiro-contemporaneo">7.2 O debate brasileiro contemporâneo</h3>
 <p>A produção acadêmica brasileira recente é crítica e sociológica. <strong>Benedicto Silva</strong> (1968), já nos anos 1960, contrastava a concepção clássica — formação da humanidade, virtudes intelectuais e morais, bons cidadãos — com o treinamento vocacional (Silva, 1968). <strong>Hans-Georg Flickinger</strong> (2023) analisa a dinâmica contraditória da formação na sociedade (neo)liberal: o princípio de liberdade convive com a racionalidade econômica do capital, que faz da pessoa elemento funcional (Flickinger, 2023). <strong>Vicente Zatti</strong> (2023) retoma o vocabulário clássico — a educação "desinteressada" que visa ao homem enquanto homem — para contrastá-lo com a educação profissional e tecnológica contemporânea (Zatti, 2023). A coletânea <em>Trivium e quadrivium: as artes liberais na Idade Média</em> (coord. Lênia Mongelli, Ibis, 1999) é o principal volume brasileiro sobre a história do tema (Mongelli, 1999).</p>
 <h3 id="73-traducoes-disponiveis-em-portugues">7.3 Traduções disponíveis em português</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Obra</th>
@@ -276,7 +291,7 @@ th{background:var(--sidebar-bg)}
 <td>[—]</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="8-estudos-e-comentarios-de-referencia">8. Estudos e comentários de referência</h2>
 <p>Resumo detalhado das obras que o leitor deve conhecer para dominar o campo (conteúdo, abordagem e valor de cada uma):</p>
 <p><strong>Jaeger, <em>Paideia</em> (1933-1947; trad. BR 1966)</strong> — Três volumes que reconstroem a formação do espírito grego, da época arcaica a Platão e Aristóteles. Abordagem: história das ideias educacionais como história da cultura. Valor: a obra que fixou <em>paideia</em> como categoria interpretativa — referência obrigatória de qualquer histórico do conceito (Jaeger, 1959).</p>
@@ -438,7 +453,7 @@ th{background:var(--sidebar-bg)}
 </ul>
 <h2 id="13-estado-do-debate-forschungsstand">13. Estado do debate (Forschungsstand)</h2>
 <p>Quatro problemas centrais dividem o campo hoje; para cada um, as posições são apresentadas em paralelo, sem arbitragem:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Problema</th>
@@ -473,7 +488,7 @@ th{background:var(--sidebar-bg)}
 <td>Debate ativo (2018-)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Consensos amplos</strong>: (a) a educação liberal tem origem na <em>paideia</em> grega e nas sete artes romanas (Jaeger, 1959; Marrou, 1965; Britannica, 2026); (b) a educação liberal é distinta da formação profissional/vocacional (Britannica, 2026; Van Doren, 1943); (c) as matrículas em humanidades caem nos EUA desde a crise de 2008 e o debate sobre o valor do diploma se intensificou (Kelly, 2020; Delbanco, 2013).</p>
 <p><strong>Questões em aberto</strong>: (a) o retorno econômico de longo prazo da educação liberal — as evidências de Arum e Courant (2026) são as primeiras sistemáticas; (b) se a "educação liberal pura" é compatível com a formação cívica (Love, 2024; Liu, 2026); (c) a transposição do modelo ocidental para Ásia, África e América Latina (Mou, 2025; Shimauchi e Yonezawa, 2024).</p>
 <p><strong>Tendências recentes (2020-2026)</strong>: virada empírica (estudos de retorno e de pensamento crítico); politização do debate na Europa (Kelly, 2020); programas asiáticos de "liberal arts" como política nacional (Yoon, 2020; Cheon, 2021); e o ressurgimento do currículo de Grandes Livros em iniciativas privadas e confessionais (Montás, 2021; Wells, 2016).</p>
@@ -495,7 +510,7 @@ th{background:var(--sidebar-bg)}
 <li><strong>A evidência e o futuro</strong> (1 semana): Detweiler (2021); Arum e Courant (2026); artigos recentes [ACAD] da seção 8.</li>
 </ol>
 <h3 id="143-recursos-por-nivel">14.3 Recursos por nível</h3>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Nível</th>
@@ -516,7 +531,7 @@ th{background:var(--sidebar-bg)}
 <td>Jaeger; Oakeshott; Kimball; Bloom; artigos [ACAD] 2015-2026 (DOI na seção 8); podcast History of Philosophy Without Any Gaps</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="144-perguntas-para-reflexao">14.4 Perguntas para reflexão</h3>
 <ol>
 <li>O que distingue a formação do homem livre da formação do trabalhador? Essa distinção sobrevive à democracia moderna?</li>
@@ -526,7 +541,7 @@ th{background:var(--sidebar-bg)}
 <li>Como a tradição brasileira (Maritain, Reis Filho, Flickinger) reposiciona o debate anglo-americano?</li>
 </ol>
 <h2 id="15-glossario">15. Glossário</h2>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Termo</th>
@@ -591,7 +606,7 @@ th{background:var(--sidebar-bg)}
 <td>(distinção metodológica deste dossiê)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="16-bibliografia-comentada">16. Bibliografia comentada</h2>
 <h3 id="161-fontes-primarias-confirmadas">16.1 Fontes primárias confirmadas</h3>
 <ul>

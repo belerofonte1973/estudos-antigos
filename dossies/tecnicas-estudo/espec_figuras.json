@@ -1,0 +1,36 @@
+{
+ "slug": "tecnicas-estudo",
+ "_comentario": "Especificacao das 5 figuras do dossie. Os textos (titulo, alt, legenda, passagem) ja estao no MASTER; aqui entra so o que o download precisa: o `arquivo` exato no Commons (confirmado pela API — nunca escrito de memoria) e o `src` que o MASTER referencia. O que a API disser sobre licenca, autor, data e acervo vence.",
+ "figuras": [
+  {
+   "arquivo": "File:Ars Memoriæ.jpg",
+   "src": "imagens/01-ars-memoriae-fludd.jpg",
+   "secao": "1",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Brain regions in memory formation updated.jpg",
+   "src": "imagens/02-brain-memory-regions.jpg",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Pi Philology.png",
+   "src": "imagens/03-memory-palace-illustration.jpg",
+   "secao": "4",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Forgetting curve and work of Ebbinghaus.png",
+   "src": "imagens/04-learning-cycle.jpg",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Titian - Sisyphus - Madrid - Prado.jpg",
+   "src": "imagens/05-sisyphus-studying.jpg",
+   "secao": "7",
+   "posicao": "fim"
+  }
+ ]
+}

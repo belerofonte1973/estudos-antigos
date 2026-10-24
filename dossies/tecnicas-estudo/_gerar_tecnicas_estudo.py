@@ -7,7 +7,7 @@ capa+sumário+corpo separados; HTML light/dark com sidebar sticky
 e variáveis CSS.
 """
 from __future__ import annotations
-import re, io, sys
+import json, re, io, sys
 from pathlib import Path
 from typing import List, Tuple
 
@@ -57,6 +57,60 @@ def strip_badges(line: str) -> str:
 def clean_pdf_text(s: str) -> str:
     return (s.replace("—", "-").replace("–", "-").replace("…", "...")
             .replace("触发", "Trigger").replace("发", "a"))
+
+
+# --- figuras ---------------------------------------------------------------
+# Convenção no MASTER.md (markdown puro, legível no arquivo e nas duas saídas):
+#
+#   ![descrição da imagem](imagens/05-sisyphus-studying.jpg)
+#
+#   **Fig. 5 — O mito de Sísifo e o estudo.** Legenda em duas ou três frases. *Ficha: ...*
+#
+# O parágrafo de imagem e o de legenda viram um <figure> com <figcaption> no
+# HTML; o PDF desenha a imagem e escreve a legenda em corpo pequeno.
+#
+# Este gerador é a variante "v4 escrita à mão", que nasceu sem suporte a
+# figuras: o HTML saía com <img src="imagens/…"> solto (quebrado, porque a
+# pasta não existia) e o PDF ignorava a linha. Os blocos abaixo são o mesmo
+# padrão do gerador canônico (dossies/sumeria/gerar_dossie.py).
+
+FIG_HTML = re.compile(
+    r'<p>\s*<img([^>]*?)src="(imagens/[^"]+)"([^>]*?)>\s*</p>'
+    r'(?:\s*<p>(.*?)</p>)?', re.S)
+FIG_MD = re.compile(r'^!\[(.*?)\]\((imagens/[^)]+)\)\s*$')
+LINK_MD = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+PDF_LARGURA_PX = 900     # o PDF precisa menos que o HTML; 900 px basta para 150 mm
+PDF_QUALIDADE = 74
+
+
+def sem_marcacao(texto: str) -> str:
+    """Tira marcação markdown e entidades do texto da legenda (para o PDF)."""
+    t = LINK_MD.sub(r'\1 (\2)', texto)
+    t = t.replace("**", "").replace("__", "").replace("*", "").replace("`", "")
+    t = re.sub(r'<[^>]+>', '', t)
+    t = (t.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+          .replace("&nbsp;", " ").replace("&quot;", '"'))
+    return re.sub(r'\s+', ' ', t).strip()
+
+
+def envolver_figuras(html: str) -> str:
+    def sub(m: re.Match) -> str:
+        alt = re.search(r'alt="([^"]*)"', m.group(1) + m.group(3))
+        alt = alt.group(1) if alt else ""
+        legenda = m.group(4) or ""
+        return ('<figure class="figura">'
+                f'<img src="{m.group(2)}" alt="{alt}" loading="lazy" decoding="async">'
+                f'<figcaption>{legenda}</figcaption></figure>')
+    return FIG_HTML.sub(sub, html)
+
+
+def carregar_figuras() -> List[dict]:
+    """Manifesto de figuras (figuras.json), se já houver."""
+    p = OUTDIR / "figuras.json"
+    if not p.exists():
+        return []
+    dados = json.loads(p.read_text(encoding="utf-8"))
+    return sorted(dados.get("figuras", []), key=lambda f: f["ordem"])
 
 
 def extract_toc(html_body: str) -> List[Tuple[int, str, str]]:
@@ -120,7 +174,7 @@ class DossierPDF(FPDF):
         self.multi_cell(190, 7, "Elaborado em 6 out 2026", align=Align.C,
                         new_x=XPos.LMARGIN, new_y=YPos.NEXT)
 
-    def toc_page(self, sections):
+    def toc_page(self, sections, figuras=None):
         self.add_page()
         self.set_font("Arial", "B", 15)
         self.set_text_color(60, 30, 10)
@@ -130,18 +184,99 @@ class DossierPDF(FPDF):
         for lvl, title, anchor in sections:
             self.multi_cell(190, 4.5, "    " * (lvl - 1) + title,
                             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        if figuras:
+            self.ln(4)
+            self.set_font("Arial", "B", 11)
+            self.set_text_color(60, 30, 10)
+            self.multi_cell(190, 6, "Figuras", align=Align.L,
+                            new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            self.set_font("Arial", "", 8)
+            self.set_text_color(80, 80, 80)
+            for f in figuras:
+                self.multi_cell(190, 4, f"Fig. {f['ordem']} — {clean_pdf_text(f['titulo'])}",
+                                new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+
+    def desenhar_figura(self, caminho: Path, legenda: str) -> None:
+        """Imagem centralizada na largura da mancha + legenda em corpo pequeno.
+
+        A imagem é reduzida para caber em 150 mm de largura e 105 mm de altura,
+        e quebra de página antes de começar quando não houver espaço para imagem
+        e legenda juntas — nunca fica órfã no rodapé.
+
+        O binário embutido é reduzido a `PDF_LARGURA_PX` antes de entrar no PDF:
+        as figuras do HTML (1100 px) são maiores do que o PDF precisa e, sem esta
+        redução, o arquivo incha. A compactação posterior via pypdf não serve para
+        isso: no pypdf 6.x, `set_data` recusa streams com filtro diferente de
+        FlateDecode, e todo JPEG embutido (DCTDecode) passa em silêncio sem redução.
+        """
+        try:
+            with Image.open(caminho) as im:
+                lw, lh = im.size
+                im = im.convert("RGB")
+                if im.width > PDF_LARGURA_PX:
+                    im = im.resize((PDF_LARGURA_PX,
+                                    round(im.height * PDF_LARGURA_PX / im.width)),
+                                   Image.LANCZOS)
+                buf = io.BytesIO()
+                im.save(buf, format="JPEG", quality=PDF_QUALIDADE,
+                        optimize=True, progressive=True)
+                buf.seek(0)
+        except Exception as e:  # noqa: BLE001
+            self.set_font("Arial", "I", 8)
+            self.set_text_color(150, 80, 80)
+            self.multi_cell(190, 4, f"[figura indisponivel: {caminho.name} — {e}]",
+                            new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            return
+
+        larg = 150.0
+        alt = larg * lh / lw
+        if alt > 105:
+            alt = 105.0
+            larg = alt * lw / lh
+        texto = clean_pdf_text(sem_marcacao(legenda))
+        # estimativa do corpo da legenda: ~95 caracteres por linha de 190 mm a 7,5 pt
+        linhas_legenda = max(2, (len(texto) // 95) + 1)
+        precisa = alt + linhas_legenda * 3.6 + 6
+        if self.get_y() + precisa > self.h - 22:
+            self.add_page()
+
+        x = (210 - larg) / 2
+        self.image(buf, x=x, y=self.get_y(), w=larg, h=alt)
+        self.set_y(self.get_y() + alt + 2.5)
+        self.set_font("Arial", "", 7.5)
+        self.set_text_color(95, 95, 95)
+        self.multi_cell(190, 3.6, texto, align=Align.L,
+                        new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.ln(4)
 
     def render_body(self, md_lines):
         in_code = False
-        for line in md_lines:
+        i = 0
+        while i < len(md_lines):
+            line = md_lines[i]
             s = clean_pdf_text(line).rstrip()
+            # --- figura: linha de imagem + parágrafo de legenda seguinte ---
+            mfig = FIG_MD.match(line.strip())
+            if mfig:
+                legenda = ""
+                j = i + 1
+                while j < len(md_lines) and not md_lines[j].strip():
+                    j += 1
+                if j < len(md_lines) and not md_lines[j].startswith(("#", "|", "!")):
+                    legenda = md_lines[j].strip()
+                    i = j
+                self.desenhar_figura(INPUT.parent / mfig.group(2).strip(), legenda)
+                i += 1
+                continue
             if s.strip().startswith("```"):
                 in_code = not in_code
+                i += 1
                 continue
             if in_code:
                 self.set_font("Arial", "", 7)
                 self.set_text_color(80, 80, 80)
                 self.multi_cell(190, 4, s[:280], new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+                i += 1
                 continue
             m = re.match(r'^(#{1,6})\s+(.*)', s)
             if m:
@@ -154,16 +289,19 @@ class DossierPDF(FPDF):
                 self.set_text_color(st[2], st[3], st[4])
                 self.multi_cell(190, st[5] + 1, t, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
                 self.ln(0.5)
+                i += 1
                 continue
             if s.startswith("|") and "---" not in s:
                 self.set_font("Arial", "", 7)
                 self.multi_cell(190, 4, " | ".join(c.strip() for c in s.split("|") if c.strip())[:210],
                                 new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+                i += 1
                 continue
             if s.strip() == "---":
                 self.set_draw_color(200, 200, 200)
                 self.line(10, self.get_y(), 200, self.get_y())
                 self.ln(1.5)
+                i += 1
                 continue
             self.set_font("Arial", "", 9)
             self.set_text_color(60, 60, 60)
@@ -173,10 +311,11 @@ class DossierPDF(FPDF):
             elif s:
                 self.multi_cell(190, 5, re.sub(r'\[([A-Z\-—]+)\]', r'[\1]', s)[:480],
                                 new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+            i += 1
 
-    def build(self, md_lines, toc):
+    def build(self, md_lines, toc, figuras=None):
         self.cover()
-        self.toc_page(toc)
+        self.toc_page(toc, figuras)
         self.add_page()
         self.render_body(md_lines)
 
@@ -215,6 +354,16 @@ img{max-width:100%;height:auto}
            overflow-wrap:anywhere;word-break:break-word}
 .main pre{background:#f4f4f4;padding:1rem;overflow-x:auto;border-radius:6px}
 .main blockquote{border-left:4px solid var(--accent);padding-left:1rem;color:#555;font-style:italic}
+figure.figura{margin:1.7rem 0;padding:0;break-inside:avoid;page-break-inside:avoid}
+figure.figura img{display:block;width:100%;max-width:520px;height:auto;margin:0 auto;
+                  border:1px solid var(--border);border-radius:4px}
+figure.figura figcaption{margin:.6rem auto 0;max-width:520px;font-size:.86rem;
+                          line-height:1.5;color:var(--muted);text-align:justify}
+figure.figura figcaption strong{color:var(--fg)}
+figure.figura figcaption em{display:block;margin-top:.25rem;font-size:.78rem;
+                             font-style:italic;color:var(--muted)}
+figure.figura figcaption a{color:var(--link)}
+[data-theme="dark"] figure.figura img{border-color:#444}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0;max-width:100%}
 table{border-collapse:collapse;width:100%;max-width:100%;margin:0}
 th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;
@@ -290,10 +439,12 @@ def main():
     md_lines = md_text.splitlines()
     html_body = markdown.markdown(md_text, extensions=["tables", "fenced_code", "toc"])
     html_body = apply_badges(html_body)
+    html_body = envolver_figuras(html_body)
     # Envolve tabelas em conteiner com rolagem horizontal (evita transbordo com fontes grandes)
     html_body = re.sub(r'(<table[^>]*>.*?</table>)',
                        r'<div class="table-wrap">\1</div>', html_body, flags=re.S)
     toc = extract_toc(html_body)
+    figuras = carregar_figuras()
 
     # TOC sidebar
     toc_html = "<ul>"
@@ -327,13 +478,24 @@ def main():
 
     pdf = DossierPDF()
     pdf.set_auto_page_break(auto=True, margin=18)
-    pdf.build(md_lines, toc)
+    pdf.build(md_lines, toc, figuras)
     pdf_path = OUTDIR / "00_tecnicas_estudo.pdf"
     pdf.output(str(pdf_path))
     compact_pdf(pdf_path)
 
+    n_fig_html = len(re.findall(r'<figure class="figura">', page))
+    n_img_pdf = 0
+    for pg in PdfReader(str(pdf_path)).pages:
+        xo = (pg.get("/Resources") or {}).get("/XObject")
+        if xo is None:
+            continue
+        xo = xo.get_object()
+        n_img_pdf += sum(1 for k in xo if xo[k].get("/Subtype") == "/Image")
+
     print(f"PDF:  {pdf_path} ({pdf_path.stat().st_size/1024:.1f} KB, {len(PdfReader(str(pdf_path)).pages)} pag.)")
     print(f"HTML: {OUTDIR/'00_tecnicas_estudo.html'} (light) + _dark.html")
+    print(f"Figuras: {len(figuras)} no manifesto · {n_fig_html} desenhadas no HTML · "
+          f"{n_img_pdf} embutidas no PDF")
 
     # Stats
     badges_found = re.findall(r'class="badge"[^>]*>(\[[A-Z\-—]+\])</span>', page)

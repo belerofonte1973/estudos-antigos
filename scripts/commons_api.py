@@ -28,6 +28,7 @@ from __future__ import annotations
 import hashlib
 import html
 import json
+import os
 import pathlib
 import re
 import time
@@ -40,7 +41,7 @@ UA = "EstudosAntigos/1.0 (site didatico de Antiguidade Biblica; pesquisa de imag
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 CACHE = RAIZ / "_imagens" / "cache"
 
-MIN_INTERVALO = 1.1      # segundos entre chamadas
+MIN_INTERVALO = float(os.environ.get("COMMONS_INTERVALO", "2.6"))  # segundos entre chamadas
 TENTATIVAS = 4
 LIVRES = ("public domain", "pdm", "cc0", "public domain mark")
 ATRIBUICAO = ("cc by", "cc-by", "attribution")
@@ -94,7 +95,8 @@ def api(params: dict, usar_cache: bool = True) -> dict:
         except urllib.error.HTTPError as e:
             erro = e
             if e.code in (429, 500, 502, 503, 504):
-                time.sleep(2.0 * (tentativa + 1) ** 2)   # 2s, 8s, 18s
+                # 429 aqui é cotidiano (a API limita por IP): 5s, 20s, 45s
+                time.sleep(min(45.0, 5.0 * (tentativa + 1) ** 2))
                 continue
             raise
         except Exception as e:  # noqa: BLE001 — rede instável

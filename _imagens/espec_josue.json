@@ -67,6 +67,32 @@
    "acervo": "Museu Egípcio, Cairo; fotografia de Onceinawhile, CC BY-SA 4.0",
    "secao": "12",
    "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Poussin - Josué et les Amorites Moscou.jpg",
+   "titulo": "A vitória de Josué sobre os amoritas",
+   "alt": "Pintura de batalha com o líder montado a cavalo em destaque e exércitos em combate em primeiro plano",
+   "legenda": "Poussin pinta a vitória de Js 10 como uma composição clássica: Josué montado, com a espada em punho, comanda o combate contra os amoritas em uma paisagem ordenada, não caótica. O dossiê usa a obra porque ela é a grande pintura francesa da conquista, aquela que transformou o relato bíblico em imagem de pintura histórica europeia.",
+   "passagem": "Js 10,1-15",
+   "artista": "Nicolas Poussin",
+   "data": "c. 1625",
+   "tecnica": "óleo sobre tela",
+   "acervo": "Museu Pushkin, Moscou",
+   "secao": "6",
+   "posicao": "fim"
+  },
+  {
+   "arquivo": "File:Loggia di raffaello, 10, 01.jpg",
+   "titulo": "A travessia do Jordão (Loggia di Raffaello)",
+   "alt": "Fresco renascentista com figuras carregando a arca da aliança sobre as águas do Jordão",
+   "legenda": "A oficina de Rafael decorou a Loggia di Raffaello, no Vaticano, com cenas de Josué; a travessia do Jordão é a imagem que fixou na pintura renascentista o episódio de Js 3-4. O dossiê usa a obra porque ela é a imagem renascentista que associa Josué à fundação do povo: a arca sobre as águas é a travessia como ato de instituição, não como façanha militar.",
+   "passagem": "Js 3,1-4,24",
+   "artista": "Rafael (oficina)",
+   "data": "1518-1519",
+   "tecnica": "afresco",
+   "acervo": "Loggia di Raffaello, Palácio Apostólico, Vaticano",
+   "secao": "6",
+   "posicao": "fim"
   }
  ]
 }
